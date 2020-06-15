@@ -4,3 +4,8 @@
 
 layout: home
 ---
+
+**Quick Links**
+
+* [Google]({% link trackers/google.com.html %})
+* [Facebook]({% link trackers/facebook.com.html %})

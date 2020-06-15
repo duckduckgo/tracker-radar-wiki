@@ -1,3 +1,4 @@
 module.exports = {
-    trackerRadarRepoPath: '../tracker-radar/'
+    trackerRadarRepoPath: '../tracker-radar/',
+    static: './docs/static/'
 };

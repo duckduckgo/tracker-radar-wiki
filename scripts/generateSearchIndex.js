@@ -88,7 +88,7 @@ const searchIndex = lunr(function () {
     });
 });
 
-fs.writeFileSync(path.join(config.static, 'searchData.json'), JSON.stringify(indexData)); 
-fs.writeFileSync(path.join(config.static, 'searchIndex.json'), JSON.stringify(searchIndex));
+fs.writeFileSync(path.join(config.staticData, 'searchData.json'), JSON.stringify(indexData)); 
+fs.writeFileSync(path.join(config.staticData, 'searchIndex.json'), JSON.stringify(searchIndex));
 
 console.log(stats);

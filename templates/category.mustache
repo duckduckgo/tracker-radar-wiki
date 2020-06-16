@@ -1,0 +1,23 @@
+{{>header}}
+
+<script>
+    window.wikiData = {
+        type: "category",
+        name: "{{name}}",
+    };
+</script>
+
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1>{{name}}</h1>
+    <p>
+        <strong>Domains:</strong>
+        {{#domains}}
+        <span>
+            {{#known}}<a href="../domains/{{domain}}.html">{{/known}}{{domain}}{{#known}} ({{prevalence}})</a>{{/known}}
+        </span>,
+        {{/domains}}
+    </p>
+
+</div>
+
+{{>footer}}

@@ -50,6 +50,7 @@ function getTemplate(name) {
 }
 
 const domainIndex = new Map();
+const categories = new Map();
 
 domainFiles.forEach(file => {
     progressBar.tick({file});
@@ -68,6 +69,12 @@ domainFiles.forEach(file => {
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 
     domainIndex.set(data.domain, data.prevalence);
+
+    data.categories.forEach(catName => {
+        const category = categories.get(catName) || {name: catName, domains: []};
+        category.domains.push(data.domain);
+        categories.set(catName, category);
+    });
 
     fs.writeFile(path.join(config.domainPagesPath, `${data.domain}.html`), output, () => {});
 });
@@ -107,4 +114,27 @@ entityFiles.forEach(file => {
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
     fs.writeFile(path.join(config.entityPagesPath, `${data.name}.html`), output, () => {});
+});
+
+Array.from(categories.values()).forEach(data => {
+    data.domains = data.domains.map(domain => {
+        if (domainIndex.has(domain)) {
+            return {
+                domain,
+                known: true,
+                prevalence: domainIndex.get(domain)
+            };
+        } else {
+            return {
+                domain,
+                known: false,
+                prevalence: 0
+            };
+        }
+    });
+    data.domains = data.domains.sort((a, b) => b.prevalence - a.prevalence);
+
+    const output = mustache.render(getTemplate('category'), data, getTemplate);
+
+    fs.writeFile(path.join(config.categoryPagesPath, `${data.name}.html`), output, () => {});
 });

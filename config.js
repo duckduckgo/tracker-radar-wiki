@@ -3,5 +3,6 @@ module.exports = {
     staticData: './docs/assets/data/',
     templatesPath: './templates/',
     domainPagesPath: './docs/domains/',
-    entityPagesPath: './docs/entities/'
+    entityPagesPath: './docs/entities/',
+    categoryPagesPath: './docs/categories/'
 };

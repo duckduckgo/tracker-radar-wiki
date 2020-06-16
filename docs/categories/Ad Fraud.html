@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracker Radar - Ad Fraud</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+
+<header class='bg-white container-lg px-3 my-5'>
+    <a href="../">Home</a> | 
+    <div class="search-box">
+        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+        <ul class='search-box__results'></ul>
+    </div>
+</header>
+
+<script>
+    window.wikiData = {
+        type: "category",
+        name: "Ad Fraud",
+    };
+</script>
+
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1>Ad Fraud</h1>
+    <p>
+        <strong>Domains:</strong>
+        <span>
+            <a href="../domains/facebook.com.html">facebook.com (0.337)</a>
+        </span>,
+        <span>
+            <a href="../domains/facebook.net.html">facebook.net (0.328)</a>
+        </span>,
+        <span>
+            <a href="../domains/rlcdn.com.html">rlcdn.com (0.164)</a>
+        </span>,
+        <span>
+            <a href="../domains/openx.net.html">openx.net (0.157)</a>
+        </span>,
+        <span>
+            <a href="../domains/pubmatic.com.html">pubmatic.com (0.151)</a>
+        </span>,
+        <span>
+            <a href="../domains/bidswitch.net.html">bidswitch.net (0.117)</a>
+        </span>,
+        <span>
+            <a href="../domains/2mdn.net.html">2mdn.net (0.105)</a>
+        </span>,
+        <span>
+            <a href="../domains/bing.com.html">bing.com (0.105)</a>
+        </span>,
+        <span>
+            <a href="../domains/1rx.io.html">1rx.io (0.0913)</a>
+        </span>,
+        <span>
+            <a href="../domains/adform.net.html">adform.net (0.0719)</a>
+        </span>,
+        <span>
+            <a href="../domains/moatads.com.html">moatads.com (0.0686)</a>
+        </span>,
+        <span>
+            <a href="../domains/contextweb.com.html">contextweb.com (0.062)</a>
+        </span>,
+        <span>
+            <a href="../domains/technoratimedia.com.html">technoratimedia.com (0.0601)</a>
+        </span>,
+        <span>
+            <a href="../domains/mfadsrvr.com.html">mfadsrvr.com (0.0515)</a>
+        </span>,
+        <span>
+            <a href="../domains/adsafeprotected.com.html">adsafeprotected.com (0.0398)</a>
+        </span>,
+        <span>
+            <a href="../domains/owneriq.net.html">owneriq.net (0.0394)</a>
+        </span>,
+        <span>
+            <a href="../domains/adgrx.com.html">adgrx.com (0.0348)</a>
+        </span>,
+        <span>
+            <a href="../domains/adentifi.com.html">adentifi.com (0.0303)</a>
+        </span>,
+        <span>
+            <a href="../domains/doubleverify.com.html">doubleverify.com (0.0267)</a>
+        </span>,
+        <span>
+            <a href="../domains/bttrack.com.html">bttrack.com (0.0211)</a>
+        </span>,
+        <span>
+            <a href="../domains/intentiq.com.html">intentiq.com (0.0198)</a>
+        </span>,
+        <span>
+            <a href="../domains/dyntrk.com.html">dyntrk.com (0.0175)</a>
+        </span>,
+        <span>
+            <a href="../domains/iasds01.com.html">iasds01.com (0.0156)</a>
+        </span>,
+        <span>
+            <a href="../domains/powerlinks.com.html">powerlinks.com (0.0134)</a>
+        </span>,
+        <span>
+            <a href="../domains/realvu.net.html">realvu.net (0.0124)</a>
+        </span>,
+        <span>
+            <a href="../domains/extend.tv.html">extend.tv (0.0113)</a>
+        </span>,
+        <span>
+            <a href="../domains/userreport.com.html">userreport.com (0.0105)</a>
+        </span>,
+        <span>
+            <a href="../domains/blismedia.com.html">blismedia.com (0.00802)</a>
+        </span>,
+        <span>
+            <a href="../domains/kargo.com.html">kargo.com (0.00754)</a>
+        </span>,
+        <span>
+            <a href="../domains/getclicky.com.html">getclicky.com (0.00628)</a>
+        </span>,
+        <span>
+            <a href="../domains/rtmark.net.html">rtmark.net (0.00568)</a>
+        </span>,
+        <span>
+            <a href="../domains/fg8dgt.com.html">fg8dgt.com (0.00543)</a>
+        </span>,
+        <span>
+            <a href="../domains/adsco.re.html">adsco.re (0.00436)</a>
+        </span>,
+        <span>
+            <a href="../domains/clrstm.com.html">clrstm.com (0.00434)</a>
+        </span>,
+        <span>
+            <a href="../domains/affec.tv.html">affec.tv (0.00425)</a>
+        </span>,
+        <span>
+            <a href="../domains/mgid.com.html">mgid.com (0.00404)</a>
+        </span>,
+        <span>
+            <a href="../domains/exponential.com.html">exponential.com (0.00347)</a>
+        </span>,
+        <span>
+            <a href="../domains/bluecava.com.html">bluecava.com (0.003)</a>
+        </span>,
+        <span>
+            <a href="../domains/mobileadtrading.com.html">mobileadtrading.com (0.00288)</a>
+        </span>,
+        <span>
+            <a href="../domains/mxcdn.net.html">mxcdn.net (0.00278)</a>
+        </span>,
+        <span>
+            <a href="../domains/meetrics.net.html">meetrics.net (0.00254)</a>
+        </span>,
+        <span>
+            <a href="../domains/revjet.com.html">revjet.com (0.0024)</a>
+        </span>,
+        <span>
+            <a href="../domains/reson8.com.html">reson8.com (0.00237)</a>
+        </span>,
+        <span>
+            <a href="../domains/rfihub.net.html">rfihub.net (0.0022)</a>
+        </span>,
+        <span>
+            <a href="../domains/maxmind.com.html">maxmind.com (0.00207)</a>
+        </span>,
+        <span>
+            <a href="../domains/popads.net.html">popads.net (0.00201)</a>
+        </span>,
+        <span>
+            <a href="../domains/smrtb.com.html">smrtb.com (0.00174)</a>
+        </span>,
+        <span>
+            <a href="../domains/siftscience.com.html">siftscience.com (0.00165)</a>
+        </span>,
+        <span>
+            <a href="../domains/mediarithmics.com.html">mediarithmics.com (0.00158)</a>
+        </span>,
+        <span>
+            <a href="../domains/adrta.com.html">adrta.com (0.000642)</a>
+        </span>,
+        <span>
+            <a href="../domains/perimeterx.net.html">perimeterx.net (0.000613)</a>
+        </span>,
+        <span>
+            <a href="../domains/uncn.jp.html">uncn.jp (0.000143)</a>
+        </span>,
+    </p>
+
+</div>
+
+</body>
+
+</html>

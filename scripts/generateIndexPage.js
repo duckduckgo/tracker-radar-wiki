@@ -7,7 +7,7 @@ const mustache = require('mustache');
 
 const lastCommitInfo = {
     hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf',
-    date: '05/26/2020',
+    date: '06/16/2020',
     crawled: 75000
 }
 

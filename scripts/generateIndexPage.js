@@ -92,11 +92,17 @@ entityFiles.forEach(file => {
         return;
     }
 
-    entities.push({name: data.name, properties: data.properties.length});
+    let entityPrevalence = 0;
+    if (data.prevalence) {
+        // not all entities have this data
+        entityPrevalence = data.prevalence.tracking;
+    }
+
+    entities.push({name: data.name, prevalence: entityPrevalence, properties: data.properties.length});
 });
 
 domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
-entities = entities.sort((a, b) => b.properties - a.properties).slice(0, 100);
+entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
 
 const renderData = {
     domains: domains,

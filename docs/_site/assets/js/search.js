@@ -2,6 +2,11 @@
     const input = document.querySelector('.search-box__input');
     const output = document.querySelector('.search-box__results');
 
+    if (!input || !output) {
+        console.warn('Missing .search-box__input or .search-box__results element.')
+        return;
+    }
+
     let searchIndex;
     let searchData;
 

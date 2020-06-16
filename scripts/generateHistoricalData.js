@@ -6,9 +6,9 @@ const ProgressBar = require('progress');
 const {checkoutCommit} = require('git-parse');
 
 const commits = [
-    {hash: '17c5fd0acb7b63417d428574425ac0ca22aa8bd8', date: '02.2020'},
-    {hash: '069a29144861144caa4e51e1b4a9bc1c9c70790d', date: '03.2020'},
-    {hash: 'aa2244f3bf69382f389b9faefb7a4fb5d6d52599', date: '04.2020'},
+    {hash: '74e767dbaf6394bcb98348d54abf3daaa51e3131', date: '02.2020'},
+    {hash: '689e48064259a2e9d8d079e1fee79bb7f1f9a248', date: '03.2020'},
+    {hash: 'f62eb8b8f4fc64217c1ac06d45236513b120b504', date: '04.2020'},
     {hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf', date: '05.2020'},
 ];
 

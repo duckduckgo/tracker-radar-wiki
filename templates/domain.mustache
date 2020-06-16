@@ -12,6 +12,7 @@
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>{{domain}}</h1>
     <ul>
+        <li>Tracker Radar data file on <a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/{{domain}}.json">GitHub</a>.</li>
         {{#owner}}
         <li>
             Owner: {{#name}}<a href="../entities/{{name}}.html">{{name}}</a>{{/name}}{{^name}}<i>Unknown</i>{{/name}}
@@ -21,11 +22,21 @@
             Prevalence: {{prevalence}} ({{sites}} sites)
         </li>
         <li>
-            Fingerprinting: {{fingerprinting}}
+            Fingerprinting: {{fingerprinting}}<small>/3</small>
         </li>
         <li>
             Cookies: {{cookies}}
         </li>
+        {{#performance}}
+        <li>
+            Performance: <ul>
+                <li>time: {{time}}<small>/3</small></li>
+                <li>size: {{size}}<small>/3</small></li>
+                <li>CPU: {{cpu}}<small>/3</small></li>
+                <li>cache: {{cache}}<small>/3</small></li>
+            </ul>
+        </li>
+        {{/performance}}
         <li>
             Categories: {{#categories}}<a href="../categories/{{.}}.html">{{.}}</a>, {{/categories}}
         </li>

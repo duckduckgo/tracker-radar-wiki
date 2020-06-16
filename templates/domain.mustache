@@ -6,7 +6,7 @@
         domain: "{{domain}}",
     };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
@@ -14,17 +14,16 @@
     <div class="domain-head">
         <div class="domain-stats">
             <ul>
-                <li>Tracker Radar data file on <a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/{{domain}}.json">GitHub</a>.</li>
                 {{#owner}}
                 <li>
                     Owner: {{#name}}<a href="../entities/{{name}}.html">{{name}}</a>{{/name}}{{^name}}<i>Unknown</i>{{/name}}
                 </li>
                 <li>
-                    Privacy Policy: {{#privacyPolicy}}<a href="{{privacyPolicy}}" target="_blank" class="external">{{privacyPolicy}}</a>{{/privacyPolicy}}{{^privacyPolicy}}<i>Unknown</i>{{/privacyPolicy}}
+                    Privacy Policy: {{#privacyPolicy}}<a href="{{privacyPolicy}}" target="_blank" class="external" rel="noreferrer noopener">{{privacyPolicy}}</a>{{/privacyPolicy}}{{^privacyPolicy}}<i>Unknown</i>{{/privacyPolicy}}
                 </li>
                 {{/owner}}
                 <li>
-                    Rank: &#35;{{rank}}/{{totalDomains}}
+                    Rank: &#35;{{rank}}<small>/{{totalDomains}}</small>
                 </li>
                 <li>
                     Prevalence: {{prevalence}}&#37; ({{sites}} sites)
@@ -55,6 +54,7 @@
                     <span>{{.}}</span>,
                     {{/types}}
                 </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/{{domain}}.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
             </ul>
         </div>
         <div class='graph-container'>
@@ -70,7 +70,7 @@
     </p>
 
     <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/build-data/static/api_fingerprint_weights.json" target="_blank">weight</a>)</small></div>
+        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
         <ul>
         {{#fingerprintingApis}}
             <li>{{.}}</li>
@@ -82,7 +82,7 @@
         <div><strong>Resources Found</strong></div>
         <ul>
         {{#resources}}
-            <li><a href="http://{{.}}" target="_blank" class="external">{{.}}</a></li>
+            <li><a href="http://{{.}}" target="_blank" class="external" rel="noreferrer noopener">{{.}}</a></li>
         {{/resources}}
         </ul>
     </div>

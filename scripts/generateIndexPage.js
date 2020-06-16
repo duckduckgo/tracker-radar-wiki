@@ -65,7 +65,6 @@ domainFiles.forEach(file => {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
     } catch (e) {
-        stats.failingFiles++;
         return;
     }
 
@@ -88,11 +87,10 @@ entityFiles.forEach(file => {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
     } catch (e) {
-        stats.failingFiles++;
         return;
     }
 
-    let entityPrevalence = 0;
+    let entityPrevalence = "0";
     if (data.prevalence) {
         // not all entities have this data
         entityPrevalence = (data.prevalence.tracking * 100).toFixed(2);

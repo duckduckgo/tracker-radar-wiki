@@ -11,7 +11,7 @@
         data: {
             labels: [],
             datasets: [{
-                label: `prevalence over time`,
+                label: `prevalence (%)`,
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: []
@@ -23,7 +23,7 @@
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1
+                        suggestedMax: 100
                     }
                 }]
             }
@@ -45,7 +45,7 @@
             console.log(labels, chartData);
 
             labels.forEach(l => lineChart.data.labels.push(l));
-            chartData.forEach(d => lineChart.data.datasets.forEach(dataset => dataset.data.push(d)));
+            chartData.forEach(d => lineChart.data.datasets.forEach(dataset => dataset.data.push(d * 100)));
 
             lineChart.update({duration: 300});
         });

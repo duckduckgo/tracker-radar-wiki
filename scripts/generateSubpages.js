@@ -13,9 +13,10 @@ const fingerprintTexts = [
     "Some use of browser API's, but not obviously for tracking purposes",
     "Use of many browser API's, possibly for tracking purposes",
     "Excessive use of browser API's, almost certainly for tracking purposes"
-]
+];
 
-const fingerprintingWeights = JSON.parse(fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/static/api_fingerprint_weights.json')));
+const weightsText = fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/static/api_fingerprint_weights.json'), 'utf8');
+const fingerprintingWeights = JSON.parse(weightsText);
 
 const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
     .filter(file => {
@@ -62,7 +63,7 @@ const domainIndex = new Map();
 const categories = new Map();
 
 // Pre process domain files to generate rankings
-let prevalenceList = [];
+const prevalenceList = [];
 domainFiles.forEach(file => {
     progressBar.tick({file});
 
@@ -82,7 +83,7 @@ domainFiles.forEach(file => {
 });
 
 // Creating a mapping of domain to rank
-let domainRanks = {};
+const domainRanks = {};
 prevalenceList.sort((a, b) => b.prevalence - a.prevalence).forEach((item, rank) => domainRanks[item.domain] = rank + 1);
 
 domainFiles.forEach(file => {
@@ -157,7 +158,7 @@ entityFiles.forEach(file => {
             return {
                 domain,
                 known: false,
-                prevalence: 0
+                prevalence: -1
             };
         }
     });

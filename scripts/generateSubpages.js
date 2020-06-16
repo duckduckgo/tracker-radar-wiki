@@ -99,8 +99,8 @@ domainFiles.forEach(file => {
 
     // Reformat some data for display
     data.fpText = fingerprintTexts[data.fingerprinting];
-    data.prevalence *= 100;
-    data.cookies *= 100;
+    data.prevalence = (data.prevalence * 100).toFixed(2);
+    data.cookies = (data.cookies * 100).toFixed(2);
     data.types = Object.keys(data.types);
     data.rank = domainRanks[data.domain];
     data.totalDomains = prevalenceList.length;

@@ -94,6 +94,6 @@ main().then(() => {
             diff: prevVals[1] - prevVals[0],
             name: item.name
         }
-    }).filter(entry => entry.diff > 0).sort((a, b) => b.diff - a.diff).slice(0, 10);
+    }).filter(entry => Math.abs(entry.diff) > 0.005).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
     fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
 });

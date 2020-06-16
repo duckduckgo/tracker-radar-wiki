@@ -47,6 +47,7 @@ function getTemplate(name) {
 
 let domains = [];
 let entities = [];
+const categories = new Map();
 
 domainFiles.forEach(file => {
     progressBar.tick({file});
@@ -61,6 +62,12 @@ domainFiles.forEach(file => {
         stats.failingFiles++;
         return;
     }
+
+    data.categories.forEach(catName => {
+        const category = categories.get(catName) || {name: catName, domains: []};
+        category.domains.push(data.domain);
+        categories.set(catName, category);
+    });
 
     domains.push({ domain: data.domain, prevalence: data.prevalence, sites: data.sites });
 });
@@ -85,7 +92,7 @@ entityFiles.forEach(file => {
 domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
 entities = entities.sort((a, b) => b.properties - a.properties).slice(0, 100);
 
-const output = mustache.render(getTemplate('index'), {domains: domains, entities: entities}, getTemplate);
+const output = mustache.render(getTemplate('index'), {domains: domains, entities: entities, categories: Array.from(categories.values())}, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
 

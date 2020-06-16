@@ -46,7 +46,7 @@
             if (entry.type === 'domain') {
                 const a = document.createElement('a');
                 a.innerText = `${entry.name} (${entry.type})`;
-                a.href = `/trackers/${entry.name}.html`;
+                a.href = `${pathPrefix}/trackers/${entry.name}.html`;
                 li.appendChild(a);
             } else {
                 li.innerText = `${entry.name} (${entry.type})`;

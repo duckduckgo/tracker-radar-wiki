@@ -1,7 +1,7 @@
 (function() {
     const trendingList = document.querySelector('.trending-list');
 
-    fetch(`../assets/data/history/trending.json`)
+    fetch(`./assets/data/history/trending.json`)
         .then(response => response.json())
         .then(data => {
 

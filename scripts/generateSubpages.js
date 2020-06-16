@@ -116,6 +116,7 @@ domainFiles.forEach(file => {
         const weightB = fingerprintingWeights[b] || 0;
         return weightB - weightA;
     });
+    data.resources = data.resources.map(res => res.rule.replace(/\\/g, ''));
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 

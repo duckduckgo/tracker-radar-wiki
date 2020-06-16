@@ -11,12 +11,12 @@
     let searchData;
 
     // we are using relative URLs so that everything works on both local and production
-    let indexUrl = '../assets/data/searchIndex.json';
+    let pathPrefix = '..';
     if (location.pathname === '/' || location.pathname === '/tracker-radar-wiki/') {
-        indexUrl = './assets/data/searchIndex.json';
+        pathPrefix = '.';
     }
 
-    fetch(indexUrl)
+    fetch(`${pathPrefix}/assets/data/searchIndex.json`)
         .then(response => response.json())
         .then(data => {
             searchIndex = lunr.Index.load(data);
@@ -25,7 +25,7 @@
             input.setAttribute('placeholder', 'domain or company name');
         });
 
-    fetch('/assets/data/searchData.json')
+    fetch(`${pathPrefix}/assets/data/searchData.json`)
         .then(response => response.json())
         .then(data => searchData = data);
 

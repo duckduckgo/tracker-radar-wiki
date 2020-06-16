@@ -8,6 +8,13 @@ const mustache = require('mustache');
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
+const fingerprintTexts = [
+    "No use of browser API's",
+    "Some use of browser API's, but not obviously for tracking purposes",
+    "Use of many browser API's, possibly for tracking purposes",
+    "Excessive use of browser API's, almost certainly for tracking purposes"
+]
+
 const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
     .filter(file => {
         const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
@@ -65,6 +72,9 @@ domainFiles.forEach(file => {
         stats.failingFiles++;
         return;
     }
+    data.fpText = fingerprintTexts[data.fingerprinting];
+    data.prevalence *= 100;
+    data.cookies *= 100;
 
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 

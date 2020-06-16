@@ -6,7 +6,7 @@
         return;
     }
 
-    fetch(`/assets/data/history/${window.wikiData.domain}.json`)
+    fetch(`../assets/data/history/${window.wikiData.domain}.json`)
         .then(response => response.json())
         .then(data => {
 

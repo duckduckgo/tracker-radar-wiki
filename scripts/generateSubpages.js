@@ -15,6 +15,8 @@ const fingerprintTexts = [
     "Excessive use of browser API's, almost certainly for tracking purposes"
 ]
 
+const fingerprintingWeights = JSON.parse(fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/static/api_fingerprint_weights.json')));
+
 const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
     .filter(file => {
         const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
@@ -105,6 +107,16 @@ domainFiles.forEach(file => {
     data.rank = domainRanks[data.domain];
     data.totalDomains = prevalenceList.length;
 
+    let apis = new Set();
+    data.resources.forEach((resource) => {
+        Object.keys(resource.apis).forEach(api => apis.add(api));
+    });
+    data.fingerprintingApis = [...apis].sort((a, b) => {
+        const weightA = fingerprintingWeights[a] || 0;
+        const weightB = fingerprintingWeights[b] || 0;
+        return weightB - weightA;
+    });
+    
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 
     domainIndex.set(data.domain, data.prevalence);

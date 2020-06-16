@@ -1,15 +1,28 @@
----
-title: Tracker Radar - salesforce.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - salesforce.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "salesforce.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>salesforce.com</h1>
@@ -23,40 +36,47 @@ title: Tracker Radar - salesforce.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000656
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>urbn.my</span>
-        <span>bonobos.my</span>
-        <span>bcom.my</span>
-        <span>michaels.my</span>
-        <span>fsaocts.my</span>
-        <span>foundationcenter.my</span>
-        <span>grainger.my</span>
-        <span>nowtv.my</span>
-        <span>jysk.my</span>
-        <span>safe.my</span>
-        <span>org62.my</span>
-        <span>pearson.my</span>
-        <span>ctca.my</span>
-        <span>eqx.my</span>
-        <span>grupoexito.my</span>
-        <span>f5.my</span>
-        <span>na73</span>
-        <span>hawaiilife.my</span>
-        <span>connectedhome.my</span>
-        <span>juniper.my</span>
-        <span>qlfbrands.my</span>
-        <span>haufe.my</span>
-        <span>rax.my</span>
-        <span>rent-a-centerb2b.my</span>
-        <span>rh.my</span>
-        <span>sok.my</span>
-        <span>asicsdigitalinc.my</span>
-        <span>nxp.my</span>
-        <span>yelp-sales.my</span>
-        <span>eu8</span>
+        <span>urbn.my</span>, 
+        <span>bonobos.my</span>, 
+        <span>bcom.my</span>, 
+        <span>michaels.my</span>, 
+        <span>fsaocts.my</span>, 
+        <span>foundationcenter.my</span>, 
+        <span>grainger.my</span>, 
+        <span>nowtv.my</span>, 
+        <span>jysk.my</span>, 
+        <span>safe.my</span>, 
+        <span>org62.my</span>, 
+        <span>pearson.my</span>, 
+        <span>ctca.my</span>, 
+        <span>eqx.my</span>, 
+        <span>grupoexito.my</span>, 
+        <span>f5.my</span>, 
+        <span>na73</span>, 
+        <span>hawaiilife.my</span>, 
+        <span>connectedhome.my</span>, 
+        <span>juniper.my</span>, 
+        <span>qlfbrands.my</span>, 
+        <span>haufe.my</span>, 
+        <span>rax.my</span>, 
+        <span>rent-a-centerb2b.my</span>, 
+        <span>rh.my</span>, 
+        <span>sok.my</span>, 
+        <span>asicsdigitalinc.my</span>, 
+        <span>nxp.my</span>, 
+        <span>yelp-sales.my</span>, 
+        <span>eu8</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

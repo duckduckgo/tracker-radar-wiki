@@ -1,15 +1,28 @@
----
-title: Tracker Radar - tremorhub.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - tremorhub.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "tremorhub.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>tremorhub.com</h1>
@@ -23,65 +36,72 @@ title: Tracker Radar - tremorhub.com
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.0106
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>taboola-supply-partners</span>
-        <span>partners</span>
-        <span>amazon.partners</span>
-        <span>connatix-supply-partners</span>
-        <span>criteo-partners</span>
-        <span>amobee-partners</span>
-        <span>znsps-bl6wf.ads</span>
-        <span>6psex-fm1gy.ads</span>
-        <span>vrgvj-26nr6.ads</span>
-        <span>h250p-nj545.ads</span>
-        <span>bktr2-06hdl.ads</span>
-        <span>87uiy.ads</span>
-        <span>7klg6-qd307.ads</span>
-        <span>jrkl5.ads</span>
-        <span>4cywq-eqnre.ads</span>
-        <span>gklfs-x8k98.ads</span>
-        <span>slckg-2p3vy.ads</span>
-        <span>ey5io-0z2b2.ads</span>
-        <span>mb9eo-p4zkl.ads</span>
-        <span>mb9eo-7w62j.ads</span>
-        <span>oryj8-jzbmc.ads</span>
-        <span>xx6bg-gdsfd.ads</span>
-        <span>v4r9z-fjydq.ads</span>
-        <span>6psex-sootr.ads</span>
-        <span>slckg-4znyf.ads</span>
-        <span>7klg6-az70z.ads</span>
-        <span>slckg-kqe2e.ads</span>
-        <span>cguke-9h64o.ads</span>
-        <span>pd14382-9lqk9.ads</span>
-        <span>slckg-nugvu.ads</span>
-        <span>qk5xf-rkfq2.ads</span>
-        <span>playbuzzmm.ads</span>
-        <span>vtrdn-wjdav.ads</span>
-        <span>9rmjh-zt7gk.ads</span>
-        <span>ufzua-051ht.ads</span>
-        <span>ufjh3-4mu0u.ads</span>
-        <span>m7hdh-2damu.ads</span>
-        <span>000000.ads</span>
-        <span>jo3qr-hyaad.ads</span>
-        <span>q017o-e2e5f.ads</span>
-        <span>w6blq-2hlk4.ads</span>
-        <span>q017o-ootbn.ads</span>
-        <span>3gxrq-ova6n.ads</span>
-        <span>q017o-ycbgf.ads</span>
-        <span>q017o-41cfp.ads</span>
-        <span>9rmjh-t0k0q.ads</span>
-        <span>p4dt2-4nrdw.ads</span>
-        <span>5ew8d-b3mmu.ads</span>
-        <span>xx6bg-24zk9.ads</span>
-        <span>qds0l-mcpdh.ads</span>
-        <span>gklfs-0klir.ads</span>
-        <span>scm.publishers</span>
-        <span>eq97f.publishers</span>
-        <span>qds0l.publishers</span>
-        <span>i9slw.publishers</span>
+        <span>taboola-supply-partners</span>, 
+        <span>partners</span>, 
+        <span>amazon.partners</span>, 
+        <span>connatix-supply-partners</span>, 
+        <span>criteo-partners</span>, 
+        <span>amobee-partners</span>, 
+        <span>znsps-bl6wf.ads</span>, 
+        <span>6psex-fm1gy.ads</span>, 
+        <span>vrgvj-26nr6.ads</span>, 
+        <span>h250p-nj545.ads</span>, 
+        <span>bktr2-06hdl.ads</span>, 
+        <span>87uiy.ads</span>, 
+        <span>7klg6-qd307.ads</span>, 
+        <span>jrkl5.ads</span>, 
+        <span>4cywq-eqnre.ads</span>, 
+        <span>gklfs-x8k98.ads</span>, 
+        <span>slckg-2p3vy.ads</span>, 
+        <span>ey5io-0z2b2.ads</span>, 
+        <span>mb9eo-p4zkl.ads</span>, 
+        <span>mb9eo-7w62j.ads</span>, 
+        <span>oryj8-jzbmc.ads</span>, 
+        <span>xx6bg-gdsfd.ads</span>, 
+        <span>v4r9z-fjydq.ads</span>, 
+        <span>6psex-sootr.ads</span>, 
+        <span>slckg-4znyf.ads</span>, 
+        <span>7klg6-az70z.ads</span>, 
+        <span>slckg-kqe2e.ads</span>, 
+        <span>cguke-9h64o.ads</span>, 
+        <span>pd14382-9lqk9.ads</span>, 
+        <span>slckg-nugvu.ads</span>, 
+        <span>qk5xf-rkfq2.ads</span>, 
+        <span>playbuzzmm.ads</span>, 
+        <span>vtrdn-wjdav.ads</span>, 
+        <span>9rmjh-zt7gk.ads</span>, 
+        <span>ufzua-051ht.ads</span>, 
+        <span>ufjh3-4mu0u.ads</span>, 
+        <span>m7hdh-2damu.ads</span>, 
+        <span>000000.ads</span>, 
+        <span>jo3qr-hyaad.ads</span>, 
+        <span>q017o-e2e5f.ads</span>, 
+        <span>w6blq-2hlk4.ads</span>, 
+        <span>q017o-ootbn.ads</span>, 
+        <span>3gxrq-ova6n.ads</span>, 
+        <span>q017o-ycbgf.ads</span>, 
+        <span>q017o-41cfp.ads</span>, 
+        <span>9rmjh-t0k0q.ads</span>, 
+        <span>p4dt2-4nrdw.ads</span>, 
+        <span>5ew8d-b3mmu.ads</span>, 
+        <span>xx6bg-24zk9.ads</span>, 
+        <span>qds0l-mcpdh.ads</span>, 
+        <span>gklfs-0klir.ads</span>, 
+        <span>scm.publishers</span>, 
+        <span>eq97f.publishers</span>, 
+        <span>qds0l.publishers</span>, 
+        <span>i9slw.publishers</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

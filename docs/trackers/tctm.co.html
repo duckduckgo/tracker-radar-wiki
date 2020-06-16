@@ -1,15 +1,28 @@
----
-title: Tracker Radar - tctm.co
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - tctm.co</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "tctm.co",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>tctm.co</h1>
@@ -23,91 +36,98 @@ title: Tracker Radar - tctm.co
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.0012
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>70955</span>
-        <span>43155</span>
-        <span>153792</span>
-        <span>89727</span>
-        <span>120481</span>
-        <span>68627</span>
-        <span>180850</span>
-        <span>179649</span>
-        <span>56065</span>
-        <span>144309</span>
-        <span>219994</span>
-        <span>153015</span>
-        <span>143136</span>
-        <span>181396</span>
-        <span>101858</span>
-        <span>62938</span>
-        <span>169665</span>
-        <span>246128</span>
-        <span>253280</span>
-        <span>104605</span>
-        <span>75487</span>
-        <span>125444</span>
-        <span>172473</span>
-        <span>28818</span>
-        <span>146874</span>
-        <span>250415</span>
-        <span>30531</span>
-        <span>84746</span>
-        <span>175895</span>
-        <span>307</span>
-        <span>127070</span>
-        <span>21292</span>
-        <span>80749</span>
-        <span>49035</span>
-        <span>17156</span>
-        <span>47844</span>
-        <span>74056</span>
-        <span>199001</span>
-        <span>191810</span>
-        <span>200285</span>
-        <span>181393</span>
-        <span>43194</span>
-        <span>114355</span>
-        <span>151600</span>
-        <span>15950</span>
-        <span>48879</span>
-        <span>142713</span>
-        <span>241002</span>
-        <span>127832</span>
-        <span>645</span>
-        <span>112213</span>
-        <span>121627</span>
-        <span>142536</span>
-        <span>78838</span>
-        <span>214749</span>
-        <span>196631</span>
-        <span>186558</span>
-        <span>212445</span>
-        <span>164996</span>
-        <span>154395</span>
-        <span>208655</span>
-        <span>163007</span>
-        <span>74005</span>
-        <span>180937</span>
-        <span>85886</span>
-        <span>152431</span>
-        <span>71129</span>
-        <span>101747</span>
-        <span>230159</span>
-        <span>86915</span>
-        <span>113335</span>
-        <span>221040</span>
-        <span>104851</span>
-        <span>39450</span>
-        <span>250250</span>
-        <span>118042</span>
-        <span>36806</span>
-        <span>29853</span>
-        <span>100643</span>
-        <span>211349</span>
-        <span>72715</span>
+        <span>70955</span>, 
+        <span>43155</span>, 
+        <span>153792</span>, 
+        <span>89727</span>, 
+        <span>120481</span>, 
+        <span>68627</span>, 
+        <span>180850</span>, 
+        <span>179649</span>, 
+        <span>56065</span>, 
+        <span>144309</span>, 
+        <span>219994</span>, 
+        <span>153015</span>, 
+        <span>143136</span>, 
+        <span>181396</span>, 
+        <span>101858</span>, 
+        <span>62938</span>, 
+        <span>169665</span>, 
+        <span>246128</span>, 
+        <span>253280</span>, 
+        <span>104605</span>, 
+        <span>75487</span>, 
+        <span>125444</span>, 
+        <span>172473</span>, 
+        <span>28818</span>, 
+        <span>146874</span>, 
+        <span>250415</span>, 
+        <span>30531</span>, 
+        <span>84746</span>, 
+        <span>175895</span>, 
+        <span>307</span>, 
+        <span>127070</span>, 
+        <span>21292</span>, 
+        <span>80749</span>, 
+        <span>49035</span>, 
+        <span>17156</span>, 
+        <span>47844</span>, 
+        <span>74056</span>, 
+        <span>199001</span>, 
+        <span>191810</span>, 
+        <span>200285</span>, 
+        <span>181393</span>, 
+        <span>43194</span>, 
+        <span>114355</span>, 
+        <span>151600</span>, 
+        <span>15950</span>, 
+        <span>48879</span>, 
+        <span>142713</span>, 
+        <span>241002</span>, 
+        <span>127832</span>, 
+        <span>645</span>, 
+        <span>112213</span>, 
+        <span>121627</span>, 
+        <span>142536</span>, 
+        <span>78838</span>, 
+        <span>214749</span>, 
+        <span>196631</span>, 
+        <span>186558</span>, 
+        <span>212445</span>, 
+        <span>164996</span>, 
+        <span>154395</span>, 
+        <span>208655</span>, 
+        <span>163007</span>, 
+        <span>74005</span>, 
+        <span>180937</span>, 
+        <span>85886</span>, 
+        <span>152431</span>, 
+        <span>71129</span>, 
+        <span>101747</span>, 
+        <span>230159</span>, 
+        <span>86915</span>, 
+        <span>113335</span>, 
+        <span>221040</span>, 
+        <span>104851</span>, 
+        <span>39450</span>, 
+        <span>250250</span>, 
+        <span>118042</span>, 
+        <span>36806</span>, 
+        <span>29853</span>, 
+        <span>100643</span>, 
+        <span>211349</span>, 
+        <span>72715</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

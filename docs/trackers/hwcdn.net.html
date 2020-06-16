@@ -1,15 +1,28 @@
----
-title: Tracker Radar - hwcdn.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - hwcdn.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "hwcdn.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>hwcdn.net</h1>
@@ -23,34 +36,41 @@ title: Tracker Radar - hwcdn.net
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.0000713
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>s9n3t2d7.ssl</span>
-        <span>d3m3u5a3.ssl</span>
-        <span>m5f7w2f6.ssl</span>
-        <span>c5x8i7c7.ssl</span>
-        <span>p4k7u4x7.ssl</span>
-        <span>a2h6m3w6.ssl</span>
-        <span>p8k5i9q7.map2.ssl</span>
-        <span>p4y9n2n4.ssl</span>
-        <span>k4b8k3x5.ssl</span>
-        <span>f6j6u6m9.ssl</span>
-        <span>c9w8v3m5.ssl</span>
-        <span>s4q8j8b7.ssl</span>
-        <span>v3h8k9z7.ssl</span>
-        <span>i2x5j7n2.ssl</span>
-        <span>k3t5u5e6.ssl</span>
-        <span>y5h8a4i3.ssl</span>
-        <span>s8a3y4f7.ssl</span>
-        <span>q6v5g7i2.ssl</span>
-        <span>c6g4w4m3.ssl</span>
-        <span>e2b8u3v8.map2.ssl</span>
-        <span>y8x5j2b5.map2.ssl</span>
-        <span>f6n8r2a9.map2.ssl</span>
-        <span>p6w6z8t3.ssl</span>
-        <span>t8t6a5q2.ssl</span>
+        <span>s9n3t2d7.ssl</span>, 
+        <span>d3m3u5a3.ssl</span>, 
+        <span>m5f7w2f6.ssl</span>, 
+        <span>c5x8i7c7.ssl</span>, 
+        <span>p4k7u4x7.ssl</span>, 
+        <span>a2h6m3w6.ssl</span>, 
+        <span>p8k5i9q7.map2.ssl</span>, 
+        <span>p4y9n2n4.ssl</span>, 
+        <span>k4b8k3x5.ssl</span>, 
+        <span>f6j6u6m9.ssl</span>, 
+        <span>c9w8v3m5.ssl</span>, 
+        <span>s4q8j8b7.ssl</span>, 
+        <span>v3h8k9z7.ssl</span>, 
+        <span>i2x5j7n2.ssl</span>, 
+        <span>k3t5u5e6.ssl</span>, 
+        <span>y5h8a4i3.ssl</span>, 
+        <span>s8a3y4f7.ssl</span>, 
+        <span>q6v5g7i2.ssl</span>, 
+        <span>c6g4w4m3.ssl</span>, 
+        <span>e2b8u3v8.map2.ssl</span>, 
+        <span>y8x5j2b5.map2.ssl</span>, 
+        <span>f6n8r2a9.map2.ssl</span>, 
+        <span>p6w6z8t3.ssl</span>, 
+        <span>t8t6a5q2.ssl</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

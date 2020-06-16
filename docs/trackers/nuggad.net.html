@@ -1,15 +1,28 @@
----
-title: Tracker Radar - nuggad.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - nuggad.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "nuggad.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>nuggad.net</h1>
@@ -23,43 +36,50 @@ title: Tracker Radar - nuggad.net
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.00382
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>asqrtl</span>
-        <span>71i</span>
-        <span>msq-adthink</span>
-        <span>asqbayard</span>
-        <span>si</span>
-        <span>lpm-amaury</span>
-        <span>lpm-psychologies</span>
-        <span>lpm-reworldmedia</span>
-        <span>lpm-lefigaro</span>
-        <span>websystem24</span>
-        <span>adselect</span>
-        <span>webedia-es</span>
-        <span>lpm-mondadori</span>
-        <span>leonardo</span>
-        <span>asqexpress</span>
-        <span>lpm-digischool</span>
-        <span>webedia-de</span>
-        <span>lpm-sportslocalmedia</span>
-        <span>oms</span>
-        <span>adweb</span>
-        <span>lpm-ladepeche</span>
-        <span>lpm-laprovence</span>
-        <span>lpm-midilibre</span>
-        <span>asqmaxifoot</span>
-        <span>asqm6</span>
-        <span>mtv</span>
-        <span>366parisnormandie</span>
-        <span>wait</span>
-        <span>asqmediaobs</span>
-        <span>bei</span>
-        <span>lpm-slate</span>
-        <span>si-s</span>
-        <span>rmsi</span>
+        <span>asqrtl</span>, 
+        <span>71i</span>, 
+        <span>msq-adthink</span>, 
+        <span>asqbayard</span>, 
+        <span>si</span>, 
+        <span>lpm-amaury</span>, 
+        <span>lpm-psychologies</span>, 
+        <span>lpm-reworldmedia</span>, 
+        <span>lpm-lefigaro</span>, 
+        <span>websystem24</span>, 
+        <span>adselect</span>, 
+        <span>webedia-es</span>, 
+        <span>lpm-mondadori</span>, 
+        <span>leonardo</span>, 
+        <span>asqexpress</span>, 
+        <span>lpm-digischool</span>, 
+        <span>webedia-de</span>, 
+        <span>lpm-sportslocalmedia</span>, 
+        <span>oms</span>, 
+        <span>adweb</span>, 
+        <span>lpm-ladepeche</span>, 
+        <span>lpm-laprovence</span>, 
+        <span>lpm-midilibre</span>, 
+        <span>asqmaxifoot</span>, 
+        <span>asqm6</span>, 
+        <span>mtv</span>, 
+        <span>366parisnormandie</span>, 
+        <span>wait</span>, 
+        <span>asqmediaobs</span>, 
+        <span>bei</span>, 
+        <span>lpm-slate</span>, 
+        <span>si-s</span>, 
+        <span>rmsi</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

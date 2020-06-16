@@ -1,15 +1,28 @@
----
-title: Tracker Radar - sharethis.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - sharethis.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "sharethis.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>sharethis.com</h1>
@@ -23,21 +36,28 @@ title: Tracker Radar - sharethis.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.0346
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>pd</span>
-        <span>t</span>
-        <span>sync</span>
-        <span>platform-api</span>
-        <span>l</span>
-        <span>w</span>
-        <span>ws</span>
-        <span>s</span>
-        <span>ss</span>
-        <span>sd</span>
-        <span>seg</span>
+        <span>pd</span>, 
+        <span>t</span>, 
+        <span>sync</span>, 
+        <span>platform-api</span>, 
+        <span>l</span>, 
+        <span>w</span>, 
+        <span>ws</span>, 
+        <span>s</span>, 
+        <span>ss</span>, 
+        <span>sd</span>, 
+        <span>seg</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

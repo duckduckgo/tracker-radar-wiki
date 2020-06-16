@@ -1,15 +1,28 @@
----
-title: Tracker Radar - pcdn.co
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - pcdn.co</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "pcdn.co",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>pcdn.co</h1>
@@ -23,70 +36,77 @@ title: Tracker Radar - pcdn.co
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.0003
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>s20772</span>
-        <span>s17054</span>
-        <span>s26162</span>
-        <span>s23209</span>
-        <span>s11234</span>
-        <span>s14761</span>
-        <span>s32441</span>
-        <span>s15543</span>
-        <span>s30278</span>
-        <span>s31168</span>
-        <span>s33162</span>
-        <span>s3951</span>
-        <span>s30246</span>
-        <span>s22658</span>
-        <span>s20697</span>
-        <span>s33079</span>
-        <span>s31531</span>
-        <span>s9767</span>
-        <span>s25562</span>
-        <span>s9503</span>
-        <span>s16962</span>
-        <span>s23527</span>
-        <span>s30886</span>
-        <span>s24193</span>
-        <span>s29755</span>
-        <span>s8096</span>
-        <span>s7641</span>
-        <span>s30380</span>
-        <span>s29068</span>
-        <span>s32071</span>
-        <span>s32566</span>
-        <span>s4827</span>
-        <span>s27147</span>
-        <span>s17346</span>
-        <span>s31242</span>
-        <span>s28301</span>
-        <span>s12683</span>
-        <span>s33046</span>
-        <span>s24990</span>
-        <span>s11512</span>
-        <span>s30623</span>
-        <span>s29608</span>
-        <span>s28489</span>
-        <span>s22428</span>
-        <span>s29353</span>
-        <span>s32659</span>
-        <span>s2982</span>
-        <span>s14085</span>
-        <span>s23991</span>
-        <span>s17026</span>
-        <span>s18671</span>
-        <span>s7494</span>
-        <span>s26551</span>
-        <span>s14422</span>
-        <span>s26552</span>
-        <span>s24526</span>
-        <span>s18670</span>
-        <span>s11284</span>
-        <span>s23040</span>
-        <span>s17077</span>
+        <span>s20772</span>, 
+        <span>s17054</span>, 
+        <span>s26162</span>, 
+        <span>s23209</span>, 
+        <span>s11234</span>, 
+        <span>s14761</span>, 
+        <span>s32441</span>, 
+        <span>s15543</span>, 
+        <span>s30278</span>, 
+        <span>s31168</span>, 
+        <span>s33162</span>, 
+        <span>s3951</span>, 
+        <span>s30246</span>, 
+        <span>s22658</span>, 
+        <span>s20697</span>, 
+        <span>s33079</span>, 
+        <span>s31531</span>, 
+        <span>s9767</span>, 
+        <span>s25562</span>, 
+        <span>s9503</span>, 
+        <span>s16962</span>, 
+        <span>s23527</span>, 
+        <span>s30886</span>, 
+        <span>s24193</span>, 
+        <span>s29755</span>, 
+        <span>s8096</span>, 
+        <span>s7641</span>, 
+        <span>s30380</span>, 
+        <span>s29068</span>, 
+        <span>s32071</span>, 
+        <span>s32566</span>, 
+        <span>s4827</span>, 
+        <span>s27147</span>, 
+        <span>s17346</span>, 
+        <span>s31242</span>, 
+        <span>s28301</span>, 
+        <span>s12683</span>, 
+        <span>s33046</span>, 
+        <span>s24990</span>, 
+        <span>s11512</span>, 
+        <span>s30623</span>, 
+        <span>s29608</span>, 
+        <span>s28489</span>, 
+        <span>s22428</span>, 
+        <span>s29353</span>, 
+        <span>s32659</span>, 
+        <span>s2982</span>, 
+        <span>s14085</span>, 
+        <span>s23991</span>, 
+        <span>s17026</span>, 
+        <span>s18671</span>, 
+        <span>s7494</span>, 
+        <span>s26551</span>, 
+        <span>s14422</span>, 
+        <span>s26552</span>, 
+        <span>s24526</span>, 
+        <span>s18670</span>, 
+        <span>s11284</span>, 
+        <span>s23040</span>, 
+        <span>s17077</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

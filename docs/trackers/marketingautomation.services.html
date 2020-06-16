@@ -1,15 +1,28 @@
----
-title: Tracker Radar - marketingautomation.services
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - marketingautomation.services</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "marketingautomation.services",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>marketingautomation.services</h1>
@@ -23,39 +36,46 @@ title: Tracker Radar - marketingautomation.services
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000399
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>koi-3qnaldk7bw</span>
-        <span>koi-3qndsluurk</span>
-        <span>koi-3qnhxujwcg</span>
-        <span>koi-3qmcsx3tc8</span>
-        <span>koi-3qna4j85su</span>
-        <span>koi-3qn6slkft0</span>
-        <span>koi-3qniw8vs5m</span>
-        <span>koi-3qndx4mdl8</span>
-        <span>koi-3qnf1x61yy</span>
-        <span>koi-3qni7peppk</span>
-        <span>koi-3qnm2gipy2</span>
-        <span>koi-3qnlyl7tam</span>
-        <span>koi-37v3j6cu</span>
-        <span>koi-3qniikx8pw</span>
-        <span>koi-3qneivnflw</span>
-        <span>koi-3qnluzg15g</span>
-        <span>koi-3qni745a46</span>
-        <span>koi-3qnbtg5cro</span>
-        <span>koi-3qnbxc6nm2</span>
-        <span>koi-3qna9bit4s</span>
-        <span>koi-3qe7ofmyq0</span>
-        <span>koi-3qne9gxahk</span>
-        <span>koi-3qnjeno6je</span>
-        <span>koi-3qnm9lv3nk</span>
-        <span>koi-3qnj3jcx7q</span>
-        <span>koi-mr4py4tq</span>
-        <span>koi-3qnhyq2un2</span>
-        <span>koi-3qmu7udxf2</span>
-        <span>koi-3qks1753p8</span>
+        <span>koi-3qnaldk7bw</span>, 
+        <span>koi-3qndsluurk</span>, 
+        <span>koi-3qnhxujwcg</span>, 
+        <span>koi-3qmcsx3tc8</span>, 
+        <span>koi-3qna4j85su</span>, 
+        <span>koi-3qn6slkft0</span>, 
+        <span>koi-3qniw8vs5m</span>, 
+        <span>koi-3qndx4mdl8</span>, 
+        <span>koi-3qnf1x61yy</span>, 
+        <span>koi-3qni7peppk</span>, 
+        <span>koi-3qnm2gipy2</span>, 
+        <span>koi-3qnlyl7tam</span>, 
+        <span>koi-37v3j6cu</span>, 
+        <span>koi-3qniikx8pw</span>, 
+        <span>koi-3qneivnflw</span>, 
+        <span>koi-3qnluzg15g</span>, 
+        <span>koi-3qni745a46</span>, 
+        <span>koi-3qnbtg5cro</span>, 
+        <span>koi-3qnbxc6nm2</span>, 
+        <span>koi-3qna9bit4s</span>, 
+        <span>koi-3qe7ofmyq0</span>, 
+        <span>koi-3qne9gxahk</span>, 
+        <span>koi-3qnjeno6je</span>, 
+        <span>koi-3qnm9lv3nk</span>, 
+        <span>koi-3qnj3jcx7q</span>, 
+        <span>koi-mr4py4tq</span>, 
+        <span>koi-3qnhyq2un2</span>, 
+        <span>koi-3qmu7udxf2</span>, 
+        <span>koi-3qks1753p8</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

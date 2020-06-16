@@ -1,15 +1,28 @@
----
-title: Tracker Radar - infusionsoft.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - infusionsoft.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "infusionsoft.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>infusionsoft.com</h1>
@@ -23,74 +36,81 @@ title: Tracker Radar - infusionsoft.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00087
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>vp441</span>
-        <span>je222</span>
-        <span>bw502</span>
-        <span>lo301</span>
-        <span>zw363</span>
-        <span>rl142</span>
-        <span>py248</span>
-        <span>bd272</span>
-        <span>xa202</span>
-        <span>qj959</span>
-        <span>homeopathyworks</span>
-        <span>cw135</span>
-        <span>ul223</span>
-        <span>ss157</span>
-        <span>un233</span>
-        <span>df231</span>
-        <span>by206</span>
-        <span>uq287</span>
-        <span>cs151</span>
-        <span>fx229</span>
-        <span>rl102</span>
-        <span>hf322</span>
-        <span>yl289</span>
-        <span>ec370</span>
-        <span>ju279</span>
-        <span>ad173</span>
-        <span>jj1641</span>
-        <span>zk164</span>
-        <span>wo322</span>
-        <span>xp429</span>
-        <span>kt144</span>
-        <span>mz147</span>
-        <span>vk332</span>
-        <span>ne387</span>
-        <span>ho332</span>
-        <span>aq200</span>
-        <span>funeralwise</span>
-        <span>datingconference</span>
-        <span>ece88010</span>
-        <span>qe305</span>
-        <span>ro130</span>
-        <span>bx231</span>
-        <span>hx116</span>
-        <span>gi256</span>
-        <span>tv329</span>
-        <span>jq150</span>
-        <span>bl102</span>
-        <span>iman</span>
-        <span>ng361</span>
-        <span>pt175</span>
-        <span>ix316</span>
-        <span>yh955</span>
-        <span>og416</span>
-        <span>eo109</span>
-        <span>pt102</span>
-        <span>es686</span>
-        <span>cleanwater</span>
-        <span>uh372</span>
-        <span>or106</span>
-        <span>europacmetals</span>
-        <span>gh179</span>
-        <span>sn188</span>
-        <span>ky141</span>
-        <span>sl290</span>
+        <span>vp441</span>, 
+        <span>je222</span>, 
+        <span>bw502</span>, 
+        <span>lo301</span>, 
+        <span>zw363</span>, 
+        <span>rl142</span>, 
+        <span>py248</span>, 
+        <span>bd272</span>, 
+        <span>xa202</span>, 
+        <span>qj959</span>, 
+        <span>homeopathyworks</span>, 
+        <span>cw135</span>, 
+        <span>ul223</span>, 
+        <span>ss157</span>, 
+        <span>un233</span>, 
+        <span>df231</span>, 
+        <span>by206</span>, 
+        <span>uq287</span>, 
+        <span>cs151</span>, 
+        <span>fx229</span>, 
+        <span>rl102</span>, 
+        <span>hf322</span>, 
+        <span>yl289</span>, 
+        <span>ec370</span>, 
+        <span>ju279</span>, 
+        <span>ad173</span>, 
+        <span>jj1641</span>, 
+        <span>zk164</span>, 
+        <span>wo322</span>, 
+        <span>xp429</span>, 
+        <span>kt144</span>, 
+        <span>mz147</span>, 
+        <span>vk332</span>, 
+        <span>ne387</span>, 
+        <span>ho332</span>, 
+        <span>aq200</span>, 
+        <span>funeralwise</span>, 
+        <span>datingconference</span>, 
+        <span>ece88010</span>, 
+        <span>qe305</span>, 
+        <span>ro130</span>, 
+        <span>bx231</span>, 
+        <span>hx116</span>, 
+        <span>gi256</span>, 
+        <span>tv329</span>, 
+        <span>jq150</span>, 
+        <span>bl102</span>, 
+        <span>iman</span>, 
+        <span>ng361</span>, 
+        <span>pt175</span>, 
+        <span>ix316</span>, 
+        <span>yh955</span>, 
+        <span>og416</span>, 
+        <span>eo109</span>, 
+        <span>pt102</span>, 
+        <span>es686</span>, 
+        <span>cleanwater</span>, 
+        <span>uh372</span>, 
+        <span>or106</span>, 
+        <span>europacmetals</span>, 
+        <span>gh179</span>, 
+        <span>sn188</span>, 
+        <span>ky141</span>, 
+        <span>sl290</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

@@ -1,15 +1,28 @@
----
-title: Tracker Radar - plista.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - plista.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "plista.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>plista.com</h1>
@@ -23,26 +36,33 @@ title: Tracker Radar - plista.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000628
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>static</span>
-        <span>static-de</span>
-        <span>static-pl</span>
-        <span>farm</span>
-        <span>farm-de</span>
-        <span>farm-pl</span>
-        <span>farm-ch</span>
-        <span>farm-au</span>
-        <span>farm-uk</span>
-        <span>farm-at</span>
-        <span>farm-se</span>
-        <span>insights</span>
-        <span>farm-no</span>
-        <span>static-at</span>
-        <span>static-se</span>
-        <span>static-au</span>
+        <span>static</span>, 
+        <span>static-de</span>, 
+        <span>static-pl</span>, 
+        <span>farm</span>, 
+        <span>farm-de</span>, 
+        <span>farm-pl</span>, 
+        <span>farm-ch</span>, 
+        <span>farm-au</span>, 
+        <span>farm-uk</span>, 
+        <span>farm-at</span>, 
+        <span>farm-se</span>, 
+        <span>insights</span>, 
+        <span>farm-no</span>, 
+        <span>static-at</span>, 
+        <span>static-se</span>, 
+        <span>static-au</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

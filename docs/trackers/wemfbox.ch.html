@@ -1,15 +1,28 @@
----
-title: Tracker Radar - wemfbox.ch
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - wemfbox.ch</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "wemfbox.ch",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>wemfbox.ch</h1>
@@ -23,62 +36,69 @@ title: Tracker Radar - wemfbox.ch
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000799
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>tagesanz-ssl</span>
-        <span>wetter-ssl</span>
-        <span>migusto-ssl</span>
-        <span>nzz-ssl</span>
-        <span>loca-ssl</span>
-        <span>20minde-ssl</span>
-        <span>24heures-ssl</span>
-        <span>az-ssl</span>
-        <span>arci-ssl</span>
-        <span>baz-ssl</span>
-        <span>beob-ssl</span>
-        <span>bernerz-ssl</span>
-        <span>blickonl-ssl</span>
-        <span>blue-ssl</span>
-        <span>cash-ssl</span>
-        <span>derbund-ssl</span>
-        <span>finan-ssl</span>
-        <span>fininfo-ssl</span>
-        <span>handelsz-ssl</span>
-        <span>lematin-ssl</span>
-        <span>nouv-ssl</span>
-        <span>lusonz-ssl</span>
-        <span>ronorp-ssl</span>
-        <span>rsi-ssl</span>
-        <span>rts-ssl</span>
-        <span>si-ssl</span>
-        <span>sftv-ssl</span>
-        <span>sued-ssl</span>
-        <span>tagblatt-ssl</span>
-        <span>tdg-ssl</span>
-        <span>tele-ssl</span>
-        <span>teleboy-ssl</span>
-        <span>ticinews-ssl</span>
-        <span>ticinonl-ssl</span>
-        <span>watson-ssl</span>
-        <span>wildeis-ssl</span>
-        <span>zattoo-ssl</span>
-        <span>tagi-ssl</span>
-        <span>newsnetz-ssl</span>
-        <span>search-ssl</span>
-        <span>discover-ssl</span>
-        <span>famleben-ssl</span>
-        <span>gmx-ssl</span>
-        <span>temp-ssl</span>
-        <span>mysw-ssl</span>
-        <span>nachhalt-ssl</span>
-        <span>nau-ssl</span>
-        <span>idgpctip-ssl</span>
-        <span>swissinf</span>
-        <span>smilk-ssl</span>
-        <span>swissmom-ssl</span>
-        <span>qs-ssl</span>
+        <span>tagesanz-ssl</span>, 
+        <span>wetter-ssl</span>, 
+        <span>migusto-ssl</span>, 
+        <span>nzz-ssl</span>, 
+        <span>loca-ssl</span>, 
+        <span>20minde-ssl</span>, 
+        <span>24heures-ssl</span>, 
+        <span>az-ssl</span>, 
+        <span>arci-ssl</span>, 
+        <span>baz-ssl</span>, 
+        <span>beob-ssl</span>, 
+        <span>bernerz-ssl</span>, 
+        <span>blickonl-ssl</span>, 
+        <span>blue-ssl</span>, 
+        <span>cash-ssl</span>, 
+        <span>derbund-ssl</span>, 
+        <span>finan-ssl</span>, 
+        <span>fininfo-ssl</span>, 
+        <span>handelsz-ssl</span>, 
+        <span>lematin-ssl</span>, 
+        <span>nouv-ssl</span>, 
+        <span>lusonz-ssl</span>, 
+        <span>ronorp-ssl</span>, 
+        <span>rsi-ssl</span>, 
+        <span>rts-ssl</span>, 
+        <span>si-ssl</span>, 
+        <span>sftv-ssl</span>, 
+        <span>sued-ssl</span>, 
+        <span>tagblatt-ssl</span>, 
+        <span>tdg-ssl</span>, 
+        <span>tele-ssl</span>, 
+        <span>teleboy-ssl</span>, 
+        <span>ticinews-ssl</span>, 
+        <span>ticinonl-ssl</span>, 
+        <span>watson-ssl</span>, 
+        <span>wildeis-ssl</span>, 
+        <span>zattoo-ssl</span>, 
+        <span>tagi-ssl</span>, 
+        <span>newsnetz-ssl</span>, 
+        <span>search-ssl</span>, 
+        <span>discover-ssl</span>, 
+        <span>famleben-ssl</span>, 
+        <span>gmx-ssl</span>, 
+        <span>temp-ssl</span>, 
+        <span>mysw-ssl</span>, 
+        <span>nachhalt-ssl</span>, 
+        <span>nau-ssl</span>, 
+        <span>idgpctip-ssl</span>, 
+        <span>swissinf</span>, 
+        <span>smilk-ssl</span>, 
+        <span>swissmom-ssl</span>, 
+        <span>qs-ssl</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

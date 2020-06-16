@@ -1,15 +1,28 @@
----
-title: Tracker Radar - postaffiliatepro.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - postaffiliatepro.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "postaffiliatepro.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>postaffiliatepro.com</h1>
@@ -23,31 +36,38 @@ title: Tracker Radar - postaffiliatepro.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00077
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>thermoworks</span>
-        <span>fishingbooker</span>
-        <span>homebrewsupply</span>
-        <span>tripod</span>
-        <span>prusa3d</span>
-        <span>cookbook</span>
-        <span>guitartricks</span>
-        <span>loopmasters</span>
-        <span>lovecrafts</span>
-        <span>manning</span>
-        <span>medisaveuk</span>
-        <span>repfitness</span>
-        <span>seedsman</span>
-        <span>seedsupreme</span>
-        <span>smava</span>
-        <span>tnsb</span>
-        <span>vapor4life</span>
-        <span>tpbi</span>
-        <span>xeroshoes</span>
-        <span>cannaclicks</span>
-        <span>berkeyfilters</span>
+        <span>thermoworks</span>, 
+        <span>fishingbooker</span>, 
+        <span>homebrewsupply</span>, 
+        <span>tripod</span>, 
+        <span>prusa3d</span>, 
+        <span>cookbook</span>, 
+        <span>guitartricks</span>, 
+        <span>loopmasters</span>, 
+        <span>lovecrafts</span>, 
+        <span>manning</span>, 
+        <span>medisaveuk</span>, 
+        <span>repfitness</span>, 
+        <span>seedsman</span>, 
+        <span>seedsupreme</span>, 
+        <span>smava</span>, 
+        <span>tnsb</span>, 
+        <span>vapor4life</span>, 
+        <span>tpbi</span>, 
+        <span>xeroshoes</span>, 
+        <span>cannaclicks</span>, 
+        <span>berkeyfilters</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

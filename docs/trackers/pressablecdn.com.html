@@ -1,15 +1,28 @@
----
-title: Tracker Radar - pressablecdn.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - pressablecdn.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "pressablecdn.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>pressablecdn.com</h1>
@@ -23,21 +36,28 @@ title: Tracker Radar - pressablecdn.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000057
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>149366108.v2</span>
-        <span>149366087.v2</span>
-        <span>149425939.v2</span>
-        <span>149364033.v2</span>
-        <span>149432927.v2</span>
-        <span>149366112.v2</span>
-        <span>149349705.v2</span>
-        <span>149345591.v2</span>
-        <span>149366088.v2</span>
-        <span>149388736.v2</span>
-        <span>149437740.v2</span>
+        <span>149366108.v2</span>, 
+        <span>149366087.v2</span>, 
+        <span>149425939.v2</span>, 
+        <span>149364033.v2</span>, 
+        <span>149432927.v2</span>, 
+        <span>149366112.v2</span>, 
+        <span>149349705.v2</span>, 
+        <span>149345591.v2</span>, 
+        <span>149366088.v2</span>, 
+        <span>149388736.v2</span>, 
+        <span>149437740.v2</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

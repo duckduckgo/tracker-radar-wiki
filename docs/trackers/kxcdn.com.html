@@ -1,15 +1,28 @@
----
-title: Tracker Radar - kxcdn.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - kxcdn.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "kxcdn.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>kxcdn.com</h1>
@@ -23,48 +36,55 @@ title: Tracker Radar - kxcdn.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00123
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>searchanise-ef84</span>
-        <span>abhiandroid-8fb4</span>
-        <span>blogeduonix-2f3a</span>
-        <span>designpress-10674</span>
-        <span>kcdn-dfbd</span>
-        <span>gardenbeast-9fcd</span>
-        <span>poulesclub-e5b0</span>
-        <span>statscmain-10b33</span>
-        <span>trtt-11cb3</span>
-        <span>wisdomquotessecure-af2a</span>
-        <span>apologia-1420e</span>
-        <span>dam-13749</span>
-        <span>damn-8791</span>
-        <span>gcert-77f1</span>
-        <span>jackandjilladult-9971</span>
-        <span>prod-acb5</span>
-        <span>mathpullzone-8231</span>
-        <span>roadtovrlive-5ea0</span>
-        <span>kcdn-6f86</span>
-        <span>veloce-13fa4</span>
-        <span>kmspico10ssl-8af3</span>
-        <span>moneycheck-9fcd</span>
-        <span>limevpncdn-ef12</span>
-        <span>coronabar-53eb</span>
-        <span>blockonomi-9fcd</span>
-        <span>geek-ff8b</span>
-        <span>insidethemagic-119e2</span>
-        <span>askangels-a8bd</span>
-        <span>iheartbritishtv-12b72</span>
-        <span>mediacdn-f865</span>
-        <span>actorssl-5637</span>
-        <span>bp-1c51</span>
-        <span>assets-1f14</span>
-        <span>nexusmedia-ad94</span>
-        <span>poptox-3744</span>
-        <span>sendatext-3744</span>
-        <span>spytox-3744</span>
-        <span>miappiweb-5eeb</span>
+        <span>searchanise-ef84</span>, 
+        <span>abhiandroid-8fb4</span>, 
+        <span>blogeduonix-2f3a</span>, 
+        <span>designpress-10674</span>, 
+        <span>kcdn-dfbd</span>, 
+        <span>gardenbeast-9fcd</span>, 
+        <span>poulesclub-e5b0</span>, 
+        <span>statscmain-10b33</span>, 
+        <span>trtt-11cb3</span>, 
+        <span>wisdomquotessecure-af2a</span>, 
+        <span>apologia-1420e</span>, 
+        <span>dam-13749</span>, 
+        <span>damn-8791</span>, 
+        <span>gcert-77f1</span>, 
+        <span>jackandjilladult-9971</span>, 
+        <span>prod-acb5</span>, 
+        <span>mathpullzone-8231</span>, 
+        <span>roadtovrlive-5ea0</span>, 
+        <span>kcdn-6f86</span>, 
+        <span>veloce-13fa4</span>, 
+        <span>kmspico10ssl-8af3</span>, 
+        <span>moneycheck-9fcd</span>, 
+        <span>limevpncdn-ef12</span>, 
+        <span>coronabar-53eb</span>, 
+        <span>blockonomi-9fcd</span>, 
+        <span>geek-ff8b</span>, 
+        <span>insidethemagic-119e2</span>, 
+        <span>askangels-a8bd</span>, 
+        <span>iheartbritishtv-12b72</span>, 
+        <span>mediacdn-f865</span>, 
+        <span>actorssl-5637</span>, 
+        <span>bp-1c51</span>, 
+        <span>assets-1f14</span>, 
+        <span>nexusmedia-ad94</span>, 
+        <span>poptox-3744</span>, 
+        <span>sendatext-3744</span>, 
+        <span>spytox-3744</span>, 
+        <span>miappiweb-5eeb</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

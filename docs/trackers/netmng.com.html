@@ -1,15 +1,28 @@
----
-title: Tracker Radar - netmng.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - netmng.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "netmng.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>netmng.com</h1>
@@ -23,66 +36,73 @@ title: Tracker Radar - netmng.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000913
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>emea-bernina</span>
-        <span>com-siriusxm</span>
-        <span>apxprogrammatic</span>
-        <span>losaa</span>
-        <span>vpaint</span>
-        <span>com-mediacom</span>
-        <span>com-pluralsight</span>
-        <span>canon</span>
-        <span>com-acura</span>
-        <span>com-ahs</span>
-        <span>ca-audi</span>
-        <span>com-bmwmc</span>
-        <span>com-boconcept</span>
-        <span>bcf</span>
-        <span>com-ziprealty</span>
-        <span>chaan</span>
-        <span>dandb</span>
-        <span>danner</span>
-        <span>com-dollarg</span>
-        <span>com-endlesspools</span>
-        <span>fr-gallimard</span>
-        <span>com-jaguar</span>
-        <span>kry</span>
-        <span>com-landrover</span>
-        <span>lls</span>
-        <span>emea-masmovil</span>
-        <span>medmen</span>
-        <span>com-menswearhous</span>
-        <span>mimecast</span>
-        <span>com-mini</span>
-        <span>mwx</span>
-        <span>com-mitsubishi</span>
-        <span>mdo</span>
-        <span>com-motel6</span>
-        <span>newera</span>
-        <span>newseasons</span>
-        <span>eu-nissan</span>
-        <span>emea-gmtagging</span>
-        <span>orelot</span>
-        <span>piedmont</span>
-        <span>pods</span>
-        <span>simm</span>
-        <span>com-fcagroup</span>
-        <span>rockhf</span>
-        <span>emea-rspca</span>
-        <span>sccu</span>
-        <span>com-spanx</span>
-        <span>com-sundance</span>
-        <span>com-wyndham</span>
-        <span>dms</span>
-        <span>nyu</span>
-        <span>hgtv</span>
-        <span>hugh</span>
-        <span>iwc</span>
-        <span>usa</span>
-        <span>nan</span>
+        <span>emea-bernina</span>, 
+        <span>com-siriusxm</span>, 
+        <span>apxprogrammatic</span>, 
+        <span>losaa</span>, 
+        <span>vpaint</span>, 
+        <span>com-mediacom</span>, 
+        <span>com-pluralsight</span>, 
+        <span>canon</span>, 
+        <span>com-acura</span>, 
+        <span>com-ahs</span>, 
+        <span>ca-audi</span>, 
+        <span>com-bmwmc</span>, 
+        <span>com-boconcept</span>, 
+        <span>bcf</span>, 
+        <span>com-ziprealty</span>, 
+        <span>chaan</span>, 
+        <span>dandb</span>, 
+        <span>danner</span>, 
+        <span>com-dollarg</span>, 
+        <span>com-endlesspools</span>, 
+        <span>fr-gallimard</span>, 
+        <span>com-jaguar</span>, 
+        <span>kry</span>, 
+        <span>com-landrover</span>, 
+        <span>lls</span>, 
+        <span>emea-masmovil</span>, 
+        <span>medmen</span>, 
+        <span>com-menswearhous</span>, 
+        <span>mimecast</span>, 
+        <span>com-mini</span>, 
+        <span>mwx</span>, 
+        <span>com-mitsubishi</span>, 
+        <span>mdo</span>, 
+        <span>com-motel6</span>, 
+        <span>newera</span>, 
+        <span>newseasons</span>, 
+        <span>eu-nissan</span>, 
+        <span>emea-gmtagging</span>, 
+        <span>orelot</span>, 
+        <span>piedmont</span>, 
+        <span>pods</span>, 
+        <span>simm</span>, 
+        <span>com-fcagroup</span>, 
+        <span>rockhf</span>, 
+        <span>emea-rspca</span>, 
+        <span>sccu</span>, 
+        <span>com-spanx</span>, 
+        <span>com-sundance</span>, 
+        <span>com-wyndham</span>, 
+        <span>dms</span>, 
+        <span>nyu</span>, 
+        <span>hgtv</span>, 
+        <span>hugh</span>, 
+        <span>iwc</span>, 
+        <span>usa</span>, 
+        <span>nan</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

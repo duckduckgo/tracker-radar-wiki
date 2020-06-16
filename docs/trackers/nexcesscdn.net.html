@@ -1,15 +1,28 @@
----
-title: Tracker Radar - nexcesscdn.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - nexcesscdn.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "nexcesscdn.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>nexcesscdn.net</h1>
@@ -23,18 +36,25 @@ title: Tracker Radar - nexcesscdn.net
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.000171
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>smhttp-ssl-54936</span>
-        <span>smhttp-ssl-40058</span>
-        <span>smhttp-ssl-55701</span>
-        <span>smhttp-ssl-52271</span>
-        <span>smhttp-ssl-89947</span>
-        <span>smhttp-ssl-84677</span>
-        <span>smhttp-ssl-60515</span>
-        <span>smhttp-ssl-38886</span>
+        <span>smhttp-ssl-54936</span>, 
+        <span>smhttp-ssl-40058</span>, 
+        <span>smhttp-ssl-55701</span>, 
+        <span>smhttp-ssl-52271</span>, 
+        <span>smhttp-ssl-89947</span>, 
+        <span>smhttp-ssl-84677</span>, 
+        <span>smhttp-ssl-60515</span>, 
+        <span>smhttp-ssl-38886</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

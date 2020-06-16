@@ -1,15 +1,28 @@
----
-title: Tracker Radar - upravel.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - upravel.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "upravel.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>upravel.com</h1>
@@ -23,14 +36,21 @@ title: Tracker Radar - upravel.com
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.000285
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>sync</span>
-        <span>848e3b90-3195-4676-8629-bd7512b7912e.sync</span>
-        <span>dsp</span>
-        <span>fe86db03-5ea9-404c-ad40-ee4171bb1d48.sync</span>
+        <span>sync</span>, 
+        <span>848e3b90-3195-4676-8629-bd7512b7912e.sync</span>, 
+        <span>dsp</span>, 
+        <span>fe86db03-5ea9-404c-ad40-ee4171bb1d48.sync</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

@@ -1,15 +1,28 @@
----
-title: Tracker Radar - report-uri.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - report-uri.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "report-uri.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>report-uri.com</h1>
@@ -23,29 +36,36 @@ title: Tracker Radar - report-uri.com
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.000342
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>nlmoccs</span>
-        <span>eset</span>
-        <span>bettys</span>
-        <span>everplans</span>
-        <span>1790360b11fe0efc9c9d543e4d7dfa4d</span>
-        <span>snapav</span>
-        <span>truinc</span>
-        <span>nvidia</span>
-        <span>0f9929fb5d40f13b36e790281de4df92</span>
-        <span>eurotunnel</span>
-        <span>pluginalliance</span>
-        <span>brbws</span>
-        <span>nakedwinesusa</span>
-        <span>pfeprod</span>
-        <span>1bf96f85da4d4d6fd196bd9500cbb0b6</span>
-        <span>f454b82e7d32b8566fe5e2c5adce5e2e</span>
-        <span>lawsocietyorguk</span>
-        <span>tescomobileuk</span>
-        <span>wings</span>
+        <span>nlmoccs</span>, 
+        <span>eset</span>, 
+        <span>bettys</span>, 
+        <span>everplans</span>, 
+        <span>1790360b11fe0efc9c9d543e4d7dfa4d</span>, 
+        <span>snapav</span>, 
+        <span>truinc</span>, 
+        <span>nvidia</span>, 
+        <span>0f9929fb5d40f13b36e790281de4df92</span>, 
+        <span>eurotunnel</span>, 
+        <span>pluginalliance</span>, 
+        <span>brbws</span>, 
+        <span>nakedwinesusa</span>, 
+        <span>pfeprod</span>, 
+        <span>1bf96f85da4d4d6fd196bd9500cbb0b6</span>, 
+        <span>f454b82e7d32b8566fe5e2c5adce5e2e</span>, 
+        <span>lawsocietyorguk</span>, 
+        <span>tescomobileuk</span>, 
+        <span>wings</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

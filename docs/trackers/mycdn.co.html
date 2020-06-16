@@ -1,15 +1,28 @@
----
-title: Tracker Radar - mycdn.co
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - mycdn.co</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "mycdn.co",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>mycdn.co</h1>
@@ -23,31 +36,38 @@ title: Tracker Radar - mycdn.co
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.0000143
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>p375786</span>
-        <span>p353012</span>
-        <span>p375660</span>
-        <span>p2454</span>
-        <span>p0</span>
-        <span>p19943</span>
-        <span>p368417</span>
-        <span>p69318</span>
-        <span>p367304</span>
-        <span>p48056</span>
-        <span>p273084</span>
-        <span>p63327</span>
-        <span>p178775</span>
-        <span>p18591</span>
-        <span>p313255</span>
-        <span>p240459</span>
-        <span>p393385</span>
-        <span>p359405</span>
-        <span>p25433</span>
-        <span>p379704</span>
-        <span>p352625</span>
+        <span>p375786</span>, 
+        <span>p353012</span>, 
+        <span>p375660</span>, 
+        <span>p2454</span>, 
+        <span>p0</span>, 
+        <span>p19943</span>, 
+        <span>p368417</span>, 
+        <span>p69318</span>, 
+        <span>p367304</span>, 
+        <span>p48056</span>, 
+        <span>p273084</span>, 
+        <span>p63327</span>, 
+        <span>p178775</span>, 
+        <span>p18591</span>, 
+        <span>p313255</span>, 
+        <span>p240459</span>, 
+        <span>p393385</span>, 
+        <span>p359405</span>, 
+        <span>p25433</span>, 
+        <span>p379704</span>, 
+        <span>p352625</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

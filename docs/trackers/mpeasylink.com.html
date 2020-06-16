@@ -1,15 +1,28 @@
----
-title: Tracker Radar - mpeasylink.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - mpeasylink.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "mpeasylink.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>mpeasylink.com</h1>
@@ -23,58 +36,65 @@ title: Tracker Radar - mpeasylink.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>tmobilees</span>
-        <span>coxcommunications</span>
-        <span>comcastinternetessentials</span>
-        <span>fifththirdbank</span>
-        <span>louisianapacificlpcorp</span>
-        <span>chrysleralfaromeo</span>
-        <span>arriscom</span>
-        <span>bankofoklahoma</span>
-        <span>mcneilbenadryles</span>
-        <span>sprintboostmobile</span>
-        <span>calcoastcuorg</span>
-        <span>cervelocycles</span>
-        <span>generalmotorschevroletcom</span>
-        <span>chrysler</span>
-        <span>conair</span>
-        <span>conns</span>
-        <span>cumminscom</span>
-        <span>chryslerdodgecom</span>
-        <span>robertboschdremel</span>
-        <span>chrysleruconnectcom</span>
-        <span>extendedstayamerica</span>
-        <span>chryslerfiatusacom</span>
-        <span>frontierairlinesflyfrontiercom</span>
-        <span>ppgindustriesgliddencom</span>
-        <span>humanacom</span>
-        <span>chryslerjeepcom</span>
-        <span>laskocom</span>
-        <span>luxotticalenscrafters</span>
-        <span>littelfuse</span>
-        <span>lmcuorg</span>
-        <span>mazda</span>
-        <span>mellanox</span>
-        <span>nationwidecom</span>
-        <span>norwegiancruiseline</span>
-        <span>johnsonneutrogena</span>
-        <span>ospreypackscom</span>
-        <span>ppgindustriesppgpaints</span>
-        <span>chryslerramtruckscom</span>
-        <span>regionsbank</span>
-        <span>shiseidoamericas</span>
-        <span>southwestairlines</span>
-        <span>sprintcom</span>
-        <span>suncoastfcuorg</span>
-        <span>mcneiltylenoles</span>
-        <span>visionserviceplan</span>
-        <span>volkswagenvwcom</span>
-        <span>wingstopcom</span>
-        <span>hhswomenshealth</span>
+        <span>tmobilees</span>, 
+        <span>coxcommunications</span>, 
+        <span>comcastinternetessentials</span>, 
+        <span>fifththirdbank</span>, 
+        <span>louisianapacificlpcorp</span>, 
+        <span>chrysleralfaromeo</span>, 
+        <span>arriscom</span>, 
+        <span>bankofoklahoma</span>, 
+        <span>mcneilbenadryles</span>, 
+        <span>sprintboostmobile</span>, 
+        <span>calcoastcuorg</span>, 
+        <span>cervelocycles</span>, 
+        <span>generalmotorschevroletcom</span>, 
+        <span>chrysler</span>, 
+        <span>conair</span>, 
+        <span>conns</span>, 
+        <span>cumminscom</span>, 
+        <span>chryslerdodgecom</span>, 
+        <span>robertboschdremel</span>, 
+        <span>chrysleruconnectcom</span>, 
+        <span>extendedstayamerica</span>, 
+        <span>chryslerfiatusacom</span>, 
+        <span>frontierairlinesflyfrontiercom</span>, 
+        <span>ppgindustriesgliddencom</span>, 
+        <span>humanacom</span>, 
+        <span>chryslerjeepcom</span>, 
+        <span>laskocom</span>, 
+        <span>luxotticalenscrafters</span>, 
+        <span>littelfuse</span>, 
+        <span>lmcuorg</span>, 
+        <span>mazda</span>, 
+        <span>mellanox</span>, 
+        <span>nationwidecom</span>, 
+        <span>norwegiancruiseline</span>, 
+        <span>johnsonneutrogena</span>, 
+        <span>ospreypackscom</span>, 
+        <span>ppgindustriesppgpaints</span>, 
+        <span>chryslerramtruckscom</span>, 
+        <span>regionsbank</span>, 
+        <span>shiseidoamericas</span>, 
+        <span>southwestairlines</span>, 
+        <span>sprintcom</span>, 
+        <span>suncoastfcuorg</span>, 
+        <span>mcneiltylenoles</span>, 
+        <span>visionserviceplan</span>, 
+        <span>volkswagenvwcom</span>, 
+        <span>wingstopcom</span>, 
+        <span>hhswomenshealth</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

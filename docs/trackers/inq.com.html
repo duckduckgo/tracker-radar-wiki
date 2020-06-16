@@ -1,15 +1,28 @@
----
-title: Tracker Radar - inq.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - inq.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "inq.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>inq.com</h1>
@@ -23,41 +36,48 @@ title: Tracker Radar - inq.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.000556
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>att</span>
-        <span>mediaeastv3</span>
-        <span>media-lax1</span>
-        <span>mediav3</span>
-        <span>media-aus</span>
-        <span>dixons</span>
-        <span>verizon</span>
-        <span>homeaffairs</span>
-        <span>citizens</span>
-        <span>albertsons</span>
-        <span>skyde</span>
-        <span>bell</span>
-        <span>tagserverv3</span>
-        <span>ato</span>
-        <span>osr</span>
-        <span>ups</span>
-        <span>cricket</span>
-        <span>aviva</span>
-        <span>huntingtonbank</span>
-        <span>tracfone</span>
-        <span>nrma</span>
-        <span>charbroil</span>
-        <span>sprint</span>
-        <span>sunrise</span>
-        <span>tda-retail</span>
-        <span>tagserver-lax1</span>
-        <span>virginca</span>
-        <span>mpcs</span>
-        <span>shutterstock</span>
-        <span>static</span>
-        <span>vacu</span>
+        <span>att</span>, 
+        <span>mediaeastv3</span>, 
+        <span>media-lax1</span>, 
+        <span>mediav3</span>, 
+        <span>media-aus</span>, 
+        <span>dixons</span>, 
+        <span>verizon</span>, 
+        <span>homeaffairs</span>, 
+        <span>citizens</span>, 
+        <span>albertsons</span>, 
+        <span>skyde</span>, 
+        <span>bell</span>, 
+        <span>tagserverv3</span>, 
+        <span>ato</span>, 
+        <span>osr</span>, 
+        <span>ups</span>, 
+        <span>cricket</span>, 
+        <span>aviva</span>, 
+        <span>huntingtonbank</span>, 
+        <span>tracfone</span>, 
+        <span>nrma</span>, 
+        <span>charbroil</span>, 
+        <span>sprint</span>, 
+        <span>sunrise</span>, 
+        <span>tda-retail</span>, 
+        <span>tagserver-lax1</span>, 
+        <span>virginca</span>, 
+        <span>mpcs</span>, 
+        <span>shutterstock</span>, 
+        <span>static</span>, 
+        <span>vacu</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

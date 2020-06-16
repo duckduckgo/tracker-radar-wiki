@@ -1,15 +1,28 @@
----
-title: Tracker Radar - snplow.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - snplow.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "snplow.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>snplow.net</h1>
@@ -23,21 +36,28 @@ title: Tracker Radar - snplow.net
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000485
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>com-thebigwillow-prod1.collector</span>
-        <span>com-codecombat-main.collector</span>
-        <span>com-rypl-main.collector</span>
-        <span>com-bvaauctions-main.collector</span>
-        <span>org-cru-gcp-prod1.collector</span>
-        <span>com-ft-prod1.collector</span>
-        <span>com-thorindustries-gcp-prod1.mini</span>
-        <span>ca-lapresse-main.collector</span>
-        <span>de-makerist-main.collector</span>
-        <span>com-thebeansgroup-main.collector</span>
-        <span>com-zenefits-prod1.collector</span>
+        <span>com-thebigwillow-prod1.collector</span>, 
+        <span>com-codecombat-main.collector</span>, 
+        <span>com-rypl-main.collector</span>, 
+        <span>com-bvaauctions-main.collector</span>, 
+        <span>org-cru-gcp-prod1.collector</span>, 
+        <span>com-ft-prod1.collector</span>, 
+        <span>com-thorindustries-gcp-prod1.mini</span>, 
+        <span>ca-lapresse-main.collector</span>, 
+        <span>de-makerist-main.collector</span>, 
+        <span>com-thebeansgroup-main.collector</span>, 
+        <span>com-zenefits-prod1.collector</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

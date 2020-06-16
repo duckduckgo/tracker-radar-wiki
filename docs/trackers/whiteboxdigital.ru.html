@@ -1,15 +1,28 @@
----
-title: Tracker Radar - whiteboxdigital.ru
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - whiteboxdigital.ru</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "whiteboxdigital.ru",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>whiteboxdigital.ru</h1>
@@ -23,15 +36,22 @@ title: Tracker Radar - whiteboxdigital.ru
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.000057
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>mitdmp</span>
-        <span>959599b9-3ccd-4e1f-9aed-30932e9fccbc.mitdmp</span>
-        <span>b5ceacdb-00b5-4b4a-bf95-98a6cdde144a.mitdmp</span>
-        <span>ec70decd-5056-4110-89a9-4ae751f86fcf.mitdmp</span>
-        <span>e08fe0bc-ea8e-4cb0-a706-5765344425bd.mitdmp</span>
+        <span>mitdmp</span>, 
+        <span>959599b9-3ccd-4e1f-9aed-30932e9fccbc.mitdmp</span>, 
+        <span>b5ceacdb-00b5-4b4a-bf95-98a6cdde144a.mitdmp</span>, 
+        <span>ec70decd-5056-4110-89a9-4ae751f86fcf.mitdmp</span>, 
+        <span>e08fe0bc-ea8e-4cb0-a706-5765344425bd.mitdmp</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

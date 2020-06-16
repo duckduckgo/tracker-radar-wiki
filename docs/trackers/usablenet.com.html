@@ -1,15 +1,28 @@
----
-title: Tracker Radar - usablenet.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - usablenet.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "usablenet.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>usablenet.com</h1>
@@ -23,39 +36,46 @@ title: Tracker Radar - usablenet.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>1800flowers</span>
-        <span>containerstore</span>
-        <span>bodybuilding</span>
-        <span>lovesac</span>
-        <span>simplisafe</span>
-        <span>touchofmodern</span>
-        <span>americaneagle</span>
-        <span>afw</span>
-        <span>anastasiabeverlyhills</span>
-        <span>bannerhealth</span>
-        <span>bjs</span>
-        <span>captainds</span>
-        <span>churchschicken</span>
-        <span>conns</span>
-        <span>eyebuydirect</span>
-        <span>flooranddecor</span>
-        <span>footjoy</span>
-        <span>forever21</span>
-        <span>framesdirect</span>
-        <span>transworldentertainment</span>
-        <span>georgiatech</span>
-        <span>woodstream</span>
-        <span>jackrabbit</span>
-        <span>nordicnaturals</span>
-        <span>swarovski</span>
-        <span>titleist</span>
-        <span>kendrascott</span>
-        <span>loandepot</span>
-        <span>sonicdrivein</span>
+        <span>1800flowers</span>, 
+        <span>containerstore</span>, 
+        <span>bodybuilding</span>, 
+        <span>lovesac</span>, 
+        <span>simplisafe</span>, 
+        <span>touchofmodern</span>, 
+        <span>americaneagle</span>, 
+        <span>afw</span>, 
+        <span>anastasiabeverlyhills</span>, 
+        <span>bannerhealth</span>, 
+        <span>bjs</span>, 
+        <span>captainds</span>, 
+        <span>churchschicken</span>, 
+        <span>conns</span>, 
+        <span>eyebuydirect</span>, 
+        <span>flooranddecor</span>, 
+        <span>footjoy</span>, 
+        <span>forever21</span>, 
+        <span>framesdirect</span>, 
+        <span>transworldentertainment</span>, 
+        <span>georgiatech</span>, 
+        <span>woodstream</span>, 
+        <span>jackrabbit</span>, 
+        <span>nordicnaturals</span>, 
+        <span>swarovski</span>, 
+        <span>titleist</span>, 
+        <span>kendrascott</span>, 
+        <span>loandepot</span>, 
+        <span>sonicdrivein</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

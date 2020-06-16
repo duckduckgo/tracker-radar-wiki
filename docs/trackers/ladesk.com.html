@@ -1,15 +1,28 @@
----
-title: Tracker Radar - ladesk.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - ladesk.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ladesk.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>ladesk.com</h1>
@@ -23,44 +36,51 @@ title: Tracker Radar - ladesk.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000371
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>incubatorwarehouse</span>
-        <span>eeuroparts</span>
-        <span>organicaromashelpdesk</span>
-        <span>pvpn</span>
-        <span>ingadi</span>
-        <span>sdbb</span>
-        <span>cayennediane</span>
-        <span>cnccookbook</span>
-        <span>cookbookhelp</span>
-        <span>apec</span>
-        <span>gourmetfoodstore</span>
-        <span>luckybike</span>
-        <span>marinedepot</span>
-        <span>megabike24</span>
-        <span>moneymetals</span>
-        <span>patriot</span>
-        <span>profesia</span>
-        <span>rentprep</span>
-        <span>rvupgrades</span>
-        <span>taylors</span>
-        <span>hfci</span>
-        <span>turntableneedles</span>
-        <span>nessav</span>
-        <span>upgradeable</span>
-        <span>vittoria</span>
-        <span>2-vbus-us-tx</span>
-        <span>1-vbus-us-tx</span>
-        <span>1-vbus-eu</span>
-        <span>2-vbus-eu</span>
-        <span>1-vbus-uk</span>
-        <span>1-vbus-de</span>
-        <span>2-vbus-us-nj</span>
-        <span>1-vbus-us-nj</span>
-        <span>3-vbus-eu</span>
+        <span>incubatorwarehouse</span>, 
+        <span>eeuroparts</span>, 
+        <span>organicaromashelpdesk</span>, 
+        <span>pvpn</span>, 
+        <span>ingadi</span>, 
+        <span>sdbb</span>, 
+        <span>cayennediane</span>, 
+        <span>cnccookbook</span>, 
+        <span>cookbookhelp</span>, 
+        <span>apec</span>, 
+        <span>gourmetfoodstore</span>, 
+        <span>luckybike</span>, 
+        <span>marinedepot</span>, 
+        <span>megabike24</span>, 
+        <span>moneymetals</span>, 
+        <span>patriot</span>, 
+        <span>profesia</span>, 
+        <span>rentprep</span>, 
+        <span>rvupgrades</span>, 
+        <span>taylors</span>, 
+        <span>hfci</span>, 
+        <span>turntableneedles</span>, 
+        <span>nessav</span>, 
+        <span>upgradeable</span>, 
+        <span>vittoria</span>, 
+        <span>2-vbus-us-tx</span>, 
+        <span>1-vbus-us-tx</span>, 
+        <span>1-vbus-eu</span>, 
+        <span>2-vbus-eu</span>, 
+        <span>1-vbus-uk</span>, 
+        <span>1-vbus-de</span>, 
+        <span>2-vbus-us-nj</span>, 
+        <span>1-vbus-us-nj</span>, 
+        <span>3-vbus-eu</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

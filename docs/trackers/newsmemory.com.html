@@ -1,15 +1,28 @@
----
-title: Tracker Radar - newsmemory.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - newsmemory.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "newsmemory.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>newsmemory.com</h1>
@@ -23,28 +36,35 @@ title: Tracker Radar - newsmemory.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.000242
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>trinidadexpress-tto-pw</span>
-        <span>berkshireeagle-ma-pw</span>
-        <span>concordmonitor-nh-pw</span>
-        <span>dailyitem-cnhi-pw</span>
-        <span>eagletribune-cnhi-pw</span>
-        <span>northamptondaily-ma-pw</span>
-        <span>joplinglobe-cnhi-pw</span>
-        <span>mankatofreepress-cnhi-pw</span>
-        <span>mineralwellsindex-cnhi-pw</span>
-        <span>newburyportnews-cnhi-pw</span>
-        <span>fairbanksdailynews-ak-pw</span>
-        <span>record-eagle-cnhi-pw</span>
-        <span>salemnews-cnhi-pw</span>
-        <span>thedailystar-cnhi-pw</span>
-        <span>cedarrapidsgazette-ia-pw</span>
-        <span>tribune-democrat-cnhi-pw</span>
-        <span>tribstar-cnhi-pw</span>
-        <span>westlebanonvalleynews-nh-pw</span>
+        <span>trinidadexpress-tto-pw</span>, 
+        <span>berkshireeagle-ma-pw</span>, 
+        <span>concordmonitor-nh-pw</span>, 
+        <span>dailyitem-cnhi-pw</span>, 
+        <span>eagletribune-cnhi-pw</span>, 
+        <span>northamptondaily-ma-pw</span>, 
+        <span>joplinglobe-cnhi-pw</span>, 
+        <span>mankatofreepress-cnhi-pw</span>, 
+        <span>mineralwellsindex-cnhi-pw</span>, 
+        <span>newburyportnews-cnhi-pw</span>, 
+        <span>fairbanksdailynews-ak-pw</span>, 
+        <span>record-eagle-cnhi-pw</span>, 
+        <span>salemnews-cnhi-pw</span>, 
+        <span>thedailystar-cnhi-pw</span>, 
+        <span>cedarrapidsgazette-ia-pw</span>, 
+        <span>tribune-democrat-cnhi-pw</span>, 
+        <span>tribstar-cnhi-pw</span>, 
+        <span>westlebanonvalleynews-nh-pw</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

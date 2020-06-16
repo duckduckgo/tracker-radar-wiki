@@ -1,15 +1,28 @@
----
-title: Tracker Radar - mail.ru
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - mail.ru</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "mail.ru",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>mail.ru</h1>
@@ -23,24 +36,31 @@ title: Tracker Radar - mail.ru
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.00588
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>top-fwz1</span>
-        <span>ad</span>
-        <span>d9.cd.ba.a1.top</span>
-        <span>d3.c3.b1.a1.top</span>
-        <span>d8.c6.bd.a1.top</span>
-        <span>df.cb.b7.a1.top</span>
-        <span>d5.ca.bb.a0.top</span>
-        <span>d0.cd.b0.a2.top</span>
-        <span>cdn.connect</span>
-        <span>connect</span>
-        <span>rs</span>
-        <span>o2</span>
-        <span>vk.go</span>
-        <span>oauth</span>
+        <span>top-fwz1</span>, 
+        <span>ad</span>, 
+        <span>d9.cd.ba.a1.top</span>, 
+        <span>d3.c3.b1.a1.top</span>, 
+        <span>d8.c6.bd.a1.top</span>, 
+        <span>df.cb.b7.a1.top</span>, 
+        <span>d5.ca.bb.a0.top</span>, 
+        <span>d0.cd.b0.a2.top</span>, 
+        <span>cdn.connect</span>, 
+        <span>connect</span>, 
+        <span>rs</span>, 
+        <span>o2</span>, 
+        <span>vk.go</span>, 
+        <span>oauth</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

@@ -1,15 +1,28 @@
----
-title: Tracker Radar - parsely.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - parsely.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "parsely.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>parsely.com</h1>
@@ -23,29 +36,36 @@ title: Tracker Radar - parsely.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.0089
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>cdn</span>
-        <span>srv-2020-05-20-20.pixel</span>
-        <span>srv-2020-05-19-17.pixel</span>
-        <span>srv-2020-05-20-15.pixel</span>
-        <span>srv-2020-05-19-18.pixel</span>
-        <span>srv-2020-05-19-16.pixel</span>
-        <span>srv-2020-05-20-19.pixel</span>
-        <span>srv-2020-05-19-20.pixel</span>
-        <span>srv-2020-05-19-23.pixel</span>
-        <span>srv-2020-05-19-21.pixel</span>
-        <span>srv-2020-05-20-14.pixel</span>
-        <span>srv-2020-05-20-21.pixel</span>
-        <span>srv-2020-05-20-00.pixel</span>
-        <span>srv-2020-05-20-17.pixel</span>
-        <span>srv-2020-05-19-15.pixel</span>
-        <span>srv-2020-05-20-01.pixel</span>
-        <span>srv-2020-05-19-19.pixel</span>
-        <span>srv-2020-05-19-22.pixel</span>
-        <span>srv-2020-05-20-02.pixel</span>
+        <span>cdn</span>, 
+        <span>srv-2020-05-20-20.pixel</span>, 
+        <span>srv-2020-05-19-17.pixel</span>, 
+        <span>srv-2020-05-20-15.pixel</span>, 
+        <span>srv-2020-05-19-18.pixel</span>, 
+        <span>srv-2020-05-19-16.pixel</span>, 
+        <span>srv-2020-05-20-19.pixel</span>, 
+        <span>srv-2020-05-19-20.pixel</span>, 
+        <span>srv-2020-05-19-23.pixel</span>, 
+        <span>srv-2020-05-19-21.pixel</span>, 
+        <span>srv-2020-05-20-14.pixel</span>, 
+        <span>srv-2020-05-20-21.pixel</span>, 
+        <span>srv-2020-05-20-00.pixel</span>, 
+        <span>srv-2020-05-20-17.pixel</span>, 
+        <span>srv-2020-05-19-15.pixel</span>, 
+        <span>srv-2020-05-20-01.pixel</span>, 
+        <span>srv-2020-05-19-19.pixel</span>, 
+        <span>srv-2020-05-19-22.pixel</span>, 
+        <span>srv-2020-05-20-02.pixel</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

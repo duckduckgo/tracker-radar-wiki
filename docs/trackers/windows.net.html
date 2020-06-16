@@ -1,15 +1,28 @@
----
-title: Tracker Radar - windows.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - windows.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "windows.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>windows.net</h1>
@@ -23,24 +36,31 @@ title: Tracker Radar - windows.net
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00221
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>robincontentdesktop.blob.core</span>
-        <span>targetemsecure.blob.core</span>
-        <span>cltgtstor001.blob.core</span>
-        <span>optanon.blob.core</span>
-        <span>storenotrefamilleprod.blob.core</span>
-        <span>prodxnews1blob.blob.core</span>
-        <span>cookiepro.blob.core</span>
-        <span>prodpsus1.blob.core</span>
-        <span>4tcdn.blob.core</span>
-        <span>gjstatic.blob.core</span>
-        <span>prodmg2.blob.core</span>
-        <span>insitez.blob.core</span>
-        <span>cheezwhiz.z9.web.core</span>
-        <span>cscoreproweustor.blob.core</span>
+        <span>robincontentdesktop.blob.core</span>, 
+        <span>targetemsecure.blob.core</span>, 
+        <span>cltgtstor001.blob.core</span>, 
+        <span>optanon.blob.core</span>, 
+        <span>storenotrefamilleprod.blob.core</span>, 
+        <span>prodxnews1blob.blob.core</span>, 
+        <span>cookiepro.blob.core</span>, 
+        <span>prodpsus1.blob.core</span>, 
+        <span>4tcdn.blob.core</span>, 
+        <span>gjstatic.blob.core</span>, 
+        <span>prodmg2.blob.core</span>, 
+        <span>insitez.blob.core</span>, 
+        <span>cheezwhiz.z9.web.core</span>, 
+        <span>cscoreproweustor.blob.core</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

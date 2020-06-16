@@ -1,15 +1,28 @@
----
-title: Tracker Radar - stackpathdns.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - stackpathdns.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "stackpathdns.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>stackpathdns.com</h1>
@@ -23,45 +36,52 @@ title: Tracker Radar - stackpathdns.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.000257
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>aytu-ugrgkocy</span>
-        <span>churchleaders-eszuskq0bptlfh8awbb</span>
-        <span>373819-1169963-raikfcquaxqncofqfm</span>
-        <span>387172-1217454-raikfcquaxqncofqfm</span>
-        <span>83507-231696-raikfcquaxqncofqfm</span>
-        <span>408089-1284156-raikfcquaxqncofqfm</span>
-        <span>163602-560839-raikfcquaxqncofqfm</span>
-        <span>252850-786516-raikfcquaxqncofqfm</span>
-        <span>408764-1286242-1-raikfcquaxqncofqfm</span>
-        <span>thefactfile-lxh7vfdm</span>
-        <span>397145-1250082-raikfcquaxqncofqfm</span>
-        <span>224765-788373-raikfcquaxqncofqfm</span>
-        <span>189662-567937-2-raikfcquaxqncofqfm</span>
-        <span>cdn-4ctwmobme</span>
-        <span>110101-313254-raikfcquaxqncofqfm</span>
-        <span>273560-849236-2-raikfcquaxqncofqfm</span>
-        <span>171036-495725-raikfcquaxqncofqfm</span>
-        <span>391795-1232725-raikfcquaxqncofqfm</span>
-        <span>274098-850772-1-raikfcquaxqncofqfm</span>
-        <span>faithit-eszuskq0bptlfh8awbb</span>
-        <span>338396-1042558-raikfcquaxqncofqfm</span>
-        <span>299932-918691-raikfcquaxqncofqfm</span>
-        <span>225508-687545-raikfcquaxqncofqfm</span>
-        <span>160391-463613-1-raikfcquaxqncofqfm</span>
-        <span>245138-756803-raikfcquaxqncofqfm</span>
-        <span>318101-974414-raikfcquaxqncofqfm</span>
-        <span>296185-908028-raikfcquaxqncofqfm</span>
-        <span>assets-us-u11ncmyydwz</span>
-        <span>181148-529304-raikfcquaxqncofqfm</span>
-        <span>144839-418331-2-raikfcquaxqncofqfm</span>
-        <span>159145-552501-raikfcquaxqncofqfm</span>
-        <span>49731-537946-raikfcquaxqncofqfm</span>
-        <span>bgl-i48k9hqubvkf8lnt</span>
-        <span>outdoorgearlab-mvnab3pwrvp3t0</span>
-        <span>techgearlab-mvnab3pwrvp3t0</span>
+        <span>aytu-ugrgkocy</span>, 
+        <span>churchleaders-eszuskq0bptlfh8awbb</span>, 
+        <span>373819-1169963-raikfcquaxqncofqfm</span>, 
+        <span>387172-1217454-raikfcquaxqncofqfm</span>, 
+        <span>83507-231696-raikfcquaxqncofqfm</span>, 
+        <span>408089-1284156-raikfcquaxqncofqfm</span>, 
+        <span>163602-560839-raikfcquaxqncofqfm</span>, 
+        <span>252850-786516-raikfcquaxqncofqfm</span>, 
+        <span>408764-1286242-1-raikfcquaxqncofqfm</span>, 
+        <span>thefactfile-lxh7vfdm</span>, 
+        <span>397145-1250082-raikfcquaxqncofqfm</span>, 
+        <span>224765-788373-raikfcquaxqncofqfm</span>, 
+        <span>189662-567937-2-raikfcquaxqncofqfm</span>, 
+        <span>cdn-4ctwmobme</span>, 
+        <span>110101-313254-raikfcquaxqncofqfm</span>, 
+        <span>273560-849236-2-raikfcquaxqncofqfm</span>, 
+        <span>171036-495725-raikfcquaxqncofqfm</span>, 
+        <span>391795-1232725-raikfcquaxqncofqfm</span>, 
+        <span>274098-850772-1-raikfcquaxqncofqfm</span>, 
+        <span>faithit-eszuskq0bptlfh8awbb</span>, 
+        <span>338396-1042558-raikfcquaxqncofqfm</span>, 
+        <span>299932-918691-raikfcquaxqncofqfm</span>, 
+        <span>225508-687545-raikfcquaxqncofqfm</span>, 
+        <span>160391-463613-1-raikfcquaxqncofqfm</span>, 
+        <span>245138-756803-raikfcquaxqncofqfm</span>, 
+        <span>318101-974414-raikfcquaxqncofqfm</span>, 
+        <span>296185-908028-raikfcquaxqncofqfm</span>, 
+        <span>assets-us-u11ncmyydwz</span>, 
+        <span>181148-529304-raikfcquaxqncofqfm</span>, 
+        <span>144839-418331-2-raikfcquaxqncofqfm</span>, 
+        <span>159145-552501-raikfcquaxqncofqfm</span>, 
+        <span>49731-537946-raikfcquaxqncofqfm</span>, 
+        <span>bgl-i48k9hqubvkf8lnt</span>, 
+        <span>outdoorgearlab-mvnab3pwrvp3t0</span>, 
+        <span>techgearlab-mvnab3pwrvp3t0</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

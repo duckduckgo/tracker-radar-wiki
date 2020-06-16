@@ -1,15 +1,28 @@
----
-title: Tracker Radar - justpremium.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - justpremium.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "justpremium.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>justpremium.com</h1>
@@ -23,25 +36,32 @@ title: Tracker Radar - justpremium.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.00539
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>pre.ads</span>
-        <span>match</span>
-        <span>us.ads</span>
-        <span>es.ads</span>
-        <span>de.ads</span>
-        <span>ma.ads</span>
-        <span>nl.ads</span>
-        <span>se.ads</span>
-        <span>br.ads</span>
-        <span>it.ads</span>
-        <span>fr.ads</span>
-        <span>be.ads</span>
-        <span>co.ads</span>
-        <span>uk.ads</span>
-        <span>cdn</span>
+        <span>pre.ads</span>, 
+        <span>match</span>, 
+        <span>us.ads</span>, 
+        <span>es.ads</span>, 
+        <span>de.ads</span>, 
+        <span>ma.ads</span>, 
+        <span>nl.ads</span>, 
+        <span>se.ads</span>, 
+        <span>br.ads</span>, 
+        <span>it.ads</span>, 
+        <span>fr.ads</span>, 
+        <span>be.ads</span>, 
+        <span>co.ads</span>, 
+        <span>uk.ads</span>, 
+        <span>cdn</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

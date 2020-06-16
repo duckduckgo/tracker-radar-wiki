@@ -1,15 +1,28 @@
----
-title: Tracker Radar - tailtarget.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - tailtarget.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "tailtarget.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>tailtarget.com</h1>
@@ -23,40 +36,47 @@ title: Tracker Radar - tailtarget.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00138
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>tt-10162-1.seg.t</span>
-        <span>d.t</span>
-        <span>tt-10531-7.seg.t</span>
-        <span>tt-9964-3.seg.t</span>
-        <span>tt-9513-3.seg.t</span>
-        <span>tt-10946-0.seg.t</span>
-        <span>tt-10258-0.seg.t</span>
-        <span>tt-12340-4.seg.t</span>
-        <span>tt-10969-0.seg.t</span>
-        <span>tt-12842-2.seg.t</span>
-        <span>tt-11980-6.seg.t</span>
-        <span>tt-10709-3.seg.t</span>
-        <span>tt-12403-6.seg.t</span>
-        <span>tt-10945-2.seg.t</span>
-        <span>tt-11755-2.seg.t</span>
-        <span>tt-13666-2.seg.t</span>
-        <span>tt-13142-3.seg.t</span>
-        <span>tt-10759-0.seg.t</span>
-        <span>b.t</span>
-        <span>tt-11690-4.seg.t</span>
-        <span>tt-9769-1.seg.t</span>
-        <span>tt-12113-4.seg.t</span>
-        <span>tt-12765-5.seg.t</span>
-        <span>tt-9695-4.seg.t</span>
-        <span>tt-12710-8.seg.t</span>
-        <span>t</span>
-        <span>tags.t</span>
-        <span>d</span>
-        <span>c.t</span>
-        <span>cm.t</span>
+        <span>tt-10162-1.seg.t</span>, 
+        <span>d.t</span>, 
+        <span>tt-10531-7.seg.t</span>, 
+        <span>tt-9964-3.seg.t</span>, 
+        <span>tt-9513-3.seg.t</span>, 
+        <span>tt-10946-0.seg.t</span>, 
+        <span>tt-10258-0.seg.t</span>, 
+        <span>tt-12340-4.seg.t</span>, 
+        <span>tt-10969-0.seg.t</span>, 
+        <span>tt-12842-2.seg.t</span>, 
+        <span>tt-11980-6.seg.t</span>, 
+        <span>tt-10709-3.seg.t</span>, 
+        <span>tt-12403-6.seg.t</span>, 
+        <span>tt-10945-2.seg.t</span>, 
+        <span>tt-11755-2.seg.t</span>, 
+        <span>tt-13666-2.seg.t</span>, 
+        <span>tt-13142-3.seg.t</span>, 
+        <span>tt-10759-0.seg.t</span>, 
+        <span>b.t</span>, 
+        <span>tt-11690-4.seg.t</span>, 
+        <span>tt-9769-1.seg.t</span>, 
+        <span>tt-12113-4.seg.t</span>, 
+        <span>tt-12765-5.seg.t</span>, 
+        <span>tt-9695-4.seg.t</span>, 
+        <span>tt-12710-8.seg.t</span>, 
+        <span>t</span>, 
+        <span>tags.t</span>, 
+        <span>d</span>, 
+        <span>c.t</span>, 
+        <span>cm.t</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

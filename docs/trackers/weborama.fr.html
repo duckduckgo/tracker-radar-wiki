@@ -1,15 +1,28 @@
----
-title: Tracker Radar - weborama.fr
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - weborama.fr</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "weborama.fr",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>weborama.fr</h1>
@@ -23,62 +36,69 @@ title: Tracker Radar - weborama.fr
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00901
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>redirect.frontend</span>
-        <span>rd.frontend</span>
-        <span>cstatic</span>
-        <span>wf.frontend</span>
-        <span>wamfactory.solution</span>
-        <span>bsd.frontend</span>
-        <span>cr.frontend</span>
-        <span>idsync.frontend</span>
-        <span>aifruanalytics.solution</span>
-        <span>intermarchedrive.solution</span>
-        <span>movingupitanalytics.solution</span>
-        <span>groupelapostefranalytics.solution</span>
-        <span>cofina2.solution</span>
-        <span>groupecdn.solution</span>
-        <span>adastaanalytics.solution</span>
-        <span>diacorporativo.solution</span>
-        <span>talksmediaanalytics.solution</span>
-        <span>digitalbeesanalytics.solution</span>
-        <span>ilfattoquotidianoitanalytics.solution</span>
-        <span>iviruanalytics.solution</span>
-        <span>kinoteatrruanalytics.solution</span>
-        <span>gasnaturalesanalytics.solution</span>
-        <span>hearstshkulevruanalytics.solution</span>
-        <span>aimfar.solution</span>
-        <span>realweb.solution</span>
-        <span>bankiaes.solution</span>
-        <span>casadellibro.solution</span>
-        <span>supermercadosdia.solution</span>
-        <span>eurospinit.solution</span>
-        <span>fnac.solution</span>
-        <span>groupelaposte.solution</span>
-        <span>systemeu.solution</span>
-        <span>masmoviles.solution</span>
-        <span>pepephonees.solution</span>
-        <span>frpetzlactivationfr.solution</span>
-        <span>phonehouse.solution</span>
-        <span>cofina.solution</span>
-        <span>adv.solution</span>
-        <span>essprinter.solution</span>
-        <span>volotea.solution</span>
-        <span>wam.solution</span>
-        <span>aimfr.solution</span>
-        <span>suzukiit.solution</span>
-        <span>amc.solution</span>
-        <span>wcm.solution</span>
-        <span>dangeneralitatbcn.solution</span>
-        <span>ilfattoquotidianoit.solution</span>
-        <span>lamoda.solution</span>
-        <span>cofidis2.solution</span>
-        <span>stoloto.solution</span>
-        <span>energitit.solution</span>
-        <span>cetelemportugal2.solution</span>
+        <span>redirect.frontend</span>, 
+        <span>rd.frontend</span>, 
+        <span>cstatic</span>, 
+        <span>wf.frontend</span>, 
+        <span>wamfactory.solution</span>, 
+        <span>bsd.frontend</span>, 
+        <span>cr.frontend</span>, 
+        <span>idsync.frontend</span>, 
+        <span>aifruanalytics.solution</span>, 
+        <span>intermarchedrive.solution</span>, 
+        <span>movingupitanalytics.solution</span>, 
+        <span>groupelapostefranalytics.solution</span>, 
+        <span>cofina2.solution</span>, 
+        <span>groupecdn.solution</span>, 
+        <span>adastaanalytics.solution</span>, 
+        <span>diacorporativo.solution</span>, 
+        <span>talksmediaanalytics.solution</span>, 
+        <span>digitalbeesanalytics.solution</span>, 
+        <span>ilfattoquotidianoitanalytics.solution</span>, 
+        <span>iviruanalytics.solution</span>, 
+        <span>kinoteatrruanalytics.solution</span>, 
+        <span>gasnaturalesanalytics.solution</span>, 
+        <span>hearstshkulevruanalytics.solution</span>, 
+        <span>aimfar.solution</span>, 
+        <span>realweb.solution</span>, 
+        <span>bankiaes.solution</span>, 
+        <span>casadellibro.solution</span>, 
+        <span>supermercadosdia.solution</span>, 
+        <span>eurospinit.solution</span>, 
+        <span>fnac.solution</span>, 
+        <span>groupelaposte.solution</span>, 
+        <span>systemeu.solution</span>, 
+        <span>masmoviles.solution</span>, 
+        <span>pepephonees.solution</span>, 
+        <span>frpetzlactivationfr.solution</span>, 
+        <span>phonehouse.solution</span>, 
+        <span>cofina.solution</span>, 
+        <span>adv.solution</span>, 
+        <span>essprinter.solution</span>, 
+        <span>volotea.solution</span>, 
+        <span>wam.solution</span>, 
+        <span>aimfr.solution</span>, 
+        <span>suzukiit.solution</span>, 
+        <span>amc.solution</span>, 
+        <span>wcm.solution</span>, 
+        <span>dangeneralitatbcn.solution</span>, 
+        <span>ilfattoquotidianoit.solution</span>, 
+        <span>lamoda.solution</span>, 
+        <span>cofidis2.solution</span>, 
+        <span>stoloto.solution</span>, 
+        <span>energitit.solution</span>, 
+        <span>cetelemportugal2.solution</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

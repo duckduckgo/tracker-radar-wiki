@@ -1,15 +1,28 @@
----
-title: Tracker Radar - informz.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - informz.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "informz.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>informz.net</h1>
@@ -23,22 +36,29 @@ title: Tracker Radar - informz.net
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.000171
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>adaa</span>
-        <span>aans</span>
-        <span>acr</span>
-        <span>aiche</span>
-        <span>apta</span>
-        <span>comptia</span>
-        <span>and</span>
-        <span>brewers</span>
-        <span>kpbs</span>
-        <span>pricechopper</span>
-        <span>nareit</span>
-        <span>americanmensa</span>
+        <span>adaa</span>, 
+        <span>aans</span>, 
+        <span>acr</span>, 
+        <span>aiche</span>, 
+        <span>apta</span>, 
+        <span>comptia</span>, 
+        <span>and</span>, 
+        <span>brewers</span>, 
+        <span>kpbs</span>, 
+        <span>pricechopper</span>, 
+        <span>nareit</span>, 
+        <span>americanmensa</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

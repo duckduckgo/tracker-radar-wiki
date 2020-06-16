@@ -1,15 +1,28 @@
----
-title: Tracker Radar - infolinks.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - infolinks.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "infolinks.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>infolinks.com</h1>
@@ -23,50 +36,57 @@ title: Tracker Radar - infolinks.com
         <li>
             Fingerprinting: 2
         </li>
+        <li>
+            Cookies: 0.00205
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>resources</span>
-        <span>router</span>
-        <span>rt5023</span>
-        <span>rt3055</span>
-        <span>rt5004</span>
-        <span>rt5012</span>
-        <span>rt5025</span>
-        <span>rt5001</span>
-        <span>rt5032</span>
-        <span>rt5018</span>
-        <span>rt3037</span>
-        <span>rt5013</span>
-        <span>rt3044</span>
-        <span>rt5014</span>
-        <span>rt5027</span>
-        <span>rt5022</span>
-        <span>rt5011</span>
-        <span>rt5008</span>
-        <span>rt3032</span>
-        <span>rt5002</span>
-        <span>rt5009</span>
-        <span>rt5020</span>
-        <span>rt5015</span>
-        <span>rt5010</span>
-        <span>rt5034</span>
-        <span>rt5021</span>
-        <span>rt5019</span>
-        <span>rt5005</span>
-        <span>rt5026</span>
-        <span>rt5033</span>
-        <span>rt5024</span>
-        <span>rt5028</span>
-        <span>rt5031</span>
-        <span>rt5017</span>
-        <span>rt5030</span>
-        <span>rt5003</span>
-        <span>rt3015</span>
-        <span>rt3040</span>
-        <span>rt3054</span>
-        <span>node227.impressionssl.adshop</span>
+        <span>resources</span>, 
+        <span>router</span>, 
+        <span>rt5023</span>, 
+        <span>rt3055</span>, 
+        <span>rt5004</span>, 
+        <span>rt5012</span>, 
+        <span>rt5025</span>, 
+        <span>rt5001</span>, 
+        <span>rt5032</span>, 
+        <span>rt5018</span>, 
+        <span>rt3037</span>, 
+        <span>rt5013</span>, 
+        <span>rt3044</span>, 
+        <span>rt5014</span>, 
+        <span>rt5027</span>, 
+        <span>rt5022</span>, 
+        <span>rt5011</span>, 
+        <span>rt5008</span>, 
+        <span>rt3032</span>, 
+        <span>rt5002</span>, 
+        <span>rt5009</span>, 
+        <span>rt5020</span>, 
+        <span>rt5015</span>, 
+        <span>rt5010</span>, 
+        <span>rt5034</span>, 
+        <span>rt5021</span>, 
+        <span>rt5019</span>, 
+        <span>rt5005</span>, 
+        <span>rt5026</span>, 
+        <span>rt5033</span>, 
+        <span>rt5024</span>, 
+        <span>rt5028</span>, 
+        <span>rt5031</span>, 
+        <span>rt5017</span>, 
+        <span>rt5030</span>, 
+        <span>rt5003</span>, 
+        <span>rt3015</span>, 
+        <span>rt3040</span>, 
+        <span>rt3054</span>, 
+        <span>node227.impressionssl.adshop</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

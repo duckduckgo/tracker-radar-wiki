@@ -1,15 +1,28 @@
----
-title: Tracker Radar - nanorep.co
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - nanorep.co</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "nanorep.co",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>nanorep.co</h1>
@@ -23,27 +36,34 @@ title: Tracker Radar - nanorep.co
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000285
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>ao</span>
-        <span>checkme</span>
-        <span>upack</span>
-        <span>iowadepartment</span>
-        <span>orbytv-cv19</span>
-        <span>victorianplumbing</span>
-        <span>abbott</span>
-        <span>bricodepot-cv19</span>
-        <span>cooksongold</span>
-        <span>icici</span>
-        <span>medela-cv19</span>
-        <span>pods</span>
-        <span>yad2</span>
-        <span>fanniemae</span>
-        <span>nordvpn</span>
-        <span>vodafoneuk</span>
-        <span>rbs</span>
+        <span>ao</span>, 
+        <span>checkme</span>, 
+        <span>upack</span>, 
+        <span>iowadepartment</span>, 
+        <span>orbytv-cv19</span>, 
+        <span>victorianplumbing</span>, 
+        <span>abbott</span>, 
+        <span>bricodepot-cv19</span>, 
+        <span>cooksongold</span>, 
+        <span>icici</span>, 
+        <span>medela-cv19</span>, 
+        <span>pods</span>, 
+        <span>yad2</span>, 
+        <span>fanniemae</span>, 
+        <span>nordvpn</span>, 
+        <span>vodafoneuk</span>, 
+        <span>rbs</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

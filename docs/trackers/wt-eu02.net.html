@@ -1,15 +1,28 @@
----
-title: Tracker Radar - wt-eu02.net
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - wt-eu02.net</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "wt-eu02.net",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>wt-eu02.net</h1>
@@ -23,25 +36,32 @@ title: Tracker Radar - wt-eu02.net
         <li>
             Fingerprinting: 0
         </li>
+        <li>
+            Cookies: 0.00143
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>italiaonline01</span>
-        <span>ilsole24oreitalia01</span>
-        <span>daklive01</span>
-        <span>mediasetitalia01</span>
-        <span>srgssr01</span>
-        <span>caltagironeeditore01</span>
-        <span>motoitalia01</span>
-        <span>borsaitalia01</span>
-        <span>bsr01</span>
-        <span>deagostiniitalia01</span>
-        <span>imb01</span>
-        <span>ilfattoquotidianoitalia01</span>
-        <span>lanuovasardegnaitalia01</span>
-        <span>rai-italia01</span>
-        <span>uwv01</span>
+        <span>italiaonline01</span>, 
+        <span>ilsole24oreitalia01</span>, 
+        <span>daklive01</span>, 
+        <span>mediasetitalia01</span>, 
+        <span>srgssr01</span>, 
+        <span>caltagironeeditore01</span>, 
+        <span>motoitalia01</span>, 
+        <span>borsaitalia01</span>, 
+        <span>bsr01</span>, 
+        <span>deagostiniitalia01</span>, 
+        <span>imb01</span>, 
+        <span>ilfattoquotidianoitalia01</span>, 
+        <span>lanuovasardegnaitalia01</span>, 
+        <span>rai-italia01</span>, 
+        <span>uwv01</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

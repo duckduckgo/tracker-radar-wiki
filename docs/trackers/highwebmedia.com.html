@@ -1,15 +1,28 @@
----
-title: Tracker Radar - highwebmedia.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - highwebmedia.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "highwebmedia.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>highwebmedia.com</h1>
@@ -23,50 +36,57 @@ title: Tracker Radar - highwebmedia.com
         <li>
             Fingerprinting: 3
         </li>
+        <li>
+            Cookies: 0.00486
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>ssl-ccstatic</span>
-        <span>chatws-67.stream</span>
-        <span>chatws-71.stream</span>
-        <span>chatws-39.stream</span>
-        <span>chatws-74.stream</span>
-        <span>chatws-40.stream</span>
-        <span>chatws-45.stream</span>
-        <span>chatws-73.stream</span>
-        <span>chatws-50.stream</span>
-        <span>chatws-33.stream</span>
-        <span>chatws-63.stream</span>
-        <span>chatws-64.stream</span>
-        <span>chatws-61.stream</span>
-        <span>chatws-53.stream</span>
-        <span>chatws-49.stream</span>
-        <span>chatws-52.stream</span>
-        <span>chatws-47.stream</span>
-        <span>chatws-41.stream</span>
-        <span>chatws-51.stream</span>
-        <span>chatws-42.stream</span>
-        <span>chatws-35.stream</span>
-        <span>chatws-65.stream</span>
-        <span>chatws-75.stream</span>
-        <span>chatws-60.stream</span>
-        <span>chatws-34.stream</span>
-        <span>chatws-66.stream</span>
-        <span>chatws-43.stream</span>
-        <span>chatws-32.stream</span>
-        <span>chatws-57.stream</span>
-        <span>chatws-72.stream</span>
-        <span>chatws-46.stream</span>
-        <span>chatws-62.stream</span>
-        <span>chatws-37.stream</span>
-        <span>chatws-38.stream</span>
-        <span>chatws-59.stream</span>
-        <span>chatws-44.stream</span>
-        <span>chatws-70.stream</span>
-        <span>roomimg.stream</span>
-        <span>roomlister.stream</span>
-        <span>cbjpeg.stream</span>
+        <span>ssl-ccstatic</span>, 
+        <span>chatws-67.stream</span>, 
+        <span>chatws-71.stream</span>, 
+        <span>chatws-39.stream</span>, 
+        <span>chatws-74.stream</span>, 
+        <span>chatws-40.stream</span>, 
+        <span>chatws-45.stream</span>, 
+        <span>chatws-73.stream</span>, 
+        <span>chatws-50.stream</span>, 
+        <span>chatws-33.stream</span>, 
+        <span>chatws-63.stream</span>, 
+        <span>chatws-64.stream</span>, 
+        <span>chatws-61.stream</span>, 
+        <span>chatws-53.stream</span>, 
+        <span>chatws-49.stream</span>, 
+        <span>chatws-52.stream</span>, 
+        <span>chatws-47.stream</span>, 
+        <span>chatws-41.stream</span>, 
+        <span>chatws-51.stream</span>, 
+        <span>chatws-42.stream</span>, 
+        <span>chatws-35.stream</span>, 
+        <span>chatws-65.stream</span>, 
+        <span>chatws-75.stream</span>, 
+        <span>chatws-60.stream</span>, 
+        <span>chatws-34.stream</span>, 
+        <span>chatws-66.stream</span>, 
+        <span>chatws-43.stream</span>, 
+        <span>chatws-32.stream</span>, 
+        <span>chatws-57.stream</span>, 
+        <span>chatws-72.stream</span>, 
+        <span>chatws-46.stream</span>, 
+        <span>chatws-62.stream</span>, 
+        <span>chatws-37.stream</span>, 
+        <span>chatws-38.stream</span>, 
+        <span>chatws-59.stream</span>, 
+        <span>chatws-44.stream</span>, 
+        <span>chatws-70.stream</span>, 
+        <span>roomimg.stream</span>, 
+        <span>roomlister.stream</span>, 
+        <span>cbjpeg.stream</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

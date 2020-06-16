@@ -1,15 +1,28 @@
----
-title: Tracker Radar - marchex.io
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - marchex.io</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "marchex.io",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>marchex.io</h1>
@@ -23,14 +36,21 @@ title: Tracker Radar - marchex.io
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.000685
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>rw1</span>
-        <span>px</span>
-        <span>rw</span>
-        <span>snc</span>
+        <span>rw1</span>, 
+        <span>px</span>, 
+        <span>rw</span>, 
+        <span>snc</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

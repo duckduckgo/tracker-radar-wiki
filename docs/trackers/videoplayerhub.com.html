@@ -1,15 +1,28 @@
----
-title: Tracker Radar - videoplayerhub.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - videoplayerhub.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "videoplayerhub.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>videoplayerhub.com</h1>
@@ -23,65 +36,72 @@ title: Tracker Radar - videoplayerhub.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.00519
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>pubgalaxy-com</span>
-        <span>9to5mac-com</span>
-        <span>kinja-com</span>
-        <span>pmc-com</span>
-        <span>freestar-io</span>
-        <span>zam</span>
-        <span>famousbirthdays-com</span>
-        <span>zam-com</span>
-        <span>fortnitetracker-com</span>
-        <span>fossbytes-com</span>
-        <span>orangeclickmedia-com</span>
-        <span>americanmediainc-com</span>
-        <span>pbh-network-com</span>
-        <span>m2n-co-uk</span>
-        <span>fusemedia-com</span>
-        <span>pubwise-io</span>
-        <span>adapex-io</span>
-        <span>cdn-kongregate-com</span>
-        <span>phonearena-com</span>
-        <span>urbandictionary-com</span>
-        <span>cdn-zacks-com</span>
-        <span>snigelweb-com</span>
-        <span>saymedia-com</span>
-        <span>solomid-net</span>
-        <span>segmentnext-com</span>
-        <span>slickdeals-net</span>
-        <span>dennis-co-uk</span>
-        <span>nexstardigital-com</span>
-        <span>dalia-media</span>
-        <span>crain-com</span>
-        <span>monetizemore-com</span>
-        <span>warnerbros-com</span>
-        <span>mediatradecraft-com</span>
-        <span>www-insticator-com</span>
-        <span>hearst-com</span>
-        <span>metrocorpmedia-com</span>
-        <span>www-greetingsisland-com</span>
-        <span>kob-cdn-us</span>
-        <span>www-bauermedia-co-uk</span>
-        <span>covers-com</span>
-        <span>cheddar-com</span>
-        <span>colmanmedia-co-uk</span>
-        <span>theeighth-net</span>
-        <span>themaven-net</span>
-        <span>themediashop-co</span>
-        <span>enthusiastgaming-com</span>
-        <span>oko-uk</span>
-        <span>realgm-com</span>
-        <span>literally-media</span>
-        <span>voranda-com</span>
-        <span>legacy-com</span>
-        <span>publift-com</span>
-        <span>vandal-elespanol-com</span>
-        <span>dba-dk</span>
-        <span>1xl-co-uk</span>
+        <span>pubgalaxy-com</span>, 
+        <span>9to5mac-com</span>, 
+        <span>kinja-com</span>, 
+        <span>pmc-com</span>, 
+        <span>freestar-io</span>, 
+        <span>zam</span>, 
+        <span>famousbirthdays-com</span>, 
+        <span>zam-com</span>, 
+        <span>fortnitetracker-com</span>, 
+        <span>fossbytes-com</span>, 
+        <span>orangeclickmedia-com</span>, 
+        <span>americanmediainc-com</span>, 
+        <span>pbh-network-com</span>, 
+        <span>m2n-co-uk</span>, 
+        <span>fusemedia-com</span>, 
+        <span>pubwise-io</span>, 
+        <span>adapex-io</span>, 
+        <span>cdn-kongregate-com</span>, 
+        <span>phonearena-com</span>, 
+        <span>urbandictionary-com</span>, 
+        <span>cdn-zacks-com</span>, 
+        <span>snigelweb-com</span>, 
+        <span>saymedia-com</span>, 
+        <span>solomid-net</span>, 
+        <span>segmentnext-com</span>, 
+        <span>slickdeals-net</span>, 
+        <span>dennis-co-uk</span>, 
+        <span>nexstardigital-com</span>, 
+        <span>dalia-media</span>, 
+        <span>crain-com</span>, 
+        <span>monetizemore-com</span>, 
+        <span>warnerbros-com</span>, 
+        <span>mediatradecraft-com</span>, 
+        <span>www-insticator-com</span>, 
+        <span>hearst-com</span>, 
+        <span>metrocorpmedia-com</span>, 
+        <span>www-greetingsisland-com</span>, 
+        <span>kob-cdn-us</span>, 
+        <span>www-bauermedia-co-uk</span>, 
+        <span>covers-com</span>, 
+        <span>cheddar-com</span>, 
+        <span>colmanmedia-co-uk</span>, 
+        <span>theeighth-net</span>, 
+        <span>themaven-net</span>, 
+        <span>themediashop-co</span>, 
+        <span>enthusiastgaming-com</span>, 
+        <span>oko-uk</span>, 
+        <span>realgm-com</span>, 
+        <span>literally-media</span>, 
+        <span>voranda-com</span>, 
+        <span>legacy-com</span>, 
+        <span>publift-com</span>, 
+        <span>vandal-elespanol-com</span>, 
+        <span>dba-dk</span>, 
+        <span>1xl-co-uk</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

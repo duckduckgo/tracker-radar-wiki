@@ -1,15 +1,28 @@
----
-title: Tracker Radar - sonobi.com
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tracker Radar - sonobi.com</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src='https://unpkg.com/lunr/lunr.js' crossorigin="anonymous" defer></script>
+    <script src='/assets/js/search.js' defer></script>
 </head>
 
 <body>
+
+<div class='position-fixed bg-white search-box'>
+    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
+    <ul class='search-box__results'></ul>
+</div>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "sonobi.com",
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" crossorigin="anonymous" defer></script>
+<script src='/assets/js/graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>sonobi.com</h1>
@@ -23,20 +36,27 @@ title: Tracker Radar - sonobi.com
         <li>
             Fingerprinting: 1
         </li>
+        <li>
+            Cookies: 0.0238
+        </li>
     </ul>
     <p>
         <strong>Subdomains:</strong>
-        <span>sync.go</span>
-        <span>purch-sync.go</span>
-        <span>adobe-sync.go</span>
-        <span>apex.go</span>
-        <span>go</span>
-        <span>mtrx.go</span>
-        <span>keymaker.go</span>
-        <span>iad-2.go</span>
-        <span>iad-2-apex.go</span>
-        <span>xcp.go</span>
+        <span>sync.go</span>, 
+        <span>purch-sync.go</span>, 
+        <span>adobe-sync.go</span>, 
+        <span>apex.go</span>, 
+        <span>go</span>, 
+        <span>mtrx.go</span>, 
+        <span>keymaker.go</span>, 
+        <span>iad-2.go</span>, 
+        <span>iad-2-apex.go</span>, 
+        <span>xcp.go</span>, 
     </p>
+
+    <div class='graph-container'>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
 </div>
 
 </body>

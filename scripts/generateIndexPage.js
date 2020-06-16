@@ -5,6 +5,12 @@ const fs = require('fs');
 const ProgressBar = require('progress');
 const mustache = require('mustache');
 
+const lastCommitInfo = {
+    hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf',
+    date: '05/26/2020',
+    crawled: 75000
+}
+
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
@@ -92,7 +98,13 @@ entityFiles.forEach(file => {
 domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
 entities = entities.sort((a, b) => b.properties - a.properties).slice(0, 100);
 
-const output = mustache.render(getTemplate('index'), {domains: domains, entities: entities, categories: Array.from(categories.values())}, getTemplate);
+const renderData = {
+    domains: domains,
+    entities: entities,
+    categories: Array.from(categories.values()),
+    lastCommitInfo: lastCommitInfo
+}
+const output = mustache.render(getTemplate('index'), renderData, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
 

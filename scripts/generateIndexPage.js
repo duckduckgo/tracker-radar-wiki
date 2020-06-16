@@ -95,14 +95,14 @@ entityFiles.forEach(file => {
     let entityPrevalence = 0;
     if (data.prevalence) {
         // not all entities have this data
-        entityPrevalence = data.prevalence.tracking;
+        entityPrevalence = (data.prevalence.tracking * 100).toFixed(2);
     }
 
     entities.push({name: data.name, prevalence: entityPrevalence, properties: data.properties.length});
 });
 
-domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
-entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 100);
+domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
+entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
 
 const renderData = {
     domains: domains,

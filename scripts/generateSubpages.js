@@ -33,7 +33,7 @@ const entityFiles = fs.readdirSync(TRACKER_RADAR_ENTITIES_PATH)
 const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     complete: chalk.green('='),
     incomplete: ' ',
-    total: domainFiles.length + entityFiles.length,
+    total: (domainFiles.length * 2) + entityFiles.length,
     width: 30
 });
 
@@ -59,6 +59,30 @@ function getTemplate(name) {
 const domainIndex = new Map();
 const categories = new Map();
 
+// Pre process domain files to generate rankings
+let prevalenceList = [];
+domainFiles.forEach(file => {
+    progressBar.tick({file});
+
+    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
+    let data = null;
+
+    try {
+        const dataString = fs.readFileSync(resolvedPath, 'utf8');
+        data = JSON.parse(dataString);
+    } catch (e) {
+        stats.failingFiles++;
+        return;
+    }
+
+    prevalenceList.push({ domain: data.domain, prevalence: data.prevalence});
+
+});
+
+// Creating a mapping of domain to rank
+let domainRanks = {};
+prevalenceList.sort((a, b) => b.prevalence - a.prevalence).forEach((item, rank) => domainRanks[item.domain] = rank + 1);
+
 domainFiles.forEach(file => {
     progressBar.tick({file});
 
@@ -78,6 +102,8 @@ domainFiles.forEach(file => {
     data.prevalence *= 100;
     data.cookies *= 100;
     data.types = Object.keys(data.types);
+    data.rank = domainRanks[data.domain];
+    data.totalDomains = prevalenceList.length;
 
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 

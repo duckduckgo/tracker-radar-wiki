@@ -48,6 +48,11 @@
                 a.innerText = `${entry.name} (${entry.type})`;
                 a.href = `${pathPrefix}/domains/${entry.name}.html`;
                 li.appendChild(a);
+            } else if (entry.type === 'entity') {
+                const a = document.createElement('a');
+                a.innerText = `${entry.name} (${entry.type})`;
+                a.href = `${pathPrefix}/entities/${entry.name}.html`;
+                li.appendChild(a);
             } else {
                 li.innerText = `${entry.name} (${entry.type})`;
             }

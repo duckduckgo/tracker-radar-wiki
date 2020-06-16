@@ -26,7 +26,7 @@ const entityFiles = fs.readdirSync(TRACKER_RADAR_ENTITIES_PATH)
 const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     complete: chalk.green('='),
     incomplete: ' ',
-    total: domainFiles.length,// + entityFiles.length,
+    total: domainFiles.length + entityFiles.length,
     width: 30
 });
 
@@ -49,6 +49,8 @@ function getTemplate(name) {
     return partialTemplate;
 }
 
+const domainIndex = new Map();
+
 domainFiles.forEach(file => {
     progressBar.tick({file});
 
@@ -63,7 +65,46 @@ domainFiles.forEach(file => {
         return;
     }
 
-    const output = mustache.render(getTemplate('tracker'), data, getTemplate);
+    const output = mustache.render(getTemplate('domain'), data, getTemplate);
+
+    domainIndex.set(data.domain, data.prevalence);
 
     fs.writeFile(path.join(config.domainPagesPath, `${data.domain}.html`), output, () => {});
+});
+
+entityFiles.forEach(file => {
+    progressBar.tick({file});
+
+    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
+    let data = null;
+
+    try {
+        const dataString = fs.readFileSync(resolvedPath, 'utf8');
+        data = JSON.parse(dataString);
+    } catch (e) {
+        stats.failingFiles++;
+        return;
+    }
+
+    // add info about which properties have separate 'domain' pages
+    data.properties = data.properties.map(domain => {
+        if (domainIndex.has(domain)) {
+            return {
+                domain,
+                known: true,
+                prevalence: domainIndex.get(domain)
+            };
+        } else {
+            return {
+                domain,
+                known: false,
+                prevalence: 0
+            };
+        }
+    });
+    data.properties = data.properties.sort((a, b) => b.prevalence - a.prevalence);
+
+    const output = mustache.render(getTemplate('entity'), data, getTemplate);
+
+    fs.writeFile(path.join(config.entityPagesPath, `${data.name}.html`), output, () => {});
 });

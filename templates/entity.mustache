@@ -1,0 +1,36 @@
+{{>header}}
+
+<script>
+    window.wikiData = {
+        type: "entity",
+        name: "{{name}}",
+    };
+</script>
+
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1>{{name}}</h1>
+    <ul>
+        <li>
+            Display name: {{displayName}}
+        </li>
+        <li>
+            Prevalence:
+            <ul>
+                <li>tracking - {{prevalence.tracking}}</li>
+                <li>nonTracking - {{prevalence.nonTracking}}</li>
+                <li>total - {{prevalence.total}}</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        <strong>Properties:</strong>
+        {{#properties}}
+        <span>
+            {{#known}}<a href="../domains/{{domain}}.html">{{/known}}{{domain}}{{#known}} ({{prevalence}})</a>{{/known}}
+        </span>,
+        {{/properties}}
+    </p>
+
+</div>
+
+{{>footer}}

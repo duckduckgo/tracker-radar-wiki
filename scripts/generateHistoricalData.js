@@ -86,4 +86,14 @@ main().then(() => {
         fs.writeFileSync(path.join(config.staticData, `/history/${item.name}.json`), JSON.stringify(item)); 
     
     });
+
+    let trending = Array.from(domainMap.values()).map(item => {
+        // Get last two prevalence entries
+        const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
+        return {
+            diff: prevVals[1] - prevVals[0],
+            name: item.name
+        }
+    }).filter(entry => entry.diff > 0).sort((a, b) => b.diff - a.diff).slice(0, 10);
+    fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
 });

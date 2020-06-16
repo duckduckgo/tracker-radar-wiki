@@ -72,9 +72,12 @@ domainFiles.forEach(file => {
         stats.failingFiles++;
         return;
     }
+
+    // Reformat some data for display
     data.fpText = fingerprintTexts[data.fingerprinting];
     data.prevalence *= 100;
     data.cookies *= 100;
+    data.types = Object.keys(data.types);
 
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 

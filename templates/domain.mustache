@@ -77,27 +77,25 @@
     </p>
 
     <div>
+        {{#fingerprintingApis.length}}
         <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
+        {{/fingerprintingApis.length}}
         <ul>
         {{#fingerprintingApis}}
             <li>{{.}}</li>
-        {{/fingerprintingApis}}
-        {{^fingerprintingApis}}
-            None Found
         {{/fingerprintingApis}}
         </ul>
     </div>
 
     <div>
+        {{#cnames.length}}
         <div><strong>CNAMEs</strong></div>
+        {{/cnames.length}}
         <ul>
         {{#cnames}}
             <li>
                 <a href="http://{{original}}" class="external">{{original}}</a> &#x2192; <a href="http://{{resolved}}" class="external">{{resolved}}</a>
             </li>
-        {{/cnames}}
-        {{^cnames}}
-            None Found
         {{/cnames}}
         </ul>
     </div>

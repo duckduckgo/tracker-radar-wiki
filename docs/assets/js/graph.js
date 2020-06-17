@@ -1,11 +1,12 @@
-(function() {
+(function iife() {
     const graph = document.querySelector('.graph-container__graph');
 
     if (!graph) {
-        console.warn('Missing .graph-container__graph element.')
+        console.warn('Missing .graph-container__graph element.');
         return;
     }
 
+    // eslint-disable-next-line no-undef
     const lineChart = new Chart(graph, {
         type: 'line',
         data: {
@@ -50,4 +51,4 @@
             lineChart.update({duration: 300});
         });
 
-})();
+}());

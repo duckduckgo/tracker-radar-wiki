@@ -76,7 +76,7 @@ entityFiles.forEach(file => {
     });
 });
 
-const searchIndex = lunr(function () {
+const searchIndex = lunr(function lunrInit() {
     this.ref('id');
     this.field('name');
 
@@ -88,7 +88,7 @@ const searchIndex = lunr(function () {
     });
 });
 
-fs.writeFileSync(path.join(config.staticData, 'searchData.json'), JSON.stringify(indexData)); 
+fs.writeFileSync(path.join(config.staticData, 'searchData.json'), JSON.stringify(indexData));
 fs.writeFileSync(path.join(config.staticData, 'searchIndex.json'), JSON.stringify(searchIndex));
 
 console.log(stats);

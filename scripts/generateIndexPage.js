@@ -9,7 +9,7 @@ const lastCommitInfo = {
     hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf',
     date: '06/16/2020',
     crawled: 75000
-}
+};
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
@@ -74,7 +74,7 @@ domainFiles.forEach(file => {
         categories.set(catName, category);
     });
 
-    domains.push({ domain: data.domain, prevalence: data.prevalence, sites: data.sites });
+    domains.push({domain: data.domain, prevalence: data.prevalence, sites: data.sites});
 });
 
 entityFiles.forEach(file => {
@@ -103,13 +103,11 @@ domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
 entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
 
 const renderData = {
-    domains: domains,
-    entities: entities,
+    domains,
+    entities,
     categories: Array.from(categories.values()),
-    lastCommitInfo: lastCommitInfo
-}
+    lastCommitInfo
+};
 const output = mustache.render(getTemplate('index'), renderData, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
-
-

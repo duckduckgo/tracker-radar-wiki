@@ -19,6 +19,7 @@ const domainMap = new Map();
 
 async function main() {
     for (let commit of commits) {
+        // eslint-disable-next-line no-await-in-loop
         const checkedOut = await checkoutCommit(config.trackerRadarRepoPath, commit.hash, {force: true});
 
         if (!checkedOut) {
@@ -83,7 +84,7 @@ async function main() {
 main().then(() => {
     Array.from(domainMap.values()).forEach(item => {
 
-        fs.writeFileSync(path.join(config.staticData, `/history/${item.name}.json`), JSON.stringify(item)); 
+        fs.writeFileSync(path.join(config.staticData, `/history/${item.name}.json`), JSON.stringify(item));
     
     });
 
@@ -93,7 +94,7 @@ main().then(() => {
         return {
             diff: prevVals[1] - prevVals[0],
             name: item.name
-        }
+        };
     }).filter(entry => Math.abs(entry.diff) > 0.005).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
     fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
 });

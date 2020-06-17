@@ -78,13 +78,13 @@ domainFiles.forEach(file => {
         return;
     }
 
-    prevalenceList.push({ domain: data.domain, prevalence: data.prevalence});
+    prevalenceList.push({domain: data.domain, prevalence: data.prevalence});
 
 });
 
 // Creating a mapping of domain to rank
 const domainRanks = {};
-prevalenceList.sort((a, b) => b.prevalence - a.prevalence).forEach((item, rank) => domainRanks[item.domain] = rank + 1);
+prevalenceList.sort((a, b) => b.prevalence - a.prevalence).forEach((item, rank) => {domainRanks[item.domain] = rank + 1;});
 
 domainFiles.forEach(file => {
     progressBar.tick({file});
@@ -109,7 +109,7 @@ domainFiles.forEach(file => {
     data.totalDomains = prevalenceList.length;
 
     let apis = new Set();
-    data.resources.forEach((resource) => {
+    data.resources.forEach(resource => {
         Object.keys(resource.apis).forEach(api => apis.add(api));
     });
     data.fingerprintingApis = [...apis].sort((a, b) => {
@@ -154,13 +154,13 @@ entityFiles.forEach(file => {
                 known: true,
                 prevalence: domainIndex.get(domain)
             };
-        } else {
-            return {
-                domain,
-                known: false,
-                prevalence: -1
-            };
         }
+        return {
+            domain,
+            known: false,
+            prevalence: -1
+        };
+        
     });
     data.properties = data.properties.sort((a, b) => b.prevalence - a.prevalence);
 
@@ -177,13 +177,13 @@ Array.from(categories.values()).forEach(data => {
                 known: true,
                 prevalence: domainIndex.get(domain)
             };
-        } else {
-            return {
-                domain,
-                known: false,
-                prevalence: 0
-            };
         }
+        return {
+            domain,
+            known: false,
+            prevalence: 0
+        };
+        
     });
     data.domains = data.domains.sort((a, b) => b.prevalence - a.prevalence);
 

@@ -1,9 +1,12 @@
-(function() {
+(function iife() {
+    /**
+     * @type {HTMLInputElement}
+     */
     const input = document.querySelector('.search-box__input');
     const output = document.querySelector('.search-box__results');
 
     if (!input || !output) {
-        console.warn('Missing .search-box__input or .search-box__results element.')
+        console.warn('Missing .search-box__input or .search-box__results element.');
         return;
     }
 
@@ -19,6 +22,7 @@
     fetch(`${pathPrefix}/assets/data/searchIndex.json`)
         .then(response => response.json())
         .then(data => {
+            // eslint-disable-next-line no-undef
             searchIndex = lunr.Index.load(data);
 
             input.removeAttribute('disabled');
@@ -27,7 +31,7 @@
 
     fetch(`${pathPrefix}/assets/data/searchData.json`)
         .then(response => response.json())
-        .then(data => searchData = data);
+        .then(data => {searchData = data;});
 
     input.addEventListener('change', () => {
         const results = searchIndex.search(input.value);
@@ -62,4 +66,4 @@
 
         output.appendChild(tree);
     });
-})();
+}());

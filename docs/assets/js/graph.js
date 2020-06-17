@@ -6,16 +6,21 @@
         return;
     }
 
-    // eslint-disable-next-line no-undef
-    const lineChart = new Chart(graph, {
+    if (!window.wikiData || !window.wikiData.history || !window.wikiData.history.length) {
+        console.warn('Missing history data.');
+        return;
+    }
+
+    // eslint-disable-next-line no-unused-vars, no-undef
+    const chart = new Chart(graph, {
         type: 'line',
         data: {
-            labels: [],
+            labels: window.wikiData.history.map(entry => entry.date),
             datasets: [{
                 label: `prevalence (%)`,
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: []
+                data: window.wikiData.history.map(entry => entry.prevalence * 100)
             }]
         },
         options: {
@@ -30,25 +35,5 @@
             }
         }
     });
-
-    fetch(`../assets/data/history/${window.wikiData.domain}.json`)
-        .then(response => response.json())
-        .then(data => {
-
-            const labels = [];
-            const chartData = [];
-
-            data.entries.forEach(entry => {
-                labels.push(entry.date);
-                chartData.push(entry.prevalence);
-            });
-
-            console.log(labels, chartData);
-
-            labels.forEach(l => lineChart.data.labels.push(l));
-            chartData.forEach(d => lineChart.data.datasets.forEach(dataset => dataset.data.push(d * 100)));
-
-            lineChart.update({duration: 300});
-        });
 
 }());

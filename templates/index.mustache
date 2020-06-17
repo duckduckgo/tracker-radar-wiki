@@ -12,8 +12,18 @@
 
     <link rel="stylesheet" href="./assets/css/style.css?v=fc5ce159fda290eb040d59d5fd94ab2af1cac779">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script>
+        window.wikiData = {
+            type: "index",
+            history: {{{historicDataString}}}
+        };
+    </script>
     <script src='./assets/js/vendor/lunr.js' defer></script>
     <script src='./assets/js/search.js' defer></script>
+    <script src='./assets/js/trending.js' defer></script>
+
+    <script src="../assets/js/vendor/Chart.min.js" defer></script>
+    <script src='../assets/js/index-graph.js' defer></script>
 </head>
 
 <body>
@@ -77,9 +87,15 @@
     </ul>
 </div>
 
+<div class='graph-container'>
+    <label>Historic data: <select class='graph-container__controller'>
+        <option selected value='prevalence'># of domains</option>
+        <option value='sites'># of entities</option>
+        <option value='fingerprinting'>fingerprinting scores</option>
+    </select></label>
+    <canvas class='graph-container__graph' width="300" height="300"></canvas>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script>anchors.add();</script>
+
+</div>
 
 {{>footer}}

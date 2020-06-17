@@ -14,9 +14,10 @@ const commits = [
 ];
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
-// const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
+const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
 const domainMap = new Map();
+const globalStats = [];
 
 async function main() {
     for (let commit of commits) {
@@ -29,6 +30,7 @@ async function main() {
         }
 
         const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
+        const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
         console.log(chalk.yellow(commit.date));
 
@@ -43,6 +45,8 @@ async function main() {
             failingFiles: 0
         };
 
+        const fingerprintingScores = [0, 0, 0, 0];
+
         domainFiles.forEach(({file, resolvedPath}) => {
             progressBar.tick({file});
 
@@ -55,6 +59,8 @@ async function main() {
                 stats.failingFiles++;
                 return;
             }
+
+            fingerprintingScores[data.fingerprinting]++;
 
             const domainObj = domainMap.get(data.domain) || {
                 name: data.domain,
@@ -72,17 +78,21 @@ async function main() {
             domainMap.set(data.domain, domainObj);
         });
 
+        globalStats.push({
+            date: commit.date,
+            domains: domainFiles.length,
+            entities: entityFiles.length,
+            fingerprinting: fingerprintingScores
+        });
     }
 }
 
 main().then(() => {
     Array.from(domainMap.values()).forEach(item => {
-
         fs.writeFileSync(path.join(config.staticData, `/history/${item.name}.json`), JSON.stringify(item));
-    
     });
 
-    let trending = Array.from(domainMap.values()).map(item => {
+    const trending = Array.from(domainMap.values()).map(item => {
         // Get last two prevalence entries
         const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
         const diff = prevVals[1] - prevVals[0];
@@ -94,4 +104,6 @@ main().then(() => {
         };
     }).filter(entry => Math.abs(entry.diff) > 0.5).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
     fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
+
+    fs.writeFileSync(path.join(config.staticData, `/history/global.json`), JSON.stringify(globalStats));
 });

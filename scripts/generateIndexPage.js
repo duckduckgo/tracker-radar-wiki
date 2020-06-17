@@ -75,18 +75,21 @@ entityFiles.forEach(({file, resolvedPath}) => {
 domains = domains.sort((a, b) => b.prevalence - a.prevalence)
 entities = entities.sort((a, b) => b.prevalence - a.prevalence)
 
-let renderData = {
+const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/global.json'), 'utf8');
+
+const renderData = {
     domains: domains.slice(0, 10),
     entities: entities.slice(0, 10),
     categories: Array.from(categories.values()),
-    lastCommitInfo
+    lastCommitInfo,
+    historicDataString
 };
 
 try {
-    const trending = JSON.parse(fs.readFileSync(path.join(config.staticData, '/history/trending.json')));
+    const trending = JSON.parse(fs.readFileSync(path.join(config.staticData, '/history/trending.json'), 'utf8'));
     renderData.trending = trending;
 } catch (e) {
-    return;
+    throw new Error('Error parsing trending.json data.');
 }
 
 const output = mustache.render(getTemplate('index'), renderData, getTemplate);

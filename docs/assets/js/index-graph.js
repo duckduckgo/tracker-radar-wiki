@@ -65,27 +65,35 @@
             chart.data.datasets = [{
                 label: `domains with score 0`,
                 borderColor: colors.green,
-                fill: false,
+                backgroundColor: colors.green,
                 data: window.wikiData.history.map(entry => entry.fingerprinting[0])
             },
             {
                 label: `domains with score 1`,
                 borderColor: colors.yellow,
-                fill: false,
+                backgroundColor: colors.yellow,
                 data: window.wikiData.history.map(entry => entry.fingerprinting[1])
             },
             {
                 label: `domains with score 2`,
                 borderColor: colors.orange,
-                fill: false,
+                backgroundColor: colors.orange,
                 data: window.wikiData.history.map(entry => entry.fingerprinting[2])
             },
             {
                 label: `domains with score 3`,
                 borderColor: colors.red,
-                fill: false,
+                backgroundColor: colors.red,
                 data: window.wikiData.history.map(entry => entry.fingerprinting[3])
             }];
+            chart.options.scales = {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            };
         }
 
         chart.update();

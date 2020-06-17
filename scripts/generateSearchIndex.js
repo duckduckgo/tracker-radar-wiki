@@ -4,24 +4,13 @@ const chalk = require('chalk');
 const fs = require('fs');
 const lunr = require('lunr');
 const ProgressBar = require('progress');
+const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
-const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
-const entityFiles = fs.readdirSync(TRACKER_RADAR_ENTITIES_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
+const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
+const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
 const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     complete: chalk.green('='),
@@ -36,10 +25,9 @@ const stats = {
 
 const indexData = [];
 
-domainFiles.forEach(file => {
+domainFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
     let data = null;
 
     try {
@@ -56,10 +44,9 @@ domainFiles.forEach(file => {
     });
 });
 
-entityFiles.forEach(file => {
+entityFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
     let data = null;
 
     try {

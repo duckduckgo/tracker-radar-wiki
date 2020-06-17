@@ -4,6 +4,8 @@ const chalk = require('chalk');
 const fs = require('fs');
 const ProgressBar = require('progress');
 const mustache = require('mustache');
+const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
+const getTemplate = require('./helpers/getTemplate');
 
 const lastCommitInfo = {
     hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf',
@@ -14,20 +16,8 @@ const lastCommitInfo = {
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
-const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
-const entityFiles = fs.readdirSync(TRACKER_RADAR_ENTITIES_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
+const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
+const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
 const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     complete: chalk.green('='),
@@ -36,29 +26,13 @@ const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     width: 30
 });
 
-const templateCache = {};
-
-function getTemplate(name) {
-    if (templateCache[name]) {
-        return templateCache[name];
-    }
-
-    const partialPath = path.resolve(process.cwd(), path.join(config.templatesPath, `${name}.mustache`));
-    const partialTemplate = fs.readFileSync(partialPath, 'utf8');
-
-    templateCache[name] = partialTemplate;
-
-    return partialTemplate;
-}
-
 let domains = [];
 let entities = [];
 const categories = new Map();
 
-domainFiles.forEach(file => {
+domainFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
     let data = null;
 
     try {
@@ -77,10 +51,9 @@ domainFiles.forEach(file => {
     domains.push({domain: data.domain, prevalence: data.prevalence, sites: data.sites});
 });
 
-entityFiles.forEach(file => {
+entityFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
     let data = null;
 
     try {

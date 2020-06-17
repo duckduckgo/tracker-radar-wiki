@@ -4,6 +4,8 @@ const chalk = require('chalk');
 const fs = require('fs');
 const ProgressBar = require('progress');
 const mustache = require('mustache');
+const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
+const getTemplate = require('./helpers/getTemplate');
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
@@ -18,20 +20,8 @@ const fingerprintTexts = [
 const weightsText = fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/static/api_fingerprint_weights.json'), 'utf8');
 const fingerprintingWeights = JSON.parse(weightsText);
 
-const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
-const entityFiles = fs.readdirSync(TRACKER_RADAR_ENTITIES_PATH)
-    .filter(file => {
-        const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
-        const stat = fs.statSync(resolvedPath);
-
-        return stat && stat.isFile() && file.endsWith('.json');
-    });
+const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
+const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
 const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     complete: chalk.green('='),
@@ -44,30 +34,14 @@ const stats = {
     failingFiles: 0
 };
 
-const templateCache = {};
-
-function getTemplate(name) {
-    if (templateCache[name]) {
-        return templateCache[name];
-    }
-
-    const partialPath = path.resolve(process.cwd(), path.join(config.templatesPath, `${name}.mustache`));
-    const partialTemplate = fs.readFileSync(partialPath, 'utf8');
-
-    templateCache[name] = partialTemplate;
-
-    return partialTemplate;
-}
-
 const domainIndex = new Map();
 const categories = new Map();
 
 // Pre process domain files to generate rankings
 const prevalenceList = [];
-domainFiles.forEach(file => {
+domainFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
     let data = null;
 
     try {
@@ -86,10 +60,9 @@ domainFiles.forEach(file => {
 const domainRanks = {};
 prevalenceList.sort((a, b) => b.prevalence - a.prevalence).forEach((item, rank) => {domainRanks[item.domain] = rank + 1;});
 
-domainFiles.forEach(file => {
+domainFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
     let data = null;
 
     try {
@@ -108,7 +81,7 @@ domainFiles.forEach(file => {
     data.rank = domainRanks[data.domain];
     data.totalDomains = prevalenceList.length;
 
-    let apis = new Set();
+    const apis = new Set();
     data.resources.forEach(resource => {
         Object.keys(resource.apis).forEach(api => apis.add(api));
     });
@@ -132,10 +105,9 @@ domainFiles.forEach(file => {
     fs.writeFile(path.join(config.domainPagesPath, `${data.domain}.html`), output, () => {});
 });
 
-entityFiles.forEach(file => {
+entityFiles.forEach(({file, resolvedPath}) => {
     progressBar.tick({file});
 
-    const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_ENTITIES_PATH}/${file}`);
     let data = null;
 
     try {

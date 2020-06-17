@@ -4,6 +4,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const ProgressBar = require('progress');
 const {checkoutCommit} = require('git-parse');
+const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 
 const commits = [
     {hash: '74e767dbaf6394bcb98348d54abf3daaa51e3131', date: '02.2020'},
@@ -27,13 +28,7 @@ async function main() {
             return;
         }
 
-        const domainFiles = fs.readdirSync(TRACKER_RADAR_DOMAINS_PATH)
-            .filter(file => {
-                const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
-                const stat = fs.statSync(resolvedPath);
-
-                return stat && stat.isFile() && file.endsWith('.json');
-            });
+        const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
 
         console.log(chalk.yellow(commit.date));
 
@@ -48,10 +43,9 @@ async function main() {
             failingFiles: 0
         };
 
-        domainFiles.forEach(file => {
+        domainFiles.forEach(({file, resolvedPath}) => {
             progressBar.tick({file});
 
-            const resolvedPath = path.resolve(process.cwd(), `${TRACKER_RADAR_DOMAINS_PATH}/${file}`);
             let data = null;
 
             try {

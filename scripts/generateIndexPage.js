@@ -72,8 +72,8 @@ entityFiles.forEach(({file, resolvedPath}) => {
     entities.push({name: data.name, prevalence: entityPrevalence, properties: data.properties.length});
 });
 
-domains = domains.sort((a, b) => b.prevalence - a.prevalence)
-entities = entities.sort((a, b) => b.prevalence - a.prevalence)
+domains = domains.sort((a, b) => b.prevalence - a.prevalence);
+entities = entities.sort((a, b) => b.prevalence - a.prevalence);
 
 const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/global.json'), 'utf8');
 

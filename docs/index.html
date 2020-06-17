@@ -12,8 +12,18 @@
 
     <link rel="stylesheet" href="./assets/css/style.css?v=fc5ce159fda290eb040d59d5fd94ab2af1cac779">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script>
+        window.wikiData = {
+            type: "index",
+            history: [{"date":"02.2020","domains":5326,"entities":18685,"fingerprinting":[1710,2447,966,203]},{"date":"03.2020","domains":6903,"entities":18644,"fingerprinting":[2275,3081,1292,255]},{"date":"04.2020","domains":6827,"entities":18665,"fingerprinting":[2217,3074,1283,253]},{"date":"05.2020","domains":6963,"entities":18664,"fingerprinting":[2205,3220,1283,255]}]
+        };
+    </script>
     <script src='./assets/js/vendor/lunr.js' defer></script>
     <script src='./assets/js/search.js' defer></script>
+    <script src='./assets/js/trending.js' defer></script>
+
+    <script src="./assets/js/vendor/Chart.min.js" defer></script>
+    <script src='./assets/js/index-graph.js' defer></script>
 </head>
 
 <body>
@@ -114,10 +124,17 @@
     </ul>
 </div>
 
+<div class='graph-container'>
+    <div><strong>Historic data</strong></div>
+    <label class='d-block'><select class='graph-container__controller'>
+        <option selected value='domains'># of domains</option>
+        <option value='entities'># of entities</option>
+        <option value='fingerprinting'>fingerprinting scores</option>
+    </select></label>
+    <canvas class='graph-container__graph' width="450" height="300"></canvas>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script>anchors.add();</script>
+
+</div>
 
 </body>
 

@@ -75,12 +75,20 @@ entityFiles.forEach(({file, resolvedPath}) => {
 domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
 entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
 
-const renderData = {
+let renderData = {
     domains,
     entities,
     categories: Array.from(categories.values()),
     lastCommitInfo
 };
+
+try {
+    const trending = JSON.parse(fs.readFileSync(path.join(config.staticData, '/history/trending.json')));
+    renderData.trending = trending;
+} catch (e) {
+    return;
+}
+
 const output = mustache.render(getTemplate('index'), renderData, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);

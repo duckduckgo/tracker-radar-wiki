@@ -85,10 +85,13 @@ main().then(() => {
     let trending = Array.from(domainMap.values()).map(item => {
         // Get last two prevalence entries
         const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
+        const diff = prevVals[1] - prevVals[0];
         return {
-            diff: prevVals[1] - prevVals[0],
+            diff: (diff * 100).toFixed(2),
+            htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
+            htmlClass: (diff > 0) ? 'trend-up' : 'trend-down',
             name: item.name
         };
-    }).filter(entry => Math.abs(entry.diff) > 0.005).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
+    }).filter(entry => Math.abs(entry.diff) > 0.5).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
     fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
 });

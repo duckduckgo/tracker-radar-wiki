@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <script src='./assets/js/vendor/lunr.js' defer></script>
     <script src='./assets/js/search.js' defer></script>
-    <script src='./assets/js/trending.js' defer></script>
 </head>
 
 <body>
@@ -70,7 +69,11 @@
 
 <div>
     <div><strong>Trending Domains</strong></div>
-    <ul class="trending-list"></ul>
+    <ul class="trending-list">
+    {{#trending}}
+        <li><a href="./domains/{{name}}.html">{{name}}</a> - <span class="{{htmlClass}}">{{{htmlSymbol}}}{{diff}}&#37;</span></li>
+    {{/trending}}
+    </ul>
 </div>
 
 </div>

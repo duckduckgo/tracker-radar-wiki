@@ -72,12 +72,12 @@ entityFiles.forEach(({file, resolvedPath}) => {
     entities.push({name: data.name, prevalence: entityPrevalence, properties: data.properties.length});
 });
 
-domains = domains.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
-entities = entities.sort((a, b) => b.prevalence - a.prevalence).slice(0, 10);
+domains = domains.sort((a, b) => b.prevalence - a.prevalence)
+entities = entities.sort((a, b) => b.prevalence - a.prevalence)
 
 let renderData = {
-    domains,
-    entities,
+    domains: domains.slice(0, 10),
+    entities: entities.slice(0, 10),
     categories: Array.from(categories.values()),
     lastCommitInfo
 };
@@ -92,3 +92,12 @@ try {
 const output = mustache.render(getTemplate('index'), renderData, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
+
+const top100RenderData = {
+    domains: domains.slice(0, 100),
+    entities: entities.slice(0, 100)
+};
+
+const top100Output = mustache.render(getTemplate('top100'), top100RenderData, getTemplate);
+
+fs.writeFileSync(path.join(config.basePagesPath, 'top100.html'), top100Output);

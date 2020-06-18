@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Square, Inc.</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Square, Inc.</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Square
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.02%</li>
@@ -51,168 +63,176 @@
                         <li>total - 0.02%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Square, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Square, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/squareup.com.html">squareup.com (0.02%)</a>
-        </span>,
-        <span>
-            square.com.au
-        </span>,
-        <span>
-            cashstaging.app
-        </span>,
-        <span>
-            cashstaging.me
-        </span>,
-        <span>
-            dreamswelcome.com
-        </span>,
-        <span>
-            foreverydream.com
-        </span>,
-        <span>
-            getsquare.com
-        </span>,
-        <span>
-            giftofsquare.com
-        </span>,
-        <span>
-            giftofsquare.net
-        </span>,
-        <span>
-            giftofsquare.org
-        </span>,
-        <span>
-            giftsofsquare.com
-        </span>,
-        <span>
-            giftsofsquare.net
-        </span>,
-        <span>
-            giftsofsquare.org
-        </span>,
-        <span>
-            giveasquare.com
-        </span>,
-        <span>
-            giveasquare.net
-        </span>,
-        <span>
-            giveasquare.org
-        </span>,
-        <span>
-            gosq.co
-        </span>,
-        <span>
-            gosq.com
-        </span>,
-        <span>
-            mkt.com
-        </span>,
-        <span>
-            sellwithsquare.com
-        </span>,
-        <span>
-            sqap.pt
-        </span>,
-        <span>
-            sqclick.com
-        </span>,
-        <span>
-            square.ca
-        </span>,
-        <span>
-            square.co.jp
-        </span>,
-        <span>
-            cash.me
-        </span>,
-        <span>
-            square.com.mx
-        </span>,
-        <span>
-            square.engineering
-        </span>,
-        <span>
-            square.jobs
-        </span>,
-        <span>
-            square.ly
-        </span>,
-        <span>
-            square.mx
-        </span>,
-        <span>
-            square.site
-        </span>,
-        <span>
-            squareappointments.com
-        </span>,
-        <span>
-            squarecdn.com
-        </span>,
-        <span>
-            squaregift.com
-        </span>,
-        <span>
-            squaregift.net
-        </span>,
-        <span>
-            squaregift.org
-        </span>,
-        <span>
-            squareinstallments.com
-        </span>,
-        <span>
-            squareinvite.com
-        </span>,
-        <span>
-            squareinvoices.com
-        </span>,
-        <span>
-            squareoffer.com
-        </span>,
-        <span>
-            squarepayroll.com
-        </span>,
-        <span>
-            squareregister.com
-        </span>,
-        <span>
-            squareshowroom.com
-        </span>,
-        <span>
-            squaresolutions.com
-        </span>,
-        <span>
-            squareup.ca
-        </span>,
-        <span>
-            squareup.co.jp
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             cash.app
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            cash.me
+        </li>
+        <li class='truncate'>
+            cashstaging.app
+        </li>
+        <li class='truncate'>
+            cashstaging.me
+        </li>
+        <li class='truncate'>
+            dreamswelcome.com
+        </li>
+        <li class='truncate'>
+            foreverydream.com
+        </li>
+        <li class='truncate'>
+            getsquare.com
+        </li>
+        <li class='truncate'>
+            giftofsquare.com
+        </li>
+        <li class='truncate'>
+            giftofsquare.net
+        </li>
+        <li class='truncate'>
+            giftofsquare.org
+        </li>
+        <li class='truncate'>
+            giftsofsquare.com
+        </li>
+        <li class='truncate'>
+            giftsofsquare.net
+        </li>
+        <li class='truncate'>
+            giftsofsquare.org
+        </li>
+        <li class='truncate'>
+            giveasquare.com
+        </li>
+        <li class='truncate'>
+            giveasquare.net
+        </li>
+        <li class='truncate'>
+            giveasquare.org
+        </li>
+        <li class='truncate'>
+            gosq.co
+        </li>
+        <li class='truncate'>
+            gosq.com
+        </li>
+        <li class='truncate'>
+            mkt.com
+        </li>
+        <li class='truncate'>
+            sellwithsquare.com
+        </li>
+        <li class='truncate'>
+            sqap.pt
+        </li>
+        <li class='truncate'>
+            sqclick.com
+        </li>
+        <li class='truncate'>
+            square.ca
+        </li>
+        <li class='truncate'>
+            square.co.jp
+        </li>
+        <li class='truncate'>
+            square.com.au
+        </li>
+        <li class='truncate'>
+            square.com.mx
+        </li>
+        <li class='truncate'>
+            square.engineering
+        </li>
+        <li class='truncate'>
+            square.jobs
+        </li>
+        <li class='truncate'>
+            square.ly
+        </li>
+        <li class='truncate'>
+            square.mx
+        </li>
+        <li class='truncate'>
+            square.site
+        </li>
+        <li class='truncate'>
+            squareappointments.com
+        </li>
+        <li class='truncate'>
+            squarecdn.com
+        </li>
+        <li class='truncate'>
+            squaregift.com
+        </li>
+        <li class='truncate'>
+            squaregift.net
+        </li>
+        <li class='truncate'>
+            squaregift.org
+        </li>
+        <li class='truncate'>
+            squareinstallments.com
+        </li>
+        <li class='truncate'>
+            squareinvite.com
+        </li>
+        <li class='truncate'>
+            squareinvoices.com
+        </li>
+        <li class='truncate'>
+            squareoffer.com
+        </li>
+        <li class='truncate'>
+            squarepayroll.com
+        </li>
+        <li class='truncate'>
+            squareregister.com
+        </li>
+        <li class='truncate'>
+            squareshowroom.com
+        </li>
+        <li class='truncate'>
+            squaresolutions.com
+        </li>
+        <li class='truncate'>
+            squareup.ca
+        </li>
+        <li class='truncate'>
+            squareup.co.jp
+        </li>
+        <li class='truncate'>
             syncwithsquare.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

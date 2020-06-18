@@ -14,7 +14,7 @@
     <script>
         window.wikiData = {
             type: "index",
-            history: [{"date":"2020.02","domains":5326,"entities":18685,"fingerprinting":[1710,2447,966,203]},{"date":"2020.03","domains":6903,"entities":18644,"fingerprinting":[2275,3081,1292,255]},{"date":"2020.04","domains":6827,"entities":18665,"fingerprinting":[2217,3074,1283,253]},{"date":"2020.05","domains":6963,"entities":18664,"fingerprinting":[2205,3220,1283,255]}]
+            history: [{"date":"2020.02","domains":5326,"entities":18685,"fingerprinting":[1710,2447,966,203]},{"date":"2020.03","domains":6903,"entities":18644,"fingerprinting":[2275,3081,1292,255]},{"date":"2020.04","domains":6827,"entities":18666,"fingerprinting":[2217,3074,1283,253]},{"date":"2020.05","domains":6963,"entities":18664,"fingerprinting":[2205,3220,1283,255]}]
         };
     </script>
     <script src='./assets/js/vendor/lunr.js' defer></script>
@@ -26,130 +26,142 @@
 
 <body>
 
-<div class="container-lg px-3 my-5 markdown-body">
-
-<h1>Tracker Radar Wiki</h1>
-
-<div class='bg-white search-box'>
-    <div><strong>Search:</strong></div>
-    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-    <ul class='search-box__results' style="list-style-type: none;"></ul>
-</div>
-
-<div class="last-update">
-    <div><strong>Last Updated</strong></div>
-    <div>
-        <span>06&#x2F;16&#x2F;2020</span>&nbsp;&bull;
-        <span>75000 top sites crawled</span>&nbsp;&bull;
-        <span><a href="https://github.com/duckduckgo/tracker-radar/tree/7956f0151c72bd3999a7e8b4a17d698785089fbf" target="_blank">Github Commit</a></span>
+<div class="container mx-auto">
+    <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+        <div class="flex items-center flex-shrink-0 mr-5">
+            <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="text-sm lg:flex-grow">
+                <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                    Home
+                </a>
+                <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                    Top 100
+                </a>
+            </div>
+        </div>
+        <div class='relative'>
+            <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+            <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+        </div>
+    </nav>
+    <div class="mx-auto p-5">
+        <h3 class="section-header">Last Updated</h3>
+        <div>
+            <span>06&#x2F;16&#x2F;2020</span>&nbsp;&bull;
+            <span>75000 top sites crawled</span>&nbsp;&bull;
+            <span><a href="https://github.com/duckduckgo/tracker-radar/tree/7956f0151c72bd3999a7e8b4a17d698785089fbf" target="_blank">Github Commit</a></span>
+        </div>
     </div>
-</div>
 
-<div class="top-container">
-    <div class="top-entities">
-        <div><strong>Top 10 Entities</strong></div>
-        <ol>
-            <li><a href="./entities/Google LLC.html">Google LLC - 82.00&#37;</a></li>
-            <li><a href="./entities/Facebook, Inc..html">Facebook, Inc. - 33.70&#37;</a></li>
-            <li><a href="./entities/Amazon Technologies, Inc..html">Amazon Technologies, Inc. - 20.10&#37;</a></li>
-            <li><a href="./entities/Adobe Inc..html">Adobe Inc. - 19.50&#37;</a></li>
-            <li><a href="./entities/Index Exchange, Inc..html">Index Exchange, Inc. - 17.80&#37;</a></li>
-            <li><a href="./entities/The Trade Desk Inc.html">The Trade Desk Inc - 17.50&#37;</a></li>
-            <li><a href="./entities/AppNexus, Inc..html">AppNexus, Inc. - 17.50&#37;</a></li>
-            <li><a href="./entities/Oracle Corporation.html">Oracle Corporation - 17.20&#37;</a></li>
-            <li><a href="./entities/Verizon Media.html">Verizon Media - 15.20&#37;</a></li>
-            <li><a href="./entities/OpenX Technologies Inc.html">OpenX Technologies Inc - 15.10&#37;</a></li>
-        </ol>
+    <div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:row-gap-2 p-5 border-b">
+        <div class="top-entities">
+            <h3 class="section-header">Top Ten Entities</h3>
+            <ol class="list-decimal">
+                <li class='ml-5 py-1'><a href="./entities/Google LLC.html">Google LLC - 82.00&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Facebook, Inc..html">Facebook, Inc. - 33.70&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Amazon Technologies, Inc..html">Amazon Technologies, Inc. - 20.10&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Adobe Inc..html">Adobe Inc. - 19.50&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Index Exchange, Inc..html">Index Exchange, Inc. - 17.80&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/AppNexus, Inc..html">AppNexus, Inc. - 17.50&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/The Trade Desk Inc.html">The Trade Desk Inc - 17.50&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Oracle Corporation.html">Oracle Corporation - 17.20&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/Verizon Media.html">Verizon Media - 15.20&#37;</a></li>
+                <li class='ml-5 py-1'><a href="./entities/OpenX Technologies Inc.html">OpenX Technologies Inc - 15.10&#37;</a></li>
+            </ol>
+        </div>
+        <div class="top-trackers">
+            <h3 class="section-header">Top 10 Domains</h3>
+            <ol class="list-decimal">
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/google-analytics.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/google-analytics.com.html">google-analytics.com - 55013 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/doubleclick.net.ico' width="16" height="16" class='inline-block' /> <a href="./domains/doubleclick.net.html">doubleclick.net - 47767 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/google.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/google.com.html">google.com - 43751 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/googleapis.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/googleapis.com.html">googleapis.com - 42862 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/gstatic.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/gstatic.com.html">gstatic.com - 39602 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/googletagmanager.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/googletagmanager.com.html">googletagmanager.com - 34854 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/facebook.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/facebook.com.html">facebook.com - 23659 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/facebook.net.ico' width="16" height="16" class='inline-block' /> <a href="./domains/facebook.net.html">facebook.net - 23013 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/googlesyndication.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/googlesyndication.com.html">googlesyndication.com - 21131 sites</a></li>
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/googletagservices.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/googletagservices.com.html">googletagservices.com - 20150 sites</a></li>
+            </ol>
+        </div>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='domains'># of domains</option>
+                    <option value='entities'># of entities</option>
+                    <option value='fingerprinting'>fingerprinting scores</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+        <a href="./top100.html">See More...</a>
     </div>
-    <div class="top-trackers">
-        <div><strong>Top 10 Domains</strong></div>
-        <ol>
-            <li><img src='https://external-content.duckduckgo.com/ip3/google-analytics.com.ico' width="16" height="16"/> <a href="./domains/google-analytics.com.html">google-analytics.com - 55013 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/doubleclick.net.ico' width="16" height="16"/> <a href="./domains/doubleclick.net.html">doubleclick.net - 47767 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/google.com.ico' width="16" height="16"/> <a href="./domains/google.com.html">google.com - 43751 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/googleapis.com.ico' width="16" height="16"/> <a href="./domains/googleapis.com.html">googleapis.com - 42862 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/gstatic.com.ico' width="16" height="16"/> <a href="./domains/gstatic.com.html">gstatic.com - 39602 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/googletagmanager.com.ico' width="16" height="16"/> <a href="./domains/googletagmanager.com.html">googletagmanager.com - 34854 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/facebook.com.ico' width="16" height="16"/> <a href="./domains/facebook.com.html">facebook.com - 23659 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/facebook.net.ico' width="16" height="16"/> <a href="./domains/facebook.net.html">facebook.net - 23013 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/googlesyndication.com.ico' width="16" height="16"/> <a href="./domains/googlesyndication.com.html">googlesyndication.com - 21131 sites</a></li>
-            <li><img src='https://external-content.duckduckgo.com/ip3/googletagservices.com.ico' width="16" height="16"/> <a href="./domains/googletagservices.com.html">googletagservices.com - 20150 sites</a></li>
-        </ol>
+
+    <div class="p-5 border-b">
+        <h3 class="section-header">Domains By Category</h3>
+        <ul class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2'>
+            <li><a href="./categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a></li>
+            <li><a href="./categories/Advertising.html">Advertising</a></li>
+            <li><a href="./categories/Analytics.html">Analytics</a></li>
+            <li><a href="./categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a></li>
+            <li><a href="./categories/Ad Fraud.html">Ad Fraud</a></li>
+            <li><a href="./categories/Audience Measurement.html">Audience Measurement</a></li>
+            <li><a href="./categories/Action Pixels.html">Action Pixels</a></li>
+            <li><a href="./categories/Session Replay.html">Session Replay</a></li>
+            <li><a href="./categories/Social - Share.html">Social - Share</a></li>
+            <li><a href="./categories/Embedded Content.html">Embedded Content</a></li>
+            <li><a href="./categories/CDN.html">CDN</a></li>
+            <li><a href="./categories/SSO.html">SSO</a></li>
+            <li><a href="./categories/Online Payment.html">Online Payment</a></li>
+            <li><a href="./categories/Badge.html">Badge</a></li>
+            <li><a href="./categories/Unknown High Risk Behavior.html">Unknown High Risk Behavior</a></li>
+            <li><a href="./categories/Obscure Ownership.html">Obscure Ownership</a></li>
+            <li><a href="./categories/Non-Tracking.html">Non-Tracking</a></li>
+            <li><a href="./categories/Federated Login.html">Federated Login</a></li>
+            <li><a href="./categories/Social - Comment.html">Social - Comment</a></li>
+            <li><a href="./categories/Social Network.html">Social Network</a></li>
+            <li><a href="./categories/Malware.html">Malware</a></li>
+        </ul>
     </div>
-    <a href="./top100.html">See More...</a>
-</div>
 
-<div>
-    <div><strong>Domains by Category</strong></div>
-    <ul class="cat-list">
-        <li><a href="./categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a></li>
-        <li><a href="./categories/Advertising.html">Advertising</a></li>
-        <li><a href="./categories/Analytics.html">Analytics</a></li>
-        <li><a href="./categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a></li>
-        <li><a href="./categories/Ad Fraud.html">Ad Fraud</a></li>
-        <li><a href="./categories/Audience Measurement.html">Audience Measurement</a></li>
-        <li><a href="./categories/Action Pixels.html">Action Pixels</a></li>
-        <li><a href="./categories/Session Replay.html">Session Replay</a></li>
-        <li><a href="./categories/Social - Share.html">Social - Share</a></li>
-        <li><a href="./categories/Embedded Content.html">Embedded Content</a></li>
-        <li><a href="./categories/CDN.html">CDN</a></li>
-        <li><a href="./categories/SSO.html">SSO</a></li>
-        <li><a href="./categories/Online Payment.html">Online Payment</a></li>
-        <li><a href="./categories/Badge.html">Badge</a></li>
-        <li><a href="./categories/Unknown High Risk Behavior.html">Unknown High Risk Behavior</a></li>
-        <li><a href="./categories/Obscure Ownership.html">Obscure Ownership</a></li>
-        <li><a href="./categories/Non-Tracking.html">Non-Tracking</a></li>
-        <li><a href="./categories/Federated Login.html">Federated Login</a></li>
-        <li><a href="./categories/Social - Comment.html">Social - Comment</a></li>
-        <li><a href="./categories/Social Network.html">Social Network</a></li>
-        <li><a href="./categories/Malware.html">Malware</a></li>
-    </ul>
-</div>
+    <div class="p-5 border-b">
+        <h3 class="section-header">Trending Domains</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+            <li><img src='https://external-content.duckduckgo.com/ip3/unrulymedia.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/unrulymedia.com.html">unrulymedia.com</a> - <span class="trend up">&#x2B06; 6.90&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/everesttech.net.ico' width="16" height="16" class='inline-block' /> <a href="./domains/everesttech.net.html">everesttech.net</a> - <span class="trend down">&#x2B07; -4.10&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/rlcdn.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/rlcdn.com.html">rlcdn.com</a> - <span class="trend down">&#x2B07; -4.00&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/adingo.jp.ico' width="16" height="16" class='inline-block' /> <a href="./domains/adingo.jp.html">adingo.jp</a> - <span class="trend up">&#x2B06; 3.95&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/rubiconproject.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/rubiconproject.com.html">rubiconproject.com</a> - <span class="trend down">&#x2B07; -3.40&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/adsrvr.org.ico' width="16" height="16" class='inline-block' /> <a href="./domains/adsrvr.org.html">adsrvr.org</a> - <span class="trend down">&#x2B07; -3.30&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/yahoo.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/yahoo.com.html">yahoo.com</a> - <span class="trend down">&#x2B07; -3.20&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/mathtag.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/mathtag.com.html">mathtag.com</a> - <span class="trend down">&#x2B07; -3.10&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/openx.net.ico' width="16" height="16" class='inline-block' /> <a href="./domains/openx.net.html">openx.net</a> - <span class="trend down">&#x2B07; -2.80&#37;</span></li>
+            <li><img src='https://external-content.duckduckgo.com/ip3/adnxs.com.ico' width="16" height="16" class='inline-block' /> <a href="./domains/adnxs.com.html">adnxs.com</a> - <span class="trend down">&#x2B07; -2.70&#37;</span></li>
+        </ul>
+    </div>
 
-<div>
-    <div><strong>Trending Domains</strong></div>
-    <ul class="trending-list">
-        <li><img src='https://external-content.duckduckgo.com/ip3/unrulymedia.com.ico' width="16" height="16"/> <a href="./domains/unrulymedia.com.html">unrulymedia.com</a> - <span class="trend-up">&#x2B06;6.90&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/everesttech.net.ico' width="16" height="16"/> <a href="./domains/everesttech.net.html">everesttech.net</a> - <span class="trend-down">&#x2B07;-4.10&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/rlcdn.com.ico' width="16" height="16"/> <a href="./domains/rlcdn.com.html">rlcdn.com</a> - <span class="trend-down">&#x2B07;-4.00&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/adingo.jp.ico' width="16" height="16"/> <a href="./domains/adingo.jp.html">adingo.jp</a> - <span class="trend-up">&#x2B06;3.95&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/rubiconproject.com.ico' width="16" height="16"/> <a href="./domains/rubiconproject.com.html">rubiconproject.com</a> - <span class="trend-down">&#x2B07;-3.40&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/adsrvr.org.ico' width="16" height="16"/> <a href="./domains/adsrvr.org.html">adsrvr.org</a> - <span class="trend-down">&#x2B07;-3.30&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/yahoo.com.ico' width="16" height="16"/> <a href="./domains/yahoo.com.html">yahoo.com</a> - <span class="trend-down">&#x2B07;-3.20&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/mathtag.com.ico' width="16" height="16"/> <a href="./domains/mathtag.com.html">mathtag.com</a> - <span class="trend-down">&#x2B07;-3.10&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/openx.net.ico' width="16" height="16"/> <a href="./domains/openx.net.html">openx.net</a> - <span class="trend-down">&#x2B07;-2.80&#37;</span></li>
-        <li><img src='https://external-content.duckduckgo.com/ip3/adnxs.com.ico' width="16" height="16"/> <a href="./domains/adnxs.com.html">adnxs.com</a> - <span class="trend-down">&#x2B07;-2.70&#37;</span></li>
-    </ul>
-</div>
+    <div class="p-5 mb-5">
+        <h3 class="section-header">Trending Entities</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+            <li><a href="./entities/Unruly Group Limited.html">Unruly Group Limited</a> - <span class="trend up">&#x2B06; 6.12&#37;</span></li>
+            <li><a href="./entities/TowerData, Inc..html">TowerData, Inc.</a> - <span class="trend down">&#x2B07; -4.00&#37;</span></li>
+            <li><a href="./entities/Adobe Inc..html">Adobe Inc.</a> - <span class="trend down">&#x2B07; -3.40&#37;</span></li>
+            <li><a href="./entities/Oracle Corporation.html">Oracle Corporation</a> - <span class="trend down">&#x2B07; -3.40&#37;</span></li>
+            <li><a href="./entities/The Trade Desk Inc.html">The Trade Desk Inc</a> - <span class="trend down">&#x2B07; -3.30&#37;</span></li>
+            <li><a href="./entities/Verizon Media.html">Verizon Media</a> - <span class="trend down">&#x2B07; -3.30&#37;</span></li>
+            <li><a href="./entities/MediaMath, Inc..html">MediaMath, Inc.</a> - <span class="trend down">&#x2B07; -3.20&#37;</span></li>
+            <li><a href="./entities/OpenX Technologies Inc.html">OpenX Technologies Inc</a> - <span class="trend down">&#x2B07; -3.20&#37;</span></li>
+            <li><a href="./entities/Quantcast Corporation.html">Quantcast Corporation</a> - <span class="trend down">&#x2B07; -3.00&#37;</span></li>
+            <li><a href="./entities/Index Exchange, Inc..html">Index Exchange, Inc.</a> - <span class="trend down">&#x2B07; -2.60&#37;</span></li>
+        </ul>
+    </div>
 
-<div>
-    <div><strong>Trending Entities</strong></div>
-    <ul class="trending-list">
-        <li><a href="./entities/Unruly Group Limited.html">Unruly Group Limited</a> - <span class="trend-up">&#x2B06;6.12&#37;</span></li>
-        <li><a href="./entities/TowerData, Inc..html">TowerData, Inc.</a> - <span class="trend-down">&#x2B07;-4.00&#37;</span></li>
-        <li><a href="./entities/Oracle Corporation.html">Oracle Corporation</a> - <span class="trend-down">&#x2B07;-3.40&#37;</span></li>
-        <li><a href="./entities/Adobe Inc..html">Adobe Inc.</a> - <span class="trend-down">&#x2B07;-3.40&#37;</span></li>
-        <li><a href="./entities/The Trade Desk Inc.html">The Trade Desk Inc</a> - <span class="trend-down">&#x2B07;-3.30&#37;</span></li>
-        <li><a href="./entities/Verizon Media.html">Verizon Media</a> - <span class="trend-down">&#x2B07;-3.30&#37;</span></li>
-        <li><a href="./entities/OpenX Technologies Inc.html">OpenX Technologies Inc</a> - <span class="trend-down">&#x2B07;-3.20&#37;</span></li>
-        <li><a href="./entities/MediaMath, Inc..html">MediaMath, Inc.</a> - <span class="trend-down">&#x2B07;-3.20&#37;</span></li>
-        <li><a href="./entities/Quantcast Corporation.html">Quantcast Corporation</a> - <span class="trend-down">&#x2B07;-3.00&#37;</span></li>
-        <li><a href="./entities/Index Exchange, Inc..html">Index Exchange, Inc.</a> - <span class="trend-down">&#x2B07;-2.60&#37;</span></li>
-    </ul>
-</div>
-
-<div class='graph-container'>
-    <div><strong>Historic data</strong></div>
-    <label class='d-block'><select class='graph-container__controller'>
-        <option selected value='domains'># of domains</option>
-        <option value='entities'># of entities</option>
-        <option value='fingerprinting'>fingerprinting scores</option>
-    </select></label>
-    <canvas class='graph-container__graph' width="450" height="300"></canvas>
-</div>
-
-</div>
-
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

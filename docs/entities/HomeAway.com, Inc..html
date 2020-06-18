@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,215 +46,224 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>HomeAway.com, Inc.</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>HomeAway.com, Inc.</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: HomeAway.com
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/HomeAway.com, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/HomeAway.com, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
-            homeaway.fi
-        </span>,
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             abritel.fr
-        </span>,
-        <span>
-            bedandbreakfast.com
-        </span>,
-        <span>
-            bookabach.co.nz
-        </span>,
-        <span>
-            escapia.com
-        </span>,
-        <span>
-            fewo-direkt.de
-        </span>,
-        <span>
-            homeaway.ae
-        </span>,
-        <span>
-            homeaway.asia
-        </span>,
-        <span>
-            homeaway.at
-        </span>,
-        <span>
-            homeaway.ca
-        </span>,
-        <span>
-            homeaway.cl
-        </span>,
-        <span>
-            homeaway.co.in
-        </span>,
-        <span>
-            homeaway.co.kr
-        </span>,
-        <span>
-            homeaway.co.th
-        </span>,
-        <span>
-            homeaway.co.uk
-        </span>,
-        <span>
-            homeaway.com
-        </span>,
-        <span>
-            homeaway.com.ar
-        </span>,
-        <span>
-            homeaway.com.au
-        </span>,
-        <span>
-            homeaway.com.br
-        </span>,
-        <span>
-            homeaway.com.cn
-        </span>,
-        <span>
-            homeaway.com.co
-        </span>,
-        <span>
-            homeaway.com.mx
-        </span>,
-        <span>
-            homeaway.com.my
-        </span>,
-        <span>
-            homeaway.com.pe
-        </span>,
-        <span>
-            homeaway.com.sg
-        </span>,
-        <span>
-            homeaway.com.uy
-        </span>,
-        <span>
-            homeaway.de
-        </span>,
-        <span>
-            homeaway.dk
-        </span>,
-        <span>
-            homeaway.ec
-        </span>,
-        <span>
-            homeaway.es
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             aluguetemporada.com.br
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            bedandbreakfast.com
+        </li>
+        <li class='truncate'>
+            bookabach.co.nz
+        </li>
+        <li class='truncate'>
+            escapia.com
+        </li>
+        <li class='truncate'>
+            fewo-direkt.de
+        </li>
+        <li class='truncate'>
+            homeaway.ae
+        </li>
+        <li class='truncate'>
+            homeaway.asia
+        </li>
+        <li class='truncate'>
+            homeaway.at
+        </li>
+        <li class='truncate'>
+            homeaway.ca
+        </li>
+        <li class='truncate'>
+            homeaway.cl
+        </li>
+        <li class='truncate'>
+            homeaway.co.in
+        </li>
+        <li class='truncate'>
+            homeaway.co.kr
+        </li>
+        <li class='truncate'>
+            homeaway.co.th
+        </li>
+        <li class='truncate'>
+            homeaway.co.uk
+        </li>
+        <li class='truncate'>
+            homeaway.com
+        </li>
+        <li class='truncate'>
+            homeaway.com.ar
+        </li>
+        <li class='truncate'>
+            homeaway.com.au
+        </li>
+        <li class='truncate'>
+            homeaway.com.br
+        </li>
+        <li class='truncate'>
+            homeaway.com.cn
+        </li>
+        <li class='truncate'>
+            homeaway.com.co
+        </li>
+        <li class='truncate'>
+            homeaway.com.mx
+        </li>
+        <li class='truncate'>
+            homeaway.com.my
+        </li>
+        <li class='truncate'>
+            homeaway.com.pe
+        </li>
+        <li class='truncate'>
+            homeaway.com.sg
+        </li>
+        <li class='truncate'>
+            homeaway.com.uy
+        </li>
+        <li class='truncate'>
+            homeaway.de
+        </li>
+        <li class='truncate'>
+            homeaway.dk
+        </li>
+        <li class='truncate'>
+            homeaway.ec
+        </li>
+        <li class='truncate'>
+            homeaway.es
+        </li>
+        <li class='truncate'>
+            homeaway.fi
+        </li>
+        <li class='truncate'>
             homeaway.fr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.gr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.hk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.jp
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.lk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.no
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.pl
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.ru
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.se
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.sg
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homeaway.tw
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homelidays.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homelidays.es
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homelidays.fr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             homelidays.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             instantsoftware.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             ownersdirect.co.uk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             rezovation.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             stayz.com.au
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.cat
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.co.uk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.de
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.nl
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             toprural.pt
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             vacationrentals.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             vrbo.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             webervations.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

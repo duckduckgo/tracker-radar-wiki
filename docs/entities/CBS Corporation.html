@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>CBS Corporation</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>CBS Corporation</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: CBS
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.02%</li>
@@ -51,165 +63,173 @@
                         <li>total - 0.04%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/CBS Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/CBS Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/cbsi.com.html">cbsi.com (0.02%)</a>
-        </span>,
-        <span>
-            <a href="../domains/cnetcontent.com.html">cnetcontent.com (0.00%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/cbs.com.html">cbs.com (0.00%)</a>
-        </span>,
-        <span>
-            gamekult.com
-        </span>,
-        <span>
-            cbsimg.net
-        </span>,
-        <span>
-            cbsinteractive.com
-        </span>,
-        <span>
-            cbsistatic.com
-        </span>,
-        <span>
-            cbslocal.com
-        </span>,
-        <span>
-            cbsnews.com
-        </span>,
-        <span>
-            cbssports.com
-        </span>,
-        <span>
-            cbsstatic.com
-        </span>,
-        <span>
-            chowhound.com
-        </span>,
-        <span>
-            chowstatic.com
-        </span>,
-        <span>
-            cnet.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/cnetcontent.com.html">cnetcontent.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
             247sports.com
-        </span>,
-        <span>
-            cnetfrance.fr
-        </span>,
-        <span>
-            comicbook.com
-        </span>,
-        <span>
-            cstv.com
-        </span>,
-        <span>
-            drphil.com
-        </span>,
-        <span>
-            etcanada.com
-        </span>,
-        <span>
-            etonline.com
-        </span>,
-        <span>
-            fdlstatic.com
-        </span>,
-        <span>
-            findarticles.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             cbsig.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            cbsimg.net
+        </li>
+        <li class='truncate'>
+            cbsinteractive.com
+        </li>
+        <li class='truncate'>
+            cbsistatic.com
+        </li>
+        <li class='truncate'>
+            cbslocal.com
+        </li>
+        <li class='truncate'>
+            cbsnews.com
+        </li>
+        <li class='truncate'>
+            cbssports.com
+        </li>
+        <li class='truncate'>
+            cbsstatic.com
+        </li>
+        <li class='truncate'>
+            chowhound.com
+        </li>
+        <li class='truncate'>
+            chowstatic.com
+        </li>
+        <li class='truncate'>
+            cnet.com
+        </li>
+        <li class='truncate'>
+            cnetfrance.fr
+        </li>
+        <li class='truncate'>
+            comicbook.com
+        </li>
+        <li class='truncate'>
+            cstv.com
+        </li>
+        <li class='truncate'>
+            drphil.com
+        </li>
+        <li class='truncate'>
+            etcanada.com
+        </li>
+        <li class='truncate'>
+            etonline.com
+        </li>
+        <li class='truncate'>
+            fdlstatic.com
+        </li>
+        <li class='truncate'>
+            findarticles.com
+        </li>
+        <li class='truncate'>
+            gamekult.com
+        </li>
+        <li class='truncate'>
             gamespot.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             giantbomb.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             insideedition.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             maxpreps.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             metacritic.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             metrolyrics.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mysimon.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             popculture.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             rachaelrayshow.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             scout.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             sho.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             simonandschuster.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             smithsonianchannel.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             sportsline.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             startrek.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             techrepublic.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thedoctorstv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tvgcdn.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tvguide.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tvtome.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zdnet.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zdnet.fr
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/akamaized.net.ico' width="32" height="32"/> akamaized.net</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/akamaized.net.ico' width="32" height="32" class='inline-block' /> akamaized.net</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/Akamai Technologies.html">Akamai Technologies</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.akamai.com&#x2F;us&#x2F;en&#x2F;privacy-policies&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.akamai.com&#x2F;us&#x2F;en&#x2F;privacy-policies&#x2F;</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Rank: &#35;260<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.76&#37; (536 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.14&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 2<small>/3</small></li>
@@ -67,164 +81,172 @@
                         <li>cache: 1<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/CDN.html">CDN</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                     <span>Media</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/akamaized.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/akamaized.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>mwf-service</span>, 
+                    <span>amp</span>, 
+                    <span>browsi-a</span>, 
+                    <span>i-invdn-com</span>, 
+                    <span>blznav</span>, 
+                    <span>opgg-cdn</span>, 
+                    <span>opgg-static</span>, 
+                    <span>cdn-production-assets-kly</span>, 
+                    <span>assets-momentum</span>, 
+                    <span>cdn-brilio-net</span>, 
+                    <span>static0-web-prod-vidio</span>, 
+                    <span>static-olxeu</span>, 
+                    <span>vod-progressive</span>, 
+                    <span>medialamborghini-meride-tv</span>, 
+                    <span>mediatmsedizioni-meride-tv</span>, 
+                    <span>tmssl</span>, 
+                    <span>tmsi</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>mwf-service</span>, 
-        <span>amp</span>, 
-        <span>browsi-a</span>, 
-        <span>i-invdn-com</span>, 
-        <span>blznav</span>, 
-        <span>opgg-cdn</span>, 
-        <span>opgg-static</span>, 
-        <span>cdn-production-assets-kly</span>, 
-        <span>assets-momentum</span>, 
-        <span>cdn-brilio-net</span>, 
-        <span>static0-web-prod-vidio</span>, 
-        <span>static-olxeu</span>, 
-        <span>vod-progressive</span>, 
-        <span>medialamborghini-meride-tv</span>, 
-        <span>mediatmsedizioni-meride-tv</span>, 
-        <span>tmssl</span>, 
-        <span>tmsi</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.productSub</li>
-            <li>Navigator.prototype.deviceMemory</li>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>WebGLRenderingContext.prototype.getExtension</li>
-            <li>WebGLRenderingContext.prototype.getParameter</li>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>window.indexedDB</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Element.prototype.getClientRects</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>Navigator.prototype.javaEnabled</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>HTMLCanvasElement.prototype.constructor</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>MediaSource.isTypeSupported</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
-            <li>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.8&#x2F;mwf-main.umd.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.8&#x2F;mwf-main.umd.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;hosted&#x2F;1.0&#x2F;player.esi" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;hosted&#x2F;1.0&#x2F;player.esi</a></li>
-            <li><a href="http://akamaized.net&#x2F;tag&#x2F;bpt.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;tag&#x2F;bpt.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;jquery-6.4.9.04.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;jquery-6.4.9.04.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;lazysizes.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;lazysizes.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;main-1.17.256.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;main-1.17.256.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;core-highcharts-1.02.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;core-highcharts-1.02.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;jscharts-8.1.15.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;jscharts-8.1.15.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.0&#x2F;mwf-main.var.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.0&#x2F;mwf-main.var.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;navbar-59b89d28e70f0977.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;navbar-59b89d28e70f0977.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;moment-2.5.0&#x2F;moment.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;moment-2.5.0&#x2F;moment.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;modernizr-2.7.1&#x2F;modernizr.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;modernizr-2.7.1&#x2F;modernizr.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;lib&#x2F;browserdetect.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;lib&#x2F;browserdetect.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;jquery.cookie-1.3.1&#x2F;jquery.cookie.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;jquery.cookie-1.3.1&#x2F;jquery.cookie.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;jquery.jcf-1.1.3&#x2F;js&#x2F;jcf.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;jquery.jcf-1.1.3&#x2F;js&#x2F;jcf.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;tipped-4.6.1&#x2F;js&#x2F;tipped&#x2F;tipped.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;tipped-4.6.1&#x2F;js&#x2F;tipped&#x2F;tipped.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js3&#x2F;common.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js3&#x2F;common.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;swiper-3.3.1&#x2F;swiper.jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;swiper-3.3.1&#x2F;swiper.jquery.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;builds&#x2F;gtm.0368f69f.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;gtm.0368f69f.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;builds&#x2F;liputan6.a2a4577f.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;liputan6.a2a4577f.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;builds&#x2F;grunticon.loader.013163f9.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;grunticon.loader.013163f9.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;axss.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;axss.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;js&#x2F;newshub.id&#x2F;www&#x2F;1.0.12.13&#x2F;frontend&#x2F;global.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;js&#x2F;newshub.id&#x2F;www&#x2F;1.0.12.13&#x2F;frontend&#x2F;global.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;ahoy&#x2F;ahoy-falcon-2020-02-24-03-06-12.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;ahoy&#x2F;ahoy-falcon-2020-02-24-03-06-12.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxpt&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxpt&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxpt&#x2F;packed&#x2F;sw0a790953feba1301fc023d57b9caa256.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxpt&#x2F;packed&#x2F;sw0a790953feba1301fc023d57b9caa256.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxro&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxro&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxro&#x2F;packed&#x2F;sw3b5268274796f0fe0c5d796123a85e17.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxro&#x2F;packed&#x2F;sw3b5268274796f0fe0c5d796123a85e17.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;newrelic.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;newrelic.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw7da24f632469a0f36265043b3872fdd5.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw7da24f632469a0f36265043b3872fdd5.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw032764d2642b6494af4e89f1a7f6af63.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw032764d2642b6494af4e89f1a7f6af63.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;xgemius.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;xgemius.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;assets&#x2F;page-861f49b72f42e1229899625364f3b165771b52461b8e97aaafb20eec89e309ed.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;assets&#x2F;page-861f49b72f42e1229899625364f3b165771b52461b8e97aaafb20eec89e309ed.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812506059.mp4%2A~hmac&#x3D;36389d5fc67d3c0c0896160ee0f116584bd22dd383e801ddd270e41ffd156f45&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3969&#x2F;16&#x2F;419847238&#x2F;1812506059.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812506059.mp4%2A~hmac&#x3D;36389d5fc67d3c0c0896160ee0f116584bd22dd383e801ddd270e41ffd156f45&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3969&#x2F;16&#x2F;419847238&#x2F;1812506059.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812042542.mp4%2A~hmac&#x3D;44c924014893c1021875eadf067acd99862365b8974f082486cb59095b92aac7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764635&#x2F;1812042542.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812042542.mp4%2A~hmac&#x3D;44c924014893c1021875eadf067acd99862365b8974f082486cb59095b92aac7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764635&#x2F;1812042542.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589951059~acl&#x3D;%2A%2F1812042491.mp4%2A~hmac&#x3D;e8a80ac2b7584b00e369131cbf7a4766ffdfdca8e39b85133d30e368c2aff7a3&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764611&#x2F;1812042491.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951059~acl&#x3D;%2A%2F1812042491.mp4%2A~hmac&#x3D;e8a80ac2b7584b00e369131cbf7a4766ffdfdca8e39b85133d30e368c2aff7a3&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764611&#x2F;1812042491.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1590001959~acl&#x3D;%2A%2F1655765582.mp4%2A~hmac&#x3D;cbd5286db3d2d6c4d3193fb30a5db5cd95ec4dcd145a8819fd38e5d6b965e226&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3202&#x2F;15&#x2F;391012327&#x2F;1655765582.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1590001959~acl&#x3D;%2A%2F1655765582.mp4%2A~hmac&#x3D;cbd5286db3d2d6c4d3193fb30a5db5cd95ec4dcd145a8819fd38e5d6b965e226&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3202&#x2F;15&#x2F;391012327&#x2F;1655765582.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589950890~acl&#x3D;%2A%2F1047855590.mp4%2A~hmac&#x3D;03a4a523db836a1a2a1d3fb2c24a06a3b5d5087dd23c859e1e35dfe3592b3f95&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3038&#x2F;8&#x2F;215190934&#x2F;1047855590.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589950890~acl&#x3D;%2A%2F1047855590.mp4%2A~hmac&#x3D;03a4a523db836a1a2a1d3fb2c24a06a3b5d5087dd23c859e1e35dfe3592b3f95&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3038&#x2F;8&#x2F;215190934&#x2F;1047855590.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505840.mp4%2A~hmac&#x3D;b1c1149937a90445f0f7339c1fbf9e8750234fe859242fd842c644971f80b4c6&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777564&#x2F;1455505840.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505840.mp4%2A~hmac&#x3D;b1c1149937a90445f0f7339c1fbf9e8750234fe859242fd842c644971f80b4c6&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777564&#x2F;1455505840.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505669.mp4%2A~hmac&#x3D;89d96eb508022a4d36d51e2bcc3fdf1036f61dd74aee15af2eb88ec6f27b61f7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777543&#x2F;1455505669.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505669.mp4%2A~hmac&#x3D;89d96eb508022a4d36d51e2bcc3fdf1036f61dd74aee15af2eb88ec6f27b61f7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777543&#x2F;1455505669.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589921028~acl&#x3D;%2A%2F1462848914.mp4%2A~hmac&#x3D;f5a730d75e6d4dd0d5840d9cbd04d54d74c7f68800e4ac05a2c111449e11b613&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;2082&#x2F;7&#x2F;185412921&#x2F;1462848914.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589921028~acl&#x3D;%2A%2F1462848914.mp4%2A~hmac&#x3D;f5a730d75e6d4dd0d5840d9cbd04d54d74c7f68800e4ac05a2c111449e11b613&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;2082&#x2F;7&#x2F;185412921&#x2F;1462848914.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;scripts&#x2F;latest&#x2F;embed.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;scripts&#x2F;latest&#x2F;embed.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589948208~acl&#x3D;%2A%2F1663205384.mp4%2A~hmac&#x3D;6f8d9a3a2a8a43833024444ddcfff469cf39c43fb7a7e0b66e907e0aca11184d&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3495&#x2F;15&#x2F;392479337&#x2F;1663205384.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589948208~acl&#x3D;%2A%2F1663205384.mp4%2A~hmac&#x3D;6f8d9a3a2a8a43833024444ddcfff469cf39c43fb7a7e0b66e907e0aca11184d&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3495&#x2F;15&#x2F;392479337&#x2F;1663205384.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;vendor&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;vendor&#x2F;jquery.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery.lazyload.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery.lazyload.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;swiper.min.3.4.1.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;swiper.min.3.4.1.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;foundation.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;foundation.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;main.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery-ui-1.10.4.custom.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery-ui-1.10.4.custom.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery.icheck.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery.icheck.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;chosen.jquery.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;chosen.jquery.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;oil&#x2F;oil.1.3.2-RELEASE.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;oil&#x2F;oil.1.3.2-RELEASE.min.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;sm-bar&#x2F;core-e55fc098.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;sm-bar&#x2F;core-e55fc098.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;domains&#x2F;tm-domains.entry.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;domains&#x2F;tm-domains.entry.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;js&#x2F;globals&#x2F;tm-data-scouts_4.entry.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;globals&#x2F;tm-data-scouts_4.entry.js</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1590003142~acl&#x3D;%2A%2F1733369848.mp4%2A~hmac&#x3D;75134ca765f3eac2ffba2c2a6a043d5ffaf3585310db0ce1f5ee4076eb87fc90&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;966&#x2F;12&#x2F;304833406&#x2F;1733369848.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1590003142~acl&#x3D;%2A%2F1733369848.mp4%2A~hmac&#x3D;75134ca765f3eac2ffba2c2a6a043d5ffaf3585310db0ce1f5ee4076eb87fc90&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;966&#x2F;12&#x2F;304833406&#x2F;1733369848.mp4</a></li>
-            <li><a href="http://akamaized.net&#x2F;exp&#x3D;1589938371~acl&#x3D;%2A%2F1724688411.mp4%2A~hmac&#x3D;380265d7c75b5b9e0c7d7a5b2c65f47f05b443c884efddaed8216599b8ff1011&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;664&#x2F;16&#x2F;403322760&#x2F;1724688411.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589938371~acl&#x3D;%2A%2F1724688411.mp4%2A~hmac&#x3D;380265d7c75b5b9e0c7d7a5b2c65f47f05b443c884efddaed8216599b8ff1011&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;664&#x2F;16&#x2F;403322760&#x2F;1724688411.mp4</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.productSub</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.javaEnabled</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.8&#x2F;mwf-main.umd.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.8&#x2F;mwf-main.umd.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;hosted&#x2F;1.0&#x2F;player.esi" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;hosted&#x2F;1.0&#x2F;player.esi</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;tag&#x2F;bpt.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;tag&#x2F;bpt.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;jquery-6.4.9.04.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;jquery-6.4.9.04.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;lazysizes.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;lazysizes.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;main-1.17.256.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;main-1.17.256.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;core-highcharts-1.02.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;core-highcharts-1.02.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;jscharts-8.1.15.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;jscharts-8.1.15.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.0&#x2F;mwf-main.var.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;mwf&#x2F;js&#x2F;bundle&#x2F;1.57.0&#x2F;mwf-main.var.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;navbar-59b89d28e70f0977.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;navbar-59b89d28e70f0977.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;moment-2.5.0&#x2F;moment.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;moment-2.5.0&#x2F;moment.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;modernizr-2.7.1&#x2F;modernizr.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;modernizr-2.7.1&#x2F;modernizr.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;lib&#x2F;browserdetect.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;lib&#x2F;browserdetect.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;jquery.cookie-1.3.1&#x2F;jquery.cookie.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;jquery.cookie-1.3.1&#x2F;jquery.cookie.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;jquery.jcf-1.1.3&#x2F;js&#x2F;jcf.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;jquery.jcf-1.1.3&#x2F;js&#x2F;jcf.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;tipped-4.6.1&#x2F;js&#x2F;tipped&#x2F;tipped.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;tipped-4.6.1&#x2F;js&#x2F;tipped&#x2F;tipped.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js3&#x2F;common.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js3&#x2F;common.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;swiper-3.3.1&#x2F;swiper.jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;swiper-3.3.1&#x2F;swiper.jquery.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;builds&#x2F;gtm.0368f69f.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;gtm.0368f69f.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;builds&#x2F;liputan6.a2a4577f.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;liputan6.a2a4577f.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;builds&#x2F;grunticon.loader.013163f9.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;builds&#x2F;grunticon.loader.013163f9.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;axss.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;axss.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;js&#x2F;newshub.id&#x2F;www&#x2F;1.0.12.13&#x2F;frontend&#x2F;global.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;js&#x2F;newshub.id&#x2F;www&#x2F;1.0.12.13&#x2F;frontend&#x2F;global.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;ahoy&#x2F;ahoy-falcon-2020-02-24-03-06-12.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;ahoy&#x2F;ahoy-falcon-2020-02-24-03-06-12.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxpt&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxpt&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxpt&#x2F;packed&#x2F;sw0a790953feba1301fc023d57b9caa256.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxpt&#x2F;packed&#x2F;sw0a790953feba1301fc023d57b9caa256.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxro&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxro&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxro&#x2F;packed&#x2F;sw3b5268274796f0fe0c5d796123a85e17.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxro&#x2F;packed&#x2F;sw3b5268274796f0fe0c5d796123a85e17.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;tracking&#x2F;ninja.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;newrelic.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;newrelic.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw7da24f632469a0f36265043b3872fdd5.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw7da24f632469a0f36265043b3872fdd5.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw032764d2642b6494af4e89f1a7f6af63.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;packed&#x2F;sw032764d2642b6494af4e89f1a7f6af63.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;xgemius.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;static&#x2F;olxua&#x2F;naspersclassifieds-regional&#x2F;olxeu-atlas-web&#x2F;static&#x2F;js&#x2F;xgemius.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;assets&#x2F;page-861f49b72f42e1229899625364f3b165771b52461b8e97aaafb20eec89e309ed.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;assets&#x2F;page-861f49b72f42e1229899625364f3b165771b52461b8e97aaafb20eec89e309ed.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812506059.mp4%2A~hmac&#x3D;36389d5fc67d3c0c0896160ee0f116584bd22dd383e801ddd270e41ffd156f45&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3969&#x2F;16&#x2F;419847238&#x2F;1812506059.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812506059.mp4%2A~hmac&#x3D;36389d5fc67d3c0c0896160ee0f116584bd22dd383e801ddd270e41ffd156f45&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3969&#x2F;16&#x2F;419847238&#x2F;1812506059.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812042542.mp4%2A~hmac&#x3D;44c924014893c1021875eadf067acd99862365b8974f082486cb59095b92aac7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764635&#x2F;1812042542.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951046~acl&#x3D;%2A%2F1812042542.mp4%2A~hmac&#x3D;44c924014893c1021875eadf067acd99862365b8974f082486cb59095b92aac7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764635&#x2F;1812042542.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589951059~acl&#x3D;%2A%2F1812042491.mp4%2A~hmac&#x3D;e8a80ac2b7584b00e369131cbf7a4766ffdfdca8e39b85133d30e368c2aff7a3&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764611&#x2F;1812042491.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589951059~acl&#x3D;%2A%2F1812042491.mp4%2A~hmac&#x3D;e8a80ac2b7584b00e369131cbf7a4766ffdfdca8e39b85133d30e368c2aff7a3&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3952&#x2F;16&#x2F;419764611&#x2F;1812042491.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1590001959~acl&#x3D;%2A%2F1655765582.mp4%2A~hmac&#x3D;cbd5286db3d2d6c4d3193fb30a5db5cd95ec4dcd145a8819fd38e5d6b965e226&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3202&#x2F;15&#x2F;391012327&#x2F;1655765582.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1590001959~acl&#x3D;%2A%2F1655765582.mp4%2A~hmac&#x3D;cbd5286db3d2d6c4d3193fb30a5db5cd95ec4dcd145a8819fd38e5d6b965e226&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3202&#x2F;15&#x2F;391012327&#x2F;1655765582.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589950890~acl&#x3D;%2A%2F1047855590.mp4%2A~hmac&#x3D;03a4a523db836a1a2a1d3fb2c24a06a3b5d5087dd23c859e1e35dfe3592b3f95&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3038&#x2F;8&#x2F;215190934&#x2F;1047855590.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589950890~acl&#x3D;%2A%2F1047855590.mp4%2A~hmac&#x3D;03a4a523db836a1a2a1d3fb2c24a06a3b5d5087dd23c859e1e35dfe3592b3f95&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3038&#x2F;8&#x2F;215190934&#x2F;1047855590.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505840.mp4%2A~hmac&#x3D;b1c1149937a90445f0f7339c1fbf9e8750234fe859242fd842c644971f80b4c6&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777564&#x2F;1455505840.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505840.mp4%2A~hmac&#x3D;b1c1149937a90445f0f7339c1fbf9e8750234fe859242fd842c644971f80b4c6&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777564&#x2F;1455505840.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505669.mp4%2A~hmac&#x3D;89d96eb508022a4d36d51e2bcc3fdf1036f61dd74aee15af2eb88ec6f27b61f7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777543&#x2F;1455505669.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589963200~acl&#x3D;%2A%2F1455505669.mp4%2A~hmac&#x3D;89d96eb508022a4d36d51e2bcc3fdf1036f61dd74aee15af2eb88ec6f27b61f7&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;1355&#x2F;14&#x2F;356777543&#x2F;1455505669.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589921028~acl&#x3D;%2A%2F1462848914.mp4%2A~hmac&#x3D;f5a730d75e6d4dd0d5840d9cbd04d54d74c7f68800e4ac05a2c111449e11b613&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;2082&#x2F;7&#x2F;185412921&#x2F;1462848914.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589921028~acl&#x3D;%2A%2F1462848914.mp4%2A~hmac&#x3D;f5a730d75e6d4dd0d5840d9cbd04d54d74c7f68800e4ac05a2c111449e11b613&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;2082&#x2F;7&#x2F;185412921&#x2F;1462848914.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;scripts&#x2F;latest&#x2F;embed.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;scripts&#x2F;latest&#x2F;embed.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589948208~acl&#x3D;%2A%2F1663205384.mp4%2A~hmac&#x3D;6f8d9a3a2a8a43833024444ddcfff469cf39c43fb7a7e0b66e907e0aca11184d&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3495&#x2F;15&#x2F;392479337&#x2F;1663205384.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589948208~acl&#x3D;%2A%2F1663205384.mp4%2A~hmac&#x3D;6f8d9a3a2a8a43833024444ddcfff469cf39c43fb7a7e0b66e907e0aca11184d&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;3495&#x2F;15&#x2F;392479337&#x2F;1663205384.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;vendor&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;vendor&#x2F;jquery.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery.lazyload.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery.lazyload.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;swiper.min.3.4.1.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;swiper.min.3.4.1.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;foundation.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;foundation.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;main.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery-ui-1.10.4.custom.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery-ui-1.10.4.custom.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;jquery.icheck.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;jquery.icheck.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;&#x2F;js&#x2F;chosen.jquery.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;&#x2F;js&#x2F;chosen.jquery.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;oil&#x2F;oil.1.3.2-RELEASE.min.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;oil&#x2F;oil.1.3.2-RELEASE.min.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;sm-bar&#x2F;core-e55fc098.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;sm-bar&#x2F;core-e55fc098.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;domains&#x2F;tm-domains.entry.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;domains&#x2F;tm-domains.entry.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;js&#x2F;globals&#x2F;tm-data-scouts_4.entry.js" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;js&#x2F;globals&#x2F;tm-data-scouts_4.entry.js</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1590003142~acl&#x3D;%2A%2F1733369848.mp4%2A~hmac&#x3D;75134ca765f3eac2ffba2c2a6a043d5ffaf3585310db0ce1f5ee4076eb87fc90&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;966&#x2F;12&#x2F;304833406&#x2F;1733369848.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1590003142~acl&#x3D;%2A%2F1733369848.mp4%2A~hmac&#x3D;75134ca765f3eac2ffba2c2a6a043d5ffaf3585310db0ce1f5ee4076eb87fc90&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;966&#x2F;12&#x2F;304833406&#x2F;1733369848.mp4</a></li>
+        <li class='truncate'><a href="http://akamaized.net&#x2F;exp&#x3D;1589938371~acl&#x3D;%2A%2F1724688411.mp4%2A~hmac&#x3D;380265d7c75b5b9e0c7d7a5b2c65f47f05b443c884efddaed8216599b8ff1011&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;664&#x2F;16&#x2F;403322760&#x2F;1724688411.mp4" target="_blank" class="external" rel="noreferrer noopener">akamaized.net&#x2F;exp&#x3D;1589938371~acl&#x3D;%2A%2F1724688411.mp4%2A~hmac&#x3D;380265d7c75b5b9e0c7d7a5b2c65f47f05b443c884efddaed8216599b8ff1011&#x2F;vimeo-prod-skyfire-std-us&#x2F;01&#x2F;664&#x2F;16&#x2F;403322760&#x2F;1724688411.mp4</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

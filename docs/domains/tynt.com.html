@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/tynt.com.ico' width="32" height="32"/> tynt.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/tynt.com.ico' width="32" height="32" class='inline-block' /> tynt.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/33Across, Inc..html">33Across, Inc.</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;33across.com&#x2F;privacy-policy&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;33across.com&#x2F;privacy-policy&#x2F;</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Rank: &#35;75<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 5.65&#37; (3963 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 5.54&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 1<small>/3</small></li>
@@ -67,119 +81,127 @@
                         <li>cache: 3<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, <a href="../categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a>, <a href="../categories/Social - Share.html">Social - Share</a>, <a href="../categories/Action Pixels.html">Action Pixels</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                     <span>Image</span>,
                     <span>Document</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/tynt.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/tynt.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>cdn</span>, 
+                    <span>ic</span>, 
+                    <span>de</span>, 
+                    <span>tcr</span>, 
+                    <span>sc</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>cdn</span>, 
-        <span>ic</span>, 
-        <span>de</span>, 
-        <span>tcr</span>, 
-        <span>sc</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://tynt.com&#x2F;afwu.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;afwu.js</a></li>
-            <li><a href="http://tynt.com&#x2F;b&#x2F;p" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;b&#x2F;p</a></li>
-            <li><a href="http://tynt.com&#x2F;deb&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;v2</a></li>
-            <li><a href="http://tynt.com&#x2F;tc.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;tc.js</a></li>
-            <li><a href="http://tynt.com&#x2F;r&#x2F;d" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;r&#x2F;d</a></li>
-            <li><a href="http://tynt.com&#x2F;deb&#x2F;" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;</a></li>
-            <li><a href="http://tynt.com&#x2F;ti.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;ti.js</a></li>
-            <li><a href="http://tynt.com&#x2F;afsh.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;afsh.js</a></li>
-            <li><a href="http://tynt.com&#x2F;deb&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;v2</a></li>
-            <li><a href="http://tynt.com&#x2F;javascripts&#x2F;Tracer.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;javascripts&#x2F;Tracer.js</a></li>
-            <li><a href="http://tynt.com&#x2F;rciv.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;rciv.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a9JORiXIKr5BlZrkHcnnVW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a9JORiXIKr5BlZrkHcnnVW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;siab.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;siab.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;c_FqKqlgCr54CXaKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;c_FqKqlgCr54CXaKlJV7w9.js</a></li>
-            <li><a href="http://tynt.com&#x2F;images&#x2F;ss&#x2F;pi.png" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;images&#x2F;ss&#x2F;pi.png</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bAQjoGlLKr6QzcaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bAQjoGlLKr6QzcaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dRcoF2n9Wr6QLiaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dRcoF2n9Wr6QLiaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dgxeCKSg0r45NLacwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dgxeCKSg0r45NLacwqm_6l.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;c4vQ4QyUWr6OoOaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;c4vQ4QyUWr6OoOaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bSAw-mF-0r4Q-4acwqm_6r.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bSAw-mF-0r4Q-4acwqm_6r.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;ckbqREs5qr54oMaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;ckbqREs5qr54oMaKlgYj8u.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cxvKVKb_ir5R4prkHcnlxd.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cxvKVKb_ir5R4prkHcnlxd.js</a></li>
-            <li><a href="http://tynt.com&#x2F;ids.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;ids.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dlHg2-l1ir54CXaKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dlHg2-l1ir54CXaKlJV7w9.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cuvo_epM0r55W7aKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cuvo_epM0r55W7aKlJV7w9.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dm0l1EWeqr4kUbadbi-bpO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dm0l1EWeqr4kUbadbi-bpO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a9h6Q0-kir6iohaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a9h6Q0-kir6iohaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dF1byYV0Kr3713adbi-bnq.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dF1byYV0Kr3713adbi-bnq.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aIXlJ0wPOr6ijYaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aIXlJ0wPOr6ijYaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;d5es4AAsOr6OohaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;d5es4AAsOr6OohaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cnQT_cLPur3Q0hab7jrHtB.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cnQT_cLPur3Q0hab7jrHtB.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aJyXL0Pqir6jj9aKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aJyXL0Pqir6jj9aKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;b7ZEtiCYqr6kX6aKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;b7ZEtiCYqr6kX6aKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bgideSUQ8r6ykVaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bgideSUQ8r6ykVaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cXNFFcDCyr6Qr5aKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cXNFFcDCyr6Qr5aKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dHw--cF2Kr6kbGaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dHw--cF2Kr6kbGaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;acMN4u0Uer6j9iaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;acMN4u0Uer6j9iaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dLETrk1mar6z1TaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dLETrk1mar6z1TaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;btGJPK90qr5i56acwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;btGJPK90qr5i56acwqm_6l.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a1PWGgwGGr3Rsyacn9QLxW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a1PWGgwGGr3Rsyacn9QLxW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dzCGy-ePur6BDLaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dzCGy-ePur6BDLaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;b4_rWk5Eir6BjpaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;b4_rWk5Eir6BjpaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dVbf8A4qir6yoEaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dVbf8A4qir6yoEaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dQkLDQo-er55nhaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dQkLDQo-er55nhaKlgYj8u.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;djGLDAThWr6lapaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;djGLDAThWr6lapaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bLgtZkDsGr6OoFaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bLgtZkDsGr6OoFaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bEhMTsDsGr6OoFaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bEhMTsDsGr6OoFaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aoVZHmjkGr6ykQaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aoVZHmjkGr6ykQaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dBZ8Qsv00r564eaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dBZ8Qsv00r564eaKlgYj8u.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cxnj74gkKr6jmzaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cxnj74gkKr6jmzaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aQk1DABQ0r6Pe7aKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aQk1DABQ0r6Pe7aKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cahw2W1TGr6ikyaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cahw2W1TGr6ikyaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;d2qtIwu5mr6ikiaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;d2qtIwu5mr6ikiaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;ckFq-CyRmr6yk6aKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;ckFq-CyRmr6yk6aKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aZt8mA07ar54CRaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aZt8mA07ar54CRaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dxXAH61mar6zvsaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dxXAH61mar6zvsaKkv7mNO.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bE4fbin74r6OoZaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bE4fbin74r6OoZaKlId8sQ.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;auu8YC9qmr6ziJaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;auu8YC9qmr6ziJaKkGJozW.js</a></li>
-            <li><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dVLBE4oGir5Bn8acwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dVLBE4oGir5Bn8acwqm_6l.js</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://tynt.com&#x2F;afwu.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;afwu.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;b&#x2F;p" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;b&#x2F;p</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;deb&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;v2</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;tc.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;tc.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;r&#x2F;d" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;r&#x2F;d</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;deb&#x2F;" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;ti.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;ti.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;afsh.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;afsh.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;deb&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;deb&#x2F;v2</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;javascripts&#x2F;Tracer.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;javascripts&#x2F;Tracer.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;rciv.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;rciv.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a9JORiXIKr5BlZrkHcnnVW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a9JORiXIKr5BlZrkHcnnVW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;siab.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;siab.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;c_FqKqlgCr54CXaKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;c_FqKqlgCr54CXaKlJV7w9.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;images&#x2F;ss&#x2F;pi.png" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;images&#x2F;ss&#x2F;pi.png</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bAQjoGlLKr6QzcaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bAQjoGlLKr6QzcaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dRcoF2n9Wr6QLiaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dRcoF2n9Wr6QLiaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dgxeCKSg0r45NLacwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dgxeCKSg0r45NLacwqm_6l.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;c4vQ4QyUWr6OoOaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;c4vQ4QyUWr6OoOaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bSAw-mF-0r4Q-4acwqm_6r.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bSAw-mF-0r4Q-4acwqm_6r.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;ckbqREs5qr54oMaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;ckbqREs5qr54oMaKlgYj8u.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cxvKVKb_ir5R4prkHcnlxd.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cxvKVKb_ir5R4prkHcnlxd.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;ids.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;ids.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dlHg2-l1ir54CXaKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dlHg2-l1ir54CXaKlJV7w9.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cuvo_epM0r55W7aKlJV7w9.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cuvo_epM0r55W7aKlJV7w9.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dm0l1EWeqr4kUbadbi-bpO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dm0l1EWeqr4kUbadbi-bpO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a9h6Q0-kir6iohaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a9h6Q0-kir6iohaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dF1byYV0Kr3713adbi-bnq.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dF1byYV0Kr3713adbi-bnq.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aIXlJ0wPOr6ijYaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aIXlJ0wPOr6ijYaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;d5es4AAsOr6OohaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;d5es4AAsOr6OohaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cnQT_cLPur3Q0hab7jrHtB.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cnQT_cLPur3Q0hab7jrHtB.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aJyXL0Pqir6jj9aKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aJyXL0Pqir6jj9aKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;b7ZEtiCYqr6kX6aKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;b7ZEtiCYqr6kX6aKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bgideSUQ8r6ykVaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bgideSUQ8r6ykVaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cXNFFcDCyr6Qr5aKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cXNFFcDCyr6Qr5aKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dHw--cF2Kr6kbGaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dHw--cF2Kr6kbGaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;acMN4u0Uer6j9iaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;acMN4u0Uer6j9iaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dLETrk1mar6z1TaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dLETrk1mar6z1TaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;btGJPK90qr5i56acwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;btGJPK90qr5i56acwqm_6l.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;a1PWGgwGGr3Rsyacn9QLxW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;a1PWGgwGGr3Rsyacn9QLxW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dzCGy-ePur6BDLaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dzCGy-ePur6BDLaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;b4_rWk5Eir6BjpaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;b4_rWk5Eir6BjpaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dVbf8A4qir6yoEaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dVbf8A4qir6yoEaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dQkLDQo-er55nhaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dQkLDQo-er55nhaKlgYj8u.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;djGLDAThWr6lapaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;djGLDAThWr6lapaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bLgtZkDsGr6OoFaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bLgtZkDsGr6OoFaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bEhMTsDsGr6OoFaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bEhMTsDsGr6OoFaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aoVZHmjkGr6ykQaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aoVZHmjkGr6ykQaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dBZ8Qsv00r564eaKlgYj8u.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dBZ8Qsv00r564eaKlgYj8u.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cxnj74gkKr6jmzaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cxnj74gkKr6jmzaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aQk1DABQ0r6Pe7aKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aQk1DABQ0r6Pe7aKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;cahw2W1TGr6ikyaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;cahw2W1TGr6ikyaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;d2qtIwu5mr6ikiaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;d2qtIwu5mr6ikiaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;ckFq-CyRmr6yk6aKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;ckFq-CyRmr6yk6aKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;aZt8mA07ar54CRaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;aZt8mA07ar54CRaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dxXAH61mar6zvsaKkv7mNO.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dxXAH61mar6zvsaKkv7mNO.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;bE4fbin74r6OoZaKlId8sQ.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;bE4fbin74r6OoZaKlId8sQ.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;auu8YC9qmr6ziJaKkGJozW.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;auu8YC9qmr6ziJaKkGJozW.js</a></li>
+        <li class='truncate'><a href="http://tynt.com&#x2F;script&#x2F;sc&#x2F;dVLBE4oGir5Bn8acwqm_6l.js" target="_blank" class="external" rel="noreferrer noopener">tynt.com&#x2F;script&#x2F;sc&#x2F;dVLBE4oGir5Bn8acwqm_6l.js</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

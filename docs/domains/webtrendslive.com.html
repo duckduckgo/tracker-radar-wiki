@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/webtrendslive.com.ico' width="32" height="32"/> webtrendslive.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/webtrendslive.com.ico' width="32" height="32" class='inline-block' /> webtrendslive.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/WebTrends Inc..html">WebTrends Inc.</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.webtrends.com&#x2F;terms-policies&#x2F;privacy&#x2F;privacy-statement&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.webtrends.com&#x2F;terms-policies&#x2F;privacy&#x2F;privacy-statement&#x2F;</a>
                 </li>
-                <li>
-                    Rank: &#35;1066<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;1068<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.07&#37; (50 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.04&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 0<small>/3</small></li>
@@ -67,72 +81,69 @@
                         <li>cache: 3<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Image</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/webtrendslive.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/webtrendslive.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>statse</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>statse</span>, 
-    </p>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222lnxrlqfy5um575itama_5n7b&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222lnxrlqfy5um575itama_5n7b&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcso6yh3cvz5bdzri42kur1k5_4s5p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcso6yh3cvz5bdzri42kur1k5_4s5p&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcspqhv09000000ctqpwnx704_7o8c&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcspqhv09000000ctqpwnx704_7o8c&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcskvvq5c1000047gwmksu7ev_4w9l&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcskvvq5c1000047gwmksu7ev_4w9l&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcswcfico00000s9aoilr1pxj_4w3r&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcswcfico00000s9aoilr1pxj_4w3r&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222dq7ohavti5f81hpqx37_9r7c&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222dq7ohavti5f81hpqx37_9r7c&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcswcczd110000stto7300ffs_9z2d&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcswcczd110000stto7300ffs_9z2d&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs2223gycld6odlf6dk7ovgk_7i1y&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2223gycld6odlf6dk7ovgk_7i1y&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs2226bh7o5uqtotv8bno3y4_7e3v&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2226bh7o5uqtotv8bno3y4_7e3v&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs2229fyq5yxf5j5aw1zdupi_2f9o&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2229fyq5yxf5j5aw1zdupi_2f9o&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcsdtikib10000wo4dzthkwld_6j5g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsdtikib10000wo4dzthkwld_6j5g&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcsdxe8ed10000gwnka4jtzqu_9p9f&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsdxe8ed10000gwnka4jtzqu_9p9f&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222s995baa3dif3txj4i1d_8y2f&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222s995baa3dif3txj4i1d_8y2f&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcsst1h8y9bv0hs5klnk6c59i_7i9h&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsst1h8y9bv0hs5klnk6c59i_7i9h&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcsh31lgs10000wge3sqdib3n_9l9y&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsh31lgs10000wge3sqdib3n_9l9y&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222blqun9mipp154p94rp1_9j5u&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222blqun9mipp154p94rp1_9j5u&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222kp677ejs7at35ktqalg_1r2p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222kp677ejs7at35ktqalg_1r2p&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcskn76ek00000w84iufi6inj_8l5g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcskn76ek00000w84iufi6inj_8l5g&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs4b71fc10000gs8u88h5t1k_6n2i&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs4b71fc10000gs8u88h5t1k_6n2i&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222y4500r0hr7msp0g5bz8_4j6n&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222y4500r0hr7msp0g5bz8_4j6n&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs222dj3ow9ji0ne9ojbcbng_3b8p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222dj3ow9ji0ne9ojbcbng_3b8p&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs1r5h96000008yfl0bbgi0a_9v2g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs1r5h96000008yfl0bbgi0a_9v2g&#x2F;dcs.gif</a></li>
-            <li><a href="http://webtrendslive.com&#x2F;dcs20ghb1100004r7j2wp8oe0_1t4t&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs20ghb1100004r7j2wp8oe0_1t4t&#x2F;dcs.gif</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
 
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222lnxrlqfy5um575itama_5n7b&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222lnxrlqfy5um575itama_5n7b&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcso6yh3cvz5bdzri42kur1k5_4s5p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcso6yh3cvz5bdzri42kur1k5_4s5p&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcspqhv09000000ctqpwnx704_7o8c&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcspqhv09000000ctqpwnx704_7o8c&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcskvvq5c1000047gwmksu7ev_4w9l&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcskvvq5c1000047gwmksu7ev_4w9l&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcswcfico00000s9aoilr1pxj_4w3r&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcswcfico00000s9aoilr1pxj_4w3r&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222dq7ohavti5f81hpqx37_9r7c&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222dq7ohavti5f81hpqx37_9r7c&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcswcczd110000stto7300ffs_9z2d&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcswcczd110000stto7300ffs_9z2d&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs2223gycld6odlf6dk7ovgk_7i1y&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2223gycld6odlf6dk7ovgk_7i1y&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs2226bh7o5uqtotv8bno3y4_7e3v&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2226bh7o5uqtotv8bno3y4_7e3v&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs2229fyq5yxf5j5aw1zdupi_2f9o&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs2229fyq5yxf5j5aw1zdupi_2f9o&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcsdtikib10000wo4dzthkwld_6j5g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsdtikib10000wo4dzthkwld_6j5g&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcsdxe8ed10000gwnka4jtzqu_9p9f&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsdxe8ed10000gwnka4jtzqu_9p9f&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222s995baa3dif3txj4i1d_8y2f&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222s995baa3dif3txj4i1d_8y2f&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcsst1h8y9bv0hs5klnk6c59i_7i9h&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsst1h8y9bv0hs5klnk6c59i_7i9h&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcsh31lgs10000wge3sqdib3n_9l9y&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcsh31lgs10000wge3sqdib3n_9l9y&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222blqun9mipp154p94rp1_9j5u&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222blqun9mipp154p94rp1_9j5u&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222kp677ejs7at35ktqalg_1r2p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222kp677ejs7at35ktqalg_1r2p&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcskn76ek00000w84iufi6inj_8l5g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcskn76ek00000w84iufi6inj_8l5g&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs4b71fc10000gs8u88h5t1k_6n2i&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs4b71fc10000gs8u88h5t1k_6n2i&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222y4500r0hr7msp0g5bz8_4j6n&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222y4500r0hr7msp0g5bz8_4j6n&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs222dj3ow9ji0ne9ojbcbng_3b8p&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs222dj3ow9ji0ne9ojbcbng_3b8p&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs1r5h96000008yfl0bbgi0a_9v2g&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs1r5h96000008yfl0bbgi0a_9v2g&#x2F;dcs.gif</a></li>
+        <li class='truncate'><a href="http://webtrendslive.com&#x2F;dcs20ghb1100004r7j2wp8oe0_1t4t&#x2F;dcs.gif" target="_blank" class="external" rel="noreferrer noopener">webtrendslive.com&#x2F;dcs20ghb1100004r7j2wp8oe0_1t4t&#x2F;dcs.gif</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

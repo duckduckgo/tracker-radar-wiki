@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/veinteractive.com.ico' width="32" height="32"/> veinteractive.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/veinteractive.com.ico' width="32" height="32" class='inline-block' /> veinteractive.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/Ve Global UK Limited.html">Ve Global UK Limited</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <i>Unknown</i>
                 </li>
-                <li>
-                    Rank: &#35;809<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;810<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.11&#37; (77 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.07&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 0<small>/3</small></li>
@@ -67,78 +81,86 @@
                         <li>cache: 0<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                     <span>XHR</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/veinteractive.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/veinteractive.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>configusa</span>, 
+                    <span>config1</span>, 
+                    <span>configaus2</span>, 
+                    <span>sessionapiusa</span>, 
+                    <span>sessionapi</span>, 
+                    <span>sessionapihk</span>, 
+                    <span>cookiee1</span>, 
+                    <span>cookiea1</span>, 
+                    <span>cookieu2</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>configusa</span>, 
-        <span>config1</span>, 
-        <span>configaus2</span>, 
-        <span>sessionapiusa</span>, 
-        <span>sessionapi</span>, 
-        <span>sessionapihk</span>, 
-        <span>cookiee1</span>, 
-        <span>cookiea1</span>, 
-        <span>cookieu2</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://veinteractive.com&#x2F;scripts&#x2F;5.0&#x2F;capture-apps-5.0.0.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;5.0&#x2F;capture-apps-5.0.0.js</a></li>
-            <li><a href="http://veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;ifs-5.0.0.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;ifs-5.0.0.js</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;appsmanagerinit" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;appsmanagerinit</a></li>
-            <li><a href="http://veinteractive.com&#x2F;tags&#x2F;d1248310&#x2F;b2ad&#x2F;4dc0&#x2F;9184&#x2F;6a4e6cdfad63&#x2F;tag.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;tags&#x2F;d1248310&#x2F;b2ad&#x2F;4dc0&#x2F;9184&#x2F;6a4e6cdfad63&#x2F;tag.js</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;d1248310-b2ad-4dc0-9184-6a4e6cdfad63" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;d1248310-b2ad-4dc0-9184-6a4e6cdfad63</a></li>
-            <li><a href="http://veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;vendor.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;vendor.js</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;A5956460-FF3A-4F61-B6FC-A5FD1A8336C8" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;A5956460-FF3A-4F61-B6FC-A5FD1A8336C8</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;54E095C6-D2D7-48D7-9D5F-2015728C95E7" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;54E095C6-D2D7-48D7-9D5F-2015728C95E7</a></li>
-            <li><a href="http://veinteractive.com&#x2F;tags&#x2F;6FD14648&#x2F;0026&#x2F;4FB1&#x2F;99D9&#x2F;F641254F35B5&#x2F;tag.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;tags&#x2F;6FD14648&#x2F;0026&#x2F;4FB1&#x2F;99D9&#x2F;F641254F35B5&#x2F;tag.js</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;6FD14648-0026-4FB1-99D9-F641254F35B5" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;6FD14648-0026-4FB1-99D9-F641254F35B5</a></li>
-            <li><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;38282392-EC09-4CE4-ACFD-414FE9D73FC6" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;38282392-EC09-4CE4-ACFD-414FE9D73FC6</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;scripts&#x2F;5.0&#x2F;capture-apps-5.0.0.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;5.0&#x2F;capture-apps-5.0.0.js</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;ifs-5.0.0.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;ifs-5.0.0.js</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;appsmanagerinit" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;appsmanagerinit</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;tags&#x2F;d1248310&#x2F;b2ad&#x2F;4dc0&#x2F;9184&#x2F;6a4e6cdfad63&#x2F;tag.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;tags&#x2F;d1248310&#x2F;b2ad&#x2F;4dc0&#x2F;9184&#x2F;6a4e6cdfad63&#x2F;tag.js</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;d1248310-b2ad-4dc0-9184-6a4e6cdfad63" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;d1248310-b2ad-4dc0-9184-6a4e6cdfad63</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;vendor.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;scripts&#x2F;shared&#x2F;vendor.js</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;A5956460-FF3A-4F61-B6FC-A5FD1A8336C8" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;A5956460-FF3A-4F61-B6FC-A5FD1A8336C8</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;54E095C6-D2D7-48D7-9D5F-2015728C95E7" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;54E095C6-D2D7-48D7-9D5F-2015728C95E7</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;tags&#x2F;6FD14648&#x2F;0026&#x2F;4FB1&#x2F;99D9&#x2F;F641254F35B5&#x2F;tag.js" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;tags&#x2F;6FD14648&#x2F;0026&#x2F;4FB1&#x2F;99D9&#x2F;F641254F35B5&#x2F;tag.js</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;6FD14648-0026-4FB1-99D9-F641254F35B5" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;6FD14648-0026-4FB1-99D9-F641254F35B5</a></li>
+        <li class='truncate'><a href="http://veinteractive.com&#x2F;api&#x2F;Set&#x2F;38282392-EC09-4CE4-ACFD-414FE9D73FC6" target="_blank" class="external" rel="noreferrer noopener">veinteractive.com&#x2F;api&#x2F;Set&#x2F;38282392-EC09-4CE4-ACFD-414FE9D73FC6</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

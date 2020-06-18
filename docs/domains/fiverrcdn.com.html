@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/fiverrcdn.com.ico' width="32" height="32"/> fiverrcdn.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/fiverrcdn.com.ico' width="32" height="32" class='inline-block' /> fiverrcdn.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <i>Unknown</i>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <i>Unknown</i>
                 </li>
-                <li>
-                    Rank: &#35;5638<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;5468<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.00&#37; (2 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.00&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 0<small>/3</small></li>
@@ -67,118 +81,126 @@
                         <li>cache: 1<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Font</span>,
                     <span>Stylesheet</span>,
                     <span>Script</span>,
                     <span>Image</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/fiverrcdn.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/fiverrcdn.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>assetsv2</span>, 
+                    <span>npm-assets</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>assetsv2</span>, 
-        <span>npm-assets</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.product</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-light-2040c50882cb27743f6c293468392e16.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-light-2040c50882cb27743f6c293468392e16.woff2</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-regular-b09cea43222751c4928756103496f0d3.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-regular-b09cea43222751c4928756103496f0d3.woff2</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-semibold-4bc9726b824a941488c8a360bae66ed3.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-semibold-4bc9726b824a941488c8a360bae66ed3.woff2</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-bold-13843069d4fbe2b5ee978919b786db7e.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-bold-13843069d4fbe2b5ee978919b786db7e.woff2</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-shared-de994bb8b74bd121d49fe37da2f0dd44.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-shared-de994bb8b74bd121d49fe37da2f0dd44.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-desktop-0ae8ccdf8c1a562682a121a4ed69f4a4.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-desktop-0ae8ccdf8c1a562682a121a4ed69f4a4.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-desktop-deferred-06dca75a386c2d081d6a0ec041d6ba71.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-desktop-deferred-06dca75a386c2d081d6a0ec041d6ba71.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fit&#x2F;dist&#x2F;index-e467b3c5e91086fe58a3154a4d929f68.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fit&#x2F;dist&#x2F;index-e467b3c5e91086fe58a3154a4d929f68.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-84720332c3d85bc148423dce158cfc81.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-84720332c3d85bc148423dce158cfc81.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-perseus-241a01d69ae845e4d1a65b43a3cc05df.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-perseus-241a01d69ae845e4d1a65b43a3cc05df.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-homepage-header-53278427833ef850a4c15a638aa783c1.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-homepage-header-53278427833ef850a4c15a638aa783c1.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.1b548be8a601fa94ff32.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.1b548be8a601fa94ff32.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.97b02017b09c486b7e54.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.97b02017b09c486b7e54.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;jquery-2.1.4.min-6f453d060a856c3c7b674548202de74a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;jquery-2.1.4.min-6f453d060a856c3c7b674548202de74a.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-v2&#x2F;1.3.1&#x2F;bundle.min.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-v2&#x2F;1.3.1&#x2F;bundle.min.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-react16&#x2F;1.1.4&#x2F;bundle.min.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-react16&#x2F;1.1.4&#x2F;bundle.min.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;translations.en-2d18c81496cd7cbd9fbb8ee59d9dbe3a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;translations.en-2d18c81496cd7cbd9fbb8ee59d9dbe3a.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-dependencies-9a157c0a212ad4014f403cdb31c82166.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-dependencies-9a157c0a212ad4014f403cdb31c82166.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;user_session_package&#x2F;copies-en-US.c1bf0f97cef8fe921a04dfb4d2891591.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;user_session_package&#x2F;copies-en-US.c1bf0f97cef8fe921a04dfb4d2891591.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;login-forms-c8516a99ca542f077664250f791e274f.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;login-forms-c8516a99ca542f077664250f791e274f.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;bombaMessage-1617a348dd2657214bcd4fa9a94b7220.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;bombaMessage-1617a348dd2657214bcd4fa9a94b7220.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-d332a72f77670e36a2a8c964d6d1278a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-d332a72f77670e36a2a8c964d6d1278a.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;lohp.perseus-cf47afec5df49b9e2855530b56cf70b4.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;lohp.perseus-cf47afec5df49b9e2855530b56cf70b4.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.a426c4d02b6ddfe8cc50.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.a426c4d02b6ddfe8cc50.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;locale_settings_package&#x2F;copies-en-US.2724f515ccd7b0abde4aa914e63b5a44.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;locale_settings_package&#x2F;copies-en-US.2724f515ccd7b0abde4aa914e63b5a44.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;countries-en-US.c2eade2cafe17b71e33c9d58cb89f0bf.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;countries-en-US.c2eade2cafe17b71e33c9d58cb89f0bf.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;general-en-US.ddef9dab00cc3b6c7e5dbde45f489f61.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;general-en-US.ddef9dab00cc3b6c7e5dbde45f489f61.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.ba49c94c10652c490540.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.ba49c94c10652c490540.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.d3344110738705ce6336.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.d3344110738705ce6336.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;cms_ui_package&#x2F;copies-en-US.57703c8b07f27f6c1b6d3d73777c8050.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;cms_ui_package&#x2F;copies-en-US.57703c8b07f27f6c1b6d3d73777c8050.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;categories-en-US.593319dd51896559b371ce3ef9b6ec85.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;categories-en-US.593319dd51896559b371ce3ef9b6ec85.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;sub_categories-en-US.2e6f6110c88a34dec398c427d53cac1b.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;sub_categories-en-US.2e6f6110c88a34dec398c427d53cac1b.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.3596a3025ed5fed898d6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.3596a3025ed5fed898d6.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;languages-en-US.d8d76bba9dedb8a7482bc3a77266aaa5.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;languages-en-US.d8d76bba9dedb8a7482bc3a77266aaa5.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;footer_package&#x2F;copies-en-US.28c57c8ef29cf4fc81d8728815889371.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;footer_package&#x2F;copies-en-US.28c57c8ef29cf4fc81d8728815889371.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_collect_package&#x2F;copies-en-US.0652e151b1efe97b04d629a755f545ec.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_collect_package&#x2F;copies-en-US.0652e151b1efe97b04d629a755f545ec.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_listings_package&#x2F;copies-en-US.4bdc1c0271a9109652abc0562212f2f7.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_listings_package&#x2F;copies-en-US.4bdc1c0271a9109652abc0562212f2f7.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;header_package&#x2F;copies-en-US.3a25a293c34d342c394a1f5318573aa6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;header_package&#x2F;copies-en-US.3a25a293c34d342c394a1f5318573aa6.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;machine_translation_package&#x2F;copies-en-US.e499b645322358e6d96ce8af16c1aa07.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;machine_translation_package&#x2F;copies-en-US.e499b645322358e6d96ce8af16c1aa07.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;search_bar_package&#x2F;copies-en-US.dc767ed3517c85f5d222b7266011a9d6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;search_bar_package&#x2F;copies-en-US.dc767ed3517c85f5d222b7266011a9d6.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;axios-interceptor-e80fe2e37c79f33a1b62cc68d57c22d0.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;axios-interceptor-e80fe2e37c79f33a1b62cc68d57c22d0.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fontawesome-webfont-b5fc3bebff73bd2a917ebeeeb690750a.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fontawesome-webfont-b5fc3bebff73bd2a917ebeeeb690750a.woff2</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr&#x2F;logged_out_homepage_perseus&#x2F;apps&#x2F;Signup.modern.b7ff2880c65a5c22fb50.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr&#x2F;logged_out_homepage_perseus&#x2F;apps&#x2F;Signup.modern.b7ff2880c65a5c22fb50.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;sidebar_package&#x2F;copies-en-US.f5eedf901d98fdf2ca9adee4db17ce39.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;sidebar_package&#x2F;copies-en-US.f5eedf901d98fdf2ca9adee4db17ce39.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;profile_image_package&#x2F;copies-en-US.92574a023e2e69704a57a2f97237f6b7.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;profile_image_package&#x2F;copies-en-US.92574a023e2e69704a57a2f97237f6b7.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-99165bdab0ed94af4c6fded723b9e9c2.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-99165bdab0ed94af4c6fded723b9e9c2.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-12181dec0ac3eced9f9f3a5ac7a57353.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-12181dec0ac3eced9f9f3a5ac7a57353.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-2e4e9cb1fe7a62fbaa4c41e0b24c22f8.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-2e4e9cb1fe7a62fbaa4c41e0b24c22f8.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-33d5badcbc24f2c48eb5d2389aad45c6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-33d5badcbc24f2c48eb5d2389aad45c6.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;forter-5007a8dfd822d64fa300130bfefc7e42.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;forter-5007a8dfd822d64fa300130bfefc7e42.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.ee240aeb92464578cd59.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.ee240aeb92464578cd59.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.d597a343727ee8237b48.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.d597a343727ee8237b48.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.ef00ab1af892619f3f16.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.ef00ab1af892619f3f16.css</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.48c83797eb2395388103.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.48c83797eb2395388103.js</a></li>
-            <li><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;social-icons-dark.82eb045.svg" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;social-icons-dark.82eb045.svg</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-light-2040c50882cb27743f6c293468392e16.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-light-2040c50882cb27743f6c293468392e16.woff2</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-regular-b09cea43222751c4928756103496f0d3.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-regular-b09cea43222751c4928756103496f0d3.woff2</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-semibold-4bc9726b824a941488c8a360bae66ed3.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-semibold-4bc9726b824a941488c8a360bae66ed3.woff2</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-bold-13843069d4fbe2b5ee978919b786db7e.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fonts&#x2F;proxima_nova&#x2F;proxima-nova-bold-13843069d4fbe2b5ee978919b786db7e.woff2</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-shared-de994bb8b74bd121d49fe37da2f0dd44.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-shared-de994bb8b74bd121d49fe37da2f0dd44.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-desktop-0ae8ccdf8c1a562682a121a4ed69f4a4.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-desktop-0ae8ccdf8c1a562682a121a4ed69f4a4.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-desktop-deferred-06dca75a386c2d081d6a0ec041d6ba71.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-desktop-deferred-06dca75a386c2d081d6a0ec041d6ba71.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fit&#x2F;dist&#x2F;index-e467b3c5e91086fe58a3154a4d929f68.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fit&#x2F;dist&#x2F;index-e467b3c5e91086fe58a3154a4d929f68.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-84720332c3d85bc148423dce158cfc81.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-84720332c3d85bc148423dce158cfc81.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-perseus-241a01d69ae845e4d1a65b43a3cc05df.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-perseus-241a01d69ae845e4d1a65b43a3cc05df.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-homepage-header-53278427833ef850a4c15a638aa783c1.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;shared&#x2F;homepage&#x2F;logged-out-homepage-header-53278427833ef850a4c15a638aa783c1.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.1b548be8a601fa94ff32.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.1b548be8a601fa94ff32.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.97b02017b09c486b7e54.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.97b02017b09c486b7e54.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;jquery-2.1.4.min-6f453d060a856c3c7b674548202de74a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;jquery-2.1.4.min-6f453d060a856c3c7b674548202de74a.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-v2&#x2F;1.3.1&#x2F;bundle.min.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-v2&#x2F;1.3.1&#x2F;bundle.min.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-react16&#x2F;1.1.4&#x2F;bundle.min.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;%40fiverr-private&#x2F;vendors-react16&#x2F;1.1.4&#x2F;bundle.min.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;translations.en-2d18c81496cd7cbd9fbb8ee59d9dbe3a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;translations.en-2d18c81496cd7cbd9fbb8ee59d9dbe3a.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;application-dependencies-9a157c0a212ad4014f403cdb31c82166.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;application-dependencies-9a157c0a212ad4014f403cdb31c82166.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;user_session_package&#x2F;copies-en-US.c1bf0f97cef8fe921a04dfb4d2891591.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;user_session_package&#x2F;copies-en-US.c1bf0f97cef8fe921a04dfb4d2891591.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;login-forms-c8516a99ca542f077664250f791e274f.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;login-forms-c8516a99ca542f077664250f791e274f.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;bombaMessage-1617a348dd2657214bcd4fa9a94b7220.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;bombaMessage-1617a348dd2657214bcd4fa9a94b7220.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-d332a72f77670e36a2a8c964d6d1278a.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;user_session&#x2F;dist&#x2F;index-d332a72f77670e36a2a8c964d6d1278a.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;lohp.perseus-cf47afec5df49b9e2855530b56cf70b4.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;lohp.perseus-cf47afec5df49b9e2855530b56cf70b4.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.a426c4d02b6ddfe8cc50.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.a426c4d02b6ddfe8cc50.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;locale_settings_package&#x2F;copies-en-US.2724f515ccd7b0abde4aa914e63b5a44.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;locale_settings_package&#x2F;copies-en-US.2724f515ccd7b0abde4aa914e63b5a44.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;countries-en-US.c2eade2cafe17b71e33c9d58cb89f0bf.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;countries-en-US.c2eade2cafe17b71e33c9d58cb89f0bf.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;general-en-US.ddef9dab00cc3b6c7e5dbde45f489f61.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;general-en-US.ddef9dab00cc3b6c7e5dbde45f489f61.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.ba49c94c10652c490540.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;locale_settings&#x2F;index.ba49c94c10652c490540.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.d3344110738705ce6336.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;routes&#x2F;routes.d3344110738705ce6336.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;cms_ui_package&#x2F;copies-en-US.57703c8b07f27f6c1b6d3d73777c8050.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;cms_ui_package&#x2F;copies-en-US.57703c8b07f27f6c1b6d3d73777c8050.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;categories-en-US.593319dd51896559b371ce3ef9b6ec85.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;categories-en-US.593319dd51896559b371ce3ef9b6ec85.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;sub_categories-en-US.2e6f6110c88a34dec398c427d53cac1b.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;categories_chimera&#x2F;v1&#x2F;sub_categories-en-US.2e6f6110c88a34dec398c427d53cac1b.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.3596a3025ed5fed898d6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;categories_menu&#x2F;index.3596a3025ed5fed898d6.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;languages-en-US.d8d76bba9dedb8a7482bc3a77266aaa5.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;copies&#x2F;languages-en-US.d8d76bba9dedb8a7482bc3a77266aaa5.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;footer_package&#x2F;copies-en-US.28c57c8ef29cf4fc81d8728815889371.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;footer_package&#x2F;copies-en-US.28c57c8ef29cf4fc81d8728815889371.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_collect_package&#x2F;copies-en-US.0652e151b1efe97b04d629a755f545ec.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_collect_package&#x2F;copies-en-US.0652e151b1efe97b04d629a755f545ec.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_listings_package&#x2F;copies-en-US.4bdc1c0271a9109652abc0562212f2f7.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;gig_listings_package&#x2F;copies-en-US.4bdc1c0271a9109652abc0562212f2f7.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;header_package&#x2F;copies-en-US.3a25a293c34d342c394a1f5318573aa6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;header_package&#x2F;copies-en-US.3a25a293c34d342c394a1f5318573aa6.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;machine_translation_package&#x2F;copies-en-US.e499b645322358e6d96ce8af16c1aa07.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;machine_translation_package&#x2F;copies-en-US.e499b645322358e6d96ce8af16c1aa07.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;search_bar_package&#x2F;copies-en-US.dc767ed3517c85f5d222b7266011a9d6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;search_bar_package&#x2F;copies-en-US.dc767ed3517c85f5d222b7266011a9d6.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;axios-interceptor-e80fe2e37c79f33a1b62cc68d57c22d0.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;axios-interceptor-e80fe2e37c79f33a1b62cc68d57c22d0.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;fontawesome-webfont-b5fc3bebff73bd2a917ebeeeb690750a.woff2" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;fontawesome-webfont-b5fc3bebff73bd2a917ebeeeb690750a.woff2</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr&#x2F;logged_out_homepage_perseus&#x2F;apps&#x2F;Signup.modern.b7ff2880c65a5c22fb50.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr&#x2F;logged_out_homepage_perseus&#x2F;apps&#x2F;Signup.modern.b7ff2880c65a5c22fb50.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;sidebar_package&#x2F;copies-en-US.f5eedf901d98fdf2ca9adee4db17ce39.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;sidebar_package&#x2F;copies-en-US.f5eedf901d98fdf2ca9adee4db17ce39.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;profile_image_package&#x2F;copies-en-US.92574a023e2e69704a57a2f97237f6b7.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;translations-hub&#x2F;v1&#x2F;prod&#x2F;profile_image_package&#x2F;copies-en-US.92574a023e2e69704a57a2f97237f6b7.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-99165bdab0ed94af4c6fded723b9e9c2.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-99165bdab0ed94af4c6fded723b9e9c2.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-12181dec0ac3eced9f9f3a5ac7a57353.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-12181dec0ac3eced9f9f3a5ac7a57353.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-2e4e9cb1fe7a62fbaa4c41e0b24c22f8.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;cookieApproval-2e4e9cb1fe7a62fbaa4c41e0b24c22f8.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-33d5badcbc24f2c48eb5d2389aad45c6.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;dist&#x2F;entries&#x2F;localeGuestBombaMessage-33d5badcbc24f2c48eb5d2389aad45c6.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;forter-5007a8dfd822d64fa300130bfefc7e42.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;forter-5007a8dfd822d64fa300130bfefc7e42.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.ee240aeb92464578cd59.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.ee240aeb92464578cd59.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.d597a343727ee8237b48.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;index.d597a343727ee8237b48.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.ef00ab1af892619f3f16.css" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.ef00ab1af892619f3f16.css</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.48c83797eb2395388103.js" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;sidebar&#x2F;index.48c83797eb2395388103.js</a></li>
+        <li class='truncate'><a href="http://fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;social-icons-dark.82eb045.svg" target="_blank" class="external" rel="noreferrer noopener">fiverrcdn.com&#x2F;assets&#x2F;@fiverr-private&#x2F;footer&#x2F;social-icons-dark.82eb045.svg</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

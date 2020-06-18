@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Internet Brands Inc</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Internet Brands Inc</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Internet Brands
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.04%</li>
@@ -51,168 +63,176 @@
                         <li>total - 0.04%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Internet Brands Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Internet Brands Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/ibclick.stream.html">ibclick.stream (0.04%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/internetbrands.com.html">internetbrands.com (0.02%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/ibpxl.com.html">ibpxl.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/ibsrv.net.html">ibsrv.net (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/nolo.com.html">nolo.com (0.00%)</a>
-        </span>,
-        <span>
-            carsdirect.com
-        </span>,
-        <span>
-            criminaldefenselawyer.com
-        </span>,
-        <span>
-            disabilitysecrets.com
-        </span>,
-        <span>
-            divorcenet.com
-        </span>,
-        <span>
-            doityourself.com
-        </span>,
-        <span>
-            drivinglaws.org
-        </span>,
-        <span>
-            edoctors.com
-        </span>,
-        <span>
-            ehealthforum.com
-        </span>,
-        <span>
-            findgift.com
-        </span>,
-        <span>
-            finweb.com
-        </span>,
-        <span>
-            fitday.com
-        </span>,
-        <span>
-            fodors.com
-        </span>,
-        <span>
-            greencarreports.com
-        </span>,
-        <span>
-            hdforums.com
-        </span>,
-        <span>
-            healthboards.com
-        </span>,
-        <span>
-            hgmsites.net
-        </span>,
-        <span>
-            huntingnet.com
-        </span>,
-        <span>
-            ibautomotive.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             airlinepilotforums.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             allaboutcounseling.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             alllaw.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             autos.com
-        </span>,
-        <span>
-            justmommies.com
-        </span>,
-        <span>
-            lawyers.com
-        </span>,
-        <span>
-            loan.com
-        </span>,
-        <span>
-            martindale.com
-        </span>,
-        <span>
-            modelmayhem.com
-        </span>,
-        <span>
-            motorauthority.com
-        </span>,
-        <span>
-            ngagelive.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             cancerforums.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            carsdirect.com
+        </li>
+        <li class='truncate'>
+            criminaldefenselawyer.com
+        </li>
+        <li class='truncate'>
+            disabilitysecrets.com
+        </li>
+        <li class='truncate'>
+            divorcenet.com
+        </li>
+        <li class='truncate'>
+            doityourself.com
+        </li>
+        <li class='truncate'>
+            drivinglaws.org
+        </li>
+        <li class='truncate'>
+            edoctors.com
+        </li>
+        <li class='truncate'>
+            ehealthforum.com
+        </li>
+        <li class='truncate'>
+            findgift.com
+        </li>
+        <li class='truncate'>
+            finweb.com
+        </li>
+        <li class='truncate'>
+            fitday.com
+        </li>
+        <li class='truncate'>
+            fodors.com
+        </li>
+        <li class='truncate'>
+            greencarreports.com
+        </li>
+        <li class='truncate'>
+            hdforums.com
+        </li>
+        <li class='truncate'>
+            healthboards.com
+        </li>
+        <li class='truncate'>
+            hgmsites.net
+        </li>
+        <li class='truncate'>
+            huntingnet.com
+        </li>
+        <li class='truncate'>
+            ibautomotive.com
+        </li>
+        <li class='truncate'>
+            justmommies.com
+        </li>
+        <li class='truncate'>
+            lawyers.com
+        </li>
+        <li class='truncate'>
+            loan.com
+        </li>
+        <li class='truncate'>
+            martindale.com
+        </li>
+        <li class='truncate'>
+            modelmayhem.com
+        </li>
+        <li class='truncate'>
+            motorauthority.com
+        </li>
+        <li class='truncate'>
+            ngagelive.com
+        </li>
+        <li class='truncate'>
             oldride.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             pprune.org
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             quiltingboard.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             rctech.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             rcuniverse.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             soberrecovery.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             steves-digicams.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thecarconnection.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thegooddrugsguide.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thehulltruth.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             vbulletin.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             vetinfo.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wikitravel.org
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

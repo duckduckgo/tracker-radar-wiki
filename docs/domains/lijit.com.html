@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/lijit.com.ico' width="32" height="32"/> lijit.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/lijit.com.ico' width="32" height="32" class='inline-block' /> lijit.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/Sovrn Holdings.html">Sovrn Holdings</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.sovrn.com&#x2F;sovrn-legal-policies&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.sovrn.com&#x2F;sovrn-legal-policies&#x2F;</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Rank: &#35;50<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 7.68&#37; (5384 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 7.42&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 1<small>/3</small></li>
@@ -67,10 +81,10 @@
                         <li>cache: 3<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, <a href="../categories/Analytics.html">Analytics</a>, <a href="../categories/Audience Measurement.html">Audience Measurement</a>, <a href="../categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a>, <a href="../categories/Action Pixels.html">Action Pixels</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Image</span>,
                     <span>Document</span>,
@@ -78,124 +92,132 @@
                     <span>XHR</span>,
                     <span>Fetch</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/lijit.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/lijit.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>ce</span>, 
+                    <span>ap</span>, 
+                    <span>gslbeacon</span>, 
+                    <span>vap7ewr1</span>, 
+                    <span>vap1ewr1</span>, 
+                    <span>vap2dca1</span>, 
+                    <span>vap3dca1</span>, 
+                    <span>vap6ewr1</span>, 
+                    <span>s.update.ap</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>ce</span>, 
-        <span>ap</span>, 
-        <span>gslbeacon</span>, 
-        <span>vap7ewr1</span>, 
-        <span>vap1ewr1</span>, 
-        <span>vap2dca1</span>, 
-        <span>vap3dca1</span>, 
-        <span>vap6ewr1</span>, 
-        <span>s.update.ap</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.mediaDevices</li>
-            <li>Navigator.prototype.deviceMemory</li>
-            <li>Navigator.prototype.appCodeName</li>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>speechSynthesis.__proto__.getVoices</li>
-            <li>Navigator.prototype.permissions</li>
-            <li>Screen.prototype.availTop</li>
-            <li>Navigator.prototype.getBattery</li>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Screen.prototype.availLeft</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Screen.prototype.pixelDepth</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Element.prototype.getClientRects</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Performance.prototype.memory</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>console.memory</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>URL.createObjectURL</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Intl.DateTimeFormat.prototype.resolvedOptions</li>
-            <li>Screen.prototype.orientation</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://lijit.com&#x2F;merge" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;merge</a></li>
-            <li><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
-            <li><a href="http://lijit.com&#x2F;beacon&#x2F;amazon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon&#x2F;amazon</a></li>
-            <li><a href="http://lijit.com&#x2F;rtb&#x2F;bid" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid</a></li>
-            <li><a href="http://lijit.com&#x2F;dsp&#x2F;google&#x2F;pixelmatch" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;dsp&#x2F;google&#x2F;pixelmatch</a></li>
-            <li><a href="http://lijit.com&#x2F;rtb&#x2F;bid" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid</a></li>
-            <li><a href="http://lijit.com&#x2F;beacon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon</a></li>
-            <li><a href="http://lijit.com&#x2F;merge" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;merge</a></li>
-            <li><a href="http://lijit.com&#x2F;dsp&#x2F;google&#x2F;cookiematch" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;dsp&#x2F;google&#x2F;cookiematch</a></li>
-            <li><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
-            <li><a href="http://lijit.com&#x2F;readerinfo&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;readerinfo&#x2F;v2</a></li>
-            <li><a href="http://lijit.com&#x2F;readerinfo&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;readerinfo&#x2F;v2</a></li>
-            <li><a href="http://lijit.com&#x2F;www&#x2F;sovrn_beacon_standalone&#x2F;sovrn_standalone_beacon.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;sovrn_beacon_standalone&#x2F;sovrn_standalone_beacon.js</a></li>
-            <li><a href="http://lijit.com&#x2F;res&#x2F;sovrn.containertag.new.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;res&#x2F;sovrn.containertag.new.min.js</a></li>
-            <li><a href="http://lijit.com&#x2F;containertag" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;containertag</a></li>
-            <li><a href="http://lijit.com&#x2F;www&#x2F;headerauction&#x2F;aihHeader.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;headerauction&#x2F;aihHeader.min.js</a></li>
-            <li><a href="http://lijit.com&#x2F;www&#x2F;headerauction&#x2F;prebid.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;headerauction&#x2F;prebid.min.js</a></li>
-            <li><a href="http://lijit.com&#x2F;res&#x2F;sovrn.containertag.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;res&#x2F;sovrn.containertag.min.js</a></li>
-            <li><a href="http://lijit.com&#x2F;www&#x2F;delivery&#x2F;fpi.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;delivery&#x2F;fpi.js</a></li>
-            <li><a href="http://lijit.com&#x2F;sync" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;sync</a></li>
-            <li><a href="http://lijit.com&#x2F;addelivery" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;addelivery</a></li>
-            <li><a href="http://lijit.com&#x2F;beacon&#x2F;ebda" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon&#x2F;ebda</a></li>
-            <li><a href="http://lijit.com&#x2F;beacon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon</a></li>
-            <li><a href="http://lijit.com&#x2F;2&#x2F;686665&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;2&#x2F;686665&#x2F;analytics.js</a></li>
-            <li><a href="http://lijit.com&#x2F;2&#x2F;4.66.0&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;2&#x2F;4.66.0&#x2F;main.js</a></li>
-            <li><a href="http://lijit.com&#x2F;www&#x2F;delivery&#x2F;fp" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;delivery&#x2F;fp</a></li>
-            <li><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
-            <li><a href="http://lijit.com&#x2F;rtb&#x2F;bid&#x2F;" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid&#x2F;</a></li>
-            <li><a href="http://lijit.com&#x2F;&#x2F;&#x2F;www&#x2F;delivery&#x2F;fpi.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;&#x2F;&#x2F;www&#x2F;delivery&#x2F;fpi.js</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.mediaDevices</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.appCodeName</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Screen.prototype.availTop</li>
+        <li class='truncate'>Navigator.prototype.getBattery</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Screen.prototype.availLeft</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Screen.prototype.pixelDepth</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Performance.prototype.memory</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>console.memory</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>URL.createObjectURL</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Screen.prototype.orientation</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://lijit.com&#x2F;merge" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;merge</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;beacon&#x2F;amazon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon&#x2F;amazon</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;rtb&#x2F;bid" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;dsp&#x2F;google&#x2F;pixelmatch" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;dsp&#x2F;google&#x2F;pixelmatch</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;rtb&#x2F;bid" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;beacon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;merge" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;merge</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;dsp&#x2F;google&#x2F;cookiematch" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;dsp&#x2F;google&#x2F;cookiematch</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;readerinfo&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;readerinfo&#x2F;v2</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;readerinfo&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;readerinfo&#x2F;v2</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;www&#x2F;sovrn_beacon_standalone&#x2F;sovrn_standalone_beacon.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;sovrn_beacon_standalone&#x2F;sovrn_standalone_beacon.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;res&#x2F;sovrn.containertag.new.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;res&#x2F;sovrn.containertag.new.min.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;containertag" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;containertag</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;www&#x2F;headerauction&#x2F;aihHeader.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;headerauction&#x2F;aihHeader.min.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;www&#x2F;headerauction&#x2F;prebid.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;headerauction&#x2F;prebid.min.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;res&#x2F;sovrn.containertag.min.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;res&#x2F;sovrn.containertag.min.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;www&#x2F;delivery&#x2F;fpi.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;delivery&#x2F;fpi.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;sync" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;sync</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;addelivery" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;addelivery</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;beacon&#x2F;ebda" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon&#x2F;ebda</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;beacon" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;beacon</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;2&#x2F;686665&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;2&#x2F;686665&#x2F;analytics.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;2&#x2F;4.66.0&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;2&#x2F;4.66.0&#x2F;main.js</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;www&#x2F;delivery&#x2F;fp" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;www&#x2F;delivery&#x2F;fp</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;pixel" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;pixel</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;rtb&#x2F;bid&#x2F;" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;rtb&#x2F;bid&#x2F;</a></li>
+        <li class='truncate'><a href="http://lijit.com&#x2F;&#x2F;&#x2F;www&#x2F;delivery&#x2F;fpi.js" target="_blank" class="external" rel="noreferrer noopener">lijit.com&#x2F;&#x2F;&#x2F;www&#x2F;delivery&#x2F;fpi.js</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

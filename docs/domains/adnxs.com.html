@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/adnxs.com.ico' width="32" height="32"/> adnxs.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/adnxs.com.ico' width="32" height="32" class='inline-block' /> adnxs.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/AppNexus, Inc..html">AppNexus, Inc.</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.appnexus.com&#x2F;en&#x2F;company&#x2F;privacy-policy" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.appnexus.com&#x2F;en&#x2F;company&#x2F;privacy-policy</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Rank: &#35;12<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 24.70&#37; (17294 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 17.30&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 1<small>/3</small></li>
@@ -67,10 +81,10 @@
                         <li>cache: 1<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Image</span>,
                     <span>Script</span>,
@@ -79,162 +93,170 @@
                     <span>Other</span>,
                     <span>Fetch</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/adnxs.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/adnxs.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>secure</span>, 
+                    <span>ib</span>, 
+                    <span>yj.p</span>, 
+                    <span>m</span>, 
+                    <span>thunder</span>, 
+                    <span>adscale-emea</span>, 
+                    <span>adx</span>, 
+                    <span>sharethrough</span>, 
+                    <span>prebid</span>, 
+                    <span>cdn</span>, 
+                    <span>nym1-ib</span>, 
+                    <span>lax1-ib</span>, 
+                    <span>b</span>, 
+                    <span>fra1-ib</span>, 
+                    <span>yj-a.p</span>, 
+                    <span>acdn</span>, 
+                    <span>nine-a.p</span>, 
+                    <span>crcdn01</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>secure</span>, 
-        <span>ib</span>, 
-        <span>yj.p</span>, 
-        <span>m</span>, 
-        <span>thunder</span>, 
-        <span>adscale-emea</span>, 
-        <span>adx</span>, 
-        <span>sharethrough</span>, 
-        <span>prebid</span>, 
-        <span>cdn</span>, 
-        <span>nym1-ib</span>, 
-        <span>lax1-ib</span>, 
-        <span>b</span>, 
-        <span>fra1-ib</span>, 
-        <span>yj-a.p</span>, 
-        <span>acdn</span>, 
-        <span>nine-a.p</span>, 
-        <span>crcdn01</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://adnxs.com&#x2F;mapuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;mapuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuidp" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidp</a></li>
-            <li><a href="http://adnxs.com&#x2F;jpt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;jpt</a></li>
-            <li><a href="http://adnxs.com&#x2F;ut&#x2F;v3&#x2F;prebid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v3&#x2F;prebid</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuidnb" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidnb</a></li>
-            <li><a href="http://adnxs.com&#x2F;jpt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;jpt</a></li>
-            <li><a href="http://adnxs.com&#x2F;pbs&#x2F;v1&#x2F;setuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;pbs&#x2F;v1&#x2F;setuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;v&#x2F;s&#x2F;185&#x2F;trk.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;v&#x2F;s&#x2F;185&#x2F;trk.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;it" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;it</a></li>
-            <li><a href="http://adnxs.com&#x2F;rd_log" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;rd_log</a></li>
-            <li><a href="http://adnxs.com&#x2F;vevent" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;vevent</a></li>
-            <li><a href="http://adnxs.com&#x2F;ttj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ttj</a></li>
-            <li><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ut&#x2F;v3" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v3</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuidj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidj</a></li>
-            <li><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
-            <li><a href="http://adnxs.com&#x2F;ptv" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ptv</a></li>
-            <li><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
-            <li><a href="http://adnxs.com&#x2F;tt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;tt</a></li>
-            <li><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.26.1&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.26.1&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;video&#x2F;outstream&#x2F;ANOutstreamVideo.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;video&#x2F;outstream&#x2F;ANOutstreamVideo.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
-            <li><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
-            <li><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;dmp&#x2F;up&#x2F;pixie.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;dmp&#x2F;up&#x2F;pixie.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;ut&#x2F;v2&#x2F;prebid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v2&#x2F;prebid</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuidu" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidu</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;biblegateway&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;biblegateway&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
-            <li><a href="http://adnxs.com&#x2F;vx&#x2F;static&#x2F;w&#x2F;anwrapper-1.910.0.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;vx&#x2F;static&#x2F;w&#x2F;anwrapper-1.910.0.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuidj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidj</a></li>
-            <li><a href="http://adnxs.com&#x2F;dmp&#x2F;att_uuid&#x2F;uidsync.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;dmp&#x2F;att_uuid&#x2F;uidsync.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.30.0&#x2F;mediation.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.30.0&#x2F;mediation.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8156&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8156&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812322&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812322&#x2F;index.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812326&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812326&#x2F;index.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.29.0&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.29.0&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ttj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ttj</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8346&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8346&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8856&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8856&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8183&#x2F;stage&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8183&#x2F;stage&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.19.0&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.19.0&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.7.4&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.7.4&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ut&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v2</a></li>
-            <li><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;html&#x2F;safeframe-v2.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;js&#x2F;sf-ext.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;js&#x2F;sf-ext.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;11267_cox_ajc&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;11267_cox_ajc&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;not-for-prod&#x2F;1&#x2F;prebid.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;not-for-prod&#x2F;1&#x2F;prebid.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;strikeforce&#x2F;script.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;strikeforce&#x2F;script.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;imptr" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;imptr</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779_zeta&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779_zeta&#x2F;pb.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;js&#x2F;sf-ext.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.26.1&#x2F;mediation.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.26.1&#x2F;mediation.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.27.1&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.27.1&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.12.2&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.12.2&#x2F;ast.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;nop" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;nop</a></li>
-            <li><a href="http://adnxs.com&#x2F;v&#x2F;video&#x2F;185&#x2F;trk.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;v&#x2F;video&#x2F;185&#x2F;trk.js</a></li>
-            <li><a href="http://adnxs.com&#x2F;rd_log" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;rd_log</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
-            <li><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;js&#x2F;sf-ext.js</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;mapuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;mapuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuidp" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidp</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;jpt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;jpt</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ut&#x2F;v3&#x2F;prebid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v3&#x2F;prebid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuidnb" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidnb</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;jpt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;jpt</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;pbs&#x2F;v1&#x2F;setuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;pbs&#x2F;v1&#x2F;setuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;v&#x2F;s&#x2F;185&#x2F;trk.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;v&#x2F;s&#x2F;185&#x2F;trk.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;it" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;it</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;rd_log" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;rd_log</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;vevent" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;vevent</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ttj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ttj</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ut&#x2F;v3" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v3</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuidj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidj</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ptv" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ptv</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;tt" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;tt</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;bounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;bounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.26.1&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.26.1&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;video&#x2F;outstream&#x2F;ANOutstreamVideo.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;video&#x2F;outstream&#x2F;ANOutstreamVideo.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;dmp&#x2F;up&#x2F;pixie.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;dmp&#x2F;up&#x2F;pixie.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ut&#x2F;v2&#x2F;prebid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v2&#x2F;prebid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuidu" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidu</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;biblegateway&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;biblegateway&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;sbounce" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;sbounce</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;vx&#x2F;static&#x2F;w&#x2F;anwrapper-1.910.0.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;vx&#x2F;static&#x2F;w&#x2F;anwrapper-1.910.0.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuidj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuidj</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;dmp&#x2F;att_uuid&#x2F;uidsync.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;dmp&#x2F;att_uuid&#x2F;uidsync.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ab" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ab</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.30.0&#x2F;mediation.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.30.0&#x2F;mediation.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8156&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8156&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812322&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812322&#x2F;index.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812326&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;creative&#x2F;p&#x2F;7823&#x2F;2020&#x2F;5&#x2F;15&#x2F;18812326&#x2F;index.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.29.0&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.29.0&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ttj" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ttj</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8346&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8346&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8856&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8856&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;8183&#x2F;stage&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;8183&#x2F;stage&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;getuid" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;getuid</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.19.0&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.19.0&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.7.4&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.7.4&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ut&#x2F;v2" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ut&#x2F;v2</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;seg" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;seg</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;html&#x2F;safeframe-v2.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.30.0&#x2F;js&#x2F;sf-ext.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.28.1&#x2F;js&#x2F;sf-ext.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;11267_cox_ajc&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;11267_cox_ajc&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;not-for-prod&#x2F;1&#x2F;prebid.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;not-for-prod&#x2F;1&#x2F;prebid.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;strikeforce&#x2F;script.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;strikeforce&#x2F;script.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;imptr" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;imptr</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779_zeta&#x2F;pb.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;prebid&#x2F;c&#x2F;9779_zeta&#x2F;pb.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.26.1&#x2F;js&#x2F;sf-ext.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.26.1&#x2F;mediation.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;mediation&#x2F;0.26.1&#x2F;mediation.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.27.1&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.27.1&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;static&#x2F;0.12.2&#x2F;ast.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;static&#x2F;0.12.2&#x2F;ast.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;nop" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;nop</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;v&#x2F;video&#x2F;185&#x2F;trk.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;v&#x2F;video&#x2F;185&#x2F;trk.js</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;rd_log" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;rd_log</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;html&#x2F;safeframe-v2.html" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;html&#x2F;safeframe-v2.html</a></li>
+        <li class='truncate'><a href="http://adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;js&#x2F;sf-ext.js" target="_blank" class="external" rel="noreferrer noopener">adnxs.com&#x2F;ast&#x2F;safeframe&#x2F;static&#x2F;0.27.1&#x2F;js&#x2F;sf-ext.js</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Ant Financial Services Group</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Ant Financial Services Group</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Ant Financial
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.05%</li>
@@ -51,114 +63,122 @@
                         <li>total - 0.06%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Ant Financial Services Group.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Ant Financial Services Group.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/alipay.com.html">alipay.com (0.05%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/alipayobjects.com.html">alipayobjects.com (0.02%)</a>
-        </span>,
-        <span>
-            antgroup.com
-        </span>,
-        <span>
-            alipay.cn
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             aliloan.com
-        </span>,
-        <span>
-            alipay.hk
-        </span>,
-        <span>
-            alipay-eco.com
-        </span>,
-        <span>
-            alipayplus.com
-        </span>,
-        <span>
-            ant-biz.com
-        </span>,
-        <span>
-            ant-financial.com
-        </span>,
-        <span>
-            ant-open.com
-        </span>,
-        <span>
-            antfin-inc.com
-        </span>,
-        <span>
-            antfin.com
-        </span>,
-        <span>
-            antfinancial.com
-        </span>,
-        <span>
-            antfortune.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             alipay-cloud.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            alipay-eco.com
+        </li>
+        <li class='truncate'>
+            alipay.cn
+        </li>
+        <li class='truncate'>
+            alipay.hk
+        </li>
+        <li class='truncate'>
+            alipayplus.com
+        </li>
+        <li class='truncate'>
+            ant-biz.com
+        </li>
+        <li class='truncate'>
+            ant-financial.com
+        </li>
+        <li class='truncate'>
+            ant-open.com
+        </li>
+        <li class='truncate'>
+            antfin-inc.com
+        </li>
+        <li class='truncate'>
+            antfin.com
+        </li>
+        <li class='truncate'>
+            antfinancial.com
+        </li>
+        <li class='truncate'>
+            antfortune.com
+        </li>
+        <li class='truncate'>
+            antgroup.com
+        </li>
+        <li class='truncate'>
             antsdaq.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             ebuckler.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             fund123.cn
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             huijucai.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             koubei.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mayiyunbao.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mybank.cn
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             sinopayment.com.cn
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             ssdata.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xin.xin
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             yidun.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zamcs.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zhisheng.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zmxy.com.cn
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

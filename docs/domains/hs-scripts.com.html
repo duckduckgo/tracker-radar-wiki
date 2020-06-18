@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/hs-scripts.com.ico' width="32" height="32"/> hs-scripts.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/hs-scripts.com.ico' width="32" height="32" class='inline-block' /> hs-scripts.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/HubSpot, Inc..html">HubSpot, Inc.</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;legal.hubspot.com&#x2F;privacy-policy" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;legal.hubspot.com&#x2F;privacy-policy</a>
                 </li>
-                <li>
-                    Rank: &#35;205<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;204<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 1.11&#37; (780 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 1.04&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 1<small>/3</small></li>
@@ -67,140 +81,137 @@
                         <li>cache: 3<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, <a href="../categories/Analytics.html">Analytics</a>, <a href="../categories/Audience Measurement.html">Audience Measurement</a>, <a href="../categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a>, <a href="../categories/CDN.html">CDN</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/hs-scripts.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/hs-scripts.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>js</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>js</span>, 
-    </p>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://hs-scripts.com&#x2F;95627.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;95627.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4323170.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4323170.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3280374.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3280374.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;467363.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;467363.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2129559.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2129559.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2416790.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2416790.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3485016.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3485016.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;307322.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;307322.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4221997.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4221997.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4513465.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4513465.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3056268.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3056268.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;311181.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;311181.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2072848.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2072848.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4982103.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4982103.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1961165.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1961165.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5213834.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5213834.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4566937.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4566937.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3796979.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3796979.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2258689.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2258689.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;478844.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;478844.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1925176.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1925176.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5811593.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5811593.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2167096.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2167096.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;397762.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;397762.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3835120.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3835120.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2990530.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2990530.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;292449.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;292449.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2224003.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2224003.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;7260515.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;7260515.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4511636.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4511636.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4395239.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4395239.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;479905.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;479905.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5981609.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5981609.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4429584.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4429584.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2901603.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2901603.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6989533.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6989533.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;498146.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;498146.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;363890.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;363890.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1784136.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1784136.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;547446.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;547446.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;515194.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;515194.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;428462.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;428462.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5573906.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5573906.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;454126.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;454126.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3385629.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3385629.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6817144.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6817144.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;302700.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;302700.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4133490.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4133490.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;560399.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;560399.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6907778.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6907778.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;57042.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;57042.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5471251.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5471251.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3888660.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3888660.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5627643.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5627643.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2469778.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2469778.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2444853.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2444853.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5154711.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5154711.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2810406.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2810406.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;442271.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;442271.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1147371.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1147371.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3958448.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3958448.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6502416.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6502416.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4627953.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4627953.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4153710.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4153710.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2897803.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2897803.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5154892.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5154892.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3225021.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3225021.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6423597.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6423597.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4260456.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4260456.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2750273.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2750273.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1466600.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1466600.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;1769626.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1769626.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2655099.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2655099.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;6179356.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6179356.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;479666.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;479666.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2113914.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2113914.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3900164.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3900164.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5843951.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5843951.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;415506.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;415506.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;5910970.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5910970.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2615231.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2615231.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;885790.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;885790.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;4837356.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4837356.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;373102.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;373102.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2799924.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2799924.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3376806.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3376806.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3927855.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3927855.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;7219838.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;7219838.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;2680411.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2680411.js</a></li>
-            <li><a href="http://hs-scripts.com&#x2F;3891789.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3891789.js</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
 
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;95627.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;95627.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4323170.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4323170.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3280374.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3280374.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;467363.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;467363.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2129559.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2129559.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2416790.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2416790.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3485016.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3485016.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;307322.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;307322.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4221997.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4221997.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4513465.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4513465.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3056268.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3056268.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;311181.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;311181.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2072848.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2072848.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4982103.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4982103.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1961165.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1961165.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5213834.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5213834.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4566937.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4566937.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3796979.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3796979.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2258689.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2258689.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;478844.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;478844.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1925176.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1925176.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5811593.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5811593.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2167096.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2167096.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;397762.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;397762.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3835120.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3835120.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2990530.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2990530.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;292449.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;292449.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2224003.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2224003.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;7260515.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;7260515.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4511636.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4511636.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4395239.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4395239.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;479905.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;479905.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5981609.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5981609.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4429584.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4429584.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2901603.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2901603.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6989533.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6989533.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;498146.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;498146.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;363890.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;363890.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1784136.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1784136.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;547446.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;547446.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;515194.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;515194.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;428462.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;428462.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5573906.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5573906.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;454126.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;454126.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3385629.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3385629.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6817144.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6817144.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;302700.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;302700.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4133490.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4133490.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;560399.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;560399.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6907778.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6907778.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;57042.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;57042.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5471251.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5471251.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3888660.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3888660.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5627643.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5627643.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2469778.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2469778.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2444853.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2444853.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5154711.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5154711.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2810406.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2810406.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;442271.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;442271.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1147371.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1147371.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3958448.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3958448.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6502416.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6502416.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4627953.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4627953.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4153710.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4153710.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2897803.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2897803.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5154892.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5154892.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3225021.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3225021.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6423597.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6423597.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4260456.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4260456.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2750273.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2750273.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1466600.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1466600.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;1769626.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;1769626.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2655099.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2655099.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;6179356.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;6179356.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;479666.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;479666.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2113914.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2113914.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3900164.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3900164.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5843951.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5843951.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;415506.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;415506.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;5910970.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;5910970.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2615231.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2615231.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;885790.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;885790.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;4837356.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;4837356.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;373102.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;373102.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2799924.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2799924.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3376806.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3376806.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3927855.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3927855.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;7219838.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;7219838.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;2680411.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;2680411.js</a></li>
+        <li class='truncate'><a href="http://hs-scripts.com&#x2F;3891789.js" target="_blank" class="external" rel="noreferrer noopener">hs-scripts.com&#x2F;3891789.js</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

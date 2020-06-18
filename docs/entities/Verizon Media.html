@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Verizon Media</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Verizon Media</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Verizon Media
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 15.20%</li>
@@ -51,723 +63,731 @@
                         <li>total - 16.90%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Verizon Media.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Verizon Media.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/yahoo.com.html">yahoo.com (15.20%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/advertising.com.html">advertising.com (12.10%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/yimg.com.html">yimg.com (1.50%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/adtech.de.html">adtech.de (0.24%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/adtechus.com.html">adtechus.com (0.22%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/adap.tv.html">adap.tv (0.19%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/yahooapis.com.html">yahooapis.com (0.09%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/uplynk.com.html">uplynk.com (0.08%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/lexity.com.html">lexity.com (0.07%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/vidible.tv.html">vidible.tv (0.06%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/yahoo.net.html">yahoo.net (0.04%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/oath.com.html">oath.com (0.03%)</a>
-        </span>,
-        <span>
-            <a href="../domains/mapquestapi.com.html">mapquestapi.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/aolcdn.com.html">aolcdn.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/mapquestapi.com.html">mapquestapi.com (0.01%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/yieldmanager.com.html">yieldmanager.com (0.01%)</a>
-        </span>,
-        <span>
-            <a href="../domains/yahoosandbox.com.html">yahoosandbox.com (0.00%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/pictela.net.html">pictela.net (0.00%)</a>
-        </span>,
-        <span>
-            netfind.com
-        </span>,
-        <span>
-            aol.ca
-        </span>,
-        <span>
-            aol.co.uk
-        </span>,
-        <span>
-            aol.com
-        </span>,
-        <span>
-            aol.de
-        </span>,
-        <span>
-            aol.fr
-        </span>,
-        <span>
-            aol.jp
-        </span>,
-        <span>
-            ad.com
-        </span>,
-        <span>
-            aolp.jp
-        </span>,
-        <span>
-            aolsearch.com
-        </span>,
-        <span>
-            atdn.net
-        </span>,
-        <span>
-            athenz.io
-        </span>,
-        <span>
-            athenz.net
-        </span>,
-        <span>
-            athenz.org
-        </span>,
-        <span>
-            athenz.cloud
-        </span>,
-        <span>
-            atwola.com
-        </span>,
-        <span>
-            autoblog.com
-        </span>,
-        <span>
-            autos.parts
-        </span>,
-        <span>
-            autos24-7.com
-        </span>,
-        <span>
-            baby.guide
-        </span>,
-        <span>
-            blogsmithmedia.com
-        </span>,
-        <span>
-            bluelithium.com
-        </span>,
-        <span>
-            brightroll.com
-        </span>,
-        <span>
-            btrll.com
-        </span>,
-        <span>
-            buildseries.com
-        </span>,
-        <span>
-            cashay.com
-        </span>,
-        <span>
-            chowist.com
-        </span>,
-        <span>
-            citypedia.com
-        </span>,
-        <span>
-            convertro.com
-        </span>,
-        <span>
-            couponbear.com
-        </span>,
-        <span>
-            contactnumberyahoosupport.com
-        </span>,
-        <span>
-            contactyahoosupport.com
-        </span>,
-        <span>
-            contactyahoosupport.us
-        </span>,
-        <span>
-            diylife.com
-        </span>,
-        <span>
-            dvd4arab.com
-        </span>,
-        <span>
-            engadget.com
-        </span>,
-        <span>
-            enow.com
-        </span>,
-        <span>
-            fashion.life
-        </span>,
-        <span>
-            fast.rentals
-        </span>,
-        <span>
-            find.furniture
-        </span>,
-        <span>
-            flurry.com
-        </span>,
-        <span>
-            foodbegood.com
-        </span>,
-        <span>
-            furniture.deals
-        </span>,
-        <span>
-            gamer.site
-        </span>,
-        <span>
-            geocities.com
-        </span>,
-        <span>
-            glamorbank.com
-        </span>,
-        <span>
-            going.com
-        </span>,
-        <span>
-            golocal.guru
-        </span>,
-        <span>
-            greendaily.com
-        </span>,
-        <span>
-            health.zone
-        </span>,
-        <span>
-            health247.com
-        </span>,
-        <span>
-            homesessive.com
-        </span>,
-        <span>
-            hostingprod.com
-        </span>,
-        <span>
-            housingwatch.com
-        </span>,
-        <span>
-            huffingtonpost.ca
-        </span>,
-        <span>
-            huffingtonpost.co.uk
-        </span>,
-        <span>
-            huffingtonpost.co.za
-        </span>,
-        <span>
-            huffingtonpost.com
-        </span>,
-        <span>
-            huffingtonpost.com.au
-        </span>,
-        <span>
-            huffingtonpost.com.mx
-        </span>,
-        <span>
-            huffingtonpost.de
-        </span>,
-        <span>
-            huffingtonpost.es
-        </span>,
-        <span>
-            huffingtonpost.fr
-        </span>,
-        <span>
-            huffingtonpost.gr
-        </span>,
-        <span>
-            huffingtonpost.it
-        </span>,
-        <span>
-            huffingtonpost.jp
-        </span>,
-        <span>
-            huffingtonpost.kr
-        </span>,
-        <span>
-            huffpo.com
-        </span>,
-        <span>
-            huffpost.co.uk
-        </span>,
-        <span>
-            huffpost.com
-        </span>,
-        <span>
-            huffpost.de
-        </span>,
-        <span>
-            huffpost.gr
-        </span>,
-        <span>
-            huffpost.kr
-        </span>,
-        <span>
-            insurance24-7.com
-        </span>,
-        <span>
-            intoautos.com
-        </span>,
-        <span>
-            job-sift.com
-        </span>,
-        <span>
-            joystiq.com
-        </span>,
-        <span>
-            jsyk.com
-        </span>,
-        <span>
-            kimo.com
-        </span>,
-        <span>
-            kimo.com.tw
-        </span>,
-        <span>
-            kitchepedia.com
-        </span>,
-        <span>
-            know-legal.com
-        </span>,
-        <span>
-            learn-247.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/yahoosandbox.com.html">yahoosandbox.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
             24-7.pet
-        </span>,
-        <span>
-            love.com
-        </span>,
-        <span>
-            luminate.com
-        </span>,
-        <span>
-            luxist.com
-        </span>,
-        <span>
-            majdah.com
-        </span>,
-        <span>
-            maktoob.com
-        </span>,
-        <span>
-            maktoobblog.com
-        </span>,
-        <span>
-            makers.com
-        </span>,
-        <span>
-            makersconference.com
-        </span>,
-        <span>
-            mapquest.com
-        </span>,
-        <span>
-            adsonar.com
-        </span>,
-        <span>
-            money-a2z.com
-        </span>,
-        <span>
-            mqcdn.com
-        </span>,
-        <span>
-            mybloglog.com
-        </span>,
-        <span>
-            mydaily.com
-        </span>,
-        <span>
-            netdeals.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             247.vacations
-        </span>,
-        <span>
-            netscape.com
-        </span>,
-        <span>
-            nexage.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             5min.com
-        </span>,
-        <span>
-            oathadplatform.com
-        </span>,
-        <span>
-            oathadplatforms.com
-        </span>,
-        <span>
-            oathssp.com
-        </span>,
-        <span>
-            ouroath.com
-        </span>,
-        <span>
-            overture.com
-        </span>,
-        <span>
-            parentdish.ca
-        </span>,
-        <span>
-            pets.world
-        </span>,
-        <span>
-            adtechjp.com
-        </span>,
-        <span>
-            pollster.com
-        </span>,
-        <span>
-            pulsemgr.com
-        </span>,
-        <span>
-            rivals.com
-        </span>,
-        <span>
-            rmxads.com
-        </span>,
-        <span>
-            rocketmail.com
-        </span>,
-        <span>
-            ryot.org
-        </span>,
-        <span>
-            ryotlab.com
-        </span>,
-        <span>
-            ryotstudio.co.uk
-        </span>,
-        <span>
-            ryotstudio.com
-        </span>,
-        <span>
-            searchjam.com
-        </span>,
-        <span>
-            see-it.live
-        </span>,
-        <span>
-            shelterpop.com
-        </span>,
-        <span>
-            shopfone.com
-        </span>,
-        <span>
-            sport-king.com
-        </span>,
-        <span>
-            sport4ever.com
-        </span>,
-        <span>
-            sre-perim.com
-        </span>,
-        <span>
-            streampad.com
-        </span>,
-        <span>
-            stylelist.com
-        </span>,
-        <span>
-            tastefullyoffensive.com
-        </span>,
-        <span>
-            teamaol.com
-        </span>,
-        <span>
-            tech24.deals
-        </span>,
-        <span>
-            tech247.co
-        </span>,
-        <span>
-            techcrunch.cn
-        </span>,
-        <span>
-            techcrunch.com
-        </span>,
-        <span>
-            tecnoactual.net
-        </span>,
-        <span>
-            thatsfit.ca
-        </span>,
-        <span>
-            thegifts.co
-        </span>,
-        <span>
-            think24-7.com
-        </span>,
-        <span>
-            thisisoath.com
-        </span>,
-        <span>
-            travel4arab.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             5to1.com
-        </span>,
-        <span>
-            verizonmedia.co.nz
-        </span>,
-        <span>
-            verizonmedia.com
-        </span>,
-        <span>
-            verizonmedia.com.au
-        </span>,
-        <span>
-            videovore.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             aabacosmallbusiness.com
-        </span>,
-        <span>
-            viral.site
-        </span>,
-        <span>
-            vzbuilders.com
-        </span>,
-        <span>
-            when.com
-        </span>,
-        <span>
-            wmconnect.com
-        </span>,
-        <span>
-            wow.com
-        </span>,
-        <span>
-            wretch.cc
-        </span>,
-        <span>
-            y7mail.com
-        </span>,
-        <span>
-            yahoo.bg
-        </span>,
-        <span>
-            yahoo.ca
-        </span>,
-        <span>
-            yahoo.cn
-        </span>,
-        <span>
-            yahoo.co.in
-        </span>,
-        <span>
-            yahoo.co.nz
-        </span>,
-        <span>
-            yahoo.co.th
-        </span>,
-        <span>
-            yahoo.co.uk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            ad.com
+        </li>
+        <li class='truncate'>
+            adsonar.com
+        </li>
+        <li class='truncate'>
+            adtechjp.com
+        </li>
+        <li class='truncate'>
             ahoo.com
-        </span>,
-        <span>
-            yahoo.com.ar
-        </span>,
-        <span>
-            yahoo.com.au
-        </span>,
-        <span>
-            yahoo.com.br
-        </span>,
-        <span>
-            yahoo.com.cn
-        </span>,
-        <span>
-            yahoo.com.es
-        </span>,
-        <span>
-            yahoo.com.hk
-        </span>,
-        <span>
-            yahoo.com.my
-        </span>,
-        <span>
-            yahoo.com.ph
-        </span>,
-        <span>
-            yahoo.com.vn
-        </span>,
-        <span>
-            yahoo.com.mx
-        </span>,
-        <span>
-            yahoo.com.sg
-        </span>,
-        <span>
-            yahoo.com.tw
-        </span>,
-        <span>
-            yahoo.de
-        </span>,
-        <span>
-            yahoo.ee
-        </span>,
-        <span>
-            yahoo.es
-        </span>,
-        <span>
-            yahoo.finance
-        </span>,
-        <span>
-            yahoo.fr
-        </span>,
-        <span>
-            yahoo.hk
-        </span>,
-        <span>
-            yahoo.ie
-        </span>,
-        <span>
-            yahoo.in
-        </span>,
-        <span>
-            yahoo.it
-        </span>,
-        <span>
-            yahoo.hu
-        </span>,
-        <span>
-            yahoo.mx
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             alfrasha.com
-        </span>,
-        <span>
-            yahoo.ph
-        </span>,
-        <span>
-            yahoo.pt
-        </span>,
-        <span>
-            yahoo.sg
-        </span>,
-        <span>
-            yahoo.tw
-        </span>,
-        <span>
-            yahoo7.com.au
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             alltheweb.com
-        </span>,
-        <span>
-            yahoobillboard.com
-        </span>,
-        <span>
-            yahoodns.net
-        </span>,
-        <span>
-            yahooemailsupport.us
-        </span>,
-        <span>
-            yahoofinance.com
-        </span>,
-        <span>
-            yahoofs.com
-        </span>,
-        <span>
-            yahoohealth.com
-        </span>,
-        <span>
-            yahoomail.com
-        </span>,
-        <span>
-            yahoomusic.com
-        </span>,
-        <span>
-            yahooosupport.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             altavista.com
-        </span>,
-        <span>
-            yahoosearch.com
-        </span>,
-        <span>
-            yahoosmallbusiness.com
-        </span>,
-        <span>
-            yahoosportsbook.com
-        </span>,
-        <span>
-            yahoostyle.com
-        </span>,
-        <span>
-            yahootechsupportnumber.com
-        </span>,
-        <span>
-            ycorpblog.com
-        </span>,
-        <span>
-            yho.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             alephd.com
-        </span>,
-        <span>
-            yieldmanager.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             anyprice.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            aol.ca
+        </li>
+        <li class='truncate'>
+            aol.co.uk
+        </li>
+        <li class='truncate'>
+            aol.com
+        </li>
+        <li class='truncate'>
+            aol.de
+        </li>
+        <li class='truncate'>
+            aol.fr
+        </li>
+        <li class='truncate'>
+            aol.jp
+        </li>
+        <li class='truncate'>
+            aolp.jp
+        </li>
+        <li class='truncate'>
+            aolsearch.com
+        </li>
+        <li class='truncate'>
+            atdn.net
+        </li>
+        <li class='truncate'>
+            athenz.io
+        </li>
+        <li class='truncate'>
+            athenz.net
+        </li>
+        <li class='truncate'>
+            athenz.org
+        </li>
+        <li class='truncate'>
+            athenz.cloud
+        </li>
+        <li class='truncate'>
+            atwola.com
+        </li>
+        <li class='truncate'>
+            autoblog.com
+        </li>
+        <li class='truncate'>
+            autos.parts
+        </li>
+        <li class='truncate'>
+            autos24-7.com
+        </li>
+        <li class='truncate'>
+            baby.guide
+        </li>
+        <li class='truncate'>
+            blogsmithmedia.com
+        </li>
+        <li class='truncate'>
+            bluelithium.com
+        </li>
+        <li class='truncate'>
+            brightroll.com
+        </li>
+        <li class='truncate'>
+            btrll.com
+        </li>
+        <li class='truncate'>
+            buildseries.com
+        </li>
+        <li class='truncate'>
+            cashay.com
+        </li>
+        <li class='truncate'>
+            chowist.com
+        </li>
+        <li class='truncate'>
+            citypedia.com
+        </li>
+        <li class='truncate'>
+            convertro.com
+        </li>
+        <li class='truncate'>
+            couponbear.com
+        </li>
+        <li class='truncate'>
+            contactnumberyahoosupport.com
+        </li>
+        <li class='truncate'>
+            contactyahoosupport.com
+        </li>
+        <li class='truncate'>
+            contactyahoosupport.us
+        </li>
+        <li class='truncate'>
+            diylife.com
+        </li>
+        <li class='truncate'>
+            dvd4arab.com
+        </li>
+        <li class='truncate'>
+            engadget.com
+        </li>
+        <li class='truncate'>
+            enow.com
+        </li>
+        <li class='truncate'>
+            fashion.life
+        </li>
+        <li class='truncate'>
+            fast.rentals
+        </li>
+        <li class='truncate'>
+            find.furniture
+        </li>
+        <li class='truncate'>
+            flurry.com
+        </li>
+        <li class='truncate'>
+            foodbegood.com
+        </li>
+        <li class='truncate'>
+            furniture.deals
+        </li>
+        <li class='truncate'>
+            gamer.site
+        </li>
+        <li class='truncate'>
+            geocities.com
+        </li>
+        <li class='truncate'>
+            glamorbank.com
+        </li>
+        <li class='truncate'>
+            going.com
+        </li>
+        <li class='truncate'>
+            golocal.guru
+        </li>
+        <li class='truncate'>
+            greendaily.com
+        </li>
+        <li class='truncate'>
+            health.zone
+        </li>
+        <li class='truncate'>
+            health247.com
+        </li>
+        <li class='truncate'>
+            homesessive.com
+        </li>
+        <li class='truncate'>
+            hostingprod.com
+        </li>
+        <li class='truncate'>
+            housingwatch.com
+        </li>
+        <li class='truncate'>
+            huffingtonpost.ca
+        </li>
+        <li class='truncate'>
+            huffingtonpost.co.uk
+        </li>
+        <li class='truncate'>
+            huffingtonpost.co.za
+        </li>
+        <li class='truncate'>
+            huffingtonpost.com
+        </li>
+        <li class='truncate'>
+            huffingtonpost.com.au
+        </li>
+        <li class='truncate'>
+            huffingtonpost.com.mx
+        </li>
+        <li class='truncate'>
+            huffingtonpost.de
+        </li>
+        <li class='truncate'>
+            huffingtonpost.es
+        </li>
+        <li class='truncate'>
+            huffingtonpost.fr
+        </li>
+        <li class='truncate'>
+            huffingtonpost.gr
+        </li>
+        <li class='truncate'>
+            huffingtonpost.it
+        </li>
+        <li class='truncate'>
+            huffingtonpost.jp
+        </li>
+        <li class='truncate'>
+            huffingtonpost.kr
+        </li>
+        <li class='truncate'>
+            huffpo.com
+        </li>
+        <li class='truncate'>
+            huffpost.co.uk
+        </li>
+        <li class='truncate'>
+            huffpost.com
+        </li>
+        <li class='truncate'>
+            huffpost.de
+        </li>
+        <li class='truncate'>
+            huffpost.gr
+        </li>
+        <li class='truncate'>
+            huffpost.kr
+        </li>
+        <li class='truncate'>
+            insurance24-7.com
+        </li>
+        <li class='truncate'>
+            intoautos.com
+        </li>
+        <li class='truncate'>
+            job-sift.com
+        </li>
+        <li class='truncate'>
+            joystiq.com
+        </li>
+        <li class='truncate'>
+            jsyk.com
+        </li>
+        <li class='truncate'>
+            kimo.com
+        </li>
+        <li class='truncate'>
+            kimo.com.tw
+        </li>
+        <li class='truncate'>
+            kitchepedia.com
+        </li>
+        <li class='truncate'>
+            know-legal.com
+        </li>
+        <li class='truncate'>
+            learn-247.com
+        </li>
+        <li class='truncate'>
+            love.com
+        </li>
+        <li class='truncate'>
+            luminate.com
+        </li>
+        <li class='truncate'>
+            luxist.com
+        </li>
+        <li class='truncate'>
+            majdah.com
+        </li>
+        <li class='truncate'>
+            maktoob.com
+        </li>
+        <li class='truncate'>
+            maktoobblog.com
+        </li>
+        <li class='truncate'>
+            makers.com
+        </li>
+        <li class='truncate'>
+            makersconference.com
+        </li>
+        <li class='truncate'>
+            mapquest.com
+        </li>
+        <li class='truncate'>
+            money-a2z.com
+        </li>
+        <li class='truncate'>
+            mqcdn.com
+        </li>
+        <li class='truncate'>
+            mybloglog.com
+        </li>
+        <li class='truncate'>
+            mydaily.com
+        </li>
+        <li class='truncate'>
+            netdeals.com
+        </li>
+        <li class='truncate'>
+            netfind.com
+        </li>
+        <li class='truncate'>
+            netscape.com
+        </li>
+        <li class='truncate'>
+            nexage.com
+        </li>
+        <li class='truncate'>
+            oathadplatform.com
+        </li>
+        <li class='truncate'>
+            oathadplatforms.com
+        </li>
+        <li class='truncate'>
+            oathssp.com
+        </li>
+        <li class='truncate'>
+            ouroath.com
+        </li>
+        <li class='truncate'>
+            overture.com
+        </li>
+        <li class='truncate'>
+            parentdish.ca
+        </li>
+        <li class='truncate'>
+            pets.world
+        </li>
+        <li class='truncate'>
+            pollster.com
+        </li>
+        <li class='truncate'>
+            pulsemgr.com
+        </li>
+        <li class='truncate'>
+            rivals.com
+        </li>
+        <li class='truncate'>
+            rmxads.com
+        </li>
+        <li class='truncate'>
+            rocketmail.com
+        </li>
+        <li class='truncate'>
+            ryot.org
+        </li>
+        <li class='truncate'>
+            ryotlab.com
+        </li>
+        <li class='truncate'>
+            ryotstudio.co.uk
+        </li>
+        <li class='truncate'>
+            ryotstudio.com
+        </li>
+        <li class='truncate'>
+            searchjam.com
+        </li>
+        <li class='truncate'>
+            see-it.live
+        </li>
+        <li class='truncate'>
+            shelterpop.com
+        </li>
+        <li class='truncate'>
+            shopfone.com
+        </li>
+        <li class='truncate'>
+            sport-king.com
+        </li>
+        <li class='truncate'>
+            sport4ever.com
+        </li>
+        <li class='truncate'>
+            sre-perim.com
+        </li>
+        <li class='truncate'>
+            streampad.com
+        </li>
+        <li class='truncate'>
+            stylelist.com
+        </li>
+        <li class='truncate'>
+            tastefullyoffensive.com
+        </li>
+        <li class='truncate'>
+            teamaol.com
+        </li>
+        <li class='truncate'>
+            tech24.deals
+        </li>
+        <li class='truncate'>
+            tech247.co
+        </li>
+        <li class='truncate'>
+            techcrunch.cn
+        </li>
+        <li class='truncate'>
+            techcrunch.com
+        </li>
+        <li class='truncate'>
+            tecnoactual.net
+        </li>
+        <li class='truncate'>
+            thatsfit.ca
+        </li>
+        <li class='truncate'>
+            thegifts.co
+        </li>
+        <li class='truncate'>
+            think24-7.com
+        </li>
+        <li class='truncate'>
+            thisisoath.com
+        </li>
+        <li class='truncate'>
+            travel4arab.com
+        </li>
+        <li class='truncate'>
+            verizonmedia.co.nz
+        </li>
+        <li class='truncate'>
+            verizonmedia.com
+        </li>
+        <li class='truncate'>
+            verizonmedia.com.au
+        </li>
+        <li class='truncate'>
+            videovore.com
+        </li>
+        <li class='truncate'>
+            viral.site
+        </li>
+        <li class='truncate'>
+            vzbuilders.com
+        </li>
+        <li class='truncate'>
+            when.com
+        </li>
+        <li class='truncate'>
+            wmconnect.com
+        </li>
+        <li class='truncate'>
+            wow.com
+        </li>
+        <li class='truncate'>
+            wretch.cc
+        </li>
+        <li class='truncate'>
+            y7mail.com
+        </li>
+        <li class='truncate'>
+            yahoo.bg
+        </li>
+        <li class='truncate'>
+            yahoo.ca
+        </li>
+        <li class='truncate'>
+            yahoo.cn
+        </li>
+        <li class='truncate'>
+            yahoo.co.in
+        </li>
+        <li class='truncate'>
+            yahoo.co.nz
+        </li>
+        <li class='truncate'>
+            yahoo.co.th
+        </li>
+        <li class='truncate'>
+            yahoo.co.uk
+        </li>
+        <li class='truncate'>
+            yahoo.com.ar
+        </li>
+        <li class='truncate'>
+            yahoo.com.au
+        </li>
+        <li class='truncate'>
+            yahoo.com.br
+        </li>
+        <li class='truncate'>
+            yahoo.com.cn
+        </li>
+        <li class='truncate'>
+            yahoo.com.es
+        </li>
+        <li class='truncate'>
+            yahoo.com.hk
+        </li>
+        <li class='truncate'>
+            yahoo.com.my
+        </li>
+        <li class='truncate'>
+            yahoo.com.ph
+        </li>
+        <li class='truncate'>
+            yahoo.com.vn
+        </li>
+        <li class='truncate'>
+            yahoo.com.mx
+        </li>
+        <li class='truncate'>
+            yahoo.com.sg
+        </li>
+        <li class='truncate'>
+            yahoo.com.tw
+        </li>
+        <li class='truncate'>
+            yahoo.de
+        </li>
+        <li class='truncate'>
+            yahoo.ee
+        </li>
+        <li class='truncate'>
+            yahoo.es
+        </li>
+        <li class='truncate'>
+            yahoo.finance
+        </li>
+        <li class='truncate'>
+            yahoo.fr
+        </li>
+        <li class='truncate'>
+            yahoo.hk
+        </li>
+        <li class='truncate'>
+            yahoo.ie
+        </li>
+        <li class='truncate'>
+            yahoo.in
+        </li>
+        <li class='truncate'>
+            yahoo.it
+        </li>
+        <li class='truncate'>
+            yahoo.hu
+        </li>
+        <li class='truncate'>
+            yahoo.mx
+        </li>
+        <li class='truncate'>
+            yahoo.ph
+        </li>
+        <li class='truncate'>
+            yahoo.pt
+        </li>
+        <li class='truncate'>
+            yahoo.sg
+        </li>
+        <li class='truncate'>
+            yahoo.tw
+        </li>
+        <li class='truncate'>
+            yahoo7.com.au
+        </li>
+        <li class='truncate'>
+            yahoobillboard.com
+        </li>
+        <li class='truncate'>
+            yahoodns.net
+        </li>
+        <li class='truncate'>
+            yahooemailsupport.us
+        </li>
+        <li class='truncate'>
+            yahoofinance.com
+        </li>
+        <li class='truncate'>
+            yahoofs.com
+        </li>
+        <li class='truncate'>
+            yahoohealth.com
+        </li>
+        <li class='truncate'>
+            yahoomail.com
+        </li>
+        <li class='truncate'>
+            yahoomusic.com
+        </li>
+        <li class='truncate'>
+            yahooosupport.com
+        </li>
+        <li class='truncate'>
+            yahoosearch.com
+        </li>
+        <li class='truncate'>
+            yahoosmallbusiness.com
+        </li>
+        <li class='truncate'>
+            yahoosportsbook.com
+        </li>
+        <li class='truncate'>
+            yahoostyle.com
+        </li>
+        <li class='truncate'>
+            yahootechsupportnumber.com
+        </li>
+        <li class='truncate'>
+            ycorpblog.com
+        </li>
+        <li class='truncate'>
+            yho.com
+        </li>
+        <li class='truncate'>
+            yieldmanager.net
+        </li>
+        <li class='truncate'>
             ymail.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             yqlblog.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             ysearchblog.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zenfs.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

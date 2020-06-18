@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Gannett Co., Inc.</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Gannett Co., Inc.</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Gannett
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.07%</li>
@@ -51,285 +63,293 @@
                         <li>total - 0.08%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Gannett Co., Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Gannett Co., Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/rlets.com.html">rlets.com (0.05%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/gannett-cdn.com.html">gannett-cdn.com (0.02%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/bnqt.com.html">bnqt.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/gannett.com.html">gannett.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/gcion.com.html">gcion.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/rtrk.com.html">rtrk.com (0.01%)</a>
-        </span>,
-        <span>
-            lansingstatejournal.com
-        </span>,
-        <span>
-            caller.com
-        </span>,
-        <span>
-            cincinnati.com
-        </span>,
-        <span>
-            citizen-times.com
-        </span>,
-        <span>
-            clarionledger.com
-        </span>,
-        <span>
-            coloradoan.com
-        </span>,
-        <span>
-            commercialappeal.com
-        </span>,
-        <span>
-            courier-journal.com
-        </span>,
-        <span>
-            courierpostonline.com
-        </span>,
-        <span>
-            courierpress.com
-        </span>,
-        <span>
-            dailyrecord.com
-        </span>,
-        <span>
-            delawareonline.com
-        </span>,
-        <span>
-            delmarvanow.com
-        </span>,
-        <span>
-            democratandchronicle.com
-        </span>,
-        <span>
-            desertsun.com
-        </span>,
-        <span>
-            desmoinesregister.com
-        </span>,
-        <span>
-            detroitnews.com
-        </span>,
-        <span>
-            dnj.com
-        </span>,
-        <span>
-            elpasotimes.com
-        </span>,
-        <span>
-            floridatoday.com
-        </span>,
-        <span>
-            freep.com
-        </span>,
-        <span>
-            app.com
-        </span>,
-        <span>
-            argusleader.com
-        </span>,
-        <span>
-            gannettdigital.com
-        </span>,
-        <span>
-            azcentral.com
-        </span>,
-        <span>
-            golfweek.com
-        </span>,
-        <span>
-            greatfallstribune.com
-        </span>,
-        <span>
-            greenbaypressgazette.com
-        </span>,
-        <span>
-            greenvilleonline.com
-        </span>,
-        <span>
-            guampdn.com
-        </span>,
-        <span>
-            hometownlife.com
-        </span>,
-        <span>
-            hoopshype.com
-        </span>,
-        <span>
-            independentmail.com
-        </span>,
-        <span>
-            indystar.com
-        </span>,
-        <span>
-            jconline.com
-        </span>,
-        <span>
-            kitsapsun.com
-        </span>,
-        <span>
-            knoxnews.com
-        </span>,
-        <span>
-            10bestmedia.com
-        </span>,
-        <span>
-            lcsun-news.com
-        </span>,
-        <span>
-            livingstondaily.com
-        </span>,
-        <span>
-            lohud.com
-        </span>,
-        <span>
-            mansfieldnewsjournal.com
-        </span>,
-        <span>
-            mmajunkie.com
-        </span>,
-        <span>
-            montgomeryadvertiser.com
-        </span>,
-        <span>
-            mycentraljersey.com
-        </span>,
-        <span>
-            naplesnews.com
-        </span>,
-        <span>
-            newarkadvocate.com
-        </span>,
-        <span>
-            news-leader.com
-        </span>,
-        <span>
-            news-press.com
-        </span>,
-        <span>
-            newsleader.com
-        </span>,
-        <span>
-            northjersey.com
-        </span>,
-        <span>
-            packersnews.com
-        </span>,
-        <span>
-            pnj.com
-        </span>,
-        <span>
-            postcrescent.com
-        </span>,
-        <span>
-            poughkeepsiejournal.com
-        </span>,
-        <span>
-            press-citizen.com
-        </span>,
-        <span>
-            pressconnects.com
-        </span>,
-        <span>
-            reachlocalservices.com
-        </span>,
-        <span>
-            redding.com
-        </span>,
-        <span>
-            rgj.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             10best.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            10bestmedia.com
+        </li>
+        <li class='truncate'>
+            app.com
+        </li>
+        <li class='truncate'>
+            argusleader.com
+        </li>
+        <li class='truncate'>
+            azcentral.com
+        </li>
+        <li class='truncate'>
             burlingtonfreepress.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            caller.com
+        </li>
+        <li class='truncate'>
+            cincinnati.com
+        </li>
+        <li class='truncate'>
+            citizen-times.com
+        </li>
+        <li class='truncate'>
+            clarionledger.com
+        </li>
+        <li class='truncate'>
+            coloradoan.com
+        </li>
+        <li class='truncate'>
+            commercialappeal.com
+        </li>
+        <li class='truncate'>
+            courier-journal.com
+        </li>
+        <li class='truncate'>
+            courierpostonline.com
+        </li>
+        <li class='truncate'>
+            courierpress.com
+        </li>
+        <li class='truncate'>
+            dailyrecord.com
+        </li>
+        <li class='truncate'>
+            delawareonline.com
+        </li>
+        <li class='truncate'>
+            delmarvanow.com
+        </li>
+        <li class='truncate'>
+            democratandchronicle.com
+        </li>
+        <li class='truncate'>
+            desertsun.com
+        </li>
+        <li class='truncate'>
+            desmoinesregister.com
+        </li>
+        <li class='truncate'>
+            detroitnews.com
+        </li>
+        <li class='truncate'>
+            dnj.com
+        </li>
+        <li class='truncate'>
+            elpasotimes.com
+        </li>
+        <li class='truncate'>
+            floridatoday.com
+        </li>
+        <li class='truncate'>
+            freep.com
+        </li>
+        <li class='truncate'>
+            gannettdigital.com
+        </li>
+        <li class='truncate'>
+            golfweek.com
+        </li>
+        <li class='truncate'>
+            greatfallstribune.com
+        </li>
+        <li class='truncate'>
+            greenbaypressgazette.com
+        </li>
+        <li class='truncate'>
+            greenvilleonline.com
+        </li>
+        <li class='truncate'>
+            guampdn.com
+        </li>
+        <li class='truncate'>
+            hometownlife.com
+        </li>
+        <li class='truncate'>
+            hoopshype.com
+        </li>
+        <li class='truncate'>
+            independentmail.com
+        </li>
+        <li class='truncate'>
+            indystar.com
+        </li>
+        <li class='truncate'>
+            jconline.com
+        </li>
+        <li class='truncate'>
+            kitsapsun.com
+        </li>
+        <li class='truncate'>
+            knoxnews.com
+        </li>
+        <li class='truncate'>
+            lansingstatejournal.com
+        </li>
+        <li class='truncate'>
+            lcsun-news.com
+        </li>
+        <li class='truncate'>
+            livingstondaily.com
+        </li>
+        <li class='truncate'>
+            lohud.com
+        </li>
+        <li class='truncate'>
+            mansfieldnewsjournal.com
+        </li>
+        <li class='truncate'>
+            mmajunkie.com
+        </li>
+        <li class='truncate'>
+            montgomeryadvertiser.com
+        </li>
+        <li class='truncate'>
+            mycentraljersey.com
+        </li>
+        <li class='truncate'>
+            naplesnews.com
+        </li>
+        <li class='truncate'>
+            newarkadvocate.com
+        </li>
+        <li class='truncate'>
+            news-leader.com
+        </li>
+        <li class='truncate'>
+            news-press.com
+        </li>
+        <li class='truncate'>
+            newsleader.com
+        </li>
+        <li class='truncate'>
+            northjersey.com
+        </li>
+        <li class='truncate'>
+            packersnews.com
+        </li>
+        <li class='truncate'>
+            pnj.com
+        </li>
+        <li class='truncate'>
+            postcrescent.com
+        </li>
+        <li class='truncate'>
+            poughkeepsiejournal.com
+        </li>
+        <li class='truncate'>
+            press-citizen.com
+        </li>
+        <li class='truncate'>
+            pressconnects.com
+        </li>
+        <li class='truncate'>
+            reachlocalservices.com
+        </li>
+        <li class='truncate'>
+            redding.com
+        </li>
+        <li class='truncate'>
+            rgj.com
+        </li>
+        <li class='truncate'>
             sctimes.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             shreveporttimes.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             statesmanjournal.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tallahassee.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tcpalm.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tennessean.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             theadvertiser.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thebiglead.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thecalifornian.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             theleafchronicle.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thenewsstar.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thespectrum.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thetimesherald.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             usatoday.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             usatodayhss.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             vcstar.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             visaliatimesdelta.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wausaudailyherald.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             ydr.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

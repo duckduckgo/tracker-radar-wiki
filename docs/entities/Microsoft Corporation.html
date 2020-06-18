@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Microsoft Corporation</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Microsoft Corporation</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Microsoft
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 11.70%</li>
@@ -51,999 +63,1007 @@
                         <li>total - 13.10%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Microsoft Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Microsoft Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/bing.com.html">bing.com (10.50%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/azureedge.net.html">azureedge.net (1.02%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/msecnd.net.html">msecnd.net (0.91%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/windows.net.html">windows.net (0.85%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/aspnetcdn.com.html">aspnetcdn.com (0.63%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/azurewebsites.net.html">azurewebsites.net (0.46%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/microsoft.com.html">microsoft.com (0.07%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/botframework.com.html">botframework.com (0.04%)</a>
-        </span>,
-        <span>
-            <a href="../domains/skype.com.html">skype.com (0.02%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/msn.com.html">msn.com (0.02%)</a>
-        </span>,
-        <span>
-            <a href="../domains/doterracertifiedsite.com.html">doterracertifiedsite.com (0.01%)</a>
-        </span>,
-        <span>
-            <a href="../domains/azure.net.html">azure.net (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/skype.com.html">skype.com (0.02%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/atmrum.net.html">atmrum.net (0.01%)</a>
-        </span>,
-        <span>
-            <a href="../domains/mixer.com.html">mixer.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/azure.net.html">azure.net (0.01%)</a>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/doterracertifiedsite.com.html">doterracertifiedsite.com (0.01%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/dynamics.com.html">dynamics.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/microsofttranslator.com.html">microsofttranslator.com (0.01%)</a>
-        </span>,
-        <span>
-            <a href="../domains/live.com.html">live.com (0.00%)</a>
-        </span>,
-        <span>
-            <a href="../domains/gfx.ms.html">gfx.ms (0.00%)</a>
-        </span>,
-        <span>
-            <a href="../domains/b2clogin.com.html">b2clogin.com (0.00%)</a>
-        </span>,
-        <span>
-            <a href="../domains/peer5.com.html">peer5.com (0.00%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/mixer.com.html">mixer.com (0.01%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/azure-api.net.html">azure-api.net (0.00%)</a>
-        </span>,
-        <span>
-            msn.be
-        </span>,
-        <span>
-            bing.co.in
-        </span>,
-        <span>
-            bing.co.jp
-        </span>,
-        <span>
-            bing.co.uk
-        </span>,
-        <span>
-            bing.co.za
-        </span>,
-        <span>
-            ageofempires.com
-        </span>,
-        <span>
-            bing.com.ar
-        </span>,
-        <span>
-            bing.com.au
-        </span>,
-        <span>
-            bing.com.br
-        </span>,
-        <span>
-            bing.com.cn
-        </span>,
-        <span>
-            bing.com.es
-        </span>,
-        <span>
-            bing.com.hk
-        </span>,
-        <span>
-            bing.com.mx
-        </span>,
-        <span>
-            bing.com.my
-        </span>,
-        <span>
-            bing.com.pl
-        </span>,
-        <span>
-            bing.com.sa
-        </span>,
-        <span>
-            bing.com.tr
-        </span>,
-        <span>
-            bing.de
-        </span>,
-        <span>
-            bing.es
-        </span>,
-        <span>
-            bing.fr
-        </span>,
-        <span>
-            bing.gen.tr
-        </span>,
-        <span>
-            bing.in
-        </span>,
-        <span>
-            bing.it
-        </span>,
-        <span>
-            bing.jp
-        </span>,
-        <span>
-            bing.net
-        </span>,
-        <span>
-            bing.nl
-        </span>,
-        <span>
-            bing.no
-        </span>,
-        <span>
-            bing.pl
-        </span>,
-        <span>
-            bing.ru
-        </span>,
-        <span>
-            bing.se
-        </span>,
-        <span>
-            bingapis.com
-        </span>,
-        <span>
-            bingsandbox.com
-        </span>,
-        <span>
-            aka.ms
-        </span>,
-        <span>
-            buildmypinnedsite.com
-        </span>,
-        <span>
-            carpoint.ca
-        </span>,
-        <span>
-            carpoint.com
-        </span>,
-        <span>
-            ch9.ms
-        </span>,
-        <span>
-            cloudapp.net
-        </span>,
-        <span>
-            customsearch.ai
-        </span>,
-        <span>
-            detelefoonvanbritt.nl
-        </span>,
-        <span>
-            digitaldemocracy.tv
-        </span>,
-        <span>
-            discovermsn.com
-        </span>,
-        <span>
-            azure.com
-        </span>,
-        <span>
-            appcenter.ms
-        </span>,
-        <span>
-            edgesv.net
-        </span>,
-        <span>
-            footprintdns.com
-        </span>,
-        <span>
-            forzamotorsport.net
-        </span>,
-        <span>
-            asp.net
-        </span>,
-        <span>
-            gigjam.com
-        </span>,
-        <span>
-            gpslab.net
-        </span>,
-        <span>
-            groupme.com
-        </span>,
-        <span>
-            halocdn.com
-        </span>,
-        <span>
-            halowaypoint.com
-        </span>,
-        <span>
-            hockeyapp.net
-        </span>,
-        <span>
-            hololens.com
-        </span>,
-        <span>
-            hotmail.com
-        </span>,
-        <span>
-            hotmail.fr
-        </span>,
-        <span>
-            hotmail.hu
-        </span>,
-        <span>
-            hotmail.it
-        </span>,
-        <span>
-            hotmail.jp
-        </span>,
-        <span>
-            hotmail.la
-        </span>,
-        <span>
-            hotmail.nl
-        </span>,
-        <span>
-            hotmail.no
-        </span>,
-        <span>
-            hotmail.ph
-        </span>,
-        <span>
-            hotmail.pt
-        </span>,
-        <span>
-            hotmail.se
-        </span>,
-        <span>
-            hotmail.sk
-        </span>,
-        <span>
-            howzitmsn.com
-        </span>,
-        <span>
-            iis.net
-        </span>,
-        <span>
-            imaginecup.pl
-        </span>,
-        <span>
-            irbi.de
-        </span>,
-        <span>
-            k-msedge.net
-        </span>,
-        <span>
-            liga-tippgemeinschaft.de
-        </span>,
-        <span>
-            live-int.com
-        </span>,
-        <span>
-            live.co.uk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/b2clogin.com.html">b2clogin.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/gfx.ms.html">gfx.ms (0.00%)</a>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/live.com.html">live.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/peer5.com.html">peer5.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
             3plearning.com
-        </span>,
-        <span>
-            live.com.au
-        </span>,
-        <span>
-            live.fr
-        </span>,
-        <span>
-            live.jp
-        </span>,
-        <span>
-            live.net
-        </span>,
-        <span>
-            live.sg
-        </span>,
-        <span>
-            livespacevision.com
-        </span>,
-        <span>
-            livevz.net
-        </span>,
-        <span>
-            lync.com
-        </span>,
-        <span>
-            messenger.fr
-        </span>,
-        <span>
-            microsoft.az
-        </span>,
-        <span>
-            microsoft.be
-        </span>,
-        <span>
-            microsoft.by
-        </span>,
-        <span>
-            microsoft.ca
-        </span>,
-        <span>
-            microsoft.cat
-        </span>,
-        <span>
-            microsoft.ch
-        </span>,
-        <span>
-            microsoft.cl
-        </span>,
-        <span>
-            assets-yammer.com
-        </span>,
-        <span>
-            microsoft.cz
-        </span>,
-        <span>
-            microsoft.de
-        </span>,
-        <span>
-            microsoft.dk
-        </span>,
-        <span>
-            microsoft.ee
-        </span>,
-        <span>
-            microsoft.es
-        </span>,
-        <span>
-            microsoft.eu
-        </span>,
-        <span>
-            microsoft.fi
-        </span>,
-        <span>
-            microsoft.fr
-        </span>,
-        <span>
-            microsoft.ge
-        </span>,
-        <span>
-            microsoft.hu
-        </span>,
-        <span>
-            microsoft.is
-        </span>,
-        <span>
-            microsoft.it
-        </span>,
-        <span>
-            microsoft.jp
-        </span>,
-        <span>
-            microsoft.lt
-        </span>,
-        <span>
-            microsoft.lu
-        </span>,
-        <span>
-            microsoft.lv
-        </span>,
-        <span>
-            microsoft.md
-        </span>,
-        <span>
-            microsoft.pl
-        </span>,
-        <span>
-            microsoft.pt
-        </span>,
-        <span>
-            microsoft.ro
-        </span>,
-        <span>
-            microsoft.rs
-        </span>,
-        <span>
-            microsoft.ru
-        </span>,
-        <span>
-            microsoft.se
-        </span>,
-        <span>
-            microsoft.si
-        </span>,
-        <span>
-            microsoft.tv
-        </span>,
-        <span>
-            microsoft.ua
-        </span>,
-        <span>
-            microsoft.uz
-        </span>,
-        <span>
-            microsoft.vn
-        </span>,
-        <span>
-            microsoft365.com
-        </span>,
-        <span>
-            microsoftadcentre.ca
-        </span>,
-        <span>
-            microsoftcloud.com
-        </span>,
-        <span>
-            microsoftedge.com
-        </span>,
-        <span>
-            microsoftlinc.com
-        </span>,
-        <span>
-            microsoftonline-p.com
-        </span>,
-        <span>
-            microsoftonline.com
-        </span>,
-        <span>
-            microsoftstore.com
-        </span>,
-        <span>
-            microsoftstudios.com
-        </span>,
-        <span>
-            beam.pro
-        </span>,
-        <span>
-            mileiq.com
-        </span>,
-        <span>
-            bing-int.com
-        </span>,
-        <span>
-            mono-project.com
-        </span>,
-        <span>
-            msauth.net
-        </span>,
-        <span>
-            msdn.com
-        </span>,
-        <span>
-            bing.at
-        </span>,
-        <span>
-            msedge.net
-        </span>,
-        <span>
-            msftconnecttest.com
-        </span>,
-        <span>
-            msn.ae
-        </span>,
-        <span>
-            msn.at
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             afx.ms
-        </span>,
-        <span>
-            msn.ca
-        </span>,
-        <span>
-            msn.ch
-        </span>,
-        <span>
-            msn.cn
-        </span>,
-        <span>
-            msn.co.cr
-        </span>,
-        <span>
-            msn.co.id
-        </span>,
-        <span>
-            msn.co.il
-        </span>,
-        <span>
-            msn.co.in
-        </span>,
-        <span>
-            msn.co.jp
-        </span>,
-        <span>
-            msn.co.kr
-        </span>,
-        <span>
-            msn.co.nz
-        </span>,
-        <span>
-            msn.co.th
-        </span>,
-        <span>
-            msn.co.uk
-        </span>,
-        <span>
-            msn.co.za
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            ageofempires.com
+        </li>
+        <li class='truncate'>
+            aka.ms
+        </li>
+        <li class='truncate'>
+            appcenter.ms
+        </li>
+        <li class='truncate'>
+            asp.net
+        </li>
+        <li class='truncate'>
+            assets-yammer.com
+        </li>
+        <li class='truncate'>
+            azure.com
+        </li>
+        <li class='truncate'>
+            beam.pro
+        </li>
+        <li class='truncate'>
+            bing-int.com
+        </li>
+        <li class='truncate'>
+            bing.at
+        </li>
+        <li class='truncate'>
             bing.ca
-        </span>,
-        <span>
-            msn.com.au
-        </span>,
-        <span>
-            msn.com.br
-        </span>,
-        <span>
-            msn.com.cn
-        </span>,
-        <span>
-            msn.com.gr
-        </span>,
-        <span>
-            msn.com.hk
-        </span>,
-        <span>
-            msn.com.mx
-        </span>,
-        <span>
-            msn.com.my
-        </span>,
-        <span>
-            msn.com.sg
-        </span>,
-        <span>
-            msn.com.tr
-        </span>,
-        <span>
-            msn.com.tw
-        </span>,
-        <span>
-            msn.cr
-        </span>,
-        <span>
-            msn.de
-        </span>,
-        <span>
-            msn.dk
-        </span>,
-        <span>
-            msn.es
-        </span>,
-        <span>
-            msn.fi
-        </span>,
-        <span>
-            msn.fr
-        </span>,
-        <span>
-            msn.gr
-        </span>,
-        <span>
-            msn.hu
-        </span>,
-        <span>
-            msn.ie
-        </span>,
-        <span>
-            msn.it
-        </span>,
-        <span>
-            msn.jp
-        </span>,
-        <span>
-            msn.kz
-        </span>,
-        <span>
-            msn.net
-        </span>,
-        <span>
-            msn.net.ru
-        </span>,
-        <span>
-            msn.nl
-        </span>,
-        <span>
-            msn.no
-        </span>,
-        <span>
-            msn.pl
-        </span>,
-        <span>
-            msn.pt
-        </span>,
-        <span>
-            msn.ru
-        </span>,
-        <span>
-            msn.se
-        </span>,
-        <span>
-            msn.sg
-        </span>,
-        <span>
-            msnarabia.com
-        </span>,
-        <span>
-            msnautos.com
-        </span>,
-        <span>
-            msncricket.com
-        </span>,
-        <span>
-            msnlatino.com
-        </span>,
-        <span>
-            msnnews.com
-        </span>,
-        <span>
-            msnsports.com
-        </span>,
-        <span>
-            msnstars.dk
-        </span>,
-        <span>
-            msntravel.com
-        </span>,
-        <span>
-            msnweather.com
-        </span>,
-        <span>
-            msocdn.com
-        </span>,
-        <span>
-            nuget.org
-        </span>,
-        <span>
-            office.com
-        </span>,
-        <span>
-            office.net
-        </span>,
-        <span>
-            office365.com
-        </span>,
-        <span>
-            officeppe.net
-        </span>,
-        <span>
-            onenote.co
-        </span>,
-        <span>
-            onenote.co.uk
-        </span>,
-        <span>
-            onenote.com
-        </span>,
-        <span>
-            onenote.mobi
-        </span>,
-        <span>
-            onenote.net
-        </span>,
-        <span>
-            onenote.org
-        </span>,
-        <span>
-            onestore.ms
-        </span>,
-        <span>
-            outlook.at
-        </span>,
-        <span>
-            outlook.be
-        </span>,
-        <span>
-            outlook.bg
-        </span>,
-        <span>
-            outlook.bz
-        </span>,
-        <span>
-            outlook.cl
-        </span>,
-        <span>
-            outlook.cm
-        </span>,
-        <span>
-            outlook.co
-        </span>,
-        <span>
-            outlook.co.cr
-        </span>,
-        <span>
-            outlook.co.id
-        </span>,
-        <span>
-            outlook.co.il
-        </span>,
-        <span>
-            outlook.co.nz
-        </span>,
-        <span>
-            outlook.co.th
-        </span>,
-        <span>
-            outlook.com
-        </span>,
-        <span>
-            outlook.com.ar
-        </span>,
-        <span>
-            outlook.com.au
-        </span>,
-        <span>
-            outlook.com.br
-        </span>,
-        <span>
-            outlook.com.es
-        </span>,
-        <span>
-            outlook.com.gr
-        </span>,
-        <span>
-            outlook.com.hr
-        </span>,
-        <span>
-            outlook.com.pe
-        </span>,
-        <span>
-            outlook.com.py
-        </span>,
-        <span>
-            outlook.com.tr
-        </span>,
-        <span>
-            outlook.com.ua
-        </span>,
-        <span>
-            outlook.com.vn
-        </span>,
-        <span>
-            outlook.cz
-        </span>,
-        <span>
-            outlook.de
-        </span>,
-        <span>
-            outlook.dk
-        </span>,
-        <span>
-            outlook.ec
-        </span>,
-        <span>
-            outlook.fr
-        </span>,
-        <span>
-            outlook.hn
-        </span>,
-        <span>
-            outlook.ht
-        </span>,
-        <span>
-            outlook.hu
-        </span>,
-        <span>
-            outlook.ie
-        </span>,
-        <span>
-            outlook.in
-        </span>,
-        <span>
-            outlook.it
-        </span>,
-        <span>
-            outlook.jp
-        </span>,
-        <span>
-            outlook.kr
-        </span>,
-        <span>
-            outlook.la
-        </span>,
-        <span>
-            outlook.lv
-        </span>,
-        <span>
-            outlook.mx
-        </span>,
-        <span>
-            outlook.my
-        </span>,
-        <span>
-            outlook.pa
-        </span>,
-        <span>
-            outlook.ph
-        </span>,
-        <span>
-            outlook.pk
-        </span>,
-        <span>
-            outlook.pt
-        </span>,
-        <span>
-            outlook.ro
-        </span>,
-        <span>
-            outlookmobile.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             bing.ch
-        </span>,
-        <span>
-            playfabapi.com
-        </span>,
-        <span>
-            powerbi.com
-        </span>,
-        <span>
-            prodigymsn.com.mx
-        </span>,
-        <span>
-            revolution-computing.com
-        </span>,
-        <span>
-            revolutionanalytics.com
-        </span>,
-        <span>
-            s-microsoft.com
-        </span>,
-        <span>
-            s-msft.com
-        </span>,
-        <span>
-            s-msn.com
-        </span>,
-        <span>
-            seaofthieves.com
-        </span>,
-        <span>
-            securitymap.de
-        </span>,
-        <span>
-            sharepointonline.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             bing.co.at
-        </span>,
-        <span>
-            skypeassets.com
-        </span>,
-        <span>
-            start.com
-        </span>,
-        <span>
-            surface.com
-        </span>,
-        <span>
-            sway-cdn.com
-        </span>,
-        <span>
-            swiftkey.com
-        </span>,
-        <span>
-            sysinternals.com
-        </span>,
-        <span>
-            t1msn.com.mx
-        </span>,
-        <span>
-            trafficmanager.net
-        </span>,
-        <span>
-            trouter.io
-        </span>,
-        <span>
-            typescriptlang.org
-        </span>,
-        <span>
-            virtualearth.net
-        </span>,
-        <span>
-            visualstudio.com
-        </span>,
-        <span>
-            vsassets.io
-        </span>,
-        <span>
-            wbd.ms
-        </span>,
-        <span>
-            whiteboard.ms
-        </span>,
-        <span>
-            windows.com
-        </span>,
-        <span>
-            windows.de
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             bing.co.id
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            bing.co.in
+        </li>
+        <li class='truncate'>
+            bing.co.jp
+        </li>
+        <li class='truncate'>
+            bing.co.uk
+        </li>
+        <li class='truncate'>
+            bing.co.za
+        </li>
+        <li class='truncate'>
+            bing.com.ar
+        </li>
+        <li class='truncate'>
+            bing.com.au
+        </li>
+        <li class='truncate'>
+            bing.com.br
+        </li>
+        <li class='truncate'>
+            bing.com.cn
+        </li>
+        <li class='truncate'>
+            bing.com.es
+        </li>
+        <li class='truncate'>
+            bing.com.hk
+        </li>
+        <li class='truncate'>
+            bing.com.mx
+        </li>
+        <li class='truncate'>
+            bing.com.my
+        </li>
+        <li class='truncate'>
+            bing.com.pl
+        </li>
+        <li class='truncate'>
+            bing.com.sa
+        </li>
+        <li class='truncate'>
+            bing.com.tr
+        </li>
+        <li class='truncate'>
+            bing.de
+        </li>
+        <li class='truncate'>
+            bing.es
+        </li>
+        <li class='truncate'>
+            bing.fr
+        </li>
+        <li class='truncate'>
+            bing.gen.tr
+        </li>
+        <li class='truncate'>
+            bing.in
+        </li>
+        <li class='truncate'>
+            bing.it
+        </li>
+        <li class='truncate'>
+            bing.jp
+        </li>
+        <li class='truncate'>
+            bing.net
+        </li>
+        <li class='truncate'>
+            bing.nl
+        </li>
+        <li class='truncate'>
+            bing.no
+        </li>
+        <li class='truncate'>
+            bing.pl
+        </li>
+        <li class='truncate'>
+            bing.ru
+        </li>
+        <li class='truncate'>
+            bing.se
+        </li>
+        <li class='truncate'>
+            bingapis.com
+        </li>
+        <li class='truncate'>
+            bingsandbox.com
+        </li>
+        <li class='truncate'>
+            buildmypinnedsite.com
+        </li>
+        <li class='truncate'>
+            carpoint.ca
+        </li>
+        <li class='truncate'>
+            carpoint.com
+        </li>
+        <li class='truncate'>
+            ch9.ms
+        </li>
+        <li class='truncate'>
+            cloudapp.net
+        </li>
+        <li class='truncate'>
+            customsearch.ai
+        </li>
+        <li class='truncate'>
+            detelefoonvanbritt.nl
+        </li>
+        <li class='truncate'>
+            digitaldemocracy.tv
+        </li>
+        <li class='truncate'>
+            discovermsn.com
+        </li>
+        <li class='truncate'>
+            edgesv.net
+        </li>
+        <li class='truncate'>
+            footprintdns.com
+        </li>
+        <li class='truncate'>
+            forzamotorsport.net
+        </li>
+        <li class='truncate'>
+            gigjam.com
+        </li>
+        <li class='truncate'>
+            gpslab.net
+        </li>
+        <li class='truncate'>
+            groupme.com
+        </li>
+        <li class='truncate'>
+            halocdn.com
+        </li>
+        <li class='truncate'>
+            halowaypoint.com
+        </li>
+        <li class='truncate'>
+            hockeyapp.net
+        </li>
+        <li class='truncate'>
+            hololens.com
+        </li>
+        <li class='truncate'>
+            hotmail.com
+        </li>
+        <li class='truncate'>
+            hotmail.fr
+        </li>
+        <li class='truncate'>
+            hotmail.hu
+        </li>
+        <li class='truncate'>
+            hotmail.it
+        </li>
+        <li class='truncate'>
+            hotmail.jp
+        </li>
+        <li class='truncate'>
+            hotmail.la
+        </li>
+        <li class='truncate'>
+            hotmail.nl
+        </li>
+        <li class='truncate'>
+            hotmail.no
+        </li>
+        <li class='truncate'>
+            hotmail.ph
+        </li>
+        <li class='truncate'>
+            hotmail.pt
+        </li>
+        <li class='truncate'>
+            hotmail.se
+        </li>
+        <li class='truncate'>
+            hotmail.sk
+        </li>
+        <li class='truncate'>
+            howzitmsn.com
+        </li>
+        <li class='truncate'>
+            iis.net
+        </li>
+        <li class='truncate'>
+            imaginecup.pl
+        </li>
+        <li class='truncate'>
+            irbi.de
+        </li>
+        <li class='truncate'>
+            k-msedge.net
+        </li>
+        <li class='truncate'>
+            liga-tippgemeinschaft.de
+        </li>
+        <li class='truncate'>
+            live-int.com
+        </li>
+        <li class='truncate'>
+            live.co.uk
+        </li>
+        <li class='truncate'>
+            live.com.au
+        </li>
+        <li class='truncate'>
+            live.fr
+        </li>
+        <li class='truncate'>
+            live.jp
+        </li>
+        <li class='truncate'>
+            live.net
+        </li>
+        <li class='truncate'>
+            live.sg
+        </li>
+        <li class='truncate'>
+            livespacevision.com
+        </li>
+        <li class='truncate'>
+            livevz.net
+        </li>
+        <li class='truncate'>
+            lync.com
+        </li>
+        <li class='truncate'>
+            messenger.fr
+        </li>
+        <li class='truncate'>
+            microsoft.az
+        </li>
+        <li class='truncate'>
+            microsoft.be
+        </li>
+        <li class='truncate'>
+            microsoft.by
+        </li>
+        <li class='truncate'>
+            microsoft.ca
+        </li>
+        <li class='truncate'>
+            microsoft.cat
+        </li>
+        <li class='truncate'>
+            microsoft.ch
+        </li>
+        <li class='truncate'>
+            microsoft.cl
+        </li>
+        <li class='truncate'>
+            microsoft.cz
+        </li>
+        <li class='truncate'>
+            microsoft.de
+        </li>
+        <li class='truncate'>
+            microsoft.dk
+        </li>
+        <li class='truncate'>
+            microsoft.ee
+        </li>
+        <li class='truncate'>
+            microsoft.es
+        </li>
+        <li class='truncate'>
+            microsoft.eu
+        </li>
+        <li class='truncate'>
+            microsoft.fi
+        </li>
+        <li class='truncate'>
+            microsoft.fr
+        </li>
+        <li class='truncate'>
+            microsoft.ge
+        </li>
+        <li class='truncate'>
+            microsoft.hu
+        </li>
+        <li class='truncate'>
+            microsoft.is
+        </li>
+        <li class='truncate'>
+            microsoft.it
+        </li>
+        <li class='truncate'>
+            microsoft.jp
+        </li>
+        <li class='truncate'>
+            microsoft.lt
+        </li>
+        <li class='truncate'>
+            microsoft.lu
+        </li>
+        <li class='truncate'>
+            microsoft.lv
+        </li>
+        <li class='truncate'>
+            microsoft.md
+        </li>
+        <li class='truncate'>
+            microsoft.pl
+        </li>
+        <li class='truncate'>
+            microsoft.pt
+        </li>
+        <li class='truncate'>
+            microsoft.ro
+        </li>
+        <li class='truncate'>
+            microsoft.rs
+        </li>
+        <li class='truncate'>
+            microsoft.ru
+        </li>
+        <li class='truncate'>
+            microsoft.se
+        </li>
+        <li class='truncate'>
+            microsoft.si
+        </li>
+        <li class='truncate'>
+            microsoft.tv
+        </li>
+        <li class='truncate'>
+            microsoft.ua
+        </li>
+        <li class='truncate'>
+            microsoft.uz
+        </li>
+        <li class='truncate'>
+            microsoft.vn
+        </li>
+        <li class='truncate'>
+            microsoft365.com
+        </li>
+        <li class='truncate'>
+            microsoftadcentre.ca
+        </li>
+        <li class='truncate'>
+            microsoftcloud.com
+        </li>
+        <li class='truncate'>
+            microsoftedge.com
+        </li>
+        <li class='truncate'>
+            microsoftlinc.com
+        </li>
+        <li class='truncate'>
+            microsoftonline-p.com
+        </li>
+        <li class='truncate'>
+            microsoftonline.com
+        </li>
+        <li class='truncate'>
+            microsoftstore.com
+        </li>
+        <li class='truncate'>
+            microsoftstudios.com
+        </li>
+        <li class='truncate'>
+            mileiq.com
+        </li>
+        <li class='truncate'>
+            mono-project.com
+        </li>
+        <li class='truncate'>
+            msauth.net
+        </li>
+        <li class='truncate'>
+            msdn.com
+        </li>
+        <li class='truncate'>
+            msedge.net
+        </li>
+        <li class='truncate'>
+            msftconnecttest.com
+        </li>
+        <li class='truncate'>
+            msn.ae
+        </li>
+        <li class='truncate'>
+            msn.at
+        </li>
+        <li class='truncate'>
+            msn.be
+        </li>
+        <li class='truncate'>
+            msn.ca
+        </li>
+        <li class='truncate'>
+            msn.ch
+        </li>
+        <li class='truncate'>
+            msn.cn
+        </li>
+        <li class='truncate'>
+            msn.co.cr
+        </li>
+        <li class='truncate'>
+            msn.co.id
+        </li>
+        <li class='truncate'>
+            msn.co.il
+        </li>
+        <li class='truncate'>
+            msn.co.in
+        </li>
+        <li class='truncate'>
+            msn.co.jp
+        </li>
+        <li class='truncate'>
+            msn.co.kr
+        </li>
+        <li class='truncate'>
+            msn.co.nz
+        </li>
+        <li class='truncate'>
+            msn.co.th
+        </li>
+        <li class='truncate'>
+            msn.co.uk
+        </li>
+        <li class='truncate'>
+            msn.co.za
+        </li>
+        <li class='truncate'>
+            msn.com.au
+        </li>
+        <li class='truncate'>
+            msn.com.br
+        </li>
+        <li class='truncate'>
+            msn.com.cn
+        </li>
+        <li class='truncate'>
+            msn.com.gr
+        </li>
+        <li class='truncate'>
+            msn.com.hk
+        </li>
+        <li class='truncate'>
+            msn.com.mx
+        </li>
+        <li class='truncate'>
+            msn.com.my
+        </li>
+        <li class='truncate'>
+            msn.com.sg
+        </li>
+        <li class='truncate'>
+            msn.com.tr
+        </li>
+        <li class='truncate'>
+            msn.com.tw
+        </li>
+        <li class='truncate'>
+            msn.cr
+        </li>
+        <li class='truncate'>
+            msn.de
+        </li>
+        <li class='truncate'>
+            msn.dk
+        </li>
+        <li class='truncate'>
+            msn.es
+        </li>
+        <li class='truncate'>
+            msn.fi
+        </li>
+        <li class='truncate'>
+            msn.fr
+        </li>
+        <li class='truncate'>
+            msn.gr
+        </li>
+        <li class='truncate'>
+            msn.hu
+        </li>
+        <li class='truncate'>
+            msn.ie
+        </li>
+        <li class='truncate'>
+            msn.it
+        </li>
+        <li class='truncate'>
+            msn.jp
+        </li>
+        <li class='truncate'>
+            msn.kz
+        </li>
+        <li class='truncate'>
+            msn.net
+        </li>
+        <li class='truncate'>
+            msn.net.ru
+        </li>
+        <li class='truncate'>
+            msn.nl
+        </li>
+        <li class='truncate'>
+            msn.no
+        </li>
+        <li class='truncate'>
+            msn.pl
+        </li>
+        <li class='truncate'>
+            msn.pt
+        </li>
+        <li class='truncate'>
+            msn.ru
+        </li>
+        <li class='truncate'>
+            msn.se
+        </li>
+        <li class='truncate'>
+            msn.sg
+        </li>
+        <li class='truncate'>
+            msnarabia.com
+        </li>
+        <li class='truncate'>
+            msnautos.com
+        </li>
+        <li class='truncate'>
+            msncricket.com
+        </li>
+        <li class='truncate'>
+            msnlatino.com
+        </li>
+        <li class='truncate'>
+            msnnews.com
+        </li>
+        <li class='truncate'>
+            msnsports.com
+        </li>
+        <li class='truncate'>
+            msnstars.dk
+        </li>
+        <li class='truncate'>
+            msntravel.com
+        </li>
+        <li class='truncate'>
+            msnweather.com
+        </li>
+        <li class='truncate'>
+            msocdn.com
+        </li>
+        <li class='truncate'>
+            nuget.org
+        </li>
+        <li class='truncate'>
+            office.com
+        </li>
+        <li class='truncate'>
+            office.net
+        </li>
+        <li class='truncate'>
+            office365.com
+        </li>
+        <li class='truncate'>
+            officeppe.net
+        </li>
+        <li class='truncate'>
+            onenote.co
+        </li>
+        <li class='truncate'>
+            onenote.co.uk
+        </li>
+        <li class='truncate'>
+            onenote.com
+        </li>
+        <li class='truncate'>
+            onenote.mobi
+        </li>
+        <li class='truncate'>
+            onenote.net
+        </li>
+        <li class='truncate'>
+            onenote.org
+        </li>
+        <li class='truncate'>
+            onestore.ms
+        </li>
+        <li class='truncate'>
+            outlook.at
+        </li>
+        <li class='truncate'>
+            outlook.be
+        </li>
+        <li class='truncate'>
+            outlook.bg
+        </li>
+        <li class='truncate'>
+            outlook.bz
+        </li>
+        <li class='truncate'>
+            outlook.cl
+        </li>
+        <li class='truncate'>
+            outlook.cm
+        </li>
+        <li class='truncate'>
+            outlook.co
+        </li>
+        <li class='truncate'>
+            outlook.co.cr
+        </li>
+        <li class='truncate'>
+            outlook.co.id
+        </li>
+        <li class='truncate'>
+            outlook.co.il
+        </li>
+        <li class='truncate'>
+            outlook.co.nz
+        </li>
+        <li class='truncate'>
+            outlook.co.th
+        </li>
+        <li class='truncate'>
+            outlook.com
+        </li>
+        <li class='truncate'>
+            outlook.com.ar
+        </li>
+        <li class='truncate'>
+            outlook.com.au
+        </li>
+        <li class='truncate'>
+            outlook.com.br
+        </li>
+        <li class='truncate'>
+            outlook.com.es
+        </li>
+        <li class='truncate'>
+            outlook.com.gr
+        </li>
+        <li class='truncate'>
+            outlook.com.hr
+        </li>
+        <li class='truncate'>
+            outlook.com.pe
+        </li>
+        <li class='truncate'>
+            outlook.com.py
+        </li>
+        <li class='truncate'>
+            outlook.com.tr
+        </li>
+        <li class='truncate'>
+            outlook.com.ua
+        </li>
+        <li class='truncate'>
+            outlook.com.vn
+        </li>
+        <li class='truncate'>
+            outlook.cz
+        </li>
+        <li class='truncate'>
+            outlook.de
+        </li>
+        <li class='truncate'>
+            outlook.dk
+        </li>
+        <li class='truncate'>
+            outlook.ec
+        </li>
+        <li class='truncate'>
+            outlook.fr
+        </li>
+        <li class='truncate'>
+            outlook.hn
+        </li>
+        <li class='truncate'>
+            outlook.ht
+        </li>
+        <li class='truncate'>
+            outlook.hu
+        </li>
+        <li class='truncate'>
+            outlook.ie
+        </li>
+        <li class='truncate'>
+            outlook.in
+        </li>
+        <li class='truncate'>
+            outlook.it
+        </li>
+        <li class='truncate'>
+            outlook.jp
+        </li>
+        <li class='truncate'>
+            outlook.kr
+        </li>
+        <li class='truncate'>
+            outlook.la
+        </li>
+        <li class='truncate'>
+            outlook.lv
+        </li>
+        <li class='truncate'>
+            outlook.mx
+        </li>
+        <li class='truncate'>
+            outlook.my
+        </li>
+        <li class='truncate'>
+            outlook.pa
+        </li>
+        <li class='truncate'>
+            outlook.ph
+        </li>
+        <li class='truncate'>
+            outlook.pk
+        </li>
+        <li class='truncate'>
+            outlook.pt
+        </li>
+        <li class='truncate'>
+            outlook.ro
+        </li>
+        <li class='truncate'>
+            outlookmobile.com
+        </li>
+        <li class='truncate'>
+            playfabapi.com
+        </li>
+        <li class='truncate'>
+            powerbi.com
+        </li>
+        <li class='truncate'>
+            prodigymsn.com.mx
+        </li>
+        <li class='truncate'>
+            revolution-computing.com
+        </li>
+        <li class='truncate'>
+            revolutionanalytics.com
+        </li>
+        <li class='truncate'>
+            s-microsoft.com
+        </li>
+        <li class='truncate'>
+            s-msft.com
+        </li>
+        <li class='truncate'>
+            s-msn.com
+        </li>
+        <li class='truncate'>
+            seaofthieves.com
+        </li>
+        <li class='truncate'>
+            securitymap.de
+        </li>
+        <li class='truncate'>
+            sharepointonline.com
+        </li>
+        <li class='truncate'>
+            skypeassets.com
+        </li>
+        <li class='truncate'>
+            start.com
+        </li>
+        <li class='truncate'>
+            surface.com
+        </li>
+        <li class='truncate'>
+            sway-cdn.com
+        </li>
+        <li class='truncate'>
+            swiftkey.com
+        </li>
+        <li class='truncate'>
+            sysinternals.com
+        </li>
+        <li class='truncate'>
+            t1msn.com.mx
+        </li>
+        <li class='truncate'>
+            trafficmanager.net
+        </li>
+        <li class='truncate'>
+            trouter.io
+        </li>
+        <li class='truncate'>
+            typescriptlang.org
+        </li>
+        <li class='truncate'>
+            virtualearth.net
+        </li>
+        <li class='truncate'>
+            visualstudio.com
+        </li>
+        <li class='truncate'>
+            vsassets.io
+        </li>
+        <li class='truncate'>
+            wbd.ms
+        </li>
+        <li class='truncate'>
+            whiteboard.ms
+        </li>
+        <li class='truncate'>
+            windows.com
+        </li>
+        <li class='truncate'>
+            windows.de
+        </li>
+        <li class='truncate'>
             windows.nl
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowslive.be
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowslive.com.br
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowslive.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowsmarketplace.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowsphone.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowssearch-exp.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowssearch.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             windowsupdate.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             winhec.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             winhec.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wunderlist.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xamarin.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xbox.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xboxemea.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xboxlive.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             yupimsn.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

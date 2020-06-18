@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/o333o.com.ico' width="32" height="32"/> o333o.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/o333o.com.ico' width="32" height="32" class='inline-block' /> o333o.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/AdSpyglass.html">AdSpyglass</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.adspyglass.com&#x2F;privacy_policy" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.adspyglass.com&#x2F;privacy_policy</a>
                 </li>
-                <li>
-                    Rank: &#35;528<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;527<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.24&#37; (165 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.18&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 2<small>/3</small></li>
@@ -67,135 +81,143 @@
                         <li>cache: 1<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Document</span>,
                     <span>Script</span>,
                     <span>XHR</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/o333o.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/o333o.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>a</span>, 
+                    <span>cdn</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>a</span>, 
-        <span>cdn</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>window.indexedDB</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111333" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111333</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111334" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111334</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111335" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111335</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111298" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111298</a></li>
-            <li><a href="http://o333o.com&#x2F;vast-im.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;vast-im.js</a></li>
-            <li><a href="http://o333o.com&#x2F;asg_embed.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;asg_embed.js</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;200479" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;200479</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98523" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98523</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98524" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98524</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98525" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98525</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98526" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98526</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106349" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106349</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106350" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106350</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106351" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106351</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106352" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106352</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106355" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106355</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106347" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106347</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106348" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106348</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106356" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106356</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106357" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106357</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106358" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106358</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106359" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106359</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106360" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106360</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55862" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55862</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55863" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55863</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55864" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55864</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;44923" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;44923</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10515" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10515</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10516" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10516</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;44939" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;44939</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17093" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17093</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17094" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17094</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;202419" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;202419</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10969" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10969</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56334" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56334</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56335" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56335</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56336" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56336</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56337" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56337</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79635" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79635</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79636" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79636</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79637" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79637</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79638" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79638</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79639" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79639</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104853" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104853</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104854" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104854</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104855" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104855</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104857" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104857</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104851" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104851</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;43420" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;43420</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17390" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17390</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17391" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17391</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;187148" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;187148</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;211752" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;211752</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;112166" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;112166</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;112165" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;112165</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;184707" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;184707</a></li>
-            <li><a href="http://o333o.com&#x2F;embed.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;embed.js</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;4457" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;4457</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;226298" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;226298</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;224679" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;224679</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;87953" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;87953</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104184" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104184</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48855" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48855</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48856" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48856</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48857" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48857</a></li>
-            <li><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48858" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48858</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111333" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111333</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111334" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111334</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111335" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111335</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;111298" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;111298</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;vast-im.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;vast-im.js</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;asg_embed.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;asg_embed.js</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;200479" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;200479</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98523" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98523</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98524" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98524</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98525" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98525</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;98526" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;98526</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106349" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106349</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106350" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106350</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106351" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106351</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106352" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106352</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106355" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106355</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106347" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106347</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106348" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106348</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106356" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106356</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106357" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106357</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106358" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106358</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106359" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106359</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;106360" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;106360</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55862" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55862</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55863" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55863</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;55864" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;55864</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;44923" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;44923</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10515" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10515</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10516" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10516</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;44939" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;44939</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17093" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17093</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17094" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17094</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;202419" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;202419</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;10969" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;10969</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56334" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56334</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56335" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56335</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56336" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56336</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;56337" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;56337</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79635" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79635</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79636" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79636</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79637" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79637</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79638" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79638</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;79639" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;79639</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104853" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104853</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104854" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104854</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104855" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104855</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104857" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104857</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104851" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104851</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;43420" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;43420</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17390" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17390</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;17391" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;17391</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;187148" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;187148</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;211752" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;211752</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;112166" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;112166</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;112165" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;112165</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;184707" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;184707</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;embed.js" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;embed.js</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;4457" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;4457</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;226298" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;226298</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;224679" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;224679</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;87953" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;87953</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;104184" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;104184</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48855" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48855</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48856" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48856</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48857" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48857</a></li>
+        <li class='truncate'><a href="http://o333o.com&#x2F;api&#x2F;spots&#x2F;48858" target="_blank" class="external" rel="noreferrer noopener">o333o.com&#x2F;api&#x2F;spots&#x2F;48858</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

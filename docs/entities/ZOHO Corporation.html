@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>ZOHO Corporation</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>ZOHO Corporation</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: ZOHO
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.11%</li>
@@ -51,390 +63,398 @@
                         <li>total - 0.15%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/ZOHO Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/ZOHO Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/zoho.com.html">zoho.com (0.07%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/zohopublic.com.html">zohopublic.com (0.06%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/site24x7rum.com.html">site24x7rum.com (0.05%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/pagesense.io.html">pagesense.io (0.03%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/zohostatic.com.html">zohostatic.com (0.03%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/maillist-manage.com.html">maillist-manage.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/zoho.eu.html">zoho.eu (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/zohopublic.eu.html">zohopublic.eu (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/zohodiscussions.com.html">zohodiscussions.com (0.00%)</a>
-        </span>,
-        <span>
-            zohocreatorplus.com
-        </span>,
-        <span>
-            mobilisten.io
-        </span>,
-        <span>
-            notebook.app
-        </span>,
-        <span>
-            orchestly.com
-        </span>,
-        <span>
-            cliqtrix.com
-        </span>,
-        <span>
-            painpointpitch.com
-        </span>,
-        <span>
-            postipo-nonprofit.com
-        </span>,
-        <span>
-            postipo-nonprofits.com
-        </span>,
-        <span>
-            postipononprofit.com
-        </span>,
-        <span>
-            salesinbox.com
-        </span>,
-        <span>
-            site24x7.com
-        </span>,
-        <span>
-            site24x7.eu
-        </span>,
-        <span>
-            delugelang.com
-        </span>,
-        <span>
-            site24x7rum.eu
-        </span>,
-        <span>
-            site24x7static.com
-        </span>,
-        <span>
-            socialjournal.biz
-        </span>,
-        <span>
-            sprintsapp.com
-        </span>,
-        <span>
-            sdpondemand.com
-        </span>,
-        <span>
-            sdpondemand.eu
-        </span>,
-        <span>
-            thezoho.com
-        </span>,
-        <span>
-            transmail.com
-        </span>,
-        <span>
-            transmail.net
-        </span>,
-        <span>
-            transmail.network
-        </span>,
-        <span>
-            zconfirmation.com
-        </span>,
-        <span>
-            zcsend.net
-        </span>,
-        <span>
-            ziasearch.com
-        </span>,
-        <span>
-            zinvitation.com
-        </span>,
-        <span>
-            gozohosocial.com
-        </span>,
-        <span>
-            zoho.com.mx
-        </span>,
-        <span>
-            zoho.community
-        </span>,
-        <span>
-            log360cloud.com
-        </span>,
-        <span>
-            zoho.in
-        </span>,
-        <span>
-            zoho.lat
-        </span>,
-        <span>
-            zoho.mx
-        </span>,
-        <span>
-            zoho.net
-        </span>,
-        <span>
-            zoho.uno
-        </span>,
-        <span>
-            zoho1.com
-        </span>,
-        <span>
-            zoho-inventory.com
-        </span>,
-        <span>
-            zohoaccounts.com
-        </span>,
-        <span>
-            zohoanalytics.com
-        </span>,
-        <span>
-            zohoappcreator.com
-        </span>,
-        <span>
-            zohoassist.com
-        </span>,
-        <span>
-            zohobi.com
-        </span>,
-        <span>
-            zohobook.com
-        </span>,
-        <span>
-            zohobooks.com
-        </span>,
-        <span>
-            zohocampaigns.com
-        </span>,
-        <span>
-            zohochallenge.com
-        </span>,
-        <span>
-            zohocheckout.com
-        </span>,
-        <span>
-            zohocommerce.com
-        </span>,
-        <span>
-            zohocompany.com
-        </span>,
-        <span>
-            zohoconnect.com
-        </span>,
-        <span>
-            zohocreator.com
-        </span>,
-        <span>
-            classesapp.com
-        </span>,
-        <span>
-            zohocreatorportal.com
-        </span>,
-        <span>
-            zohocrm.com
-        </span>,
-        <span>
-            zohodesk.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             bigin.com
-        </span>,
-        <span>
-            zohodns.com
-        </span>,
-        <span>
-            zohodocs.com
-        </span>,
-        <span>
-            zohodomains.com
-        </span>,
-        <span>
-            zohoexpense.com
-        </span>,
-        <span>
-            zohoexpenses.com
-        </span>,
-        <span>
-            zohoforms.com
-        </span>,
-        <span>
-            zohogadgets.com
-        </span>,
-        <span>
-            zohogst.com
-        </span>,
-        <span>
-            zohohost.com
-        </span>,
-        <span>
-            zohohost.eu
-        </span>,
-        <span>
-            zohoinsights.com
-        </span>,
-        <span>
-            zohoinventory.com
-        </span>,
-        <span>
-            zohoinventorymanagement.com
-        </span>,
-        <span>
-            zohoinvoice.com
-        </span>,
-        <span>
-            zoholivedesk.com
-        </span>,
-        <span>
-            zohom.com
-        </span>,
-        <span>
-            zohomail.com
-        </span>,
-        <span>
-            zohomarketplace.com
-        </span>,
-        <span>
-            zohomeeting.com
-        </span>,
-        <span>
-            zohomeetups.com
-        </span>,
-        <span>
-            zohomexico.com
-        </span>,
-        <span>
-            zohonote.com
-        </span>,
-        <span>
-            zohonotes.com
-        </span>,
-        <span>
-            zohoorchestly.com
-        </span>,
-        <span>
-            zohoordermanagement.com
-        </span>,
-        <span>
-            zohoplatform.com
-        </span>,
-        <span>
-            zohoplatform.eu
-        </span>,
-        <span>
-            zohoportal.com
-        </span>,
-        <span>
-            zohoportal.eu
-        </span>,
-        <span>
-            zohopresenter.com
-        </span>,
-        <span>
-            zohoprojects.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            classesapp.com
+        </li>
+        <li class='truncate'>
+            cliqtrix.com
+        </li>
+        <li class='truncate'>
+            delugelang.com
+        </li>
+        <li class='truncate'>
+            gozohosocial.com
+        </li>
+        <li class='truncate'>
+            log360cloud.com
+        </li>
+        <li class='truncate'>
             maillist-manage.eu
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             manageengine.com
-        </span>,
-        <span>
-            zohorecruit.com
-        </span>,
-        <span>
-            zohoremotely.com
-        </span>,
-        <span>
-            zohoreports.com
-        </span>,
-        <span>
-            zohoreports.eu
-        </span>,
-        <span>
-            zohosalesiq.com
-        </span>,
-        <span>
-            zohosheet.com
-        </span>,
-        <span>
-            zohoshow.com
-        </span>,
-        <span>
-            zohosites.com
-        </span>,
-        <span>
-            zohosocial.com
-        </span>,
-        <span>
-            zohosprints.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mnge.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            mobilisten.io
+        </li>
+        <li class='truncate'>
+            notebook.app
+        </li>
+        <li class='truncate'>
+            orchestly.com
+        </li>
+        <li class='truncate'>
+            painpointpitch.com
+        </li>
+        <li class='truncate'>
+            postipo-nonprofit.com
+        </li>
+        <li class='truncate'>
+            postipo-nonprofits.com
+        </li>
+        <li class='truncate'>
+            postipononprofit.com
+        </li>
+        <li class='truncate'>
+            salesinbox.com
+        </li>
+        <li class='truncate'>
+            site24x7.com
+        </li>
+        <li class='truncate'>
+            site24x7.eu
+        </li>
+        <li class='truncate'>
+            site24x7rum.eu
+        </li>
+        <li class='truncate'>
+            site24x7static.com
+        </li>
+        <li class='truncate'>
+            socialjournal.biz
+        </li>
+        <li class='truncate'>
+            sprintsapp.com
+        </li>
+        <li class='truncate'>
+            sdpondemand.com
+        </li>
+        <li class='truncate'>
+            sdpondemand.eu
+        </li>
+        <li class='truncate'>
+            thezoho.com
+        </li>
+        <li class='truncate'>
+            transmail.com
+        </li>
+        <li class='truncate'>
+            transmail.net
+        </li>
+        <li class='truncate'>
+            transmail.network
+        </li>
+        <li class='truncate'>
+            zconfirmation.com
+        </li>
+        <li class='truncate'>
+            zcsend.net
+        </li>
+        <li class='truncate'>
+            ziasearch.com
+        </li>
+        <li class='truncate'>
+            zinvitation.com
+        </li>
+        <li class='truncate'>
+            zoho.com.mx
+        </li>
+        <li class='truncate'>
+            zoho.community
+        </li>
+        <li class='truncate'>
+            zoho.in
+        </li>
+        <li class='truncate'>
+            zoho.lat
+        </li>
+        <li class='truncate'>
+            zoho.mx
+        </li>
+        <li class='truncate'>
+            zoho.net
+        </li>
+        <li class='truncate'>
+            zoho.uno
+        </li>
+        <li class='truncate'>
+            zoho1.com
+        </li>
+        <li class='truncate'>
+            zoho-inventory.com
+        </li>
+        <li class='truncate'>
+            zohoaccounts.com
+        </li>
+        <li class='truncate'>
+            zohoanalytics.com
+        </li>
+        <li class='truncate'>
+            zohoappcreator.com
+        </li>
+        <li class='truncate'>
+            zohoassist.com
+        </li>
+        <li class='truncate'>
+            zohobi.com
+        </li>
+        <li class='truncate'>
+            zohobook.com
+        </li>
+        <li class='truncate'>
+            zohobooks.com
+        </li>
+        <li class='truncate'>
+            zohocampaigns.com
+        </li>
+        <li class='truncate'>
+            zohochallenge.com
+        </li>
+        <li class='truncate'>
+            zohocheckout.com
+        </li>
+        <li class='truncate'>
+            zohocommerce.com
+        </li>
+        <li class='truncate'>
+            zohocompany.com
+        </li>
+        <li class='truncate'>
+            zohoconnect.com
+        </li>
+        <li class='truncate'>
+            zohocreator.com
+        </li>
+        <li class='truncate'>
+            zohocreatorplus.com
+        </li>
+        <li class='truncate'>
+            zohocreatorportal.com
+        </li>
+        <li class='truncate'>
+            zohocrm.com
+        </li>
+        <li class='truncate'>
+            zohodesk.com
+        </li>
+        <li class='truncate'>
+            zohodns.com
+        </li>
+        <li class='truncate'>
+            zohodocs.com
+        </li>
+        <li class='truncate'>
+            zohodomains.com
+        </li>
+        <li class='truncate'>
+            zohoexpense.com
+        </li>
+        <li class='truncate'>
+            zohoexpenses.com
+        </li>
+        <li class='truncate'>
+            zohoforms.com
+        </li>
+        <li class='truncate'>
+            zohogadgets.com
+        </li>
+        <li class='truncate'>
+            zohogst.com
+        </li>
+        <li class='truncate'>
+            zohohost.com
+        </li>
+        <li class='truncate'>
+            zohohost.eu
+        </li>
+        <li class='truncate'>
+            zohoinsights.com
+        </li>
+        <li class='truncate'>
+            zohoinventory.com
+        </li>
+        <li class='truncate'>
+            zohoinventorymanagement.com
+        </li>
+        <li class='truncate'>
+            zohoinvoice.com
+        </li>
+        <li class='truncate'>
+            zoholivedesk.com
+        </li>
+        <li class='truncate'>
+            zohom.com
+        </li>
+        <li class='truncate'>
+            zohomail.com
+        </li>
+        <li class='truncate'>
+            zohomarketplace.com
+        </li>
+        <li class='truncate'>
+            zohomeeting.com
+        </li>
+        <li class='truncate'>
+            zohomeetups.com
+        </li>
+        <li class='truncate'>
+            zohomexico.com
+        </li>
+        <li class='truncate'>
+            zohonote.com
+        </li>
+        <li class='truncate'>
+            zohonotes.com
+        </li>
+        <li class='truncate'>
+            zohoorchestly.com
+        </li>
+        <li class='truncate'>
+            zohoordermanagement.com
+        </li>
+        <li class='truncate'>
+            zohoplatform.com
+        </li>
+        <li class='truncate'>
+            zohoplatform.eu
+        </li>
+        <li class='truncate'>
+            zohoportal.com
+        </li>
+        <li class='truncate'>
+            zohoportal.eu
+        </li>
+        <li class='truncate'>
+            zohopresenter.com
+        </li>
+        <li class='truncate'>
+            zohoprojects.com
+        </li>
+        <li class='truncate'>
+            zohorecruit.com
+        </li>
+        <li class='truncate'>
+            zohoremotely.com
+        </li>
+        <li class='truncate'>
+            zohoreports.com
+        </li>
+        <li class='truncate'>
+            zohoreports.eu
+        </li>
+        <li class='truncate'>
+            zohosalesiq.com
+        </li>
+        <li class='truncate'>
+            zohosheet.com
+        </li>
+        <li class='truncate'>
+            zohoshow.com
+        </li>
+        <li class='truncate'>
+            zohosites.com
+        </li>
+        <li class='truncate'>
+            zohosocial.com
+        </li>
+        <li class='truncate'>
+            zohosprints.com
+        </li>
+        <li class='truncate'>
             zohostatic.eu
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohostore.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohosubscription.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohosubscriptions.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohosubscriptions.in
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohosupport.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohosurvey.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohouno.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohovault.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohoworkerly.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohoworkplace.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             zohowriter.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

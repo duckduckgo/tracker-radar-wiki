@@ -16,34 +16,25 @@
 </head>
 
 <body>
+    <div class="container mx-auto">
+        {{>navigation}}
 
-<div class="container-lg px-3 my-5 markdown-body">
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
-<div class="top-container">
-    <div class="top-entities">
-        <div><strong>Top 100 Entities</strong></div>
-        <ol>
-        {{#entities}}
-            <li><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
-        {{/entities}}
-        </ol>
-    </div>
-    <div class="top-trackers">
-        <div><strong>Top 100 Domains</strong></div>
-        <ol>
-        {{#domains}}
-            <li><a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
-        {{/domains}}
-        </ol>
-    </div>
-</div>
-
-{{>footer}}
+        <div class="p-5 grid grid-cols-1 row-gap-10 md:grid-cols-2 md:row-gap-2">
+            <div class="top-entities">
+                <div class='section-header'>Top 100 Entities</div>
+                <ol class='list-decimal'>
+                {{#entities}}
+                    <li class='ml-5'><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
+                {{/entities}}
+                </ol>
+            </div>
+            <div class="top-trackers">
+                <div class='section-header'>Top 100 Domains</div>
+                <ol class='list-decimal'>
+                {{#domains}}
+                    <li class='ml-5'><a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
+                {{/domains}}
+                </ol>
+            </div>
+        </div>
+    {{>footer}}

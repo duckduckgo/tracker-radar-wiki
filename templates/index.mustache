@@ -26,84 +26,76 @@
 
 <body>
 
-<div class="container-lg px-3 my-5 markdown-body">
+<div class="container mx-auto">
+    {{>navigation}}
 
-<h1>Tracker Radar Wiki</h1>
-
-<div class='bg-white search-box'>
-    <div><strong>Search:</strong></div>
-    <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-    <ul class='search-box__results' style="list-style-type: none;"></ul>
-</div>
-
-<div class="last-update">
-    <div><strong>Last Updated</strong></div>
-    {{#lastCommitInfo}}
-    <div>
-        <span>{{date}}</span>&nbsp;&bull;
-        <span>{{crawled}} top sites crawled</span>&nbsp;&bull;
-        <span><a href="https://github.com/duckduckgo/tracker-radar/tree/{{hash}}" target="_blank">Github Commit</a></span>
+    <div class="mx-auto p-5">
+        <h3 class="section-header">Last Updated</h3>
+        {{#lastCommitInfo}}
+        <div>
+            <span>{{date}}</span>&nbsp;&bull;
+            <span>{{crawled}} top sites crawled</span>&nbsp;&bull;
+            <span><a href="https://github.com/duckduckgo/tracker-radar/tree/{{hash}}" target="_blank">Github Commit</a></span>
+        </div>
+        {{/lastCommitInfo}}
     </div>
-    {{/lastCommitInfo}}
-</div>
 
-<div class="top-container">
-    <div class="top-entities">
-        <div><strong>Top 10 Entities</strong></div>
-        <ol>
-        {{#entities}}
-            <li><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
-        {{/entities}}
-        </ol>
+    <div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:row-gap-2 p-5 border-b">
+        <div class="top-entities">
+            <h3 class="section-header">Top Ten Entities</h3>
+            <ol class="list-decimal">
+            {{#entities}}
+                <li class='ml-5 py-1'><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
+            {{/entities}}
+            </ol>
+        </div>
+        <div class="top-trackers">
+            <h3 class="section-header">Top 10 Domains</h3>
+            <ol class="list-decimal">
+            {{#domains}}
+                <li class='ml-5 py-1'><img src='https://external-content.duckduckgo.com/ip3/{{domain}}.ico' width="16" height="16" class='inline-block' /> <a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
+            {{/domains}}
+            </ol>
+        </div>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='domains'># of domains</option>
+                    <option value='entities'># of entities</option>
+                    <option value='fingerprinting'>fingerprinting scores</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+        <a href="./top100.html">See More...</a>
     </div>
-    <div class="top-trackers">
-        <div><strong>Top 10 Domains</strong></div>
-        <ol>
-        {{#domains}}
-            <li><img src='https://external-content.duckduckgo.com/ip3/{{domain}}.ico' width="16" height="16"/> <a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
-        {{/domains}}
-        </ol>
+
+    <div class="p-5 border-b">
+        <h3 class="section-header">Domains By Category</h3>
+        <ul class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2'>
+        {{#categories}}
+            <li><a href="./categories/{{name}}.html">{{name}}</a></li>
+        {{/categories}}
+        </ul>
     </div>
-    <a href="./top100.html">See More...</a>
-</div>
 
-<div>
-    <div><strong>Domains by Category</strong></div>
-    <ul class="cat-list">
-    {{#categories}}
-        <li><a href="./categories/{{name}}.html">{{name}}</a></li>
-    {{/categories}}
-    </ul>
-</div>
+    <div class="p-5 border-b">
+        <h3 class="section-header">Trending Domains</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.domains}}
+            <li><img src='https://external-content.duckduckgo.com/ip3/{{name}}.ico' width="16" height="16" class='inline-block' /> <a href="./domains/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&#37;</span></li>
+        {{/trending.domains}}
+        </ul>
+    </div>
 
-<div>
-    <div><strong>Trending Domains</strong></div>
-    <ul class="trending-list">
-    {{#trending.domains}}
-        <li><img src='https://external-content.duckduckgo.com/ip3/{{name}}.ico' width="16" height="16"/> <a href="./domains/{{name}}.html">{{name}}</a> - <span class="{{htmlClass}}">{{{htmlSymbol}}}{{diff}}&#37;</span></li>
-    {{/trending.domains}}
-    </ul>
-</div>
-
-<div>
-    <div><strong>Trending Entities</strong></div>
-    <ul class="trending-list">
-    {{#trending.entities}}
-        <li><a href="./entities/{{name}}.html">{{name}}</a> - <span class="{{htmlClass}}">{{{htmlSymbol}}}{{diff}}&#37;</span></li>
-    {{/trending.entities}}
-    </ul>
-</div>
-
-<div class='graph-container'>
-    <div><strong>Historic data</strong></div>
-    <label class='d-block'><select class='graph-container__controller'>
-        <option selected value='domains'># of domains</option>
-        <option value='entities'># of entities</option>
-        <option value='fingerprinting'>fingerprinting scores</option>
-    </select></label>
-    <canvas class='graph-container__graph' width="450" height="300"></canvas>
-</div>
-
-</div>
+    <div class="p-5 mb-5">
+        <h3 class="section-header">Trending Entities</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.entities}}
+            <li><a href="./entities/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&#37;</span></li>
+        {{/trending.entities}}
+        </ul>
+    </div>
 
 {{>footer}}

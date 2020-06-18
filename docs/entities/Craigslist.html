@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,190 +46,199 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Craigslist</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Craigslist</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Craigslist
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Craigslist.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Craigslist.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
-            craigslist.com.tw
-        </span>,
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             cl.com
-        </span>,
-        <span>
-            craigslist.at
-        </span>,
-        <span>
-            craigslist.be
-        </span>,
-        <span>
-            craigslist.biz
-        </span>,
-        <span>
-            craigslist.ca
-        </span>,
-        <span>
-            craigslist.ch
-        </span>,
-        <span>
-            craigslist.cl
-        </span>,
-        <span>
-            craigslist.cn
-        </span>,
-        <span>
-            craigslist.co.hu
-        </span>,
-        <span>
-            craigslist.co.il
-        </span>,
-        <span>
-            craigslist.co.in
-        </span>,
-        <span>
-            craigslist.co.kr
-        </span>,
-        <span>
-            craigslist.co.nz
-        </span>,
-        <span>
-            craigslist.co.th
-        </span>,
-        <span>
-            craigslist.co.uk
-        </span>,
-        <span>
-            craigslist.co.za
-        </span>,
-        <span>
-            craigslist.com
-        </span>,
-        <span>
-            craigslist.com
-        </span>,
-        <span>
-            craigslist.com.au
-        </span>,
-        <span>
-            craigslist.com.cn
-        </span>,
-        <span>
-            craigslist.com.mx
-        </span>,
-        <span>
-            craigslist.com.pe
-        </span>,
-        <span>
-            craigslist.com.ph
-        </span>,
-        <span>
-            craigslist.com.sg
-        </span>,
-        <span>
-            craigslist.com.tr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             cl.uk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            craigslist.at
+        </li>
+        <li class='truncate'>
+            craigslist.be
+        </li>
+        <li class='truncate'>
+            craigslist.biz
+        </li>
+        <li class='truncate'>
+            craigslist.ca
+        </li>
+        <li class='truncate'>
+            craigslist.ch
+        </li>
+        <li class='truncate'>
+            craigslist.cl
+        </li>
+        <li class='truncate'>
+            craigslist.cn
+        </li>
+        <li class='truncate'>
+            craigslist.co.hu
+        </li>
+        <li class='truncate'>
+            craigslist.co.il
+        </li>
+        <li class='truncate'>
+            craigslist.co.in
+        </li>
+        <li class='truncate'>
+            craigslist.co.kr
+        </li>
+        <li class='truncate'>
+            craigslist.co.nz
+        </li>
+        <li class='truncate'>
+            craigslist.co.th
+        </li>
+        <li class='truncate'>
+            craigslist.co.uk
+        </li>
+        <li class='truncate'>
+            craigslist.co.za
+        </li>
+        <li class='truncate'>
+            craigslist.com
+        </li>
+        <li class='truncate'>
+            craigslist.com
+        </li>
+        <li class='truncate'>
+            craigslist.com.au
+        </li>
+        <li class='truncate'>
+            craigslist.com.cn
+        </li>
+        <li class='truncate'>
+            craigslist.com.mx
+        </li>
+        <li class='truncate'>
+            craigslist.com.pe
+        </li>
+        <li class='truncate'>
+            craigslist.com.ph
+        </li>
+        <li class='truncate'>
+            craigslist.com.sg
+        </li>
+        <li class='truncate'>
+            craigslist.com.tr
+        </li>
+        <li class='truncate'>
+            craigslist.com.tw
+        </li>
+        <li class='truncate'>
             craigslist.cz
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.de
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.dk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.es
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.eu
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.fi
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.fr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.gr
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.hk
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.in
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.info
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.it
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.jobs
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.jp
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.mobi
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.mx
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.net.au
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.nl
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.org
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.ph
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.pl
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.pt
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.se
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.tv
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             craigslist.uk
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

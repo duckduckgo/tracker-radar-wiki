@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>PayPal, Inc.</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>PayPal, Inc.</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: PayPal
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.80%</li>
@@ -51,243 +63,251 @@
                         <li>total - 1.34%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/PayPal, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/PayPal, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/paypalobjects.com.html">paypalobjects.com (1.19%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/paypal.com.html">paypal.com (0.76%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/braintreegateway.com.html">braintreegateway.com (0.08%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/jetlore.com.html">jetlore.com (0.01%)</a>
-        </span>,
-        <span>
-            paypal.com.br
-        </span>,
-        <span>
-            paypal-community.com
-        </span>,
-        <span>
-            paypal-deutschland.de
-        </span>,
-        <span>
-            paypal-forward.com
-        </span>,
-        <span>
-            paypal-france.fr
-        </span>,
-        <span>
-            paypal-information.com
-        </span>,
-        <span>
-            paypal-knowledge-test.com
-        </span>,
-        <span>
-            paypal-knowledge.com
-        </span>,
-        <span>
-            paypal-latam.com
-        </span>,
-        <span>
-            paypal-marketing.pl
-        </span>,
-        <span>
-            paypal-mena.com
-        </span>,
-        <span>
-            paypal-nakit.com
-        </span>,
-        <span>
-            paypal-prepagata.com
-        </span>,
-        <span>
-            paypal-prepaid.com
-        </span>,
-        <span>
-            paypal.at
-        </span>,
-        <span>
-            paypal.be
-        </span>,
-        <span>
-            paypal.ca
-        </span>,
-        <span>
-            paypal.ch
-        </span>,
-        <span>
-            paypal.cl
-        </span>,
-        <span>
-            paypal.cn
-        </span>,
-        <span>
-            paypal.co
-        </span>,
-        <span>
-            paypal.co.id
-        </span>,
-        <span>
-            paypal.co.il
-        </span>,
-        <span>
-            paypal.co.in
-        </span>,
-        <span>
-            paypal.co.kr
-        </span>,
-        <span>
-            paypal.co.nz
-        </span>,
-        <span>
-            paypal.co.th
-        </span>,
-        <span>
-            paypal.co.uk
-        </span>,
-        <span>
-            paypal.co.za
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             braintree-api.com
-        </span>,
-        <span>
-            paypal.com.ar
-        </span>,
-        <span>
-            paypal.com.au
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             paypal-apps.com
-        </span>,
-        <span>
-            paypal.com.hk
-        </span>,
-        <span>
-            paypal.com.mx
-        </span>,
-        <span>
-            paypal.com.my
-        </span>,
-        <span>
-            paypal.com.pe
-        </span>,
-        <span>
-            paypal.com.pt
-        </span>,
-        <span>
-            paypal.com.sa
-        </span>,
-        <span>
-            paypal.com.sg
-        </span>,
-        <span>
-            paypal.com.tr
-        </span>,
-        <span>
-            paypal.com.tw
-        </span>,
-        <span>
-            paypal.com.ve
-        </span>,
-        <span>
-            paypal.de
-        </span>,
-        <span>
-            paypal.dk
-        </span>,
-        <span>
-            paypal.es
-        </span>,
-        <span>
-            paypal.eu
-        </span>,
-        <span>
-            paypal.fi
-        </span>,
-        <span>
-            paypal.fr
-        </span>,
-        <span>
-            paypal.ie
-        </span>,
-        <span>
-            paypal.it
-        </span>,
-        <span>
-            paypal.jp
-        </span>,
-        <span>
-            paypal.lu
-        </span>,
-        <span>
-            paypal.me
-        </span>,
-        <span>
-            paypal.nl
-        </span>,
-        <span>
-            paypal.no
-        </span>,
-        <span>
-            paypal.ph
-        </span>,
-        <span>
-            paypal.pl
-        </span>,
-        <span>
-            paypal.pt
-        </span>,
-        <span>
-            paypal.ru
-        </span>,
-        <span>
-            paypal.se
-        </span>,
-        <span>
-            paypal.vn
-        </span>,
-        <span>
-            paypalbenefits.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             paypal-brasil.com.br
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            paypal-community.com
+        </li>
+        <li class='truncate'>
+            paypal-deutschland.de
+        </li>
+        <li class='truncate'>
+            paypal-forward.com
+        </li>
+        <li class='truncate'>
+            paypal-france.fr
+        </li>
+        <li class='truncate'>
+            paypal-information.com
+        </li>
+        <li class='truncate'>
+            paypal-knowledge-test.com
+        </li>
+        <li class='truncate'>
+            paypal-knowledge.com
+        </li>
+        <li class='truncate'>
+            paypal-latam.com
+        </li>
+        <li class='truncate'>
+            paypal-marketing.pl
+        </li>
+        <li class='truncate'>
+            paypal-mena.com
+        </li>
+        <li class='truncate'>
+            paypal-nakit.com
+        </li>
+        <li class='truncate'>
+            paypal-prepagata.com
+        </li>
+        <li class='truncate'>
+            paypal-prepaid.com
+        </li>
+        <li class='truncate'>
+            paypal.at
+        </li>
+        <li class='truncate'>
+            paypal.be
+        </li>
+        <li class='truncate'>
+            paypal.ca
+        </li>
+        <li class='truncate'>
+            paypal.ch
+        </li>
+        <li class='truncate'>
+            paypal.cl
+        </li>
+        <li class='truncate'>
+            paypal.cn
+        </li>
+        <li class='truncate'>
+            paypal.co
+        </li>
+        <li class='truncate'>
+            paypal.co.id
+        </li>
+        <li class='truncate'>
+            paypal.co.il
+        </li>
+        <li class='truncate'>
+            paypal.co.in
+        </li>
+        <li class='truncate'>
+            paypal.co.kr
+        </li>
+        <li class='truncate'>
+            paypal.co.nz
+        </li>
+        <li class='truncate'>
+            paypal.co.th
+        </li>
+        <li class='truncate'>
+            paypal.co.uk
+        </li>
+        <li class='truncate'>
+            paypal.co.za
+        </li>
+        <li class='truncate'>
+            paypal.com.ar
+        </li>
+        <li class='truncate'>
+            paypal.com.au
+        </li>
+        <li class='truncate'>
+            paypal.com.br
+        </li>
+        <li class='truncate'>
+            paypal.com.hk
+        </li>
+        <li class='truncate'>
+            paypal.com.mx
+        </li>
+        <li class='truncate'>
+            paypal.com.my
+        </li>
+        <li class='truncate'>
+            paypal.com.pe
+        </li>
+        <li class='truncate'>
+            paypal.com.pt
+        </li>
+        <li class='truncate'>
+            paypal.com.sa
+        </li>
+        <li class='truncate'>
+            paypal.com.sg
+        </li>
+        <li class='truncate'>
+            paypal.com.tr
+        </li>
+        <li class='truncate'>
+            paypal.com.tw
+        </li>
+        <li class='truncate'>
+            paypal.com.ve
+        </li>
+        <li class='truncate'>
+            paypal.de
+        </li>
+        <li class='truncate'>
+            paypal.dk
+        </li>
+        <li class='truncate'>
+            paypal.es
+        </li>
+        <li class='truncate'>
+            paypal.eu
+        </li>
+        <li class='truncate'>
+            paypal.fi
+        </li>
+        <li class='truncate'>
+            paypal.fr
+        </li>
+        <li class='truncate'>
+            paypal.ie
+        </li>
+        <li class='truncate'>
+            paypal.it
+        </li>
+        <li class='truncate'>
+            paypal.jp
+        </li>
+        <li class='truncate'>
+            paypal.lu
+        </li>
+        <li class='truncate'>
+            paypal.me
+        </li>
+        <li class='truncate'>
+            paypal.nl
+        </li>
+        <li class='truncate'>
+            paypal.no
+        </li>
+        <li class='truncate'>
+            paypal.ph
+        </li>
+        <li class='truncate'>
+            paypal.pl
+        </li>
+        <li class='truncate'>
+            paypal.pt
+        </li>
+        <li class='truncate'>
+            paypal.ru
+        </li>
+        <li class='truncate'>
+            paypal.se
+        </li>
+        <li class='truncate'>
+            paypal.vn
+        </li>
+        <li class='truncate'>
+            paypalbenefits.com
+        </li>
+        <li class='truncate'>
             s-xoom.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             thepaypalblog.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             venmo.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             where.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             xoom.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/mgid.com.ico' width="32" height="32"/> mgid.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/mgid.com.ico' width="32" height="32" class='inline-block' /> mgid.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <a href="../entities/MGID Inc.html">MGID Inc</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.mgid.com&#x2F;privacy-policy" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.mgid.com&#x2F;privacy-policy</a>
                 </li>
-                <li>
+                <li class='py-1'>
                     Rank: &#35;387<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.40&#37; (283 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.39&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: 1<small>/3</small></li>
@@ -67,114 +81,122 @@
                         <li>cache: 3<small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: <a href="../categories/Ad Motivated Tracking.html">Ad Motivated Tracking</a>, <a href="../categories/Advertising.html">Advertising</a>, <a href="../categories/Ad Fraud.html">Ad Fraud</a>, <a href="../categories/Analytics.html">Analytics</a>, <a href="../categories/Audience Measurement.html">Audience Measurement</a>, <a href="../categories/Third-Party Analytics Marketing.html">Third-Party Analytics Marketing</a>, 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                     <span>XHR</span>,
                     <span>Image</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/mgid.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/mgid.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>jsc</span>, 
+                    <span>servicer</span>, 
+                    <span>prebid</span>, 
+                    <span>c</span>, 
+                    <span>a</span>, 
+                    <span>cdn</span>, 
+                    <span>sync</span>, 
+                    <span>cm</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>jsc</span>, 
-        <span>servicer</span>, 
-        <span>prebid</span>, 
-        <span>c</span>, 
-        <span>a</span>, 
-        <span>cdn</span>, 
-        <span>sync</span>, 
-        <span>cm</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.permissions</li>
-            <li>Navigator.prototype.getBattery</li>
-            <li>HTMLCanvasElement.prototype.toDataURL</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.platform</li>
-            <li>window.devicePixelRatio</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>HTMLCanvasElement.prototype.constructor</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://mgid.com&#x2F;v&#x2F;o&#x2F;vodlockerb.com.103362.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;v&#x2F;o&#x2F;vodlockerb.com.103362.js</a></li>
-            <li><a href="http://mgid.com&#x2F;103362&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;103362&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;prebid&#x2F;2" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;2</a></li>
-            <li><a href="http://mgid.com&#x2F;js-cookie-muidn" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;js-cookie-muidn</a></li>
-            <li><a href="http://mgid.com&#x2F;prebid&#x2F;236" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;236</a></li>
-            <li><a href="http://mgid.com&#x2F;mgsensor.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;mgsensor.js</a></li>
-            <li><a href="http://mgid.com&#x2F;1x1.gif" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;1x1.gif</a></li>
-            <li><a href="http://mgid.com&#x2F;f&#x2F;o&#x2F;forumfree.it.719965.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;f&#x2F;o&#x2F;forumfree.it.719965.js</a></li>
-            <li><a href="http://mgid.com&#x2F;719965&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;719965&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;i&#x2F;l&#x2F;ilcorsaronero.cc.816182.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;i&#x2F;l&#x2F;ilcorsaronero.cc.816182.js</a></li>
-            <li><a href="http://mgid.com&#x2F;816182&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;816182&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;images&#x2F;logos&#x2F;ADXPUB_logo_ch.png" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;images&#x2F;logos&#x2F;ADXPUB_logo_ch.png</a></li>
-            <li><a href="http://mgid.com&#x2F;k&#x2F;i&#x2F;kisscartoon.xyz.779420.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;i&#x2F;kisscartoon.xyz.779420.js</a></li>
-            <li><a href="http://mgid.com&#x2F;m&#x2F;a&#x2F;maariv.co.il.893586.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m&#x2F;a&#x2F;maariv.co.il.893586.js</a></li>
-            <li><a href="http://mgid.com&#x2F;x&#x2F;o&#x2F;xoso.wap.vn.226736.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;x&#x2F;o&#x2F;xoso.wap.vn.226736.js</a></li>
-            <li><a href="http://mgid.com&#x2F;226736&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;226736&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;m&#x2F;e&#x2F;media.novelupdates.club.863897.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m&#x2F;e&#x2F;media.novelupdates.club.863897.js</a></li>
-            <li><a href="http://mgid.com&#x2F;m" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m</a></li>
-            <li><a href="http://mgid.com&#x2F;adfoxhb" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;adfoxhb</a></li>
-            <li><a href="http://mgid.com&#x2F;a&#x2F;g&#x2F;agency.readnaruto.com.340989.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;a&#x2F;g&#x2F;agency.readnaruto.com.340989.js</a></li>
-            <li><a href="http://mgid.com&#x2F;340989&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;340989&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;e&#x2F;x&#x2F;exchange.adtrue.com.892972.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;e&#x2F;x&#x2F;exchange.adtrue.com.892972.js</a></li>
-            <li><a href="http://mgid.com&#x2F;892972&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;892972&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;prebid&#x2F;893499" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;893499</a></li>
-            <li><a href="http://mgid.com&#x2F;b&#x2F;o&#x2F;botasot.info.283092.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;b&#x2F;o&#x2F;botasot.info.283092.js</a></li>
-            <li><a href="http://mgid.com&#x2F;782129&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;782129&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.791959.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.791959.js</a></li>
-            <li><a href="http://mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.806561.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.806561.js</a></li>
-            <li><a href="http://mgid.com&#x2F;791959&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;791959&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;806561&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;806561&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;893586&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;893586&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;840002&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;840002&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;1&#x2F;c&#x2F;1clickdaily.com.162222.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;1&#x2F;c&#x2F;1clickdaily.com.162222.js</a></li>
-            <li><a href="http://mgid.com&#x2F;162222&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;162222&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;v&#x2F;i&#x2F;viralpanda.net.304298.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;v&#x2F;i&#x2F;viralpanda.net.304298.js</a></li>
-            <li><a href="http://mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891715.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891715.js</a></li>
-            <li><a href="http://mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891719.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891719.js</a></li>
-            <li><a href="http://mgid.com&#x2F;891719&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;891719&#x2F;1</a></li>
-            <li><a href="http://mgid.com&#x2F;g&#x2F;o&#x2F;gogoanime.io.267364.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;g&#x2F;o&#x2F;gogoanime.io.267364.js</a></li>
-            <li><a href="http://mgid.com&#x2F;267364&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;267364&#x2F;1</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Navigator.prototype.getBattery</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Document.cookie setter</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://mgid.com&#x2F;v&#x2F;o&#x2F;vodlockerb.com.103362.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;v&#x2F;o&#x2F;vodlockerb.com.103362.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;103362&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;103362&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;prebid&#x2F;2" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;2</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;js-cookie-muidn" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;js-cookie-muidn</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;prebid&#x2F;236" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;236</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;mgsensor.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;mgsensor.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;1x1.gif" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;1x1.gif</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;f&#x2F;o&#x2F;forumfree.it.719965.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;f&#x2F;o&#x2F;forumfree.it.719965.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;719965&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;719965&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;i&#x2F;l&#x2F;ilcorsaronero.cc.816182.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;i&#x2F;l&#x2F;ilcorsaronero.cc.816182.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;816182&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;816182&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;images&#x2F;logos&#x2F;ADXPUB_logo_ch.png" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;images&#x2F;logos&#x2F;ADXPUB_logo_ch.png</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;k&#x2F;i&#x2F;kisscartoon.xyz.779420.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;i&#x2F;kisscartoon.xyz.779420.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;m&#x2F;a&#x2F;maariv.co.il.893586.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m&#x2F;a&#x2F;maariv.co.il.893586.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;x&#x2F;o&#x2F;xoso.wap.vn.226736.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;x&#x2F;o&#x2F;xoso.wap.vn.226736.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;226736&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;226736&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;m&#x2F;e&#x2F;media.novelupdates.club.863897.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m&#x2F;e&#x2F;media.novelupdates.club.863897.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;m" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;m</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;adfoxhb" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;adfoxhb</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;a&#x2F;g&#x2F;agency.readnaruto.com.340989.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;a&#x2F;g&#x2F;agency.readnaruto.com.340989.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;340989&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;340989&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;e&#x2F;x&#x2F;exchange.adtrue.com.892972.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;e&#x2F;x&#x2F;exchange.adtrue.com.892972.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;892972&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;892972&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;prebid&#x2F;893499" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;prebid&#x2F;893499</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;b&#x2F;o&#x2F;botasot.info.283092.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;b&#x2F;o&#x2F;botasot.info.283092.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;782129&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;782129&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.791959.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.791959.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.806561.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;k&#x2F;a&#x2F;kaskus.co.id.806561.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;791959&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;791959&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;806561&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;806561&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;893586&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;893586&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;840002&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;840002&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;1&#x2F;c&#x2F;1clickdaily.com.162222.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;1&#x2F;c&#x2F;1clickdaily.com.162222.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;162222&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;162222&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;v&#x2F;i&#x2F;viralpanda.net.304298.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;v&#x2F;i&#x2F;viralpanda.net.304298.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891715.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891715.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891719.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;w&#x2F;e&#x2F;wenxuecity.com.891719.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;891719&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;891719&#x2F;1</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;g&#x2F;o&#x2F;gogoanime.io.267364.js" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;g&#x2F;o&#x2F;gogoanime.io.267364.js</a></li>
+        <li class='truncate'><a href="http://mgid.com&#x2F;267364&#x2F;1" target="_blank" class="external" rel="noreferrer noopener">mgid.com&#x2F;267364&#x2F;1</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

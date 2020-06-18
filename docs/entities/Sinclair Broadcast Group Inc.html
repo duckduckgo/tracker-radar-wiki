@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>Sinclair Broadcast Group Inc</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>Sinclair Broadcast Group Inc</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: Sinclair Broadcast Group
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.02%</li>
@@ -51,138 +63,146 @@
                         <li>total - 0.05%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Sinclair Broadcast Group Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Sinclair Broadcast Group Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
-            kval.com
-        </span>,
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             13wham.com
-        </span>,
-        <span>
-            abc6onyourside.com
-        </span>,
-        <span>
-            cnycentral.com
-        </span>,
-        <span>
-            comettv.com
-        </span>,
-        <span>
-            datasphere.com
-        </span>,
-        <span>
-            datasphereservices.com
-        </span>,
-        <span>
-            dtswg.com
-        </span>,
-        <span>
-            fox11online.com
-        </span>,
-        <span>
-            fox17.com
-        </span>,
-        <span>
-            idahonews.com
-        </span>,
-        <span>
-            katu.com
-        </span>,
-        <span>
-            katv.com
-        </span>,
-        <span>
-            komonews.com
-        </span>,
-        <span>
-            krcgtv.com
-        </span>,
-        <span>
-            krcrtv.com
-        </span>,
-        <span>
-            ktul.com
-        </span>,
-        <span>
-            ktvl.com
-        </span>,
-        <span>
-            kutv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             abc3340.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            abc6onyourside.com
+        </li>
+        <li class='truncate'>
+            cnycentral.com
+        </li>
+        <li class='truncate'>
+            comettv.com
+        </li>
+        <li class='truncate'>
+            datasphere.com
+        </li>
+        <li class='truncate'>
+            datasphereservices.com
+        </li>
+        <li class='truncate'>
+            dtswg.com
+        </li>
+        <li class='truncate'>
+            fox11online.com
+        </li>
+        <li class='truncate'>
+            fox17.com
+        </li>
+        <li class='truncate'>
+            idahonews.com
+        </li>
+        <li class='truncate'>
+            katu.com
+        </li>
+        <li class='truncate'>
+            katv.com
+        </li>
+        <li class='truncate'>
+            komonews.com
+        </li>
+        <li class='truncate'>
+            krcgtv.com
+        </li>
+        <li class='truncate'>
+            krcrtv.com
+        </li>
+        <li class='truncate'>
+            ktul.com
+        </li>
+        <li class='truncate'>
+            ktvl.com
+        </li>
+        <li class='truncate'>
+            kutv.com
+        </li>
+        <li class='truncate'>
+            kval.com
+        </li>
+        <li class='truncate'>
             kvi.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             local12.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mailtribune.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             mynews4.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             nbcmontana.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             news3lv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             news4sanantonio.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             newschannel9.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             sinclairstoryline.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             tennis.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             turnto10.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             upnorthlive.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             weartv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wgme.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wjla.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wlos.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wsbt.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wwmt.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

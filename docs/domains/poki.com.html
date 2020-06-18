@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "domain",
@@ -35,30 +46,33 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/poki.com.ico' width="32" height="32"/> poki.com</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/poki.com.ico' width="32" height="32" class='inline-block' /> poki.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                <li>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
                     Owner: <i>Unknown</i>
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: <i>Unknown</i>
                 </li>
-                <li>
-                    Rank: &#35;3944<small>/6963</small>
+                <li class='py-1'>
+                    Rank: &#35;4143<small>/6963</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: 0.01&#37; (4 sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: 0.01&#37;
                 </li>
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: <small>/3</small></li>
@@ -67,10 +81,10 @@
                         <li>cache: <small>/3</small></li>
                     </ul>
                 </li>
-                <li>
+                <li class='py-1'>
                     Categories: 
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     <span>Script</span>,
                     <span>Font</span>,
@@ -78,120 +92,128 @@
                     <span>XHR</span>,
                     <span>Media</span>,
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/poki.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/poki.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    <span>a</span>, 
+                    <span>api</span>, 
+                    <span>img</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
-    </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>a</span>, 
-        <span>api</span>, 
-        <span>img</span>, 
-    </p>
-
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.localStorage</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-        </ul>
-    </div>
-
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://poki.com&#x2F;assets&#x2F;client.v0.165.0.js" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;assets&#x2F;client.v0.165.0.js</a></li>
-            <li><a href="http://poki.com&#x2F;observer&#x2F;t.js" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;observer&#x2F;t.js</a></li>
-            <li><a href="http://poki.com&#x2F;fonts&#x2F;proxima-nova-regular-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;proxima-nova-regular-latin.woff2</a></li>
-            <li><a href="http://poki.com&#x2F;fonts&#x2F;proxima-nova-bold-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;proxima-nova-bold-latin.woff2</a></li>
-            <li><a href="http://poki.com&#x2F;fonts&#x2F;torus-bold-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;torus-bold-latin.woff2</a></li>
-            <li><a href="http://poki.com&#x2F;images&#x2F;bg-diamonds.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;images&#x2F;bg-diamonds.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;314,height&#x3D;314,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-l.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;314,height&#x3D;314,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-l.png</a></li>
-            <li><a href="http://poki.com&#x2F;value&#x2F;US" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;value&#x2F;US</a></li>
-            <li><a href="http://poki.com&#x2F;brand-assets&#x2F;ss-shimmer-marrakesh.mp4" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;brand-assets&#x2F;ss-shimmer-marrakesh.mp4</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7fa974d81db6223c4600eab5af10a070.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7fa974d81db6223c4600eab5af10a070.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;87a85d8d280a08350fd87b36f266018d24318af2ca22d959163f18596e310a84.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;87a85d8d280a08350fd87b36f266018d24318af2ca22d959163f18596e310a84.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee9ca3764ef4289a48a1ebf457ef605441ed1f35a0f2eb12707a70d609e53686.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee9ca3764ef4289a48a1ebf457ef605441ed1f35a0f2eb12707a70d609e53686.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;510e4eb1a95d2936b7503b6de88b31cdf9a90eeabaadaeb3a8386d2e0fe899cc.jpeg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;510e4eb1a95d2936b7503b6de88b31cdf9a90eeabaadaeb3a8386d2e0fe899cc.jpeg</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a25435a69c42f5fe089ee931c4f7d1d7aa68326a6ba8b077a81dd3c41b9cbd08.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a25435a69c42f5fe089ee931c4f7d1d7aa68326a6ba8b077a81dd3c41b9cbd08.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;30a817be7ff07d574f50c901f352580d.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;30a817be7ff07d574f50c901f352580d.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;af2d00f9c1c636a8c3deb9ae3636739cce9990866d77ba73110f292d6358a2b1.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;af2d00f9c1c636a8c3deb9ae3636739cce9990866d77ba73110f292d6358a2b1.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0d0f8168f5a86890a65c0a799945b291.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0d0f8168f5a86890a65c0a799945b291.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a9cb4eb6c6fd0311cb351d1242980b14f0c9513ba06e23a6f19ea13ac4996185.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a9cb4eb6c6fd0311cb351d1242980b14f0c9513ba06e23a6f19ea13ac4996185.jpg</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3e06cb8a4ac909e103e153f8cb1c86c2.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3e06cb8a4ac909e103e153f8cb1c86c2.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2cfbb4a5cd9e66da5c2005ff42151eca.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2cfbb4a5cd9e66da5c2005ff42151eca.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;26c6e4e18eeaa62590fccd44ea7812f8.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;26c6e4e18eeaa62590fccd44ea7812f8.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;d04b4bd8f95dee40aedf85d86846dda9.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;d04b4bd8f95dee40aedf85d86846dda9.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3cf6b3ed65d9b7e54488f997610b5dfc.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3cf6b3ed65d9b7e54488f997610b5dfc.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;314,height&#x3D;314,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5556817d03e65900d9ca5f8cac175f79.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;314,height&#x3D;314,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5556817d03e65900d9ca5f8cac175f79.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f759040025dc930025f0d8f3d7a08e3f.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f759040025dc930025f0d8f3d7a08e3f.jpg</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e521bbbf13a6480b60d75421e7edc8d8d0e1edadaccd7d43438864b62a74088a.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e521bbbf13a6480b60d75421e7edc8d8d0e1edadaccd7d43438864b62a74088a.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8ec0ee53da657b354b3e2e370f15ac68.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8ec0ee53da657b354b3e2e370f15ac68.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.01x0,f&#x3D;auto&#x2F;6d0d9ae66813e9811a5557f17421aaa7.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.01x0,f&#x3D;auto&#x2F;6d0d9ae66813e9811a5557f17421aaa7.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;216aac34da626ea3628e59562b70dee2.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;216aac34da626ea3628e59562b70dee2.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.37x0.32,f&#x3D;auto&#x2F;2c6d5a46cdbceada277c870ce1c389ee.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.37x0.32,f&#x3D;auto&#x2F;2c6d5a46cdbceada277c870ce1c389ee.jpg</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee87b170b0cdc0f95a83bab16f3cf206.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee87b170b0cdc0f95a83bab16f3cf206.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ad5f5bfc5d238a4ba0f0a6be94556936.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ad5f5bfc5d238a4ba0f0a6be94556936.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bc02c9cdfc5b424ddf343b01edf791ce.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bc02c9cdfc5b424ddf343b01edf791ce.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2094926076b7aa8264cace220ce5decc.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2094926076b7aa8264cace220ce5decc.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ba2b0164948aa4c8f7e917b40abc5494.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ba2b0164948aa4c8f7e917b40abc5494.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a5baaf2e-9a22-4d1d-86e0-796e1c48f08e.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a5baaf2e-9a22-4d1d-86e0-796e1c48f08e.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1afbdcc71c9f434bbeb5514abb389f90.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1afbdcc71c9f434bbeb5514abb389f90.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a7396b28015350109e2b91068a887734.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a7396b28015350109e2b91068a887734.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;original-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;original-s.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;space-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;space-s.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-s.png</a></li>
-            <li><a href="http://poki.com&#x2F;logos&#x2F;paisdelosjuegos.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;logos&#x2F;paisdelosjuegos.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f746e1f9acf542ff20e34ccd559b808e.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f746e1f9acf542ff20e34ccd559b808e.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.48x0.46,f&#x3D;auto&#x2F;3f8a297822df891a1c158576b6461014.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.48x0.46,f&#x3D;auto&#x2F;3f8a297822df891a1c158576b6461014.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;89fabdc183b4888dc0d8e3cfc79f6d96.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;89fabdc183b4888dc0d8e3cfc79f6d96.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3148cb115646fcb22fde2563f3d39092.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3148cb115646fcb22fde2563f3d39092.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;934bde36-a4a1-43d0-8b35-30f15feddbb4.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;934bde36-a4a1-43d0-8b35-30f15feddbb4.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f1e44b77e57956f597a286407559faf8.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f1e44b77e57956f597a286407559faf8.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;4617d96c-ae80-40a7-91d8-b5670a994084.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;4617d96c-ae80-40a7-91d8-b5670a994084.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8d79245f-d814-4ee1-8dd4-a9272c3aef01.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8d79245f-d814-4ee1-8dd4-a9272c3aef01.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b000ee4c-bada-473c-b9c0-f8a65d54e226.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b000ee4c-bada-473c-b9c0-f8a65d54e226.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.51x0.4,f&#x3D;auto&#x2F;ada621ee3a066ab12be8484017fd6297.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.51x0.4,f&#x3D;auto&#x2F;ada621ee3a066ab12be8484017fd6297.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a89e3ef4-a32b-4d04-9f03-6f153ec244af.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a89e3ef4-a32b-4d04-9f03-6f153ec244af.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e7b90eab-4f36-4691-9f64-fcfff5c84c1c.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e7b90eab-4f36-4691-9f64-fcfff5c84c1c.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1035de48ec88b51062aaaddeb3e93110.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1035de48ec88b51062aaaddeb3e93110.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0b09b3f3c5cc4a40defd82482175d3bd.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0b09b3f3c5cc4a40defd82482175d3bd.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7f53593c-4090-4cc5-a934-6a5e599d8eaa.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7f53593c-4090-4cc5-a934-6a5e599d8eaa.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bec6ef1112da9b3a4e67af09b69960df.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bec6ef1112da9b3a4e67af09b69960df.jpg</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;c170f57bc0d2e34a619e0f062b463fc84d7833d1d34306199f504e29b2b09320.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;c170f57bc0d2e34a619e0f062b463fc84d7833d1d34306199f504e29b2b09320.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f0ae80ef9bdbcec792a9cc119526f04a.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f0ae80ef9bdbcec792a9cc119526f04a.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5e8aa887f150a93a0d3878c2a96a9c6d.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5e8aa887f150a93a0d3878c2a96a9c6d.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e2e59b613f21781307a1597bfb6939a9c0e9d4fa79fc0076401cc8eb3ca2ddf9.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e2e59b613f21781307a1597bfb6939a9c0e9d4fa79fc0076401cc8eb3ca2ddf9.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e26bb773-2be1-4b2c-85ba-45fe190d4aa1.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e26bb773-2be1-4b2c-85ba-45fe190d4aa1.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b72f31aa574acaa5cbf6b6c69104c988.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b72f31aa574acaa5cbf6b6c69104c988.png</a></li>
-            <li><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;1x0.65,f&#x3D;auto&#x2F;fabcacd8-a6c2-4afb-a907-897e83f3ef5f.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;1x0.65,f&#x3D;auto&#x2F;fabcacd8-a6c2-4afb-a907-897e83f3ef5f.png</a></li>
-        </ul>
     </div>
 </div>
 
-</body>
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'><a href="http://poki.com&#x2F;assets&#x2F;client.v0.165.0.js" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;assets&#x2F;client.v0.165.0.js</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;observer&#x2F;t.js" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;observer&#x2F;t.js</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;fonts&#x2F;proxima-nova-regular-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;proxima-nova-regular-latin.woff2</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;fonts&#x2F;proxima-nova-bold-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;proxima-nova-bold-latin.woff2</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;fonts&#x2F;torus-bold-latin.woff2" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;fonts&#x2F;torus-bold-latin.woff2</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;images&#x2F;bg-diamonds.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;images&#x2F;bg-diamonds.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;314,height&#x3D;314,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-l.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;314,height&#x3D;314,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-l.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;value&#x2F;US" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;value&#x2F;US</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;brand-assets&#x2F;ss-shimmer-marrakesh.mp4" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;brand-assets&#x2F;ss-shimmer-marrakesh.mp4</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7fa974d81db6223c4600eab5af10a070.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7fa974d81db6223c4600eab5af10a070.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;87a85d8d280a08350fd87b36f266018d24318af2ca22d959163f18596e310a84.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;87a85d8d280a08350fd87b36f266018d24318af2ca22d959163f18596e310a84.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee9ca3764ef4289a48a1ebf457ef605441ed1f35a0f2eb12707a70d609e53686.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee9ca3764ef4289a48a1ebf457ef605441ed1f35a0f2eb12707a70d609e53686.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;510e4eb1a95d2936b7503b6de88b31cdf9a90eeabaadaeb3a8386d2e0fe899cc.jpeg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;510e4eb1a95d2936b7503b6de88b31cdf9a90eeabaadaeb3a8386d2e0fe899cc.jpeg</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a25435a69c42f5fe089ee931c4f7d1d7aa68326a6ba8b077a81dd3c41b9cbd08.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a25435a69c42f5fe089ee931c4f7d1d7aa68326a6ba8b077a81dd3c41b9cbd08.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;30a817be7ff07d574f50c901f352580d.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;30a817be7ff07d574f50c901f352580d.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;af2d00f9c1c636a8c3deb9ae3636739cce9990866d77ba73110f292d6358a2b1.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;af2d00f9c1c636a8c3deb9ae3636739cce9990866d77ba73110f292d6358a2b1.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0d0f8168f5a86890a65c0a799945b291.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0d0f8168f5a86890a65c0a799945b291.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a9cb4eb6c6fd0311cb351d1242980b14f0c9513ba06e23a6f19ea13ac4996185.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a9cb4eb6c6fd0311cb351d1242980b14f0c9513ba06e23a6f19ea13ac4996185.jpg</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3e06cb8a4ac909e103e153f8cb1c86c2.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3e06cb8a4ac909e103e153f8cb1c86c2.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2cfbb4a5cd9e66da5c2005ff42151eca.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2cfbb4a5cd9e66da5c2005ff42151eca.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;26c6e4e18eeaa62590fccd44ea7812f8.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;26c6e4e18eeaa62590fccd44ea7812f8.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;d04b4bd8f95dee40aedf85d86846dda9.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;d04b4bd8f95dee40aedf85d86846dda9.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3cf6b3ed65d9b7e54488f997610b5dfc.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3cf6b3ed65d9b7e54488f997610b5dfc.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;314,height&#x3D;314,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5556817d03e65900d9ca5f8cac175f79.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;314,height&#x3D;314,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5556817d03e65900d9ca5f8cac175f79.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f759040025dc930025f0d8f3d7a08e3f.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f759040025dc930025f0d8f3d7a08e3f.jpg</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e521bbbf13a6480b60d75421e7edc8d8d0e1edadaccd7d43438864b62a74088a.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e521bbbf13a6480b60d75421e7edc8d8d0e1edadaccd7d43438864b62a74088a.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8ec0ee53da657b354b3e2e370f15ac68.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8ec0ee53da657b354b3e2e370f15ac68.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.01x0,f&#x3D;auto&#x2F;6d0d9ae66813e9811a5557f17421aaa7.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.01x0,f&#x3D;auto&#x2F;6d0d9ae66813e9811a5557f17421aaa7.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;216aac34da626ea3628e59562b70dee2.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;216aac34da626ea3628e59562b70dee2.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.37x0.32,f&#x3D;auto&#x2F;2c6d5a46cdbceada277c870ce1c389ee.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.37x0.32,f&#x3D;auto&#x2F;2c6d5a46cdbceada277c870ce1c389ee.jpg</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee87b170b0cdc0f95a83bab16f3cf206.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ee87b170b0cdc0f95a83bab16f3cf206.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ad5f5bfc5d238a4ba0f0a6be94556936.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ad5f5bfc5d238a4ba0f0a6be94556936.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bc02c9cdfc5b424ddf343b01edf791ce.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bc02c9cdfc5b424ddf343b01edf791ce.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2094926076b7aa8264cace220ce5decc.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;2094926076b7aa8264cace220ce5decc.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ba2b0164948aa4c8f7e917b40abc5494.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;ba2b0164948aa4c8f7e917b40abc5494.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a5baaf2e-9a22-4d1d-86e0-796e1c48f08e.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a5baaf2e-9a22-4d1d-86e0-796e1c48f08e.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1afbdcc71c9f434bbeb5514abb389f90.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1afbdcc71c9f434bbeb5514abb389f90.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a7396b28015350109e2b91068a887734.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a7396b28015350109e2b91068a887734.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;original-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;original-s.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;space-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;space-s.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-s.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;f&#x3D;auto,width&#x3D;176,height&#x3D;77,quality&#x3D;78&#x2F;cr-mv&#x2F;dinosaur-blue-s.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;logos&#x2F;paisdelosjuegos.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;logos&#x2F;paisdelosjuegos.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f746e1f9acf542ff20e34ccd559b808e.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f746e1f9acf542ff20e34ccd559b808e.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.48x0.46,f&#x3D;auto&#x2F;3f8a297822df891a1c158576b6461014.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.48x0.46,f&#x3D;auto&#x2F;3f8a297822df891a1c158576b6461014.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;89fabdc183b4888dc0d8e3cfc79f6d96.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;89fabdc183b4888dc0d8e3cfc79f6d96.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3148cb115646fcb22fde2563f3d39092.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;204,height&#x3D;204,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;3148cb115646fcb22fde2563f3d39092.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;934bde36-a4a1-43d0-8b35-30f15feddbb4.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;934bde36-a4a1-43d0-8b35-30f15feddbb4.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f1e44b77e57956f597a286407559faf8.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f1e44b77e57956f597a286407559faf8.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;4617d96c-ae80-40a7-91d8-b5670a994084.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;4617d96c-ae80-40a7-91d8-b5670a994084.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8d79245f-d814-4ee1-8dd4-a9272c3aef01.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;8d79245f-d814-4ee1-8dd4-a9272c3aef01.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b000ee4c-bada-473c-b9c0-f8a65d54e226.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b000ee4c-bada-473c-b9c0-f8a65d54e226.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.51x0.4,f&#x3D;auto&#x2F;ada621ee3a066ab12be8484017fd6297.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.51x0.4,f&#x3D;auto&#x2F;ada621ee3a066ab12be8484017fd6297.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a89e3ef4-a32b-4d04-9f03-6f153ec244af.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;a89e3ef4-a32b-4d04-9f03-6f153ec244af.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e7b90eab-4f36-4691-9f64-fcfff5c84c1c.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e7b90eab-4f36-4691-9f64-fcfff5c84c1c.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1035de48ec88b51062aaaddeb3e93110.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;1035de48ec88b51062aaaddeb3e93110.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0b09b3f3c5cc4a40defd82482175d3bd.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;0b09b3f3c5cc4a40defd82482175d3bd.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7f53593c-4090-4cc5-a934-6a5e599d8eaa.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;7f53593c-4090-4cc5-a934-6a5e599d8eaa.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bec6ef1112da9b3a4e67af09b69960df.jpg" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;bec6ef1112da9b3a4e67af09b69960df.jpg</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;c170f57bc0d2e34a619e0f062b463fc84d7833d1d34306199f504e29b2b09320.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;c170f57bc0d2e34a619e0f062b463fc84d7833d1d34306199f504e29b2b09320.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f0ae80ef9bdbcec792a9cc119526f04a.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;f0ae80ef9bdbcec792a9cc119526f04a.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5e8aa887f150a93a0d3878c2a96a9c6d.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;5e8aa887f150a93a0d3878c2a96a9c6d.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e2e59b613f21781307a1597bfb6939a9c0e9d4fa79fc0076401cc8eb3ca2ddf9.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e2e59b613f21781307a1597bfb6939a9c0e9d4fa79fc0076401cc8eb3ca2ddf9.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e26bb773-2be1-4b2c-85ba-45fe190d4aa1.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;e26bb773-2be1-4b2c-85ba-45fe190d4aa1.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b72f31aa574acaa5cbf6b6c69104c988.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;0.5x0.5,f&#x3D;auto&#x2F;b72f31aa574acaa5cbf6b6c69104c988.png</a></li>
+        <li class='truncate'><a href="http://poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;1x0.65,f&#x3D;auto&#x2F;fabcacd8-a6c2-4afb-a907-897e83f3ef5f.png" target="_blank" class="external" rel="noreferrer noopener">poki.com&#x2F;cdn-cgi&#x2F;image&#x2F;quality&#x3D;78,width&#x3D;94,height&#x3D;94,fit&#x3D;cover,g&#x3D;1x0.65,f&#x3D;auto&#x2F;fabcacd8-a6c2-4afb-a907-897e83f3ef5f.png</a></li>
+    </ul>
+</div>
+
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>MindGeek</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>MindGeek</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: MindGeek
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.20%</li>
@@ -51,156 +63,164 @@
                         <li>total - 0.31%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/MindGeek.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/MindGeek.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             <a href="../domains/phncdn.com.html">phncdn.com (0.16%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/trafficjunky.net.html">trafficjunky.net (0.07%)</a>
-        </span>,
-        <span>
-            <a href="../domains/pornhub.com.html">pornhub.com (0.06%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/contentabc.com.html">contentabc.com (0.06%)</a>
-        </span>,
-        <span>
-            <a href="../domains/ypncdn.com.html">ypncdn.com (0.03%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/pornhub.com.html">pornhub.com (0.06%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/trafficjunky.com.html">trafficjunky.com (0.03%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/ypncdn.com.html">ypncdn.com (0.03%)</a>
+        </li>
+        <li class='truncate'>
             <a href="../domains/etahub.com.html">etahub.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/redtube.com.html">redtube.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/t8cdn.com.html">t8cdn.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/youporn.com.html">youporn.com (0.01%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/hubtraffic.com.html">hubtraffic.com (0.00%)</a>
-        </span>,
-        <span>
-            <a href="../domains/tube8.com.html">tube8.com (0.00%)</a>
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             <a href="../domains/pornmd.com.html">pornmd.com (0.00%)</a>
-        </span>,
-        <span>
-            brazzers.com
-        </span>,
-        <span>
-            men.com
-        </span>,
-        <span>
-            mencontent.com
-        </span>,
-        <span>
-            modelhub.com
-        </span>,
-        <span>
-            mofos.com
-        </span>,
-        <span>
-            mofoscontent.com
-        </span>,
-        <span>
-            momxxx.com
-        </span>,
-        <span>
-            brazzerscontent.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            <a href="../domains/tube8.com.html">tube8.com (0.00%)</a>
+        </li>
+        <li class='truncate'>
             adultforce.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             babes.com
-        </span>,
-        <span>
-            pornhubselect.com
-        </span>,
-        <span>
-            czechhunter.com
-        </span>,
-        <span>
-            rdtcdn.com
-        </span>,
-        <span>
-            realitykings.com
-        </span>,
-        <span>
-            realitykingscontent.com
-        </span>,
-        <span>
-            digitalplayground.com
-        </span>,
-        <span>
-            redtube.com.br
-        </span>,
-        <span>
-            seancody.com
-        </span>,
-        <span>
-            seancodycontent.com
-        </span>,
-        <span>
-            dplaygroundcontent.com
-        </span>,
-        <span>
-            thumbzilla.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             babescontent.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            brazzers.com
+        </li>
+        <li class='truncate'>
+            brazzerscontent.com
+        </li>
+        <li class='truncate'>
+            czechhunter.com
+        </li>
+        <li class='truncate'>
+            digitalplayground.com
+        </li>
+        <li class='truncate'>
+            dplaygroundcontent.com
+        </li>
+        <li class='truncate'>
             fakehub.com
-        </span>,
-        <span>
-            transangels.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             faketaxi.com
-        </span>,
-        <span>
-            twistys.com
-        </span>,
-        <span>
-            twistyscontent.com
-        </span>,
-        <span>
-            xtube.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             gaytube.com
-        </span>,
-        <span>
-            youporngay.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            men.com
+        </li>
+        <li class='truncate'>
+            mencontent.com
+        </li>
+        <li class='truncate'>
+            modelhub.com
+        </li>
+        <li class='truncate'>
+            mofos.com
+        </li>
+        <li class='truncate'>
+            mofoscontent.com
+        </li>
+        <li class='truncate'>
+            momxxx.com
+        </li>
+        <li class='truncate'>
             pornhubpremium.com
-        </span>,
-    </p>
-
+        </li>
+        <li class='truncate'>
+            pornhubselect.com
+        </li>
+        <li class='truncate'>
+            rdtcdn.com
+        </li>
+        <li class='truncate'>
+            realitykings.com
+        </li>
+        <li class='truncate'>
+            realitykingscontent.com
+        </li>
+        <li class='truncate'>
+            redtube.com.br
+        </li>
+        <li class='truncate'>
+            seancody.com
+        </li>
+        <li class='truncate'>
+            seancodycontent.com
+        </li>
+        <li class='truncate'>
+            thumbzilla.com
+        </li>
+        <li class='truncate'>
+            transangels.com
+        </li>
+        <li class='truncate'>
+            twistys.com
+        </li>
+        <li class='truncate'>
+            twistyscontent.com
+        </li>
+        <li class='truncate'>
+            xtube.com
+        </li>
+        <li class='truncate'>
+            youporngay.com
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

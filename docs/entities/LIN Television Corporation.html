@@ -16,15 +16,26 @@
 </head>
 
 <body>
-
-<header class='bg-white container-lg px-3 my-5'>
-    <a href="../">Home</a> |&nbsp;
-    <div class="search-box d-inline-block position-absolute">
-        <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input' />
-        <ul class='search-box__results bg-white p-2 box-shadow' style="list-style-type: none;"></ul>
-    </div>
-</header>
-
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
 <script>
     window.wikiData = {
         type: "entity",
@@ -35,15 +46,16 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/entity-graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>LIN Television Corporation</h1>
-    <div class="entity-head">
-        <div class="domain-stats">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'>LIN Television Corporation</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="entity-stats">
+            <h3 class="section-header">Entity Stats</h3>
             <ul>
-                <li>
+                <li class='py-1'>
                     Display name: LIN Television
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence:
                     <ul>
                         <li>tracking - 0.01%</li>
@@ -51,108 +63,116 @@
                         <li>total - 0.02%</li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/LIN Television Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
-
+                <li class='py-1'>
+                    <a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/LIN Television Corporation.json" class="external" rel="noreferrer noopener">Raw data file</a>
+                </li>
             </ul>
         </div>
-        <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='properties'># of properties</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        <div class='graph-container'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='properties'># of properties</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    <p>
-        <strong>Properties:</strong>
-        <span>
-            wdtn.com
-        </span>,
-        <span>
+</div>
+<div class='p-5'>
+    <h3 class='section-header'>Properties</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+        <li class='truncate'>
             abc27.com
-        </span>,
-        <span>
-            foodbuzz.com
-        </span>,
-        <span>
-            keloland.com
-        </span>,
-        <span>
-            khon2.com
-        </span>,
-        <span>
-            klfy.com
-        </span>,
-        <span>
-            koin.com
-        </span>,
-        <span>
-            kron4.com
-        </span>,
-        <span>
-            krqe.com
-        </span>,
-        <span>
-            ksn.com
-        </span>,
-        <span>
-            kxan.com
-        </span>,
-        <span>
-            wane.com
-        </span>,
-        <span>
-            wate.com
-        </span>,
-        <span>
-            wavy.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             fmpub.net
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
+            foodbuzz.com
+        </li>
+        <li class='truncate'>
+            keloland.com
+        </li>
+        <li class='truncate'>
+            khon2.com
+        </li>
+        <li class='truncate'>
+            klfy.com
+        </li>
+        <li class='truncate'>
+            koin.com
+        </li>
+        <li class='truncate'>
+            kron4.com
+        </li>
+        <li class='truncate'>
+            krqe.com
+        </li>
+        <li class='truncate'>
+            ksn.com
+        </li>
+        <li class='truncate'>
+            kxan.com
+        </li>
+        <li class='truncate'>
+            wane.com
+        </li>
+        <li class='truncate'>
+            wate.com
+        </li>
+        <li class='truncate'>
+            wavy.com
+        </li>
+        <li class='truncate'>
+            wdtn.com
+        </li>
+        <li class='truncate'>
             wfla.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wivb.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wkbn.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wkrg.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wkrn.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wlns.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             woodtv.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wpri.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wric.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wsav.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wspa.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wtnh.com
-        </span>,
-        <span>
+        </li>
+        <li class='truncate'>
             wwlp.com
-        </span>,
-    </p>
-
+        </li>
+    </ul>
 </div>
 
-</body>
-
+            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
+                DuckDuckGo
+            </footer>
+        </div>
+    </body>
 </html>

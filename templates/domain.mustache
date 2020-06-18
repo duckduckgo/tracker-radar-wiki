@@ -10,33 +10,35 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1><img src='https://external-content.duckduckgo.com/ip3/{{domain}}.ico' width="32" height="32"/> {{domain}}</h1>
-    <div class="domain-head">
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/{{domain}}.ico' width="32" height="32" class='inline-block' /> {{domain}}</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
         <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
             <ul>
-                {{#owner}}
-                <li>
+                <h3 class='section-header'>{{#owner}}</h3>
+            
+                <li class='py-1'>
                     Owner: {{#name}}<a href="../entities/{{name}}.html">{{name}}</a>{{/name}}{{^name}}<i>Unknown</i>{{/name}}
                 </li>
-                <li>
+                <li class='py-1'>
                     Privacy Policy: {{#privacyPolicy}}<a href="{{privacyPolicy}}" target="_blank" class="external" rel="noreferrer noopener">{{privacyPolicy}}</a>{{/privacyPolicy}}{{^privacyPolicy}}<i>Unknown</i>{{/privacyPolicy}}
                 </li>
                 {{/owner}}
-                <li>
+                <li class='py-1'>
                     Rank: &#35;{{rank}}<small>/{{totalDomains}}</small>
                 </li>
-                <li>
+                <li class='py-1'>
                     Prevalence: {{prevalence}}&#37; ({{sites}} sites)
                 </li>
-                <li>
+                <li class='py-1'>
                     Fingerprinting: {{fingerprinting}}<small>/3</small> - <span class="fp-{{fingerprinting}}">{{fpText}}</span>
                 </li>
-                <li>
+                <li class='py-1'>
                     Cookies: {{cookies}}&#37;
                 </li>
                 {{#performance}}
-                <li>
+                <li class='py-1'>
                     Performance: <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
                         <li>time: {{time}}<small>/3</small></li>
@@ -46,68 +48,77 @@
                     </ul>
                 </li>
                 {{/performance}}
-                <li>
+                <li class='py-1'>
                     Categories: {{#categories}}<a href="../categories/{{.}}.html">{{.}}</a>, {{/categories}}
                 </li>
-                <li>
+                <li class='py-1'>
                     Resource Types: 
                     {{#types}}
                     <span>{{.}}</span>,
                     {{/types}}
                 </li>
-                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/{{domain}}.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/{{domain}}.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    Subdomains:
+                    {{#subdomains}}
+                    <span>{{.}}</span>, 
+                    {{/subdomains}}
+                </li>
             </ul>
         </div>
         <div class='graph-container graph-container--right'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        {{#subdomains}}
-        <span>{{.}}</span>, 
-        {{/subdomains}}
-    </p>
+</div>
 
-    <div>
-        {{#fingerprintingApis.length}}
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        {{/fingerprintingApis.length}}
-        <ul>
-        {{#fingerprintingApis}}
-            <li>{{.}}</li>
-        {{/fingerprintingApis}}
-        </ul>
-    </div>
+{{#fingerprintingApis.length}}
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
 
-    <div>
-        {{#cnames.length}}
-        <div><strong>CNAMEs</strong></div>
-        {{/cnames.length}}
-        <ul>
-        {{#cnames}}
-            <li>
-                <a href="http://{{original}}" class="external">{{original}}</a> &#x2192; <a href="http://{{resolved}}" class="external">{{resolved}}</a>
-            </li>
-        {{/cnames}}
-        </ul>
-    </div>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+    {{#fingerprintingApis}}
+        <li class='truncate'>{{.}}</li>
+    {{/fingerprintingApis}}
+    </ul>
+</div>
+{{/fingerprintingApis.length}}
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-        {{#resources}}
-            <li><a href="http://{{.}}" target="_blank" class="external" rel="noreferrer noopener">{{.}}</a></li>
-        {{/resources}}
-        </ul>
-    </div>
+{{#cnames.length}}
+<div class='p-5 border-b'>
+    <h3 class='section-header'>CNAMEs</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+    {{#cnames}}
+        <li class='truncate'>
+            <a href="http://{{original}}" class="external">{{original}}</a> &#x2192; <a href="http://{{resolved}}" class="external">{{resolved}}</a>
+        </li>
+    {{/cnames}}
+    </ul>
+</div>
+{{/cnames.length}}
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+    {{#resources}}
+        <li class='truncate'><a href="http://{{.}}" target="_blank" class="external" rel="noreferrer noopener">{{.}}</a></li>
+    {{/resources}}
+    </ul>
 </div>
 
 {{>footer}}

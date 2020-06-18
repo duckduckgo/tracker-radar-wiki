@@ -160,7 +160,7 @@ main().then(() => {
         return {
             diff: (diff * 100).toFixed(2),
             htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
-            htmlClass: (diff > 0) ? 'trend-up' : 'trend-down',
+            direction: (diff > 0) ? 'up' : 'down',
             name: item.name
         };
     }).filter(entry => Math.abs(entry.diff) > 0.5).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
@@ -172,7 +172,7 @@ main().then(() => {
         return {
             diff: (diff * 100).toFixed(2),
             htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
-            htmlClass: (diff > 0) ? 'trend-up' : 'trend-down',
+            direction: (diff > 0) ? 'up' : 'down',
             name: item.name
         };
     }).filter(entry => Math.abs(entry.diff) > 0.05).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);

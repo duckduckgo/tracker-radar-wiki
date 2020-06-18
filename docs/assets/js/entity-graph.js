@@ -29,32 +29,42 @@
             data: {
                 labels: window.wikiData.history.map(entry => entry.date),
                 datasets: [{
-                    label: `Tracking Prevalence (%)`,
-                    borderColor: colors.green,
-                    backgroundColor: colors.clear,
-                    data: window.wikiData.history.map(entry => entry.prevalence.tracking * 100)
-                },
-                {
-                    label: `Non-Tracking Prevalence (%)`,
-                    borderColor: colors.yellow,
-                    backgroundColor: colors.clear,
-                    data: window.wikiData.history.map(entry => entry.prevalence.nonTracking * 100)
-                },
-                {
+                    type: 'line',
                     label: `Total Prevalence (%)`,
-                    borderColor: colors.orange,
+                    borderColor: colors.blue,
                     backgroundColor: colors.clear,
-                    data: window.wikiData.history.map(entry => entry.prevalence.total * 100)
+                    data: window.wikiData.history.map(entry => (entry.prevalence.total * 100).toFixed(2))
+                },
+                {
+                    type: 'bar',
+                    label: `Tracking Prevalence (%)`,
+                    borderColor: colors.red,
+                    backgroundColor: colors.red,
+                    data: window.wikiData.history.map(entry => (entry.prevalence.tracking * 100).toFixed(2))
+                },
+                {
+                    type: 'bar',
+                    label: `Non-Tracking Prevalence (%)`,
+                    borderColor: colors.green,
+                    backgroundColor: colors.green,
+                    data: window.wikiData.history.map(entry => (entry.prevalence.nonTracking * 100).toFixed(2))
                 }]
             },
             options: {
                 responsive: false,
+                tooltips: {
+                    mode: 'index'
+                },
                 scales: {
                     yAxes: [{
+                        stacked: true,
                         ticks: {
                             suggestedMin: 0,
                             suggestedMax: 100
                         }
+                    }],
+                    xAxes: [{
+                        stacked: true
                     }]
                 }
             }

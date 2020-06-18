@@ -54,6 +54,14 @@
                 borderColor: colors.red,
                 data: window.wikiData.history.map(entry => entry.domains)
             }];
+            chart.options.tooltips = {};
+            chart.options.scales = {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }]
+            };
         } else if (controller.value === 'entities') {
             chart.data.datasets = [{
                 label: `# entities`,
@@ -61,6 +69,14 @@
                 borderColor: colors.blue,
                 data: window.wikiData.history.map(entry => entry.entities)
             }];
+            chart.options.tooltips = {};
+            chart.options.scales = {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }]
+            };
         } else if (controller.value === 'fingerprinting') {
             chart.data.datasets = [{
                 label: `domains with score 0`,
@@ -86,6 +102,9 @@
                 backgroundColor: colors.red,
                 data: window.wikiData.history.map(entry => entry.fingerprinting[3])
             }];
+            chart.options.tooltips = {
+                mode: 'index'
+            };
             chart.options.scales = {
                 xAxes: [{
                     stacked: true,

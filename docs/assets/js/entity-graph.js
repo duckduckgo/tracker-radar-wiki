@@ -29,19 +29,19 @@
             data: {
                 labels: window.wikiData.history.map(entry => entry.date),
                 datasets: [{
-                    label: `Tracking Prevalence`,
+                    label: `Tracking Prevalence (%)`,
                     borderColor: colors.green,
                     backgroundColor: colors.clear,
                     data: window.wikiData.history.map(entry => entry.prevalence.tracking * 100)
                 },
                 {
-                    label: `Non-Tracking Prevalence`,
+                    label: `Non-Tracking Prevalence (%)`,
                     borderColor: colors.yellow,
                     backgroundColor: colors.clear,
                     data: window.wikiData.history.map(entry => entry.prevalence.nonTracking * 100)
                 },
                 {
-                    label: `Total Prevalence`,
+                    label: `Total Prevalence (%)`,
                     borderColor: colors.orange,
                     backgroundColor: colors.clear,
                     data: window.wikiData.history.map(entry => entry.prevalence.total * 100)
@@ -79,7 +79,6 @@
                     yAxes: [{
                         ticks: {
                             suggestedMin: 0,
-                            suggestedMax: 500,
                             stepSize: 1
                         }
                     }]
@@ -93,46 +92,11 @@
 
     controller.addEventListener('change', () => {
         if (controller.value === 'prevalence') {
-            chart.data.datasets = [{
-                label: `Tracking Prevalence`,
-                borderColor: colors.green,
-                backgroundColor: colors.clear,
-                data: window.wikiData.history.map(entry => entry.prevalence.tracking * 100)
-            },
-            {
-                label: `Non-Tracking Prevalence`,
-                borderColor: colors.yellow,
-                backgroundColor: colors.clear,
-                data: window.wikiData.history.map(entry => entry.prevalence.nonTracking * 100)
-            },
-            {
-                label: `Total Prevalence`,
-                borderColor: colors.orange,
-                backgroundColor: colors.clear,
-                data: window.wikiData.history.map(entry => entry.prevalence.total * 100)
-            }];
-            chart.options.scales = {
-                yAxes: [{
-                    ticks: {
-                        suggestedMin: 0,
-                        suggestedMax: 100
-                    }
-                }]
-            };
+            chart.data.datasets = getPropertiesChartData().data.datasets;
+            chart.data.options = getPropertiesChartData().options;
         } else if (controller.value === 'properties') {
-            chart.data.datasets = [{
-                label: `# of properties`,
-                backgroundColor: colors.blue,
-                borderColor: colors.blue,
-                data: window.wikiData.history.map(entry => entry.properties)
-            }];
-            chart.options.scales.yAxes = [{
-                ticks: {
-                    suggestedMin: 0,
-                    suggestedMax: 500,
-                    stepSize: 1
-                }
-            }];
+            chart.data.datasets = getPropertiesChartData().data.datasets;
+            chart.data.options = getPropertiesChartData().options;
         }
 
         chart.update();

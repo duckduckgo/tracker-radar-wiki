@@ -146,6 +146,12 @@ entityFiles.forEach(({file, resolvedPath}) => {
     });
     data.properties = data.properties.sort((a, b) => b.prevalence - a.prevalence);
 
+    if (data.prevalence) {
+        data.prevalence.tracking = (data.prevalence.tracking * 100).toFixed(2);
+        data.prevalence.nonTracking = (data.prevalence.nonTracking * 100).toFixed(2);
+        data.prevalence.total = (data.prevalence.total * 100).toFixed(2);
+    }
+
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
     fs.writeFile(path.join(config.entityPagesPath, `${data.name}.html`), output, () => {});

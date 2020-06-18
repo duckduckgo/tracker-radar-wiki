@@ -92,8 +92,8 @@
 
     controller.addEventListener('change', () => {
         if (controller.value === 'prevalence') {
-            chart.data.datasets = getPropertiesChartData().data.datasets;
-            chart.data.options = getPropertiesChartData().options;
+            chart.data.datasets = getPrevalenceChartData().data.datasets;
+            chart.data.options = getPrevalenceChartData().options;
         } else if (controller.value === 'properties') {
             chart.data.datasets = getPropertiesChartData().data.datasets;
             chart.data.options = getPropertiesChartData().options;

@@ -23,7 +23,7 @@ npm run build-index # Builds the home page
 npm run build-pages # Builds all other pages
 ```
 
-Be sure to edit `config.js` to ensure your paths are set correctly.
+**Note:** Be sure to edit `config.js` to ensure your paths are set correctly. This repo expects [tracker-radar](https://github.com/duckduckgo/tracker-radar/) to be cloned alongside.
 
 The `docs` directory is where the built site lives. Use a web server like `python -m SimpleHTTPServer 8000` to serve locally. Pushing to master
-will autmatically update the live version of the site.
+will automatically update the live version of the site.

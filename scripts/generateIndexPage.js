@@ -82,7 +82,8 @@ const renderData = {
     entities: entities.slice(0, 10),
     categories: Array.from(categories.values()),
     lastCommitInfo,
-    historicDataString
+    historicDataString,
+    hostPath: config.hostPath
 };
 
 try {

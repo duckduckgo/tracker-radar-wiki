@@ -96,6 +96,7 @@ domainFiles.forEach(({file, resolvedPath}) => {
         return weightB - weightA;
     });
     data.resources = data.resources.map(res => res.rule.replace(/\\/g, ''));
+    data.hostPath = config.hostPath;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 
@@ -152,6 +153,8 @@ entityFiles.forEach(({file, resolvedPath}) => {
         data.prevalence.total = (data.prevalence.total * 100).toFixed(2);
     }
 
+    data.hostPath = config.hostPath;
+
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
     fs.writeFile(path.join(config.entityPagesPath, `${data.name}.html`), output, () => {});
@@ -183,6 +186,8 @@ Array.from(categories.values()).forEach(data => {
     } catch (e) {
         console.error(chalk.red(e));
     }
+
+    data.hostPath = config.hostPath;
 
     const output = mustache.render(getTemplate('category'), data, getTemplate);
 

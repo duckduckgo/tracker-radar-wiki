@@ -5,5 +5,6 @@ module.exports = {
     basePagesPath: './docs',
     domainPagesPath: './docs/domains/',
     entityPagesPath: './docs/entities/',
-    categoryPagesPath: './docs/categories/'
+    categoryPagesPath: './docs/categories/',
+    hostPath: '/tracker-radar-wiki'
 };

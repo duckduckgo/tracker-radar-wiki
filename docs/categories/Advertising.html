@@ -30,11 +30,21 @@
     window.wikiData = {
         type: "category",
         name: "Advertising",
+        history: [{"name":"Advertising","domains":350,"prevalence":0.06571535861809989},{"name":"Advertising","domains":362,"prevalence":0.05244096769520498},{"name":"Advertising","domains":358,"prevalence":0.0524388457594844},{"name":"Advertising","domains":348,"prevalence":0.04997845756139595}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/category-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Advertising</h1>
+    <div class='graph-container cat-graph'>
+        <label>Historic data: <select class='graph-container__controller'>
+            <option selected value='prevalence'>prevalence</option>
+            <option value='domains'># of domains</option>
+        </select></label>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
     <p>
         <strong>Domains:</strong>
         <span>

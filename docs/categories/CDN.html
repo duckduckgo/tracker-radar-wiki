@@ -30,11 +30,21 @@
     window.wikiData = {
         type: "category",
         name: "CDN",
+        history: [{"name":"CDN","domains":96,"prevalence":0.018024784078107398},{"name":"CDN","domains":99,"prevalence":0.014341590612777053},{"name":"CDN","domains":98,"prevalence":0.014354767833601874},{"name":"CDN","domains":97,"prevalence":0.01393077696395232}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/category-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>CDN</h1>
+    <div class='graph-container cat-graph'>
+        <label>Historic data: <select class='graph-container__controller'>
+            <option selected value='prevalence'>prevalence</option>
+            <option value='domains'># of domains</option>
+        </select></label>
+        <canvas class='graph-container__graph' width="300" height="300"></canvas>
+    </div>
     <p>
         <strong>Domains:</strong>
         <span>

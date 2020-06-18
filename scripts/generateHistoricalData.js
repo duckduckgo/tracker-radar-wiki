@@ -18,6 +18,7 @@ const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/ent
 
 const domainMap = new Map();
 const entityMap = new Map();
+const categoryMap = new Map();
 const globalStats = [];
 
 async function main() {
@@ -48,6 +49,7 @@ async function main() {
 
         const fingerprintingScores = [0, 0, 0, 0];
 
+        const categoryEntries = new Map();
         domainFiles.forEach(({file, resolvedPath}) => {
             progressBar.tick({file});
 
@@ -77,6 +79,18 @@ async function main() {
             });
 
             domainMap.set(data.domain, domainObj);
+
+            data.categories.forEach(catName => {
+                const category = categoryEntries.get(catName) || {name: catName, domains: 0, prevalence: 0};
+                category.domains++;
+                categoryEntries.set(catName, category);
+            });
+        });
+        Array.from(categoryEntries.values()).forEach(entry => {
+            const category = categoryMap.get(entry.name) || {name: entry.name, entries: []};
+            entry.prevalence = entry.domains / domainFiles.length;
+            category.entries.push(entry);
+            categoryMap.set(entry.name, category);
         });
 
         entityFiles.forEach(({file, resolvedPath}) => {
@@ -131,6 +145,13 @@ main().then(() => {
             console.error(chalk.red(e));
         }
     });
+    Array.from(categoryMap.values()).forEach(item => {
+        try {
+            fs.writeFileSync(path.join(config.staticData, `/history/categories/${item.name}.json`), JSON.stringify(item));
+        } catch (e) {
+            console.error(chalk.red(e));
+        }
+    })
 
     const trending = Array.from(domainMap.values()).map(item => {
         // Get last two prevalence entries

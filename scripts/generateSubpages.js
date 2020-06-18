@@ -169,6 +169,15 @@ Array.from(categories.values()).forEach(data => {
     });
     data.domains = data.domains.sort((a, b) => b.prevalence - a.prevalence);
 
+    try {
+        const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/categories', `${data.name}.json`), 'utf8');
+        const history = JSON.parse(historicDataString);
+        data.history = history.entries;
+        data.historySerialized = JSON.stringify(data.history);
+    } catch (e) {
+        console.error(chalk.red(e));
+    }
+
     const output = mustache.render(getTemplate('category'), data, getTemplate);
 
     fs.writeFile(path.join(config.categoryPagesPath, `${data.name}.html`), output, () => {});

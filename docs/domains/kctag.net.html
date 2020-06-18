@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>kctag.net</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>kctag.net</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <i>Unknown</i>
                 </li>
@@ -58,7 +61,7 @@
                     Privacy Policy: <i>Unknown</i>
                 </li>
                 <li>
-                    Rank: &#35;2513<small>/6963</small>
+                    Rank: &#35;2458<small>/6963</small>
                 </li>
                 <li>
                     Prevalence: 0.02&#37; (11 sites)
@@ -86,75 +89,81 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/kctag.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>js</span>, 
+                    <span>ct</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>js</span>, 
-        <span>ct</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.webkitTemporaryStorage</li>
-            <li>Navigator.prototype.webkitPersistentStorage</li>
-            <li>Navigator.prototype.keyboard</li>
-            <li>Navigator.prototype.productSub</li>
-            <li>Navigator.prototype.storage</li>
-            <li>Navigator.prototype.mediaCapabilities</li>
-            <li>Navigator.prototype.presentation</li>
-            <li>Navigator.prototype.vendorSub</li>
-            <li>Navigator.prototype.mediaDevices</li>
-            <li>Navigator.prototype.deviceMemory</li>
-            <li>Navigator.prototype.appCodeName</li>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>Navigator.prototype.permissions</li>
-            <li>Navigator.prototype.product</li>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.webkitTemporaryStorage</li>
+            <li class='truncate'>Navigator.prototype.webkitPersistentStorage</li>
+            <li class='truncate'>Navigator.prototype.keyboard</li>
+            <li class='truncate'>Navigator.prototype.productSub</li>
+            <li class='truncate'>Navigator.prototype.storage</li>
+            <li class='truncate'>Navigator.prototype.mediaCapabilities</li>
+            <li class='truncate'>Navigator.prototype.presentation</li>
+            <li class='truncate'>Navigator.prototype.vendorSub</li>
+            <li class='truncate'>Navigator.prototype.mediaDevices</li>
+            <li class='truncate'>Navigator.prototype.deviceMemory</li>
+            <li class='truncate'>Navigator.prototype.appCodeName</li>
+            <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+            <li class='truncate'>Navigator.prototype.onLine</li>
+            <li class='truncate'>Navigator.prototype.permissions</li>
+            <li class='truncate'>Navigator.prototype.product</li>
+            <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+            <li class='truncate'>Navigator.prototype.doNotTrack</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Navigator.prototype.mimeTypes</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Navigator.prototype.connection</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Navigator.prototype.plugins</li>
+            <li class='truncate'>Navigator.prototype.appVersion</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://kctag.net&#x2F;kias-medpexde.js" target="_blank" class="external" rel="noreferrer noopener">kctag.net&#x2F;kias-medpexde.js</a></li>
+            <li class='truncate'><a href="http://kctag.net&#x2F;live&#x2F;ksid.js" target="_blank" class="external" rel="noreferrer noopener">kctag.net&#x2F;live&#x2F;ksid.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://kctag.net&#x2F;kias-medpexde.js" target="_blank" class="external" rel="noreferrer noopener">kctag.net&#x2F;kias-medpexde.js</a></li>
-            <li><a href="http://kctag.net&#x2F;live&#x2F;ksid.js" target="_blank" class="external" rel="noreferrer noopener">kctag.net&#x2F;live&#x2F;ksid.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

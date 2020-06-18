@@ -19,20 +19,20 @@
     <div class="container mx-auto">
         {{>navigation}}
 
-        <div class="top-container">
+        <div class="p-5 grid grid-cols-1 row-gap-10 md:grid-cols-2 md:row-gap-2">
             <div class="top-entities">
-                <div><strong>Top 100 Entities</strong></div>
-                <ol>
+                <div class='section-header'>Top 100 Entities</div>
+                <ol class='list-decimal'>
                 {{#entities}}
-                    <li><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
+                    <li class='ml-5'><a href="./entities/{{name}}.html">{{name}} - {{prevalence}}&#37;</a></li>
                 {{/entities}}
                 </ol>
             </div>
             <div class="top-trackers">
-                <div><strong>Top 100 Domains</strong></div>
-                <ol>
+                <div class='section-header'>Top 100 Domains</div>
+                <ol class='list-decimal'>
                 {{#domains}}
-                    <li><a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
+                    <li class='ml-5'><a href="./domains/{{domain}}.html">{{domain}} - {{sites}} sites</a></li>
                 {{/domains}}
                 </ol>
             </div>

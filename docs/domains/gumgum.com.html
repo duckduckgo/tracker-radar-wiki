@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>gumgum.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>gumgum.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/GumGum.html">GumGum</a>
                 </li>
@@ -89,116 +92,122 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/gumgum.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>g2</span>, 
+                    <span>rtb</span>, 
+                    <span>js</span>, 
+                    <span>c</span>, 
+                    <span>s.update.wo</span>, 
+                    <span>px</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>g2</span>, 
-        <span>rtb</span>, 
-        <span>js</span>, 
-        <span>c</span>, 
-        <span>s.update.wo</span>, 
-        <span>px</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.productSub</li>
-            <li>Navigator.prototype.vendorSub</li>
-            <li>Navigator.prototype.mediaDevices</li>
-            <li>Navigator.prototype.deviceMemory</li>
-            <li>Navigator.prototype.appCodeName</li>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>speechSynthesis.__proto__.getVoices</li>
-            <li>Navigator.prototype.permissions</li>
-            <li>Navigator.prototype.product</li>
-            <li>Screen.prototype.availTop</li>
-            <li>Navigator.prototype.getBattery</li>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Screen.prototype.availLeft</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>window.indexedDB</li>
-            <li>Navigator.prototype.platform</li>
-            <li>window.devicePixelRatio</li>
-            <li>Screen.prototype.pixelDepth</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Performance.prototype.memory</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>console.memory</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>URL.createObjectURL</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Intl.DateTimeFormat.prototype.resolvedOptions</li>
-            <li>Event.prototype.timeStamp</li>
-            <li>Screen.prototype.orientation</li>
-            <li>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.productSub</li>
+            <li class='truncate'>Navigator.prototype.vendorSub</li>
+            <li class='truncate'>Navigator.prototype.mediaDevices</li>
+            <li class='truncate'>Navigator.prototype.deviceMemory</li>
+            <li class='truncate'>Navigator.prototype.appCodeName</li>
+            <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+            <li class='truncate'>Navigator.prototype.onLine</li>
+            <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+            <li class='truncate'>Navigator.prototype.permissions</li>
+            <li class='truncate'>Navigator.prototype.product</li>
+            <li class='truncate'>Screen.prototype.availTop</li>
+            <li class='truncate'>Navigator.prototype.getBattery</li>
+            <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+            <li class='truncate'>Screen.prototype.availWidth</li>
+            <li class='truncate'>Screen.prototype.availHeight</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Screen.prototype.availLeft</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>window.indexedDB</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Screen.prototype.pixelDepth</li>
+            <li class='truncate'>Navigator.prototype.connection</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.plugins</li>
+            <li class='truncate'>Performance.prototype.memory</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>console.memory</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>URL.createObjectURL</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+            <li class='truncate'>Event.prototype.timeStamp</li>
+            <li class='truncate'>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+            <li class='truncate'>Screen.prototype.orientation</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;hbid&#x2F;imp" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;hbid&#x2F;imp</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;amzns2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;amzns2s</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;getuid&#x2F;d1ba4609" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;d1ba4609</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;prbds2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;prbds2s</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;0608867b" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;0608867b</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;vpbwxdoz" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;vpbwxdoz</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;services.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;services.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;cnv_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;cnv_hype_generated_script.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;HYPE-664.thin.min.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;HYPE-664.thin.min.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;getuid&#x2F;f850a142" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;f850a142</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;adobe&#x2F;s2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;adobe&#x2F;s2s</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;getuid&#x2F;f850a142" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;f850a142</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;q4rzuhcs" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;q4rzuhcs</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;javascripts&#x2F;ggv2.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;javascripts&#x2F;ggv2.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;services.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;services.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;2&#x2F;812724&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;2&#x2F;812724&#x2F;analytics.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;2&#x2F;4.66.0&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;2&#x2F;4.66.0&#x2F;main.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;retarget&#x2F;exposure" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;retarget&#x2F;exposure</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;zones&#x2F;73d075c3&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;73d075c3&#x2F;services</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;gumgum.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;gumgum.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;creative-content&#x2F;v3&#x2F;8611&#x2F;hype&#x2F;01&#x2F;ISA.hyperesources&#x2F;isa_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;creative-content&#x2F;v3&#x2F;8611&#x2F;hype&#x2F;01&#x2F;ISA.hyperesources&#x2F;isa_hype_generated_script.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;usync&#x2F;amzns2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;amzns2s</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;slot.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;slot.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;slot" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;slot</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;publishers&#x2F;2274&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;publishers&#x2F;2274&#x2F;services</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;zones&#x2F;205010be&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;205010be&#x2F;services</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;zones&#x2F;3f61f946&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;3f61f946&#x2F;services</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;scroll_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;scroll_hype_generated_script.js</a></li>
+            <li class='truncate'><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;HYPE-664.thin.min.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;HYPE-664.thin.min.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://gumgum.com&#x2F;hbid&#x2F;imp" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;hbid&#x2F;imp</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;amzns2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;amzns2s</a></li>
-            <li><a href="http://gumgum.com&#x2F;getuid&#x2F;d1ba4609" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;d1ba4609</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;prbds2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;prbds2s</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;0608867b" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;0608867b</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;vpbwxdoz" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;vpbwxdoz</a></li>
-            <li><a href="http://gumgum.com&#x2F;services.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;services.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;cnv_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;cnv_hype_generated_script.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;HYPE-664.thin.min.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;honda&#x2F;fy_crv_20&#x2F;competitor&#x2F;cnv&#x2F;01&#x2F;cnv.hyperesources&#x2F;HYPE-664.thin.min.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;getuid&#x2F;f850a142" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;f850a142</a></li>
-            <li><a href="http://gumgum.com&#x2F;adobe&#x2F;s2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;adobe&#x2F;s2s</a></li>
-            <li><a href="http://gumgum.com&#x2F;getuid&#x2F;f850a142" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;getuid&#x2F;f850a142</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;q4rzuhcs" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;q4rzuhcs</a></li>
-            <li><a href="http://gumgum.com&#x2F;javascripts&#x2F;ggv2.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;javascripts&#x2F;ggv2.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;services.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;services.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;2&#x2F;812724&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;2&#x2F;812724&#x2F;analytics.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;2&#x2F;4.66.0&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;2&#x2F;4.66.0&#x2F;main.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;retarget&#x2F;exposure" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;retarget&#x2F;exposure</a></li>
-            <li><a href="http://gumgum.com&#x2F;zones&#x2F;73d075c3&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;73d075c3&#x2F;services</a></li>
-            <li><a href="http://gumgum.com&#x2F;gumgum.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;gumgum.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;creative-content&#x2F;v3&#x2F;8611&#x2F;hype&#x2F;01&#x2F;ISA.hyperesources&#x2F;isa_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;creative-content&#x2F;v3&#x2F;8611&#x2F;hype&#x2F;01&#x2F;ISA.hyperesources&#x2F;isa_hype_generated_script.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;usync&#x2F;amzns2s" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;usync&#x2F;amzns2s</a></li>
-            <li><a href="http://gumgum.com&#x2F;slot.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;slot.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;slot" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;slot</a></li>
-            <li><a href="http://gumgum.com&#x2F;publishers&#x2F;2274&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;publishers&#x2F;2274&#x2F;services</a></li>
-            <li><a href="http://gumgum.com&#x2F;zones&#x2F;205010be&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;205010be&#x2F;services</a></li>
-            <li><a href="http://gumgum.com&#x2F;zones&#x2F;3f61f946&#x2F;services" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;zones&#x2F;3f61f946&#x2F;services</a></li>
-            <li><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;scroll_hype_generated_script.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;scroll_hype_generated_script.js</a></li>
-            <li><a href="http://gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;HYPE-664.thin.min.js" target="_blank" class="external" rel="noreferrer noopener">gumgum.com&#x2F;ads&#x2F;com&#x2F;microsoft&#x2F;teams_q4_fy2020&#x2F;scroll&#x2F;00&#x2F;scroll.hyperesources&#x2F;HYPE-664.thin.min.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

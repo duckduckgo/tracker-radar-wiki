@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>wikia.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>wikia.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Wikia, Inc..html">Wikia, Inc.</a>
                 </li>
@@ -86,64 +89,70 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/wikia.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>origin-images</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>origin-images</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.appName</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
-            <li>Document.cookie getter</li>
-            <li>Screen.prototype.orientation</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.doNotTrack</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>Navigator.prototype.connection</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>Navigator.prototype.appVersion</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
+            <li class='truncate'>Screen.prototype.orientation</li>
+            <li class='truncate'>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.1&#x2F;tracking-opt-in.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.1&#x2F;tracking-opt-in.min.js</a></li>
+            <li class='truncate'><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;platforms&#x2F;v64.3.0&#x2F;gamepedia&#x2F;main.bundle.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;platforms&#x2F;v64.3.0&#x2F;gamepedia&#x2F;main.bundle.js</a></li>
+            <li class='truncate'><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.6&#x2F;tracking-opt-in.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.6&#x2F;tracking-opt-in.min.js</a></li>
+            <li class='truncate'><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;prebid.js&#x2F;v3.2.0&#x2F;20200414.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;prebid.js&#x2F;v3.2.0&#x2F;20200414.min.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.1&#x2F;tracking-opt-in.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.1&#x2F;tracking-opt-in.min.js</a></li>
-            <li><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;platforms&#x2F;v64.3.0&#x2F;gamepedia&#x2F;main.bundle.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;platforms&#x2F;v64.3.0&#x2F;gamepedia&#x2F;main.bundle.js</a></li>
-            <li><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.6&#x2F;tracking-opt-in.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;tracking-opt-in&#x2F;v3.0.6&#x2F;tracking-opt-in.min.js</a></li>
-            <li><a href="http://wikia.com&#x2F;fandom-ae-assets&#x2F;prebid.js&#x2F;v3.2.0&#x2F;20200414.min.js" target="_blank" class="external" rel="noreferrer noopener">wikia.com&#x2F;fandom-ae-assets&#x2F;prebid.js&#x2F;v3.2.0&#x2F;20200414.min.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

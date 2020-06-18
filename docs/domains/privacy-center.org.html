@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>privacy-center.org</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>privacy-center.org</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <i>Unknown</i>
                 </li>
@@ -86,71 +89,77 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/privacy-center.org.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>sdk</span>, 
+                    <span>sdk-gcp</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>sdk</span>, 
-        <span>sdk-gcp</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>window.indexedDB</li>
-            <li>window.devicePixelRatio</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>window.indexedDB</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie setter</li>
+            <li class='truncate'>Document.cookie getter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-fr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-fr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-it.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-it.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.080ffc3b4176f54f5b5ec45bbe1dc5166401e2fe.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.080ffc3b4176f54f5b5ec45bbe1dc5166401e2fe.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.2de90aa8592abcee7b9af28a89035bcc50117235.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.2de90aa8592abcee7b9af28a89035bcc50117235.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.5bed71644401d3d993c717a474c48972ecdaa39a.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.5bed71644401d3d993c717a474c48972ecdaa39a.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-es.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-es.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-en.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-en.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-de.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-de.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-hr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-hr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-ro.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-ro.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;sdk.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-en.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-en.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-fr.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-fr.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-gdpr-nl.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-nl.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
+            <li class='truncate'><a href="http://privacy-center.org&#x2F;ui-en.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-en.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://privacy-center.org&#x2F;sdk.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-fr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-fr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-it.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-it.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;sdk.080ffc3b4176f54f5b5ec45bbe1dc5166401e2fe.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.080ffc3b4176f54f5b5ec45bbe1dc5166401e2fe.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;sdk.2de90aa8592abcee7b9af28a89035bcc50117235.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.2de90aa8592abcee7b9af28a89035bcc50117235.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;sdk.5bed71644401d3d993c717a474c48972ecdaa39a.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.5bed71644401d3d993c717a474c48972ecdaa39a.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-es.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-es.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-en.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-en.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;sdk.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-de.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-de.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-hr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-hr.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-ro.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-ro.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;sdk.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;sdk.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-en.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-en.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-fr.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-fr.7fe37a43b2d1544ba75bd1d7a4bb0c34fcf43dfb.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-gdpr-nl.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-gdpr-nl.d2a4410338e0c2efa372f6dc09b9cb10aa1e44b0.js</a></li>
-            <li><a href="http://privacy-center.org&#x2F;ui-en.e5b7ae1910df8ae868c41778376c572fe9f21420.js" target="_blank" class="external" rel="noreferrer noopener">privacy-center.org&#x2F;ui-en.e5b7ae1910df8ae868c41778376c572fe9f21420.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

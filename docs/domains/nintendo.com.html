@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>nintendo.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>nintendo.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Nintendo Co., Ltd..html">Nintendo Co., Ltd.</a>
                 </li>
@@ -58,7 +61,7 @@
                     Privacy Policy: <i>Unknown</i>
                 </li>
                 <li>
-                    Rank: &#35;3167<small>/6963</small>
+                    Rank: &#35;3127<small>/6963</small>
                 </li>
                 <li>
                     Prevalence: 0.01&#37; (7 sites)
@@ -88,79 +91,85 @@
                     <span>XHR</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/nintendo.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>play</span>, 
+                    <span>media</span>, 
+                    <span>smetrics</span>, 
+                    <span>cdn.accounts</span>, 
+                    <span>accounts</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>play</span>, 
-        <span>media</span>, 
-        <span>smetrics</span>, 
-        <span>cdn.accounts</span>, 
-        <span>accounts</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>WebGLRenderingContext.prototype.getExtension</li>
-            <li>WebGLRenderingContext.prototype.getParameter</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Screen.prototype.pixelDepth</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>Navigator.prototype.javaEnabled</li>
-            <li>HTMLCanvasElement.prototype.constructor</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>URL.createObjectURL</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>MediaSource.isTypeSupported</li>
-            <li>Screen.prototype.orientation</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Screen.prototype.pixelDepth</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>Navigator.prototype.javaEnabled</li>
+            <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>URL.createObjectURL</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+            <li class='truncate'>MediaSource.isTypeSupported</li>
+            <li class='truncate'>Document.cookie setter</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Screen.prototype.orientation</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;themes&#x2F;friends&#x2F;isabelle&#x2F;" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;themes&#x2F;friends&#x2F;isabelle&#x2F;</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;share&#x2F;nclood&#x2F;stable&#x2F;en-us&#x2F;bundles&#x2F;microsite.min.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;share&#x2F;nclood&#x2F;stable&#x2F;en-us&#x2F;bundles&#x2F;microsite.min.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;static&#x2F;assets&#x2F;js&#x2F;site.79d60f0a7b06.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;static&#x2F;assets&#x2F;js&#x2F;site.79d60f0a7b06.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;id" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;id</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-client.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-client.3.0.0.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-opframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-opframe.3.0.0.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-xdframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-xdframe.3.0.0.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-appsframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-appsframe.3.0.0.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-eshopframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-eshopframe.3.0.0.js</a></li>
+            <li class='truncate'><a href="http://nintendo.com&#x2F;connect&#x2F;1.0.0&#x2F;authorize" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;connect&#x2F;1.0.0&#x2F;authorize</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://nintendo.com&#x2F;themes&#x2F;friends&#x2F;isabelle&#x2F;" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;themes&#x2F;friends&#x2F;isabelle&#x2F;</a></li>
-            <li><a href="http://nintendo.com&#x2F;share&#x2F;nclood&#x2F;stable&#x2F;en-us&#x2F;bundles&#x2F;microsite.min.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;share&#x2F;nclood&#x2F;stable&#x2F;en-us&#x2F;bundles&#x2F;microsite.min.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;static&#x2F;assets&#x2F;js&#x2F;site.79d60f0a7b06.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;static&#x2F;assets&#x2F;js&#x2F;site.79d60f0a7b06.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;id" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;id</a></li>
-            <li><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-client.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-client.3.0.0.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-opframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-opframe.3.0.0.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-xdframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-xdframe.3.0.0.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-appsframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-appsframe.3.0.0.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-eshopframe.3.0.0.js" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;jssdk&#x2F;nintendo-jssdk-eshopframe.3.0.0.js</a></li>
-            <li><a href="http://nintendo.com&#x2F;connect&#x2F;1.0.0&#x2F;authorize" target="_blank" class="external" rel="noreferrer noopener">nintendo.com&#x2F;connect&#x2F;1.0.0&#x2F;authorize</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

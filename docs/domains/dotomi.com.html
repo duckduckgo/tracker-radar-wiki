@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>dotomi.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>dotomi.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Conversant LLC.html">Conversant LLC</a>
                 </li>
@@ -90,97 +93,103 @@
                     <span>Fetch</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/dotomi.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>web.hb.ad.cpe</span>, 
+                    <span>media.msg</span>, 
+                    <span>districtm-match</span>, 
+                    <span>pulsepoint-match</span>, 
+                    <span>pubmatic-match</span>, 
+                    <span>dclk-match</span>, 
+                    <span>medianet-match</span>, 
+                    <span>casale-match</span>, 
+                    <span>synacor-match</span>, 
+                    <span>adobe-sync</span>, 
+                    <span>openx2-match</span>, 
+                    <span>sortable-match</span>, 
+                    <span>prebid-match</span>, 
+                    <span>stx-match</span>, 
+                    <span>purch-match</span>, 
+                    <span>triplelift-match</span>, 
+                    <span>eyeota-match</span>, 
+                    <span>amazon-tam-match</span>, 
+                    <span>match.sync.ad.cpe</span>, 
+                    <span>tpt</span>, 
+                    <span>login</span>, 
+                    <span>dp-sync</span>, 
+                    <span>tubemogul-sync</span>, 
+                    <span>direct.ad.cpe</span>, 
+                    <span>cookie.sync.ad.cpe</span>, 
+                    <span>secure-media.msg</span>, 
+                    <span>iad-usadmm</span>, 
+                    <span>s-usweb</span>, 
+                    <span>bluekai-sync</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>web.hb.ad.cpe</span>, 
-        <span>media.msg</span>, 
-        <span>districtm-match</span>, 
-        <span>pulsepoint-match</span>, 
-        <span>pubmatic-match</span>, 
-        <span>dclk-match</span>, 
-        <span>medianet-match</span>, 
-        <span>casale-match</span>, 
-        <span>synacor-match</span>, 
-        <span>adobe-sync</span>, 
-        <span>openx2-match</span>, 
-        <span>sortable-match</span>, 
-        <span>prebid-match</span>, 
-        <span>stx-match</span>, 
-        <span>purch-match</span>, 
-        <span>triplelift-match</span>, 
-        <span>eyeota-match</span>, 
-        <span>amazon-tam-match</span>, 
-        <span>match.sync.ad.cpe</span>, 
-        <span>tpt</span>, 
-        <span>login</span>, 
-        <span>dp-sync</span>, 
-        <span>tubemogul-sync</span>, 
-        <span>direct.ad.cpe</span>, 
-        <span>cookie.sync.ad.cpe</span>, 
-        <span>secure-media.msg</span>, 
-        <span>iad-usadmm</span>, 
-        <span>s-usweb</span>, 
-        <span>bluekai-sync</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie getter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie getter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;s2s&#x2F;header&#x2F;24" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header&#x2F;24</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;prebid&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;prebid&#x2F;match</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;w&#x2F;user.sync" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;user.sync</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;event&#x2F;etc&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;event&#x2F;etc&#x2F;view</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;ucm&#x2F;UCMController" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;ucm&#x2F;UCMController</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;ucm&#x2F;UCMController" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;ucm&#x2F;UCMController</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;match&#x2F;pixel&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;pixel&#x2F;current</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;w&#x2F;get.media" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;get.media</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;w&#x2F;cookie_sync" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;cookie_sync</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;w&#x2F;tre" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;tre</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;s2s&#x2F;header" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;px&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;px&#x2F;1_0</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;s2s&#x2F;header&#x2F;24" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header&#x2F;24</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;fetch&#x2F;banner&#x2F;jsonp" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;fetch&#x2F;banner&#x2F;jsonp</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;2" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;2</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;renderer&#x2F;spd&#x2F;global&#x2F;spd.js" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;renderer&#x2F;spd&#x2F;global&#x2F;spd.js</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;bluekai&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;bluekai&#x2F;match</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;w&#x2F;roitrack.cgi" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;roitrack.cgi</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;event&#x2F;etc&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;event&#x2F;etc&#x2F;view</a></li>
+            <li class='truncate'><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://dotomi.com&#x2F;s2s&#x2F;header&#x2F;24" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header&#x2F;24</a></li>
-            <li><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
-            <li><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
-            <li><a href="http://dotomi.com&#x2F;prebid&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;prebid&#x2F;match</a></li>
-            <li><a href="http://dotomi.com&#x2F;match&#x2F;bounce&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;bounce&#x2F;current</a></li>
-            <li><a href="http://dotomi.com&#x2F;w&#x2F;user.sync" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;user.sync</a></li>
-            <li><a href="http://dotomi.com&#x2F;event&#x2F;etc&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;event&#x2F;etc&#x2F;view</a></li>
-            <li><a href="http://dotomi.com&#x2F;ucm&#x2F;UCMController" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;ucm&#x2F;UCMController</a></li>
-            <li><a href="http://dotomi.com&#x2F;ucm&#x2F;UCMController" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;ucm&#x2F;UCMController</a></li>
-            <li><a href="http://dotomi.com&#x2F;match&#x2F;pixel&#x2F;current" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;match&#x2F;pixel&#x2F;current</a></li>
-            <li><a href="http://dotomi.com&#x2F;w&#x2F;get.media" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;get.media</a></li>
-            <li><a href="http://dotomi.com&#x2F;w&#x2F;cookie_sync" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;cookie_sync</a></li>
-            <li><a href="http://dotomi.com&#x2F;w&#x2F;tre" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;tre</a></li>
-            <li><a href="http://dotomi.com&#x2F;s2s&#x2F;header" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header</a></li>
-            <li><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0</a></li>
-            <li><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;px&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;px&#x2F;1_0</a></li>
-            <li><a href="http://dotomi.com&#x2F;s2s&#x2F;header&#x2F;24" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;s2s&#x2F;header&#x2F;24</a></li>
-            <li><a href="http://dotomi.com&#x2F;fetch&#x2F;banner&#x2F;jsonp" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;fetch&#x2F;banner&#x2F;jsonp</a></li>
-            <li><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;2" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;2</a></li>
-            <li><a href="http://dotomi.com&#x2F;renderer&#x2F;spd&#x2F;global&#x2F;spd.js" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;renderer&#x2F;spd&#x2F;global&#x2F;spd.js</a></li>
-            <li><a href="http://dotomi.com&#x2F;bluekai&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;bluekai&#x2F;match</a></li>
-            <li><a href="http://dotomi.com&#x2F;w&#x2F;roitrack.cgi" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;w&#x2F;roitrack.cgi</a></li>
-            <li><a href="http://dotomi.com&#x2F;event&#x2F;etc&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;event&#x2F;etc&#x2F;view</a></li>
-            <li><a href="http://dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0" target="_blank" class="external" rel="noreferrer noopener">dotomi.com&#x2F;profile&#x2F;visit&#x2F;js&#x2F;1_0</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

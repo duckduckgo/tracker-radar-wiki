@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>adform.net</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>adform.net</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Adform A&#x2F;S.html">Adform A&#x2F;S</a>
                 </li>
@@ -90,135 +93,141 @@
                     <span>Fetch</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/adform.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>c1</span>, 
+                    <span>dmp</span>, 
+                    <span>track</span>, 
+                    <span>adx</span>, 
+                    <span>s2</span>, 
+                    <span>server</span>, 
+                    <span>a2</span>, 
+                    <span>a1</span>, 
+                    <span>s1</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>c1</span>, 
-        <span>dmp</span>, 
-        <span>track</span>, 
-        <span>adx</span>, 
-        <span>s2</span>, 
-        <span>server</span>, 
-        <span>a2</span>, 
-        <span>a1</span>, 
-        <span>s1</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.productSub</li>
-            <li>Navigator.prototype.appCodeName</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>Navigator.prototype.product</li>
-            <li>Screen.prototype.availTop</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Screen.prototype.availLeft</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Navigator.prototype.connection</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.productSub</li>
+            <li class='truncate'>Navigator.prototype.appCodeName</li>
+            <li class='truncate'>Navigator.prototype.onLine</li>
+            <li class='truncate'>Navigator.prototype.product</li>
+            <li class='truncate'>Screen.prototype.availTop</li>
+            <li class='truncate'>Screen.prototype.availWidth</li>
+            <li class='truncate'>Screen.prototype.availHeight</li>
+            <li class='truncate'>Navigator.prototype.doNotTrack</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Screen.prototype.availLeft</li>
+            <li class='truncate'>Navigator.prototype.mimeTypes</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Navigator.prototype.connection</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Navigator.prototype.plugins</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>Navigator.prototype.appVersion</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-async.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-async.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;container&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;container&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-sync.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-sync.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adfscript&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfscript&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;bootstrap.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;adx.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;adx.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;trackpoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;trackpoint&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;imatch&#x2F;pixels" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;imatch&#x2F;pixels</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;dt&#x2F;digitrust.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;dt&#x2F;digitrust.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;dmp&#x2F;profile&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;dmp&#x2F;profile&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;audiencetag&#x2F;adformat.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;audiencetag&#x2F;adformat.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adx&#x2F;unload&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;unload&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adx&#x2F;openrtb" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;openrtb</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;rmb&#x2F;Adform.DHTML.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;rmb&#x2F;Adform.DHTML.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer-1.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer-1.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;dmp&#x2F;profile&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;dmp&#x2F;profile&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;adfscript.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;adfscript.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.2.latest.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.2.latest.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.1.latest.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.1.latest.js</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;opt&#x2F;opt-status&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;opt&#x2F;opt-status&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
+            <li class='truncate'><a href="http://adform.net&#x2F;adfscript&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfscript&#x2F;</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-async.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-async.js</a></li>
-            <li><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;container&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;container&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-sync.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;st&#x2F;trackpoint-sync.js</a></li>
-            <li><a href="http://adform.net&#x2F;adfscript&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfscript&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;bootstrap.js</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;adx.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;adx.js</a></li>
-            <li><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;trackpoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;trackpoint&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;imatch&#x2F;pixels" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;imatch&#x2F;pixels</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;dt&#x2F;digitrust.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;dt&#x2F;digitrust.js</a></li>
-            <li><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;dmp&#x2F;profile&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;dmp&#x2F;profile&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;audiencetag&#x2F;adformat.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;audiencetag&#x2F;adformat.js</a></li>
-            <li><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;adx&#x2F;unload&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;unload&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
-            <li><a href="http://adform.net&#x2F;adx&#x2F;openrtb" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;openrtb</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;rmb&#x2F;Adform.DHTML.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;rmb&#x2F;Adform.DHTML.js</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer-1.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer-1.js</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.187&#x2F;e&#x2F;awSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;components&#x2F;Adform.VideoPlayer.js</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;dmp&#x2F;profile&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;dmp&#x2F;profile&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;adfscript.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;adfscript.js</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.2.latest.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.2.latest.js</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;iwSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;HTML:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match</a></li>
-            <li><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiL&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
-            <li><a href="http://adform.net&#x2F;adx&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adx&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;2wSBggD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:AdConstructor:contents&#x2F;ImageTag:types&#x2F;Standard</a></li>
-            <li><a href="http://adform.net&#x2F;adfserve&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfserve&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.1.latest.js" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;banners&#x2F;scripts&#x2F;prebid.1.latest.js</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;opt&#x2F;opt-status&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;opt&#x2F;opt-status&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;serving&#x2F;cookie&#x2F;match&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;Serving&#x2F;TrackPoint&#x2F;</a></li>
-            <li><a href="http://adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;stoat&#x2F;620&#x2F;s2.adform.net&#x2F;load&#x2F;v&#x2F;0.0.186&#x2F;e&#x2F;.wSBgiD&#x2F;i&#x2F;8IC-4gAAAAKAA&#x2F;r:types&#x2F;ThirdParty</a></li>
-            <li><a href="http://adform.net&#x2F;adfscript&#x2F;" target="_blank" class="external" rel="noreferrer noopener">adform.net&#x2F;adfscript&#x2F;</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

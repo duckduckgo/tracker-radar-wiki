@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>yimg.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>yimg.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Verizon Media.html">Verizon Media</a>
                 </li>
@@ -86,63 +89,69 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/yimg.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>s</span>, 
+                    <span>sep</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>s</span>, 
-        <span>sep</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.vendor</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>HTMLMediaElement.prototype.canPlayType</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://yimg.com&#x2F;wi&#x2F;ytc.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;wi&#x2F;ytc.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;ty&#x2F;cdn&#x2F;usappliance&#x2F;jquery.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ty&#x2F;cdn&#x2F;usappliance&#x2F;jquery.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;av&#x2F;yap&#x2F;ga&#x2F;yap.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;av&#x2F;yap&#x2F;ga&#x2F;yap.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;uv&#x2F;dm&#x2F;scripts&#x2F;syndication.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;uv&#x2F;dm&#x2F;scripts&#x2F;syndication.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;dy&#x2F;ads&#x2F;native.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;dy&#x2F;ads&#x2F;native.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;loader_ae00b3f.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;loader_ae00b3f.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;lq&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;lq&#x2F;combo</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;ae&#x2F;ysb&#x2F;ms1.0&#x2F;promomgr&#x2F;js&#x2F;v1.0&#x2F;promo_manager_bui_be64d16.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;ysb&#x2F;ms1.0&#x2F;promomgr&#x2F;js&#x2F;v1.0&#x2F;promo_manager_bui_be64d16.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;zz&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;zz&#x2F;combo</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;fc-fd2278e.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;fc-fd2278e.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;av&#x2F;gemini&#x2F;ga&#x2F;gemini.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;av&#x2F;gemini&#x2F;ga&#x2F;gemini.js</a></li>
+            <li class='truncate'><a href="http://yimg.com&#x2F;rq&#x2F;darla&#x2F;2-8-9&#x2F;js&#x2F;g-d-min.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;rq&#x2F;darla&#x2F;2-8-9&#x2F;js&#x2F;g-d-min.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://yimg.com&#x2F;wi&#x2F;ytc.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;wi&#x2F;ytc.js</a></li>
-            <li><a href="http://yimg.com&#x2F;ty&#x2F;cdn&#x2F;usappliance&#x2F;jquery.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ty&#x2F;cdn&#x2F;usappliance&#x2F;jquery.js</a></li>
-            <li><a href="http://yimg.com&#x2F;av&#x2F;yap&#x2F;ga&#x2F;yap.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;av&#x2F;yap&#x2F;ga&#x2F;yap.js</a></li>
-            <li><a href="http://yimg.com&#x2F;uv&#x2F;dm&#x2F;scripts&#x2F;syndication.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;uv&#x2F;dm&#x2F;scripts&#x2F;syndication.js</a></li>
-            <li><a href="http://yimg.com&#x2F;dy&#x2F;ads&#x2F;native.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;dy&#x2F;ads&#x2F;native.js</a></li>
-            <li><a href="http://yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;loader_ae00b3f.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;loader_ae00b3f.js</a></li>
-            <li><a href="http://yimg.com&#x2F;lq&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;lq&#x2F;combo</a></li>
-            <li><a href="http://yimg.com&#x2F;ae&#x2F;ysb&#x2F;ms1.0&#x2F;promomgr&#x2F;js&#x2F;v1.0&#x2F;promo_manager_bui_be64d16.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;ysb&#x2F;ms1.0&#x2F;promomgr&#x2F;js&#x2F;v1.0&#x2F;promo_manager_bui_be64d16.js</a></li>
-            <li><a href="http://yimg.com&#x2F;zz&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;zz&#x2F;combo</a></li>
-            <li><a href="http://yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;fc-fd2278e.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;ae&#x2F;store&#x2F;yfc&#x2F;jscore&#x2F;fc-fd2278e.js</a></li>
-            <li><a href="http://yimg.com&#x2F;av&#x2F;gemini&#x2F;ga&#x2F;gemini.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;av&#x2F;gemini&#x2F;ga&#x2F;gemini.js</a></li>
-            <li><a href="http://yimg.com&#x2F;rq&#x2F;darla&#x2F;2-8-9&#x2F;js&#x2F;g-d-min.js" target="_blank" class="external" rel="noreferrer noopener">yimg.com&#x2F;rq&#x2F;darla&#x2F;2-8-9&#x2F;js&#x2F;g-d-min.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

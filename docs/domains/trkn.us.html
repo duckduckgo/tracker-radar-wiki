@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>trkn.us</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>trkn.us</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Claritas LLC.html">Claritas LLC</a>
                 </li>
@@ -88,93 +91,99 @@
                     <span>Document</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/trkn.us.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>aa</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>aa</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>WebGLRenderingContext.prototype.getContextAttributes</li>
-            <li>WebGLRenderingContext.prototype.getSupportedExtensions</li>
-            <li>WebGLRenderingContext.prototype.getShaderPrecisionFormat</li>
-            <li>Navigator.prototype.maxTouchPoints</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>HTMLCanvasElement.prototype.toDataURL</li>
-            <li>WebGLRenderingContext.prototype.getExtension</li>
-            <li>WebGLRenderingContext.prototype.getParameter</li>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>window.indexedDB</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>HTMLCanvasElement.prototype.constructor</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.sessionStorage</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>WebGLRenderingContext.prototype.getContextAttributes</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getSupportedExtensions</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getShaderPrecisionFormat</li>
+            <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+            <li class='truncate'>Screen.prototype.availWidth</li>
+            <li class='truncate'>Screen.prototype.availHeight</li>
+            <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+            <li class='truncate'>Navigator.prototype.doNotTrack</li>
+            <li class='truncate'>window.indexedDB</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Navigator.prototype.plugins</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.sessionStorage</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://trkn.us&#x2F;info&#x2F;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;info&#x2F;</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;1&#x2F;e&#x2F;cs.js" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;1&#x2F;e&#x2F;cs.js</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;0.437.38&#x2F;a&#x2F;s.htm" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;0.437.38&#x2F;a&#x2F;s.htm</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;c" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;c</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406;ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406;ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897;ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897;ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5318;g&#x3D;sitewide;gid&#x3D;20988;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5318;g&#x3D;sitewide;gid&#x3D;20988;</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;1833;g&#x3D;bravecto_homepage;gid&#x3D;9571" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;1833;g&#x3D;bravecto_homepage;gid&#x3D;9571</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid];ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid];ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;0.435.38&#x2F;a&#x2F;s.htm" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;0.435.38&#x2F;a&#x2F;s.htm</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;2042;g&#x3D;brochure_page_visited;gid&#x3D;10658;ord&#x3D;[uniqueid];cv1&#x3D;fd001a6f-960a-4020-b74a-6151bbfae659;cv2&#x3D;https:&#x2F;&#x2F;www.betterment.com&#x2F;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;2042;g&#x3D;brochure_page_visited;gid&#x3D;10658;ord&#x3D;[uniqueid];cv1&#x3D;fd001a6f-960a-4020-b74a-6151bbfae659;cv2&#x3D;https:&#x2F;&#x2F;www.betterment.com&#x2F;</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6668;g&#x3D;homepage;gid&#x3D;24193;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6668;g&#x3D;homepage;gid&#x3D;24193;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;3197;g&#x3D;homepage;gid&#x3D;15647;ord&#x3D;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;3197;g&#x3D;homepage;gid&#x3D;15647;ord&#x3D;</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6476;g&#x3D;homepage;gid&#x3D;23820" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6476;g&#x3D;homepage;gid&#x3D;23820</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6775;g&#x3D;nectar_homepage;gid&#x3D;24479;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6775;g&#x3D;nectar_homepage;gid&#x3D;24479;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5931;g&#x3D;overall_site_visitation;gid&#x3D;22456;ord&#x3D;1589988327407" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5931;g&#x3D;overall_site_visitation;gid&#x3D;22456;ord&#x3D;1589988327407</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;%5Buniqueid%5D" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;%5Buniqueid%5D</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6021;g&#x3D;engagement;gid&#x3D;22692;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6021;g&#x3D;engagement;gid&#x3D;22692;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4115;g&#x3D;sitewide;gid&#x3D;18052;ord&#x3D;1228810245" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4115;g&#x3D;sitewide;gid&#x3D;18052;ord&#x3D;1228810245</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6594;g&#x3D;sitewide;gid&#x3D;24055;ord&#x3D;1589915090336" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6594;g&#x3D;sitewide;gid&#x3D;24055;ord&#x3D;1589915090336</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4540;g&#x3D;sitewide;gid&#x3D;19065;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4540;g&#x3D;sitewide;gid&#x3D;19065;ord&#x3D;[uniqueid]</a></li>
+            <li class='truncate'><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;261;g&#x3D;homepage;gid&#x3D;24240" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;261;g&#x3D;homepage;gid&#x3D;24240</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://trkn.us&#x2F;info&#x2F;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;info&#x2F;</a></li>
-            <li><a href="http://trkn.us&#x2F;1&#x2F;e&#x2F;cs.js" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;1&#x2F;e&#x2F;cs.js</a></li>
-            <li><a href="http://trkn.us&#x2F;0.437.38&#x2F;a&#x2F;s.htm" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;0.437.38&#x2F;a&#x2F;s.htm</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;c" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;c</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406;ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5893;g&#x3D;conversion;gid&#x3D;22406;ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897;ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4025;g&#x3D;sitewide;gid&#x3D;17897;ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5318;g&#x3D;sitewide;gid&#x3D;20988;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5318;g&#x3D;sitewide;gid&#x3D;20988;</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;1833;g&#x3D;bravecto_homepage;gid&#x3D;9571" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;1833;g&#x3D;bravecto_homepage;gid&#x3D;9571</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid];ip&#x3D;54.208.100.54;cuidchk&#x3D;1" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5120;g&#x3D;sitewide;gid&#x3D;20628;ord&#x3D;[uniqueid];ip&#x3D;54.208.100.54;cuidchk&#x3D;1</a></li>
-            <li><a href="http://trkn.us&#x2F;0.435.38&#x2F;a&#x2F;s.htm" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;0.435.38&#x2F;a&#x2F;s.htm</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;2042;g&#x3D;brochure_page_visited;gid&#x3D;10658;ord&#x3D;[uniqueid];cv1&#x3D;fd001a6f-960a-4020-b74a-6151bbfae659;cv2&#x3D;https:&#x2F;&#x2F;www.betterment.com&#x2F;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;2042;g&#x3D;brochure_page_visited;gid&#x3D;10658;ord&#x3D;[uniqueid];cv1&#x3D;fd001a6f-960a-4020-b74a-6151bbfae659;cv2&#x3D;https:&#x2F;&#x2F;www.betterment.com&#x2F;</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6668;g&#x3D;homepage;gid&#x3D;24193;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6668;g&#x3D;homepage;gid&#x3D;24193;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;3197;g&#x3D;homepage;gid&#x3D;15647;ord&#x3D;" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;3197;g&#x3D;homepage;gid&#x3D;15647;ord&#x3D;</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6476;g&#x3D;homepage;gid&#x3D;23820" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6476;g&#x3D;homepage;gid&#x3D;23820</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6775;g&#x3D;nectar_homepage;gid&#x3D;24479;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6775;g&#x3D;nectar_homepage;gid&#x3D;24479;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5931;g&#x3D;overall_site_visitation;gid&#x3D;22456;ord&#x3D;1589988327407" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5931;g&#x3D;overall_site_visitation;gid&#x3D;22456;ord&#x3D;1589988327407</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;%5Buniqueid%5D" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;5692;g&#x3D;sitewide;gid&#x3D;21894;ord&#x3D;%5Buniqueid%5D</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6021;g&#x3D;engagement;gid&#x3D;22692;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6021;g&#x3D;engagement;gid&#x3D;22692;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4115;g&#x3D;sitewide;gid&#x3D;18052;ord&#x3D;1228810245" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4115;g&#x3D;sitewide;gid&#x3D;18052;ord&#x3D;1228810245</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6594;g&#x3D;sitewide;gid&#x3D;24055;ord&#x3D;1589915090336" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;6594;g&#x3D;sitewide;gid&#x3D;24055;ord&#x3D;1589915090336</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4540;g&#x3D;sitewide;gid&#x3D;19065;ord&#x3D;[uniqueid]" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;4540;g&#x3D;sitewide;gid&#x3D;19065;ord&#x3D;[uniqueid]</a></li>
-            <li><a href="http://trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;261;g&#x3D;homepage;gid&#x3D;24240" target="_blank" class="external" rel="noreferrer noopener">trkn.us&#x2F;pixel&#x2F;conv&#x2F;ppt&#x3D;261;g&#x3D;homepage;gid&#x3D;24240</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

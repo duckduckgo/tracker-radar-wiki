@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>paypal.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>paypal.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/PayPal, Inc..html">PayPal, Inc.</a>
                 </li>
@@ -90,126 +93,132 @@
                     <span>Document</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/paypal.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>www</span>, 
+                    <span>t</span>, 
+                    <span>www.sandbox</span>, 
+                    <span>c</span>, 
+                    <span>b.stats</span>, 
+                    <span>slc.stats</span>, 
+                    <span>chd.stats</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>www</span>, 
-        <span>t</span>, 
-        <span>www.sandbox</span>, 
-        <span>c</span>, 
-        <span>b.stats</span>, 
-        <span>slc.stats</span>, 
-        <span>chd.stats</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.productSub</li>
-            <li>Navigator.prototype.vendorSub</li>
-            <li>Navigator.prototype.deviceMemory</li>
-            <li>Navigator.prototype.hardwareConcurrency</li>
-            <li>Navigator.prototype.onLine</li>
-            <li>Navigator.prototype.product</li>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>HTMLCanvasElement.prototype.toDataURL</li>
-            <li>WebGLRenderingContext.prototype.getExtension</li>
-            <li>WebGLRenderingContext.prototype.getParameter</li>
-            <li>Navigator.prototype.languages</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.appName</li>
-            <li>window.devicePixelRatio</li>
-            <li>Screen.prototype.pixelDepth</li>
-            <li>Date.prototype.getTimezoneOffset</li>
-            <li>Navigator.prototype.language</li>
-            <li>Navigator.prototype.plugins</li>
-            <li>Performance.prototype.memory</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>HTMLCanvasElement.prototype.constructor</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Intl.DateTimeFormat.prototype.resolvedOptions</li>
-            <li>Screen.prototype.orientation</li>
-            <li>Document.cookie getter</li>
-            <li>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.productSub</li>
+            <li class='truncate'>Navigator.prototype.vendorSub</li>
+            <li class='truncate'>Navigator.prototype.deviceMemory</li>
+            <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+            <li class='truncate'>Navigator.prototype.onLine</li>
+            <li class='truncate'>Navigator.prototype.product</li>
+            <li class='truncate'>Screen.prototype.availWidth</li>
+            <li class='truncate'>Screen.prototype.availHeight</li>
+            <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+            <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+            <li class='truncate'>Navigator.prototype.languages</li>
+            <li class='truncate'>Navigator.prototype.mimeTypes</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.appName</li>
+            <li class='truncate'>window.devicePixelRatio</li>
+            <li class='truncate'>Screen.prototype.pixelDepth</li>
+            <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+            <li class='truncate'>Navigator.prototype.language</li>
+            <li class='truncate'>Navigator.prototype.plugins</li>
+            <li class='truncate'>Performance.prototype.memory</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+            <li class='truncate'>Navigator.prototype.appVersion</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+            <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+            <li class='truncate'>CSSStyleDeclaration.setProperty(&quot;fontFamily&quot;,…)</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Screen.prototype.orientation</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;sdk&#x2F;js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;sdk&#x2F;js</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;tagmanager&#x2F;pptm.js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;tagmanager&#x2F;pptm.js</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;ts" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ts</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;xoplatform&#x2F;logger&#x2F;api&#x2F;logger" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;xoplatform&#x2F;logger&#x2F;api&#x2F;logger</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;targeting&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;targeting&#x2F;graphql</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;imadserver&#x2F;upstream" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;imadserver&#x2F;upstream</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;credit-presentment&#x2F;smart&#x2F;modal" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;credit-presentment&#x2F;smart&#x2F;modal</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;ppcredit&#x2F;messagingLogger" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ppcredit&#x2F;messagingLogger</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;webapps&#x2F;mch&#x2F;cmd&#x2F;" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;webapps&#x2F;mch&#x2F;cmd&#x2F;</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but21.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but21.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;checkoutnow&#x2F;remembered" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;checkoutnow&#x2F;remembered</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;smart&#x2F;button" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;smart&#x2F;button</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;v1&#x2F;oauth2&#x2F;token" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;oauth2&#x2F;token</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;graphql</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_GB&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_GB&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;fr_FR&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;fr_FR&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;es_ES&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;es_ES&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;it_IT&#x2F;IT&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;it_IT&#x2F;IT&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_SM.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_SM.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;de_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;EN_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;EN_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;imadserver&#x2F;upstream" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;imadserver&#x2F;upstream</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;ppcredit&#x2F;modal&#x2F;ni" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ppcredit&#x2F;modal&#x2F;ni</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;es_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;es_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;tagmanager&#x2F;log" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;tagmanager&#x2F;log</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p1" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p1</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p2" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p2</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;muse&#x2F;api&#x2F;locale" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;muse&#x2F;api&#x2F;locale</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;images&#x2F;x-click-but21.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;images&#x2F;x-click-but21.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;da&#x2F;r&#x2F;fb.js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;da&#x2F;r&#x2F;fb.js</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;counter.cgi" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;counter.cgi</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;counter2.cgi" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;counter2.cgi</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_CA&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_CA&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;icon&#x2F;verification_seal.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;icon&#x2F;verification_seal.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;it_IT&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;it_IT&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
+            <li class='truncate'><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but04.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but04.gif</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;sdk&#x2F;js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;sdk&#x2F;js</a></li>
-            <li><a href="http://paypal.com&#x2F;tagmanager&#x2F;pptm.js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;tagmanager&#x2F;pptm.js</a></li>
-            <li><a href="http://paypal.com&#x2F;ts" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ts</a></li>
-            <li><a href="http://paypal.com&#x2F;xoplatform&#x2F;logger&#x2F;api&#x2F;logger" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;xoplatform&#x2F;logger&#x2F;api&#x2F;logger</a></li>
-            <li><a href="http://paypal.com&#x2F;targeting&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;targeting&#x2F;graphql</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;imadserver&#x2F;upstream" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;imadserver&#x2F;upstream</a></li>
-            <li><a href="http://paypal.com&#x2F;credit-presentment&#x2F;smart&#x2F;modal" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;credit-presentment&#x2F;smart&#x2F;modal</a></li>
-            <li><a href="http://paypal.com&#x2F;ppcredit&#x2F;messagingLogger" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ppcredit&#x2F;messagingLogger</a></li>
-            <li><a href="http://paypal.com&#x2F;webapps&#x2F;mch&#x2F;cmd&#x2F;" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;webapps&#x2F;mch&#x2F;cmd&#x2F;</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but21.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but21.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;checkoutnow&#x2F;remembered" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;checkoutnow&#x2F;remembered</a></li>
-            <li><a href="http://paypal.com&#x2F;smart&#x2F;button" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;smart&#x2F;button</a></li>
-            <li><a href="http://paypal.com&#x2F;v1&#x2F;oauth2&#x2F;token" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;oauth2&#x2F;token</a></li>
-            <li><a href="http://paypal.com&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;graphql</a></li>
-            <li><a href="http://paypal.com&#x2F;en_GB&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_GB&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;fr_FR&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;fr_FR&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;es_ES&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;es_ES&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;it_IT&#x2F;IT&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;it_IT&#x2F;IT&#x2F;i&#x2F;btn&#x2F;btn_donateCC_LG.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_SM.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;btn_donate_SM.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;de_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;EN_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;EN_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;imadserver&#x2F;upstream" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;imadserver&#x2F;upstream</a></li>
-            <li><a href="http://paypal.com&#x2F;ppcredit&#x2F;modal&#x2F;ni" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;ppcredit&#x2F;modal&#x2F;ni</a></li>
-            <li><a href="http://paypal.com&#x2F;es_US&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;es_US&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;tagmanager&#x2F;log" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;tagmanager&#x2F;log</a></li>
-            <li><a href="http://paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p1" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p1</a></li>
-            <li><a href="http://paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p2" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;v1&#x2F;r&#x2F;d&#x2F;b&#x2F;p2</a></li>
-            <li><a href="http://paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;de_DE&#x2F;DE&#x2F;i&#x2F;btn&#x2F;btn_donate_LG.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;muse&#x2F;api&#x2F;locale" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;muse&#x2F;api&#x2F;locale</a></li>
-            <li><a href="http://paypal.com&#x2F;images&#x2F;x-click-but21.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;images&#x2F;x-click-but21.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;da&#x2F;r&#x2F;fb.js" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;da&#x2F;r&#x2F;fb.js</a></li>
-            <li><a href="http://paypal.com&#x2F;counter.cgi" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;counter.cgi</a></li>
-            <li><a href="http://paypal.com&#x2F;counter2.cgi" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;counter2.cgi</a></li>
-            <li><a href="http://paypal.com&#x2F;en_CA&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_CA&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;icon&#x2F;verification_seal.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;icon&#x2F;verification_seal.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;it_IT&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;it_IT&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;en_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_DE&#x2F;i&#x2F;scr&#x2F;pixel.gif</a></li>
-            <li><a href="http://paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but04.gif" target="_blank" class="external" rel="noreferrer noopener">paypal.com&#x2F;en_US&#x2F;i&#x2F;btn&#x2F;x-click-but04.gif</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

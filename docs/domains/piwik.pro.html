@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>piwik.pro</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>piwik.pro</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Piwik PRO Sp. z o.o..html">Piwik PRO Sp. z o.o.</a>
                 </li>
@@ -58,7 +61,7 @@
                     Privacy Policy: <i>Unknown</i>
                 </li>
                 <li>
-                    Rank: &#35;1188<small>/6963</small>
+                    Rank: &#35;1194<small>/6963</small>
                 </li>
                 <li>
                     Prevalence: 0.06&#37; (41 sites)
@@ -86,82 +89,88 @@
                     <span>Script</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/piwik.pro.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>infiniti-research</span>, 
+                    <span>iconmedia</span>, 
+                    <span>vng</span>, 
+                    <span>koop</span>, 
+                    <span>annefrank</span>, 
+                    <span>bang-olufsen</span>, 
+                    <span>smartetailing</span>, 
+                    <span>koeppeldirect</span>, 
+                    <span>eboks</span>, 
+                    <span>goettingen</span>, 
+                    <span>hella</span>, 
+                    <span>kadasterbv</span>, 
+                    <span>nabu</span>, 
+                    <span>nyp</span>, 
+                    <span>svb</span>, 
+                    <span>teladoc-private</span>, 
+                    <span>vero</span>, 
+                    <span>xs4all</span>, 
+                    <span>iconmedia.containers</span>, 
+                    <span>bdtm.containers</span>, 
+                    <span>display-logix.containers</span>, 
+                    <span>boell</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>infiniti-research</span>, 
-        <span>iconmedia</span>, 
-        <span>vng</span>, 
-        <span>koop</span>, 
-        <span>annefrank</span>, 
-        <span>bang-olufsen</span>, 
-        <span>smartetailing</span>, 
-        <span>koeppeldirect</span>, 
-        <span>eboks</span>, 
-        <span>goettingen</span>, 
-        <span>hella</span>, 
-        <span>kadasterbv</span>, 
-        <span>nabu</span>, 
-        <span>nyp</span>, 
-        <span>svb</span>, 
-        <span>teladoc-private</span>, 
-        <span>vero</span>, 
-        <span>xs4all</span>, 
-        <span>iconmedia.containers</span>, 
-        <span>bdtm.containers</span>, 
-        <span>display-logix.containers</span>, 
-        <span>boell</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Navigator.prototype.doNotTrack</li>
-            <li>Navigator.prototype.mimeTypes</li>
-            <li>Navigator.prototype.platform</li>
-            <li>Navigator.prototype.javaEnabled</li>
-            <li>PerformanceTiming.prototype.navigationStart</li>
-            <li>Navigator.prototype.appVersion</li>
-            <li>Navigator.prototype.cookieEnabled</li>
-            <li>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.name</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Navigator.prototype.userAgent</li>
-            <li>Document.cookie setter</li>
-            <li>Document.cookie getter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Navigator.prototype.doNotTrack</li>
+            <li class='truncate'>Navigator.prototype.mimeTypes</li>
+            <li class='truncate'>Navigator.prototype.platform</li>
+            <li class='truncate'>Navigator.prototype.javaEnabled</li>
+            <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+            <li class='truncate'>Navigator.prototype.appVersion</li>
+            <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+            <li class='truncate'>window.matchMedia(&quot;prefers-reduced-motion&quot;)</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.name</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Navigator.prototype.userAgent</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://piwik.pro&#x2F;ppms.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;ppms.js</a></li>
+            <li class='truncate'><a href="http://piwik.pro&#x2F;d5e497ad-a9f2-4f6b-a8c4-d850f537074c.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;d5e497ad-a9f2-4f6b-a8c4-d850f537074c.js</a></li>
+            <li class='truncate'><a href="http://piwik.pro&#x2F;7e06d939-563e-4c29-b5d0-177ed38d416e.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;7e06d939-563e-4c29-b5d0-177ed38d416e.js</a></li>
+            <li class='truncate'><a href="http://piwik.pro&#x2F;adb6d468-c912-4801-b806-15a0f6871cad.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;adb6d468-c912-4801-b806-15a0f6871cad.js</a></li>
+            <li class='truncate'><a href="http://piwik.pro&#x2F;piwik.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;piwik.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://piwik.pro&#x2F;ppms.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;ppms.js</a></li>
-            <li><a href="http://piwik.pro&#x2F;d5e497ad-a9f2-4f6b-a8c4-d850f537074c.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;d5e497ad-a9f2-4f6b-a8c4-d850f537074c.js</a></li>
-            <li><a href="http://piwik.pro&#x2F;7e06d939-563e-4c29-b5d0-177ed38d416e.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;7e06d939-563e-4c29-b5d0-177ed38d416e.js</a></li>
-            <li><a href="http://piwik.pro&#x2F;adb6d468-c912-4801-b806-15a0f6871cad.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;adb6d468-c912-4801-b806-15a0f6871cad.js</a></li>
-            <li><a href="http://piwik.pro&#x2F;piwik.js" target="_blank" class="external" rel="noreferrer noopener">piwik.pro&#x2F;piwik.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

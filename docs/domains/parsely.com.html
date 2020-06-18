@@ -46,11 +46,14 @@
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
 <script src='../assets/js/graph.js' defer></script>
 
-<div class="container-lg px-3 my-5 markdown-body">
-    <h1>parsely.com</h1>
-    <div class="domain-head">
+<div class="p-5">
+    <h1 class='text-2xl mb-5'>parsely.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10 mb-5'>
         <div class="domain-stats">
+            <h3 class="section-header flex-grow">Domain Stats</h3>
             <ul>
+                <h3 class='section-header'></h3>
+            
                 <li>
                     Owner: <a href="../entities/Parsely, Inc..html">Parsely, Inc.</a>
                 </li>
@@ -58,7 +61,7 @@
                     Privacy Policy: <a href="https:&#x2F;&#x2F;www.parse.ly&#x2F;privacy-policy&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.parse.ly&#x2F;privacy-policy&#x2F;</a>
                 </li>
                 <li>
-                    Rank: &#35;219<small>/6963</small>
+                    Rank: &#35;217<small>/6963</small>
                 </li>
                 <li>
                     Prevalence: 1.05&#37; (735 sites)
@@ -87,95 +90,101 @@
                     <span>Image</span>,
                 </li>
                 <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/parsely.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Subdomains:
+                    <span>cdn</span>, 
+                    <span>srv-2020-05-20-20.pixel</span>, 
+                    <span>srv-2020-05-19-17.pixel</span>, 
+                    <span>srv-2020-05-20-15.pixel</span>, 
+                    <span>srv-2020-05-19-18.pixel</span>, 
+                    <span>srv-2020-05-19-16.pixel</span>, 
+                    <span>srv-2020-05-20-19.pixel</span>, 
+                    <span>srv-2020-05-19-20.pixel</span>, 
+                    <span>srv-2020-05-19-23.pixel</span>, 
+                    <span>srv-2020-05-19-21.pixel</span>, 
+                    <span>srv-2020-05-20-14.pixel</span>, 
+                    <span>srv-2020-05-20-21.pixel</span>, 
+                    <span>srv-2020-05-20-00.pixel</span>, 
+                    <span>srv-2020-05-20-17.pixel</span>, 
+                    <span>srv-2020-05-19-15.pixel</span>, 
+                    <span>srv-2020-05-20-01.pixel</span>, 
+                    <span>srv-2020-05-19-19.pixel</span>, 
+                    <span>srv-2020-05-19-22.pixel</span>, 
+                    <span>srv-2020-05-20-02.pixel</span>, 
+                </li>
             </ul>
         </div>
         <div class='graph-container'>
-            <label>Historic data: <select class='graph-container__controller'>
-                <option selected value='prevalence'>prevalence</option>
-                <option value='sites'># of sites</option>
-                <option value='fingerprinting'>fingerprinting score</option>
-                <option value='cookies'>cookies</option>
-            </select></label>
-            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
         </div>
     </div>
-    
-    <p>
-        <strong>Subdomains:</strong>
-        <span>cdn</span>, 
-        <span>srv-2020-05-20-20.pixel</span>, 
-        <span>srv-2020-05-19-17.pixel</span>, 
-        <span>srv-2020-05-20-15.pixel</span>, 
-        <span>srv-2020-05-19-18.pixel</span>, 
-        <span>srv-2020-05-19-16.pixel</span>, 
-        <span>srv-2020-05-20-19.pixel</span>, 
-        <span>srv-2020-05-19-20.pixel</span>, 
-        <span>srv-2020-05-19-23.pixel</span>, 
-        <span>srv-2020-05-19-21.pixel</span>, 
-        <span>srv-2020-05-20-14.pixel</span>, 
-        <span>srv-2020-05-20-21.pixel</span>, 
-        <span>srv-2020-05-20-00.pixel</span>, 
-        <span>srv-2020-05-20-17.pixel</span>, 
-        <span>srv-2020-05-19-15.pixel</span>, 
-        <span>srv-2020-05-20-01.pixel</span>, 
-        <span>srv-2020-05-19-19.pixel</span>, 
-        <span>srv-2020-05-19-22.pixel</span>, 
-        <span>srv-2020-05-20-02.pixel</span>, 
-    </p>
 
-    <div>
-        <div><strong>Fingerprinting APIs Used</strong> <small>(Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)</small></div>
-        <ul>
-            <li>Screen.prototype.availWidth</li>
-            <li>Screen.prototype.availHeight</li>
-            <li>Navigator.prototype.vendor</li>
-            <li>Screen.prototype.colorDepth</li>
-            <li>Screen.prototype.height</li>
-            <li>Screen.prototype.width</li>
-            <li>window.localStorage</li>
-            <li>Date.prototype.getTime</li>
-            <li>Document.cookie getter</li>
-            <li>Document.cookie setter</li>
+    <div class='mb-5'>
+        <div class='flex'>
+            <h3 class='section-header pr-5'>Fingerprinting APIs Used
+                <span class='text-sm'>
+                    (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+                </span>
+            </h3> 
+        </div>    
+
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'>Screen.prototype.availWidth</li>
+            <li class='truncate'>Screen.prototype.availHeight</li>
+            <li class='truncate'>Navigator.prototype.vendor</li>
+            <li class='truncate'>Screen.prototype.colorDepth</li>
+            <li class='truncate'>Screen.prototype.height</li>
+            <li class='truncate'>Screen.prototype.width</li>
+            <li class='truncate'>window.localStorage</li>
+            <li class='truncate'>Date.prototype.getTime</li>
+            <li class='truncate'>Document.cookie getter</li>
+            <li class='truncate'>Document.cookie setter</li>
         </ul>
     </div>
 
-    <div>
-        <ul>
+
+    <div class='mb-5'>
+        <h3 class='section-header'>Resources Found</h3>
+        <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;azcentral.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;azcentral.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;astronomy.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;astronomy.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;eater.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;eater.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;start&#x2F;" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;start&#x2F;</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;tagesanzeiger.ch&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tagesanzeiger.ch&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;wsj.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;wsj.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;bloomberg.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;bloomberg.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;dailycaller.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;dailycaller.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;curbed.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;curbed.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;tomsguide.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tomsguide.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;libertaddigital.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;libertaddigital.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;scotsman.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;scotsman.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;tomshardware.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tomshardware.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;techradar.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;techradar.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;huffingtonpost&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;huffingtonpost&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;nypost.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nypost.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;slate.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;slate.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;theodysseyonline.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;theodysseyonline.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;event&#x2F;" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;event&#x2F;</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;mlive.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;mlive.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;nfl.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nfl.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;musicradar.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;musicradar.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;mtv.co.uk&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;mtv.co.uk&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;nbcnews.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nbcnews.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;pewresearch.org&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;pewresearch.org&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;shefinds.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;shefinds.com&#x2F;p.js</a></li>
+            <li class='truncate'><a href="http://parsely.com&#x2F;keys&#x2F;space.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;space.com&#x2F;p.js</a></li>
         </ul>
     </div>
 
-    <div>
-        <div><strong>Resources Found</strong></div>
-        <ul>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;azcentral.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;azcentral.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;astronomy.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;astronomy.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;eater.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;eater.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;start&#x2F;" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;start&#x2F;</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;tagesanzeiger.ch&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tagesanzeiger.ch&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;wsj.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;wsj.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;bloomberg.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;bloomberg.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;dailycaller.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;dailycaller.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;curbed.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;curbed.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;tomsguide.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tomsguide.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;libertaddigital.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;libertaddigital.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;scotsman.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;scotsman.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;tomshardware.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;tomshardware.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;techradar.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;techradar.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;huffingtonpost&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;huffingtonpost&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;nypost.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nypost.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;slate.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;slate.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;theodysseyonline.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;theodysseyonline.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;event&#x2F;" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;event&#x2F;</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;mlive.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;mlive.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;nfl.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nfl.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;musicradar.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;musicradar.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;mtv.co.uk&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;mtv.co.uk&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;nbcnews.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;nbcnews.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;pewresearch.org&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;pewresearch.org&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;shefinds.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;shefinds.com&#x2F;p.js</a></li>
-            <li><a href="http://parsely.com&#x2F;keys&#x2F;space.com&#x2F;p.js" target="_blank" class="external" rel="noreferrer noopener">parsely.com&#x2F;keys&#x2F;space.com&#x2F;p.js</a></li>
-        </ul>
-    </div>
 </div>
 
             <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>

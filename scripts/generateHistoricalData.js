@@ -3,15 +3,8 @@ const path = require('path');
 const chalk = require('chalk');
 const fs = require('fs');
 const ProgressBar = require('progress');
-const {checkoutCommit} = require('git-parse');
+const simpleGit = require('simple-git');
 const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
-
-const commits = [
-    {hash: '74e767dbaf6394bcb98348d54abf3daaa51e3131', date: '02.2020'},
-    {hash: '689e48064259a2e9d8d079e1fee79bb7f1f9a248', date: '03.2020'},
-    {hash: 'f62eb8b8f4fc64217c1ac06d45236513b120b504', date: '04.2020'},
-    {hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf', date: '05.2020'},
-];
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
@@ -22,19 +15,18 @@ const categoryMap = new Map();
 const globalStats = [];
 
 async function main() {
-    for (let commit of commits) {
-        // eslint-disable-next-line no-await-in-loop
-        const checkedOut = await checkoutCommit(config.trackerRadarRepoPath, commit.hash, {force: true});
+    const git = simpleGit(config.trackerRadarRepoPath);
+    const tagsString = await git.tag();
+    const tags = tagsString.split('\n').filter(a => a.length > 0);
 
-        if (!checkedOut) {
-            console.error('Failed to check out.');
-            return;
-        }
+    for (let tag of tags) {
+        // eslint-disable-next-line no-await-in-loop
+        await git.raw('checkout', tag, '--force');
 
         const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
         const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
-        console.log(chalk.yellow(commit.date));
+        console.log('Processing tag: ', chalk.yellow(tag));
 
         const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
             complete: chalk.green('='),
@@ -71,7 +63,7 @@ async function main() {
             };
 
             domainObj.entries.push({
-                date: commit.date,
+                date: tag,
                 prevalence: data.prevalence,
                 sites: data.sites,
                 fingerprinting: data.fingerprinting,
@@ -113,7 +105,7 @@ async function main() {
             };
 
             entityObj.entries.push({
-                date: commit.date,
+                date: tag,
                 prevalence: data.prevalence,
                 properties: data.properties.length
             });
@@ -122,7 +114,7 @@ async function main() {
         });
 
         globalStats.push({
-            date: commit.date,
+            date: tag,
             domains: domainFiles.length,
             entities: entityFiles.length,
             fingerprinting: fingerprintingScores

@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "My6sense Inc.",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.000208,"nonTracking":0.00037,"total":0.000578},"properties":2},{"date":"03.2020","prevalence":{"tracking":0.000325,"nonTracking":0.000529,"total":0.000854},"properties":2},{"date":"04.2020","prevalence":{"tracking":0.000814,"nonTracking":0.0006,"total":0.00141},"properties":2},{"date":"05.2020","prevalence":{"tracking":0.000499,"nonTracking":0.000485,"total":0.000984},"properties":2}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>My6sense Inc.</h1>
-    <ul>
-        <li>
-            Display name: My6sense
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.000567</li>
-                <li>nonTracking - 0.000628</li>
-                <li>total - 0.00119</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/My6sense Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: My6sense
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.000499</li>
+                        <li>nonTracking - 0.000485</li>
+                        <li>total - 0.000984</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/My6sense Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/mynativeplatform.com.html">mynativeplatform.com (0.12%)</a>
+            <a href="../domains/mynativeplatform.com.html">mynativeplatform.com (0.10%)</a>
         </span>,
         <span>
             my6sense.com

@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Otto (GmbH &amp; Co KG)",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.0000231,"nonTracking":0.00185,"total":0.00187},"properties":3},{"date":"03.2020","prevalence":{"tracking":0.000264,"nonTracking":0.00273,"total":0.00299},"properties":3},{"date":"04.2020","prevalence":{"tracking":0.000321,"nonTracking":0.00203,"total":0.00235},"properties":3},{"date":"05.2020","prevalence":{"tracking":0.000371,"nonTracking":0.00185,"total":0.00222},"properties":3}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Otto (GmbH &amp; Co KG)</h1>
-    <ul>
-        <li>
-            Display name: Otto (GmbH &amp; Co KG)
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.000729</li>
-                <li>nonTracking - 0.00211</li>
-                <li>total - 0.00284</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Otto (GmbH &amp; Co KG).json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Otto (GmbH &amp; Co KG)
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.000371</li>
+                        <li>nonTracking - 0.00185</li>
+                        <li>total - 0.00222</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Otto (GmbH &amp; Co KG).json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/otto.de.html">otto.de (0.28%)</a>
+            <a href="../domains/otto.de.html">otto.de (0.22%)</a>
         </span>,
         <span>
             ottogroup.media

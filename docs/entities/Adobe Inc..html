@@ -30,72 +30,86 @@
     window.wikiData = {
         type: "entity",
         name: "Adobe Inc.",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.218,"nonTracking":0.0204,"total":0.238},"properties":40},{"date":"03.2020","prevalence":{"tracking":0.237,"nonTracking":0.0413,"total":0.278},"properties":46},{"date":"04.2020","prevalence":{"tracking":0.229,"nonTracking":0.0411,"total":0.27},"properties":47},{"date":"05.2020","prevalence":{"tracking":0.195,"nonTracking":0.0374,"total":0.232},"properties":47}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Adobe Inc.</h1>
-    <ul>
-        <li>
-            Display name: Adobe
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.234</li>
-                <li>nonTracking - 0.0389</li>
-                <li>total - 0.273</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Adobe Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Adobe
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.195</li>
+                        <li>nonTracking - 0.0374</li>
+                        <li>total - 0.232</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Adobe Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/everesttech.net.html">everesttech.net (18.20%)</a>
+            <a href="../domains/everesttech.net.html">everesttech.net (14.40%)</a>
         </span>,
         <span>
-            <a href="../domains/demdex.net.html">demdex.net (11.90%)</a>
+            <a href="../domains/demdex.net.html">demdex.net (9.61%)</a>
         </span>,
         <span>
-            <a href="../domains/omtrdc.net.html">omtrdc.net (4.57%)</a>
+            <a href="../domains/typekit.net.html">typekit.net (4.03%)</a>
         </span>,
         <span>
-            <a href="../domains/typekit.net.html">typekit.net (3.86%)</a>
+            <a href="../domains/omtrdc.net.html">omtrdc.net (2.67%)</a>
         </span>,
         <span>
-            <a href="../domains/adobedtm.com.html">adobedtm.com (2.99%)</a>
+            <a href="../domains/adobedtm.com.html">adobedtm.com (2.65%)</a>
         </span>,
         <span>
             <a href="../domains/marketo.net.html">marketo.net (0.91%)</a>
         </span>,
         <span>
-            <a href="../domains/mktoresp.com.html">mktoresp.com (0.87%)</a>
+            <a href="../domains/mktoresp.com.html">mktoresp.com (0.85%)</a>
         </span>,
         <span>
-            <a href="../domains/2o7.net.html">2o7.net (0.75%)</a>
+            <a href="../domains/2o7.net.html">2o7.net (0.39%)</a>
         </span>,
         <span>
-            <a href="../domains/scene7.com.html">scene7.com (0.40%)</a>
+            <a href="../domains/scene7.com.html">scene7.com (0.33%)</a>
         </span>,
         <span>
-            <a href="../domains/everestjs.net.html">everestjs.net (0.36%)</a>
+            <a href="../domains/everestjs.net.html">everestjs.net (0.29%)</a>
         </span>,
         <span>
-            <a href="../domains/marketo.com.html">marketo.com (0.25%)</a>
+            <a href="../domains/marketo.com.html">marketo.com (0.26%)</a>
         </span>,
         <span>
-            <a href="../domains/bizible.com.html">bizible.com (0.19%)</a>
+            <a href="../domains/bizible.com.html">bizible.com (0.18%)</a>
         </span>,
         <span>
-            <a href="../domains/adobe.com.html">adobe.com (0.09%)</a>
+            <a href="../domains/adobe.com.html">adobe.com (0.10%)</a>
         </span>,
         <span>
-            <a href="../domains/typekit.com.html">typekit.com (0.07%)</a>
+            <a href="../domains/typekit.com.html">typekit.com (0.10%)</a>
         </span>,
         <span>
-            <a href="../domains/bizibly.com.html">bizibly.com (0.05%)</a>
+            <a href="../domains/bizibly.com.html">bizibly.com (0.04%)</a>
         </span>,
         <span>
             <a href="../domains/livefyre.com.html">livefyre.com (0.04%)</a>
@@ -104,13 +118,13 @@
             <a href="../domains/edgefonts.net.html">edgefonts.net (0.03%)</a>
         </span>,
         <span>
-            <a href="../domains/adobetag.com.html">adobetag.com (0.02%)</a>
-        </span>,
-        <span>
-            <a href="../domains/adobedc.net.html">adobedc.net (0.01%)</a>
-        </span>,
-        <span>
             <a href="../domains/adobecqms.net.html">adobecqms.net (0.01%)</a>
+        </span>,
+        <span>
+            <a href="../domains/adobetag.com.html">adobetag.com (0.01%)</a>
+        </span>,
+        <span>
+            <a href="../domains/adobedc.net.html">adobedc.net (0.00%)</a>
         </span>,
         <span>
             fyre.co

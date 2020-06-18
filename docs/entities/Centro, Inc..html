@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Centro, Inc.",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.0727,"nonTracking":0.000208,"total":0.0729},"properties":4},{"date":"03.2020","prevalence":{"tracking":0.111,"nonTracking":0.000183,"total":0.111},"properties":4},{"date":"04.2020","prevalence":{"tracking":0.103,"nonTracking":0.000814,"total":0.104},"properties":4},{"date":"05.2020","prevalence":{"tracking":0.0827,"nonTracking":0.00349,"total":0.0862},"properties":4}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Centro, Inc.</h1>
-    <ul>
-        <li>
-            Display name: Centro
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.113</li>
-                <li>nonTracking - 0.000608</li>
-                <li>total - 0.114</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Centro, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Centro
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.0827</li>
+                        <li>nonTracking - 0.00349</li>
+                        <li>total - 0.0862</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Centro, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/sitescout.com.html">sitescout.com (11.30%)</a>
+            <a href="../domains/sitescout.com.html">sitescout.com (8.60%)</a>
         </span>,
         <span>
             adbrite.com

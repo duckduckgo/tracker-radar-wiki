@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Quora",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.00592,"nonTracking":0.0000462,"total":0.00597},"properties":2},{"date":"03.2020","prevalence":{"tracking":0.00376,"nonTracking":0.00244,"total":0.0062},"properties":2},{"date":"04.2020","prevalence":{"tracking":0.0037,"nonTracking":0.00268,"total":0.00638},"properties":2},{"date":"05.2020","prevalence":{"tracking":0.00339,"nonTracking":0.0025,"total":0.00589},"properties":2}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Quora</h1>
-    <ul>
-        <li>
-            Display name: Quora
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.00401</li>
-                <li>nonTracking - 0.00221</li>
-                <li>total - 0.00622</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Quora.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Quora
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.00339</li>
+                        <li>nonTracking - 0.0025</li>
+                        <li>total - 0.00589</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Quora.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/quora.com.html">quora.com (0.62%)</a>
+            <a href="../domains/quora.com.html">quora.com (0.59%)</a>
         </span>,
         <span>
             quoracdn.net

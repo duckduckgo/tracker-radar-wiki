@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Wirtualna Polska",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.000439,"nonTracking":0,"total":0.000439},"properties":12},{"date":"03.2020","prevalence":{"tracking":0.000631,"nonTracking":0,"total":0.000631},"properties":12},{"date":"04.2020","prevalence":{"tracking":0.000407,"nonTracking":0.0000214,"total":0.000428},"properties":12},{"date":"05.2020","prevalence":{"tracking":0.000456,"nonTracking":0.0000856,"total":0.000542},"properties":12}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Wirtualna Polska</h1>
-    <ul>
-        <li>
-            Display name: Wirtualna Polska
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.000628</li>
-                <li>nonTracking - 0</li>
-                <li>total - 0.000628</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Wirtualna Polska.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Wirtualna Polska
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.000456</li>
+                        <li>nonTracking - 0.0000856</li>
+                        <li>total - 0.000542</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Wirtualna Polska.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/wp.pl.html">wp.pl (0.06%)</a>
+            <a href="../domains/wp.pl.html">wp.pl (0.05%)</a>
         </span>,
         <span>
             money.pl

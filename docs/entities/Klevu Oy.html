@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Klevu Oy",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.00146,"nonTracking":0.0000462,"total":0.00151},"properties":1},{"date":"03.2020","prevalence":{"tracking":0.00124,"nonTracking":0.0000814,"total":0.00132},"properties":1},{"date":"04.2020","prevalence":{"tracking":0.00137,"nonTracking":0.000171,"total":0.00154},"properties":1},{"date":"05.2020","prevalence":{"tracking":0.00178,"nonTracking":0.000228,"total":0.00201},"properties":1}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Klevu Oy</h1>
-    <ul>
-        <li>
-            Display name: Klevu
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.0016</li>
-                <li>nonTracking - 0.000142</li>
-                <li>total - 0.00174</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Klevu Oy.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Klevu
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.00178</li>
+                        <li>nonTracking - 0.000228</li>
+                        <li>total - 0.00201</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Klevu Oy.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/klevu.com.html">klevu.com (0.17%)</a>
+            <a href="../domains/klevu.com.html">klevu.com (0.20%)</a>
         </span>,
     </p>
 

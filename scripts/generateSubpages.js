@@ -69,7 +69,7 @@ domainFiles.forEach(({file, resolvedPath}) => {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
 
-        const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/', file), 'utf8');
+        const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/domains/', file), 'utf8');
         const history = JSON.parse(historicDataString);
         data.history = history.entries;
         data.historySerialized = JSON.stringify(data.history);
@@ -118,6 +118,11 @@ entityFiles.forEach(({file, resolvedPath}) => {
     try {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
+
+        const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/entities', file), 'utf8');
+        const history = JSON.parse(historicDataString);
+        data.history = history.entries;
+        data.historySerialized = JSON.stringify(data.history);
     } catch (e) {
         stats.failingFiles++;
         return;

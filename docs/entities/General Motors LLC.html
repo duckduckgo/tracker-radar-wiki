@@ -30,26 +30,40 @@
     window.wikiData = {
         type: "entity",
         name: "General Motors LLC",
+        history: [{"date":"02.2020","prevalence":{"tracking":0,"nonTracking":0.0000462,"total":0.0000462},"properties":8},{"date":"03.2020","prevalence":{"tracking":0,"nonTracking":0.0000203,"total":0.0000203},"properties":8},{"date":"04.2020","properties":8},{"date":"05.2020","prevalence":{"tracking":0,"nonTracking":0.0000143,"total":0.0000143},"properties":8}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>General Motors LLC</h1>
-    <ul>
-        <li>
-            Display name: General Motors
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0</li>
-                <li>nonTracking - 0.0000143</li>
-                <li>total - 0.0000143</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/General Motors LLC.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: General Motors
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0</li>
+                        <li>nonTracking - 0.0000143</li>
+                        <li>total - 0.0000143</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/General Motors LLC.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>

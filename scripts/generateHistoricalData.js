@@ -17,6 +17,7 @@ const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/doma
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
 
 const domainMap = new Map();
+const entityMap = new Map();
 const globalStats = [];
 
 async function main() {
@@ -37,7 +38,7 @@ async function main() {
         const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
             complete: chalk.green('='),
             incomplete: ' ',
-            total: domainFiles.length,
+            total: domainFiles.length + entityFiles.length,
             width: 30
         });
 
@@ -78,6 +79,34 @@ async function main() {
             domainMap.set(data.domain, domainObj);
         });
 
+        entityFiles.forEach(({file, resolvedPath}) => {
+            progressBar.tick({file});
+
+            let data = null;
+
+            try {
+                const dataString = fs.readFileSync(resolvedPath, 'utf8');
+                data = JSON.parse(dataString);
+            } catch (e) {
+                stats.failingFiles++;
+                return;
+            }
+
+            const entityObj = entityMap.get(data.name) || {
+                filename: file,
+                name: data.name,
+                entries: []
+            };
+
+            entityObj.entries.push({
+                date: commit.date,
+                prevalence: data.prevalence,
+                properties: data.properties.length
+            });
+
+            entityMap.set(data.name, entityObj);
+        });
+
         globalStats.push({
             date: commit.date,
             domains: domainFiles.length,
@@ -89,7 +118,18 @@ async function main() {
 
 main().then(() => {
     Array.from(domainMap.values()).forEach(item => {
-        fs.writeFileSync(path.join(config.staticData, `/history/${item.name}.json`), JSON.stringify(item));
+        try {
+            fs.writeFileSync(path.join(config.staticData, `/history/domains/${item.name}.json`), JSON.stringify(item));
+        } catch (e) {
+            console.error(chalk.red(e));
+        }
+    });
+    Array.from(entityMap.values()).forEach(item => {
+        try {
+            fs.writeFileSync(path.join(config.staticData, `/history/entities/${item.filename}`), JSON.stringify(item));
+        } catch (e) {
+            console.error(chalk.red(e));
+        }
     });
 
     const trending = Array.from(domainMap.values()).map(item => {
@@ -103,7 +143,11 @@ main().then(() => {
             name: item.name
         };
     }).filter(entry => Math.abs(entry.diff) > 0.5).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
-    fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
-
-    fs.writeFileSync(path.join(config.staticData, `/history/global.json`), JSON.stringify(globalStats));
+    
+    try {
+        fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
+        fs.writeFileSync(path.join(config.staticData, `/history/global.json`), JSON.stringify(globalStats));
+    } catch (e) {
+        console.error(e);
+    }
 });

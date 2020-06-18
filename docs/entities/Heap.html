@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Heap",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.00298,"nonTracking":0.0000925,"total":0.00307},"properties":2},{"date":"03.2020","prevalence":{"tracking":0.00289,"nonTracking":0.000142,"total":0.00303},"properties":2},{"date":"04.2020","prevalence":{"tracking":0.00304,"nonTracking":0.000193,"total":0.00323},"properties":2},{"date":"05.2020","prevalence":{"tracking":0.00287,"nonTracking":0.0003,"total":0.00317},"properties":2}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Heap</h1>
-    <ul>
-        <li>
-            Display name: Heap
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.00316</li>
-                <li>nonTracking - 0.000223</li>
-                <li>total - 0.00338</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Heap.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Heap
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.00287</li>
+                        <li>nonTracking - 0.0003</li>
+                        <li>total - 0.00317</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Heap.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/heapanalytics.com.html">heapanalytics.com (0.34%)</a>
+            <a href="../domains/heapanalytics.com.html">heapanalytics.com (0.32%)</a>
         </span>,
         <span>
             heap.io

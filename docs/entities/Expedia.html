@@ -30,26 +30,40 @@
     window.wikiData = {
         type: "entity",
         name: "Expedia",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.000254,"nonTracking":0.0000231,"total":0.000277},"properties":16},{"date":"03.2020","prevalence":{"tracking":0.000264,"nonTracking":0.0000203,"total":0.000284},"properties":17},{"date":"04.2020","prevalence":{"tracking":0.000107,"nonTracking":0.0000214,"total":0.000128},"properties":17},{"date":"05.2020","prevalence":{"tracking":0.000114,"nonTracking":0,"total":0.000114},"properties":17}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Expedia</h1>
-    <ul>
-        <li>
-            Display name: Expedia
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.000203</li>
-                <li>nonTracking - 0.0000203</li>
-                <li>total - 0.000223</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Expedia.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Expedia
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.000114</li>
+                        <li>nonTracking - 0</li>
+                        <li>total - 0.000114</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Expedia.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
@@ -62,9 +76,6 @@
             <a href="../domains/trvl-px.com.html">trvl-px.com (0.01%)</a>
         </span>,
         <span>
-            <a href="../domains/expedia.de.html">expedia.de (0.00%)</a>
-        </span>,
-        <span>
             <a href="../domains/expediapartnercentral.com.html">expediapartnercentral.com (0.00%)</a>
         </span>,
         <span>
@@ -74,7 +85,10 @@
             flights.com
         </span>,
         <span>
-            eancdn.com
+            expedia.fr
+        </span>,
+        <span>
+            expedia.co.uk
         </span>,
         <span>
             expedia.ca
@@ -86,16 +100,16 @@
             poweredbygps.com
         </span>,
         <span>
-            expedia.com.au
+            eancdn.com
         </span>,
         <span>
-            expedia.co.uk
+            expedia.com.au
         </span>,
         <span>
             trvl-media.com
         </span>,
         <span>
-            expedia.fr
+            expedia.de
         </span>,
         <span>
             uciservice.com

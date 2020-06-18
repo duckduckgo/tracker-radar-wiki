@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "Wal-Mart Stores, Inc.",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.0292,"nonTracking":0.0000231,"total":0.0292},"properties":15},{"date":"03.2020","prevalence":{"tracking":0.0319,"nonTracking":0.000163,"total":0.0321},"properties":15},{"date":"04.2020","prevalence":{"tracking":0.0192,"nonTracking":0.000814,"total":0.02},"properties":16},{"date":"05.2020","prevalence":{"tracking":0.012,"nonTracking":0.00097,"total":0.013},"properties":16}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>Wal-Mart Stores, Inc.</h1>
-    <ul>
-        <li>
-            Display name: Wal-Mart Stores
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.0199</li>
-                <li>nonTracking - 0.000304</li>
-                <li>total - 0.0202</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Wal-Mart Stores, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: Wal-Mart Stores
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.012</li>
+                        <li>nonTracking - 0.00097</li>
+                        <li>total - 0.013</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/Wal-Mart Stores, Inc..json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/walmart.com.html">walmart.com (2.01%)</a>
+            <a href="../domains/walmart.com.html">walmart.com (1.28%)</a>
         </span>,
         <span>
             walmart.com.mx

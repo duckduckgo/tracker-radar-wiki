@@ -30,30 +30,44 @@
     window.wikiData = {
         type: "entity",
         name: "RealVu Inc",
+        history: [{"date":"02.2020","prevalence":{"tracking":0.00661,"nonTracking":0.0000694,"total":0.00668},"properties":1},{"date":"03.2020","prevalence":{"tracking":0.0106,"nonTracking":0.000366,"total":0.011},"properties":1},{"date":"04.2020","prevalence":{"tracking":0.0118,"nonTracking":0.00139,"total":0.0132},"properties":1},{"date":"05.2020","prevalence":{"tracking":0.00977,"nonTracking":0.00261,"total":0.0124},"properties":1}]
     };
 </script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/entity-graph.js' defer></script>
 
 <div class="container-lg px-3 my-5 markdown-body">
     <h1>RealVu Inc</h1>
-    <ul>
-        <li>
-            Display name: RealVu
-        </li>
-        <li>
-            Prevalence:
+    <div class="entity-head">
+        <div class="domain-stats">
             <ul>
-                <li>tracking - 0.0116</li>
-                <li>nonTracking - 0.00113</li>
-                <li>total - 0.0127</li>
-            </ul>
-        </li>
-        <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/RealVu Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li>
+                    Display name: RealVu
+                </li>
+                <li>
+                    Prevalence:
+                    <ul>
+                        <li>tracking - 0.00977</li>
+                        <li>nonTracking - 0.00261</li>
+                        <li>total - 0.0124</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/duckduckgo/tracker-radar/blob/master/entities/RealVu Inc.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
 
-    </ul>
+            </ul>
+        </div>
+        <div class='graph-container'>
+            <label>Historic data: <select class='graph-container__controller'>
+                <option selected value='prevalence'>prevalence</option>
+                <option value='properties'># of properties</option>
+            </select></label>
+            <canvas class='graph-container__graph' width="300" height="300"></canvas>
+        </div>
+    </div>
     <p>
         <strong>Properties:</strong>
         <span>
-            <a href="../domains/realvu.net.html">realvu.net (1.28%)</a>
+            <a href="../domains/realvu.net.html">realvu.net (1.24%)</a>
         </span>,
     </p>
 

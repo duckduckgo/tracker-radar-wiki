@@ -9,9 +9,10 @@
   "scripts": {
     "build-search": "node scripts/generateSearchIndex.js",
     "build-history": "node scripts/generateHistoricalData.js",
-    "build-pages": "node scripts/generateSubpages.js",
-    "build-index": "node scripts/generateIndexPage.js",
-    "build-all": "npm run build-search && npm run build-history && npm run build-pages && npm run build-index",
+    "build-pages": "npm run build-css && node scripts/generateSubpages.js",
+    "build-index": "npm run build-css && node scripts/generateIndexPage.js",
+    "build-css": "rm -rf docs/assets/css/*.min.css && cat docs/assets/css/*.css | postcss > docs/assets/css/style.min.css",
+    "build-all": "npm run build-search && npm run build-history && npm run build-css && npm run build-pages && npm run build-index",
     "test": "eslint *.js scripts/ scripts/helpers/ docs/assets/js/*.js"
   },
   "repository": {
@@ -31,7 +32,11 @@
   },
   "homepage": "https://github.com/SlayterDev/tracker-radar-wiki#readme",
   "devDependencies": {
-    "eslint": "^5.12.1"
+    "cssnano": "^4.1.10",
+    "eslint": "^5.12.1",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {
     "chalk": "^4.1.0",

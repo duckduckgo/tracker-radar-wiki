@@ -151,7 +151,7 @@ main().then(() => {
         } catch (e) {
             console.error(chalk.red(e));
         }
-    })
+    });
 
     const trendingDomains = Array.from(domainMap.values()).map(item => {
         // Get last two prevalence entries
@@ -167,7 +167,7 @@ main().then(() => {
     
     const trendingEntities = Array.from(entityMap.values()).map(item => {
         // Get last two tracking prevalence entries
-        const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence) ? entry.prevalence.tracking : 0);
+        const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.tracking : 0));
         const diff = prevVals[1] - prevVals[0];
         return {
             diff: (diff * 100).toFixed(2),
@@ -180,7 +180,7 @@ main().then(() => {
     const trending = {
         domains: trendingDomains,
         entities: trendingEntities
-    }
+    };
 
     try {
         fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));

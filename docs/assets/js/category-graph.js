@@ -28,10 +28,10 @@
         data: {
             labels: window.wikiData.history.map(entry => entry.date),
             datasets: [{
-                label: `prevalence (%)`,
+                label: `% of domains`,
                 backgroundColor: colors.red,
                 borderColor: colors.red,
-                data: window.wikiData.history.map(entry => entry.prevalence * 100)
+                data: window.wikiData.history.map(entry => (entry.prevalence * 100).toFixed(2))
             }]
         },
         options: {
@@ -48,12 +48,12 @@
     });
 
     controller.addEventListener('change', () => {
-        if (controller.value === 'prevalence') {
+        if (controller.value === 'domains-percentage') {
             chart.data.datasets = [{
-                label: `prevalence (%)`,
+                label: `% of domains`,
                 backgroundColor: colors.red,
                 borderColor: colors.red,
-                data: window.wikiData.history.map(entry => entry.prevalence * 100)
+                data: window.wikiData.history.map(entry => (entry.prevalence * 100).toFixed(2))
             }];
             chart.options.scales.yAxes = [{
                 ticks: {
@@ -69,7 +69,9 @@
                 data: window.wikiData.history.map(entry => entry.domains)
             }];
             chart.options.scales.yAxes = [{
-                ticks: {}
+                ticks: {
+                    suggestedMin: 0
+                }
             }];
         }
 

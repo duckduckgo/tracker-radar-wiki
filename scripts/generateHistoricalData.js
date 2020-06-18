@@ -73,7 +73,7 @@ async function main() {
             domainMap.set(data.domain, domainObj);
 
             data.categories.forEach(catName => {
-                const category = categoryEntries.get(catName) || {name: catName, domains: 0, prevalence: 0};
+                const category = categoryEntries.get(catName) || {name: catName, domains: 0, prevalence: 0, date: tag};
                 category.domains++;
                 categoryEntries.set(catName, category);
             });

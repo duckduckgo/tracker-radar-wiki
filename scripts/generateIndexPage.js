@@ -99,7 +99,8 @@ fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
 
 const top100RenderData = {
     domains: domains.slice(0, 100),
-    entities: entities.slice(0, 100)
+    entities: entities.slice(0, 100),
+    hostPath: config.hostPath
 };
 
 const top100Output = mustache.render(getTemplate('top100'), top100RenderData, getTemplate);

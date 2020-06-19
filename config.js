@@ -1,5 +1,5 @@
 module.exports = {
-    trackerRadarRepoPath: '../tracker-radar/',
+    trackerRadarRepoPath: '../tracker-radar-cname/',
     staticData: './docs/assets/data/',
     templatesPath: './templates/',
     basePagesPath: './docs',

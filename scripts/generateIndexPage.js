@@ -8,8 +8,8 @@ const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFo
 const getTemplate = require('./helpers/getTemplate');
 
 const lastCommitInfo = {
-    hash: '7956f0151c72bd3999a7e8b4a17d698785089fbf',
-    date: '06/16/2020',
+    hash: '61a00b36800f2da27555175e83a21c36df675bf8',
+    date: 'Jun 26, 2020',
     crawled: 75000
 };
 

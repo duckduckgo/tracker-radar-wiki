@@ -1,4 +1,7 @@
 # tracker-radar-wiki
+
+**This is an Unofficial Prototype Wiki built on top of DuckDuckGo's [Tracker Radar](https://github.com/duckduckgo/tracker-radar)**
+
 Generation scripts and source for Tracker Radar Wiki
 
 ## How to use it

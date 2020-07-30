@@ -7,8 +7,13 @@ const mustache = require('mustache');
 const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 const getTemplate = require('./helpers/getTemplate');
 
-const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
+let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
+
+// Backwards compatibility for regions updates
+if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, 'US'))) {
+    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, 'US');
+}
 
 const fingerprintTexts = [
     "No use of browser API's",

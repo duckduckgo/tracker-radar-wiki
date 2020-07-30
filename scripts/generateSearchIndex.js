@@ -6,8 +6,13 @@ const lunr = require('lunr');
 const ProgressBar = require('progress');
 const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 
-const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
+let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
+
+// Backwards compatibility for regions updates
+if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, 'US'))) {
+    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, 'US');
+}
 
 const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
 const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);

@@ -23,7 +23,12 @@ async function main() {
         // eslint-disable-next-line no-await-in-loop
         await git.raw('checkout', tag, '--force');
 
-        const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
+        let domainPath = TRACKER_RADAR_DOMAINS_PATH;
+        if (fs.existsSync(path.join(domainPath, 'US'))) {
+            domainPath = path.join(domainPath, 'US');
+        }
+
+        const domainFiles = getListOfJSONPathsFromFolder(domainPath);
         const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
         console.log('Processing tag: ', chalk.yellow(tag));

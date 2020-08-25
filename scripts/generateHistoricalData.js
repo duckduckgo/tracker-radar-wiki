@@ -19,6 +19,12 @@ async function main() {
     const tagsString = await git.tag();
     const tags = tagsString.split('\n').filter(a => a.length > 0);
 
+    try {
+        fs.writeFileSync(path.join(config.staticData, `/history/tags.json`), JSON.stringify(tags));
+    } catch (e) {
+        console.error(chalk.red(e));
+    }
+
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop
         await git.raw('checkout', tag, '--force');
@@ -115,8 +121,10 @@ async function main() {
                 properties: data.properties.length
             });
 
-            entityMap.set(data.name, entityObj);
+            entityMap.set(file, entityObj);
         });
+
+        console.log(stats);
 
         globalStats.push({
             date: tag,
@@ -130,21 +138,21 @@ async function main() {
 main().then(() => {
     Array.from(domainMap.values()).forEach(item => {
         try {
-            fs.writeFileSync(path.join(config.staticData, `/history/domains/${item.name}.json`), JSON.stringify(item));
+            fs.writeFileSync(path.join(config.staticData, `/history/domains/`, `${item.name}.json`), JSON.stringify(item));
         } catch (e) {
             console.error(chalk.red(e));
         }
     });
     Array.from(entityMap.values()).forEach(item => {
         try {
-            fs.writeFileSync(path.join(config.staticData, `/history/entities/${item.filename}`), JSON.stringify(item));
+            fs.writeFileSync(path.join(config.staticData, `/history/entities/`, `${item.filename}`), JSON.stringify(item));
         } catch (e) {
             console.error(chalk.red(e));
         }
     });
     Array.from(categoryMap.values()).forEach(item => {
         try {
-            fs.writeFileSync(path.join(config.staticData, `/history/categories/${item.name}.json`), JSON.stringify(item));
+            fs.writeFileSync(path.join(config.staticData, `/history/categories/`, `${item.name}.json`), JSON.stringify(item));
         } catch (e) {
             console.error(chalk.red(e));
         }

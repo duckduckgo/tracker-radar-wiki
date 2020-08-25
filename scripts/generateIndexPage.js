@@ -7,10 +7,10 @@ const mustache = require('mustache');
 const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 const getTemplate = require('./helpers/getTemplate');
 
-const lastCommitInfo = {
-    hash: '61a00b36800f2da27555175e83a21c36df675bf8',
-    date: 'Jun 26, 2020',
-    crawled: 75000
+const historicDataTags = JSON.parse(fs.readFileSync(path.join(config.staticData, '/history/tags.json'), 'utf8'));
+
+const lastTagInfo = {
+    name: historicDataTags[historicDataTags.length - 1]
 };
 
 let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
@@ -74,7 +74,7 @@ entityFiles.forEach(({file, resolvedPath}) => {
         entityPrevalence = (data.prevalence.tracking * 100).toFixed(2);
     }
 
-    entities.push({name: data.name, prevalence: entityPrevalence, properties: data.properties.length});
+    entities.push({name: data.name, fileName: file.replace('.json', '.html'), prevalence: entityPrevalence, properties: data.properties.length});
 });
 
 domains = domains.sort((a, b) => b.prevalence - a.prevalence);
@@ -86,7 +86,7 @@ const renderData = {
     domains: domains.slice(0, 10),
     entities: entities.slice(0, 10),
     categories: Array.from(categories.values()),
-    lastCommitInfo,
+    lastTagInfo,
     historicDataString,
     hostPath: config.hostPath
 };

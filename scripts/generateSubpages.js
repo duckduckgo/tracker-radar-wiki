@@ -6,6 +6,7 @@ const ProgressBar = require('progress');
 const mustache = require('mustache');
 const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFolder');
 const getTemplate = require('./helpers/getTemplate');
+const escapeEntityName = require('./helpers/escapeEntityName');
 
 let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
@@ -35,9 +36,14 @@ const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
     width: 30
 });
 
-const stats = {
-    failingFiles: 0
-};
+const failingReads = [];
+const failingWrites = [];
+
+function writeFileCallback(file, e) {
+    if (e) {
+        failingWrites.push(failingWrites);
+    }
+}
 
 const domainIndex = new Map();
 const categories = new Map();
@@ -53,7 +59,7 @@ domainFiles.forEach(({file, resolvedPath}) => {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
     } catch (e) {
-        stats.failingFiles++;
+        failingReads.push(resolvedPath);
         return;
     }
 
@@ -73,13 +79,18 @@ domainFiles.forEach(({file, resolvedPath}) => {
     try {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
+    } catch (e) {
+        failingReads.push(resolvedPath);
+        return;
+    }
 
+    try {
         const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/domains/', file), 'utf8');
         const history = JSON.parse(historicDataString);
         data.history = history.entries;
         data.historySerialized = JSON.stringify(data.history);
     } catch (e) {
-        stats.failingFiles++;
+        failingReads.push(path.join(config.staticData, '/history/domains/', file));
         return;
     }
 
@@ -87,9 +98,13 @@ domainFiles.forEach(({file, resolvedPath}) => {
     data.fpText = fingerprintTexts[data.fingerprinting];
     data.prevalence = (data.prevalence * 100).toFixed(2);
     data.cookies = (data.cookies * 100).toFixed(2);
-    data.types = Object.keys(data.types);
+    data.types = data.types ? Object.keys(data.types) : [];
     data.rank = domainRanks[data.domain];
     data.totalDomains = prevalenceList.length;
+
+    if (data.owner && data.owner.name) {
+        data.owner.filename = escapeEntityName(data.owner.name);
+    }
 
     const apis = new Set();
     data.resources.forEach(resource => {
@@ -113,7 +128,8 @@ domainFiles.forEach(({file, resolvedPath}) => {
         categories.set(catName, category);
     });
 
-    fs.writeFile(path.join(config.domainPagesPath, `${data.domain}.html`), output, () => {});
+    const writePath = path.join(config.domainPagesPath, `${data.domain}.html`);
+    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
 });
 
 entityFiles.forEach(({file, resolvedPath}) => {
@@ -124,13 +140,18 @@ entityFiles.forEach(({file, resolvedPath}) => {
     try {
         const dataString = fs.readFileSync(resolvedPath, 'utf8');
         data = JSON.parse(dataString);
+    } catch (e) {
+        failingReads.push(resolvedPath);
+        return;
+    }
 
+    try {
         const historicDataString = fs.readFileSync(path.join(config.staticData, '/history/entities', file), 'utf8');
         const history = JSON.parse(historicDataString);
         data.history = history.entries;
         data.historySerialized = JSON.stringify(data.history);
     } catch (e) {
-        stats.failingFiles++;
+        failingReads.push(path.join(config.staticData, '/history/entities', file));
         return;
     }
 
@@ -162,7 +183,8 @@ entityFiles.forEach(({file, resolvedPath}) => {
 
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
-    fs.writeFile(path.join(config.entityPagesPath, `${data.name}.html`), output, () => {});
+    const writePath = path.join(config.entityPagesPath, file.replace('.json', '.html'));
+    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
 });
 
 Array.from(categories.values()).forEach(data => {
@@ -196,5 +218,17 @@ Array.from(categories.values()).forEach(data => {
 
     const output = mustache.render(getTemplate('category'), data, getTemplate);
 
-    fs.writeFile(path.join(config.categoryPagesPath, `${data.name}.html`), output, () => {});
+    const writePath = path.join(config.categoryPagesPath, `${data.name}.html`);
+    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
 });
+
+if (failingReads.length > 0) {
+    console.log(`${chalk.red(failingReads.length)} file(s) failed to load.`, failingReads);
+} else {
+    console.log(`✅ all files loaded correctly.`);
+}
+if (failingWrites.length > 0) {
+    console.log(`${chalk.red(failingWrites.length)} file(s) failed to save.`, failingWrites);
+} else {
+    console.log(`✅ all files saved correctly.`);
+}

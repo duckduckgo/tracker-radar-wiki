@@ -4,6 +4,4 @@
  * @param {string} entityName 
  * @returns {string}
  */
-module.exports = entityName => {
-    return entityName.replace(/\/|!|"|:|>|<|\/|\\|\||\?|\*/g, '');
-};
+module.exports = entityName => entityName.replace(/\/|!|"|:|>|<|\/|\\|\||\?|\*/g, '');

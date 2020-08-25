@@ -13,11 +13,12 @@ const domainMap = new Map();
 const entityMap = new Map();
 const categoryMap = new Map();
 const globalStats = [];
+let tags = [];
 
 async function main() {
     const git = simpleGit(config.trackerRadarRepoPath);
     const tagsString = await git.tag();
-    const tags = tagsString.split('\n').filter(a => a.length > 0);
+    tags = tagsString.split('\n').filter(a => a.length > 0);
 
     try {
         fs.writeFileSync(path.join(config.staticData, `/history/tags.json`), JSON.stringify(tags));
@@ -109,7 +110,7 @@ async function main() {
                 return;
             }
 
-            const entityObj = entityMap.get(data.name) || {
+            const entityObj = entityMap.get(file) || {
                 filename: file,
                 name: data.name,
                 entries: []
@@ -136,6 +137,8 @@ async function main() {
 }
 
 main().then(() => {
+    console.log('Writing json files to disk…');
+
     Array.from(domainMap.values()).forEach(item => {
         try {
             fs.writeFileSync(path.join(config.staticData, `/history/domains/`, `${item.name}.json`), JSON.stringify(item));
@@ -158,39 +161,136 @@ main().then(() => {
         }
     });
 
-    const trendingDomains = Array.from(domainMap.values()).map(item => {
-        // Get last two prevalence entries
-        const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
-        const diff = prevVals[1] - prevVals[0];
-        return {
-            diff: (diff * 100).toFixed(2),
-            htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
-            direction: (diff > 0) ? 'up' : 'down',
+    const lastTag = tags[tags.length - 1];
+
+    console.log('Calculating trending domains and entities…');
+    const trendingDomains = Array.from(domainMap.values())
+        .filter(item => {
+            const lastEntry = item.entries[item.entries.length - 1];
+
+            return item.entries.length > 1 && lastEntry.prevalence > 0.005 && lastEntry.date === lastTag;
+        })
+        .map(item => {
+            // Get last two prevalence entries
+            const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
+            const diff = prevVals[1] - prevVals[0];
+            return {
+                diff: (diff * 100).toFixed(2),
+                htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
+                direction: (diff > 0) ? 'up' : 'down',
+                name: item.name
+            };
+        })
+        .filter(entry => Math.abs(entry.diff) > 0.5)
+        .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
+        .slice(0, 12);
+
+    const trendingDomainsRelative = Array.from(domainMap.values())
+        .filter(item => {
+            const lastEntry = item.entries[item.entries.length - 1];
+
+            return item.entries.length > 1 && lastEntry.prevalence > 0.005 && lastEntry.date === lastTag;
+        })
+        .map(item => {
+            // Get last two prevalence entries
+            const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
+            let diff = prevVals[0] === 0 ? Number.MAX_SAFE_INTEGER : prevVals[1] / prevVals[0];
+
+            if (diff < 1) {
+                diff = prevVals[1] === 0 ? -Number.MAX_SAFE_INTEGER : -(prevVals[0] / prevVals[1]);
+            }
+
+            return {
+                diff: diff.toFixed(2),
+                htmlSymbol: (diff > 1) ? '&#x2B06;' : '&#x2B07;',
+                direction: (diff > 1) ? 'up' : 'down',
+                name: item.name
+            };
+        })
+        .filter(entry => Math.abs(entry.diff) > 1.5)
+        .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
+        .slice(0, 12);
+
+    const topNewDomains = Array.from(domainMap.values())
+        .filter(item => item.entries.length === 1 && item.entries[0].date === lastTag)
+        .map(item => ({
+            prevalence: (item.entries[0].prevalence * 100).toFixed(2),
             name: item.name
-        };
-    }).filter(entry => Math.abs(entry.diff) > 0.5).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
+        }))
+        .sort((a, b) => b.prevalence - a.prevalence)
+        .slice(0, 12);
     
-    const trendingEntities = Array.from(entityMap.values()).map(item => {
-        // Get last two tracking prevalence entries
-        const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.tracking : 0));
-        const diff = prevVals[1] - prevVals[0];
-        return {
-            diff: (diff * 100).toFixed(2),
-            htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
-            direction: (diff > 0) ? 'up' : 'down',
+    const trendingEntities = Array.from(entityMap.values())
+        .filter(item => {
+            const lastEntry = item.entries[item.entries.length - 1];
+
+            return item.entries.length > 1 && lastEntry.prevalence && lastEntry.prevalence.total > 0.005 && lastEntry.date === lastTag;
+        })
+        .map(item => {
+            // Get last two tracking prevalence entries
+            const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.total : 0));
+            const diff = prevVals[1] - prevVals[0];
+            return {
+                diff: (diff * 100).toFixed(2),
+                htmlSymbol: (diff > 0) ? '&#x2B06;' : '&#x2B07;',
+                direction: (diff > 0) ? 'up' : 'down',
+                name: item.name
+            };
+        })
+        .filter(entry => Math.abs(entry.diff) > 0.05)
+        .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
+        .slice(0, 12);
+
+    const trendingEntitiesRelative = Array.from(entityMap.values())
+        .filter(item => {
+            const lastEntry = item.entries[item.entries.length - 1];
+
+            return item.entries.length > 1 && lastEntry.prevalence && lastEntry.prevalence.total > 0.005 && lastEntry.date === lastTag;
+        })
+        .map(item => {
+            // Get last two tracking prevalence entries
+            const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.total : 0));
+            let diff = prevVals[0] === 0 ? Number.MAX_SAFE_INTEGER : prevVals[1] / prevVals[0];
+
+            if (diff < 1) {
+                diff = prevVals[1] === 0 ? -Number.MAX_SAFE_INTEGER : -(prevVals[0] / prevVals[1]);
+            }
+
+            return {
+                diff: diff.toFixed(2),
+                htmlSymbol: (diff > 1) ? '&#x2B06;' : '&#x2B07;',
+                direction: (diff > 1) ? 'up' : 'down',
+                name: item.name
+            };
+        })
+        .filter(entry => Math.abs(entry.diff) > 1.5)
+        .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
+        .slice(0, 12);
+
+    const topNewEntities = Array.from(entityMap.values())
+        .filter(item => item.entries.length === 1 && item.entries[0].prevalence && item.entries[0].prevalence.total > 0 && item.entries[0].date === lastTag)
+        .map(item => ({
+            prevalence: (item.entries[0].prevalence.total * 100).toFixed(2),
             name: item.name
-        };
-    }).filter(entry => Math.abs(entry.diff) > 0.05).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, 10);
+        }))
+        .sort((a, b) => b.prevalence - a.prevalence)
+        .slice(0, 12);
 
     const trending = {
         domains: trendingDomains,
-        entities: trendingEntities
+        domainsRelative: trendingDomainsRelative,
+        domainsNew: topNewDomains,
+        entities: trendingEntities,
+        entitiesRelative: trendingEntitiesRelative,
+        entitiesNew: topNewEntities
     };
 
     try {
-        fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending));
-        fs.writeFileSync(path.join(config.staticData, `/history/global.json`), JSON.stringify(globalStats));
+        fs.writeFileSync(path.join(config.staticData, '/history/trending.json'), JSON.stringify(trending, null, 2));
+        fs.writeFileSync(path.join(config.staticData, `/history/global.json`), JSON.stringify(globalStats, null, 2));
     } catch (e) {
         console.error(e);
     }
+
+    console.log('✅ Done.');
 });

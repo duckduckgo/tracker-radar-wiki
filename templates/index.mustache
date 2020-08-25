@@ -74,7 +74,7 @@
     </div>
 
     <div class="p-5 border-b">
-        <h3 class="section-header">Trending Domains</h3>
+        <h3 class="section-header">Trending Domains (absolute)</h3>
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
         {{#trending.domains}}
             <li><img src='https://external-content.duckduckgo.com/ip3/{{name}}.ico' width="16" height="16" class='inline-block' /> <a href="./domains/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&#37;</span></li>
@@ -83,11 +83,47 @@
     </div>
 
     <div class="p-5 mb-5">
-        <h3 class="section-header">Trending Entities</h3>
+        <h3 class="section-header">Trending Entities (absolute)</h3>
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
         {{#trending.entities}}
             <li><a href="./entities/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&#37;</span></li>
         {{/trending.entities}}
+        </ul>
+    </div>
+
+        <div class="p-5 border-b">
+        <h3 class="section-header">Trending Domains (relative)</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.domainsRelative}}
+            <li><img src='https://external-content.duckduckgo.com/ip3/{{name}}.ico' width="16" height="16" class='inline-block' /> <a href="./domains/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&times;</span></li>
+        {{/trending.domainsRelative}}
+        </ul>
+    </div>
+
+    <div class="p-5 mb-5">
+        <h3 class="section-header">Trending Entities (relative)</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.entitiesRelative}}
+            <li><a href="./entities/{{name}}.html">{{name}}</a> - <span class="trend {{direction}}">{{{htmlSymbol}}} {{diff}}&times;</span></li>
+        {{/trending.entitiesRelative}}
+        </ul>
+    </div>
+
+    <div class="p-5 mb-5">
+        <h3 class="section-header">Top new domains</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.domainsNew}}
+            <li><a href="./domains/{{name}}.html">{{name}}</a> - <span class="trend">{{prevalence}}&#37;</span></li>
+        {{/trending.domainsNew}}
+        </ul>
+    </div>
+
+    <div class="p-5 mb-5">
+        <h3 class="section-header">Top new entities</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-2">
+        {{#trending.entitiesNew}}
+            <li><a href="./entities/{{name}}.html">{{name}}</a> - <span class="trend">{{prevalence}}&#37;</span></li>
+        {{/trending.entitiesNew}}
         </ul>
     </div>
 

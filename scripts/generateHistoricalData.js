@@ -164,12 +164,16 @@ main().then(() => {
     const lastTag = tags[tags.length - 1];
 
     console.log('Calculating trending domains and entities…');
-    const trendingDomains = Array.from(domainMap.values())
+
+    const interestingDomains = Array.from(domainMap.values())
         .filter(item => {
             const lastEntry = item.entries[item.entries.length - 1];
+            const prevEntry = item.entries[item.entries.length - 2];
 
-            return item.entries.length > 1 && lastEntry.prevalence > 0.005 && lastEntry.date === lastTag;
-        })
+            return item.entries.length > 1 && (lastEntry.prevalence > 0.01 || prevEntry.prevalence > 0.01) && lastEntry.date === lastTag;
+        });
+
+    const trendingDomains = interestingDomains
         .map(item => {
             // Get last two prevalence entries
             const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
@@ -185,12 +189,7 @@ main().then(() => {
         .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
         .slice(0, 12);
 
-    const trendingDomainsRelative = Array.from(domainMap.values())
-        .filter(item => {
-            const lastEntry = item.entries[item.entries.length - 1];
-
-            return item.entries.length > 1 && lastEntry.prevalence > 0.005 && lastEntry.date === lastTag;
-        })
+    const trendingDomainsRelative = interestingDomains
         .map(item => {
             // Get last two prevalence entries
             const prevVals = item.entries.slice(item.entries.length - 2).map(entry => entry.prevalence);
@@ -219,13 +218,16 @@ main().then(() => {
         }))
         .sort((a, b) => b.prevalence - a.prevalence)
         .slice(0, 12);
-    
-    const trendingEntities = Array.from(entityMap.values())
+
+    const interestingEntities = Array.from(entityMap.values())
         .filter(item => {
             const lastEntry = item.entries[item.entries.length - 1];
+            const prevEntry = item.entries[item.entries.length - 2];
 
-            return item.entries.length > 1 && lastEntry.prevalence && lastEntry.prevalence.total > 0.005 && lastEntry.date === lastTag;
-        })
+            return item.entries.length > 1 && lastEntry.prevalence && prevEntry.prevalence && (lastEntry.prevalence.total > 0.01 || prevEntry.prevalence.total > 0.01) && lastEntry.date === lastTag;
+        });
+    
+    const trendingEntities = interestingEntities
         .map(item => {
             // Get last two tracking prevalence entries
             const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.total : 0));
@@ -241,12 +243,7 @@ main().then(() => {
         .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
         .slice(0, 12);
 
-    const trendingEntitiesRelative = Array.from(entityMap.values())
-        .filter(item => {
-            const lastEntry = item.entries[item.entries.length - 1];
-
-            return item.entries.length > 1 && lastEntry.prevalence && lastEntry.prevalence.total > 0.005 && lastEntry.date === lastTag;
-        })
+    const trendingEntitiesRelative = interestingEntities
         .map(item => {
             // Get last two tracking prevalence entries
             const prevVals = item.entries.slice(item.entries.length - 2).map(entry => (entry.prevalence ? entry.prevalence.total : 0));
@@ -257,7 +254,7 @@ main().then(() => {
             }
 
             return {
-                diff: diff.toFixed(2),
+                diff: Math.abs(diff) === Number.MAX_SAFE_INTEGER ? `${diff < 0 ? '-' : ''}∞` : diff.toFixed(2),
                 htmlSymbol: (diff > 1) ? '&#x2B06;' : '&#x2B07;',
                 direction: (diff > 1) ? 'up' : 'down',
                 name: item.name

@@ -41,7 +41,7 @@
     window.wikiData = {
         type: "domain",
         domain: "birdsend.co",
-        history: [{"date":"2020.02","prevalence":0.0000925,"sites":4,"fingerprinting":1,"cookies":0.0000925},{"date":"2020.03","prevalence":0.000142,"sites":7,"fingerprinting":1,"cookies":0.000142},{"date":"2020.04","prevalence":0.00015,"sites":7,"fingerprinting":2,"cookies":0.00015},{"date":"2020.05","prevalence":0.000171,"sites":12,"fingerprinting":2,"cookies":0.000171},{"date":"2020.06","prevalence":0.000178,"sites":13,"fingerprinting":2,"cookies":0.000178},{"date":"2020.07","prevalence":0.000166,"sites":12,"fingerprinting":2,"cookies":0.000166},{"date":"2020.08","prevalence":0.00011,"sites":15,"fingerprinting":2,"cookies":0.00011},{"date":"2020.09","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000913},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":2,"cookies":0.0000911}]
+        history: [{"date":"2020.02","prevalence":0.0000925,"sites":4,"fingerprinting":1,"cookies":0.0000925},{"date":"2020.03","prevalence":0.000142,"sites":7,"fingerprinting":1,"cookies":0.000142},{"date":"2020.04","prevalence":0.00015,"sites":7,"fingerprinting":2,"cookies":0.00015},{"date":"2020.05","prevalence":0.000171,"sites":12,"fingerprinting":2,"cookies":0.000171},{"date":"2020.06","prevalence":0.000178,"sites":13,"fingerprinting":2,"cookies":0.000178},{"date":"2020.07","prevalence":0.000166,"sites":12,"fingerprinting":2,"cookies":0.000166},{"date":"2020.08","prevalence":0.00011,"sites":15,"fingerprinting":2,"cookies":0.00011},{"date":"2020.09","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000913},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":2,"cookies":0.0000911},{"date":"jd/fp-weights","prevalence":0.0000913,"sites":12,"fingerprinting":1,"cookies":0.0000913}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +62,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;3797<small>/12080</small>
+                    <strong>Rank:</strong> &#35;3780<small>/12069</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.01&#37; (12 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.01&#37;
@@ -124,6 +124,7 @@
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
         <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.localStorage</li>
         <li class='truncate'>Date.prototype.getTime</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
         <li class='truncate'>Document.cookie getter</li>
@@ -134,14 +135,82 @@
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
-    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;form-loader.js" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;form-loader.js</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;pixel&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;pixel&#x2F;main.js</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;823" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;823</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1286" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1286</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;846" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;846</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1554" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1554</a></li>
-        <li class='truncate'><a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;695" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;695</a></li>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;form-loader.js" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;form-loader.js</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://expertvagabond.com" target="_blank" class="external" rel="noreferrer noopener">expertvagabond.com</a></li>
+                    <li><a href="http://mycrazygoodlife.com" target="_blank" class="external" rel="noreferrer noopener">mycrazygoodlife.com</a></li>
+                    <li><a href="http://norecipes.com" target="_blank" class="external" rel="noreferrer noopener">norecipes.com</a></li>
+                    <li><a href="http://www.clarkscondensed.com" target="_blank" class="external" rel="noreferrer noopener">www.clarkscondensed.com</a></li>
+                    <li><a href="http://www.itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">www.itisakeeper.com</a></li>
+                    <li><a href="http://www.prepperwebsite.com" target="_blank" class="external" rel="noreferrer noopener">www.prepperwebsite.com</a></li>
+                    <li><a href="http://www.royalcaribbeanblog.com" target="_blank" class="external" rel="noreferrer noopener">www.royalcaribbeanblog.com</a></li>
+                    <li><a href="http://www.thebookdesigner.com" target="_blank" class="external" rel="noreferrer noopener">www.thebookdesigner.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;pixel&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;assets&#x2F;static&#x2F;js&#x2F;pixel&#x2F;main.js</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://expertvagabond.com" target="_blank" class="external" rel="noreferrer noopener">expertvagabond.com</a></li>
+                    <li><a href="http://mycrazygoodlife.com" target="_blank" class="external" rel="noreferrer noopener">mycrazygoodlife.com</a></li>
+                    <li><a href="http://norecipes.com" target="_blank" class="external" rel="noreferrer noopener">norecipes.com</a></li>
+                    <li><a href="http://www.clarkscondensed.com" target="_blank" class="external" rel="noreferrer noopener">www.clarkscondensed.com</a></li>
+                    <li><a href="http://www.itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">www.itisakeeper.com</a></li>
+                    <li><a href="http://www.royalcaribbeanblog.com" target="_blank" class="external" rel="noreferrer noopener">www.royalcaribbeanblog.com</a></li>
+                    <li><a href="http://www.thebookdesigner.com" target="_blank" class="external" rel="noreferrer noopener">www.thebookdesigner.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;823" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;823</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://clarkscondensed.com" target="_blank" class="external" rel="noreferrer noopener">clarkscondensed.com</a></li>
+                    <li><a href="http://www.clarkscondensed.com" target="_blank" class="external" rel="noreferrer noopener">www.clarkscondensed.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;message&#x2F;1286" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;message&#x2F;1286</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">itisakeeper.com</a></li>
+                    <li><a href="http://www.itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">www.itisakeeper.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1286" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1286</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">itisakeeper.com</a></li>
+                    <li><a href="http://www.itisakeeper.com" target="_blank" class="external" rel="noreferrer noopener">www.itisakeeper.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;846" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;846</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://prepperwebsite.com" target="_blank" class="external" rel="noreferrer noopener">prepperwebsite.com</a></li>
+                    <li><a href="http://www.prepperwebsite.com" target="_blank" class="external" rel="noreferrer noopener">www.prepperwebsite.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1554" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;1554</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://royalcaribbeanblog.com" target="_blank" class="external" rel="noreferrer noopener">royalcaribbeanblog.com</a></li>
+                    <li><a href="http://www.royalcaribbeanblog.com" target="_blank" class="external" rel="noreferrer noopener">www.royalcaribbeanblog.com</a></li>
+                </ul>
+        </li>
+        <li class='break-all'>
+            <p>Resource: <a href="http://birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;695" target="_blank" class="external" rel="noreferrer noopener">birdsend.co&#x2F;cors&#x2F;pixel&#x2F;forms&#x2F;695</a></p>
+                <p>Seen on:</p>
+                <ul>
+                    <li><a href="http://thebookdesigner.com" target="_blank" class="external" rel="noreferrer noopener">thebookdesigner.com</a></li>
+                    <li><a href="http://www.thebookdesigner.com" target="_blank" class="external" rel="noreferrer noopener">www.thebookdesigner.com</a></li>
+                </ul>
+        </li>
     </ul>
 </div>
 

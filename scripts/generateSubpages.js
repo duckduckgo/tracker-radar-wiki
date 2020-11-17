@@ -115,7 +115,10 @@ domainFiles.forEach(({file, resolvedPath}) => {
         const weightB = fingerprintingWeights[b] || 0;
         return weightB - weightA;
     });
-    data.resources = data.resources.map(res => res.rule.replace(/\\/g, ''));
+    data.resources = data.resources.map(res => ({
+        url: res.rule.replace(/\\/g, ''),
+        sites: res.exampleSites || []
+    }));
     data.hostPath = config.hostPath;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);

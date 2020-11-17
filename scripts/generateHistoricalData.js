@@ -90,6 +90,21 @@ async function main() {
                 categoryEntries.set(catName, category);
             });
         });
+
+        // for domains that we haven't seen in this crawl we need to push an entry with a bunch of zeros
+        domainMap.forEach(domainObj => {
+            const lastEntry = domainObj.entries[domainObj.entries.length - 1];
+            if (!lastEntry || lastEntry.date !== tag) {
+                domainObj.entries.push({
+                    date: tag,
+                    prevalence: 0,
+                    sites: 0,
+                    fingerprinting: 0,
+                    cookies: 0
+                });
+            }
+        });
+
         Array.from(categoryEntries.values()).forEach(entry => {
             const category = categoryMap.get(entry.name) || {name: entry.name, entries: []};
             entry.prevalence = entry.domains / domainFiles.length;
@@ -118,7 +133,7 @@ async function main() {
 
             entityObj.entries.push({
                 date: tag,
-                prevalence: data.prevalence,
+                prevalence: data.prevalence || {tracking: 0, nonTracking: 0, total: 0},
                 properties: data.properties.length
             });
 

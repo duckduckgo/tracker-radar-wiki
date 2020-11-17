@@ -28,7 +28,7 @@ async function main() {
     }
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/fp-weights');
+    tags.push('jd/fp-weights');
 
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop
@@ -219,7 +219,7 @@ main().then(() => {
             }
 
             return {
-                diff: diff.toFixed(2),
+                diff,
                 htmlSymbol: (diff > 1) ? '&#x2B06;' : '&#x2B07;',
                 direction: (diff > 1) ? 'up' : 'down',
                 name: item.name
@@ -227,7 +227,11 @@ main().then(() => {
         })
         .filter(entry => Math.abs(entry.diff) > 1.5)
         .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
-        .slice(0, 12);
+        .slice(0, 12)
+        .map(item => {
+            item.diff = Math.abs(item.diff) === Number.MAX_SAFE_INTEGER ? `${item.diff < 0 ? '-' : ''}∞` : item.diff.toFixed(2);
+            return item;
+        });
 
     const topNewDomains = Array.from(domainMap.values())
         .filter(item => item.entries.length === 1 && item.entries[0].date === lastTag)
@@ -273,7 +277,7 @@ main().then(() => {
             }
 
             return {
-                diff: Math.abs(diff) === Number.MAX_SAFE_INTEGER ? `${diff < 0 ? '-' : ''}∞` : diff.toFixed(2),
+                diff,
                 htmlSymbol: (diff > 1) ? '&#x2B06;' : '&#x2B07;',
                 direction: (diff > 1) ? 'up' : 'down',
                 name: item.name
@@ -281,7 +285,11 @@ main().then(() => {
         })
         .filter(entry => Math.abs(entry.diff) > 1.5)
         .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff))
-        .slice(0, 12);
+        .slice(0, 12)
+        .map(item => {
+            item.diff = Math.abs(item.diff) === Number.MAX_SAFE_INTEGER ? `${item.diff < 0 ? '-' : ''}∞` : item.diff.toFixed(2);
+            return item;
+        });
 
     const topNewEntities = Array.from(entityMap.values())
         .filter(item => item.entries.length === 1 && item.entries[0].prevalence && item.entries[0].prevalence.total > 0 && item.entries[0].date === lastTag)

@@ -26,6 +26,9 @@ async function main() {
         console.error(chalk.red(e));
     }
 
+    // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
+    // tags.push('jd/fp-weights');
+
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop
         await git.raw('checkout', tag, '--force');

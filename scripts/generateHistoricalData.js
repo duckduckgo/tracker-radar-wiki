@@ -1,4 +1,4 @@
-// eslint-disable-next-line max-lines
+/* eslint-disable max-lines */
 const config = require('../config');
 const path = require('path');
 const chalk = require('chalk');

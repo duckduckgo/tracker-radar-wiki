@@ -115,10 +115,14 @@ domainFiles.forEach(({file, resolvedPath}) => {
         const weightB = fingerprintingWeights[b] || 0;
         return weightB - weightA;
     });
-    data.resources = data.resources.map(res => ({
-        url: res.rule.replace(/\\/g, ''),
-        sites: res.exampleSites || []
-    }));
+    data.resources = data.resources.map(res => {
+        const url = (res.subdomains.length > 0 ? `${res.subdomains[0]}.` : '') +  res.rule.replace(/\\/g, '');
+
+        return {
+            url,
+            sites: res.exampleSites || []
+        };
+    });
     data.hostPath = config.hostPath;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);

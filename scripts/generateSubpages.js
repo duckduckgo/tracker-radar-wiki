@@ -120,9 +120,10 @@ domainFiles.forEach(({file, resolvedPath}) => {
 
         return {
             url,
-            sites: res.exampleSites || []
+            sites: res.sites,
+            exampleSites: res.exampleSites || []
         };
-    });
+    }).sort((a, b) => b.sites - a.sites);
     data.hostPath = config.hostPath;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);

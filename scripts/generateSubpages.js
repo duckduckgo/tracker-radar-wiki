@@ -23,7 +23,7 @@ const fingerprintTexts = [
     "Excessive use of browser API's, almost certainly for tracking purposes"
 ];
 
-const weightsText = fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/static/api_fingerprint_weights.json'), 'utf8');
+const weightsText = fs.readFileSync(path.join(config.trackerRadarRepoPath, 'build-data/generated/api_fingerprint_weights.json'), 'utf8');
 const fingerprintingWeights = JSON.parse(weightsText);
 
 const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
@@ -115,16 +115,25 @@ domainFiles.forEach(({file, resolvedPath}) => {
         const weightB = fingerprintingWeights[b] || 0;
         return weightB - weightA;
     });
+    data.hostPath = config.hostPath;
+
+    const exampleSites = new Set();
+    data.resources.forEach(res => {
+        if (res.exampleSites) {
+            res.exampleSites.forEach(site => exampleSites.add(site));
+        }
+    });
+
+    data.exampleSites = Array.from(exampleSites);
+
     data.resources = data.resources.map(res => {
         const url = (res.subdomains.length > 0 ? `${res.subdomains[0]}.` : '') +  res.rule.replace(/\\/g, '');
 
         return {
             url,
-            sites: res.sites,
-            exampleSites: res.exampleSites || []
+            sites: res.sites
         };
     }).sort((a, b) => b.sites - a.sites);
-    data.hostPath = config.hostPath;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 

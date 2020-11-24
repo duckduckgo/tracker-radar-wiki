@@ -117,18 +117,24 @@
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
     {{#resources}}
         <li class='break-all'>
-            <p>Resource: <a href="http://{{url}}" target="_blank" class="external" rel="noreferrer noopener">{{url}}</a></p>
-            {{#exampleSites.length}}
-                <p>Seen on {{sites}} websites, including:</p>
-                <ul>
-                    {{#exampleSites}}
-                    <li><a href="http://{{.}}" target="_blank" class="external" rel="noreferrer noopener">{{.}}</a></li>
-                    {{/exampleSites}}
-                </ul>
-            {{/exampleSites.length}}
+            <p><a href="http://{{url}}" target="_blank" class="external" rel="noreferrer noopener">{{url}}</a> (seen on {{sites}} websites)</p>
         </li>
     {{/resources}}
     </ul>
 </div>
+
+{{#exampleSites.length}}
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+    {{#exampleSites}}
+        <li class='truncate'>
+            <a href="http://{{.}}" target="_blank" class="external">{{.}}</a>
+        </li>
+    {{/exampleSites}}
+    </ul>
+</div>
+{{/exampleSites.length}}
 
 {{>footer}}

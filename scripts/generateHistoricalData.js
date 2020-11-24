@@ -16,19 +16,31 @@ const categoryMap = new Map();
 const globalStats = [];
 let tags = [];
 
+function mkdirIfNotExists(dir) {
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    }
+}
+
 async function main() {
+    // make sure that /docs/data/history folder is set up (it's not in git)
+    mkdirIfNotExists(path.join(config.staticData, '/history/'));
+    mkdirIfNotExists(path.join(config.staticData, '/history/categories/'));
+    mkdirIfNotExists(path.join(config.staticData, '/history/domains/'));
+    mkdirIfNotExists(path.join(config.staticData, '/history/entities/'));
+
     const git = simpleGit(config.trackerRadarRepoPath);
     const tagsString = await git.tag();
     tags = tagsString.split('\n').filter(a => a.length > 0);
 
     try {
-        fs.writeFileSync(path.join(config.staticData, `/history/tags.json`), JSON.stringify(tags));
+        fs.writeFileSync(path.join(config.staticData, '/history/tags.json'), JSON.stringify(tags));
     } catch (e) {
         console.error(chalk.red(e));
     }
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/fp-weights');
+    // tags.push('jd/Nov-crawl');
 
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop

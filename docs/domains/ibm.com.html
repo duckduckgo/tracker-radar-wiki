@@ -41,7 +41,7 @@
     window.wikiData = {
         type: "domain",
         domain: "ibm.com",
-        history: [{"date":"2020.02","prevalence":0.000208,"sites":9,"fingerprinting":1,"cookies":0.000139},{"date":"2020.03","prevalence":0.000203,"sites":10,"fingerprinting":1,"cookies":0.000142},{"date":"2020.04","prevalence":0.0003,"sites":14,"fingerprinting":1,"cookies":0.000171},{"date":"2020.05","prevalence":0.000285,"sites":20,"fingerprinting":1,"cookies":0.000171},{"date":"2020.06","prevalence":0.000151,"sites":11,"fingerprinting":1,"cookies":0.000109},{"date":"2020.07","prevalence":0.000152,"sites":11,"fingerprinting":1,"cookies":0.000125},{"date":"2020.08","prevalence":0.0000956,"sites":13,"fingerprinting":1,"cookies":0.0000588},{"date":"2020.09","prevalence":0.0000837,"sites":11,"fingerprinting":1,"cookies":0.0000532},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.0000759},{"date":"2020.11","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.000076},{"date":"2020.12","prevalence":0.0000837,"sites":11,"fingerprinting":1,"cookies":0.0000532},{"date":"jd/jan-update","prevalence":0.000153,"sites":20,"fingerprinting":1,"cookies":0.000115}]
+        history: [{"date":"2020.02","prevalence":0.000208,"sites":9,"fingerprinting":1,"cookies":0.000139},{"date":"2020.03","prevalence":0.000203,"sites":10,"fingerprinting":1,"cookies":0.000142},{"date":"2020.04","prevalence":0.0003,"sites":14,"fingerprinting":1,"cookies":0.000171},{"date":"2020.05","prevalence":0.000285,"sites":20,"fingerprinting":1,"cookies":0.000171},{"date":"2020.06","prevalence":0.000151,"sites":11,"fingerprinting":1,"cookies":0.000109},{"date":"2020.07","prevalence":0.000152,"sites":11,"fingerprinting":1,"cookies":0.000125},{"date":"2020.08","prevalence":0.0000956,"sites":13,"fingerprinting":1,"cookies":0.0000588},{"date":"2020.09","prevalence":0.0000837,"sites":11,"fingerprinting":1,"cookies":0.0000532},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.0000759},{"date":"2020.11","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.000076},{"date":"2020.12","prevalence":0.0000837,"sites":11,"fingerprinting":1,"cookies":0.0000532},{"date":"2021.01","prevalence":0.000153,"sites":20,"fingerprinting":1,"cookies":0.000115},{"date":"jd/Feb-domains","prevalence":0.000125,"sites":18,"fingerprinting":1,"cookies":0.0000764}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,10 +62,10 @@
                     <strong>Privacy Policy:</strong> <a href="https:&#x2F;&#x2F;www.ibm.com&#x2F;privacy&#x2F;us&#x2F;en&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.ibm.com&#x2F;privacy&#x2F;us&#x2F;en&#x2F;</a>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;2831<small>/11824</small>
+                    <strong>Rank:</strong> &#35;3980<small>/23021</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.02&#37; (20 sites)
+                    <strong>Prevalence:</strong> 0.01&#37; (18 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
@@ -89,6 +89,10 @@
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
                     <span>Document</span>,
+                    <span>Fetch</span>,
+                    <span>WebSocket</span>,
+                    <span>Preflight</span>,
+                    <span>XHR</span>,
                     <span>Image</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ibm.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
@@ -96,7 +100,15 @@
                     <strong>Subdomains:</strong>
                     <span>commercelibs</span>, 
                     <span>video</span>, 
+                    <span>r76082321-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>r52735154-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>r27869446-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>r87193316-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>r96476059-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>r88408485-1-23627444-channel-wss-omega.ums.services.video</span>, 
+                    <span>eventtracking-log.services.video</span>, 
                     <span>custom-domain.us-south.cf.cloud</span>, 
+                    <span>www</span>, 
                 </li>
             </ul>
         </div>
@@ -115,23 +127,6 @@
     </div>
 </div>
 
-<div class='p-5 border-b'>
-    <div class='flex'>
-        <h3 class='section-header pr-5'>Fingerprinting APIs Used
-            <span class='text-sm'>
-                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
-            </span>
-        </h3> 
-    </div>    
-
-    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
-        <li class='truncate'>Document.cookie setter</li>
-        <li class='truncate'>window.localStorage</li>
-        <li class='truncate'>window.sessionStorage</li>
-        <li class='truncate'>Document.cookie getter</li>
-        <li class='truncate'>Date.prototype.getTime</li>
-    </ul>
-</div>
 
 <div class='p-5 border-b'>
     <h3 class='section-header'>CNAMEs</h3>
@@ -149,10 +144,25 @@
             <p><a href="http://video.ibm.com&#x2F;embed&#x2F;23627444" target="_blank" class="external" rel="noreferrer noopener">video.ibm.com&#x2F;embed&#x2F;23627444</a> (seen on 7 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://commercelibs.ibm.com&#x2F;common&#x2F;ubxCapture.js" target="_blank" class="external" rel="noreferrer noopener">commercelibs.ibm.com&#x2F;common&#x2F;ubxCapture.js</a> (seen on 4 websites)</p>
+            <p><a href="http://eventtracking-log.services.video.ibm.com&#x2F;eventtracking.web.player&#x2F;" target="_blank" class="external" rel="noreferrer noopener">eventtracking-log.services.video.ibm.com&#x2F;eventtracking.web.player&#x2F;</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://r76082321-1-23627444-channel-wss-omega.ums.services.video.ibm.com&#x2F;connectioncheck" target="_blank" class="external" rel="noreferrer noopener">r76082321-1-23627444-channel-wss-omega.ums.services.video.ibm.com&#x2F;connectioncheck</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://r76082321-1-23627444-channel-wss-omega.ums.services.video.ibm.com&#x2F;1&#x2F;ustream" target="_blank" class="external" rel="noreferrer noopener">r76082321-1-23627444-channel-wss-omega.ums.services.video.ibm.com&#x2F;1&#x2F;ustream</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://eventtracking-log.services.video.ibm.com&#x2F;eventtracking.web.player&#x2F;" target="_blank" class="external" rel="noreferrer noopener">eventtracking-log.services.video.ibm.com&#x2F;eventtracking.web.player&#x2F;</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://commercelibs.ibm.com&#x2F;common&#x2F;ubxCapture.js" target="_blank" class="external" rel="noreferrer noopener">commercelibs.ibm.com&#x2F;common&#x2F;ubxCapture.js</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://custom-domain.us-south.cf.cloud.ibm.com&#x2F;static&#x2F;media&#x2F;lucy.8119d25a.svg" target="_blank" class="external" rel="noreferrer noopener">custom-domain.us-south.cf.cloud.ibm.com&#x2F;static&#x2F;media&#x2F;lucy.8119d25a.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ibm.com&#x2F;campaign&#x2F;government-la-cyber-lab" target="_blank" class="external" rel="noreferrer noopener">www.ibm.com&#x2F;campaign&#x2F;government-la-cyber-lab</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -169,9 +179,6 @@
         </li>
         <li class='truncate'>
             <a href="http://www.sierraattahoe.com" target="_blank" class="external">www.sierraattahoe.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.slumberland.com" target="_blank" class="external">www.slumberland.com</a>
         </li>
         <li class='truncate'>
             <a href="http://ajmc.com" target="_blank" class="external">ajmc.com</a>
@@ -195,10 +202,19 @@
             <a href="http://www.psychiatrictimes.com" target="_blank" class="external">www.psychiatrictimes.com</a>
         </li>
         <li class='truncate'>
+            <a href="http://www.cibercuba.com" target="_blank" class="external">www.cibercuba.com</a>
+        </li>
+        <li class='truncate'>
             <a href="http://farmaciasguadalajara.com" target="_blank" class="external">farmaciasguadalajara.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.farmaciasguadalajara.com" target="_blank" class="external">www.farmaciasguadalajara.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://governing.com" target="_blank" class="external">governing.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.governing.com" target="_blank" class="external">www.governing.com</a>
         </li>
     </ul>
 </div>

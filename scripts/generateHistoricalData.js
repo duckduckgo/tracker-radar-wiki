@@ -40,7 +40,7 @@ async function main() {
     }
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/Nov-crawl');
+    // tags.push('jd/Feb-domains');
 
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop
@@ -55,6 +55,7 @@ async function main() {
         const entityFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_ENTITIES_PATH);
 
         console.log('Processing tag: ', chalk.yellow(tag));
+        console.log('Files to process: ', `${domainFiles.length} domains + ${entityFiles.length} entities`);
 
         const progressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
             complete: chalk.green('='),

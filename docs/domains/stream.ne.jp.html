@@ -41,7 +41,7 @@
     window.wikiData = {
         type: "domain",
         domain: "stream.ne.jp",
-        history: [{"date":"2020.02","prevalence":0.0000925,"sites":4,"fingerprinting":2,"cookies":0.0000694},{"date":"2020.03","prevalence":0.000061,"sites":3,"fingerprinting":2,"cookies":0.000061},{"date":"2020.04","prevalence":0.0000642,"sites":3,"fingerprinting":2,"cookies":0.0000642},{"date":"2020.05","prevalence":0.000057,"sites":4,"fingerprinting":1,"cookies":0.0000143},{"date":"2020.06","prevalence":0.0000958,"sites":7,"fingerprinting":1,"cookies":0.000041},{"date":"2020.07","prevalence":0.000097,"sites":7,"fingerprinting":1,"cookies":0.0000277},{"date":"2020.08","prevalence":0.000118,"sites":16,"fingerprinting":1,"cookies":0.0000441},{"date":"2020.09","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000228},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.0000304},{"date":"2020.11","prevalence":0.000114,"sites":15,"fingerprinting":2,"cookies":0.0000228},{"date":"2020.12","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000228},{"date":"2021.01","prevalence":0.000138,"sites":18,"fingerprinting":2,"cookies":0.0000306},{"date":"2021.02","prevalence":0.000132,"sites":19,"fingerprinting":1,"cookies":0.0000486}]
+        history: [{"date":"2020.02","prevalence":0.0000925,"sites":4,"fingerprinting":2,"cookies":0.0000694},{"date":"2020.03","prevalence":0.000061,"sites":3,"fingerprinting":2,"cookies":0.000061},{"date":"2020.04","prevalence":0.0000642,"sites":3,"fingerprinting":2,"cookies":0.0000642},{"date":"2020.05","prevalence":0.000057,"sites":4,"fingerprinting":1,"cookies":0.0000143},{"date":"2020.06","prevalence":0.0000958,"sites":7,"fingerprinting":1,"cookies":0.000041},{"date":"2020.07","prevalence":0.000097,"sites":7,"fingerprinting":1,"cookies":0.0000277},{"date":"2020.08","prevalence":0.000118,"sites":16,"fingerprinting":1,"cookies":0.0000441},{"date":"2020.09","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000228},{"date":"2020.10","prevalence":0.0000911,"sites":12,"fingerprinting":1,"cookies":0.0000304},{"date":"2020.11","prevalence":0.000114,"sites":15,"fingerprinting":2,"cookies":0.0000228},{"date":"2020.12","prevalence":0.0000913,"sites":12,"fingerprinting":2,"cookies":0.0000228},{"date":"2021.01","prevalence":0.000138,"sites":18,"fingerprinting":2,"cookies":0.0000306},{"date":"2021.02","prevalence":0.000132,"sites":19,"fingerprinting":1,"cookies":0.0000486},{"date":"jd/march-update","prevalence":0.000132,"sites":19,"fingerprinting":2,"cookies":0.0000555}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,16 +62,16 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;3891<small>/23021</small>
+                    <strong>Rank:</strong> &#35;3958<small>/23229</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.01&#37; (19 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
-                    <strong>Cookies:</strong> 0.00&#37;
+                    <strong>Cookies:</strong> 0.01&#37;
                 </li>
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
@@ -89,18 +89,19 @@
                     <strong>Resource Types:</strong> 
                     <span>Font</span>,
                     <span>Script</span>,
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
                     <span>Image</span>,
                     <span>XHR</span>,
-                    <span>Stylesheet</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/stream.ne.jp.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
                     <span>6c85b927b893cd7077a21019680dd5bf.cdnext</span>, 
                     <span>5c17529d89ad6e2f2381383b56bccba5.cdnext</span>, 
+                    <span>ssl-cache</span>, 
                     <span>web-cache</span>, 
                     <span>moviead.cdnext</span>, 
-                    <span>ssl-cache</span>, 
                     <span>mz-nhk-ssl.webcdn</span>, 
                     <span>c799eb2b0cad47596bf7b1e050e83426.cdnext</span>, 
                     <span>b57dba67634df2cb026ddbaf46f0a510.cdnext</span>, 
@@ -132,7 +133,12 @@
     </div>    
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
         <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Date.prototype.getTime</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
     </ul>
 </div>
@@ -165,10 +171,55 @@
             <p><a href="http://5c17529d89ad6e2f2381383b56bccba5.cdnext.stream.ne.jp&#x2F;advance&#x2F;mkfont&#x2F;ja&#x2F;102&#x2F;ts" target="_blank" class="external" rel="noreferrer noopener">5c17529d89ad6e2f2381383b56bccba5.cdnext.stream.ne.jp&#x2F;advance&#x2F;mkfont&#x2F;ja&#x2F;102&#x2F;ts</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;setting&#x2F;service.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;setting&#x2F;service.jsonp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;onetag_t3.html" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;onetag_t3.html</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;inner.js" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;inner.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;hls.js" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;hls.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;kontikiagent.js" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;t3&#x2F;kontikiagent.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;object.css" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;object.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;dirinfo.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;dirinfo.jsonp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1&#x2F;683.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1&#x2F;683.jsonp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1&#x2F;663.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1&#x2F;663.jsonp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1_s&#x2F;0.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;eq_meta&#x2F;v1_s&#x2F;0.jsonp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;e_ico.png" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;e_ico.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;hl.png" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;hl.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;hr.png" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;hr.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;bl.png" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;bl.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;br.png" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqa880upnb&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;player&#x2F;player_3_1_0&#x2F;resource&#x2F;style&#x2F;br.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
             <p><a href="http://web-cache.stream.ne.jp&#x2F;web&#x2F;jra&#x2F;onetag2020&#x2F;eqScript.js" target="_blank" class="external" rel="noreferrer noopener">web-cache.stream.ne.jp&#x2F;web&#x2F;jra&#x2F;onetag2020&#x2F;eqScript.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqb732mesj&#x2F;jmc_pub&#x2F;thumbnail&#x2F;00030&#x2F;75a129dda10f4b358da984cd81106325_15.00014.jpg" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqb732mesj&#x2F;jmc_pub&#x2F;thumbnail&#x2F;00030&#x2F;75a129dda10f4b358da984cd81106325_15.00014.jpg</a> (seen on 2 websites)</p>
+            <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqb732mesj&#x2F;jmc_pub&#x2F;thumbnail&#x2F;00031&#x2F;2dae0e14e8954d76b0e1afa3b4600fc0_15.00071.jpg" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqb732mesj&#x2F;jmc_pub&#x2F;thumbnail&#x2F;00031&#x2F;2dae0e14e8954d76b0e1afa3b4600fc0_15.00071.jpg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://5c17529d89ad6e2f2381383b56bccba5.cdnext.stream.ne.jp&#x2F;advance&#x2F;ref&#x2F;ja&#x2F;102&#x2F;checkdigit" target="_blank" class="external" rel="noreferrer noopener">5c17529d89ad6e2f2381383b56bccba5.cdnext.stream.ne.jp&#x2F;advance&#x2F;ref&#x2F;ja&#x2F;102&#x2F;checkdigit</a> (seen on 2 websites)</p>
@@ -213,7 +264,7 @@
             <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;common&#x2F;icn_paywall.gif" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;common&#x2F;icn_paywall.gif</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;article&#x2F;000&#x2F;283&#x2F;880&#x2F;e879e8a5abdc9c7e96022c6d1163dab820210215190323710_262_square.jpg" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;article&#x2F;000&#x2F;283&#x2F;880&#x2F;e879e8a5abdc9c7e96022c6d1163dab820210215190323710_262_square.jpg</a> (seen on 2 websites)</p>
+            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;article&#x2F;000&#x2F;283&#x2F;880&#x2F;d6c151ea394435dbce6d22548725ed7d20210302161545636_262_square.jpg" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;article&#x2F;000&#x2F;283&#x2F;880&#x2F;d6c151ea394435dbce6d22548725ed7d20210302161545636_262_square.jpg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;interview_pc.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;interview_pc.png</a> (seen on 2 websites)</p>
@@ -258,19 +309,25 @@
             <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;waterserver-banner-pc.jpg" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;waterserver-banner-pc.jpg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
+            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;kaigaifx-banner-pc.jpg" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;img&#x2F;banner&#x2F;kaigaifx-banner-pc.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
             <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_login.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_login.png</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;bg_Rnavi_tab.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;bg_Rnavi_tab.png</a> (seen on 2 websites)</p>
+            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_search.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_search.png</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_search.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;icn_header_btn_search.png</a> (seen on 2 websites)</p>
+            <p><a href="http://c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;bg_Rnavi_tab.png" target="_blank" class="external" rel="noreferrer noopener">c799eb2b0cad47596bf7b1e050e83426.cdnext.stream.ne.jp&#x2F;css&#x2F;images&#x2F;bg_Rnavi_tab.png</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqc339nxah&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;setting&#x2F;service.jsonp" target="_blank" class="external" rel="noreferrer noopener">ssl-cache.stream.ne.jp&#x2F;www50&#x2F;eqc339nxah&#x2F;jmc_pub&#x2F;jmc_swf&#x2F;setting&#x2F;service.jsonp</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;css&#x2F;screen_ng.css" target="_blank" class="external" rel="noreferrer noopener">b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;css&#x2F;screen_ng.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;img&#x2F;lgo__30th.svg" target="_blank" class="external" rel="noreferrer noopener">b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;img&#x2F;lgo__30th.svg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;img&#x2F;lgo__wowow.svg" target="_blank" class="external" rel="noreferrer noopener">b57dba67634df2cb026ddbaf46f0a510.cdnext.stream.ne.jp&#x2F;assets&#x2F;img&#x2F;lgo__wowow.svg</a> (seen on 2 websites)</p>
@@ -305,6 +362,12 @@
         </li>
         <li class='truncate'>
             <a href="http://www4.nhk.or.jp" target="_blank" class="external">www4.nhk.or.jp</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://daiichisankyo-hc.co.jp" target="_blank" class="external">daiichisankyo-hc.co.jp</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.daiichisankyo-hc.co.jp" target="_blank" class="external">www.daiichisankyo-hc.co.jp</a>
         </li>
         <li class='truncate'>
             <a href="http://jra.go.jp" target="_blank" class="external">jra.go.jp</a>
@@ -345,8 +408,8 @@
     </ul>
 </div>
 
-            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
-                DuckDuckGo
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
             </footer>
         </div>
     </body>

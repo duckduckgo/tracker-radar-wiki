@@ -15,8 +15,8 @@ npm i
 If you want to generate search and graph data (e.g. when dataset has changed):
 
 ```bash
-npm run build-search
 npm run build-history
+npm run build-search
 ```
 
 If you want to generate HTML pages (e.g. when templates were modified):

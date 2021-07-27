@@ -40,7 +40,7 @@ async function main() {
     }
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/Feb-domains');
+    tags.push('jd/july');
 
     for (let tag of tags) {
         // eslint-disable-next-line no-await-in-loop

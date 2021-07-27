@@ -146,7 +146,7 @@ domainFiles.forEach(({file, resolvedPath}) => {
     });
 
     const writePath = path.join(config.domainPagesPath, `${data.domain}.html`);
-    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
+    fs.writeFileSync(writePath, output, writeFileCallback.bind(null, writePath));
 });
 
 entityFiles.forEach(({file, resolvedPath}) => {
@@ -201,7 +201,7 @@ entityFiles.forEach(({file, resolvedPath}) => {
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
     const writePath = path.join(config.entityPagesPath, file.replace('.json', '.html'));
-    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
+    fs.writeFileSync(writePath, output, writeFileCallback.bind(null, writePath));
 });
 
 Array.from(categories.values()).forEach(data => {
@@ -236,7 +236,7 @@ Array.from(categories.values()).forEach(data => {
     const output = mustache.render(getTemplate('category'), data, getTemplate);
 
     const writePath = path.join(config.categoryPagesPath, `${data.name}.html`);
-    fs.writeFile(writePath, output, writeFileCallback.bind(null, writePath));
+    fs.writeFileSync(writePath, output, writeFileCallback.bind(null, writePath));
 });
 
 if (failingReads.length > 0) {

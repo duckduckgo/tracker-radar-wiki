@@ -41,7 +41,7 @@
     window.wikiData = {
         type: "domain",
         domain: "slgnt.eu",
-        history: [{"date":"2020.02","prevalence":0.00104,"sites":45,"fingerprinting":1,"cookies":0.00102},{"date":"2020.03","prevalence":0.00104,"sites":51,"fingerprinting":1,"cookies":0.000997},{"date":"2020.04","prevalence":0.000921,"sites":43,"fingerprinting":1,"cookies":0.000878},{"date":"2020.05","prevalence":0.000727,"sites":51,"fingerprinting":1,"cookies":0.00067},{"date":"2020.06","prevalence":0.000643,"sites":47,"fingerprinting":1,"cookies":0.000588},{"date":"2020.07","prevalence":0.000624,"sites":45,"fingerprinting":1,"cookies":0.000554},{"date":"2020.08","prevalence":0.000603,"sites":82,"fingerprinting":1,"cookies":0.000566},{"date":"2020.09","prevalence":0.000578,"sites":76,"fingerprinting":1,"cookies":0.000532},{"date":"2020.10","prevalence":0.000638,"sites":84,"fingerprinting":1,"cookies":0.000585},{"date":"2020.11","prevalence":0.000608,"sites":80,"fingerprinting":1,"cookies":0.000547},{"date":"2020.12","prevalence":0.000578,"sites":76,"fingerprinting":1,"cookies":0.000532},{"date":"2021.01","prevalence":0.000619,"sites":81,"fingerprinting":1,"cookies":0.000588},{"date":"2021.02","prevalence":0.00059,"sites":85,"fingerprinting":1,"cookies":0.000563},{"date":"2021.03","prevalence":0.000631,"sites":91,"fingerprinting":1,"cookies":0.00061},{"date":"2021.04","prevalence":0.000582,"sites":84,"fingerprinting":1,"cookies":0.000568},{"date":"2021.05","prevalence":0.000544,"sites":79,"fingerprinting":1,"cookies":0.000524},{"date":"2021.06","prevalence":0.00048,"sites":70,"fingerprinting":1,"cookies":0.000466},{"date":"2021.07","prevalence":0.000764,"sites":110,"fingerprinting":1,"cookies":0.000521},{"date":"2021.08","prevalence":0.000812,"sites":117,"fingerprinting":1,"cookies":0.000514},{"date":"jd/Sept-domains","prevalence":0.000612,"sites":87,"fingerprinting":1,"cookies":0.000352}]
+        history: [{"date":"2020.02","prevalence":0.00104,"sites":45,"fingerprinting":1,"cookies":0.00102},{"date":"2020.03","prevalence":0.00104,"sites":51,"fingerprinting":1,"cookies":0.000997},{"date":"2020.04","prevalence":0.000921,"sites":43,"fingerprinting":1,"cookies":0.000878},{"date":"2020.05","prevalence":0.000727,"sites":51,"fingerprinting":1,"cookies":0.00067},{"date":"2020.06","prevalence":0.000643,"sites":47,"fingerprinting":1,"cookies":0.000588},{"date":"2020.07","prevalence":0.000624,"sites":45,"fingerprinting":1,"cookies":0.000554},{"date":"2020.08","prevalence":0.000603,"sites":82,"fingerprinting":1,"cookies":0.000566},{"date":"2020.09","prevalence":0.000578,"sites":76,"fingerprinting":1,"cookies":0.000532},{"date":"2020.10","prevalence":0.000638,"sites":84,"fingerprinting":1,"cookies":0.000585},{"date":"2020.11","prevalence":0.000608,"sites":80,"fingerprinting":1,"cookies":0.000547},{"date":"2020.12","prevalence":0.000578,"sites":76,"fingerprinting":1,"cookies":0.000532},{"date":"2021.01","prevalence":0.000619,"sites":81,"fingerprinting":1,"cookies":0.000588},{"date":"2021.02","prevalence":0.00059,"sites":85,"fingerprinting":1,"cookies":0.000563},{"date":"2021.03","prevalence":0.000631,"sites":91,"fingerprinting":1,"cookies":0.00061},{"date":"2021.04","prevalence":0.000582,"sites":84,"fingerprinting":1,"cookies":0.000568},{"date":"2021.05","prevalence":0.000544,"sites":79,"fingerprinting":1,"cookies":0.000524},{"date":"2021.06","prevalence":0.00048,"sites":70,"fingerprinting":1,"cookies":0.000466},{"date":"2021.07","prevalence":0.000764,"sites":110,"fingerprinting":1,"cookies":0.000521},{"date":"2021.08","prevalence":0.000812,"sites":117,"fingerprinting":1,"cookies":0.000514},{"date":"2021.09","prevalence":0.000883,"sites":128,"fingerprinting":1,"cookies":0.000552}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,16 +62,16 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;1335<small>/21593</small>
+                    <strong>Rank:</strong> &#35;1228<small>/23339</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.06&#37; (87 sites)
+                    <strong>Prevalence:</strong> 0.09&#37; (128 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
                 <li class='py-1'>
-                    <strong>Cookies:</strong> 0.04&#37;
+                    <strong>Cookies:</strong> 0.06&#37;
                 </li>
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
@@ -135,12 +135,14 @@
     </div>    
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
-        <li class='truncate'>window.name</li>
-        <li class='truncate'>window.localStorage</li>
         <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>window.name</li>
         <li class='truncate'>Document.cookie getter</li>
         <li class='truncate'>Date.prototype.getTime</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Animation.prototype.currentTime</li>
+        <li class='truncate'>Animation.prototype.startTime</li>
     </ul>
 </div>
 
@@ -149,112 +151,139 @@
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 19 websites)</p>
+            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 34 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 18 websites)</p>
+            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 34 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;optiext&#x2F;webtracker.dll" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;optiext&#x2F;webtracker.dll</a> (seen on 8 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;static&#x2F;cookie.html" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;static&#x2F;cookie.html</a> (seen on 18 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://futureplc.slgnt.eu&#x2F;renderers&#x2F;xml.ashx" target="_blank" class="external" rel="noreferrer noopener">futureplc.slgnt.eu&#x2F;renderers&#x2F;xml.ashx</a> (seen on 8 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;8dbce854eddf4712a37ecaf49f96bc76&#x2F;885f92e9e4da46.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;8dbce854eddf4712a37ecaf49f96bc76&#x2F;885f92e9e4da46.js</a> (seen on 11 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;static&#x2F;cookie.html" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;static&#x2F;cookie.html</a> (seen on 7 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;d4d51f5e7abd48a7836577564f6ddeab&#x2F;3c1ba406417d41.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;d4d51f5e7abd48a7836577564f6ddeab&#x2F;3c1ba406417d41.js</a> (seen on 10 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;710114f3345f454fa495ed4e6e2c3902&#x2F;c1bb3b3475c140.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;710114f3345f454fa495ed4e6e2c3902&#x2F;c1bb3b3475c140.js</a> (seen on 5 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;optiext&#x2F;webtracker.dll" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;optiext&#x2F;webtracker.dll</a> (seen on 9 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 4 websites)</p>
+            <p><a href="http://futureplc.slgnt.eu&#x2F;renderers&#x2F;xml.ashx" target="_blank" class="external" rel="noreferrer noopener">futureplc.slgnt.eu&#x2F;renderers&#x2F;xml.ashx</a> (seen on 7 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;ea3ce1d43fc048a7af2677e205b2c8e7&#x2F;7b16da2dfff446.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;ea3ce1d43fc048a7af2677e205b2c8e7&#x2F;7b16da2dfff446.js</a> (seen on 4 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;158a9781a5854816aad503187b65bf49&#x2F;939e0869c24546.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;158a9781a5854816aad503187b65bf49&#x2F;939e0869c24546.js</a> (seen on 6 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;c7d8f53845124f8bb3fc8925b3ed04f2&#x2F;9545a167ed3744.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;c7d8f53845124f8bb3fc8925b3ed04f2&#x2F;9545a167ed3744.js</a> (seen on 4 websites)</p>
+            <p><a href="http://site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">site-azp.slgnt.eu&#x2F;frontend&#x2F;api&#x2F;track</a> (seen on 5 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;8e453c9c3506426d90ac8f2bd4b879b3&#x2F;632dd69fe55648.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;8e453c9c3506426d90ac8f2bd4b879b3&#x2F;632dd69fe55648.js</a> (seen on 3 websites)</p>
+            <p><a href="http://sitep.slgnt.eu&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;api&#x2F;track</a> (seen on 4 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://sitep.slgnt.eu&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;api&#x2F;track</a> (seen on 3 websites)</p>
+            <p><a href="http://sitep.slgnt.eu&#x2F;api&#x2F;track" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;api&#x2F;track</a> (seen on 4 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;44f619bc6ccd44929a83a9c3cae3b891&#x2F;15e3929e9a6243.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;44f619bc6ccd44929a83a9c3cae3b891&#x2F;15e3929e9a6243.js</a> (seen on 3 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;7185690ac644480e98fa7dbe33d36810&#x2F;2a15585dbebd48.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;7185690ac644480e98fa7dbe33d36810&#x2F;2a15585dbebd48.js</a> (seen on 4 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;f1560bb74d3646d4b9aa752ca8bc1344&#x2F;377c5ea3bddb4e.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;f1560bb74d3646d4b9aa752ca8bc1344&#x2F;377c5ea3bddb4e.js</a> (seen on 2 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.carousel.min.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.carousel.min.css</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.carousel.min.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.carousel.min.css</a> (seen on 2 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.theme.default.min.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.theme.default.min.css</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.theme.default.min.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;owlcarousel&#x2F;owl.theme.default.min.css</a> (seen on 2 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;owl.carousel.custom.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;owl.carousel.custom.css</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;owl.carousel.custom.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;owl.carousel.custom.css</a> (seen on 2 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;splash_styling.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;splash_styling.css</a> (seen on 3 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;splash_styling.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;splash_styling.css</a> (seen on 2 websites)</p>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;default.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;default.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;tracking.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;tracking.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;webtracking&#x2F;tracking.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;webtracking&#x2F;tracking.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;owl.carousel.min.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;owl.carousel.min.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;selligent-script_splash.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;selligent-script_splash.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_top.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_top.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_bottom.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_bottom.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;pixel.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;left.png" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;left.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;right.png" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;right.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://offer.slgnt.eu&#x2F;e2536740ce3743d0b596f1cd083ae3a4&#x2F;1948b7fd06ee44.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;e2536740ce3743d0b596f1cd083ae3a4&#x2F;1948b7fd06ee44.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://offer.slgnt.eu&#x2F;a32bd1079e1f458f8ffc13126a007411&#x2F;96160ef8b31f4f.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;a32bd1079e1f458f8ffc13126a007411&#x2F;96160ef8b31f4f.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;body-homepage-takeover.css" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;css&#x2F;site&#x2F;body-homepage-takeover.css</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;default.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;default.js</a> (seen on 2 websites)</p>
+            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;248e23b1-137c-4014-b986-56a72863e8a6&#x2F;targetbase_1630594440.emsecure.min.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;248e23b1-137c-4014-b986-56a72863e8a6&#x2F;targetbase_1630594440.emsecure.min.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;tracking.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;tracking.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;webtracking&#x2F;tracking.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;webtracking&#x2F;tracking.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;owl.carousel.min.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;owl.carousel.min.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;selligent-script_splash.js" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;scripts&#x2F;js&#x2F;site&#x2F;selligent-script_splash.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_top.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_top.gif</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_bottom.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;empty_banner_bottom.gif</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;pixel.gif" target="_blank" class="external" rel="noreferrer noopener">kinepolis.slgnt.eu&#x2F;images&#x2F;site&#x2F;pixel.gif</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;248e23b1-137c-4014-b986-56a72863e8a6&#x2F;targetbase_1626207751.emsecure.min.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;248e23b1-137c-4014-b986-56a72863e8a6&#x2F;targetbase_1626207751.emsecure.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuY3ljbGluZ3dlZWtseS5jb20vdmlkZW9zL2Jpa2UtZml0LWFuZC1tYWludGVuYW5jZS9oYW5kbGViYXItaGVpZ2h0LWhvdy1sb3ctc2hvdWxkLXlvdS1nbw%3D%3D" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuY3ljbGluZ3dlZWtseS5jb20vdmlkZW9zL2Jpa2UtZml0LWFuZC1tYWludGVuYW5jZS9oYW5kbGViYXItaGVpZ2h0LWhvdy1sb3ctc2hvdWxkLXlvdS1nbw%3D%3D</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://offer.slgnt.eu&#x2F;static&#x2F;th.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;static&#x2F;th.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;9fc155e69a8b47418db8046ed914bda9&#x2F;9b6272dd8bf54d.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;9fc155e69a8b47418db8046ed914bda9&#x2F;9b6272dd8bf54d.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuZ2FyZGVuaW5nZXRjLmNvbS91cy9hZHZpY2UvYWx0ZXJuYXRpdmVzLXRvLWdyYXNz" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuZ2FyZGVuaW5nZXRjLmNvbS91cy9hZHZpY2UvYWx0ZXJuYXRpdmVzLXRvLWdyYXNz</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;8cfbafb30cbd4d1c8037938e9fab900a&#x2F;ae49281f65f04c.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;8cfbafb30cbd4d1c8037938e9fab900a&#x2F;ae49281f65f04c.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;4e338c72c8234ea9a31b7080be33d643&#x2F;a569cdbf381d46.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;4e338c72c8234ea9a31b7080be33d643&#x2F;a569cdbf381d46.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cucmVhbGhvbWVzLmNvbS91cy9yZXZpZXdzL3JvYm9yb2NrLXM3LXJvYm90LXZhY3V1bS1jbGVhbmVyLXJldmlldw%3D%3D" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cucmVhbGhvbWVzLmNvbS91cy9yZXZpZXdzL3JvYm9yb2NrLXM3LXJvYm90LXZhY3V1bS1jbGVhbmVyLXJldmlldw%3D%3D</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;054c479c0bbe409fab7a6d2d3bd90315&#x2F;57c808ba6aae49.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;054c479c0bbe409fab7a6d2d3bd90315&#x2F;57c808ba6aae49.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;e3370346adc1471c8745069e24e58bc8&#x2F;6101815393a046.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;e3370346adc1471c8745069e24e58bc8&#x2F;6101815393a046.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuaXRwcm9wb3J0YWwuY29tL3Jldmlld3Mvc29mdHdhcmUtYXBwcy9zbWFsbC1jYWxsLWZvci1hbmRyb2lkLXJldmlldy8%3D" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cuaXRwcm9wb3J0YWwuY29tL3Jldmlld3Mvc29mdHdhcmUtYXBwcy9zbWFsbC1jYWxsLWZvci1hbmRyb2lkLXJldmlldy8%3D</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cubGl2aW5nZXRjLmNvbS93aGF0cy1uZXdzL3doZXJlLXRvLWJ1eS1jcml0dGFsbC1zdHlsZS1zaG93ZXItc2NyZWVucy0xODk3MzA%3D" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cubGl2aW5nZXRjLmNvbS93aGF0cy1uZXdzL3doZXJlLXRvLWJ1eS1jcml0dGFsbC1zdHlsZS1zaG93ZXItc2NyZWVucy0xODk3MzA%3D</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;9bd4238f-ddac-4297-bd63-b2b8c4a50cc8&#x2F;9bd4238fddac4297bd63b2b8c4a50cc8_1.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;9bd4238f-ddac-4297-bd63-b2b8c4a50cc8&#x2F;9bd4238fddac4297bd63b2b8c4a50cc8_1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;9bd4238f-ddac-4297-bd63-b2b8c4a50cc8&#x2F;9bd4238fddac4297bd63b2b8c4a50cc8_2_1630594440.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;9bd4238f-ddac-4297-bd63-b2b8c4a50cc8&#x2F;9bd4238fddac4297bd63b2b8c4a50cc8_2_1630594440.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cudDMuY29tL3VzL3Jldmlld3Mvbm9raWEtMS0zLXJldmlldw%3D%3D" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;db4a8f7d7191408280a85206a47e4bd6&#x2F;iv&#x2F;aHR0cHM6Ly93d3cudDMuY29tL3VzL3Jldmlld3Mvbm9raWEtMS0zLXJldmlldw%3D%3D</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;a6559f7d-8a36-444d-a034-d59e3039d4fa&#x2F;targetbase_1630594440.emsecure.min.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;a6559f7d-8a36-444d-a034-d59e3039d4fa&#x2F;targetbase_1630594440.emsecure.min.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_1.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_1.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_2_1626207751.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_2_1626207751.js</a> (seen on 2 websites)</p>
+            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_2_1630594440.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;b836c329-234a-4325-aec9-0c4d12a19d01&#x2F;b836c329234a4325aec90c4d12a19d01_2_1630594440.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://sitep.slgnt.eu&#x2F;Content&#x2F;a6559f7d-8a36-444d-a034-d59e3039d4fa&#x2F;targetbase_1626207751.emsecure.min.js" target="_blank" class="external" rel="noreferrer noopener">sitep.slgnt.eu&#x2F;Content&#x2F;a6559f7d-8a36-444d-a034-d59e3039d4fa&#x2F;targetbase_1626207751.emsecure.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;5b82b938ebf54f19a4112eb25648f8b4&#x2F;0da0b806d54248.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;5b82b938ebf54f19a4112eb25648f8b4&#x2F;0da0b806d54248.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://offer.slgnt.eu&#x2F;3d4b724400d54565be958b0da58e8969&#x2F;b7aa61f348af4e.js" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;3d4b724400d54565be958b0da58e8969&#x2F;b7aa61f348af4e.js</a> (seen on 2 websites)</p>
+            <p><a href="http://offer.slgnt.eu&#x2F;api&#x2F;7e080a47898b4c718d7aeef3537448d8&#x2F;iv&#x2F;aHR0cHM6Ly93d3cudXJsYXVic2d1cnUuZGUv" target="_blank" class="external" rel="noreferrer noopener">offer.slgnt.eu&#x2F;api&#x2F;7e080a47898b4c718d7aeef3537448d8&#x2F;iv&#x2F;aHR0cHM6Ly93d3cudXJsYXVic2d1cnUuZGUv</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -270,43 +299,79 @@
             <a href="http://blogs.mediapart.fr" target="_blank" class="external">blogs.mediapart.fr</a>
         </li>
         <li class='truncate'>
-            <a href="http://forum.quattroruote.it" target="_blank" class="external">forum.quattroruote.it</a>
+            <a href="http://www.mediapart.fr" target="_blank" class="external">www.mediapart.fr</a>
         </li>
         <li class='truncate'>
-            <a href="http://kinepolis.nl" target="_blank" class="external">kinepolis.nl</a>
+            <a href="http://www.topdoctors.co.uk" target="_blank" class="external">www.topdoctors.co.uk</a>
         </li>
         <li class='truncate'>
-            <a href="http://kinepolis.be" target="_blank" class="external">kinepolis.be</a>
+            <a href="http://www.hema.nl" target="_blank" class="external">www.hema.nl</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.cucchiaio.it" target="_blank" class="external">www.cucchiaio.it</a>
+            <a href="http://www.cyclingnews.com" target="_blank" class="external">www.cyclingnews.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.dueruote.it" target="_blank" class="external">www.dueruote.it</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.homesandgardens.com" target="_blank" class="external">www.homesandgardens.com</a>
+            <a href="http://www.loudersound.com" target="_blank" class="external">www.loudersound.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.lalibre.be" target="_blank" class="external">www.lalibre.be</a>
+            <a href="http://kinepolis.nl" target="_blank" class="external">kinepolis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.delijn.be" target="_blank" class="external">www.delijn.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.urlaubsguru.de" target="_blank" class="external">www.urlaubsguru.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kinepolis.es" target="_blank" class="external">kinepolis.es</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.topdoctors.es" target="_blank" class="external">www.topdoctors.es</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.quattroruote.it" target="_blank" class="external">www.quattroruote.it</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ashampoo.com" target="_blank" class="external">www.ashampoo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kinepolis.be" target="_blank" class="external">kinepolis.be</a>
         </li>
         <li class='truncate'>
             <a href="http://www.livingetc.com" target="_blank" class="external">www.livingetc.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.mediapart.fr" target="_blank" class="external">www.mediapart.fr</a>
+            <a href="http://www.dhnet.be" target="_blank" class="external">www.dhnet.be</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.mittelbayerische.de" target="_blank" class="external">www.mittelbayerische.de</a>
+            <a href="http://www.cyclingweekly.com" target="_blank" class="external">www.cyclingweekly.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.petsradar.com" target="_blank" class="external">www.petsradar.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.nfkino.no" target="_blank" class="external">www.nfkino.no</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.praxis.nl" target="_blank" class="external">www.praxis.nl</a>
+            <a href="http://www.mittelbayerische.de" target="_blank" class="external">www.mittelbayerische.de</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.quattroruote.it" target="_blank" class="external">www.quattroruote.it</a>
+            <a href="http://www.itproportal.com" target="_blank" class="external">www.itproportal.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.letudiant.fr" target="_blank" class="external">www.letudiant.fr</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://forum.quattroruote.it" target="_blank" class="external">forum.quattroruote.it</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.lalibre.be" target="_blank" class="external">www.lalibre.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.whathifi.com" target="_blank" class="external">www.whathifi.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.realhomes.com" target="_blank" class="external">www.realhomes.com</a>
@@ -315,25 +380,40 @@
             <a href="http://www.t3.com" target="_blank" class="external">www.t3.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.urlaubsguru.de" target="_blank" class="external">www.urlaubsguru.de</a>
-        </li>
-        <li class='truncate'>
             <a href="http://www.nfbio.dk" target="_blank" class="external">www.nfbio.dk</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.ashampoo.com" target="_blank" class="external">www.ashampoo.com</a>
+            <a href="http://www.gardeningetc.com" target="_blank" class="external">www.gardeningetc.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.homesandgardens.com" target="_blank" class="external">www.homesandgardens.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://techradar.com" target="_blank" class="external">techradar.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://global.techradar.com" target="_blank" class="external">global.techradar.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.creativebloq.com" target="_blank" class="external">www.creativebloq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.digitalcameraworld.com" target="_blank" class="external">www.digitalcameraworld.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.fourfourtwo.com" target="_blank" class="external">www.fourfourtwo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gamesradar.com" target="_blank" class="external">www.gamesradar.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.guitarworld.com" target="_blank" class="external">www.guitarworld.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.naturitas.es" target="_blank" class="external">www.naturitas.es</a>
         </li>
         <li class='truncate'>
             <a href="http://www.refworld.org" target="_blank" class="external">www.refworld.org</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.topdoctors.co.uk" target="_blank" class="external">www.topdoctors.co.uk</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.topdoctors.es" target="_blank" class="external">www.topdoctors.es</a>
         </li>
         <li class='truncate'>
             <a href="http://www.unhcr.org" target="_blank" class="external">www.unhcr.org</a>
@@ -348,7 +428,7 @@
             <a href="http://cosmopolitan.fr" target="_blank" class="external">cosmopolitan.fr</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.delijn.be" target="_blank" class="external">www.delijn.be</a>
+            <a href="http://www.cosmopolitan.fr" target="_blank" class="external">www.cosmopolitan.fr</a>
         </li>
         <li class='truncate'>
             <a href="http://www.larvf.com" target="_blank" class="external">www.larvf.com</a>
@@ -357,19 +437,10 @@
             <a href="http://www.magicmaman.com" target="_blank" class="external">www.magicmaman.com</a>
         </li>
         <li class='truncate'>
+            <a href="http://www.marieclaire.fr" target="_blank" class="external">www.marieclaire.fr</a>
+        </li>
+        <li class='truncate'>
             <a href="http://cyclingweekly.com" target="_blank" class="external">cyclingweekly.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.digitalcameraworld.com" target="_blank" class="external">www.digitalcameraworld.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.fourfourtwo.com" target="_blank" class="external">www.fourfourtwo.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.gamesradar.com" target="_blank" class="external">www.gamesradar.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.gardeningetc.com" target="_blank" class="external">www.gardeningetc.com</a>
         </li>
         <li class='truncate'>
             <a href="http://decanter.com" target="_blank" class="external">decanter.com</a>
@@ -384,9 +455,6 @@
             <a href="http://www.marieclaire.co.uk" target="_blank" class="external">www.marieclaire.co.uk</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.pbo.co.uk" target="_blank" class="external">www.pbo.co.uk</a>
-        </li>
-        <li class='truncate'>
             <a href="http://www.shootinguk.co.uk" target="_blank" class="external">www.shootinguk.co.uk</a>
         </li>
         <li class='truncate'>
@@ -399,34 +467,37 @@
             <a href="http://dhnet.be" target="_blank" class="external">dhnet.be</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.dhnet.be" target="_blank" class="external">www.dhnet.be</a>
+            <a href="http://gardeningetc.com" target="_blank" class="external">gardeningetc.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hema.nl" target="_blank" class="external">hema.nl</a>
         </li>
         <li class='truncate'>
             <a href="http://homebuilding.co.uk" target="_blank" class="external">homebuilding.co.uk</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.itproportal.com" target="_blank" class="external">www.itproportal.com</a>
+            <a href="http://itproportal.com" target="_blank" class="external">itproportal.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://lalibre.be" target="_blank" class="external">lalibre.be</a>
+            <a href="http://www.laptopmag.com" target="_blank" class="external">www.laptopmag.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://livescience.com" target="_blank" class="external">livescience.com</a>
+            <a href="http://www.livescience.com" target="_blank" class="external">www.livescience.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://livingetc.com" target="_blank" class="external">livingetc.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://musicradar.com" target="_blank" class="external">musicradar.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.musicradar.com" target="_blank" class="external">www.musicradar.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.pcgamer.com" target="_blank" class="external">www.pcgamer.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://realhomes.com" target="_blank" class="external">realhomes.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://space.com" target="_blank" class="external">space.com</a>
-        </li>
-        <li class='truncate'>
             <a href="http://www.space.com" target="_blank" class="external">www.space.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://t3.com" target="_blank" class="external">t3.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.techradar.com" target="_blank" class="external">www.techradar.com</a>
@@ -435,16 +506,31 @@
             <a href="http://www.tomsguide.com" target="_blank" class="external">www.tomsguide.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://ucicinemas.it" target="_blank" class="external">ucicinemas.it</a>
+            <a href="http://www.tomshardware.com" target="_blank" class="external">www.tomshardware.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.ucicinemas.it" target="_blank" class="external">www.ucicinemas.it</a>
+            <a href="http://www.toptenreviews.com" target="_blank" class="external">www.toptenreviews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://santander.pt" target="_blank" class="external">santander.pt</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.santander.pt" target="_blank" class="external">www.santander.pt</a>
         </li>
         <li class='truncate'>
             <a href="http://www.uci-kinowelt.de" target="_blank" class="external">www.uci-kinowelt.de</a>
         </li>
         <li class='truncate'>
+            <a href="http://www.ucicinemas.it" target="_blank" class="external">www.ucicinemas.it</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://t3.com" target="_blank" class="external">t3.com</a>
+        </li>
+        <li class='truncate'>
             <a href="http://uci-kinowelt.de" target="_blank" class="external">uci-kinowelt.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ucicinemas.it" target="_blank" class="external">ucicinemas.it</a>
         </li>
         <li class='truncate'>
             <a href="http://urlaubsguru.de" target="_blank" class="external">urlaubsguru.de</a>
@@ -453,7 +539,7 @@
             <a href="http://whathifi.com" target="_blank" class="external">whathifi.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.whathifi.com" target="_blank" class="external">www.whathifi.com</a>
+            <a href="http://www.whattowatch.com" target="_blank" class="external">www.whattowatch.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.womanandhome.com" target="_blank" class="external">www.womanandhome.com</a>

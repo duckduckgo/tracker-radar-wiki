@@ -13,7 +13,7 @@ const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/ent
 const domainMap = new Map();
 const entityMap = new Map();
 const categoryMap = new Map();
-const globalStats = [];
+let globalStats = [];
 let tags = [];
 
 function mkdirIfNotExists(dir) {
@@ -29,9 +29,94 @@ async function main() {
     mkdirIfNotExists(path.join(config.staticData, '/history/domains/'));
     mkdirIfNotExists(path.join(config.staticData, '/history/entities/'));
 
+    // “Those who fail to learn from history are doomed to repeat it.”
+    // load historic data that we may alrady have locally because rebuilding everything from scratch takes forever
+
+    let oldTags = [];
+
+    try {
+        const dataString = fs.readFileSync(path.join(config.staticData, '/history/', 'global.json'), 'utf8');
+        globalStats = JSON.parse(dataString);
+    } catch (e) {}
+
+    try {
+        const dataString = fs.readFileSync(path.join(config.staticData, '/history/', 'tags.json'), 'utf8');
+        oldTags = JSON.parse(dataString);
+    } catch (e) {}
+
+    const historicDomainFiles = getListOfJSONPathsFromFolder(path.join(config.staticData, '/history/domains/'));
+    const historicEntityFiles = getListOfJSONPathsFromFolder(path.join(config.staticData, '/history/entities/'));
+    const historicCategoryFiles = getListOfJSONPathsFromFolder(path.join(config.staticData, '/history/categories/'));
+    let failingFiles = 0;
+
+    console.log('Processing historic data');
+    console.log('Files to process: ', `${historicDomainFiles.length} domains + ${historicEntityFiles.length} entities + ${historicCategoryFiles.length} categories`);
+
+    const historicProgressBar = new ProgressBar('[:bar] :percent ETA :etas :file', {
+        complete: chalk.green('='),
+        incomplete: ' ',
+        total: historicDomainFiles.length + historicEntityFiles.length + historicCategoryFiles.length,
+        width: 30
+    });
+
+    historicDomainFiles.forEach(({file, resolvedPath}) => {
+        historicProgressBar.tick({file});
+
+        let data = null;
+
+        try {
+            const dataString = fs.readFileSync(resolvedPath, 'utf8');
+            data = JSON.parse(dataString);
+        } catch (e) {
+            failingFiles++;
+            return;
+        }
+
+        domainMap.set(data.name, data);
+    });
+
+    historicEntityFiles.forEach(({file, resolvedPath}) => {
+        historicProgressBar.tick({file});
+
+        let data = null;
+
+        try {
+            const dataString = fs.readFileSync(resolvedPath, 'utf8');
+            data = JSON.parse(dataString);
+        } catch (e) {
+            failingFiles++;
+            return;
+        }
+
+        entityMap.set(data.name, data);
+    });
+
+    historicCategoryFiles.forEach(({file, resolvedPath}) => {
+        historicProgressBar.tick({file});
+
+        let data = null;
+
+        try {
+            const dataString = fs.readFileSync(resolvedPath, 'utf8');
+            data = JSON.parse(dataString);
+        } catch (e) {
+            failingFiles++;
+            return;
+        }
+
+        categoryMap.set(data.name, data);
+    });
+
+    console.log(`Loading succeeded (${failingFiles} files failed to load).`);
+
+    // load list of all tags, figure out which ones we have to process
+
     const git = simpleGit(config.trackerRadarRepoPath);
     const tagsString = await git.tag();
     tags = tagsString.split('\n').filter(a => a.length > 0);
+
+    // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
+    // tags.push('jd/august-update');
 
     try {
         fs.writeFileSync(path.join(config.staticData, '/history/tags.json'), JSON.stringify(tags));
@@ -39,10 +124,11 @@ async function main() {
         console.error(chalk.red(e));
     }
 
-    // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    tags.push('jd/august-update');
+    const processTags = tags.filter(tag => !oldTags.includes(tag));
 
-    for (let tag of tags) {
+    console.log(chalk.green(`${processTags.length} tags need to be processed: `, processTags));
+
+    for (let tag of processTags) {
         // eslint-disable-next-line no-await-in-loop
         await git.raw('checkout', tag, '--force');
 

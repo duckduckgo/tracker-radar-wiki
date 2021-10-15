@@ -111,3 +111,19 @@ const top100RenderData = {
 const top100Output = mustache.render(getTemplate('top100'), top100RenderData, getTemplate);
 
 fs.writeFileSync(path.join(config.basePagesPath, 'top100.html'), top100Output);
+
+const apiHistoryString = fs.readFileSync(path.join(config.staticData, '/history/api-history.json'), 'utf8');
+const apiHistory = JSON.parse(apiHistoryString);
+
+const apiHistoryRenderData = {
+    apiHistory: apiHistory
+        .filter(item => item.api !== 'Document.prototype.cookie') // this was only used before 2020.11, after this date we have split it into a getter and setter
+        .map(item => ({api: item.api, entries: item.entries, lastValue: item.entries.at(-1).value}))
+        .sort((a, b) => b.lastValue - a.lastValue),
+    apiHistoryString,
+    hostPath: config.hostPath
+};
+
+const apiHistoryOutput = mustache.render(getTemplate('apiHistory'), apiHistoryRenderData, getTemplate);
+
+fs.writeFileSync(path.join(config.basePagesPath, 'apiHistory.html'), apiHistoryOutput);

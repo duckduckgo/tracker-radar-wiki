@@ -56,6 +56,7 @@ async function main() {
 
             fpHistory.set(api, apiData);
         });
+        
     }
 }
 

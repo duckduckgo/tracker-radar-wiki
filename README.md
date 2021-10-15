@@ -16,13 +16,14 @@ If you want to generate search and graph data (e.g. when dataset has changed):
 
 ```bash
 npm run build-history
+npm run build-api-history
 npm run build-search
 ```
 
 If you want to generate HTML pages (e.g. when templates were modified):
 
 ```bash
-npm run build-index # Builds the home page
+npm run build-index # Builds the home page, top 100 domains page and API abuse score page
 npm run build-pages # Builds all other pages
 ```
 

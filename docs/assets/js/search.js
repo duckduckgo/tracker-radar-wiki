@@ -20,7 +20,8 @@
 
     // we are using relative URLs so that everything works on both local and production
     let pathPrefix = '..';
-    if (location.pathname === '/' || location.pathname === '/tracker-radar-wiki/') {
+    const topLevel = /^\/(tracker-radar-wiki\/)?[^/]*$/;
+    if (topLevel.test(location.pathname)) {
         pathPrefix = '.';
     }
 

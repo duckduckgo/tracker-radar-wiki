@@ -118,7 +118,7 @@ const apiHistory = JSON.parse(apiHistoryString);
 const apiHistoryRenderData = {
     apiHistory: apiHistory
         .filter(item => item.api !== 'Document.prototype.cookie') // this was only used before 2020.11, after this date we have split it into a getter and setter
-        .map(item => ({api: item.api, entries: item.entries, lastValue: item.entries[item.entities.length - 1]}))
+        .map(item => ({api: item.api, entries: item.entries, lastValue: item.entries[item.entries.length - 1]}))
         .sort((a, b) => b.lastValue - a.lastValue),
     apiHistoryString,
     hostPath: config.hostPath

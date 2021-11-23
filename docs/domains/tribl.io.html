@@ -44,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "tribl.io",
-        history: [{"date":"2020.02","prevalence":0.000185,"sites":8,"fingerprinting":1,"cookies":0.000185},{"date":"2020.03","prevalence":0.000285,"sites":14,"fingerprinting":1,"cookies":0.000285},{"date":"2020.04","prevalence":0.000214,"sites":10,"fingerprinting":1,"cookies":0.000214},{"date":"2020.05","prevalence":0.000271,"sites":19,"fingerprinting":1,"cookies":0.000257},{"date":"2020.06","prevalence":0.000274,"sites":20,"fingerprinting":1,"cookies":0.000274},{"date":"2020.07","prevalence":0.000152,"sites":11,"fingerprinting":1,"cookies":0.000152},{"date":"2020.08","prevalence":0.00014,"sites":19,"fingerprinting":1,"cookies":0.00014},{"date":"2020.09","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2020.10","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2020.11","prevalence":0.000159,"sites":21,"fingerprinting":1,"cookies":0.000159},{"date":"2020.12","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2021.01","prevalence":0.000168,"sites":22,"fingerprinting":1,"cookies":0.000168},{"date":"2021.02","prevalence":0.000236,"sites":34,"fingerprinting":1,"cookies":0.000194},{"date":"2021.03","prevalence":0.00025,"sites":36,"fingerprinting":1,"cookies":0.00025},{"date":"2021.04","prevalence":0.000277,"sites":40,"fingerprinting":1,"cookies":0.00025},{"date":"2021.05","prevalence":0.000276,"sites":40,"fingerprinting":1,"cookies":0.000269},{"date":"2021.06","prevalence":0.000288,"sites":42,"fingerprinting":1,"cookies":0.000288},{"date":"2021.07","prevalence":0.000257,"sites":37,"fingerprinting":1,"cookies":0.000187},{"date":"2021.08","prevalence":0.000278,"sites":40,"fingerprinting":1,"cookies":0.000264},{"date":"2021.09","prevalence":0.000255,"sites":37,"fingerprinting":1,"cookies":0.000255},{"date":"jd/nov-domains","prevalence":0.000235,"sites":34,"fingerprinting":1,"cookies":0.000235}]
+        history: [{"date":"2020.07","prevalence":0.000152,"sites":11,"fingerprinting":1,"cookies":0.000152},{"date":"2020.08","prevalence":0.00014,"sites":19,"fingerprinting":1,"cookies":0.00014},{"date":"2020.09","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2020.10","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2020.11","prevalence":0.000159,"sites":21,"fingerprinting":1,"cookies":0.000159},{"date":"2020.12","prevalence":0.000137,"sites":18,"fingerprinting":1,"cookies":0.000137},{"date":"2021.01","prevalence":0.000168,"sites":22,"fingerprinting":1,"cookies":0.000168},{"date":"2021.02","prevalence":0.000236,"sites":34,"fingerprinting":1,"cookies":0.000194},{"date":"2021.03","prevalence":0.00025,"sites":36,"fingerprinting":1,"cookies":0.00025},{"date":"2021.04","prevalence":0.000277,"sites":40,"fingerprinting":1,"cookies":0.00025},{"date":"2021.05","prevalence":0.000276,"sites":40,"fingerprinting":1,"cookies":0.000269},{"date":"2021.06","prevalence":0.000288,"sites":42,"fingerprinting":1,"cookies":0.000288},{"date":"2021.07","prevalence":0.000257,"sites":37,"fingerprinting":1,"cookies":0.000187},{"date":"2021.08","prevalence":0.000278,"sites":40,"fingerprinting":1,"cookies":0.000264},{"date":"2021.09","prevalence":0.000255,"sites":37,"fingerprinting":1,"cookies":0.000255},{"date":"2021.10","prevalence":0.000235,"sites":34,"fingerprinting":1,"cookies":0.000235},{"date":"jd/nov-update","prevalence":0.000242,"sites":35,"fingerprinting":1,"cookies":0.000235}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -65,16 +65,16 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;2614<small>/23339</small>
+                    <strong>Rank:</strong> &#35;2731<small>/23571</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.03&#37; (37 sites)
+                    <strong>Prevalence:</strong> 0.02&#37; (35 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
                 <li class='py-1'>
-                    <strong>Cookies:</strong> 0.03&#37;
+                    <strong>Cookies:</strong> 0.02&#37;
                 </li>
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
@@ -92,6 +92,8 @@
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
                     <span>Image</span>,
+                    <span>Stylesheet</span>,
+                    <span>Document</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/tribl.io.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
@@ -127,7 +129,10 @@
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
         <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
         <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
     </ul>
 </div>
 
@@ -171,19 +176,31 @@
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://intent.tribl.io&#x2F;_t.gif" target="_blank" class="external" rel="noreferrer noopener">intent.tribl.io&#x2F;_t.gif</a> (seen on 21 websites)</p>
+            <p><a href="http://intent.tribl.io&#x2F;_t.gif" target="_blank" class="external" rel="noreferrer noopener">intent.tribl.io&#x2F;_t.gif</a> (seen on 20 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://intent.tribl.io&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">intent.tribl.io&#x2F;analytics.js</a> (seen on 18 websites)</p>
+            <p><a href="http://intent.tribl.io&#x2F;analytics.js" target="_blank" class="external" rel="noreferrer noopener">intent.tribl.io&#x2F;analytics.js</a> (seen on 16 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://p0.tribl.io&#x2F;footer.js" target="_blank" class="external" rel="noreferrer noopener">p0.tribl.io&#x2F;footer.js</a> (seen on 14 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://p0.tribl.io&#x2F;h.js" target="_blank" class="external" rel="noreferrer noopener">p0.tribl.io&#x2F;h.js</a> (seen on 11 websites)</p>
+            <p><a href="http://p0.tribl.io&#x2F;h.js" target="_blank" class="external" rel="noreferrer noopener">p0.tribl.io&#x2F;h.js</a> (seen on 10 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://tribl.io&#x2F;firm_tracking.js" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;firm_tracking.js</a> (seen on 9 websites)</p>
+            <p><a href="http://tribl.io&#x2F;firm_tracking.js" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;firm_tracking.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tribl.io&#x2F;assets&#x2F;hub_embed.css" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;assets&#x2F;hub_embed.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tribl.io&#x2F;assets&#x2F;hub_embed.js" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;assets&#x2F;hub_embed.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tribl.io&#x2F;hub" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;hub</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tribl.io&#x2F;assets&#x2F;blob-d1f913a7c79526f943bc8f85631b97fe.js" target="_blank" class="external" rel="noreferrer noopener">tribl.io&#x2F;assets&#x2F;blob-d1f913a7c79526f943bc8f85631b97fe.js</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -200,9 +217,6 @@
         </li>
         <li class='truncate'>
             <a href="http://ripple.com" target="_blank" class="external">ripple.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://wiki.asterisk.org" target="_blank" class="external">wiki.asterisk.org</a>
         </li>
         <li class='truncate'>
             <a href="http://www.boardeffect.com" target="_blank" class="external">www.boardeffect.com</a>
@@ -230,6 +244,9 @@
         </li>
         <li class='truncate'>
             <a href="http://www.lexisnexis.com" target="_blank" class="external">www.lexisnexis.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.podium.com" target="_blank" class="external">www.podium.com</a>
         </li>
         <li class='truncate'>
             <a href="http://www.standard.com" target="_blank" class="external">www.standard.com</a>
@@ -265,10 +282,13 @@
             <a href="http://www.techhive.com" target="_blank" class="external">www.techhive.com</a>
         </li>
         <li class='truncate'>
+            <a href="http://insights.diligent.com" target="_blank" class="external">insights.diligent.com</a>
+        </li>
+        <li class='truncate'>
             <a href="http://jobvite.com" target="_blank" class="external">jobvite.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.healthleadersmedia.com" target="_blank" class="external">www.healthleadersmedia.com</a>
+            <a href="http://prnewswire.com" target="_blank" class="external">prnewswire.com</a>
         </li>
     </ul>
 </div>

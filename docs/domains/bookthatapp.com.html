@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "bookthatapp.com",
-        history: [{"date":"2020.02","prevalence":0.0000462,"sites":2,"fingerprinting":2,"cookies":0.0000462},{"date":"2020.03","prevalence":0.0000462,"sites":2,"fingerprinting":2,"cookies":0.0000462},{"date":"2020.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.10","prevalence":0.0000228,"sites":3,"fingerprinting":2,"cookies":0.0000152},{"date":"2020.11","prevalence":0.0000228,"sites":3,"fingerprinting":1,"cookies":0.0000228},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0.0000688,"sites":9,"fingerprinting":1,"cookies":0.0000535},{"date":"2021.02","prevalence":0.0000695,"sites":10,"fingerprinting":1,"cookies":0.0000695},{"date":"jd/march-update","prevalence":0.0000694,"sites":10,"fingerprinting":1,"cookies":0.0000694}]
+        history: [{"date":"2020.10","prevalence":0.0000228,"sites":3,"fingerprinting":2,"cookies":0.0000152},{"date":"2020.11","prevalence":0.0000228,"sites":3,"fingerprinting":1,"cookies":0.0000228},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0.0000688,"sites":9,"fingerprinting":1,"cookies":0.0000535},{"date":"2021.02","prevalence":0.0000695,"sites":10,"fingerprinting":1,"cookies":0.0000695},{"date":"2021.03","prevalence":0.0000693,"sites":10,"fingerprinting":1,"cookies":0.0000693},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/nov-update","prevalence":0.0000276,"sites":4,"fingerprinting":1,"cookies":0.0000138}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,16 +65,16 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;5665<small>/23229</small>
+                    <strong>Rank:</strong> &#35;10028<small>/23571</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.01&#37; (10 sites)
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
                 <li class='py-1'>
-                    <strong>Cookies:</strong> 0.01&#37;
+                    <strong>Cookies:</strong> 0.00&#37;
                 </li>
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
@@ -87,18 +90,13 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
                     <span>Script</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/bookthatapp.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
-                    <span>contender-bikes</span>, 
-                    <span>united-by-blue</span>, 
-                    <span>686store</span>, 
-                    <span>nyd-store</span>, 
-                    <span>repeaterstore</span>, 
                     <span>cdn</span>, 
-                    <span>www</span>, 
                 </li>
             </ul>
         </div>
@@ -128,6 +126,7 @@
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
         <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Document.cookie getter</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
     </ul>
 </div>
@@ -137,16 +136,28 @@
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://contender-bikes.bookthatapp.com&#x2F;javascripts&#x2F;bta.js" target="_blank" class="external" rel="noreferrer noopener">contender-bikes.bookthatapp.com&#x2F;javascripts&#x2F;bta.js</a> (seen on 5 websites)</p>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;css&#x2F;widgets-f1bbaa18.css" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;css&#x2F;widgets-f1bbaa18.css</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://contender-bikes.bookthatapp.com&#x2F;javascripts&#x2F;jquery.bta-2.0.js" target="_blank" class="external" rel="noreferrer noopener">contender-bikes.bookthatapp.com&#x2F;javascripts&#x2F;jquery.bta-2.0.js</a> (seen on 3 websites)</p>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;widgets-c43fc4b2ea7565da040b.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;widgets-c43fc4b2ea7565da040b.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://cdn.bookthatapp.com&#x2F;fullcalendar2&#x2F;lib&#x2F;moment.min.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;fullcalendar2&#x2F;lib&#x2F;moment.min.js</a> (seen on 3 websites)</p>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;0-ecc5fe12b0a5e66a17d1.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;0-ecc5fe12b0a5e66a17d1.chunk.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://www.bookthatapp.com&#x2F;sdk&#x2F;v1&#x2F;js&#x2F;bta-in-shopify.min.js" target="_blank" class="external" rel="noreferrer noopener">www.bookthatapp.com&#x2F;sdk&#x2F;v1&#x2F;js&#x2F;bta-in-shopify.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;4-7786899903e957add082.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;4-7786899903e957add082.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;5-9fa8eb7873f74ce43a16.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;5-9fa8eb7873f74ce43a16.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;82-f21cbb077db7ccfae88d.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;82-f21cbb077db7ccfae88d.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;css&#x2F;78-2572c581.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;css&#x2F;78-2572c581.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;78-27c304f9a6b0b6be0c70.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.bookthatapp.com&#x2F;packs&#x2F;js&#x2F;78-27c304f9a6b0b6be0c70.chunk.js</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -156,25 +167,10 @@
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='truncate'>
-            <a href="http://contenderbicycles.com" target="_blank" class="external">contenderbicycles.com</a>
+            <a href="http://teslabiohealing.com" target="_blank" class="external">teslabiohealing.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://unitedbyblue.com" target="_blank" class="external">unitedbyblue.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.686.com" target="_blank" class="external">www.686.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.nealsyarddairy.co.uk" target="_blank" class="external">www.nealsyarddairy.co.uk</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.waveform.com" target="_blank" class="external">www.waveform.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://faribaultmill.com" target="_blank" class="external">faribaultmill.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.faribaultmill.com" target="_blank" class="external">www.faribaultmill.com</a>
+            <a href="http://www.teslabiohealing.com" target="_blank" class="external">www.teslabiohealing.com</a>
         </li>
     </ul>
 </div>

@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "scoota.co",
-        history: [{"date":"2020.09","prevalence":0.0000456,"sites":6,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.000913,"sites":9,"fingerprinting":0,"cookies":0.000811},{"date":"2020.12","prevalence":0.0000456,"sites":6,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0.0000153,"sites":2,"fingerprinting":0,"cookies":0.0000153},{"date":"2021.02","prevalence":0.00000695,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.00000689,"sites":1,"fingerprinting":1,"cookies":0},{"date":"jd/july","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2020.09","prevalence":0.0000456,"sites":6,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.000913,"sites":9,"fingerprinting":0,"cookies":0.000811},{"date":"2020.12","prevalence":0.0000456,"sites":6,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0.0000153,"sites":2,"fingerprinting":0,"cookies":0.0000153},{"date":"2021.02","prevalence":0.00000695,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.00000689,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/nov-update","prevalence":0.000117,"sites":17,"fingerprinting":1,"cookies":0}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,10 +65,10 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;21829<small>/22056</small>
+                    <strong>Rank:</strong> &#35;4296<small>/23571</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
+                    <strong>Prevalence:</strong> 0.01&#37; (17 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
@@ -87,12 +90,17 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>Script</span>,
                     <span>Image</span>,
+                    <span>XHR</span>,
+                    <span>Media</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/scoota.co.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
                     <span>track</span>, 
+                    <span>assets</span>, 
+                    <span>domains</span>, 
                 </li>
             </ul>
         </div>
@@ -111,13 +119,127 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://track.scoota.co&#x2F;env" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;env</a> (seen on 2 websites)</p>
+            <p><a href="http://track.scoota.co&#x2F;serve" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;serve</a> (seen on 14 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;placement.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;placement.js</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://track.scoota.co&#x2F;env" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;env</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://track.scoota.co&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;view</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;p3vkizq&#x2F;6.json" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;p3vkizq&#x2F;6.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;1p1aizr&#x2F;6.json" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;1p1aizr&#x2F;6.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;debc07bdc0003c6f0d24.2.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;debc07bdc0003c6f0d24.2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;209370ad1bcb9e24ea2b.2.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;209370ad1bcb9e24ea2b.2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;cba4ed9d1c263cbc52b6.2.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;cba4ed9d1c263cbc52b6.2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;glutizt&#x2F;4.json" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;manifests&#x2F;glutizt&#x2F;4.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://domains.scoota.co&#x2F;domains&#x2F;com.usatoday.golfweek.golftips" target="_blank" class="external" rel="noreferrer noopener">domains.scoota.co&#x2F;domains&#x2F;com.usatoday.golfweek.golftips</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;79adaf6c1cc3a8228957.2.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;79adaf6c1cc3a8228957.2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;e90e1b9d8a0680d926cb.2.js" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;serving&#x2F;27165&#x2F;e90e1b9d8a0680d926cb.2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://track.scoota.co&#x2F;session" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;session</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;btn.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;btn.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;cta.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;cta.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;logo.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;header.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;header.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;subheader.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;subheader.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;bg.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;bg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;cta.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;cta.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;btn.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;btn.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;copy.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;copy.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;logo.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;bg.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;p3vkizq&#x2F;bundle&#x2F;3&#x2F;bg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;cta.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;cta.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;btn.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;btn.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;logo.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;copy.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;copy.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;bg.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;1p1aizr&#x2F;bundle&#x2F;4&#x2F;bg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;video.png" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;bundle&#x2F;2&#x2F;video.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;video&#x2F;25&#x2F;2&#x2F;GWMQ2611000H_MY22_Equinox_BankVault_Digital_15_v1_16x9_Mp4-(1).mp4" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;video&#x2F;25&#x2F;2&#x2F;GWMQ2611000H_MY22_Equinox_BankVault_Digital_15_v1_16x9_Mp4-(1).mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;video&#x2F;25&#x2F;2&#x2F;GWMQ2611000H_MY22_Equinox_BankVault_Digital_15_v1_16x9_Mp4-(1)_out.webm" target="_blank" class="external" rel="noreferrer noopener">assets.scoota.co&#x2F;creative&#x2F;assets&#x2F;glutizt&#x2F;video&#x2F;25&#x2F;2&#x2F;GWMQ2611000H_MY22_Equinox_BankVault_Digital_15_v1_16x9_Mp4-(1)_out.webm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://track.scoota.co&#x2F;action" target="_blank" class="external" rel="noreferrer noopener">track.scoota.co&#x2F;action</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -127,10 +249,49 @@
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='truncate'>
-            <a href="http://fandom.com" target="_blank" class="external">fandom.com</a>
+            <a href="http://usatoday.com" target="_blank" class="external">usatoday.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://witcher.fandom.com" target="_blank" class="external">witcher.fandom.com</a>
+            <a href="http://cardswire.usatoday.com" target="_blank" class="external">cardswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://chiefswire.usatoday.com" target="_blank" class="external">chiefswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://collegefootballnews.com" target="_blank" class="external">collegefootballnews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://foodchannel.com" target="_blank" class="external">foodchannel.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ftw.usatoday.com" target="_blank" class="external">ftw.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://giantswire.usatoday.com" target="_blank" class="external">giantswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://golftips.golfweek.usatoday.com" target="_blank" class="external">golftips.golfweek.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ninerswire.usatoday.com" target="_blank" class="external">ninerswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://saintswire.usatoday.com" target="_blank" class="external">saintswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://theclemsoninsider.com" target="_blank" class="external">theclemsoninsider.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://theramswire.usatoday.com" target="_blank" class="external">theramswire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://touchdownwire.usatoday.com" target="_blank" class="external">touchdownwire.usatoday.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wwd.com" target="_blank" class="external">wwd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://brownswire.usatoday.com" target="_blank" class="external">brownswire.usatoday.com</a>
         </li>
     </ul>
 </div>

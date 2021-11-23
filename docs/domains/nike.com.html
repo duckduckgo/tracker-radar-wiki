@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "nike.com",
-        history: [{"date":"2020.03","prevalence":0.0000407,"sites":2,"fingerprinting":3,"cookies":0.0000203},{"date":"2020.04","prevalence":0.0000407,"sites":2,"fingerprinting":3,"cookies":0.0000203}]
+        history: [{"date":"2021.10","prevalence":0.0000207,"sites":3,"fingerprinting":3,"cookies":0.0000138},{"date":"jd/nov-update","prevalence":0.0000138,"sites":2,"fingerprinting":3,"cookies":0.0000138}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,7 +65,7 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;5223<small>/7594</small>
+                    <strong>Rank:</strong> &#35;19844<small>/23571</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (2 sites)
@@ -89,11 +92,17 @@
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
                     <span>XHR</span>,
+                    <span>Document</span>,
+                    <span>Fetch</span>,
+                    <span>Preflight</span>,
                 </li>
-                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/nike.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/nike.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
                     <span>www</span>, 
+                    <span>unite</span>, 
+                    <span>api</span>, 
+                    <span>nikevideo</span>, 
                 </li>
             </ul>
         </div>
@@ -121,54 +130,193 @@
         </h3> 
     </div>    
 
-    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
-        <li class='truncate'>Navigator.prototype.webkitTemporaryStorage</li>
-        <li class='truncate'>Navigator.prototype.productSub</li>
-        <li class='truncate'>Navigator.prototype.storage</li>
-        <li class='truncate'>Navigator.prototype.mediaDevices</li>
-        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
-        <li class='truncate'>Navigator.prototype.onLine</li>
-        <li class='truncate'>Navigator.prototype.permissions</li>
-        <li class='truncate'>Navigator.prototype.product</li>
-        <li class='truncate'>Screen.prototype.availWidth</li>
-        <li class='truncate'>Screen.prototype.availHeight</li>
-        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
-        <li class='truncate'>Navigator.prototype.doNotTrack</li>
-        <li class='truncate'>window.indexedDB</li>
-        <li class='truncate'>Screen.prototype.pixelDepth</li>
-        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
-        <li class='truncate'>Navigator.prototype.language</li>
-        <li class='truncate'>Navigator.prototype.plugins</li>
-        <li class='truncate'>Screen.prototype.colorDepth</li>
-        <li class='truncate'>Navigator.prototype.javaEnabled</li>
-        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
-        <li class='truncate'>HTMLCanvasElement.prototype.constructor</li>
-        <li class='truncate'>Screen.prototype.height</li>
-        <li class='truncate'>Screen.prototype.width</li>
-        <li class='truncate'>window.sessionStorage</li>
-        <li class='truncate'>window.localStorage</li>
-        <li class='truncate'>Navigator.prototype.userAgent</li>
-        <li class='truncate'>Document.cookie getter</li>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.keyboard</li>
         <li class='truncate'>DeviceMotionEvent.prototype.acceleration</li>
         <li class='truncate'>DeviceMotionEvent.prototype.accelerationIncludingGravity</li>
         <li class='truncate'>DeviceMotionEvent.prototype.rotationRate</li>
-        <li class='truncate'>DeviceOrientationEvent.prototype.alpha</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getSupportedExtensions</li>
+        <li class='truncate'>Navigator.prototype.vendorSub</li>
+        <li class='truncate'>Navigator.prototype.productSub</li>
+        <li class='truncate'>Navigator.prototype.webkitTemporaryStorage</li>
         <li class='truncate'>DeviceOrientationEvent.prototype.beta</li>
         <li class='truncate'>DeviceOrientationEvent.prototype.gamma</li>
+        <li class='truncate'>Navigator.prototype.mediaCapabilities</li>
+        <li class='truncate'>DeviceOrientationEvent.prototype.alpha</li>
+        <li class='truncate'>Navigator.prototype.webkitPersistentStorage</li>
+        <li class='truncate'>Navigator.prototype.getBattery</li>
+        <li class='truncate'>Navigator.prototype.appCodeName</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Screen.prototype.availTop</li>
+        <li class='truncate'>Navigator.prototype.storage</li>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Screen.prototype.pixelDepth</li>
+        <li class='truncate'>CanvasRenderingContext2D.prototype.getImageData</li>
+        <li class='truncate'>Navigator.prototype.mediaDevices</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Screen.prototype.orientation</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Screen.prototype.availLeft</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Notification.permission</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+        <li class='truncate'>Navigator.prototype.presentation</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.javaEnabled</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
     </ul>
 </div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
-    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-4 md:grid-cols-2'>
-        <li class='truncate'><a href="http://nike.com&#x2F;static&#x2F;00516bc013e1858fbe139e834e6616b" target="_blank" class="external" rel="noreferrer noopener">nike.com&#x2F;static&#x2F;00516bc013e1858fbe139e834e6616b</a></li>
-        <li class='truncate'><a href="http://nike.com&#x2F;static&#x2F;00516bc013e1858fbe139e834e6616b" target="_blank" class="external" rel="noreferrer noopener">nike.com&#x2F;static&#x2F;00516bc013e1858fbe139e834e6616b</a></li>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.nike.com&#x2F;akam&#x2F;11&#x2F;28cb6426" target="_blank" class="external" rel="noreferrer noopener">www.nike.com&#x2F;akam&#x2F;11&#x2F;28cb6426</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nike.com&#x2F;_F3wlMDZQw8o5vkSEa9Y&#x2F;7aEEfDJS5p1N&#x2F;DFsbWwE&#x2F;aGNzXmMi&#x2F;G2IB" target="_blank" class="external" rel="noreferrer noopener">www.nike.com&#x2F;_F3wlMDZQw8o5vkSEa9Y&#x2F;7aEEfDJS5p1N&#x2F;DFsbWwE&#x2F;aGNzXmMi&#x2F;G2IB</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;fp" target="_blank" class="external" rel="noreferrer noopener">api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;fp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;ips.js" target="_blank" class="external" rel="noreferrer noopener">api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;ips.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;tl" target="_blank" class="external" rel="noreferrer noopener">api.nike.com&#x2F;149e9513-01fa-4fb0-aad4-566afd725d1b&#x2F;2d206a39-8ed7-437e-a3be-862e0f06eea3&#x2F;tl</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;023145e4-ef1e-47da-800b-b07ecdb327a7&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;023145e4-ef1e-47da-800b-b07ecdb327a7&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;fd5dbe40-bb28-4384-a871-b5d7dd6cd18d&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;fd5dbe40-bb28-4384-a871-b5d7dd6cd18d&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;e7ebff03-e4ec-4242-9410-cea474c87593&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;e7ebff03-e4ec-4242-9410-cea474c87593&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;0fe22784-4446-4ff3-a314-0414a9d6b780&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;0fe22784-4446-4ff3-a314-0414a9d6b780&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3d3901ad-2833-4c5d-bd7a-533b45d6c486&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3d3901ad-2833-4c5d-bd7a-533b45d6c486&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;8642ad86-7207-402e-8063-7353cec9361e&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;8642ad86-7207-402e-8063-7353cec9361e&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;19c3c997-7344-4dc1-b756-cc155c59b9fe&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;19c3c997-7344-4dc1-b756-cc155c59b9fe&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;40d3fd75-d724-496d-b5ed-edb9508c401e&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;40d3fd75-d724-496d-b5ed-edb9508c401e&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;837680ad-faa0-4221-8407-5c26f1af906d&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;837680ad-faa0-4221-8407-5c26f1af906d&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;46f55217-d740-4cb0-93c1-1f3519c18132&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;46f55217-d740-4cb0-93c1-1f3519c18132&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3606eb25-daf4-40f4-9ac1-db710c3e67e9&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3606eb25-daf4-40f4-9ac1-db710c3e67e9&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;df67d655-a734-4aef-afd1-0b673c9405c6&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;df67d655-a734-4aef-afd1-0b673c9405c6&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;e31b90b6-25f3-40bc-97c0-fc95704ca8bd&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;e31b90b6-25f3-40bc-97c0-fc95704ca8bd&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;dd511f56-c0fe-48d9-8168-84bd2c34226d&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;dd511f56-c0fe-48d9-8168-84bd2c34226d&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;02bbfeeb-37eb-4f8c-ba0c-c81ba4803ffc&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;02bbfeeb-37eb-4f8c-ba0c-c81ba4803ffc&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;7d0281e6-2768-4e77-9fb2-c9dc35e41725&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;7d0281e6-2768-4e77-9fb2-c9dc35e41725&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;bfd1f0d5-8469-4998-9c0c-e230f1e3e981&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;bfd1f0d5-8469-4998-9c0c-e230f1e3e981&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;8933aeb2-fe3f-4f5c-bf17-37a3109ff8ed&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;8933aeb2-fe3f-4f5c-bf17-37a3109ff8ed&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3b0f95fa-8f80-445a-93e0-57a595aab1dc&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;3b0f95fa-8f80-445a-93e0-57a595aab1dc&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;b760b9c4-1867-4d8e-9b5e-542e835f3e82&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;b760b9c4-1867-4d8e-9b5e-542e835f3e82&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;43680d58-d2c4-45f8-a215-4014d4037a77&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;43680d58-d2c4-45f8-a215-4014d4037a77&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;0701eaa1-8e49-4176-a087-f2421cd28c8f&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;0701eaa1-8e49-4176-a087-f2421cd28c8f&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;943f6fea-d678-4e09-804c-0d93b4804240&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;943f6fea-d678-4e09-804c-0d93b4804240&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;464360e7-0167-446d-bd6f-81f43dc4f9f7&#x2F;text.vtt" target="_blank" class="external" rel="noreferrer noopener">nikevideo.nike.com&#x2F;media&#x2F;v1&#x2F;text&#x2F;vtt&#x2F;clear&#x2F;72451143001&#x2F;920f0da5-f99b-4a1c-be7b-585a9a9b98a5&#x2F;464360e7-0167-446d-bd6f-81f43dc4f9f7&#x2F;text.vtt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unite.nike.com&#x2F;auth&#x2F;unite_session_cookies&#x2F;v1" target="_blank" class="external" rel="noreferrer noopener">unite.nike.com&#x2F;auth&#x2F;unite_session_cookies&#x2F;v1</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nike.com&#x2F;assets&#x2F;experience&#x2F;cart&#x2F;public&#x2F;configs&#x2F;US.json" target="_blank" class="external" rel="noreferrer noopener">www.nike.com&#x2F;assets&#x2F;experience&#x2F;cart&#x2F;public&#x2F;configs&#x2F;US.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.nike.com&#x2F;buy&#x2F;carts&#x2F;v2&#x2F;US&#x2F;NIKE&#x2F;NIKECOM" target="_blank" class="external" rel="noreferrer noopener">api.nike.com&#x2F;buy&#x2F;carts&#x2F;v2&#x2F;US&#x2F;NIKE&#x2F;NIKECOM</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.nike.com&#x2F;buy&#x2F;carts&#x2F;v2&#x2F;US&#x2F;NIKE&#x2F;NIKECOM" target="_blank" class="external" rel="noreferrer noopener">api.nike.com&#x2F;buy&#x2F;carts&#x2F;v2&#x2F;US&#x2F;NIKE&#x2F;NIKECOM</a> (seen on 2 websites)</p>
+        </li>
     </ul>
 </div>
 
-            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
-                DuckDuckGo
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://jordan.com" target="_blank" class="external">jordan.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.jordan.com" target="_blank" class="external">www.jordan.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
             </footer>
         </div>
     </body>

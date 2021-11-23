@@ -116,7 +116,7 @@ async function main() {
     tags = tagsString.split('\n').filter(a => a.length > 0);
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/august-update');
+    // tags.push('jd/nov-update');
 
     try {
         fs.writeFileSync(path.join(config.staticData, '/history/tags.json'), JSON.stringify(tags));
@@ -126,7 +126,7 @@ async function main() {
 
     const processTags = tags.filter(tag => !oldTags.includes(tag));
 
-    console.log(chalk.green(`${processTags.length} tags need to be processed: `, processTags));
+    console.log(chalk.green(`${processTags.length} tag(s) need to be processed: `, processTags));
 
     for (let tag of processTags) {
         // eslint-disable-next-line no-await-in-loop

@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "endorsal.io",
-        history: [{"date":"2020.05","prevalence":0.0000428,"sites":3,"fingerprinting":1,"cookies":0},{"date":"2020.06","prevalence":0.000041,"sites":3,"fingerprinting":1,"cookies":0},{"date":"2020.07","prevalence":0.0000554,"sites":4,"fingerprinting":1,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0.0000532,"sites":7,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0.0000304,"sites":4,"fingerprinting":1,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000532,"sites":7,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000208,"sites":3,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.0000276,"sites":4,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0.0000274,"sites":4,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/august-update","prevalence":0.0000417,"sites":6,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2020.05","prevalence":0.0000428,"sites":3,"fingerprinting":1,"cookies":0},{"date":"2020.06","prevalence":0.000041,"sites":3,"fingerprinting":1,"cookies":0},{"date":"2020.07","prevalence":0.0000554,"sites":4,"fingerprinting":1,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0.0000532,"sites":7,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0.0000304,"sites":4,"fingerprinting":1,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000532,"sites":7,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000208,"sites":3,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.0000276,"sites":4,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0.0000274,"sites":4,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0.0000417,"sites":6,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0.0000276,"sites":4,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/dec-update","prevalence":0.0000207,"sites":3,"fingerprinting":0,"cookies":0}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,10 +65,10 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;7992<small>/23148</small>
+                    <strong>Rank:</strong> &#35;12803<small>/23741</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (6 sites)
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
@@ -76,10 +79,10 @@
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
-                        <li>time: 0<small>/3</small></li>
-                        <li>size: 0<small>/3</small></li>
-                        <li>CPU: 0<small>/3</small></li>
-                        <li>cache: 3<small>/3</small></li>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
                     </ul>
                 </li>
                 <li class='py-1'>
@@ -88,14 +91,11 @@
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
-                    <span>Preflight</span>,
-                    <span>Fetch</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/endorsal.io.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
                     <span>cdn</span>, 
-                    <span>api</span>, 
                 </li>
             </ul>
         </div>
@@ -122,12 +122,6 @@
         <li class='break-all'>
             <p><a href="http://cdn.endorsal.io&#x2F;widgets&#x2F;widget.min.js" target="_blank" class="external" rel="noreferrer noopener">cdn.endorsal.io&#x2F;widgets&#x2F;widget.min.js</a> (seen on 2 websites)</p>
         </li>
-        <li class='break-all'>
-            <p><a href="http://api.endorsal.io&#x2F;check&#x2F;fomo&#x2F;610d1688e58c6f73bc9b05ea" target="_blank" class="external" rel="noreferrer noopener">api.endorsal.io&#x2F;check&#x2F;fomo&#x2F;610d1688e58c6f73bc9b05ea</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://api.endorsal.io&#x2F;check&#x2F;fomo&#x2F;610d1688e58c6f73bc9b05ea" target="_blank" class="external" rel="noreferrer noopener">api.endorsal.io&#x2F;check&#x2F;fomo&#x2F;610d1688e58c6f73bc9b05ea</a> (seen on 2 websites)</p>
-        </li>
     </ul>
 </div>
 
@@ -139,13 +133,7 @@
             <a href="http://cheaplands.com" target="_blank" class="external">cheaplands.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://tctmed.com" target="_blank" class="external">tctmed.com</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://tenpin.co.uk" target="_blank" class="external">tenpin.co.uk</a>
-        </li>
-        <li class='truncate'>
-            <a href="http://www.tenpin.co.uk" target="_blank" class="external">www.tenpin.co.uk</a>
+            <a href="http://iwillteachyoualanguage.com" target="_blank" class="external">iwillteachyoualanguage.com</a>
         </li>
     </ul>
 </div>

@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "gids.tv",
-        history: [{"date":"2020.08","prevalence":0.0000147,"sites":2,"fingerprinting":0,"cookies":0.0000147},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0.0000139},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0.0000139},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0.0000137,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0},{"date":"jd/august-update","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2020.08","prevalence":0.0000147,"sites":2,"fingerprinting":0,"cookies":0.0000147},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0.0000139},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0.0000139},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0.0000137,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/dec-update","prevalence":0.0000138,"sites":2,"fingerprinting":1,"cookies":0}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;17984<small>/23148</small>
+                    <strong>Rank:</strong> &#35;18412<small>/23741</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (2 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -87,11 +90,15 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
                     <span>Image</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/gids.tv.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
+                    <span>www</span>, 
                     <span>images</span>, 
                 </li>
             </ul>
@@ -111,13 +118,319 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;css&#x2F;app.css" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;css&#x2F;app.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;js&#x2F;app.js" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;js&#x2F;app.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;logo.svg" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;app-promo.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;app-promo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
             <p><a href="http://images.gids.tv&#x2F;image" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;image</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;video-play.svg" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;video-play.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;documentaire-bewaarders-zondag-12-december-te-zien-op-npo-2.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;documentaire-bewaarders-zondag-12-december-te-zien-op-npo-2.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;zondag-12-december-in-onze-boerderij-de-toekomstdromen-van-boeren.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;zondag-12-december-in-onze-boerderij-de-toekomstdromen-van-boeren.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;nieuwe-serie-the-hot-zone-anthrax-begint-zondag-op-national-geographic.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;nieuwe-serie-the-hot-zone-anthrax-begint-zondag-op-national-geographic.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;vanavond-op-tv-sterren-op-het-doek-met-anna-drijver-en-the-big-balance.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;vanavond-op-tv-sterren-op-het-doek-met-anna-drijver-en-the-big-balance.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;loting-conference-league-met-psv-en-vitesse-live-op-tv-en-via-livestream.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;loting-conference-league-met-psv-en-vitesse-live-op-tv-en-via-livestream.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;racing-gp-van-abu-dhabi-race.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;racing-gp-van-abu-dhabi-race.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;71&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;71&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;lindas-wintermaand-1638979361779.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;lindas-wintermaand-1638979361779.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;7&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;7&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary-1639048194785.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary-1639048194785.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;3&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;3&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;16&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;16&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;onze-boerderij-1638891239259.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;onze-boerderij-1638891239259.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;1&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;1&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;2doc-bewaarders-1638892135161.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;2doc-bewaarders-1638892135161.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;2&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;2&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;dit-is-mijn-keus-1639059326198.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;dit-is-mijn-keus-1639059326198.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;5&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;5&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;familie-gillis-massa-is-kassa.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;familie-gillis-massa-is-kassa.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;droomhuis-gezocht-1639052389435.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;droomhuis-gezocht-1639052389435.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;de-slimste-mens-1639055757129.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;de-slimste-mens-1639055757129.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;seksengelen.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;seksengelen.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;3lab-huisje-boompje-weduwe.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;3lab-huisje-boompje-weduwe.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;vier-handen-op-een-buik-1639146588266.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;vier-handen-op-een-buik-1639146588266.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;11&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;11&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;fred-van-leer-alles-uit-de-kast-1639150524979.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;fred-van-leer-alles-uit-de-kast-1639150524979.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;145&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;145&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;nac-breda-fc-utrecht.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;nac-breda-fc-utrecht.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;149&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;149&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;het-perfecte-plaatje-1639153815093.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;het-perfecte-plaatje-1639153815093.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;4&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;4&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;het-kerst-muziekgala-2021.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;het-kerst-muziekgala-2021.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;niet-zonder-ons-special.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;niet-zonder-ons-special.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;andere-tijden-1639153142101.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;andere-tijden-1639153142101.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;judas.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;judas.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;6&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;6&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;sterren-op-het-doek-1638879479909.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;sterren-op-het-doek-1638879479909.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary-1639047931866.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary-1639047931866.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;the-big-balance-1638875662559.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;the-big-balance-1638875662559.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;guilt.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;guilt.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;bed-breakfast-1638872971306.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;bed-breakfast-1638872971306.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;nos-sport-schaatsen-wc-calgary.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;2doc-de-bellers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;2doc-de-bellers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;uefa-conference-league-feyenoord-maccabi-haifa.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;uefa-conference-league-feyenoord-maccabi-haifa.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;ik-vertrek-1638793794876.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;ik-vertrek-1638793794876.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;zembla-1638794266172.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;zembla-1638794266172.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;andere-tijden-1638783426280.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;andere-tijden-1638783426280.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;het-perfecte-plaatje-1638789362298.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;het-perfecte-plaatje-1638789362298.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;zina.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;zina.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;amalia-18-jaar.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;amalia-18-jaar.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;de-reis-van-je-genen-1638544531908.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;de-reis-van-je-genen-1638544531908.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;droomhuis-gezocht-1638528259453.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;droomhuis-gezocht-1638528259453.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;prinses-amalia-tiener-op-weg-naar-de-troon.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;prinses-amalia-tiener-op-weg-naar-de-troon.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;8&#x2F;icon-size-32.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;icons&#x2F;tv&#x2F;zenders&#x2F;8&#x2F;icon-size-32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-vrijdag-the-masked-singer-en-bed-and-breakfast-scoren.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-vrijdag-the-masked-singer-en-bed-and-breakfast-scoren.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-woensdag-tussen-kunst-en-kitsch-wint-nipt-van-het-perfecte-plaatje.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-woensdag-tussen-kunst-en-kitsch-wint-nipt-van-het-perfecte-plaatje.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-dinsdag-special-amalia-18-jaar-verslaat-ajax-sporting-portugal.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-dinsdag-special-amalia-18-jaar-verslaat-ajax-sporting-portugal.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-maandag-droomhuis-gezocht-verpulvert-concurrentie-met-1-5-miljoen-kijkers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-maandag-droomhuis-gezocht-verpulvert-concurrentie-met-1-5-miljoen-kijkers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zondag-maestro-begint-uitstekend-maar-formule-1-is-meest-bekeken.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zondag-maestro-begint-uitstekend-maar-formule-1-is-meest-bekeken.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zaterdag-even-tot-hier-populairder-dan-ooit-kijkcijferrecord.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zaterdag-even-tot-hier-populairder-dan-ooit-kijkcijferrecord.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-vrijdag-beau-onbetwiste-takshowkoning-laat-op1-ver-achter-zich.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-vrijdag-beau-onbetwiste-takshowkoning-laat-op1-ver-achter-zich.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-donderdag-terugkeer-frontberichten-scoort-goed-busje-komt-zo-zakt-weg.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-donderdag-terugkeer-frontberichten-scoort-goed-busje-komt-zo-zakt-weg.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-woensdag-nek-aan-nekrace-tussen-kunst-en-kitsch-en-het-perfecte-plaatje.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-woensdag-nek-aan-nekrace-tussen-kunst-en-kitsch-en-het-perfecte-plaatje.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-dinsdag-serie-nood-begint-met-710-000-kijkers-beau-wint-ruim-van-op1.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-dinsdag-serie-nood-begint-met-710-000-kijkers-beau-wint-ruim-van-op1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zondag-finale-aria-trekt-ruimt-1-2-miljoen-kijkers-expeditie-robinson-wint.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zondag-finale-aria-trekt-ruimt-1-2-miljoen-kijkers-expeditie-robinson-wint.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-van-zaterdag-mind-f-ck-even-tot-hier-trekken-opnieuw-veel-kijkers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-van-zaterdag-mind-f-ck-even-tot-hier-trekken-opnieuw-veel-kijkers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-vrijdag-5-5-miljoen-kijkers-corona-persconferentie-talkshows-profiteren.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-vrijdag-5-5-miljoen-kijkers-corona-persconferentie-talkshows-profiteren.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-donderdag-busje-komt-zo-met-adele-trekt-ruim-een-miljoen-kijkers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-donderdag-busje-komt-zo-met-adele-trekt-ruim-een-miljoen-kijkers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-woensdag-tussen-kunst-en-kitsch-is-terug-met-1-5-miljoen-kijkers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-woensdag-tussen-kunst-en-kitsch-is-terug-met-1-5-miljoen-kijkers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-dinsdag-adele-one-night-only-trekt-veel-kijkers-tweede-plek-op-primetime.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-dinsdag-adele-one-night-only-trekt-veel-kijkers-tweede-plek-op-primetime.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-maandag-radar-trekt-1-5-miljoen-kijkers-met-uitreiking-loden-leeuw.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-maandag-radar-trekt-1-5-miljoen-kijkers-met-uitreiking-loden-leeuw.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zondag-expeditie-robinson-grote-winnaar-op-primetime.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zondag-expeditie-robinson-grote-winnaar-op-primetime.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zaterdag-even-tot-hier-blijft-populair-ook-mindf-ck-goed-bekeken.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zaterdag-even-tot-hier-blijft-populair-ook-mindf-ck-goed-bekeken.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-vrijdag-jinek-profiteert-van-the-masked-singer-buza-start-goed.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-vrijdag-jinek-profiteert-van-the-masked-singer-buza-start-goed.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-donderdag-opnieuw-torenhoge-cijfers-ik-vertrek-busje-komt-zo-scoort-ook.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-donderdag-opnieuw-torenhoge-cijfers-ik-vertrek-busje-komt-zo-scoort-ook.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-woensdag-het-perfecte-plaatje-wint-nipt-van-de-grote-kleine-treinencompetitie.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-woensdag-het-perfecte-plaatje-wint-nipt-van-de-grote-kleine-treinencompetitie.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-dinsdag-rtl-boulevard-passeert-miljoengrens-en-nederland-noorwegen-pakt-goud-1637137236447.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-dinsdag-rtl-boulevard-passeert-miljoengrens-en-nederland-noorwegen-pakt-goud-1637137236447.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-maandag-tiny-house-battle-stelt-teleur-verliest-ook-van-familie-gillis.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-maandag-tiny-house-battle-stelt-teleur-verliest-ook-van-familie-gillis.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-zondag-fantastische-cijfers-voor-even-tot-hier-en-formule-1.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-zondag-fantastische-cijfers-voor-even-tot-hier-en-formule-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-van-zaterdag-intocht-sinterklaas-trekt-torenhoge-cijfers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-van-zaterdag-intocht-sinterklaas-trekt-torenhoge-cijfers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-vrijdag-persconferentie-en-the-masked-singer-scoren-miljoenenpubliek.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-vrijdag-persconferentie-en-the-masked-singer-scoren-miljoenenpubliek.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-donderdag-ik-vertrek-gaat-richting-de-2-miljoen-kijkers.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-donderdag-ik-vertrek-gaat-richting-de-2-miljoen-kijkers.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-woensdag-torenhoge-cijfers-voor-het-perfecte-plaatje-jinek-profiteert.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-woensdag-torenhoge-cijfers-voor-het-perfecte-plaatje-jinek-profiteert.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;kijkcijfers-dinsdag-hello-goodbye-wint-met-overmacht-op-primetime.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;kijkcijfers-dinsdag-hello-goodbye-wint-met-overmacht-op-primetime.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;img&#x2F;imdb.png" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;img&#x2F;imdb.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;films&#x2F;50349&#x2F;the-unforgivable.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;films&#x2F;50349&#x2F;the-unforgivable.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;films&#x2F;51250&#x2F;de-familie-claus-2-1638978275202.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;films&#x2F;51250&#x2F;de-familie-claus-2-1638978275202.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.gids.tv&#x2F;films&#x2F;50682&#x2F;the-power-of-the-dog.jpg" target="_blank" class="external" rel="noreferrer noopener">images.gids.tv&#x2F;films&#x2F;50682&#x2F;the-power-of-the-dog.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;js&#x2F;app2.js" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;js&#x2F;app2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gids.tv&#x2F;js&#x2F;inits.js" target="_blank" class="external" rel="noreferrer noopener">www.gids.tv&#x2F;js&#x2F;inits.js</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>

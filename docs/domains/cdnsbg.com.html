@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - cdnsbg.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "cdnsbg.com",
+        history: [{"date":"jd/feb-update","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/cdnsbg.com.ico' width="32" height="32" class='inline-block' /> cdnsbg.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/SmartBuy Guru Enterprises.html">SmartBuy Guru Enterprises</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10255<small>/24104</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/cdnsbg.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>static</span>, 
+                    <span>image2</span>, 
+                    <span>image1</span>, 
+                    <span>image3</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;mincss&#x2F;css-desktop-layouts-v2-a3597b8dc5.css" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;mincss&#x2F;css-desktop-layouts-v2-a3597b8dc5.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-jquery-v360-4e08579e6b.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-jquery-v360-4e08579e6b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-tracking-googleBtwHB-f829c23b64.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-tracking-googleBtwHB-f829c23b64.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-no-text.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-no-text.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-oval.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-oval.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-rectangle.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-rectangle.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-browline.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-browline.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-square.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-square.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-round.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-round.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-wayfarer.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-wayfarer.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-cat-eye.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-cat-eye.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-pilot.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;eye-pilot.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-full-rim.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-full-rim.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-semi-rim.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-semi-rim.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-rimless.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-frame-type-icons&#x2F;eye-rimless.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;eye-banner-virtual-try-on.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;eye-banner-virtual-try-on.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-pilot.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-pilot.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-wayfarer.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-wayfarer.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-oval.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-oval.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-square.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-square.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-cat-eye.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-cat-eye.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-wraparound.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-wraparound.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-round.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-round.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-browline.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-shape-icons&#x2F;sun-browline.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;ray-ban.svg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;ray-ban.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;tom-ford.svg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;tom-ford.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;oakley.svg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-brands&#x2F;oakley.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-sports.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-sports.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-polarised.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-polarised.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-virtual-try-on.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sun-banner-virtual-try-on.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-zfort.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-zfort.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;logo-zfort.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;logo-zfort.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-clarity.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-clarity.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;logo-clarity.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;logo-clarity.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-lens-scanner.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;lenses-banner-lens-scanner.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_SmartBuy%20Collection.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_SmartBuy%20Collection.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ray%20Ban.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ray%20Ban.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Oakley.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Oakley.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Tom%20Ford.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Tom%20Ford.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Gucci.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Gucci.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Tommy%20Hilfiger.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Tommy%20Hilfiger.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Boss%20By%20Hugo%20Boss.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Boss%20By%20Hugo%20Boss.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Prada.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Prada.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Persol.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Persol.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Carrera.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Carrera.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Arise%20Collective.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Arise%20Collective.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Polaroid.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Polaroid.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-eye-banner-shop-luxury.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-eye-banner-shop-luxury.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-eye-banner-gaming-glasses.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-eye-banner-gaming-glasses.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-sun-banner-shop-eco-friendly.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-sun-banner-shop-eco-friendly.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-sun-banner-shop-performance.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;brands-sun-banner-shop-performance.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Acuvue.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Acuvue.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Air%20Optix.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Air%20Optix.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Biofinity.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Biofinity.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Clariti.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Clariti.gif</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;contacts-banner.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;contacts-banner.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-clearance.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-clearance.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-limited-time-offers.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-limited-time-offers.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-coupons-vouchers.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-coupons-vouchers.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;review_sprite&#x2F;144x36.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;review_sprite&#x2F;144x36.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-bg.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-bg.jpeg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-up-close.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-up-close.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-register-close.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-register-close.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-layouts-v2-fa9c656913.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-layouts-v2-fa9c656913.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-autoComplete-904db2759b.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-autoComplete-904db2759b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;en&#x2F;js&#x2F;jquery&#x2F;skin&#x2F;layer.css" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;en&#x2F;js&#x2F;jquery&#x2F;skin&#x2F;layer.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;js&#x2F;jquery&#x2F;skin&#x2F;default&#x2F;xubox_ico0.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;js&#x2F;jquery&#x2F;skin&#x2F;default&#x2F;xubox_ico0.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;fontawesome-free@5.15.4&#x2F;fa-solid-900.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;fontawesome-free@5.15.4&#x2F;fa-solid-900.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-regular-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-regular-webfont.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-bold-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-bold-webfont.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;fontawesome-free@5.15.4&#x2F;fa-brands-400.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;fontawesome-free@5.15.4&#x2F;fa-brands-400.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;side_widget_bar&#x2F;lens-scanner-icon2.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;side_widget_bar&#x2F;lens-scanner-icon2.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;side_widget_bar&#x2F;slideWidget-sa2b6ebc6cd.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;side_widget_bar&#x2F;slideWidget-sa2b6ebc6cd.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;mincss&#x2F;css-desktop-homepage-v2-d5026714b9.css" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;mincss&#x2F;css-desktop-homepage-v2-d5026714b9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;9d4a25e6a0557223b7564c87c044b21c.png" target="_blank" class="external" rel="noreferrer noopener">image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;9d4a25e6a0557223b7564c87c044b21c.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;d5e8a8008a573d42aecaab887ac317be.png" target="_blank" class="external" rel="noreferrer noopener">image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;d5e8a8008a573d42aecaab887ac317be.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-11.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-11.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Emporio%20Armani.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Emporio%20Armani.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ralph%20By%20Ralph%20Lauren.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ralph%20By%20Ralph%20Lauren.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Polo%20Ralph%20Lauren.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Polo%20Ralph%20Lauren.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Chloe.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Chloe.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Proclear.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Proclear.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Soflens.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Soflens.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-frame-lens-deal-11.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-frame-lens-deal-11.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Boss%20by%20Hugo%20Boss.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Boss%20by%20Hugo%20Boss.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ralph%20by%20Ralph%20Lauren.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Ralph%20by%20Ralph%20Lauren.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Guess.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Guess.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Nike.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Nike.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Versace.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Versace.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;default&#x2F;big&#x2F;missing_image_en.jpg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;default&#x2F;big&#x2F;missing_image_en.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-homepage-v2-24457f9f6f.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;en&#x2F;minjs&#x2F;js-desktop-homepage-v2-24457f9f6f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-logo.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-sign-in-logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;icons&#x2F;close_icon.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;icons&#x2F;close_icon.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-semibold-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-semibold-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-light-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;lato&#x2F;lato-light-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-bold-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-bold-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-extrabold-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-extrabold-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-medium-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-medium-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;applepay&#x2F;apple_pay.svg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;applepay&#x2F;apple_pay.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-regular-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;fonts&#x2F;montserrat&#x2F;montserrat-regular-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image3.cdnsbg.com&#x2F;450&#x2F;1&#x2F;14&#x2F;23701_1621910518636.jpg" target="_blank" class="external" rel="noreferrer noopener">image3.cdnsbg.com&#x2F;450&#x2F;1&#x2F;14&#x2F;23701_1621910518636.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image3.cdnsbg.com&#x2F;450&#x2F;2&#x2F;430&#x2F;414297_1599532248964.jpg" target="_blank" class="external" rel="noreferrer noopener">image3.cdnsbg.com&#x2F;450&#x2F;2&#x2F;430&#x2F;414297_1599532248964.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image3.cdnsbg.com&#x2F;450&#x2F;3&#x2F;235&#x2F;449_1627633523727.jpg" target="_blank" class="external" rel="noreferrer noopener">image3.cdnsbg.com&#x2F;450&#x2F;3&#x2F;235&#x2F;449_1627633523727.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.cdnsbg.com&#x2F;en&#x2F;js&#x2F;googlemap.js" target="_blank" class="external" rel="noreferrer noopener">static.cdnsbg.com&#x2F;en&#x2F;js&#x2F;googlemap.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;79c624a0bc78f1b203dd52a5677ade85.png" target="_blank" class="external" rel="noreferrer noopener">image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;79c624a0bc78f1b203dd52a5677ade85.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;e73d234a6f91a7ab10cb3545ed43f9a1.png" target="_blank" class="external" rel="noreferrer noopener">image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;e73d234a6f91a7ab10cb3545ed43f9a1.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-4.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;sbg-logos&#x2F;sbg-logo-4.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Burberry.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Burberry.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Smith.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Smith.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Biomedics.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Biomedics.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_MyDay.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_MyDay.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-frame-lens-deal-4.jpeg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;mega-menu-banners&#x2F;sale-banner-frame-lens-deal-4.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;17eaa12efd593e2855231aa9bf182bee.png" target="_blank" class="external" rel="noreferrer noopener">image2.cdnsbg.com&#x2F;en&#x2F;images&#x2F;banners&#x2F;17eaa12efd593e2855231aa9bf182bee.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Spy.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Spy.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Dolce%20%26%20Gabbana.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;showbrand&#x2F;brand_Dolce%20%26%20Gabbana.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;default&#x2F;big&#x2F;missing_image_vd.jpg" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;public&#x2F;images&#x2F;default&#x2F;big&#x2F;missing_image_vd.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;vd-sign-in-logo.png" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;desktop&#x2F;new_sbg&#x2F;assets&#x2F;common&#x2F;vd-sign-in-logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;stylefinder&#x2F;style_finder_waiting.gif" target="_blank" class="external" rel="noreferrer noopener">image1.cdnsbg.com&#x2F;en&#x2F;images&#x2F;stylefinder&#x2F;style_finder_waiting.gif</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://smartbuyglasses.co.uk" target="_blank" class="external">smartbuyglasses.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.smartbuyglasses.co.uk" target="_blank" class="external">www.smartbuyglasses.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.visiondirect.com.au" target="_blank" class="external">www.visiondirect.com.au</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://visiondirect.com.au" target="_blank" class="external">visiondirect.com.au</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

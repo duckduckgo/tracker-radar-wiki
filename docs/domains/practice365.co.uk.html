@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - practice365.co.uk</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "practice365.co.uk",
+        history: [{"date":"jd/feb-update","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/practice365.co.uk.ico' width="32" height="32" class='inline-block' /> practice365.co.uk</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;20834<small>/24104</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Ping</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/practice365.co.uk.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>stats</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.javaEnabled</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gtranslate&#x2F;gtranslate-style24.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gtranslate&#x2F;gtranslate-style24.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;nhs-get-subpages-list&#x2F;css&#x2F;styles.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;nhs-get-subpages-list&#x2F;css&#x2F;styles.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;formidable&#x2F;css&#x2F;formidableforms586.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;formidable&#x2F;css&#x2F;formidableforms586.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-library&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-library&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-library&#x2F;theme.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-library&#x2F;theme.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;components&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;components&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-editor&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-editor&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;nux&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;nux&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;reusable-blocks&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;reusable-blocks&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;editor&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;editor&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;block-slider&#x2F;dist-free&#x2F;blocks.style.build.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;block-slider&#x2F;dist-free&#x2F;blocks.style.build.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-block&#x2F;dist&#x2F;blocks.style.build.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-block&#x2F;dist&#x2F;blocks.style.build.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;pdfjs-viewer-shortcode&#x2F;blocks&#x2F;dist&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;pdfjs-viewer-shortcode&#x2F;blocks&#x2F;dist&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;colorbox&#x2F;colorbox.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;colorbox&#x2F;colorbox.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;simple-banner&#x2F;simple-banner.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;simple-banner&#x2F;simple-banner.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;css&#x2F;lightbox.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;css&#x2F;lightbox.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-menu-icons&#x2F;assets&#x2F;css&#x2F;wpmi.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-menu-icons&#x2F;assets&#x2F;css&#x2F;wpmi.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;gp-practice&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;gp-practice&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;style.min.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;style.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;page-colours.min.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;page-colours.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;css&#x2F;widget&#x2F;widget.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;css&#x2F;widget&#x2F;widget.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;&#x2F;css&#x2F;shortcode.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;&#x2F;css&#x2F;shortcode.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;hooks&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;hooks&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;i18n&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;i18n&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;autop&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;autop&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;blob&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;blob&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-serialization-default-parser&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-serialization-default-parser&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;vendor&#x2F;react.min.755b0ae9.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;vendor&#x2F;react.min.755b0ae9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;deprecated&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;deprecated&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;dom&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;dom&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;vendor&#x2F;react-dom.min.edd8b7a6.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;vendor&#x2F;react-dom.min.edd8b7a6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;escape-html&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;escape-html&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;element&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;element&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;is-shallow-equal&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;is-shallow-equal&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;keycodes&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;keycodes&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;priority-queue&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;priority-queue&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;compose&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;compose&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;redux-routine&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;redux-routine&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;data&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;data&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;html-entities&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;html-entities&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;shortcode&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;shortcode&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;blocks&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;blocks&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;dom-ready&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;dom-ready&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;a11y&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;a11y&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;date&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;date&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;primitives&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;primitives&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;rich-text&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;rich-text&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;warning&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;warning&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;components&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;components&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;url&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;url&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;api-fetch&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;api-fetch&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;keyboard-shortcuts&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;keyboard-shortcuts&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;notices&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;notices&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;token-list&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;token-list&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;wordcount&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;wordcount&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-editor&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;block-editor&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;core-data&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;core-data&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;data-controls&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;data-controls&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;media-utils&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;media-utils&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;reusable-blocks&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;reusable-blocks&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;server-side-render&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;server-side-render&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;editor&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;gutenberg&#x2F;build&#x2F;editor&#x2F;index.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;nhs-get-subpages-list&#x2F;js&#x2F;block.build.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;nhs-get-subpages-list&#x2F;js&#x2F;block.build.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;cookie.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;cookie.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;colorbox&#x2F;jquery.colorbox-min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-dialog&#x2F;colorbox&#x2F;jquery.colorbox-min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;simple-banner&#x2F;simple-banner.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;simple-banner&#x2F;simple-banner.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;js&#x2F;lightbox.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;js&#x2F;lightbox.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;inc&#x2F;js&#x2F;fb.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;inc&#x2F;js&#x2F;fb.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;js&#x2F;widget.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;js&#x2F;widget.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;gptemplate&#x2F;wp-content&#x2F;plugins&#x2F;gtranslate&#x2F;flags&#x2F;24&#x2F;en.png" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;gptemplate&#x2F;wp-content&#x2F;plugins&#x2F;gtranslate&#x2F;flags&#x2F;24&#x2F;en.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;wp-admin&#x2F;admin-ajax.php" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;wp-admin&#x2F;admin-ajax.php</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;advanced-gutenberg&#x2F;assets&#x2F;css&#x2F;blocks.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;advanced-gutenberg&#x2F;assets&#x2F;css&#x2F;blocks.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;business-profile&#x2F;assets&#x2F;css&#x2F;contact-card.css" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;business-profile&#x2F;assets&#x2F;css&#x2F;contact-card.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;block-slider&#x2F;dist-free&#x2F;custom_frontend.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;block-slider&#x2F;dist-free&#x2F;custom_frontend.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-block&#x2F;dist&#x2F;modal.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;modal-block&#x2F;dist&#x2F;modal.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;skip-link-focus-fix.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;skip-link-focus-fix.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;nhsuk.min.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;nhsuk.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;navigation.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;navigation.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;gravity-overrides.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;themes&#x2F;nightingale-2-0-master&#x2F;js&#x2F;gravity-overrides.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;js&#x2F;shortcode.js" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;subscribe-by-email-master&#x2F;assets&#x2F;js&#x2F;shortcode.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stats.practice365.co.uk&#x2F;matomo.js" target="_blank" class="external" rel="noreferrer noopener">stats.practice365.co.uk&#x2F;matomo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;prev.png" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;prev.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;next.png" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;next.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;loading.gif" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;loading.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;close.png" target="_blank" class="external" rel="noreferrer noopener">practice365.co.uk&#x2F;nem3o&#x2F;wp-content&#x2F;plugins&#x2F;wp-embed-facebook&#x2F;templates&#x2F;lightbox&#x2F;images&#x2F;close.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stats.practice365.co.uk&#x2F;matomo.php" target="_blank" class="external" rel="noreferrer noopener">stats.practice365.co.uk&#x2F;matomo.php</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://redhousesurgery.nhs.uk" target="_blank" class="external">redhousesurgery.nhs.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.redhousesurgery.nhs.uk" target="_blank" class="external">www.redhousesurgery.nhs.uk</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

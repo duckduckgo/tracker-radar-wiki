@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "vlaanderen.be",
-        history: [{"date":"2020.02","prevalence":0.0000231,"sites":1,"fingerprinting":1,"cookies":0.0000231},{"date":"2020.03","prevalence":0.0000203,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.04","prevalence":0.0000214,"sites":1,"fingerprinting":1,"cookies":0.0000214},{"date":"2020.05","prevalence":0.0000285,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0.0000294,"sites":4,"fingerprinting":1,"cookies":0.00000735},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0.0000139},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":1,"cookies":0.0000138},{"date":"jd/july","prevalence":0.0000278,"sites":4,"fingerprinting":1,"cookies":0.0000139}]
+        history: [{"date":"2020.02","prevalence":0.0000231,"sites":1,"fingerprinting":1,"cookies":0.0000231},{"date":"2020.03","prevalence":0.0000203,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.04","prevalence":0.0000214,"sites":1,"fingerprinting":1,"cookies":0.0000214},{"date":"2020.05","prevalence":0.0000285,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0.0000294,"sites":4,"fingerprinting":1,"cookies":0.00000735},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.10","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0.0000139},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":1,"cookies":0.0000138},{"date":"2021.06","prevalence":0.0000137,"sites":2,"fingerprinting":1,"cookies":0.0000137},{"date":"2021.07","prevalence":0.0000278,"sites":4,"fingerprinting":1,"cookies":0.0000139},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/feb-update","prevalence":0.000184,"sites":27,"fingerprinting":2,"cookies":0.000116}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,16 +65,16 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;20596<small>/22056</small>
+                    <strong>Rank:</strong> &#35;3201<small>/24104</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                    <strong>Prevalence:</strong> 0.02&#37; (27 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
-                    <strong>Cookies:</strong> 0.00&#37;
+                    <strong>Cookies:</strong> 0.01&#37;
                 </li>
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
@@ -88,18 +91,22 @@
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
+                    <span>Stylesheet</span>,
                     <span>XHR</span>,
                     <span>Fetch</span>,
-                    <span>Image</span>,
-                    <span>Preflight</span>,
                     <span>WebSocket</span>,
+                    <span>Preflight</span>,
+                    <span>Document</span>,
+                    <span>Image</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/vlaanderen.be.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
+                    <span>widgets</span>, 
                     <span>prod.widgets.burgerprofiel</span>, 
-                    <span>assets</span>, 
                     <span>authenticatie</span>, 
+                    <span>chat1700</span>, 
+                    <span>assets</span>, 
                 </li>
             </ul>
         </div>
@@ -128,7 +135,11 @@
     </div>    
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
         <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
     </ul>
 </div>
@@ -138,10 +149,328 @@
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-polyfill&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-polyfill&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;widget&#x2F;assets&#x2F;js&#x2F;widget_api.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;widget&#x2F;assets&#x2F;js&#x2F;widget_api.min.js</a> (seen on 8 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-client&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-client&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalFooter&#x2F;2.0.0&#x2F;GlobalFooter.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalFooter&#x2F;2.0.0&#x2F;GlobalFooter.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalHeader&#x2F;2.0.0&#x2F;GlobalHeader.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalHeader&#x2F;2.0.0&#x2F;GlobalHeader.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalBarBase&#x2F;2.0.0&#x2F;GlobalBarBase.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalBarBase&#x2F;2.0.0&#x2F;GlobalBarBase.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;jquery&#x2F;1.11.0&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;jquery&#x2F;1.11.0&#x2F;jquery.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.InfolijnTracker&#x2F;1.0.0&#x2F;InfolijnTracker.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.InfolijnTracker&#x2F;1.0.0&#x2F;InfolijnTracker.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.Common.ContactCenter&#x2F;2.0.0&#x2F;ContactCenter.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.Common.ContactCenter&#x2F;2.0.0&#x2F;ContactCenter.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;socket.io&#x2F;2.2.0&#x2F;socket.io.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;socket.io&#x2F;2.2.0&#x2F;socket.io.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalFooter&#x2F;2.0.0&#x2F;GlobalFooterRedesign.css" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalFooter&#x2F;2.0.0&#x2F;GlobalFooterRedesign.css</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalHeader&#x2F;2.0.0&#x2F;GlobalHeader.css" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;FlemishAuthorities.InfolijnWidget.GlobalHeader&#x2F;2.0.0&#x2F;GlobalHeader.css</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-platform-browser&#x2F;dist&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-platform-browser&#x2F;dist&#x2F;index.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;system&#x2F;config" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;system&#x2F;config</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-runtime&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-runtime&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-core&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-core&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-utility&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-utility&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-render-engine&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-render-engine&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue&#x2F;dist&#x2F;vue.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue&#x2F;dist&#x2F;vue.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-dependency-injection&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-dependency-injection&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-event&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-event&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-module&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-module&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-buffer&#x2F;global.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-buffer&#x2F;global.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex&#x2F;dist&#x2F;vuex.common.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex&#x2F;dist&#x2F;vuex.common.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue-async-computed&#x2F;dist&#x2F;vue-async-computed.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue-async-computed&#x2F;dist&#x2F;vue-async-computed.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-process&#x2F;process.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-process&#x2F;process.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;buffer&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;buffer&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;base64-js&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;base64-js&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;ieee754&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;ieee754&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-header&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-header&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-url-external&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-url-external&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-shared-ghgf&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-shared-ghgf&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;css-vars-ponyfill&#x2F;dist&#x2F;css-vars-ponyfill.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;css-vars-ponyfill&#x2F;dist&#x2F;css-vars-ponyfill.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex-persist&#x2F;dist&#x2F;umd&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex-persist&#x2F;dist&#x2F;umd&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;lodash.merge&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;lodash.merge&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;circular-json&#x2F;build&#x2F;circular-json.node.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;circular-json&#x2F;build&#x2F;circular-json.node.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;simple-swizzle&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;simple-swizzle&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;conversions.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;conversions.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;route.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;route.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;node_modules&#x2F;color-name&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;node_modules&#x2F;color-name&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-arrayish&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-arrayish&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-name&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-name&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-citizen-profile&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-citizen-profile&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-contact&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-contact&#x2F;dist&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-contact&#x2F;dist&#x2F;ContactPlugin.umd.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-contact&#x2F;dist&#x2F;ContactPlugin.umd.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;throttle-debounce&#x2F;dist&#x2F;index.cjs.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;throttle-debounce&#x2F;dist&#x2F;index.cjs.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;dayjs&#x2F;dayjs.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;dayjs&#x2F;dayjs.min.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;dayjs&#x2F;locale&#x2F;nl-be.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;dayjs&#x2F;locale&#x2F;nl-be.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;axios.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;axios.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;lib&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;lib&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;utils.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;utils.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;bind.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;bind.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;Axios.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;Axios.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;mergeConfig.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;mergeConfig.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;defaults.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;defaults.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;Cancel.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;Cancel.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;CancelToken.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;CancelToken.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;isCancel.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;isCancel.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;spread.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;spread.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;buildURL.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;buildURL.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;InterceptorManager.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;InterceptorManager.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;dispatchRequest.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;dispatchRequest.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;normalizeHeaderName.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;normalizeHeaderName.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;adapters&#x2F;xhr.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;adapters&#x2F;xhr.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;node_modules&#x2F;is-buffer&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;node_modules&#x2F;is-buffer&#x2F;index.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;transformData.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;transformData.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isAbsoluteURL.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isAbsoluteURL.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;combineURLs.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;combineURLs.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;settle.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;settle.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;parseHeaders.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;parseHeaders.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isURLSameOrigin.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isURLSameOrigin.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;createError.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;createError.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;cookies.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;cookies.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;enhanceError.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;enhanceError.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://authenticatie.vlaanderen.be&#x2F;status" target="_blank" class="external" rel="noreferrer noopener">authenticatie.vlaanderen.be&#x2F;status</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-polyfill&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-polyfill&#x2F;dist&#x2F;index.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-client&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-client&#x2F;dist&#x2F;index.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-footer&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-footer&#x2F;dist&#x2F;index.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;html5shiv&#x2F;3.7.0&#x2F;html5shiv.min.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;modules&#x2F;custom&#x2F;infolijn_widget&#x2F;assets&#x2F;libraries&#x2F;html5shiv&#x2F;3.7.0&#x2F;html5shiv.min.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-zorg.svg" target="_blank" class="external" rel="noreferrer noopener">assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-zorg.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;37de485347434fbdaa70e0c03eb48d01" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;37de485347434fbdaa70e0c03eb48d01</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d619177b83734bf7b5bb596ff7e6c41e" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d619177b83734bf7b5bb596ff7e6c41e</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d619177b83734bf7b5bb596ff7e6c41e&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d619177b83734bf7b5bb596ff7e6c41e&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;37de485347434fbdaa70e0c03eb48d01&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;37de485347434fbdaa70e0c03eb48d01&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;a9e9db18928e437ea30108ed00705182" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;a9e9db18928e437ea30108ed00705182</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;3f1ede1f47ed460198f87223ea1ce2a8" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;3f1ede1f47ed460198f87223ea1ce2a8</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;3f1ede1f47ed460198f87223ea1ce2a8&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;3f1ede1f47ed460198f87223ea1ce2a8&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;a9e9db18928e437ea30108ed00705182&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;a9e9db18928e437ea30108ed00705182&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;dd463de7dd274d4ebaad4beb88e061a6" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;dd463de7dd274d4ebaad4beb88e061a6</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3&#x2F;shared-ga" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3&#x2F;shared-ga</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;d90cd7afb5d3441abf0629930e60c5d3&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;dd463de7dd274d4ebaad4beb88e061a6&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;dd463de7dd274d4ebaad4beb88e061a6&#x2F;content</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;160&#x2F;smart_ssi_bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;160&#x2F;smart_ssi_bootstrap.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;163&#x2F;smart_ssi_bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;163&#x2F;smart_ssi_bootstrap.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chat1700.vlaanderen.be&#x2F;widget&#x2F;web-api&#x2F;cross-domain-channel" target="_blank" class="external" rel="noreferrer noopener">chat1700.vlaanderen.be&#x2F;widget&#x2F;web-api&#x2F;cross-domain-channel</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;3ddd326b-e2f5-4750-8989-33f69abaec8b&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;3ddd326b-e2f5-4750-8989-33f69abaec8b&#x2F;embed</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;f2ef2704-cb81-4387-8478-87d29a9f2bbe&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;f2ef2704-cb81-4387-8478-87d29a9f2bbe&#x2F;embed</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;b2e27239-5742-4421-8b3a-ac52fcd583b2&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;b2e27239-5742-4421-8b3a-ac52fcd583b2&#x2F;embed</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-kansrijk-opgroeien.svg" target="_blank" class="external" rel="noreferrer noopener">assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-kansrijk-opgroeien.svg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;f1bfaffe-0cd4-4bdd-9e46-315cca82b2df&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;f1bfaffe-0cd4-4bdd-9e46-315cca82b2df&#x2F;embed</a> (seen on 2 websites)</p>
@@ -150,223 +479,49 @@
             <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;71d44fdc-cb62-4db8-8eae-d38b55f17535&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;71d44fdc-cb62-4db8-8eae-d38b55f17535&#x2F;embed</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-platform-browser&#x2F;dist&#x2F;index.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-platform-browser&#x2F;dist&#x2F;index.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;acdf05ed-e2e8-4453-ac09-bbebf844db56&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;acdf05ed-e2e8-4453-ac09-bbebf844db56&#x2F;embed</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;system&#x2F;config" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;system&#x2F;config</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;mechelen.svg" target="_blank" class="external" rel="noreferrer noopener">assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;mechelen.svg</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-runtime&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-runtime&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;6b3b6546109447ac8b00b42d8ddf386e" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;6b3b6546109447ac8b00b42d8ddf386e</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-core&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-core&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;1c0f559af3ea468a8300dc63f8365e32" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;1c0f559af3ea468a8300dc63f8365e32</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-utility&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-utility&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;6b3b6546109447ac8b00b42d8ddf386e&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;6b3b6546109447ac8b00b42d8ddf386e&#x2F;content</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-render-engine&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-render-engine&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;1c0f559af3ea468a8300dc63f8365e32&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;1c0f559af3ea468a8300dc63f8365e32&#x2F;content</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue&#x2F;dist&#x2F;vue.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue&#x2F;dist&#x2F;vue.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;42aa09d72705424f9e26eefd634cc042" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;42aa09d72705424f9e26eefd634cc042</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-dependency-injection&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-dependency-injection&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275&#x2F;content</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-event&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-event&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;42aa09d72705424f9e26eefd634cc042&#x2F;content" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;42aa09d72705424f9e26eefd634cc042&#x2F;content</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-module&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-module&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275&#x2F;shared-ga" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;e0ae5fccaf894b3d873999196d150275&#x2F;shared-ga</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-buffer&#x2F;global.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-buffer&#x2F;global.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;7abe54e12b244b23a4926f72c5e784ac&#x2F;smart_ssi_bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;7abe54e12b244b23a4926f72c5e784ac&#x2F;smart_ssi_bootstrap.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex&#x2F;dist&#x2F;vuex.common.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex&#x2F;dist&#x2F;vuex.common.js</a> (seen on 2 websites)</p>
+            <p><a href="http://widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;b5145fc36d8f43dbbde5c8da3127059a&#x2F;smart_ssi_bootstrap.js" target="_blank" class="external" rel="noreferrer noopener">widgets.vlaanderen.be&#x2F;widget&#x2F;live&#x2F;b5145fc36d8f43dbbde5c8da3127059a&#x2F;smart_ssi_bootstrap.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue-async-computed&#x2F;dist&#x2F;vue-async-computed.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vue-async-computed&#x2F;dist&#x2F;vue-async-computed.js</a> (seen on 2 websites)</p>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;21237a25-6e60-48c0-b565-e1ff80f3ab01&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;21237a25-6e60-48c0-b565-e1ff80f3ab01&#x2F;embed</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-process&#x2F;process.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;jspm-nodelibs-process&#x2F;process.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;buffer&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;buffer&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;base64-js&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;base64-js&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;ieee754&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;ieee754&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-header&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-header&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-footer&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-global-footer&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-shared-ghgf&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-shared-ghgf&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-url-external&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-url-external&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;css-vars-ponyfill&#x2F;dist&#x2F;css-vars-ponyfill.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;css-vars-ponyfill&#x2F;dist&#x2F;css-vars-ponyfill.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex-persist&#x2F;dist&#x2F;umd&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;vuex-persist&#x2F;dist&#x2F;umd&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-zorg.svg" target="_blank" class="external" rel="noreferrer noopener">assets.vlaanderen.be&#x2F;image&#x2F;upload&#x2F;widgets&#x2F;vlaanderen-is-zorg.svg</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;lodash.merge&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;lodash.merge&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;circular-json&#x2F;build&#x2F;circular-json.node.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;circular-json&#x2F;build&#x2F;circular-json.node.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;simple-swizzle&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;simple-swizzle&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;conversions.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;conversions.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;route.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-convert&#x2F;route.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;node_modules&#x2F;color-name&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-string&#x2F;node_modules&#x2F;color-name&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-name&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;color-name&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-arrayish&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;is-arrayish&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-citizen-profile&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-citizen-profile&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-contact&#x2F;dist&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-ext-contact&#x2F;dist&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-contact&#x2F;dist&#x2F;ContactPlugin.umd.min.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;@govflanders&#x2F;vl-widget-plugin-contact&#x2F;dist&#x2F;ContactPlugin.umd.min.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;throttle-debounce&#x2F;dist&#x2F;index.cjs.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;throttle-debounce&#x2F;dist&#x2F;index.cjs.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;axios.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;axios.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;lib&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;async-lock&#x2F;lib&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;utils.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;utils.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;bind.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;bind.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;Axios.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;Axios.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;mergeConfig.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;mergeConfig.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;defaults.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;defaults.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;Cancel.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;Cancel.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;CancelToken.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;CancelToken.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;isCancel.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;cancel&#x2F;isCancel.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;spread.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;spread.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;buildURL.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;buildURL.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;InterceptorManager.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;InterceptorManager.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;dispatchRequest.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;dispatchRequest.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;normalizeHeaderName.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;normalizeHeaderName.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;adapters&#x2F;xhr.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;adapters&#x2F;xhr.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;node_modules&#x2F;is-buffer&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;node_modules&#x2F;is-buffer&#x2F;index.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;settle.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;settle.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;parseHeaders.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;parseHeaders.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isURLSameOrigin.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isURLSameOrigin.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;createError.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;createError.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;cookies.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;cookies.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;transformData.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;transformData.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isAbsoluteURL.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;isAbsoluteURL.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;combineURLs.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;helpers&#x2F;combineURLs.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;enhanceError.js" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;node_modules&#x2F;axios&#x2F;lib&#x2F;core&#x2F;enhanceError.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://authenticatie.vlaanderen.be&#x2F;status" target="_blank" class="external" rel="noreferrer noopener">authenticatie.vlaanderen.be&#x2F;status</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;profile</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;session&#x2F;acquire</a> (seen on 2 websites)</p>
+            <p><a href="http://prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;930f319e-e4cb-49bb-ae74-7f186c81870e&#x2F;embed" target="_blank" class="external" rel="noreferrer noopener">prod.widgets.burgerprofiel.vlaanderen.be&#x2F;api&#x2F;v1&#x2F;widget&#x2F;930f319e-e4cb-49bb-ae74-7f186c81870e&#x2F;embed</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -376,10 +531,88 @@
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='truncate'>
-            <a href="http://laatjevaccineren.be" target="_blank" class="external">laatjevaccineren.be</a>
+            <a href="http://onroerenderfgoed.be" target="_blank" class="external">onroerenderfgoed.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://inventaris.onroerenderfgoed.be" target="_blank" class="external">inventaris.onroerenderfgoed.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.adopteereendier.be" target="_blank" class="external">www.adopteereendier.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.desocialekaart.be" target="_blank" class="external">www.desocialekaart.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.energiesparen.be" target="_blank" class="external">www.energiesparen.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sport.vlaanderen" target="_blank" class="external">www.sport.vlaanderen</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.verkeerscentrum.be" target="_blank" class="external">www.verkeerscentrum.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vlaio.be" target="_blank" class="external">www.vlaio.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://stad.gent" target="_blank" class="external">stad.gent</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.geopunt.be" target="_blank" class="external">www.geopunt.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hasselt.be" target="_blank" class="external">www.hasselt.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kindengezin.be" target="_blank" class="external">www.kindengezin.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kortrijk.be" target="_blank" class="external">www.kortrijk.be</a>
         </li>
         <li class='truncate'>
             <a href="http://www.laatjevaccineren.be" target="_blank" class="external">www.laatjevaccineren.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mechelen.be" target="_blank" class="external">www.mechelen.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.zorg-en-gezondheid.be" target="_blank" class="external">www.zorg-en-gezondheid.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://adopteereendier.be" target="_blank" class="external">adopteereendier.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://desocialekaart.be" target="_blank" class="external">desocialekaart.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://energiesparen.be" target="_blank" class="external">energiesparen.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://geopunt.be" target="_blank" class="external">geopunt.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hasselt.be" target="_blank" class="external">hasselt.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kindengezin.be" target="_blank" class="external">kindengezin.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://laatjevaccineren.be" target="_blank" class="external">laatjevaccineren.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mechelen.be" target="_blank" class="external">mechelen.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sport.vlaanderen" target="_blank" class="external">sport.vlaanderen</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://verkeerscentrum.be" target="_blank" class="external">verkeerscentrum.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://vlaio.be" target="_blank" class="external">vlaio.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://zorg-en-gezondheid.be" target="_blank" class="external">zorg-en-gezondheid.be</a>
         </li>
     </ul>
 </div>

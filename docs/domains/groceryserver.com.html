@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "groceryserver.com",
-        history: [{"date":"2020.03","prevalence":0.0000814,"sites":4,"fingerprinting":0,"cookies":0.0000814},{"date":"2020.04","prevalence":0.0000814,"sites":4,"fingerprinting":0,"cookies":0.0000814},{"date":"2020.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000228,"sites":3,"fingerprinting":1,"cookies":0.0000228},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.00000689,"sites":1,"fingerprinting":2,"cookies":0.00000689},{"date":"jd/july","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2020.03","prevalence":0.0000814,"sites":4,"fingerprinting":0,"cookies":0.0000814},{"date":"2020.04","prevalence":0.0000814,"sites":4,"fingerprinting":0,"cookies":0.0000814},{"date":"2020.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000228,"sites":3,"fingerprinting":1,"cookies":0.0000228},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0.00000689,"sites":1,"fingerprinting":2,"cookies":0.00000689},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/test-crawl","prevalence":0.0000357,"sites":5,"fingerprinting":2,"cookies":0.0000357}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,10 +65,10 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;21480<small>/22056</small>
+                    <strong>Rank:</strong> &#35;8455<small>/22233</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
+                    <strong>Prevalence:</strong> 0.00&#37; (5 sites)
                 </li>
                 <li class='py-1'>
                     <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
@@ -88,11 +91,16 @@
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/groceryserver.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
-                    <span>marthastewart</span>, 
+                    <span>sdu</span>, 
+                    <span>images</span>, 
                 </li>
             </ul>
         </div>
@@ -111,13 +119,84 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://marthastewart.groceryserver.com&#x2F;groceryserver&#x2F;&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKTwpzCs8OdHsKawpYtFR44JsOPcTMuw7twwqFVZMOiXk01SBswTnhjX8O-wrgoWMKVasOBChguwo7CnQzCoDzCr8Olw43DpU-CtcOsQcKVAsKzMcKow5bCoX3DicO7LWNQwp3DsifCsXTDlcOYwqZNwrdhwprCrsKqwoLChMOFVsKjwrLDrMKKwpDDi8OEfA~~" target="_blank" class="external" rel="noreferrer noopener">marthastewart.groceryserver.com&#x2F;groceryserver&#x2F;&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKTwpzCs8OdHsKawpYtFR44JsOPcTMuw7twwqFVZMOiXk01SBswTnhjX8O-wrgoWMKVasOBChguwo7CnQzCoDzCr8Olw43DpU-CtcOsQcKVAsKzMcKow5bCoX3DicO7LWNQwp3DsifCsXTDlcOYwqZNwrdhwprCrsKqwoLChMOFVsKjwrLDrMKKwpDDi8OEfA~~</a> (seen on 2 websites)</p>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;api&#x2F;inject.jsp" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;api&#x2F;inject.jsp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;index.jsp" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;index.jsp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;css&#x2F;bootstrap.min.css" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;css&#x2F;bootstrap.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;js&#x2F;jquery-3.2.1.min.js" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;js&#x2F;jquery-3.2.1.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;js&#x2F;bootstrap.min.js" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;bootstrap&#x2F;js&#x2F;bootstrap.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;gallery-scripts.jsp" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;gallery-scripts.jsp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;gallery.css" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;gallery.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKTwpzCs8OdHsKawpYtFR44JsOPcTMuw7twwqFVZMOtXUEnWQErej5wcMO5wrkjA8K-YsKHC0Bpw7-CmkDCpmnCq8OmwpnCtRzCtMK8EcOBVcK2ZcO9w53CrnzCnsO7LWELwp-CoCnCrCTCk8O6wqRMw6ptwpnCnMOhw5fDhsKXC8OiwqzDs8KLwpDDgsOeMsOUw5PCu3nCtMKvw6XCqMOjEw~~" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKTwpzCs8OdHsKawpYtFR44JsOPcTMuw7twwqFVZMOtXUEnWQErej5wcMO5wrkjA8K-YsKHC0Bpw7-CmkDCpmnCq8OmwpnCtRzCtMK8EcOBVcK2ZcO9w53CrnzCnsO7LWELwp-CoCnCrCTCk8O6wqRMw6ptwpnCnMOhw5fDhsKXC8OiwqzDs8KLwpDDgsOeMsOUw5PCu3nCtMKvw6XCqMOjEw~~</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;images&#x2F;loading.gif" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;images&#x2F;loading.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKcwpvCscOVBMKAwpwxTAU_MMKULCBswr9wwrABIMKBUkI9WRwraTMvVsKiw6xwHsK-aMObXRx_w5DDiF3Cp2XCrMOjwp7CtUjCsMK3FMOACsKybsKvwobDvirChMO-eiRhw43CtnHDt3HDgMOrwo5GwqZlwp3CtMOqw53ClsOeCMO_w7DCtsKBw4XCtMKDdcKowoTDuinDs8OywrDDqcKTC8KyNMKmwrfDlMOZL3bDjnbDncOuw6vCmwYMHSPCi23CucO_Bl9OQ8OnF1hlIwrCqsOocW-DjQ~~" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKcwpvCscOVBMKAwpwxTAU_MMKULCBswr9wwrABIMKBUkI9WRwraTMvVsKiw6xwHsK-aMObXRx_w5DDiF3Cp2XCrMOjwp7CtUjCsMK3FMOACsKybsKvwobDvirChMO-eiRhw43CtnHDt3HDgMOrwo5GwqZlwp3CtMOqw53ClsOeCMO_w7DCtsKBw4XCtMKDdcKowoTDuinDs8OywrDDqcKTC8KyNMKmwrfDlMOZL3bDjnbDncOuw6vCmwYMHSPCi23CucO_Bl9OQ8OnF1hlIwrCqsOocW-DjQ~~</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKMwpbCscOOCcKbwoomSBo0NsOecTd6wrgrw6lGIcKeHk04VRcxVB5kHMOzw6l3GsOubcKIWx0vw5XCmFnDsTnCosOmwpjDoxnCs8K_G8KVUcK5ZcKgw5PDuynDjsK3eDVHw7jCsH-Ds3LDkcOwwq1HwrZCwobCr8OWw5bDlcKAG8O5w5fCp8OJw5PCgMOELcKKwo7DvTzCoMOlwobDvsKgHMKgKcKRwqHDkcKWMXfDmyjDj8Oow73DgFZcRVXDgmXCvcO9f2sIaMK8QQU-f1nDssOqW1TDvcKQAC4ewoHCuRcXwrbDl3LDnUNQwrfDsh7DrzQIwrBywoZkVsKvwonCncOSDwpZSsOPYhnCtwVZw7zDuQoDUX1qLWjCiCHDmMO_fAIuL8OjOUvDqMOZasOzwpFGF8OGWcKoH8KVw5PCgMOYEmdLCMKpwoR4wrkmwovCozs-wrZQw6zDkHQAw7VNwpPDmSDCslJOTMO-bcODw5RXU8Khw7MIwozCol3CosKHUMKNTcKnw5rDrsKAXkFAwoo9ZXUlwrTCmi9tTsKKPyHDncK4woDDtcOJeMOZf8OPwqXCocKLw5M~" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;service&#x2F;w5fDoHvClcOaw4PDmSrDksKWTQpiwrFqVsKMwpbCscOOCcKbwoomSBo0NsOecTd6wrgrw6lGIcKeHk04VRcxVB5kHMOzw6l3GsOubcKIWx0vw5XCmFnDsTnCosOmwpjDoxnCs8K_G8KVUcK5ZcKgw5PDuynDjsK3eDVHw7jCsH-Ds3LDkcOwwq1HwrZCwobCr8OWw5bDlcKAG8O5w5fCp8OJw5PCgMOELcKKwo7DvTzCoMOlwobDvsKgHMKgKcKRwqHDkcKWMXfDmyjDj8Oow73DgFZcRVXDgmXCvcO9f2sIaMK8QQU-f1nDssOqW1TDvcKQAC4ewoHCuRcXwrbDl3LDnUNQwrfDsh7DrzQIwrBywoZkVsKvwonCncOSDwpZSsOPYhnCtwVZw7zDuQoDUX1qLWjCiCHDmMO_fAIuL8OjOUvDqMOZasOzwpFGF8OGWcKoH8KVw5PCgMOYEmdLCMKpwoR4wrkmwovCozs-wrZQw6zDkHQAw7VNwpPDmSDCslJOTMO-bcODw5RXU8Khw7MIwozCol3CosKHUMKNTcKnw5rDrsKAXkFAwoo9ZXUlwrTCmi9tTsKKPyHDncK4woDDtcOJeMOZf8OPwqXCocKLw5M~</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_CodFillets&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782144&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_CodFillets.jpg.d.jpg" target="_blank" class="external" rel="noreferrer noopener">images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_CodFillets&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782144&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_CodFillets.jpg.d.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_Asparagus&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782145&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_Asparagus.jpg.d.jpg" target="_blank" class="external" rel="noreferrer noopener">images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_Asparagus&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782145&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_Asparagus.jpg.d.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_Strawberries&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782146&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_Strawberries.jpg.d.jpg" target="_blank" class="external" rel="noreferrer noopener">images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_Strawberries&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782146&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_Strawberries.jpg.d.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_CalifaFarms&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782147&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_CalifaFarms.jpg.d.jpg" target="_blank" class="external" rel="noreferrer noopener">images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_CalifaFarms&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782147&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_CalifaFarms.jpg.d.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_ChickenThighs&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782148&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_ChickenThighs.jpg.d.jpg" target="_blank" class="external" rel="noreferrer noopener">images.groceryserver.com&#x2F;groceryserver&#x2F;haxor&#x2F;log&#x2F;clientId&#x2F;e4162cf532cf62d8635c2187b9296cfe&#x2F;zipCode&#x2F;45224&#x2F;upcValue&#x2F;BIU_NAT_WFM_ChickenThighs&#x2F;entityType&#x2F;promotion&#x2F;entityId&#x2F;62782148&#x2F;usage&#x2F;getPromotionsForSearchTerms&#x2F;promotion&#x2F;200x200&#x2F;376&#x2F;BIU_NAT_WFM_ChickenThighs.jpg.d.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;Helvetica.woff" target="_blank" class="external" rel="noreferrer noopener">sdu.groceryserver.com&#x2F;groceryserver&#x2F;whole-foods-2020-edu-300x250&#x2F;css&#x2F;Helvetica.woff</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -127,10 +206,10 @@
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='truncate'>
-            <a href="http://marthastewart.com" target="_blank" class="external">marthastewart.com</a>
+            <a href="http://hellogiggles.com" target="_blank" class="external">hellogiggles.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.marthastewart.com" target="_blank" class="external">www.marthastewart.com</a>
+            <a href="http://www.southernliving.com" target="_blank" class="external">www.southernliving.com</a>
         </li>
     </ul>
 </div>

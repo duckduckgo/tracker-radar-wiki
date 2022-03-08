@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - ticketswap.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ticketswap.com",
+        history: [{"date":"jd/test-crawl","prevalence":0.0000286,"sites":4,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/ticketswap.com.ico' width="32" height="32" class='inline-block' /> ticketswap.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10967<small>/22233</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Preflight</span>,
+                    <span>Image</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ticketswap.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cdn</span>, 
+                    <span>api</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-RegularWeb.woff2" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-RegularWeb.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-RegularItWeb.woff2" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-RegularItWeb.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-SemiboldWeb.woff2" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-SemiboldWeb.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-BoldWeb.woff2" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;static&#x2F;fonts&#x2F;ProximaNova-BoldWeb.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-560765ab0625ba27.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-560765ab0625ba27.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-48f4d2d39709fade.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-48f4d2d39709fade.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6a1dcd3e-1439091d5ac4f700.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6a1dcd3e-1439091d5ac4f700.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;d2343588-dd15545ca9e74916.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;d2343588-dd15545ca9e74916.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;cb0c4ce7-c071657682acf9a3.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;cb0c4ce7-c071657682acf9a3.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;07eab1bf-65c6b68079840484.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;07eab1bf-65c6b68079840484.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;824-fac75fcd81a70913.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;824-fac75fcd81a70913.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5051-d8021400064d5739.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5051-d8021400064d5739.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6710-550e5827b8bebaca.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6710-550e5827b8bebaca.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8123-0770f34c1a87052f.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8123-0770f34c1a87052f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;647-aa8b30028f31a163.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;647-aa8b30028f31a163.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3648-750cd088de3078db.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3648-750cd088de3078db.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7206-335962581b16a512.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7206-335962581b16a512.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4417-87f34de35103e88a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4417-87f34de35103e88a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4231-347f4f1385686d9d.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4231-347f4f1385686d9d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1908-33b761dd320cdf0d.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1908-33b761dd320cdf0d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3877-e77b5c36dd84cfa5.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3877-e77b5c36dd84cfa5.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;990-3013b3b6f61f2f90.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;990-3013b3b6f61f2f90.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;682-9f89d3462a09b7a8.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;682-9f89d3462a09b7a8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4504-172776de72a6bdad.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4504-172776de72a6bdad.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3706-1c5fe8e71dca5784.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3706-1c5fe8e71dca5784.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9136-3c2f9b307ea805d7.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9136-3c2f9b307ea805d7.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8673-8f8d5195b3a9f522.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8673-8f8d5195b3a9f522.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7453-0cbf36eaa2f19f7d.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7453-0cbf36eaa2f19f7d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9545-c87544fab5df87f9.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9545-c87544fab5df87f9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1023-7f35e4a673e8197a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1023-7f35e4a673e8197a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;373-8fe3ac9f3ab9d17f.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;373-8fe3ac9f3ab9d17f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6715-e48ebf95fe6113ea.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6715-e48ebf95fe6113ea.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6729-a66a4032a1cac0ff.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6729-a66a4032a1cac0ff.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4796.31285ae91253a044.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4796.31285ae91253a044.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;234.ad153ef495f97da7.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;234.ad153ef495f97da7.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4962-66f32155fd4d22cc.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4962-66f32155fd4d22cc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4834.4e3f7bb8cae2eab8.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4834.4e3f7bb8cae2eab8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8944.a588f397736c19ed.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8944.a588f397736c19ed.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.ticketswap.com&#x2F;graphql&#x2F;public&#x2F;batch" target="_blank" class="external" rel="noreferrer noopener">api.ticketswap.com&#x2F;graphql&#x2F;public&#x2F;batch</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.ticketswap.com&#x2F;graphql&#x2F;public&#x2F;batch" target="_blank" class="external" rel="noreferrer noopener">api.ticketswap.com&#x2F;graphql&#x2F;public&#x2F;batch</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-bc54df0913bd02aa.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-bc54df0913bd02aa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-b65109d9c8df2857.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-b65109d9c8df2857.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7839-3b672fe1470fe399.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7839-3b672fe1470fe399.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7026-3c983232d0704f12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7026-3c983232d0704f12.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2934-0ee4618a5f6b0194.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2934-0ee4618a5f6b0194.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9083-7ad00b56999c7234.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9083-7ad00b56999c7234.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1314-f9d8fdec825db7fc.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1314-f9d8fdec825db7fc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-2c173c080f1b4490.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-2c173c080f1b4490.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_middlewareManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;80c42fb0a95e9b60adb556cede86505503533840&#x2F;_middlewareManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9228.e9830139307b7032.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9228.e9830139307b7032.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;568.0f831a10b8b29181.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;568.0f831a10b8b29181.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1166.9149acff745306b1.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1166.9149acff745306b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3721.00d95d48034b0291.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3721.00d95d48034b0291.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2479.4b50561d2557e1f5.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2479.4b50561d2557e1f5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;377.0c02cca4287527e0.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;377.0c02cca4287527e0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8558.257343178b25614e.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8558.257343178b25614e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;public&#x2F;202105&#x2F;142af903-9d58-4f3e-94b3-fc48cdcd7796.03f893b7cdd37b64a6e6d972f4c2699fd84c4654.png" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;public&#x2F;202105&#x2F;142af903-9d58-4f3e-94b3-fc48cdcd7796.03f893b7cdd37b64a6e6d972f4c2699fd84c4654.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-3d630c6483a524ac.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-3d630c6483a524ac.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-cd46a1d98e300a44.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-cd46a1d98e300a44.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7839-2cf60f5d45e31081.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7839-2cf60f5d45e31081.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2934-7d8cd2ef6577ebfa.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2934-7d8cd2ef6577ebfa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9083-230a5bfc2dab0b6f.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9083-230a5bfc2dab0b6f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1314-819618d03489e12f.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1314-819618d03489e12f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_middlewareManifest.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;329abd4e57108bd58f69baca62782949550e3b9a&#x2F;_middlewareManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8558.0f10ecdd459a0db0.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8558.0f10ecdd459a0db0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5901-fe68020e3a41be73.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5901-fe68020e3a41be73.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6158-6e42eb842ef4b41b.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6158-6e42eb842ef4b41b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7272-5c1f3c3d6a9e1dfa.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7272-5c1f3c3d6a9e1dfa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;event&#x2F;%5BeventSlug%5D&#x2F;%5BeventIdOrEventTypeSlug%5D&#x2F;info-5122a773913eedf0.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;event&#x2F;%5BeventSlug%5D&#x2F;%5BeventIdOrEventTypeSlug%5D&#x2F;info-5122a773913eedf0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7452.9cb9640e160b9b36.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7452.9cb9640e160b9b36.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8114-bea1d134d4485c47.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8114-bea1d134d4485c47.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8835-a9f29a33b3ce776b.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8835-a9f29a33b3ce776b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8637-c59bc711a88539ec.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8637-c59bc711a88539ec.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4962-66f32155fd4d22cc.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4962-66f32155fd4d22cc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2127-598de09b8f8e4682.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2127-598de09b8f8e4682.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;location&#x2F;%5Bslug%5D&#x2F;%5Bid%5D-2572addc1728bd53.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;location&#x2F;%5Bslug%5D&#x2F;%5Bid%5D-2572addc1728bd53.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8114-bea1d134d4485c47.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8114-bea1d134d4485c47.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8835-a9f29a33b3ce776b.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8835-a9f29a33b3ce776b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8637-c59bc711a88539ec.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8637-c59bc711a88539ec.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2127-598de09b8f8e4682.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2127-598de09b8f8e4682.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;location&#x2F;%5Bslug%5D&#x2F;%5Bid%5D-2572addc1728bd53.js" target="_blank" class="external" rel="noreferrer noopener">cdn.ticketswap.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;location&#x2F;%5Bslug%5D&#x2F;%5Bid%5D-2572addc1728bd53.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://ticketswap.nl" target="_blank" class="external">ticketswap.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ticketswap.uk" target="_blank" class="external">www.ticketswap.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ticketswap.nl" target="_blank" class="external">www.ticketswap.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ticketswap.uk" target="_blank" class="external">ticketswap.uk</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - reshuege.ru</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "reshuege.ru",
+        history: [{"date":"jd/test-crawl","prevalence":0.0000715,"sites":10,"fingerprinting":2,"cookies":0.0000572}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/reshuege.ru.ico' width="32" height="32" class='inline-block' /> reshuege.ru</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;5446<small>/22233</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.01&#37; (10 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.01&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/reshuege.ru.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>inf</span>, 
+                    <span>rus</span>, 
+                    <span>soc</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;get_file" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;get_file</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;_ajax.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;_ajax.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;jquery.min.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;auto.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;auto.svg</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;css&#x2F;main.ff745af5.chunk.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;css&#x2F;main.ff745af5.chunk.css</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;js&#x2F;2.c9b913d8.chunk.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;js&#x2F;2.c9b913d8.chunk.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;js&#x2F;main.b7e20236.chunk.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;js&#x2F;main.b7e20236.chunk.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;websiteLogo.25a5978e.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;websiteLogo.25a5978e.svg</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;wallpaper.5c1252e5.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;wallpaper.5c1252e5.svg</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;newapi&#x2F;general" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;newapi&#x2F;general</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;arrows.d3ac0028.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;arrows.d3ac0028.svg</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;button-store.6b5bced0.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;button-store.6b5bced0.svg</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;tick_blue.b5cb196f.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;static&#x2F;media&#x2F;tick_blue.b5cb196f.svg</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;jquery.svg.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;jquery.svg.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;paint.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;paint.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;style.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;css&#x2F;sh_hi.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;css&#x2F;sh_hi.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;mq&#x2F;mathquill.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;mq&#x2F;mathquill.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;videojs&#x2F;video-js.min.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;videojs&#x2F;video-js.min.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;mq&#x2F;mathquill.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;mq&#x2F;mathquill.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;css&#x2F;paint.css" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;css&#x2F;paint.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;style.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;style.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;texpaste.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;texpaste.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;login_popup.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;login_popup.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;headers&#x2F;logo.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;headers&#x2F;logo.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;js&#x2F;notifications.js" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;js&#x2F;notifications.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;left.png" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;left.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;right.png" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;right.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;briefcase--plus.png" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;briefcase--plus.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;timepicker&#x2F;jquery.ui.timepicker.css" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;timepicker&#x2F;jquery.ui.timepicker.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;css&#x2F;mp3-player-button.css" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;css&#x2F;mp3-player-button.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;jquery-ui.min.css" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;jquery-ui.min.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;jquery.tools.min.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;jquery.tools.min.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;jquery-ui.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;jquery-ui.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;timepicker&#x2F;jquery.ui.timepicker.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;timepicker&#x2F;jquery.ui.timepicker.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;jquery-migrate-1.0.0.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;jquery-migrate-1.0.0.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;script&#x2F;soundmanager2-nodebug-jsmin.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;script&#x2F;soundmanager2-nodebug-jsmin.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;ajax_editor.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;ajax_editor.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;expandable.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;expandable.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;hilight.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;hilight.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;script&#x2F;mp3-player-button.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;soundmanager&#x2F;script&#x2F;mp3-player-button.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;init.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;init.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;razbor.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;razbor.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;autoresize-mod.jquery.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;autoresize-mod.jquery.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;js&#x2F;dark.js" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;js&#x2F;dark.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://reshuege.ru&#x2F;img&#x2F;fon.svg" target="_blank" class="external" rel="noreferrer noopener">reshuege.ru&#x2F;img&#x2F;fon.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;square.svg" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;square.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;img&#x2F;lifebuoy_24.png" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;img&#x2F;lifebuoy_24.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://inf.reshuege.ru&#x2F;problem" target="_blank" class="external" rel="noreferrer noopener">inf.reshuege.ru&#x2F;problem</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://sdamgia.ru" target="_blank" class="external">sdamgia.ru</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://inf-ege.sdamgia.ru" target="_blank" class="external">inf-ege.sdamgia.ru</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rus-ege.sdamgia.ru" target="_blank" class="external">rus-ege.sdamgia.ru</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://soc-ege.sdamgia.ru" target="_blank" class="external">soc-ege.sdamgia.ru</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ege.sdamgia.ru" target="_blank" class="external">ege.sdamgia.ru</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://oge.sdamgia.ru" target="_blank" class="external">oge.sdamgia.ru</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

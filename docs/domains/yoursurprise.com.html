@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - yoursurprise.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "yoursurprise.com",
+        history: [{"date":"2022.02","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000136},{"date":"jd/march-update","prevalence":0.0000205,"sites":3,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/yoursurprise.com.ico' width="32" height="32" class='inline-block' /> yoursurprise.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;14210<small>/25630</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/yoursurprise.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>assets</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;6464.1d67771a.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;6464.1d67771a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;error-logger.30e81275.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;error-logger.30e81275.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;algolia-global-search.7b778b81.css" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;algolia-global-search.7b778b81.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;yoursurprise.f01cebaf.css" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;yoursurprise.f01cebaf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;9707.799d9ea0.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;9707.799d9ea0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;ready.76e3183e.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;ready.76e3183e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;template&#x2F;logo-ysp-2020.svg" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;template&#x2F;logo-ysp-2020.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Netherlands.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Netherlands.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;museo-sans-500.ea92ccf8.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;museo-sans-500.ea92ccf8.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;ysp-icons.f3cb6c8a.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;ysp-icons.f3cb6c8a.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;museo-sans-700.d916c5aa.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;museo-sans-700.d916c5aa.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;2249.bdca0503.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;2249.bdca0503.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;2638.7d53537b.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;2638.7d53537b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;833.03be2e33.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;833.03be2e33.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;373.b6a6222e.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;373.b6a6222e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;2052.94a10fd1.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;2052.94a10fd1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;285.d1a3efd0.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;285.d1a3efd0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;3450.717db2fd.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;3450.717db2fd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;8788.d698956c.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;8788.d698956c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;header.e2046f31.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;header.e2046f31.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;garamond-semibold.50cccc4f.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;fonts&#x2F;garamond-semibold.50cccc4f.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Australia.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Australia.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Belgium.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Belgium.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Brazil.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Brazil.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Canada.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Canada.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Czechia.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Czechia.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Denmark.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Denmark.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Germany.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Germany.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Spain.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Spain.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;EU.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;EU.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;France.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;France.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Iceland.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Iceland.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Ireland.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Ireland.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Italy.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Italy.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Luxembourg.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Luxembourg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Hungary.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Hungary.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Norway.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Norway.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Austria.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Austria.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Poland.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Poland.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Portugal.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Portugal.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Romania.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Romania.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Singapore.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Singapore.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Slovenia.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Slovenia.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Slovakia.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Slovakia.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Finland.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Finland.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Sweden.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Sweden.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Switzerland.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;Switzerland.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;United_Kingdom.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;United_Kingdom.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;United_States.png" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;images&#x2F;vlaggen&#x2F;United_States.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;runtime.62d5fd81.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;runtime.62d5fd81.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;2417.36566298.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;2417.36566298.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;9755.73e2ab97.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;9755.73e2ab97.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;1373.ef3d3d47.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;1373.ef3d3d47.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;5221.79fabf84.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;5221.79fabf84.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;app.18a27a66.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;app.18a27a66.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;8726.d2bdb35a.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;8726.d2bdb35a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;3326.6321a4cf.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;3326.6321a4cf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;gift-help.cb81a397.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;gift-help.cb81a397.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;ShippingService.0cb2bbe1.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;ShippingService.0cb2bbe1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;3587.a36fb7a1.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;3587.a36fb7a1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;mysurprise.6f36b0e9.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;mysurprise.6f36b0e9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;email-subscriptions.a0cb7895.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;email-subscriptions.a0cb7895.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;87.d0ae97d1.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;87.d0ae97d1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;5579.70144698.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;5579.70144698.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;AnalyticsService.669c27e1.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;AnalyticsService.669c27e1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;3535.f199f784.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;3535.f199f784.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;Attribution.219fed4f.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;Attribution.219fed4f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;3534.5381b1e7.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;3534.5381b1e7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;2970.fe271786.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;2970.fe271786.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;9938.784ec404.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;9938.784ec404.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;9007.8392c4e3.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;9007.8392c4e3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;6747.90094b10.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;6747.90094b10.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.yoursurprise.com&#x2F;build&#x2F;algolia-global-search.dbd75303.js" target="_blank" class="external" rel="noreferrer noopener">assets.yoursurprise.com&#x2F;build&#x2F;algolia-global-search.dbd75303.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://yoursurprise.nl" target="_blank" class="external">yoursurprise.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.yoursurprise.nl" target="_blank" class="external">www.yoursurprise.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

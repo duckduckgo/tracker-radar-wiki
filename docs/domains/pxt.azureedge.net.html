@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - pxt.azureedge.net</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "pxt.azureedge.net",
+        history: [{"date":"jd/march-update","prevalence":0.0000205,"sites":3,"fingerprinting":3,"cookies":0.0000205}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/pxt.azureedge.net.ico' width="32" height="32" class='inline-block' /> pxt.azureedge.net</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/Microsoft Corporation.html">Microsoft Corporation</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <a href="https:&#x2F;&#x2F;privacy.microsoft.com&#x2F;en-us&#x2F;privacystatement" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;privacy.microsoft.com&#x2F;en-us&#x2F;privacystatement</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;13843<small>/25630</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> <a href="../categories/CDN.html">CDN</a>, 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/pxt.azureedge.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.storage</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>CanvasRenderingContext2D.prototype.measureText</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;0a20f1d61ca7707599bf3728f8a3f152b5669ca3&#x2F;semantic.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;0a20f1d61ca7707599bf3728f8a3f152b5669ca3&#x2F;semantic.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;44643d27b618d90eb8163ef8e12fbe4e3bb13342&#x2F;pxtweb.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;44643d27b618d90eb8163ef8e12fbe4e3bb13342&#x2F;pxtweb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;45c80f0220dcbf953920d9d45f104affbe293740&#x2F;pxtapp.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;45c80f0220dcbf953920d9d45f104affbe293740&#x2F;pxtapp.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;096c2dc0a2231282f8d66077bcd12f66ac8307ad&#x2F;target.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;096c2dc0a2231282f8d66077bcd12f66ac8307ad&#x2F;target.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;23cb21b25dbf25cda4da364f510130ca54ac455a&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;23cb21b25dbf25cda4da364f510130ca54ac455a&#x2F;main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;fcd246bcb6783e19634a75a2572a2481f37e90cd&#x2F;ai.0.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;fcd246bcb6783e19634a75a2572a2481f37e90cd&#x2F;ai.0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;8709e132c845ed85159031394e6ecdc5b3bb676e&#x2F;blockly.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;8709e132c845ed85159031394e6ecdc5b3bb676e&#x2F;blockly.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;editor.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;editor.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;d6139e3d0af51f02aa5f8765ecb0985acbd98551&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;d6139e3d0af51f02aa5f8765ecb0985acbd98551&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;106597ae039a275897661651b96856220c9b0fad&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D-square.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;106597ae039a275897661651b96856220c9b0fad&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D-square.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;d955ce94fc3f7d2c6573300c71a56dc1d92c9bf0&#x2F;static&#x2F;logo.portrait.white.svg" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;d955ce94fc3f7d2c6573300c71a56dc1d92c9bf0&#x2F;static&#x2F;logo.portrait.white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;bcb1532c7703c7263d44e9b058589852a1c21df7&#x2F;pxtblockly.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;bcb1532c7703c7263d44e9b058589852a1c21df7&#x2F;pxtblockly.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;fieldeditors.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;fieldeditors.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;api&#x2F;config&#x2F;microbit&#x2F;targetconfig&#x2F;v4.0.18" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;api&#x2F;config&#x2F;microbit&#x2F;targetconfig&#x2F;v4.0.18</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;f0b821806e3e1b14aac4649ccbeed1a78c34875f&#x2F;semantic.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;f0b821806e3e1b14aac4649ccbeed1a78c34875f&#x2F;semantic.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;23cb21b25dbf25cda4da364f510130ca54ac455a&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;23cb21b25dbf25cda4da364f510130ca54ac455a&#x2F;main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;45c80f0220dcbf953920d9d45f104affbe293740&#x2F;pxtapp.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;45c80f0220dcbf953920d9d45f104affbe293740&#x2F;pxtapp.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;71949e82f5613d01d025ac2316bd47f2dfd33a43&#x2F;typescript.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;71949e82f5613d01d025ac2316bd47f2dfd33a43&#x2F;typescript.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;555c1dc1d9da18154cb48388d5e494f3f16119f8&#x2F;marked&#x2F;marked.min.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;555c1dc1d9da18154cb48388d5e494f3f16119f8&#x2F;marked&#x2F;marked.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;1cbbd44d2be928820a5f00da52d73269abf22aab&#x2F;highlight.js&#x2F;highlight.pack.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;1cbbd44d2be928820a5f00da52d73269abf22aab&#x2F;highlight.js&#x2F;highlight.pack.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;a8ee7d572f64e4ec20124271f375e728df752c8d&#x2F;jquery.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;a8ee7d572f64e4ec20124271f375e728df752c8d&#x2F;jquery.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;a115c46d45ae5a675b282c7cdccddca1bf27d3b7&#x2F;pxtlib.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;a115c46d45ae5a675b282c7cdccddca1bf27d3b7&#x2F;pxtlib.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;08d7a3e0a38e10961836b6735f93ea8374e07a1e&#x2F;pxtcompiler.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;08d7a3e0a38e10961836b6735f93ea8374e07a1e&#x2F;pxtcompiler.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;77709300f882b1bf0223d44ad573c82af13a66ec&#x2F;pxtpy.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;77709300f882b1bf0223d44ad573c82af13a66ec&#x2F;pxtpy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;bcb1532c7703c7263d44e9b058589852a1c21df7&#x2F;pxtblockly.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;bcb1532c7703c7263d44e9b058589852a1c21df7&#x2F;pxtblockly.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;4f9f1559b1a5e7fe227931b0b753dbbdeb449094&#x2F;pxtwinrt.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;4f9f1559b1a5e7fe227931b0b753dbbdeb449094&#x2F;pxtwinrt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;3ba0798d4bd6320b42b3d22bf0e3f34198763d69&#x2F;pxteditor.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;3ba0798d4bd6320b42b3d22bf0e3f34198763d69&#x2F;pxteditor.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;4d2d8d7e0317df99b786e40760f31a769b6d0aea&#x2F;pxtsim.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;4d2d8d7e0317df99b786e40760f31a769b6d0aea&#x2F;pxtsim.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;6260c06c62a73fe4dfd445c8a918fe1502430c62&#x2F;pxtembed.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;6260c06c62a73fe4dfd445c8a918fe1502430c62&#x2F;pxtembed.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;d4934cd9f8944c53cb2b5c0e873cdbb91c7cb7f1&#x2F;pxtworker.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;d4934cd9f8944c53cb2b5c0e873cdbb91c7cb7f1&#x2F;pxtworker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;44643d27b618d90eb8163ef8e12fbe4e3bb13342&#x2F;pxtweb.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;44643d27b618d90eb8163ef8e12fbe4e3bb13342&#x2F;pxtweb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;8709e132c845ed85159031394e6ecdc5b3bb676e&#x2F;blockly.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;8709e132c845ed85159031394e6ecdc5b3bb676e&#x2F;blockly.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;0a20f1d61ca7707599bf3728f8a3f152b5669ca3&#x2F;semantic.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;0a20f1d61ca7707599bf3728f8a3f152b5669ca3&#x2F;semantic.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;5bcaaabb249b1d27893a60f197eda91ba0b34c13&#x2F;rtlsemantic.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;5bcaaabb249b1d27893a60f197eda91ba0b34c13&#x2F;rtlsemantic.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;sprites.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;sprites.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;click.mp3" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;click.mp3</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;disconnect.wav" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;disconnect.wav</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;delete.mp3" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;blockly&#x2F;media&#x2F;delete.mp3</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;17e4c591ec47474f1e488f733acd77a1a528378d&#x2F;vs&#x2F;loader.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;17e4c591ec47474f1e488f733acd77a1a528378d&#x2F;vs&#x2F;loader.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;3edf5cb4f608aeb07473c5d7c333400e7e469dc0&#x2F;vs&#x2F;base&#x2F;worker&#x2F;workerMain.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;3edf5cb4f608aeb07473c5d7c333400e7e469dc0&#x2F;vs&#x2F;base&#x2F;worker&#x2F;workerMain.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;c67b89bea8ad93bb58cd7686e001daa07e326c21&#x2F;vs&#x2F;basic-languages&#x2F;bat&#x2F;bat.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;c67b89bea8ad93bb58cd7686e001daa07e326c21&#x2F;vs&#x2F;basic-languages&#x2F;bat&#x2F;bat.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;8743140f1aa68071ddaf925c836b045e1389bde8&#x2F;vs&#x2F;basic-languages&#x2F;cpp&#x2F;cpp.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;8743140f1aa68071ddaf925c836b045e1389bde8&#x2F;vs&#x2F;basic-languages&#x2F;cpp&#x2F;cpp.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;e5e8a27fe42b8bd8079a5e770ed04a840f84832c&#x2F;vs&#x2F;basic-languages&#x2F;python&#x2F;python.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;e5e8a27fe42b8bd8079a5e770ed04a840f84832c&#x2F;vs&#x2F;basic-languages&#x2F;python&#x2F;python.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;e0cd73549d298474237961881b00500dbbad8638&#x2F;vs&#x2F;basic-languages&#x2F;markdown&#x2F;markdown.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;e0cd73549d298474237961881b00500dbbad8638&#x2F;vs&#x2F;basic-languages&#x2F;markdown&#x2F;markdown.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;88b279a451119201c6d16bf4a7ca982d3a2727d8&#x2F;vs&#x2F;editor&#x2F;editor.main.css" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;88b279a451119201c6d16bf4a7ca982d3a2727d8&#x2F;vs&#x2F;editor&#x2F;editor.main.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;4d38796d4c9d7dae8546930fcae73edcbdbb1a52&#x2F;vs&#x2F;editor&#x2F;editor.main.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;4d38796d4c9d7dae8546930fcae73edcbdbb1a52&#x2F;vs&#x2F;editor&#x2F;editor.main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;23ec988172113c78c24a7ed994c4628fb1a9fd32&#x2F;vs&#x2F;editor&#x2F;editor.main.nls.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;23ec988172113c78c24a7ed994c4628fb1a9fd32&#x2F;vs&#x2F;editor&#x2F;editor.main.nls.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;dfbe96a2b954d99771af6b680a09858c683ba123&#x2F;vs&#x2F;language&#x2F;json&#x2F;jsonMode.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;dfbe96a2b954d99771af6b680a09858c683ba123&#x2F;vs&#x2F;language&#x2F;json&#x2F;jsonMode.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;cf418d614a749960a65f0315e723d3dc36765940&#x2F;vs&#x2F;language&#x2F;json&#x2F;jsonWorker.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;cf418d614a749960a65f0315e723d3dc36765940&#x2F;vs&#x2F;language&#x2F;json&#x2F;jsonWorker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;1d99c2ee5b93a196114b16ef01bcf4be000c7ede&#x2F;smoothie&#x2F;smoothie_compressed.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;1d99c2ee5b93a196114b16ef01bcf4be000c7ede&#x2F;smoothie&#x2F;smoothie_compressed.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;dca777a9bb1807a01b123602e1453b5bddba4900&#x2F;images&#x2F;Bars_black.gif" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;dca777a9bb1807a01b123602e1453b5bddba4900&#x2F;images&#x2F;Bars_black.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;15eaf38ac1eee2b2e4810a1ac13e8dbee035e546&#x2F;gifjs&#x2F;gif.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;15eaf38ac1eee2b2e4810a1ac13e8dbee035e546&#x2F;gifjs&#x2F;gif.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;fcd246bcb6783e19634a75a2572a2481f37e90cd&#x2F;ai.0.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;fcd246bcb6783e19634a75a2572a2481f37e90cd&#x2F;ai.0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;096c2dc0a2231282f8d66077bcd12f66ac8307ad&#x2F;target.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;096c2dc0a2231282f8d66077bcd12f66ac8307ad&#x2F;target.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;fieldeditors.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;fieldeditors.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;editor.js" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;commit&#x2F;c59bcf8d94988c509df6c9267bbadf70f42c007b&#x2F;editor.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;d955ce94fc3f7d2c6573300c71a56dc1d92c9bf0&#x2F;static&#x2F;logo.portrait.white.svg" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;d955ce94fc3f7d2c6573300c71a56dc1d92c9bf0&#x2F;static&#x2F;logo.portrait.white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;3403510141da69da71b1fbb1024619a3ba88ac29&#x2F;static&#x2F;logo.square.white.svg" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;3403510141da69da71b1fbb1024619a3ba88ac29&#x2F;static&#x2F;logo.square.white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;642175ae61e6822c948990e15570e590d2e0ecf1&#x2F;static&#x2F;logo.portrait.black.svg" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;642175ae61e6822c948990e15570e590d2e0ecf1&#x2F;static&#x2F;logo.portrait.black.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;4de54063603c8d16531078818a83f7c29a3588fa&#x2F;static&#x2F;icons&#x2F;apple-touch-icon.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;4de54063603c8d16531078818a83f7c29a3588fa&#x2F;static&#x2F;icons&#x2F;apple-touch-icon.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;106597ae039a275897661651b96856220c9b0fad&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D-square.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;106597ae039a275897661651b96856220c9b0fad&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D-square.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;blob&#x2F;d6139e3d0af51f02aa5f8765ecb0985acbd98551&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D.png" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;blob&#x2F;d6139e3d0af51f02aa5f8765ecb0985acbd98551&#x2F;static&#x2F;Microsoft_logo_rgb_W-white_D.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;compile&#x2F;02e34856c566087a1e5f0212e31686199c414ee7c8a2b9c36be7167d71548860.hex" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;compile&#x2F;02e34856c566087a1e5f0212e31686199c414ee7c8a2b9c36be7167d71548860.hex</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;compile&#x2F;447fa4d5b24ea1ca19eab3745af559cd49d5831ea3e3d6750812b3af3de0f2c4.hex" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;compile&#x2F;447fa4d5b24ea1ca19eab3745af559cd49d5831ea3e3d6750812b3af3de0f2c4.hex</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;compile&#x2F;6526a3337377701ca7bf1d9940f76fdccac145405380ee3ecc2c96f6049e34ce.hex" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;compile&#x2F;6526a3337377701ca7bf1d9940f76fdccac145405380ee3ecc2c96f6049e34ce.hex</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://pxt.azureedge.net&#x2F;compile&#x2F;8fc8a1499d69a5d8cc851cf49d16112b3021ab801238204dacf84073acf90e7c.hex" target="_blank" class="external" rel="noreferrer noopener">pxt.azureedge.net&#x2F;compile&#x2F;8fc8a1499d69a5d8cc851cf49d16112b3021ab801238204dacf84073acf90e7c.hex</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://kitronik.co.uk" target="_blank" class="external">kitronik.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://makecode.microbit.org" target="_blank" class="external">makecode.microbit.org</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

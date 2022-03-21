@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - studiosol-a.akamaihd.net</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "studiosol-a.akamaihd.net",
+        history: [{"date":"jd/march-update","prevalence":0.000123,"sites":18,"fingerprinting":2,"cookies":0.000109}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/studiosol-a.akamaihd.net.ico' width="32" height="32" class='inline-block' /> studiosol-a.akamaihd.net</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/Akamai Technologies.html">Akamai Technologies</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <a href="https:&#x2F;&#x2F;www.akamai.com&#x2F;us&#x2F;en&#x2F;privacy-policies&#x2F;" target="_blank" class="external" rel="noreferrer noopener">https:&#x2F;&#x2F;www.akamai.com&#x2F;us&#x2F;en&#x2F;privacy-policies&#x2F;</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;4141<small>/25630</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.01&#37; (18 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.01&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> <a href="../categories/CDN.html">CDN</a>, 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Image</span>,
+                    <span>Fetch</span>,
+                    <span>Media</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/studiosol-a.akamaihd.net.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensans.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensans.woff2</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;prebid.v0df36c14.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;prebid.v0df36c14.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensanslight.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensanslight.woff2</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensansbold.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;opensansbold.woff2</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.ee6d2.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.ee6d2.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery.b598e~9cc1.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery.b598e~9cc1.m-pt.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;opensans&#x2F;OpenSans-Bold.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;opensans&#x2F;OpenSans-Bold.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;opensans&#x2F;OpenSans-Regular.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;opensans&#x2F;OpenSans-Regular.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;headscripts.v8b5fadd6.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;headscripts.v8b5fadd6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;css&#x2F;mobile.v2cbb0f33.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;css&#x2F;mobile.v2cbb0f33.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;img&#x2F;sprite_mobile.ve22a1f96.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;img&#x2F;sprite_mobile.ve22a1f96.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;headscripts.vf96e799a.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;js&#x2F;headscripts.vf96e799a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;font&#x2F;opensans&#x2F;opensans-light.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;font&#x2F;opensans&#x2F;opensans-light.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;css&#x2F;fc55c.desktop.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;css&#x2F;fc55c.desktop.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;3e717.client.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;3e717.client.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;b15d7.ads-manager.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;b15d7.ads-manager.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;b9a00.desktop.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;b9a00.desktop.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;f0479.headerbidding.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;f0479.headerbidding.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;sprite.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;sprite.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;font&#x2F;montserrat-bold.woff" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;font&#x2F;montserrat-bold.woff</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;cifra.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;cifra.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;roboto&#x2F;Roboto-Medium.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;fonts&#x2F;roboto&#x2F;Roboto-Medium.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;sem_conexao.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;sem_conexao.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;sprite.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;sprite.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;pt-br&#x2F;client.3e717.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;pt-br&#x2F;client.3e717.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;lato.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;lato.woff2</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_main.vc113c9j9.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_main.vc113c9j9.svg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.lodash.3e598~bf15.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.lodash.3e598~bf15.m-pt.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base~ui&#x2F;proxy-player.30a1b~15a6.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base~ui&#x2F;proxy-player.30a1b~15a6.m-pt.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.51f55.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.51f55.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;2bc80.client.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;2bc80.client.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;js&#x2F;index.m-pt.v0c83cd83.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;js&#x2F;index.m-pt.v0c83cd83.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.lodash.67f36~3ed2.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.lodash.67f36~3ed2.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.jquery.490d8~ba28.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.jquery.490d8~ba28.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors~ui&#x2F;base.2ef73~1118.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors~ui&#x2F;base.2ef73~1118.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;default~ui&#x2F;base.51064~5c73.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;default~ui&#x2F;base.51064~5c73.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;e&#x2F;e&#x2F;0&#x2F;8&#x2F;ee08830e83ab5c4e938cb2669663178d-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;e&#x2F;e&#x2F;0&#x2F;8&#x2F;ee08830e83ab5c4e938cb2669663178d-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;js&#x2F;index.m-es.v2fb05260.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;js&#x2F;index.m-es.v2fb05260.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.lodash.67f36~3ed2.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.lodash.67f36~3ed2.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.jquery.490d8~ba28.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors&#x2F;npm.jquery.490d8~ba28.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors~ui&#x2F;base.2ef73~1118.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;vendors~ui&#x2F;base.2ef73~1118.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;default~ui&#x2F;base.34af3~f4b0.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;mobile&#x2F;js&#x2F;default~ui&#x2F;base.34af3~f4b0.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;c&#x2F;7&#x2F;9&#x2F;7&#x2F;c7974361a3e99e988d0e72019b2b058f-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;c&#x2F;7&#x2F;9&#x2F;7&#x2F;c7974361a3e99e988d0e72019b2b058f-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;4&#x2F;b&#x2F;7&#x2F;5&#x2F;4b75389fe14b1823e30b0f3de1d3f6d3-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;4&#x2F;b&#x2F;7&#x2F;5&#x2F;4b75389fe14b1823e30b0f3de1d3f6d3-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;assets&#x2F;js&#x2F;lottie-web&#x2F;5.7.5&#x2F;lottie.min.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;assets&#x2F;js&#x2F;lottie-web&#x2F;5.7.5&#x2F;lottie.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;img&#x2F;sprite_share.vc113c9e5.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;mletras&#x2F;static&#x2F;img&#x2F;sprite_share.vc113c9e5.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;assets&#x2F;js&#x2F;lottie.5.4.2.min.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;assets&#x2F;js&#x2F;lottie.5.4.2.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;f93b5.desktop&#x2F;es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;f93b5.desktop&#x2F;es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;es-es&#x2F;client.3e717.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;beta&#x2F;es-es&#x2F;client.3e717.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;7&#x2F;e&#x2F;a&#x2F;a&#x2F;7eaa6fe76909d0e5d537b77b7aedf72e-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;7&#x2F;e&#x2F;a&#x2F;a&#x2F;7eaa6fe76909d0e5d537b77b7aedf72e-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;6&#x2F;5&#x2F;5&#x2F;d655db7add090972656b7b1086c73f79-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;6&#x2F;5&#x2F;5&#x2F;d655db7add090972656b7b1086c73f79-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;6&#x2F;4&#x2F;0&#x2F;9640a9aa5c9fd17dd1a3015756725789-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;6&#x2F;4&#x2F;0&#x2F;9640a9aa5c9fd17dd1a3015756725789-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;3&#x2F;3&#x2F;f&#x2F;a33fbef6b99933fd4c7f4bf75eeee65a-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;3&#x2F;3&#x2F;f&#x2F;a33fbef6b99933fd4c7f4bf75eeee65a-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;e&#x2F;1&#x2F;0&#x2F;d&#x2F;e10de0b95c58ef1bccc6f5c2f5b5d8de-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;e&#x2F;1&#x2F;0&#x2F;d&#x2F;e10de0b95c58ef1bccc6f5c2f5b5d8de-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;b&#x2F;7&#x2F;a&#x2F;bb7ae374cb7c6aefb0c6dea05363c767-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;b&#x2F;7&#x2F;a&#x2F;bb7ae374cb7c6aefb0c6dea05363c767-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;f&#x2F;b&#x2F;b&#x2F;dfbbbc3726c1f711893cd9a6590134b5-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;f&#x2F;b&#x2F;b&#x2F;dfbbbc3726c1f711893cd9a6590134b5-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;7&#x2F;b&#x2F;e&#x2F;c&#x2F;7beca158cd5be5b7238cdb6ddee7d5c6-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;7&#x2F;b&#x2F;e&#x2F;c&#x2F;7beca158cd5be5b7238cdb6ddee7d5c6-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;7&#x2F;b&#x2F;d&#x2F;d7bdb8738aa4d1cdfa9d39dbc75d2b12-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;d&#x2F;7&#x2F;b&#x2F;d&#x2F;d7bdb8738aa4d1cdfa9d39dbc75d2b12-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;5&#x2F;4&#x2F;1&#x2F;6&#x2F;5416d9ee2db3cf86b60997a55820c41a-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;5&#x2F;4&#x2F;1&#x2F;6&#x2F;5416d9ee2db3cf86b60997a55820c41a-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;0&#x2F;9&#x2F;3&#x2F;b&#x2F;093b9f9e35281efb9d86a1e33790947a-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;0&#x2F;9&#x2F;3&#x2F;b&#x2F;093b9f9e35281efb9d86a1e33790947a-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;media&#x2F;mute.wav" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;media&#x2F;mute.wav</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;loading.gif" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;loading.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;icn.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;img&#x2F;desktop&#x2F;&#x2F;icn.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;5e89d.desktopHome.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;5e89d.desktopHome.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;4e686.desktop&#x2F;pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;cc&#x2F;js&#x2F;4e686.desktop&#x2F;pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;5&#x2F;9&#x2F;c&#x2F;b59cb1c9d580311e9890979404b25c27-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;5&#x2F;9&#x2F;c&#x2F;b59cb1c9d580311e9890979404b25c27-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;3&#x2F;e&#x2F;a&#x2F;6&#x2F;3ea64241d993e198eff8bc414d267b52-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;3&#x2F;e&#x2F;a&#x2F;6&#x2F;3ea64241d993e198eff8bc414d267b52-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;3&#x2F;0&#x2F;8&#x2F;3&#x2F;3083b1621a661eee9c2eb4ef9d03daa5-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;3&#x2F;0&#x2F;8&#x2F;3&#x2F;3083b1621a661eee9c2eb4ef9d03daa5-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;2&#x2F;4&#x2F;0&#x2F;4&#x2F;24046e84df78bc5b4ce0777871cbd6c6-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;2&#x2F;4&#x2F;0&#x2F;4&#x2F;24046e84df78bc5b4ce0777871cbd6c6-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;a&#x2F;0&#x2F;6&#x2F;9a06967633e2bc38d84de5962efdd922-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;a&#x2F;0&#x2F;6&#x2F;9a06967633e2bc38d84de5962efdd922-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;f&#x2F;2&#x2F;b&#x2F;af2b3e84979e57aadf45e9cefd68f3cc-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;f&#x2F;2&#x2F;b&#x2F;af2b3e84979e57aadf45e9cefd68f3cc-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;6&#x2F;d&#x2F;6&#x2F;f&#x2F;6d6fa97176b534f832b9befb757f0072-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;6&#x2F;d&#x2F;6&#x2F;f&#x2F;6d6fa97176b534f832b9befb757f0072-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;8&#x2F;2&#x2F;c&#x2F;a82c76712776ad2161190cce65c03486-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;a&#x2F;8&#x2F;2&#x2F;c&#x2F;a82c76712776ad2161190cce65c03486-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;1&#x2F;7&#x2F;4&#x2F;6&#x2F;1746bccfcbdbc61a524d9bdf6b390107-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;1&#x2F;7&#x2F;4&#x2F;6&#x2F;1746bccfcbdbc61a524d9bdf6b390107-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;7&#x2F;4&#x2F;f&#x2F;b74f4687a50896a93bc2b31988472a58-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;b&#x2F;7&#x2F;4&#x2F;f&#x2F;b74f4687a50896a93bc2b31988472a58-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;9&#x2F;2&#x2F;e&#x2F;992e8778d6516d1fc56572c87f7b6d29-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;78x78&#x2F;fotos&#x2F;9&#x2F;9&#x2F;2&#x2F;e&#x2F;992e8778d6516d1fc56572c87f7b6d29-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;c&#x2F;7&#x2F;1&#x2F;a&#x2F;c71acf225581d567ef65d30a647eed8a-tb.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;fotos&#x2F;c&#x2F;7&#x2F;1&#x2F;a&#x2F;c71acf225581d567ef65d30a647eed8a-tb.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;css&#x2F;main.v67b8ad08.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;css&#x2F;main.v67b8ad08.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;js&#x2F;index.m-es.v89d8efff.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;js&#x2F;index.m-es.v89d8efff.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.lodash.7d230~a085.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.lodash.7d230~a085.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery.b598e~9cc1.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery.b598e~9cc1.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery-ui.7f017~50a0.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery-ui.7f017~50a0.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.perfect-scrollbar.7306d~2ce9.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.perfect-scrollbar.7306d~2ce9.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors~ui&#x2F;base.01239~81fc.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors~ui&#x2F;base.01239~81fc.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base~ui&#x2F;proxy-player.e153e~5f53.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base~ui&#x2F;proxy-player.e153e~5f53.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base.a409d~6389.m-es.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base.a409d~6389.m-es.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;es-es&#x2F;client.ee6d2.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;es-es&#x2F;client.ee6d2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;playlists&#x2F;3&#x2F;c&#x2F;0&#x2F;9&#x2F;3c091ab46aec48558d1bf63c96ae9ac8.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;playlists&#x2F;3&#x2F;c&#x2F;0&#x2F;9&#x2F;3c091ab46aec48558d1bf63c96ae9ac8.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;js&#x2F;index.m-pt.v0c3da2a8.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;js&#x2F;index.m-pt.v0c3da2a8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery-ui.b6d20~e817.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.jquery-ui.b6d20~e817.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.perfect-scrollbar.ab19d~582f.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors&#x2F;npm.perfect-scrollbar.ab19d~582f.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors~ui&#x2F;base.9d8c6~8b08.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;vendors~ui&#x2F;base.9d8c6~8b08.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base.4eaeb~259d.m-pt.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;letras-static&#x2F;desktop&#x2F;js&#x2F;default~ui&#x2F;base.4eaeb~259d.m-pt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_player.vec490534.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_player.vec490534.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_playlists.vc124c9f9.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;static&#x2F;img&#x2F;sprite_playlists.vc124c9f9.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_0.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_0.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_1.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_1.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_2.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_2.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_3.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2020&#x2F;house_ads&#x2F;letras&#x2F;housead_baixar_app&#x2F;970x90&#x2F;images&#x2F;img_3.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;css&#x2F;om.v5d3c6e54.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;css&#x2F;om.v5d3c6e54.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;playlists&#x2F;40317890df4fa2ea159d3b130d7f4f4a.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;uploadfile&#x2F;letras&#x2F;playlists&#x2F;40317890df4fa2ea159d3b130d7f4f4a.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;templates.v8b4119cf.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;templates.v8b4119cf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;plugins.v703b0c60.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;plugins.v703b0c60.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;main.v4e1c0a6d.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;js&#x2F;main.v4e1c0a6d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;img&#x2F;sprite_geral.v48cde63e.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;om&#x2F;static&#x2F;img&#x2F;sprite_geral.v48cde63e.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;open-sans-semibold.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;letras&#x2F;common&#x2F;static&#x2F;font&#x2F;open-sans-semibold.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.ee6d2.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;pt-br&#x2F;client.ee6d2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-regular_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-regular_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-bold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-bold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-regular_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-regular_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-bold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-bold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f6116746c8b3.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f6116746c8b3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b120bcd39dd6.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b120bcd39dd6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~b3f87f7f.793190ba92d.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~b3f87f7f.793190ba92d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b.8ed6a1fa8ab.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b.8ed6a1fa8ab.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f.4a8b790a9d4.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f.4a8b790a9d4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~5a071901.79e11bdc2dc.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~5a071901.79e11bdc2dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~253ae210.3251c075db6.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~253ae210.3251c075db6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~6e8b5f81.b51eb635d2e.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~6e8b5f81.b51eb635d2e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~2963a976.62c96a2b57c.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~2963a976.62c96a2b57c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~203e0718.d8234233309.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~203e0718.d8234233309.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~bc261e74.95fb5dbb15a.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~bc261e74.95fb5dbb15a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~678f84af.90ecdde5a7b.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~678f84af.90ecdde5a7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~3c941b24.9c651b1d960.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~3c941b24.9c651b1d960.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~1c3a2c3f.70ad176b119.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~1c3a2c3f.70ad176b119.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;palcohb~01e7b97c.bd123867615.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;palcohb~01e7b97c.bd123867615.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;bottomMenu~fb3a08b9.a87411554d3.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;bottomMenu~fb3a08b9.a87411554d3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;id&#x2F;8c749.client.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;id&#x2F;8c749.client.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-main_v2dd7abcb52628616028d470838bc5e3fc.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-main_v2dd7abcb52628616028d470838bc5e3fc.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons_v656fddf295f6ef2e75c2184d57e2826fb.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons_v656fddf295f6ef2e75c2184d57e2826fb.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-semibold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-semibold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;mautic&#x2F;mtc.f514f.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;mautic&#x2F;mtc.f514f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;ccid~fb3a08b9be6fe08c0db.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;ccid~fb3a08b9be6fe08c0db.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;ccid~fb3a08b9.1e5d102511a.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;ccid~fb3a08b9.1e5d102511a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;toast~c1243893a78f4e1613a.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;toast~c1243893a78f4e1613a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;toast~c1243893.f1f75792f97.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;toast~c1243893.f1f75792f97.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-d3b4baf423e2abf3ea6c48a49a3b310fd7b963c4~01e7b97ce73cf99bdf2.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-d3b4baf423e2abf3ea6c48a49a3b310fd7b963c4~01e7b97ce73cf99bdf2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-d3b4baf423e2abf3ea6c48a49a3b310fd7b963c4~01e7b97c.ad6d546fded.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-d3b4baf423e2abf3ea6c48a49a3b310fd7b963c4~01e7b97c.ad6d546fded.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;box~b3f87f7fa23ae0c02dd.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;box~b3f87f7fa23ae0c02dd.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;box~b3f87f7f.17e1d7f56d7.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;box~b3f87f7f.17e1d7f56d7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;palcoMP3-precache.fab4c238e1e096ad3ed55513f0bc1edd.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;palcoMP3-precache.fab4c238e1e096ad3ed55513f0bc1edd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-120x120.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-120x120.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-152x152.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-152x152.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-180x180.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-180x180.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-76x76.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon-76x76.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;apple-touch-icon.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon-32x32.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon-32x32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon-32x32_1.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon-32x32_1.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon.ico" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon.ico</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon_1.ico" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;favicon_1.ico</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f6116746c8b3.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~0dd2415f6116746c8b3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b120bcd39dd6.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;main~afd3170b120bcd39dd6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-bold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-bold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-regular_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;montserrat-regular_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-bold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-bold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-regular_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-regular_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-semibold_v3.woff2" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;open-sans-semibold_v3.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons-ccid070c51b9d4eb31b7fc4c3fafac9e98d6.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons-ccid070c51b9d4eb31b7fc4c3fafac9e98d6.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons_v656fddf295f6ef2e75c2184d57e2826fb.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-icons_v656fddf295f6ef2e75c2184d57e2826fb.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-main_v2dd7abcb52628616028d470838bc5e3fc.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-main_v2dd7abcb52628616028d470838bc5e3fc.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-playerb14023c920bbba7498a47642101e8d3e.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-playerb14023c920bbba7498a47642101e8d3e.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;vendors~modal-chat~2a42e354.747c049be85.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;vendors~modal-chat~2a42e354.747c049be85.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;vendors~sortable-list~5d9ee917.38b2ff98a2b.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;vendors~sortable-list~5d9ee917.38b2ff98a2b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-a571958f5e16439e4006a240a66279545d9838e7~0dd2415f8d41a2de06f.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-a571958f5e16439e4006a240a66279545d9838e7~0dd2415f8d41a2de06f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-a571958f5e16439e4006a240a66279545d9838e7~0dd2415f.510d12ba19a.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-a571958f5e16439e4006a240a66279545d9838e7~0dd2415f.510d12ba19a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-playlist~2cfe58555c85fe53641.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-playlist~2cfe58555c85fe53641.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-playlist~2cfe5855.1ae5308f9ad.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-playlist~2cfe5855.1ae5308f9ad.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-f0e77416b46fcc393c3ed55704bfe7f5be73072a~01e7b97c9d47bde0102.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-f0e77416b46fcc393c3ed55704bfe7f5be73072a~01e7b97c9d47bde0102.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-f0e77416b46fcc393c3ed55704bfe7f5be73072a~01e7b97c.fa94f2d80ba.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;shared-f0e77416b46fcc393c3ed55704bfe7f5be73072a~01e7b97c.fa94f2d80ba.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-minify~01e7b97c48a7f07b938.css" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-minify~01e7b97c48a7f07b938.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-minify~01e7b97c.394a52a1639.js" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;player-minify~01e7b97c.394a52a1639.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-playerb14023c920bbba7498a47642101e8d3e.svg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;palcomp3-static&#x2F;sprite-playerb14023c920bbba7498a47642101e8d3e.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_0.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_0.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_1.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_1.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_2.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_2.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_3.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_3.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_4.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_4.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_5.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_5.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_6.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_6.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_7.png" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_7.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_8.jpg" target="_blank" class="external" rel="noreferrer noopener">studiosol-a.akamaihd.net&#x2F;gcs&#x2F;studiosol-marketing&#x2F;2021&#x2F;campanhas&#x2F;palco&#x2F;house_palcoensina&#x2F;780x90&#x2F;images&#x2F;img_8.jpg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://cifraclub.com.br" target="_blank" class="external">cifraclub.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://forum.cifraclub.com.br" target="_blank" class="external">forum.cifraclub.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.palcomp3.com.br" target="_blank" class="external">www.palcomp3.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://letras.mus.br" target="_blank" class="external">letras.mus.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://m.letras.com" target="_blank" class="external">m.letras.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://m.letras.mus.br" target="_blank" class="external">m.letras.mus.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.letras.com" target="_blank" class="external">www.letras.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.letras.mus.br" target="_blank" class="external">www.letras.mus.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ouvirmusica.com.br" target="_blank" class="external">www.ouvirmusica.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://letras.com" target="_blank" class="external">letras.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cifraclub.com" target="_blank" class="external">cifraclub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cifraclub.com" target="_blank" class="external">www.cifraclub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cifraclub.com.br" target="_blank" class="external">www.cifraclub.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ouvirmusica.com.br" target="_blank" class="external">ouvirmusica.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://palcomp3.com.br" target="_blank" class="external">palcomp3.com.br</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

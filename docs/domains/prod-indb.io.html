@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "prod-indb.io",
-        history: [{"date":"2021.01","prevalence":0.0000153,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.02","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.03","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.06","prevalence":0.0000137,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.08","prevalence":0.0000139,"sites":2,"fingerprinting":2,"cookies":0.00000694},{"date":"jd/Sept-domains","prevalence":0.0000141,"sites":2,"fingerprinting":1,"cookies":0.00000704}]
+        history: [{"date":"2021.01","prevalence":0.0000153,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.02","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.03","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.04","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.05","prevalence":0.0000138,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.06","prevalence":0.0000137,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0.0000139,"sites":2,"fingerprinting":1,"cookies":0},{"date":"2021.08","prevalence":0.0000139,"sites":2,"fingerprinting":2,"cookies":0.00000694},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/march-update","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;18780<small>/21593</small>
+                    <strong>Rank:</strong> &#35;22022<small>/25630</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (2 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -87,12 +90,18 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
                     <span>WebSocket</span>,
+                    <span>XHR</span>,
+                    <span>Preflight</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/prod-indb.io.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
+                    <span>asgard</span>, 
                     <span>liverealtime</span>, 
+                    <span>logbrowser</span>, 
                 </li>
             </ul>
         </div>
@@ -111,13 +120,151 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;104fd3a.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;104fd3a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;13.f900f7a853f290151c83.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;13.f900f7a853f290151c83.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;vendors&#x2F;app.449ddb6.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;vendors&#x2F;app.449ddb6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;15.1aee16e9f46d83df4c1b.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;15.1aee16e9f46d83df4c1b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;app.a7e7f98.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;app.a7e7f98.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;12.67a4331f164614caa9ac.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;12.67a4331f164614caa9ac.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;17.0455609.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;17.0455609.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;17.14b95564cd5ce0066b52.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;17.14b95564cd5ce0066b52.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;4.fcf2314.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;4.fcf2314.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;4.279ffbb698a3d4de419e.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;4.279ffbb698a3d4de419e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;3.d8c1e0b.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;3.d8c1e0b.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;3.a85ad31dbc63f7a1735a.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;3.a85ad31dbc63f7a1735a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;34.e4dd950.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;34.e4dd950.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;34.8f4837fbcbbce02c4493.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;34.8f4837fbcbbce02c4493.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;2.d8045c5.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;2.d8045c5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;2.1b777ee006a57951825b.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;2.1b777ee006a57951825b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
             <p><a href="http://liverealtime.prod-indb.io&#x2F;v1&#x2F;socket.io&#x2F;" target="_blank" class="external" rel="noreferrer noopener">liverealtime.prod-indb.io&#x2F;v1&#x2F;socket.io&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;asgard&#x2F;json&#x2F;categories.4ff95b345dee346f05ac.json" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;asgard&#x2F;json&#x2F;categories.4ff95b345dee346f05ac.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;asgard&#x2F;json&#x2F;maintenance.json" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;asgard&#x2F;json&#x2F;maintenance.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://logbrowser.prod-indb.io&#x2F;v1&#x2F;log" target="_blank" class="external" rel="noreferrer noopener">logbrowser.prod-indb.io&#x2F;v1&#x2F;log</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://logbrowser.prod-indb.io&#x2F;v1&#x2F;log" target="_blank" class="external" rel="noreferrer noopener">logbrowser.prod-indb.io&#x2F;v1&#x2F;log</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;41.c1e9ffd.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;41.c1e9ffd.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;41.485296d3849af0de4f78.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;41.485296d3849af0de4f78.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;0.3502e9a.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;0.3502e9a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;0.6cce3ca5b36442718f5a.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;0.6cce3ca5b36442718f5a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;1.5173b33.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;1.5173b33.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;1.34b92e2b9cbadd3af135.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;1.34b92e2b9cbadd3af135.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;5.8d5b897.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;5.8d5b897.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;5.591756f7882ddc38cfa9.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;5.591756f7882ddc38cfa9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;35.5461222.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;35.5461222.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;35.0f04a5a087db55a44c5c.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;35.0f04a5a087db55a44c5c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;36.229da5e.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;36.229da5e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;36.fef1ff7035d37d3e0fcf.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;36.fef1ff7035d37d3e0fcf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;18.f868d1f.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;18.f868d1f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;18.9feba8e9b9273606814d.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;18.9feba8e9b9273606814d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;9.7b2501f.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;9.7b2501f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;9.205946601366276729cd.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;9.205946601366276729cd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;46.5db0576.css" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;46.5db0576.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://asgard.prod-indb.io&#x2F;_nuxt&#x2F;46.ab80e7644932d7130119.js" target="_blank" class="external" rel="noreferrer noopener">asgard.prod-indb.io&#x2F;_nuxt&#x2F;46.ab80e7644932d7130119.js</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>

@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "cworks.cloud",
-        history: [{"date":"2020.05","prevalence":0.0000143,"sites":1,"fingerprinting":2,"cookies":0.0000143},{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":1,"cookies":0.0000137},{"date":"2020.07","prevalence":0.0000139,"sites":1,"fingerprinting":2,"cookies":0.0000139},{"date":"2020.08","prevalence":0.0000147,"sites":2,"fingerprinting":0,"cookies":0.0000147},{"date":"2020.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152}]
+        history: [{"date":"2020.05","prevalence":0.0000143,"sites":1,"fingerprinting":2,"cookies":0.0000143},{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":1,"cookies":0.0000137},{"date":"2020.07","prevalence":0.0000139,"sites":1,"fingerprinting":2,"cookies":0.0000139},{"date":"2020.08","prevalence":0.0000147,"sites":2,"fingerprinting":0,"cookies":0.0000147},{"date":"2020.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0.0000152,"sites":2,"fingerprinting":0,"cookies":0.0000152},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.02","prevalence":0.0000341,"sites":5,"fingerprinting":2,"cookies":0},{"date":"jd/march-update","prevalence":0.0000273,"sites":4,"fingerprinting":2,"cookies":0}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;9913<small>/12396</small>
+                    <strong>Rank:</strong> &#35;10472<small>/25630</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -87,13 +90,19 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
                     <span>Image</span>,
+                    <span>Font</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/cworks.cloud.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
-                    <span>correio-cdn3</span>, 
-                    <span>correio-cdn2</span>, 
+                    <span>correio-static</span>, 
+                    <span>tnh1-static</span>, 
+                    <span>tnh1-cdn1</span>, 
+                    <span>tnh1-cdn3</span>, 
+                    <span>tnh1-cdn2</span>, 
                 </li>
             </ul>
         </div>
@@ -112,13 +121,116 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://correio-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;3&#x2F;csm_vereadores_eleitos_2020_mais_votados_fotos_divulgacao_camara_de_salvador_c60a7b7d33.jpg" target="_blank" class="external" rel="noreferrer noopener">correio-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;3&#x2F;csm_vereadores_eleitos_2020_mais_votados_fotos_divulgacao_camara_de_salvador_c60a7b7d33.jpg</a> (seen on 2 websites)</p>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;typo3conf&#x2F;ext&#x2F;cw_base&#x2F;Resources&#x2F;Public&#x2F;JavaScript&#x2F;Lozad.js" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;typo3conf&#x2F;ext&#x2F;cw_base&#x2F;Resources&#x2F;Public&#x2F;JavaScript&#x2F;Lozad.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;correio24horas&#x2F;css&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;correio24horas&#x2F;css&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;livesense-init.js" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;livesense-init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;livesense.min.js" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;livesense.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;init-cswg.js" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;fileadmin&#x2F;scripts&#x2F;init-cswg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://correio-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;correio24horas&#x2F;js&#x2F;all.js" target="_blank" class="external" rel="noreferrer noopener">correio-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;correio24horas&#x2F;js&#x2F;all.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;css&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;css&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;fonts&#x2F;sica.css" target="_blank" class="external" rel="noreferrer noopener">tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;fonts&#x2F;sica.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;8&#x2F;csm_16-03-22-Castramovel-Atendimentos-Riacho-Doce-SMS-Victor-Vercant-3_09351e9f08.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;8&#x2F;csm_16-03-22-Castramovel-Atendimentos-Riacho-Doce-SMS-Victor-Vercant-3_09351e9f08.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;e&#x2F;e&#x2F;csm_29-04-2021-Mercado-da-Producao-Semtabes-GGI-Covid-Foto-Victor-Vercant-2_190eb681e6.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;e&#x2F;e&#x2F;csm_29-04-2021-Mercado-da-Producao-Semtabes-GGI-Covid-Foto-Victor-Vercant-2_190eb681e6.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;9&#x2F;7&#x2F;csm_Central_de_Flagrantes_-_Foto_Arquivo_TNH1_052503d35f.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;9&#x2F;7&#x2F;csm_Central_de_Flagrantes_-_Foto_Arquivo_TNH1_052503d35f.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;9&#x2F;d&#x2F;csm_Transplante_AL_-_Foto_Olival_Santos_-_Secom_Alagoas_e8094bfe23.jpeg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;9&#x2F;d&#x2F;csm_Transplante_AL_-_Foto_Olival_Santos_-_Secom_Alagoas_e8094bfe23.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;6&#x2F;d&#x2F;csm_novo_coronavirus_cc3324f121.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;6&#x2F;d&#x2F;csm_novo_coronavirus_cc3324f121.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;e&#x2F;2&#x2F;csm_Posse_desembargador_Ivan_Brito_-_Foto_Caio_Loureiro_-_TJ-AL_85e2250b35.jpeg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;e&#x2F;2&#x2F;csm_Posse_desembargador_Ivan_Brito_-_Foto_Caio_Loureiro_-_TJ-AL_85e2250b35.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;f&#x2F;a&#x2F;csm_Zezo_a29b2e6910.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;f&#x2F;a&#x2F;csm_Zezo_a29b2e6910.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;2&#x2F;csm_jovem-indigena-bahia_e335586b91.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;2&#x2F;csm_jovem-indigena-bahia_e335586b91.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;6&#x2F;4&#x2F;csm_paulinha-abelha-ok_2bb284dc72.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;6&#x2F;4&#x2F;csm_paulinha-abelha-ok_2bb284dc72.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;d&#x2F;csm_csm_csm_violencia_domestica_cc5aa9ba12_4e867327d6_05680b8c5b.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;d&#x2F;csm_csm_csm_violencia_domestica_cc5aa9ba12_4e867327d6_05680b8c5b.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;5&#x2F;csm_csm_csm_iml-tnh1_ce694869d8_d54dd2386b_70303cd96a.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;5&#x2F;csm_csm_csm_iml-tnh1_ce694869d8_d54dd2386b_70303cd96a.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;5&#x2F;8&#x2F;csm_csm_csm_Viatura_Policia_divulgacao_f5775afa08_46f80f2ca9_2fdc342901.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;5&#x2F;8&#x2F;csm_csm_csm_Viatura_Policia_divulgacao_f5775afa08_46f80f2ca9_2fdc342901.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;4&#x2F;c&#x2F;csm_Yasmin_Brunet_-_Foto_Reproducao_Instagram_8b7f1607a7.jpeg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;4&#x2F;c&#x2F;csm_Yasmin_Brunet_-_Foto_Reproducao_Instagram_8b7f1607a7.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;8&#x2F;csm_Lucio_Tabarelli_-_Foto_BandReproducao_cc79819881.jpeg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;1&#x2F;8&#x2F;csm_Lucio_Tabarelli_-_Foto_BandReproducao_cc79819881.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;1&#x2F;csm_netflix_-_foto_pixabay_dc5fc54d03.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;8&#x2F;1&#x2F;csm_netflix_-_foto_pixabay_dc5fc54d03.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;js&#x2F;all.js" target="_blank" class="external" rel="noreferrer noopener">tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;js&#x2F;all.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;fonts&#x2F;Sica-SemiBoldItalic.woff2" target="_blank" class="external" rel="noreferrer noopener">tnh1-static.cworks.cloud&#x2F;fileadmin&#x2F;sites&#x2F;tnh1&#x2F;fonts&#x2F;Sica-SemiBoldItalic.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;b&#x2F;6&#x2F;csm_personal_e_esposa_2122db7399.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;b&#x2F;6&#x2F;csm_personal_e_esposa_2122db7399.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;4&#x2F;csm_Video_Personal_espanca_morador_76a21aef26.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn1.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;4&#x2F;csm_Video_Personal_espanca_morador_76a21aef26.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn2.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;0&#x2F;b&#x2F;csm_bumbum-injecao_c1dd5c2bcf.png" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn2.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;0&#x2F;b&#x2F;csm_bumbum-injecao_c1dd5c2bcf.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://tnh1-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;c&#x2F;csm_Idosos_sao_agredidos_26c57e4360.jpg" target="_blank" class="external" rel="noreferrer noopener">tnh1-cdn3.cworks.cloud&#x2F;fileadmin&#x2F;_processed_&#x2F;3&#x2F;c&#x2F;csm_Idosos_sao_agredidos_26c57e4360.jpg</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -133,11 +245,17 @@
         <li class='truncate'>
             <a href="http://www.correio24horas.com.br" target="_blank" class="external">www.correio24horas.com.br</a>
         </li>
+        <li class='truncate'>
+            <a href="http://www.tnh1.com.br" target="_blank" class="external">www.tnh1.com.br</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tnh1.com.br" target="_blank" class="external">tnh1.com.br</a>
+        </li>
     </ul>
 </div>
 
-            <footer class='flex items-center justify-between flex-wrap p-5 bg-gray-300'>
-                DuckDuckGo
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
             </footer>
         </div>
     </body>

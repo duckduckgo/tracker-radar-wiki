@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - teletype.in</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "teletype.in",
+        history: [{"date":"jd/april-upate","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/teletype.in.ico' width="32" height="32" class='inline-block' /> teletype.in</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;23585<small>/25831</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Other</span>,
+                    <span>Media</span>,
+                    <span>Font</span>,
+                    <span>Preflight</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/teletype.in.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>media</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-color-scheme&quot;)</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;vendors~main.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;vendors~main.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;main.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;main.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;main.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;main.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;main-page.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;main-page.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;main-page.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;main-page.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;mobile.ec776c851b68586cc39d948590471f32.png" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;mobile.ec776c851b68586cc39d948590471f32.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;OneSignalSDKUpdaterWorker.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;OneSignalSDKUpdaterWorker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;OneSignalSDKWorker.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;OneSignalSDKWorker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;article-misc.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;article-misc.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;article-misc.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;article-misc.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;comments.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;comments.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;comments.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;comments.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;editor-page.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;editor-page.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;editor-page.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;editor-page.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;lebedev.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;lebedev.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;lebedev.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;lebedev.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;login-page.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;login-page.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;login-page.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;login-page.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;search-page.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;search-page.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;search-page.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;search-page.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;varlamov.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;varlamov.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;varlamov.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;varlamov.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;vendors~editor.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;vendors~editor.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;vendors~editor~highlight.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;vendors~editor~highlight.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.teletype.in&#x2F;landing.mp4" target="_blank" class="external" rel="noreferrer noopener">media.teletype.in&#x2F;landing.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;rich_media.e37606596c2bff90e1a632ccd759d805.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;rich_media.e37606596c2bff90e1a632ccd759d805.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;teammates.9c72b2c0e7858a577fd24fdcd606a5bd.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;teammates.9c72b2c0e7858a577fd24fdcd606a5bd.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;autosave.0ef1cf4a89f91c957eec5c5a783256f0.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;autosave.0ef1cf4a89f91c957eec5c5a783256f0.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;multiple_blogs.b6c8b2c6ddf774c0083b50ed8b6393b2.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;multiple_blogs.b6c8b2c6ddf774c0083b50ed8b6393b2.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;analytics.dbe3754f310e881fe050a536e448ec0b.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;analytics.dbe3754f310e881fe050a536e448ec0b.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;custom_domain.a656bc45c596c6035781afb3773732d6.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;custom_domain.a656bc45c596c6035781afb3773732d6.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;topics.3e4ae20b197de30663879f1e4003d8c8.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;topics.3e4ae20b197de30663879f1e4003d8c8.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;blog_subscription.d5cddf3a84bdb69e4b79d6c78b7c8b22.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;blog_subscription.d5cddf3a84bdb69e4b79d6c78b7c8b22.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;notifications.7a47024edc7d2d27113f1485b249db73.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;notifications.7a47024edc7d2d27113f1485b249db73.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;comments.60ffac75a7a442afababab5c6278c2c1.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;comments.60ffac75a7a442afababab5c6278c2c1.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;articles_preferences.3ea30e58a13e169c7236103077935fb2.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;articles_preferences.3ea30e58a13e169c7236103077935fb2.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;adaptive_layout.9f07551eb25564fb6cd4c6f9b80eb255.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;adaptive_layout.9f07551eb25564fb6cd4c6f9b80eb255.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;retina.1eab46c43455e6f1d42f62fd5b094f94.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;retina.1eab46c43455e6f1d42f62fd5b094f94.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;seo_optimization.d850d759fb36b569fd9a8f3e207763bc.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;seo_optimization.d850d759fb36b569fd9a8f3e207763bc.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;images&#x2F;instant_view.edb86a6145deb9e460a1c6dc160c79fb.svg" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;images&#x2F;instant_view.edb86a6145deb9e460a1c6dc160c79fb.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_semibold.007ad31a53f4ab3f58ee74f2308482ce.woff2" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_semibold.007ad31a53f4ab3f58ee74f2308482ce.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;fonts&#x2F;ranua_bold.63e96d2348ca6d9790991a19badcde25.woff2" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;fonts&#x2F;ranua_bold.63e96d2348ca6d9790991a19badcde25.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_medium.75db5319e7e87c587019a5df08d7272c.woff2" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_medium.75db5319e7e87c587019a5df08d7272c.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_bold.444a7284663a3bc886683eb81450b294.woff2" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_bold.444a7284663a3bc886683eb81450b294.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_regular.dc131113894217b5031000575d9de002.woff2" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;fonts&#x2F;inter_regular.dc131113894217b5031000575d9de002.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;api&#x2F;settings" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;api&#x2F;settings</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;api&#x2F;settings" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;api&#x2F;settings</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;popups.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.css" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.js" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;static&#x2F;donations.51fe39c61ea626671a64.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;api&#x2F;examples" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;api&#x2F;examples</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://teletype.in&#x2F;api&#x2F;examples" target="_blank" class="external" rel="noreferrer noopener">teletype.in&#x2F;api&#x2F;examples</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://teletype.fun" target="_blank" class="external">teletype.fun</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.teletype.fun" target="_blank" class="external">www.teletype.fun</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - gupy.fr</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "gupy.fr",
+        history: [{"date":"jd/may-update","prevalence":0.0000136,"sites":2,"fingerprinting":1,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/gupy.fr.ico' width="32" height="32" class='inline-block' /> gupy.fr</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;20492<small>/26825</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/gupy.fr.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                    <span>medias</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-includes&#x2F;css&#x2F;dist&#x2F;block-library&#x2F;style.min.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-includes&#x2F;css&#x2F;dist&#x2F;block-library&#x2F;style.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;formcraft3&#x2F;dist&#x2F;formcraft-common.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;formcraft3&#x2F;dist&#x2F;formcraft-common.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;formcraft3&#x2F;dist&#x2F;form.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;formcraft3&#x2F;dist&#x2F;form.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;css&#x2F;libraries.min.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;css&#x2F;libraries.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro-poster&#x2F;style.parent.min.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro-poster&#x2F;style.parent.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;font-awesome&#x2F;css&#x2F;font-awesome.min.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;font-awesome&#x2F;css&#x2F;font-awesome.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro-poster&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro-poster&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;dark.css" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;dark.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery-migrate.min.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery-migrate.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;js&#x2F;libraries.min.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;js&#x2F;libraries.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;js&#x2F;scripts.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;wpvr-bingescout&#x2F;assets&#x2F;js&#x2F;scripts.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;wp-emoji-release.min.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;wp-emoji-release.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;10&#x2F;pp-micro.png" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;10&#x2F;pp-micro.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;ultimate-member&#x2F;assets&#x2F;js&#x2F;pickadate&#x2F;picker.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;ultimate-member&#x2F;assets&#x2F;js&#x2F;pickadate&#x2F;picker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;ultimate-member&#x2F;assets&#x2F;js&#x2F;pickadate&#x2F;translations&#x2F;fr_FR.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;plugins&#x2F;ultimate-member&#x2F;assets&#x2F;js&#x2F;pickadate&#x2F;translations&#x2F;fr_FR.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;wp-embed.min.js" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-includes&#x2F;js&#x2F;wp-embed.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;font-awesome&#x2F;webfonts&#x2F;fa-solid-900.woff2" target="_blank" class="external" rel="noreferrer noopener">www.gupy.fr&#x2F;wp-content&#x2F;themes&#x2F;videopro&#x2F;css&#x2F;font-awesome&#x2F;webfonts&#x2F;fa-solid-900.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Scream-poster-2022-1642056530-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Scream-poster-2022-1642056530-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;03&#x2F;the-batman-2022-i122127-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;03&#x2F;the-batman-2022-i122127-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Harry-Potter-fete-ses-20-ans-retour-a-Poudlard-poster-2022-1641809566-400x533.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Harry-Potter-fete-ses-20-ans-retour-a-Poudlard-poster-2022-1641809566-400x533.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Dont-Look-Up-Deni-cosmique-poster-2021-1641336002-400x601.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Dont-Look-Up-Deni-cosmique-poster-2021-1641336002-400x601.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Dune-poster-fr.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;Dune-poster-fr.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Father-poster-2021-1638957493-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Father-poster-2021-1638957493-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Soul-poster-2020-1638959374-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Soul-poster-2020-1638959374-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Billie-Eilish-The-Worlds-a-Little-Blurry-poster-2021-1639583647-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Billie-Eilish-The-Worlds-a-Little-Blurry-poster-2021-1639583647-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Homecoming-poster-2018-1639681779-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Homecoming-poster-2018-1639681779-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639412588-400x568.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639412588-400x568.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;The-Boys-poster-2019-1638029913-400x601.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;The-Boys-poster-2019-1638029913-400x601.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;ORELSAN-Montre-jamais-ca-a-personne-poster-2021-1639681423-400x568.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;ORELSAN-Montre-jamais-ca-a-personne-poster-2021-1639681423-400x568.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2020&#x2F;10&#x2F;Succession-poster-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2020&#x2F;10&#x2F;Succession-poster-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Mare-of-Easttown-poster-2021-1639391165-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Mare-of-Easttown-poster-2021-1639391165-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Expanse-poster-2015-1639409288-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Expanse-poster-2015-1639409288-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;02&#x2F;Reacher-poster-2022-1644694262-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;02&#x2F;Reacher-poster-2022-1644694262-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;Un-talent-en-or-massif-poster-2022-1650370920-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;Un-talent-en-or-massif-poster-2022-1650370920-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;05&#x2F;Doctor-Strange-in-the-Multiverse-of-Madness-poster-2022-1651754860-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;05&#x2F;Doctor-Strange-in-the-Multiverse-of-Madness-poster-2022-1651754860-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Luca-poster-2021-1639678398-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Luca-poster-2021-1639678398-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Zack-Snyders-Justice-League-poster-2021-1638958434-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Zack-Snyders-Justice-League-poster-2021-1638958434-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Encanto-la-fantastique-famille-Madrigal-poster-2021-1639679488-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Encanto-la-fantastique-famille-Madrigal-poster-2021-1639679488-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Shang-Chi-et-la-Legende-des-Dix-Anneaux-poster-2021-1639679300-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Shang-Chi-et-la-Legende-des-Dix-Anneaux-poster-2021-1639679300-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;OVNIs-poster-2021-1639392712-400x593.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;OVNIs-poster-2021-1639392712-400x593.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Transparent-poster-2014-1639409399-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Transparent-poster-2014-1639409399-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Serpent-poster-2021-1639392638-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Serpent-poster-2021-1639392638-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Sex-Education-poster-2019-1639390578-400x599.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Sex-Education-poster-2019-1639390578-400x599.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Loki-poster-2021-1639391048-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Loki-poster-2021-1639391048-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Goliath-poster-2016-1639406586-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Goliath-poster-2016-1639406586-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Les-Eternels-poster-2021-1639678924-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Les-Eternels-poster-2021-1639678924-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Judas-and-the-Black-Messiah-poster-2021-1639677717-400x568.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Judas-and-the-Black-Messiah-poster-2021-1639677717-400x568.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Un-Homme-en-colere-poster-2021-1639582661-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Un-Homme-en-colere-poster-2021-1639582661-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;The-Chef-poster-2021-1643583957-400x599.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;01&#x2F;The-Chef-poster-2021-1643583957-400x599.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639408977-400x568.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639408977-400x568.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Good-Omens-poster-2019-1639406705-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Good-Omens-poster-2019-1639406705-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Foundation-poster-2021-1639390849-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Foundation-poster-2021-1639390849-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Lupin-poster-2021-1639391249-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Lupin-poster-2021-1639391249-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639396691-400x568.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;poster-1639396691-400x568.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Dernier-Duel-poster-2021-1639680364-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Dernier-Duel-poster-2021-1639680364-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Palmer-poster-2021-1639678136-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Palmer-poster-2021-1639678136-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Suicide-Squad-poster-2021-1639681018-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Suicide-Squad-poster-2021-1639681018-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;Mourir-peut-attendre-poster-2021-1637940664-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;Mourir-peut-attendre-poster-2021-1637940664-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Maitre-du-Haut-Chateau-poster-2015-1639406393-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Le-Maitre-du-Haut-Chateau-poster-2015-1639406393-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Gentlemen-poster-2019-1638961083-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;The-Gentlemen-poster-2019-1638961083-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Raya-et-le-Dernier-Dragon-poster-2021-1639678018-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Raya-et-le-Dernier-Dragon-poster-2021-1639678018-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Carnival-Row-poster-2019-1639394704-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Carnival-Row-poster-2019-1639394704-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;En-therapie-poster-2021-1639392526-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;En-therapie-poster-2021-1639392526-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;A-plein-temps-poster-2022-1649942920-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;A-plein-temps-poster-2022-1649942920-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;Free-Guy-poster-2021-1638031017-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;11&#x2F;Free-Guy-poster-2021-1638031017-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;06&#x2F;Mike-Case-in-The-Big-Kiss-Off-poster-2021.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;06&#x2F;Mike-Case-in-The-Big-Kiss-Off-poster-2021.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2020&#x2F;10&#x2F;The-Matrix-Revolutions-poster-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2020&#x2F;10&#x2F;The-Matrix-Revolutions-poster-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Aline-poster-2020-1639679717-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Aline-poster-2020-1639679717-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Matrix-Resurrections-poster-2021-1640135996-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Matrix-Resurrections-poster-2021-1640135996-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Kaamelott-Premier-volet-poster-2021-1638957673-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Kaamelott-Premier-volet-poster-2021-1638957673-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;Max-et-Emmy-Mission-Paques-poster-2022-1649943818-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;04&#x2F;Max-et-Emmy-Mission-Paques-poster-2022-1649943818-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;03&#x2F;Hopper-et-le-Hamster-des-Tenebres-poster-2022-1646912352-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;03&#x2F;Hopper-et-le-Hamster-des-Tenebres-poster-2022-1646912352-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2022&#x2F;02&#x2F;Les-Vedettes-poster-2022-1644690754-400x543.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2022&#x2F;02&#x2F;Les-Vedettes-poster-2022-1644690754-400x543.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Illusions-perdues-poster-2021-1639680670-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Illusions-perdues-poster-2021-1639680670-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Tenet-poster-2020-1638959750-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Tenet-poster-2020-1638959750-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Boite-noire-poster-2021-1639679676-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Boite-noire-poster-2021-1639679676-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Tous-en-scene-2-poster-2021-1640136076-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Tous-en-scene-2-poster-2021-1640136076-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Pil-poster-2021-1639576497-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Pil-poster-2021-1639576497-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Un-Espion-ordinaire-poster-2021-1639678579-400x600.jpg" target="_blank" class="external" rel="noreferrer noopener">medias.gupy.fr&#x2F;2021&#x2F;12&#x2F;Un-Espion-ordinaire-poster-2021-1639678579-400x600.jpg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://movie4k.fr" target="_blank" class="external">movie4k.fr</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.movie4k.fr" target="_blank" class="external">www.movie4k.fr</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

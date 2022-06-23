@@ -116,7 +116,7 @@ async function main() {
     tags = tagsString.split('\n').filter(a => a.length > 0);
 
     // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('jd/nov-update');
+    tags.push('max/june-2022');
 
     try {
         fs.writeFileSync(path.join(config.staticData, '/history/tags.json'), JSON.stringify(tags));

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - unizg.hr</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "unizg.hr",
+        history: [{"date":"max/june-2022","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/unizg.hr.ico' width="32" height="32" class='inline-block' /> unizg.hr</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;25227<small>/27203</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/unizg.hr.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www.srce</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;isvu" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;isvu</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.base.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.base.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.menus.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.menus.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.messages.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.messages.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.theme.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;system&#x2F;system.theme.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.core.min.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.core.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.theme.min.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.theme.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.accordion.min.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;themes&#x2F;base&#x2F;minified&#x2F;jquery.ui.accordion.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;aggregator&#x2F;aggregator.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;aggregator&#x2F;aggregator.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;comment&#x2F;comment.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;comment&#x2F;comment.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;date&#x2F;date_api&#x2F;date.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;date&#x2F;date_api&#x2F;date.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;date&#x2F;date_popup&#x2F;themes&#x2F;datepicker.1.7.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;date&#x2F;date_popup&#x2F;themes&#x2F;datepicker.1.7.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;field&#x2F;theme&#x2F;field.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;field&#x2F;theme&#x2F;field.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;node&#x2F;node.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;node&#x2F;node.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;search&#x2F;search.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;search&#x2F;search.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;modules&#x2F;user&#x2F;user.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;modules&#x2F;user&#x2F;user.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;extlink&#x2F;extlink.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;extlink&#x2F;extlink.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;views&#x2F;css&#x2F;views.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;views&#x2F;css&#x2F;views.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr_cc_icons_on_hover.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr_cc_icons_on_hover.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr_cc_icons.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;flickr&#x2F;flickr_cc_icons.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;ckeditor&#x2F;css&#x2F;ckeditor.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;ckeditor&#x2F;css&#x2F;ckeditor.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;accordion_blocks&#x2F;accordion_init.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;accordion_blocks&#x2F;accordion_init.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;ctools&#x2F;css&#x2F;ctools.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;ctools&#x2F;css&#x2F;ctools.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;dabar_pristupacnost&#x2F;dabar_pristupacnost.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;dabar_pristupacnost&#x2F;dabar_pristupacnost.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;tagclouds&#x2F;tagclouds.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;tagclouds&#x2F;tagclouds.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;css&#x2F;eu_cookie_compliance.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;css&#x2F;eu_cookie_compliance.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;meanmenu&#x2F;meanmenu.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;meanmenu&#x2F;meanmenu.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;css&#x2F;superfish.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;css&#x2F;superfish.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;bootstrap&#x2F;css&#x2F;bootstrap.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;bootstrap&#x2F;css&#x2F;bootstrap.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;flexslider&#x2F;flexslider.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;flexslider&#x2F;flexslider.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;tables.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;tables.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;style-yasmin.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;style-yasmin.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;https&#x2F;sourcecodepro-font.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;https&#x2F;sourcecodepro-font.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;https&#x2F;ptserif-blockquote-font.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;https&#x2F;ptserif-blockquote-font.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;font_awesome&#x2F;css&#x2F;font-awesome.min.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;font_awesome&#x2F;css&#x2F;font-awesome.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;local.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;local.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_8.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_8.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_10.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_10.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_14.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_14.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_15.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_15.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_17.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_17.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_25.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_25.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_26.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_26.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_27.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_27.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_28.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_28.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_29.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_29.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_32.css" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;css_injector&#x2F;css_injector_32.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;jquery&#x2F;1.7&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;jquery&#x2F;1.7&#x2F;jquery.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;misc&#x2F;jquery-extend-3.4.0.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;misc&#x2F;jquery-extend-3.4.0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;misc&#x2F;jquery-html-prefilter-3.5.0-backport.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;misc&#x2F;jquery-html-prefilter-3.5.0-backport.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;misc&#x2F;jquery.once.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;misc&#x2F;jquery.once.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;misc&#x2F;drupal.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;misc&#x2F;drupal.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.core.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.core.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.widget.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.widget.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.accordion.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;jquery_update&#x2F;replace&#x2F;ui&#x2F;ui&#x2F;minified&#x2F;jquery.ui.accordion.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;js&#x2F;jquery.cookie-1.4.1.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;js&#x2F;jquery.cookie-1.4.1.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;extlink&#x2F;extlink.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;extlink&#x2F;extlink.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;languages&#x2F;hr_c3o4qH_SFKSb3voPMel_APXXAo3xfPtvxT8H4GxUM2E.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;languages&#x2F;hr_c3o4qH_SFKSb3voPMel_APXXAo3xfPtvxT8H4GxUM2E.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;accordion_blocks&#x2F;accordion_init.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;modules&#x2F;accordion_blocks&#x2F;accordion_init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;piwik&#x2F;piwik.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;piwik&#x2F;piwik.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;bootstrap&#x2F;js&#x2F;bootstrap.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;bootstrap&#x2F;js&#x2F;bootstrap.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;meanmenu&#x2F;jquery.meanmenu.fork.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;meanmenu&#x2F;jquery.meanmenu.fork.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;jquery.hoverIntent.minified.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;jquery.hoverIntent.minified.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;supposition.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;supposition.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;superfish.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;superfish.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;supersubs.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;libraries&#x2F;superfish&#x2F;supersubs.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;superfish&#x2F;superfish.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;superfish&#x2F;superfish.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;flexslider&#x2F;jquery.flexslider.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;js&#x2F;flexslider&#x2F;jquery.flexslider.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;script.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;script.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;izbornik.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;izbornik.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;srce-logo-potpis-web.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;srce-logo-potpis-web.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;ISVU&#x2F;isvu-strelica.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;ISVU&#x2F;isvu-strelica.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;ISVU&#x2F;otovoreni_podaci.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;ISVU&#x2F;otovoreni_podaci.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;srce-50-bijeli.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;srce-50-bijeli.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;helpdesk&#x2F;chat.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;helpdesk&#x2F;chat.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;unizg-logo.png" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;docs&#x2F;unizg-logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;dabar_pristupacnost&#x2F;accessibility.min.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;dabar_pristupacnost&#x2F;accessibility.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;js&#x2F;eu_cookie_compliance.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;all&#x2F;modules&#x2F;contrib&#x2F;eu_cookie_compliance&#x2F;js&#x2F;eu_cookie_compliance.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_2.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_4.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_5.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_6.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_8.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_9.js" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;files&#x2F;srce&#x2F;js_injector&#x2F;js_injector_9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;font_awesome&#x2F;fonts&#x2F;fontawesome-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">www.srce.unizg.hr&#x2F;sites&#x2F;www.srce.unizg.hr&#x2F;themes&#x2F;scholarly&#x2F;fonts&#x2F;font_awesome&#x2F;fonts&#x2F;fontawesome-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://isvu.hr" target="_blank" class="external">isvu.hr</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.isvu.hr" target="_blank" class="external">www.isvu.hr</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

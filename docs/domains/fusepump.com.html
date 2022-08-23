@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "fusepump.com",
-        history: [{"date":"2020.11","prevalence":0.0000076,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0.00000764,"sites":1,"fingerprinting":2,"cookies":0},{"date":"2021.02","prevalence":0.00000695,"sites":1,"fingerprinting":2,"cookies":0},{"date":"2021.03","prevalence":0.00000693,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/july","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2020.11","prevalence":0.0000076,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2020.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.01","prevalence":0.00000764,"sites":1,"fingerprinting":2,"cookies":0},{"date":"2021.02","prevalence":0.00000695,"sites":1,"fingerprinting":2,"cookies":0},{"date":"2021.03","prevalence":0.00000693,"sites":1,"fingerprinting":1,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0.0000139,"sites":2,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"muodov/aug-2022","prevalence":0.00000678,"sites":1,"fingerprinting":3,"cookies":0.00000678}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;17794<small>/23079</small>
+                    <strong>Rank:</strong> &#35;26985<small>/27751</small>
                 </li>
                 <li class='py-1'>
-                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -87,11 +90,15 @@
                 </li>
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
+                    <span>XHR</span>,
+                    <span>Document</span>,
                     <span>Script</span>,
+                    <span>Image</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/fusepump.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
+                    <span>brand-ecommerce-api</span>, 
                     <span>brand-ecommerce-assets</span>, 
                 </li>
             </ul>
@@ -111,13 +118,154 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;bootstraper&#x2F;bootstraper.js" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;bootstraper&#x2F;bootstraper.js</a> (seen on 2 websites)</p>
+            <p><a href="http://brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3ymrqv&#x2F;" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3ymrqv&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3v947y&#x2F;" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3v947y&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3nn420&#x2F;" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3nn420&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3ylg6o&#x2F;" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-api.fusepump.com&#x2F;api&#x2F;v3&#x2F;ad&#x2F;v3ylg6o&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;index.html</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;inline.17ec54489aace71cb9a9.bundle.js" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;inline.17ec54489aace71cb9a9.bundle.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;styles.bbcd89760a9d45cc372c.bundle.js" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;styles.bbcd89760a9d45cc372c.bundle.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;main.cd6e0185214f07fc1ab7.bundle.js" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;sol&#x2F;v3&#x2F;lightbox&#x2F;main.cd6e0185214f07fc1ab7.bundle.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;products&#x2F;4000487226999_T517_2DyEbGT.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;products&#x2F;4000487226999_T517_2DyEbGT.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;4000487226999_T517_AdMlK5n.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;4000487226999_T517_AdMlK5n.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;petshop.PNG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;petshop.PNG</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;4000487226999_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;4000487226999_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;Tesco_oHlCZqu.JPG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;Tesco_oHlCZqu.JPG</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;sainsburys-xl_yEbXEb9.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;retailer_logos&#x2F;sainsburys-xl_yEbXEb9.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;vetshopUK_XbIt9fg.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;vetshopUK_XbIt9fg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;products&#x2F;7613287187505_T517_CLDrx6l.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;products&#x2F;7613287187505_T517_CLDrx6l.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Ocado_MasterBrand_Horizontal_Grape_RGB_141220.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Ocado_MasterBrand_Horizontal_Grape_RGB_141220.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;viovet_aIDurHT.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;viovet_aIDurHT.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;brand_logos&#x2F;dentalife-logo.jpg" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;brand_logos&#x2F;dentalife-logo.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379831_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379831_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;VetUKlogoJPEG_T0EdJXs.jpg" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;VetUKlogoJPEG_T0EdJXs.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379817_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379817_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Sainos_IZkS5e6.jpg" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Sainos_IZkS5e6.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;time_for_paws_Y4mMFit.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;time_for_paws_Y4mMFit.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;petsathome_ZcqHqqs.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;petsathome_ZcqHqqs.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Morrisons_K3sUu6g.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Morrisons_K3sUu6g.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;ASDA_VgEVC6p.PNG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;ASDA_VgEVC6p.PNG</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Waitrose.PNG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Waitrose.PNG</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Tesco_UK.PNG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Tesco_UK.PNG</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104546_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104546_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104607_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104607_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104133_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104133_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Waitrose_pet_LasAqVc.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Waitrose_pet_LasAqVc.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379794_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379794_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379855_T517.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613035379855_T517.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038103433_T517_GQ55YjV.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038103433_T517_GQ55YjV.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038103594_T517_RlmDiu5.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038103594_T517_RlmDiu5.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104294_T517_TC3lGeg.png" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;product_variants&#x2F;7613038104294_T517_TC3lGeg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Amazon_UK.PNG" target="_blank" class="external" rel="noreferrer noopener">brand-ecommerce-assets.fusepump.com&#x2F;uploads&#x2F;scrape_logos&#x2F;Amazon_UK.PNG</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -127,10 +275,10 @@
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='truncate'>
-            <a href="http://sanpellegrinofruitbeverages.com" target="_blank" class="external">sanpellegrinofruitbeverages.com</a>
+            <a href="http://purina.co.uk" target="_blank" class="external">purina.co.uk</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.sanpellegrinofruitbeverages.com" target="_blank" class="external">www.sanpellegrinofruitbeverages.com</a>
+            <a href="http://www.purina.co.uk" target="_blank" class="external">www.purina.co.uk</a>
         </li>
     </ul>
 </div>

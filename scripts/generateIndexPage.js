@@ -15,10 +15,11 @@ const lastTagInfo = {
 
 let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
+const REGION = 'US';
 
 // Backwards compatibility for regions updates
-if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, 'US'))) {
-    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, 'US');
+if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, REGION))) {
+    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, REGION);
 }
 
 const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);

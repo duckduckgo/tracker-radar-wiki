@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "allianz.de",
-        history: [{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":2,"cookies":0.0000137},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":2,"cookies":0.0000152},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":2,"cookies":0.0000152},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/Sept-domains","prevalence":0.0000141,"sites":2,"fingerprinting":2,"cookies":0.0000141}]
+        history: [{"date":"2020.06","prevalence":0.0000137,"sites":1,"fingerprinting":2,"cookies":0.0000137},{"date":"2020.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.09","prevalence":0.0000152,"sites":2,"fingerprinting":2,"cookies":0.0000152},{"date":"2020.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2020.12","prevalence":0.0000152,"sites":2,"fingerprinting":2,"cookies":0.0000152},{"date":"2021.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"jd/nov-update","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,7 +65,7 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;13153<small>/21593</small>
+                    <strong>Rank:</strong> &#35;16229<small>/28200</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (2 sites)
@@ -88,11 +91,13 @@
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
                     <span>Script</span>,
+                    <span>Document</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/allianz.de.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
                     <span>www</span>, 
+                    <span>cdn</span>, 
                 </li>
             </ul>
         </div>
@@ -121,19 +126,26 @@
     </div>    
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
-        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
-        <li class='truncate'>Navigator.prototype.appName</li>
-        <li class='truncate'>Navigator.prototype.plugins</li>
-        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Screen.prototype.pixelDepth</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
         <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
         <li class='truncate'>Screen.prototype.height</li>
         <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.javaEnabled</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>window.sessionStorage</li>
         <li class='truncate'>window.localStorage</li>
         <li class='truncate'>Document.cookie setter</li>
         <li class='truncate'>Document.cookie getter</li>
         <li class='truncate'>Date.prototype.getTime</li>
-        <li class='truncate'>Navigator.prototype.userAgent</li>
         <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>NavigatorUAData.prototype.getHighEntropyValues</li>
     </ul>
 </div>
 
@@ -142,16 +154,28 @@
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
+            <p><a href="http://www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;atl-external.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;atl-external.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;xdLocalStorage.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;xdLocalStorage.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
             <p><a href="http://www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;launch-d3d1af0c00b2.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;launch-d3d1af0c00b2.min.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://www.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.js</a> (seen on 2 websites)</p>
+            <p><a href="http://cdn.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.js" target="_blank" class="external" rel="noreferrer noopener">cdn.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;5a652d9a8c96&#x2F;EXd059eca63ddb4f679ecd14eb4bc672e2-libraryCode_source.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;5a652d9a8c96&#x2F;EXd059eca63ddb4f679ecd14eb4bc672e2-libraryCode_source.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;aaa3b9e4c6b5&#x2F;EX7c66fcbe611244e29497309c2cc3b37a-libraryCode_source.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;aaa3b9e4c6b5&#x2F;EX7c66fcbe611244e29497309c2cc3b37a-libraryCode_source.min.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;5a652d9a8c96&#x2F;RC1c055a6efe074d56b49d2bd0890e9e81-source.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm3&#x2F;prod&#x2F;97527f1ab2da&#x2F;c210c3150bf2&#x2F;5a652d9a8c96&#x2F;RC1c055a6efe074d56b49d2bd0890e9e81-source.min.js</a> (seen on 2 websites)</p>
+            <p><a href="http://www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;page-to-embed.html" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;page-to-embed.html</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;xdLocalStoragePostMessageApi.min.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;azutils&#x2F;prod&#x2F;atl&#x2F;cross-domain-storage&#x2F;xdLocalStoragePostMessageApi.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.32.js" target="_blank" class="external" rel="noreferrer noopener">www.allianz.de&#x2F;tgm1&#x2F;allianz-deutschland&#x2F;int-allianzde-prod&#x2F;prod&#x2F;utag.32.js</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>

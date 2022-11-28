@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - antwerpen.be</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "antwerpen.be",
+        history: [{"date":"jd/nov-update","prevalence":0.0000131,"sites":2,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/antwerpen.be.ico' width="32" height="32" class='inline-block' /> antwerpen.be</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;16704<small>/27790</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Font</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/antwerpen.be.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cdn</span>, 
+                    <span>visit</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;main.min.css" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;main.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_flexboxgrid_scss&#x2F;1.0.1&#x2F;flexboxgrid.min.css" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_flexboxgrid_scss&#x2F;1.0.1&#x2F;flexboxgrid.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;assets&#x2F;headings.css" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;assets&#x2F;headings.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;assets&#x2F;widgets.css" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;assets&#x2F;widgets.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;assets&#x2F;visit.css" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;assets&#x2F;visit.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-7ad2aac7229b5980.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-7ad2aac7229b5980.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-e4a67534aaf451e8.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-e4a67534aaf451e8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-7925fd33205e6e48.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-7925fd33205e6e48.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-a7859a5ede2b80d0.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-a7859a5ede2b80d0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2852872c-8365a197463ecf88.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2852872c-8365a197463ecf88.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75fc9c18-0b47412940d01f2f.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75fc9c18-0b47412940d01f2f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;611-0a0bdb03a9e4a1fa.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;611-0a0bdb03a9e4a1fa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;283-d343a090e21872db.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;283-d343a090e21872db.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;395-0fcab51bfbe4c860.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;395-0fcab51bfbe4c860.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69-31c33684e29aac3a.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69-31c33684e29aac3a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;gatt1_7BMZaeJ1gIuiCRa&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;gatt1_7BMZaeJ1gIuiCRa&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;gatt1_7BMZaeJ1gIuiCRa&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;gatt1_7BMZaeJ1gIuiCRa&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;463.c46d12a1aba5f18a.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;463.c46d12a1aba5f18a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;e6d30b35.29d183a7e9c5e825.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;e6d30b35.29d183a7e9c5e825.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;596.0049f66405366e2d.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;596.0049f66405366e2d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;691.70d63bb4894cddfe.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;691.70d63bb4894cddfe.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;713.3ba9c866a432d719.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;713.3ba9c866a432d719.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;714.020e14473a8a110f.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;714.020e14473a8a110f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_500.woff" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_500.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;576.b676c9da476f6675.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;576.b676c9da476f6675.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;271.11e03494f12399cb.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;271.11e03494f12399cb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;148.9af783de39ddc2ce.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;148.9af783de39ddc2ce.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19ba8242.0e5f4205a86d6ccc.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19ba8242.0e5f4205a86d6ccc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;34fcc740.ad344ccb9604441f.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;34fcc740.ad344ccb9604441f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;36.775eb31b834a5163.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;36.775eb31b834a5163.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;74.3e60189448a31c50.js" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;74.3e60189448a31c50.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;Antwerpen-Regular.woff" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;Antwerpen-Regular.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_700.woff" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_700.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;mtn&#x2F;metanav.latest.min.js" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;mtn&#x2F;metanav.latest.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://visit.antwerpen.be&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">visit.antwerpen.be&#x2F;graphql</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;4.2.2&#x2F;assets&#x2F;images&#x2F;a-logo.svg" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;4.2.2&#x2F;assets&#x2F;images&#x2F;a-logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_300.woff" target="_blank" class="external" rel="noreferrer noopener">cdn.antwerpen.be&#x2F;core_branding_scss&#x2F;5.0.2&#x2F;assets&#x2F;fonts&#x2F;SunAntwerpen_300.woff</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://visitantwerpen.be" target="_blank" class="external">visitantwerpen.be</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.visitantwerpen.be" target="_blank" class="external">www.visitantwerpen.be</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

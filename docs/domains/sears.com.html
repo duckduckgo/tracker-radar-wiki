@@ -29,6 +29,9 @@
                     <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                         Top 100
                     </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
                 </div>
             </div>
             <div class='relative'>
@@ -41,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "sears.com",
-        history: [{"date":"jd/april-update","prevalence":0.0000208,"sites":3,"fingerprinting":0,"cookies":0}]
+        history: [{"date":"2021.04","prevalence":0.0000208,"sites":3,"fingerprinting":0,"cookies":0},{"date":"2021.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.11","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2021.12","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.01","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.02","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.03","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.04","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.06","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.07","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.09","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2022.10","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"muodov/2022-12","prevalence":0.0000204,"sites":3,"fingerprinting":3,"cookies":0.0000136}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -62,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;12987<small>/22826</small>
+                    <strong>Rank:</strong> &#35;14117<small>/24384</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (3 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 0<small>/3</small> - <span class="fp-0">No use of browser API&#39;s</span>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -76,10 +79,10 @@
                 <li class='py-1'>
                     <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
                     <ul>
-                        <li>time: 0<small>/3</small></li>
-                        <li>size: 0<small>/3</small></li>
-                        <li>CPU: 0<small>/3</small></li>
-                        <li>cache: 0<small>/3</small></li>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
                     </ul>
                 </li>
                 <li class='py-1'>
@@ -88,11 +91,15 @@
                 <li class='py-1'>
                     <strong>Resource Types:</strong> 
                     <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>XHR</span>,
                 </li>
                 <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/sears.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
                 <li class='py-1'>
                     <strong>Subdomains:</strong>
-                    <span>i</span>, 
+                    <span>som</span>, 
+                    <span>www</span>, 
                 </li>
             </ul>
         </div>
@@ -111,13 +118,90 @@
     </div>
 </div>
 
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>WebGLRenderingContext.prototype.getSupportedExtensions</li>
+        <li class='truncate'>DeviceMotionEvent.prototype.rotationRate</li>
+        <li class='truncate'>DeviceMotionEvent.prototype.acceleration</li>
+        <li class='truncate'>DeviceOrientationEvent.prototype.beta</li>
+        <li class='truncate'>DeviceOrientationEvent.prototype.gamma</li>
+        <li class='truncate'>Navigator.prototype.productSub</li>
+        <li class='truncate'>Navigator.prototype.webkitTemporaryStorage</li>
+        <li class='truncate'>DeviceOrientationEvent.prototype.alpha</li>
+        <li class='truncate'>DeviceMotionEvent.prototype.accelerationIncludingGravity</li>
+        <li class='truncate'>Navigator.prototype.mediaDevices</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.storage</li>
+        <li class='truncate'>Screen.prototype.pixelDepth</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Performance.prototype.memory</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.javaEnabled</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
 
 
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
         <li class='break-all'>
-            <p><a href="http://i.sears.com&#x2F;s&#x2F;i&#x2F;spin&#x2F;image&#x2F;spin_prod_207034701" target="_blank" class="external" rel="noreferrer noopener">i.sears.com&#x2F;s&#x2F;i&#x2F;spin&#x2F;image&#x2F;spin_prod_207034701</a> (seen on 2 websites)</p>
+            <p><a href="http://som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s5296529259636" target="_blank" class="external" rel="noreferrer noopener">som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s5296529259636</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s57462368790980" target="_blank" class="external" rel="noreferrer noopener">som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s57462368790980</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s91821185876704" target="_blank" class="external" rel="noreferrer noopener">som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s91821185876704</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s95457699797691" target="_blank" class="external" rel="noreferrer noopener">som.sears.com&#x2F;b&#x2F;ss&#x2F;searscom,searspuertoricocomglobal,searspuertoricocom&#x2F;1&#x2F;JS-2.10.0&#x2F;s95457699797691</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.sears.com&#x2F;static-assets&#x2F;20221213-085038&#x2F;themify.58ecddba064e63f7.woff" target="_blank" class="external" rel="noreferrer noopener">www.sears.com&#x2F;static-assets&#x2F;20221213-085038&#x2F;themify.58ecddba064e63f7.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.sears.com&#x2F;static-assets&#x2F;20221213-085038&#x2F;fontawesome-webfont.e9955780856cf8aa.woff2" target="_blank" class="external" rel="noreferrer noopener">www.sears.com&#x2F;static-assets&#x2F;20221213-085038&#x2F;fontawesome-webfont.e9955780856cf8aa.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.sears.com&#x2F;CkjUy8&#x2F;fi8H&#x2F;QZ&#x2F;rJtQ&#x2F;ZXfywW_IWPU&#x2F;5p3m0cmzYX&#x2F;ExlzTQE&#x2F;NQxVShMp&#x2F;DyMB" target="_blank" class="external" rel="noreferrer noopener">www.sears.com&#x2F;CkjUy8&#x2F;fi8H&#x2F;QZ&#x2F;rJtQ&#x2F;ZXfywW_IWPU&#x2F;5p3m0cmzYX&#x2F;ExlzTQE&#x2F;NQxVShMp&#x2F;DyMB</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.sears.com&#x2F;CkjUy8&#x2F;fi8H&#x2F;QZ&#x2F;rJtQ&#x2F;ZXfywW_IWPU&#x2F;5p3m0cmzYX&#x2F;ExlzTQE&#x2F;NQxVShMp&#x2F;DyMB" target="_blank" class="external" rel="noreferrer noopener">www.sears.com&#x2F;CkjUy8&#x2F;fi8H&#x2F;QZ&#x2F;rJtQ&#x2F;ZXfywW_IWPU&#x2F;5p3m0cmzYX&#x2F;ExlzTQE&#x2F;NQxVShMp&#x2F;DyMB</a> (seen on 2 websites)</p>
         </li>
     </ul>
 </div>
@@ -126,6 +210,12 @@
     <h3 class='section-header'>Sites</h3>
     <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://sears.com.pr" target="_blank" class="external">sears.com.pr</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sears.com.pr" target="_blank" class="external">www.sears.com.pr</a>
+        </li>
         <li class='truncate'>
             <a href="http://searshometownstores.com" target="_blank" class="external">searshometownstores.com</a>
         </li>

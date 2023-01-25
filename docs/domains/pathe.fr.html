@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - pathe.fr</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "pathe.fr",
+        history: [{"date":"jd/jan-23-update","prevalence":0.0000145,"sites":2,"fingerprinting":3,"cookies":0.0000145}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/pathe.fr.ico' width="32" height="32" class='inline-block' /> pathe.fr</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;21915<small>/26016</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Other</span>,
+                    <span>Font</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/pathe.fr.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.vendorSub</li>
+        <li class='truncate'>Navigator.prototype.productSub</li>
+        <li class='truncate'>Navigator.prototype.appCodeName</li>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>Navigator.prototype.getBattery</li>
+        <li class='truncate'>window.screenX</li>
+        <li class='truncate'>window.screenY</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Screen.prototype.pixelDepth</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>CanvasRenderingContext2D.prototype.getImageData</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;didomi&#x2F;cookies-clean.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;didomi&#x2F;cookies-clean.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;styles.efd5eca6f418a44c.css" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;styles.efd5eca6f418a44c.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;akam&#x2F;13&#x2F;7e19041d" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;akam&#x2F;13&#x2F;7e19041d</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;cinemur&#x2F;img&#x2F;icons&#x2F;touchicon-logo.png" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;cinemur&#x2F;img&#x2F;icons&#x2F;touchicon-logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;logo-international-white.svg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;logo-international-white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;ticket-gold.svg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;ticket-gold.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001188&#x2F;poster&#x2F;md&#x2F;318&#x2F;movie&amp;uuid&#x3D;A9C4F5B2-3CD2-471A-9B1A-A367E24CCBAE" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001188&#x2F;poster&#x2F;md&#x2F;318&#x2F;movie&amp;uuid&#x3D;A9C4F5B2-3CD2-471A-9B1A-A367E24CCBAE</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001944&#x2F;poster&#x2F;md&#x2F;37&#x2F;movie&amp;uuid&#x3D;D6020FF0-45F6-4E90-B582-B4D45A0B9AC8" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001944&#x2F;poster&#x2F;md&#x2F;37&#x2F;movie&amp;uuid&#x3D;D6020FF0-45F6-4E90-B582-B4D45A0B9AC8</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004547&#x2F;poster&#x2F;md&#x2F;131&#x2F;movie&amp;uuid&#x3D;CD8F6C51-DFC7-41FE-9E0F-A8394B587887" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004547&#x2F;poster&#x2F;md&#x2F;131&#x2F;movie&amp;uuid&#x3D;CD8F6C51-DFC7-41FE-9E0F-A8394B587887</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003143&#x2F;poster&#x2F;md&#x2F;103&#x2F;movie&amp;uuid&#x3D;A91360E3-3C6A-4F38-AB48-F97867AF0A8E" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003143&#x2F;poster&#x2F;md&#x2F;103&#x2F;movie&amp;uuid&#x3D;A91360E3-3C6A-4F38-AB48-F97867AF0A8E</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003139&#x2F;poster&#x2F;md&#x2F;171&#x2F;movie&amp;uuid&#x3D;91C8589B-9C82-4AF6-A508-6E6F4FFD456E" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003139&#x2F;poster&#x2F;md&#x2F;171&#x2F;movie&amp;uuid&#x3D;91C8589B-9C82-4AF6-A508-6E6F4FFD456E</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004708&#x2F;poster&#x2F;md&#x2F;182&#x2F;movie&amp;uuid&#x3D;D5A924A9-F384-4F7E-8E8C-9D5DD56B7916" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004708&#x2F;poster&#x2F;md&#x2F;182&#x2F;movie&amp;uuid&#x3D;D5A924A9-F384-4F7E-8E8C-9D5DD56B7916</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003716&#x2F;poster&#x2F;md&#x2F;175&#x2F;movie&amp;uuid&#x3D;7B96CAF8-2964-40FE-A45C-0547B40A2B74" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003716&#x2F;poster&#x2F;md&#x2F;175&#x2F;movie&amp;uuid&#x3D;7B96CAF8-2964-40FE-A45C-0547B40A2B74</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005556&#x2F;poster&#x2F;md&#x2F;6&#x2F;movie&amp;uuid&#x3D;C529EB0C-2D81-491E-9718-A15A576A54ED" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005556&#x2F;poster&#x2F;md&#x2F;6&#x2F;movie&amp;uuid&#x3D;C529EB0C-2D81-491E-9718-A15A576A54ED</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004600&#x2F;poster&#x2F;md&#x2F;94&#x2F;movie&amp;uuid&#x3D;A4E5162F-928F-405A-97A0-E13CFF25EF47" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004600&#x2F;poster&#x2F;md&#x2F;94&#x2F;movie&amp;uuid&#x3D;A4E5162F-928F-405A-97A0-E13CFF25EF47</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004137&#x2F;poster&#x2F;md&#x2F;31&#x2F;movie&amp;uuid&#x3D;48DF0B53-1D34-481E-8862-E239A2DCE701" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004137&#x2F;poster&#x2F;md&#x2F;31&#x2F;movie&amp;uuid&#x3D;48DF0B53-1D34-481E-8862-E239A2DCE701</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004463&#x2F;poster&#x2F;md&#x2F;176&#x2F;movie&amp;uuid&#x3D;440530C5-5416-48CC-9248-BD96B0E73B56" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004463&#x2F;poster&#x2F;md&#x2F;176&#x2F;movie&amp;uuid&#x3D;440530C5-5416-48CC-9248-BD96B0E73B56</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004761&#x2F;poster&#x2F;md&#x2F;93&#x2F;movie&amp;uuid&#x3D;A552F183-F997-4227-ADC4-BE258D8CF151" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004761&#x2F;poster&#x2F;md&#x2F;93&#x2F;movie&amp;uuid&#x3D;A552F183-F997-4227-ADC4-BE258D8CF151</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001421&#x2F;poster&#x2F;md&#x2F;312&#x2F;movie&amp;uuid&#x3D;004C38A2-813C-46ED-A756-07034CF73855" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00001421&#x2F;poster&#x2F;md&#x2F;312&#x2F;movie&amp;uuid&#x3D;004C38A2-813C-46ED-A756-07034CF73855</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005333&#x2F;poster&#x2F;md&#x2F;84&#x2F;movie&amp;uuid&#x3D;B8756649-F29E-4BE9-B627-BBBEC2B88D62" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005333&#x2F;poster&#x2F;md&#x2F;84&#x2F;movie&amp;uuid&#x3D;B8756649-F29E-4BE9-B627-BBBEC2B88D62</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004804&#x2F;poster&#x2F;md&#x2F;13&#x2F;movie&amp;uuid&#x3D;6F1EC205-CA01-4E6D-8A21-5036BBE8582F" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004804&#x2F;poster&#x2F;md&#x2F;13&#x2F;movie&amp;uuid&#x3D;6F1EC205-CA01-4E6D-8A21-5036BBE8582F</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004139&#x2F;poster&#x2F;md&#x2F;5&#x2F;mx-4392-8.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004139&#x2F;poster&#x2F;md&#x2F;5&#x2F;mx-4392-8.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003553&#x2F;poster&#x2F;md&#x2F;74&#x2F;movie&amp;uuid&#x3D;A9B35886-8957-4C09-992E-AA0DA85EB90E" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003553&#x2F;poster&#x2F;md&#x2F;74&#x2F;movie&amp;uuid&#x3D;A9B35886-8957-4C09-992E-AA0DA85EB90E</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004006&#x2F;poster&#x2F;md&#x2F;167&#x2F;movie&amp;uuid&#x3D;8DE5E58A-AD5A-42D1-BC9E-E19094F3D2CA" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004006&#x2F;poster&#x2F;md&#x2F;167&#x2F;movie&amp;uuid&#x3D;8DE5E58A-AD5A-42D1-BC9E-E19094F3D2CA</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005434&#x2F;poster&#x2F;md&#x2F;9&#x2F;movie&amp;uuid&#x3D;C52A3011-202F-45BF-AC63-BFBDAC42C3D7" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005434&#x2F;poster&#x2F;md&#x2F;9&#x2F;movie&amp;uuid&#x3D;C52A3011-202F-45BF-AC63-BFBDAC42C3D7</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00002731&#x2F;poster&#x2F;md&#x2F;223&#x2F;movie&amp;uuid&#x3D;6DC701B6-7B22-4B96-8069-3CE5EC201C55" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00002731&#x2F;poster&#x2F;md&#x2F;223&#x2F;movie&amp;uuid&#x3D;6DC701B6-7B22-4B96-8069-3CE5EC201C55</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004697&#x2F;poster&#x2F;md&#x2F;104&#x2F;movie&amp;uuid&#x3D;0E19D475-7A92-435D-A20C-170555908928" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004697&#x2F;poster&#x2F;md&#x2F;104&#x2F;movie&amp;uuid&#x3D;0E19D475-7A92-435D-A20C-170555908928</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004464&#x2F;poster&#x2F;md&#x2F;178&#x2F;movie&amp;uuid&#x3D;6C4F37E5-6113-4395-8919-BF3E204FF6BD" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004464&#x2F;poster&#x2F;md&#x2F;178&#x2F;movie&amp;uuid&#x3D;6C4F37E5-6113-4395-8919-BF3E204FF6BD</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005640&#x2F;poster&#x2F;md&#x2F;1&#x2F;connect-5640-7.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005640&#x2F;poster&#x2F;md&#x2F;1&#x2F;connect-5640-7.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003693&#x2F;poster&#x2F;md&#x2F;366&#x2F;movie&amp;uuid&#x3D;0D0B8B08-A351-460C-9594-31D0B7F769D7" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003693&#x2F;poster&#x2F;md&#x2F;366&#x2F;movie&amp;uuid&#x3D;0D0B8B08-A351-460C-9594-31D0B7F769D7</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004388&#x2F;poster&#x2F;md&#x2F;138&#x2F;movie&amp;uuid&#x3D;A02F3671-1DDE-404C-AC26-E2608B50B9F6" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004388&#x2F;poster&#x2F;md&#x2F;138&#x2F;movie&amp;uuid&#x3D;A02F3671-1DDE-404C-AC26-E2608B50B9F6</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005638&#x2F;poster&#x2F;md&#x2F;2&#x2F;movie&amp;uuid&#x3D;AB2685CC-668C-4620-89EB-0AF12AF2C797" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005638&#x2F;poster&#x2F;md&#x2F;2&#x2F;movie&amp;uuid&#x3D;AB2685CC-668C-4620-89EB-0AF12AF2C797</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004598&#x2F;poster&#x2F;md&#x2F;141&#x2F;movie&amp;uuid&#x3D;B7229A6A-0F3E-46A0-8A81-0516B3847A33" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004598&#x2F;poster&#x2F;md&#x2F;141&#x2F;movie&amp;uuid&#x3D;B7229A6A-0F3E-46A0-8A81-0516B3847A33</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004594&#x2F;poster&#x2F;md&#x2F;104&#x2F;movie&amp;uuid&#x3D;D90F606B-3476-44DC-BC1D-8E78E690AEB9" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004594&#x2F;poster&#x2F;md&#x2F;104&#x2F;movie&amp;uuid&#x3D;D90F606B-3476-44DC-BC1D-8E78E690AEB9</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005695&#x2F;poster&#x2F;md&#x2F;2&#x2F;movie&amp;uuid&#x3D;23F1A668-C279-4FA4-B6F4-BCF3E549A73D" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005695&#x2F;poster&#x2F;md&#x2F;2&#x2F;movie&amp;uuid&#x3D;23F1A668-C279-4FA4-B6F4-BCF3E549A73D</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00002180&#x2F;poster&#x2F;md&#x2F;343&#x2F;movie&amp;uuid&#x3D;391A3B52-8B5A-40C9-AEB6-4529CBCFE832" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00002180&#x2F;poster&#x2F;md&#x2F;343&#x2F;movie&amp;uuid&#x3D;391A3B52-8B5A-40C9-AEB6-4529CBCFE832</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003712&#x2F;poster&#x2F;md&#x2F;79&#x2F;movie&amp;uuid&#x3D;7C2180F8-01ED-4CAF-A690-23ECDC5D16D9" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003712&#x2F;poster&#x2F;md&#x2F;79&#x2F;movie&amp;uuid&#x3D;7C2180F8-01ED-4CAF-A690-23ECDC5D16D9</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004698&#x2F;poster&#x2F;md&#x2F;5&#x2F;movie&amp;uuid&#x3D;378ED67D-1373-4782-A9E0-3306DA0DEDC6" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004698&#x2F;poster&#x2F;md&#x2F;5&#x2F;movie&amp;uuid&#x3D;378ED67D-1373-4782-A9E0-3306DA0DEDC6</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003886&#x2F;poster&#x2F;md&#x2F;263&#x2F;movie&amp;uuid&#x3D;80A87BAD-366E-468C-989F-7EC4A64A29AA" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003886&#x2F;poster&#x2F;md&#x2F;263&#x2F;movie&amp;uuid&#x3D;80A87BAD-366E-468C-989F-7EC4A64A29AA</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004470&#x2F;poster&#x2F;md&#x2F;84&#x2F;movie&amp;uuid&#x3D;5198FF63-824F-4660-8205-81530D5B5688" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004470&#x2F;poster&#x2F;md&#x2F;84&#x2F;movie&amp;uuid&#x3D;5198FF63-824F-4660-8205-81530D5B5688</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005013&#x2F;poster&#x2F;md&#x2F;129&#x2F;movie&amp;uuid&#x3D;1A4B0D8D-2315-4F64-95B1-EADF1470302F" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005013&#x2F;poster&#x2F;md&#x2F;129&#x2F;movie&amp;uuid&#x3D;1A4B0D8D-2315-4F64-95B1-EADF1470302F</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003006&#x2F;poster&#x2F;md&#x2F;8&#x2F;movie&amp;uuid&#x3D;6B4F9778-9DF5-450B-A440-45E3558F8911" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003006&#x2F;poster&#x2F;md&#x2F;8&#x2F;movie&amp;uuid&#x3D;6B4F9778-9DF5-450B-A440-45E3558F8911</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;9101727&#x2F;poster&#x2F;md&#x2F;8&#x2F;film_922620.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;9101727&#x2F;poster&#x2F;md&#x2F;8&#x2F;film_922620.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;9202446&#x2F;poster&#x2F;1639410746455&#x2F;md&#x2F;313&#x2F;film_925962.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;9202446&#x2F;poster&#x2F;1639410746455&#x2F;md&#x2F;313&#x2F;film_925962.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004456&#x2F;poster&#x2F;md&#x2F;173&#x2F;movie&amp;uuid&#x3D;C62EDD71-5880-4C8A-9B85-0BB0A450BD2A" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004456&#x2F;poster&#x2F;md&#x2F;173&#x2F;movie&amp;uuid&#x3D;C62EDD71-5880-4C8A-9B85-0BB0A450BD2A</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003934&#x2F;poster&#x2F;md&#x2F;285&#x2F;movie&amp;uuid&#x3D;2225592B-71C9-4D1F-8BC2-D1C4E8B32724" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00003934&#x2F;poster&#x2F;md&#x2F;285&#x2F;movie&amp;uuid&#x3D;2225592B-71C9-4D1F-8BC2-D1C4E8B32724</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004760&#x2F;poster&#x2F;md&#x2F;199&#x2F;movie&amp;uuid&#x3D;1C266BAB-E813-4C77-9A2D-C05BFF3D9CCE" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004760&#x2F;poster&#x2F;md&#x2F;199&#x2F;movie&amp;uuid&#x3D;1C266BAB-E813-4C77-9A2D-C05BFF3D9CCE</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004579&#x2F;poster&#x2F;md&#x2F;310&#x2F;movie&amp;uuid&#x3D;13893FA3-EBFF-4C3D-9E43-8B7522B96B7C" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004579&#x2F;poster&#x2F;md&#x2F;310&#x2F;movie&amp;uuid&#x3D;13893FA3-EBFF-4C3D-9E43-8B7522B96B7C</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004468&#x2F;poster&#x2F;md&#x2F;81&#x2F;movie&amp;uuid&#x3D;4312D95B-331C-41D3-A6CC-C07A12D42235" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00004468&#x2F;poster&#x2F;md&#x2F;81&#x2F;movie&amp;uuid&#x3D;4312D95B-331C-41D3-A6CC-C07A12D42235</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005229&#x2F;poster&#x2F;md&#x2F;79&#x2F;movie&amp;uuid&#x3D;A8B92E00-B4B1-4935-B878-EC8A318DCDB6" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;alex&#x2F;HO00005229&#x2F;poster&#x2F;md&#x2F;79&#x2F;movie&amp;uuid&#x3D;A8B92E00-B4B1-4935-B878-EC8A318DCDB6</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;movie&#x2F;900068&#x2F;poster&#x2F;1653382346227&#x2F;md&#x2F;68&#x2F;film_8991.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;movie&#x2F;900068&#x2F;poster&#x2F;1653382346227&#x2F;md&#x2F;68&#x2F;film_8991.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;runtime.6d7e203fb6b3f8ce.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;runtime.6d7e203fb6b3f8ce.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;polyfills.d941ca74353dfd7f.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;polyfills.d941ca74353dfd7f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;main.d85af8c04024976d.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;main.d85af8c04024976d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;sprite.svg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;sprite.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Medium.woff2" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Medium.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-ExtraBold.woff2" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-ExtraBold.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Regular.woff2" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Regular.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Bold.woff2" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;fonts&#x2F;Heebo-Bold.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;menu-pass.png" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;assets&#x2F;source&#x2F;img&#x2F;menu-pass.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;home&#x2F;featuring&#x2F;backdrop&#x2F;57271&#x2F;lg&#x2F;1&#x2F;61-dgt-exclusif-ronal-pathe-600x300-avatar-2.jpg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;home&#x2F;featuring&#x2F;backdrop&#x2F;57271&#x2F;lg&#x2F;1&#x2F;61-dgt-exclusif-ronal-pathe-600x300-avatar-2.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;402.d6315311c0b485e9.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;402.d6315311c0b485e9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;497.d8dfa39342ed05f7.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;497.d8dfa39342ed05f7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;common.c9c13ac80e74a183.js" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;common.c9c13ac80e74a183.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;settings" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;settings</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;cinemas" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;cinemas</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;shows" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;shows</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;tags" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;tags</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;versions" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;versions</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;cities" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;cities</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;featured" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;featured</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;akam&#x2F;13&#x2F;pixel_7e19041d" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;akam&#x2F;13&#x2F;pixel_7e19041d</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;api&#x2F;zone&#x2F;idf" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;api&#x2F;zone&#x2F;idf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pathe.fr&#x2F;media&#x2F;files&#x2F;Logos&#x2F;PATHE_LOGO_PRINCIPAL.svg" target="_blank" class="external" rel="noreferrer noopener">www.pathe.fr&#x2F;media&#x2F;files&#x2F;Logos&#x2F;PATHE_LOGO_PRINCIPAL.svg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://cinemaspathegaumont.com" target="_blank" class="external">cinemaspathegaumont.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cinemaspathegaumont.com" target="_blank" class="external">www.cinemaspathegaumont.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

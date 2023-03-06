@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - bike-x.de</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "bike-x.de",
+        history: [{"date":"2023.02","prevalence":0.0000271,"sites":4,"fingerprinting":2,"cookies":0.0000271}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/bike-x.de.ico' width="32" height="32" class='inline-block' /> bike-x.de</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10609<small>/26881</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Preflight</span>,
+                    <span>Fetch</span>,
+                    <span>XHR</span>,
+                    <span>Document</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/bike-x.de.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                    <span>img1</span>, 
+                    <span>privacy</span>, 
+                    <span>page-api</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;0d770ef20052b6b7.css" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;0d770ef20052b6b7.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;aca3696baab3af87.css" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;aca3696baab3af87.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;f1d5a30b5a4d1378.css" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;f1d5a30b5a4d1378.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboolahead.7bc0ddec8a2e91ff.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboolahead.7bc0ddec8a2e91ff.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsdfpheadmobile.b476fc0760d2b12e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsdfpheadmobile.b476fc0760d2b12e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsslots.2aeb9de1725b119d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsslots.2aeb9de1725b119d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;plenigoplus.2dcc0171f5c4515e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;plenigoplus.2dcc0171f5c4515e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstagmanager.4874056ef7ac7e0e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstagmanager.4874056ef7ac7e0e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;structureschemaorg.07c136209980da2e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;structureschemaorg.07c136209980da2e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstracking.59db82290e8ca973.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstracking.59db82290e8ca973.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;metameta.76119a349c88e021.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;metameta.76119a349c88e021.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsmobilenocontainer.7b61d363548c9e59.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsmobilenocontainer.7b61d363548c9e59.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadssimple.76eec553e9c0f6c9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadssimple.76eec553e9c0f6c9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86021.a2430d2f67ed6529.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86021.a2430d2f67ed6529.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23631.07fa96eb58e25f10.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23631.07fa96eb58e25f10.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42713.7929c9d976c83fff.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42713.7929c9d976c83fff.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;13069.47cba81469ebbdd2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;13069.47cba81469ebbdd2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91334.1818fbfbee75e193.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91334.1818fbfbee75e193.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;88441.2d50ef21cae450fe.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;88441.2d50ef21cae450fe.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30876.d54c1c1e9f21e306.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30876.d54c1c1e9f21e306.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;28010.49d2c01a41e6571a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;28010.49d2c01a41e6571a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85538.046b3fdaff33d4cf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85538.046b3fdaff33d4cf.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9246.e68ceb961fb9f2dc.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9246.e68ceb961fb9f2dc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65397.15f0a612603ba7f6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65397.15f0a612603ba7f6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43811.c9d40e75530fa981.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43811.c9d40e75530fa981.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsbanner.cb08cca5b0325e29.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsbanner.cb08cca5b0325e29.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadssky.90c6e1d4b1ca54be.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadssky.90c6e1d4b1ca54be.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23473.6363a12dca9da782.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23473.6363a12dca9da782.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30135.7818cff74237f61a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30135.7818cff74237f61a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsmobile.8ef6cd4ebba0609f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsmobile.8ef6cd4ebba0609f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81129.b641a4a6d8c516d2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81129.b641a4a6d8c516d2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61960.e50a25515586e64d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61960.e50a25515586e64d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10199.b23c3343386e79db.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10199.b23c3343386e79db.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;magazinearticleteasersoulsister.62bf89acd843c6ac.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;magazinearticleteasersoulsister.62bf89acd843c6ac.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;varioussidecolscrolling.0892d4eac5864371.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;varioussidecolscrolling.0892d4eac5864371.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadslayer.b4d5636ea9197a50.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadslayer.b4d5636ea9197a50.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstagmanagertag.96140c1ff0ed207f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;statstagmanagertag.96140c1ff0ed207f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;structurefooter.752c33e3d603195e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;structurefooter.752c33e3d603195e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;53312.5b29c98e2abbbf5a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;53312.5b29c98e2abbbf5a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;20897.3a547a50bd133b95.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;20897.3a547a50bd133b95.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;16790.cdb906a1ba455499.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;16790.cdb906a1ba455499.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58939.58a12d2a68bd8703.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58939.58a12d2a68bd8703.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10577.9765ff51c66a3adc.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10577.9765ff51c66a3adc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboolafooter.f9375e3390fb78a7.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboolafooter.f9375e3390fb78a7.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsaddefend.0428aa0ffc70fa6a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsaddefend.0428aa0ffc70fa6a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-8e9dde78d43759e1.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-8e9dde78d43759e1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-a645bd323c781464.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-a645bd323c781464.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-a6ecde06f1636c1a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-a6ecde06f1636c1a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-9061a1a7756a335a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-9061a1a7756a335a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3310-d0cae831868d83a2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3310-d0cae831868d83a2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11003-feea0e3db8297bb8.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11003-feea0e3db8297bb8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65875-777406873e7b165f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65875-777406873e7b165f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;%5B...speakingUrl%5D-6ce062f14f036e1b.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;%5B...speakingUrl%5D-6ce062f14f036e1b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;EkypCMs5eldd897i9k_gZ&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;EkypCMs5eldd897i9k_gZ&#x2F;_buildManifest.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;EkypCMs5eldd897i9k_gZ&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;EkypCMs5eldd897i9k_gZ&#x2F;_ssgManifest.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;newsletter-bg.37da7d56.jpg" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;newsletter-bg.37da7d56.jpg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-regular.dfd72eab.woff" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-regular.dfd72eab.woff</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-700.cb51f334.woff" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-700.cb51f334.woff</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-800.82ed1d1b.woff" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;raleway-v28-latin-800.82ed1d1b.woff</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95521.f009f333ada8580c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95521.f009f333ada8580c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;50822.1ed137863c456d78.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;50822.1ed137863c456d78.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72165.72f1e3d177c05d4c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72165.72f1e3d177c05d4c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65523.edaf3f6386f7c53e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;65523.edaf3f6386f7c53e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59229.8bfd5008a631f6d1.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59229.8bfd5008a631f6d1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;93229.7839121074720618.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;93229.7839121074720618.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;82281.ca23266231114ee2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;82281.ca23266231114ee2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;80417.9479351d16e3ac37.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;80417.9479351d16e3ac37.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;12477.ca0bc41fef85c207.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;12477.ca0bc41fef85c207.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49994.cee465910722fb64.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49994.cee465910722fb64.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7510.d447678d2412aaa9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7510.d447678d2412aaa9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;67760.6d176b5522e42fbd.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;67760.6d176b5522e42fbd.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95368.2e7ad98e756f056b.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95368.2e7ad98e756f056b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;39135.319065af23442fb8.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;39135.319065af23442fb8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81343.9b6f59390049f4ce.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81343.9b6f59390049f4ce.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;57846.a1b355435f096649.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;57846.a1b355435f096649.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47111.1cd448e51298bd1a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47111.1cd448e51298bd1a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;53347.0f664cf09605ef96.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;53347.0f664cf09605ef96.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85997.8bb0390907e40278.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85997.8bb0390907e40278.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48905.c0847e5f753c3345.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48905.c0847e5f753c3345.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91975.977e6bf279a5be0c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91975.977e6bf279a5be0c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;71077.c2783ad448ef7a96.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;71077.c2783ad448ef7a96.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25270.a5de65069cb4bcfc.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25270.a5de65069cb4bcfc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70628.9fe71c0143afeeeb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70628.9fe71c0143afeeeb.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49595.6260fc16798bf7ed.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49595.6260fc16798bf7ed.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66595.ecd440a047e7e903.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66595.ecd440a047e7e903.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49137.c0876db351a4e240.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49137.c0876db351a4e240.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47854.2fe70f590d6e2e0c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47854.2fe70f590d6e2e0c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;31340.d58fdede14bf2ff9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;31340.d58fdede14bf2ff9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;82082.9ff7c7ab04b37037.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;82082.9ff7c7ab04b37037.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30845.ec567db6e1e34d17.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30845.ec567db6e1e34d17.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8153.4d1b22536d2adb4a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8153.4d1b22536d2adb4a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11015.df630bca8b30fa52.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11015.df630bca8b30fa52.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62679.0bbe90ef578c00bd.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62679.0bbe90ef578c00bd.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58523.be2ef78e079583e8.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58523.be2ef78e079583e8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54535.4bfe4527f9142624.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54535.4bfe4527f9142624.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79686.dc9bec8847dde2eb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79686.dc9bec8847dde2eb.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18950.a8c570f7581fac1e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18950.a8c570f7581fac1e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;76908.54cc75c97bb36691.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;76908.54cc75c97bb36691.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86334.accb7c71cc8a9eab.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86334.accb7c71cc8a9eab.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7105.b47e52a7e3dd4dac.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7105.b47e52a7e3dd4dac.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61658.b3affe325a34f3c4.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61658.b3affe325a34f3c4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95126.c65d15ac41999de2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95126.c65d15ac41999de2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9243.4ab285df2b02379e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9243.4ab285df2b02379e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;51587.3203a341780097ca.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;51587.3203a341780097ca.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72766.7894643e0b480dcf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72766.7894643e0b480dcf.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5970.44d813ac33aa0632.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5970.44d813ac33aa0632.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25210.7a30d24054485f9f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25210.7a30d24054485f9f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;73824.0d2ae9c69afe2359.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;73824.0d2ae9c69afe2359.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79619.3e1aca5056cac706.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79619.3e1aca5056cac706.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78366.68b35298910b8d67.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78366.68b35298910b8d67.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70403.0a857bed6d03b0f3.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70403.0a857bed6d03b0f3.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;89502.91f43c8cf491aa87.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;89502.91f43c8cf491aa87.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95122.dde8f475889f3f92.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95122.dde8f475889f3f92.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;51002.2de0a3a88df476bc.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;51002.2de0a3a88df476bc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;24424.54224acd3a2fc36a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;24424.54224acd3a2fc36a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72641.948a9b0bcf9380c6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;72641.948a9b0bcf9380c6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97071.f45abffff2959a8f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97071.f45abffff2959a8f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;84272.c80fab03cb6fe0d6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;84272.c80fab03cb6fe0d6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47812.6de68f7bdc23632f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47812.6de68f7bdc23632f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62705.cba6a16ea384fce9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62705.cba6a16ea384fce9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;74483.78d41166d5c5310c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;74483.78d41166d5c5310c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75378.4b53f49c8559a03e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75378.4b53f49c8559a03e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18217.70740876574f91df.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18217.70740876574f91df.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90234.0c099008f71300ed.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90234.0c099008f71300ed.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5119.00a5e74b872d5587.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5119.00a5e74b872d5587.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81089.bc58cad26e91425e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81089.bc58cad26e91425e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77519.8b0b267999557f76.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77519.8b0b267999557f76.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;36223.3fc0d8e87e32d8ba.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;36223.3fc0d8e87e32d8ba.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69431.ff1b7dcad4c7ad72.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69431.ff1b7dcad4c7ad72.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5045.ec51a9ab3d19a8b9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5045.ec51a9ab3d19a8b9.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23793.ab81c7c17185af79.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23793.ab81c7c17185af79.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43201.231ef53f33afbb5e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43201.231ef53f33afbb5e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1326.000a575a41ff8e7d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1326.000a575a41ff8e7d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58350.d19270087313396a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58350.d19270087313396a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42396.c6592c688fee3b5d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42396.c6592c688fee3b5d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78580.5822d85a2ab67c4b.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78580.5822d85a2ab67c4b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17176.dfbfab199ec7d5ee.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17176.dfbfab199ec7d5ee.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78635.c581e4be1eff1a7e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78635.c581e4be1eff1a7e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;71150.9aa3b65a40f2e2ab.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;71150.9aa3b65a40f2e2ab.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;88022.2cb8a4f027a1c1c1.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;88022.2cb8a4f027a1c1c1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47227.ae16f346b25a45fa.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47227.ae16f346b25a45fa.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;296.563c8dbe93b9d9e0.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;296.563c8dbe93b9d9e0.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97439.087b6f5a08318c5d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97439.087b6f5a08318c5d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95907.4f37b4b803c42b5c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95907.4f37b4b803c42b5c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61245.ad294ddb0176df20.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61245.ad294ddb0176df20.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66329.3f27fc866e8a0a2b.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66329.3f27fc866e8a0a2b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59100.a68c2e1004b1ae1a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59100.a68c2e1004b1ae1a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;63438.1af2d735f132fd41.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;63438.1af2d735f132fd41.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2940.08d0cdf95e7527f2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2940.08d0cdf95e7527f2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;52016.29e4efc519aa29eb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;52016.29e4efc519aa29eb.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54103.465ee494e83c9b81.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54103.465ee494e83c9b81.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10540.ff982e907ef95fdf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10540.ff982e907ef95fdf.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2827.5b65237a29aa4507.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2827.5b65237a29aa4507.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91759.2baf0d6b0e8adacf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91759.2baf0d6b0e8adacf.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59988.76ec9604c805ddaf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59988.76ec9604c805ddaf.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43267.027e4db372df84c4.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;43267.027e4db372df84c4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22671.3607e97055671823.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22671.3607e97055671823.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85763.efa28cdbae88dbfb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85763.efa28cdbae88dbfb.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11035.58dae0c46a2f3dfc.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11035.58dae0c46a2f3dfc.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;14209.6dc9f848a67b2859.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;14209.6dc9f848a67b2859.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96168.c7d52e2906b2dd77.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96168.c7d52e2906b2dd77.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77071.d941140e90cc7a08.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77071.d941140e90cc7a08.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97848.814deea798988f91.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;97848.814deea798988f91.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48334.749954e05aac2f4a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48334.749954e05aac2f4a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90619.2bc948dd4e88734a.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90619.2bc948dd4e88734a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30874.b4a60c0aaf8bd4ec.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;30874.b4a60c0aaf8bd4ec.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsrectangle.fa6f65e2e1e090ff.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adsadsrectangle.fa6f65e2e1e090ff.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;wrapperMessagingWithoutDetection.js" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;wrapperMessagingWithoutDetection.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;mms&#x2F;v2&#x2F;get_site_data" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;mms&#x2F;v2&#x2F;get_site_data</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;latest-version" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;latest-version</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;latest-version" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;latest-version</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;wrapper&#x2F;tcfv2&#x2F;v2&#x2F;gdpr&#x2F;native-message&#x2F;new-user" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;wrapper&#x2F;tcfv2&#x2F;v2&#x2F;gdpr&#x2F;native-message&#x2F;new-user</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;wrapper&#x2F;tcfv2&#x2F;v2&#x2F;gdpr&#x2F;native-message&#x2F;new-user" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;wrapper&#x2F;tcfv2&#x2F;v2&#x2F;gdpr&#x2F;native-message&#x2F;new-user</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;consent&#x2F;v2&#x2F;data-pipeline&#x2F;pv-data" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;consent&#x2F;v2&#x2F;data-pipeline&#x2F;pv-data</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;consent&#x2F;v2&#x2F;data-pipeline&#x2F;pv-data" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;consent&#x2F;v2&#x2F;data-pipeline&#x2F;pv-data</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;index.html</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;Notice.55a6a.css" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;Notice.55a6a.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;polyfills.d36c5.js" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;polyfills.d36c5.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;Notice.d7427.js" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;Notice.d7427.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;categories" target="_blank" class="external" rel="noreferrer noopener">privacy.bike-x.de&#x2F;consent&#x2F;tcfv2&#x2F;vendor-list&#x2F;categories</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;62c78b16298fe9c8.css" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;62c78b16298fe9c8.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;brandtreeinfo.f562ca4cc15a4e3f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;brandtreeinfo.f562ca4cc15a4e3f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaserbannerimage.62316609da8cc2cd.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaserbannerimage.62316609da8cc2cd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;14405.5691d7065c433ad8.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;14405.5691d7065c433ad8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81347.76f994e497ff0ce1.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81347.76f994e497ff0ce1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75620.0812ce29d9b0004f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75620.0812ce29d9b0004f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85533.b9f8b84f4e2ba0cf.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85533.b9f8b84f4e2ba0cf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrotationwidecolrubric.fd46263c6fb5dbce.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrotationwidecolrubric.fd46263c6fb5dbce.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25653.31fe6f74766a80e2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;25653.31fe6f74766a80e2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59415.f303dd886ba57947.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59415.f303dd886ba57947.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54917.faa40e0713392820.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54917.faa40e0713392820.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;702.2e8d56c740c893ec.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;702.2e8d56c740c893ec.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsannouncement.279e7e94c78f86ae.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsannouncement.279e7e94c78f86ae.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8957.14685ce6572db217.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8957.14685ce6572db217.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricindex.c185296863a301f6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricindex.c185296863a301f6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaserpopularfotoshows.31a445770ee1e265.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaserpopularfotoshows.31a445770ee1e265.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleinlinecontenttable.eae0d95ba2d2db45.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleinlinecontenttable.eae0d95ba2d2db45.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaservarious.b33a12fb77189caa.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;teaservarious.b33a12fb77189caa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35903.40ca16cc4111fbef.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35903.40ca16cc4111fbef.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricnew2colsteaser.d4bf5e8f59852ab2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricnew2colsteaser.d4bf5e8f59852ab2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleinlinepaid.7f2c5b8dbbd1857b.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleinlinepaid.7f2c5b8dbbd1857b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricnew4colsteaser.7f3faddcb3e87de9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;listsrubricnew4colsteaser.7f3faddcb3e87de9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49028.e5e1db85e2def9cb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;49028.e5e1db85e2def9cb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;60676.37a61de40e0d62a6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;60676.37a61de40e0d62a6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboola.1198d14770e90db2.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;adstaboola.1198d14770e90db2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleteaserreadalso.5a7dc9c9dc93d0b7.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleteaserreadalso.5a7dc9c9dc93d0b7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleteasertopteaser.69cc40b32c80f0f7.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articleteasertopteaser.69cc40b32c80f0f7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;magazinearticleteaser.e8241ffce8ea8e33.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;magazinearticleteaser.e8241ffce8ea8e33.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articlerelatedtopics.6c1314935be64da9.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;articlerelatedtopics.6c1314935be64da9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Apples-App-Karten-Maps-Fahrradnavigation-bottomMobile-36f7c064-1977227.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Apples-App-Karten-Maps-Fahrradnavigation-bottomMobile-36f7c064-1977227.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Winterhandschuh-Test-bottomMobile-e3c4e3-1752685.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Winterhandschuh-Test-bottomMobile-e3c4e3-1752685.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;image-bottomMobile-a6abcb4e-1964962.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;image-bottomMobile-a6abcb4e-1964962.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;24078.a7b0b35cf07a8c8c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;24078.a7b0b35cf07a8c8c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;55861.e4a5dcbe70724f5e.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;55861.e4a5dcbe70724f5e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;16551.71e8f6c9d0d283fb.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;16551.71e8f6c9d0d283fb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90177.57c4e2d54bdaace6.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90177.57c4e2d54bdaace6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22734.e0921a26ae14d336.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22734.e0921a26ae14d336.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54632.b3cbb87740988620.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;54632.b3cbb87740988620.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1298.8e07007af5054031.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1298.8e07007af5054031.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2141.2847dc4a1eb1385d.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2141.2847dc4a1eb1385d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;94099.b56d8bc90ab6cfe7.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;94099.b56d8bc90ab6cfe7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;MOUNTAINBIKE-03-203-magazineTeaser-8706e67e-1971988.png" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;MOUNTAINBIKE-03-203-magazineTeaser-8706e67e-1971988.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19018.26d7527593987628.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19018.26d7527593987628.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77715.09cd56b4b5df18a4.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;77715.09cd56b4b5df18a4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47589.d9130d937853ed88.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47589.d9130d937853ed88.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96509.b80a344f634c0394.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96509.b80a344f634c0394.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18830.8e76cfdd11d2645f.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;18830.8e76cfdd11d2645f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61366.05126c739b177298.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61366.05126c739b177298.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;176.6ec8aac91ca7bf62.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;176.6ec8aac91ca7bf62.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;149.84c9e487e082f026.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;149.84c9e487e082f026.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70365.4029256254e9e700.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70365.4029256254e9e700.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Bicycle-tyres-bottomMobile-926f8e34-1933635.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Bicycle-tyres-bottomMobile-926f8e34-1933635.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35674.a141e9a56260b35c.js" target="_blank" class="external" rel="noreferrer noopener">www.bike-x.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35674.a141e9a56260b35c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;BikeX-Aufmacher-169TopTeaser-a6fc923d-1975820.png" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;BikeX-Aufmacher-169TopTeaser-a6fc923d-1975820.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Bicycle-tyres-169TopTeaser-a3d551fb-1933635.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Bicycle-tyres-169TopTeaser-a3d551fb-1933635.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Werkzeug-Sets-im-Test-11-2021-169TopTeaser-6c681161-1865114.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Werkzeug-Sets-im-Test-11-2021-169TopTeaser-6c681161-1865114.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Winterhandschuh-Test-169TopTeaser-31591b2c-1752685.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Winterhandschuh-Test-169TopTeaser-31591b2c-1752685.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;MB-Standpumpen-Test-2021-169TopTeaser-d118cd92-1766173.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;MB-Standpumpen-Test-2021-169TopTeaser-d118cd92-1766173.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;Apples-App-Karten-Maps-Fahrradnavigation-169FullWidth-bd72cd56-1977227.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;Apples-App-Karten-Maps-Fahrradnavigation-169FullWidth-bd72cd56-1977227.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img1.bike-x.de&#x2F;image-169FullWidth-2d2ec67c-1964962.jpg" target="_blank" class="external" rel="noreferrer noopener">img1.bike-x.de&#x2F;image-169FullWidth-2d2ec67c-1964962.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://page-api.bike-x.de&#x2F;irelements&#x2F;element" target="_blank" class="external" rel="noreferrer noopener">page-api.bike-x.de&#x2F;irelements&#x2F;element</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://page-api.bike-x.de&#x2F;irelements&#x2F;element" target="_blank" class="external" rel="noreferrer noopener">page-api.bike-x.de&#x2F;irelements&#x2F;element</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://mountainbike-magazin.de" target="_blank" class="external">mountainbike-magazin.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mountainbike-magazin.de" target="_blank" class="external">www.mountainbike-magazin.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.roadbike.de" target="_blank" class="external">www.roadbike.de</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

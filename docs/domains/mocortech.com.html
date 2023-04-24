@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - mocortech.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "mocortech.com",
+        history: [{"date":"2023.04","prevalence":0.0000136,"sites":2,"fingerprinting":3,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/mocortech.com.ico' width="32" height="32" class='inline-block' /> mocortech.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;22607<small>/27609</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Media</span>,
+                    <span>Other</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/mocortech.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>static</span>, 
+                    <span>videos</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>CanvasRenderingContext2D.prototype.isPointInPath</li>
+        <li class='truncate'>Screen.prototype.availTop</li>
+        <li class='truncate'>OfflineAudioContext.prototype.constructor</li>
+        <li class='truncate'>AudioBuffer.prototype.getChannelData</li>
+        <li class='truncate'>Screen.prototype.availLeft</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-color-scheme&quot;)</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;fb99f46eec09b350.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;fb99f46eec09b350.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-065f6b9b94c263dc.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-065f6b9b94c263dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-c4c4759fc48e925f.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-c4c4759fc48e925f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-edb81959b78811fd.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-edb81959b78811fd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-69dfccd06965ebe7.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-69dfccd06965ebe7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fec483df-35c66e96f3f92f60.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fec483df-35c66e96f3f92f60.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70349-5f9c501d4fcb4add.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70349-5f9c501d4fcb4add.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42922-8bb8bc754837bf56.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42922-8bb8bc754837bf56.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;29906-c95d44568a6eeea6.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;29906-c95d44568a6eeea6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81979-d5ec51983f80e1d4.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81979-d5ec51983f80e1d4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42685-d8dae10746e874ce.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;42685-d8dae10746e874ce.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58665-9bae7546928ebe82.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58665-9bae7546928ebe82.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-463ea217be77d970.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-463ea217be77d970.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;K-Z2Pchv00CVBGd8FOMsO&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;K-Z2Pchv00CVBGd8FOMsO&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;K-Z2Pchv00CVBGd8FOMsO&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;K-Z2Pchv00CVBGd8FOMsO&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://videos.mocortech.com&#x2F;ValueFilm-English.mp4" target="_blank" class="external" rel="noreferrer noopener">videos.mocortech.com&#x2F;ValueFilm-English.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;92145-2ff0bf94448d931d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;92145-2ff0bf94448d931d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;38743-edc9c137ab8f1b5f.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;38743-edc9c137ab8f1b5f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70511-b6cfb3c727d812eb.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;70511-b6cfb3c727d812eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;exchange&#x2F;%5Bsymbol%5D-c750b393b10cce3c.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;exchange&#x2F;%5Bsymbol%5D-c750b393b10cce3c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48789-433a2c6296fd6a9d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48789-433a2c6296fd6a9d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;markets&#x2F;%5B%5B...market%5D%5D-45efc868136689f0.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;markets&#x2F;%5B%5B...market%5D%5D-45efc868136689f0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;433-b27f0df69dbf8c44.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;433-b27f0df69dbf8c44.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-mday-865333cb39c2987d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-mday-865333cb39c2987d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;download-cb9a3e334e21a3e2.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;download-cb9a3e334e21a3e2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;87387-19792fcb7d649c2c.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;87387-19792fcb7d649c2c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75207-8a7e48746507bf08.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75207-8a7e48746507bf08.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59266-50b7a6d63d69ca85.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59266-50b7a6d63d69ca85.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17713-b29cb54adde9e1ff.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17713-b29cb54adde9e1ff.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-8c4cfd25821529d6.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-8c4cfd25821529d6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23578-51b67bc335db2314.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23578-51b67bc335db2314.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-activity&#x2F;bonus-4e1548b90c86dd19.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-activity&#x2F;bonus-4e1548b90c86dd19.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22064-182d03cdb1bb8fa4.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22064-182d03cdb1bb8fa4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;mx-37103e558756a71a.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;mx-37103e558756a71a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;launchpads&#x2F;assessment-9d22a35fbefc5997.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;launchpads&#x2F;assessment-9d22a35fbefc5997.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83518-d77730bf3d8b8c7b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83518-d77730bf3d8b8c7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;sun&#x2F;assessment-f6c35b4f611b6b4e.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;sun&#x2F;assessment-f6c35b4f611b6b4e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58382-6c3d7239cbe6e278.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58382-6c3d7239cbe6e278.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;staking-afc1fb60ec88e4a9.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;staking-afc1fb60ec88e4a9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19141-b4d149724886ec8b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19141-b4d149724886ec8b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;earn&#x2F;trademining-59c63cecb423c904.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;earn&#x2F;trademining-59c63cecb423c904.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69105-f63b2e1ce73dc1b1.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69105-f63b2e1ce73dc1b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-ETF-d4bdfb384e263d81.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-ETF-d4bdfb384e263d81.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95290-f034cbb2cacdb086.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95290-f034cbb2cacdb086.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-etfs-legend&#x2F;%5B%5B...activity%5D%5D-c81919e54ded4a4b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-etfs-legend&#x2F;%5B%5B...activity%5D%5D-c81919e54ded4a4b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79984-737a4abf77c48f55.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79984-737a4abf77c48f55.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75234-bcea7dbcd8c1a965.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75234-bcea7dbcd8c1a965.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;learn-6d815e2d119a6237.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;learn-6d815e2d119a6237.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11533-4458d65e54fb531d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11533-4458d65e54fb531d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90395-94bbaa85b6d8d27b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90395-94bbaa85b6d8d27b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;register-ff4d36420c16c5de.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;register-ff4d36420c16c5de.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;1c434502c75c297e.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;1c434502c75c297e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48789-433a2c6296fd6a9d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;48789-433a2c6296fd6a9d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;markets&#x2F;%5B%5B...market%5D%5D-45efc868136689f0.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;markets&#x2F;%5B%5B...market%5D%5D-45efc868136689f0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;d6aa45bbdd071186.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;d6aa45bbdd071186.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;433-b27f0df69dbf8c44.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;433-b27f0df69dbf8c44.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-mday-865333cb39c2987d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-mday-865333cb39c2987d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;e34e25fe11bea537.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;e34e25fe11bea537.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;download-cb9a3e334e21a3e2.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;download-cb9a3e334e21a3e2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;9986bf154f9f35dc.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;9986bf154f9f35dc.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;c2d90a9d5ef6ba27.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;c2d90a9d5ef6ba27.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75207-8a7e48746507bf08.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75207-8a7e48746507bf08.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59266-50b7a6d63d69ca85.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;59266-50b7a6d63d69ca85.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17713-b29cb54adde9e1ff.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;17713-b29cb54adde9e1ff.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-8c4cfd25821529d6.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-8c4cfd25821529d6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;6f6fedb15eb4570a.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;6f6fedb15eb4570a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23578-51b67bc335db2314.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;23578-51b67bc335db2314.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-activity&#x2F;bonus-4e1548b90c86dd19.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;futures-activity&#x2F;bonus-4e1548b90c86dd19.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;689279c635fd8038.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;689279c635fd8038.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22064-182d03cdb1bb8fa4.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;22064-182d03cdb1bb8fa4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;mx-37103e558756a71a.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;mx-37103e558756a71a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;33a2fb5323614ef8.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;33a2fb5323614ef8.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;launchpads&#x2F;assessment-9d22a35fbefc5997.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;launchpads&#x2F;assessment-9d22a35fbefc5997.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;4ff61e296362b8ff.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;4ff61e296362b8ff.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83518-d77730bf3d8b8c7b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83518-d77730bf3d8b8c7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;sun&#x2F;assessment-f6c35b4f611b6b4e.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;sun&#x2F;assessment-f6c35b4f611b6b4e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;69b1dad2584a3494.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;69b1dad2584a3494.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58382-6c3d7239cbe6e278.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58382-6c3d7239cbe6e278.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;staking-afc1fb60ec88e4a9.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;staking-afc1fb60ec88e4a9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;eb41eed83557438f.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;eb41eed83557438f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19141-b4d149724886ec8b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;19141-b4d149724886ec8b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;earn&#x2F;trademining-59c63cecb423c904.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;earn&#x2F;trademining-59c63cecb423c904.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;e2c25753535dd5a0.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;e2c25753535dd5a0.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69105-f63b2e1ce73dc1b1.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;69105-f63b2e1ce73dc1b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-ETF-d4bdfb384e263d81.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-ETF-d4bdfb384e263d81.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;597e4208635117b3.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;597e4208635117b3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95290-f034cbb2cacdb086.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95290-f034cbb2cacdb086.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-etfs-legend&#x2F;%5B%5B...activity%5D%5D-c81919e54ded4a4b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;leveraged-etfs-legend&#x2F;%5B%5B...activity%5D%5D-c81919e54ded4a4b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;05ffaf7861db473e.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;05ffaf7861db473e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79984-737a4abf77c48f55.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;79984-737a4abf77c48f55.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75234-bcea7dbcd8c1a965.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75234-bcea7dbcd8c1a965.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;learn-6d815e2d119a6237.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;learn-6d815e2d119a6237.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;40165ed7e7d88933.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;40165ed7e7d88933.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11533-4458d65e54fb531d.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;11533-4458d65e54fb531d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90395-94bbaa85b6d8d27b.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;90395-94bbaa85b6d8d27b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;register-ff4d36420c16c5de.js" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;register-ff4d36420c16c5de.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;2fce235374ac3394.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;2fce235374ac3394.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;bc6080df8082aa3c.css" target="_blank" class="external" rel="noreferrer noopener">static.mocortech.com&#x2F;www&#x2F;_next&#x2F;static&#x2F;css&#x2F;bc6080df8082aa3c.css</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://mexc.com" target="_blank" class="external">mexc.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mexc.com" target="_blank" class="external">www.mexc.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

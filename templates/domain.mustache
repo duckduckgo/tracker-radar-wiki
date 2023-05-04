@@ -112,6 +112,24 @@
 </div>
 {{/cnames.length}}
 
+{{#topInitiators.length}}
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+    {{#topInitiators}}
+        <li class='truncate'>
+            {{#firstParty}}
+            <p>first party - {{percentage}}% of loads</p>
+            {{/firstParty}}
+            {{^firstParty}}
+            <p><a href="./{{domain}}.html" target="_blank">{{domain}}</a> - {{percentage}}% of loads</p>
+            {{/firstParty}}
+        </li>
+    {{/topInitiators}}
+    </ul>
+</div>
+{{/topInitiators.length}}
+
 <div class='p-5'>
     <h3 class='section-header'>Resources Found</h3>
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>

@@ -102,6 +102,13 @@ domainFiles.forEach(({file, resolvedPath}) => {
     data.types = data.types ? Object.keys(data.types) : [];
     data.rank = domainRanks[data.domain];
     data.totalDomains = prevalenceList.length;
+    data.topInitiators = data.topInitiators ? data.topInitiators.map(item => {
+        return {
+            firstParty: (item.domain === 'first party'),
+            domain: item.domain,
+            percentage: (item.prevalence * 100).toFixed(2)
+        }
+    }) : [];
 
     if (data.owner && data.owner.name) {
         data.owner.filename = escapeEntityName(data.owner.name);
@@ -145,6 +152,8 @@ domainFiles.forEach(({file, resolvedPath}) => {
         category.domains.push(data.domain);
         categories.set(catName, category);
     });
+
+
 
     const writePath = path.join(config.domainPagesPath, `${data.domain}.html`);
     fs.writeFileSync(writePath, output, writeFileCallback.bind(null, writePath));

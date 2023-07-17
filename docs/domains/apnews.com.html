@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - apnews.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "apnews.com",
+        history: [{"date":"2023.07","prevalence":0.000129,"sites":19,"fingerprinting":2,"cookies":0.0000681}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/apnews.com.ico' width="32" height="32" class='inline-block' /> apnews.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/The Associated Press.html">The Associated Press</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;4137<small>/24352</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.01&#37; (19 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.01&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Document</span>,
+                    <span>Font</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/apnews.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>assets</span>, 
+                    <span>dims</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 53.19% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./apnews.com.html">apnews.com</a> - 40.43% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./rackcdn.com.html">rackcdn.com</a> - 6.38% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APVarW05-Regular.3c0c9d016bf55b85d0800dd405b807e3.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APVarW05-Regular.3c0c9d016bf55b85d0800dd405b807e3.woff2</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;styles&#x2F;default&#x2F;All.min.447c9b70d5a2a83651ffa4ccb03af08f.gz.css" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;styles&#x2F;default&#x2F;All.min.447c9b70d5a2a83651ffa4ccb03af08f.gz.css</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;webcomponents-loader&#x2F;webcomponents-loader.ce44f83d1399e8dd41e607b70e0642c9.gz.js" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;webcomponents-loader&#x2F;webcomponents-loader.ce44f83d1399e8dd41e607b70e0642c9.gz.js</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;styles&#x2F;default&#x2F;All.min.599fb83081ba86c4a051e8e1dc25f9b1.gz.js" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;styles&#x2F;default&#x2F;All.min.599fb83081ba86c4a051e8e1dc25f9b1.gz.js</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;fa&#x2F;ba&#x2F;9258a7114f5ba5c7202aaa1bdd66&#x2F;aplogo.svg" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;fa&#x2F;ba&#x2F;9258a7114f5ba5c7202aaa1bdd66&#x2F;aplogo.svg</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dims.apnews.com&#x2F;dims4&#x2F;default&#x2F;deb77e2&#x2F;2147483647&#x2F;strip&#x2F;true&#x2F;crop&#x2F;992x617+0+0&#x2F;resize&#x2F;225x140!&#x2F;format&#x2F;webp&#x2F;quality&#x2F;90&#x2F;" target="_blank" class="external" rel="noreferrer noopener">dims.apnews.com&#x2F;dims4&#x2F;default&#x2F;deb77e2&#x2F;2147483647&#x2F;strip&#x2F;true&#x2F;crop&#x2F;992x617+0+0&#x2F;resize&#x2F;225x140!&#x2F;format&#x2F;webp&#x2F;quality&#x2F;90&#x2F;</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-SemiCondensed.d6d1dd4cf415654d766572b8828ac316.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-SemiCondensed.d6d1dd4cf415654d766572b8828ac316.woff2</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-Regular.554b177de19fb126118d8d529f17aa6b.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-Regular.554b177de19fb126118d8d529f17aa6b.woff2</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-SemiCondensedBold.fcbedb6a106dddd6fdfef5877e011259.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-SemiCondensedBold.fcbedb6a106dddd6fdfef5877e011259.woff2</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-CondensedBold.6e5f3d10491d025b55a82beebf812af9.woff2" target="_blank" class="external" rel="noreferrer noopener">assets.apnews.com&#x2F;resource&#x2F;00000188-2a81-d28a-a1fd-7bfb6ccb0000&#x2F;assets&#x2F;fonts&#x2F;APCustomFont&#x2F;APW05-CondensedBold.6e5f3d10491d025b55a82beebf812af9.woff2</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apnews.com&#x2F;hub&#x2F;auto-racing" target="_blank" class="external" rel="noreferrer noopener">apnews.com&#x2F;hub&#x2F;auto-racing</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apnews.com&#x2F;hub&#x2F;college-basketball" target="_blank" class="external" rel="noreferrer noopener">apnews.com&#x2F;hub&#x2F;college-basketball</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apnews.com&#x2F;hub&#x2F;nfl" target="_blank" class="external" rel="noreferrer noopener">apnews.com&#x2F;hub&#x2F;nfl</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apnews.com&#x2F;hub&#x2F;college-basketball" target="_blank" class="external" rel="noreferrer noopener">apnews.com&#x2F;hub&#x2F;college-basketball</a> (seen on 3 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://monvalleyindependent.com" target="_blank" class="external">monvalleyindependent.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hometownsource.com" target="_blank" class="external">www.hometownsource.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.paducahsun.com" target="_blank" class="external">www.paducahsun.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://benningtonbanner.com" target="_blank" class="external">benningtonbanner.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cecildaily.com" target="_blank" class="external">www.cecildaily.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ktsa.com" target="_blank" class="external">www.ktsa.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.manchesterjournal.com" target="_blank" class="external">www.manchesterjournal.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.somdnews.com" target="_blank" class="external">www.somdnews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.stardem.com" target="_blank" class="external">www.stardem.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.state-journal.com" target="_blank" class="external">www.state-journal.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bhpioneer.com" target="_blank" class="external">www.bhpioneer.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.benningtonbanner.com" target="_blank" class="external">www.benningtonbanner.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.post-gazette.com" target="_blank" class="external">www.post-gazette.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.robesonian.com" target="_blank" class="external">www.robesonian.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.theunion.com" target="_blank" class="external">www.theunion.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.toledoblade.com" target="_blank" class="external">www.toledoblade.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://post-gazette.com" target="_blank" class="external">post-gazette.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

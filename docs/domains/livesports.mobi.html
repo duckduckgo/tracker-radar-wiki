@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - livesports.mobi</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "livesports.mobi",
+        history: [{"date":"2023.07","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/livesports.mobi.ico' width="32" height="32" class='inline-block' /> livesports.mobi</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;12334<small>/27865</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/livesports.mobi.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cfstatic3rd</span>, 
+                    <span>cfstatic2nd</span>, 
+                    <span>cfstatic1st</span>, 
+                    <span>dapi</span>, 
+                    <span>cfapi</span>, 
+                    <span>cfcdn</span>, 
+                    <span>betapi</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;5bd0246.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;5bd0246.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;fceb692.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;fceb692.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;logo.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;logo.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-caret-bottom.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-caret-bottom.png</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;config&#x2F;get" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;config&#x2F;get</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;checkin" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;checkin</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;servertimes" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;servertimes</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;gg" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;gg</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;vc" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;vc</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dapi.livesports.mobi&#x2F;api&#x2F;merge&#x2F;schedules" target="_blank" class="external" rel="noreferrer noopener">dapi.livesports.mobi&#x2F;api&#x2F;merge&#x2F;schedules</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://betapi.livesports.mobi&#x2F;FootballQuiz&#x2F;List" target="_blank" class="external" rel="noreferrer noopener">betapi.livesports.mobi&#x2F;FootballQuiz&#x2F;List</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;ab76993.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;ab76993.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;056ebfese7.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;056ebfese7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;7495cfese29.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;7495cfese29.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;07bab47se6.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;07bab47se6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;fff6a31.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;fff6a31.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;de0566ese22.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;de0566ese22.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;2144b92se0.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;2144b92se0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;63ee2c3.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;63ee2c3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;e7908aase2.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;e7908aase2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;1432296.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;1432296.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;4def429se31.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;4def429se31.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;4c8a88e.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;4c8a88e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;40a62b9se1.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;40a62b9se1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;ab4f8d0.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;ab4f8d0.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;a497ab5se3.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;a497ab5se3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_mergetype_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_mergetype_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_football_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_football_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_basketball_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_basketball_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_others_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_others_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_tab_favorites_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_tab_favorites_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_select2_sports_inactive.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_select2_sports_inactive.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_schedule2.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_schedule2.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_collect_inactive.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_collect_inactive.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_h_bookmark_website.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_h_bookmark_website.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_18v2.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_18v2.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_telegram.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_telegram.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_android.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_footer_android.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;site&#x2F;icon_logo_8se.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;site&#x2F;icon_logo_8se.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;contact.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;contact.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_setting.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_setting.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_search_team.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_search_team.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;720888fse4.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic3rd.livesports.mobi&#x2F;_nuxt&#x2F;720888fse4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_mergetype_active.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_mergetype_active.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-tipsmsg-close.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-tipsmsg-close.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_backtop.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_backtop.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;link&#x2F;icon_link_logo.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;link&#x2F;icon_link_logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;link&#x2F;icon_link_close.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;link&#x2F;icon_link_close.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfapi.livesports.mobi&#x2F;gate7b300d50dc7c51c1_c5cdde57ec7a21b3_d38a207618ebe94a99914b932b&#x2F;api&#x2F;merge&#x2F;changes" target="_blank" class="external" rel="noreferrer noopener">cfapi.livesports.mobi&#x2F;gate7b300d50dc7c51c1_c5cdde57ec7a21b3_d38a207618ebe94a99914b932b&#x2F;api&#x2F;merge&#x2F;changes</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfapi.livesports.mobi&#x2F;gate3e530b77c4c95f2168a0ec33e5&#x2F;api&#x2F;merge&#x2F;getMatchChannels" target="_blank" class="external" rel="noreferrer noopener">cfapi.livesports.mobi&#x2F;gate3e530b77c4c95f2168a0ec33e5&#x2F;api&#x2F;merge&#x2F;getMatchChannels</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfapi.livesports.mobi&#x2F;gatebdda2d48a1ecf23457783474e0&#x2F;api&#x2F;getFocusMatch" target="_blank" class="external" rel="noreferrer noopener">cfapi.livesports.mobi&#x2F;gatebdda2d48a1ecf23457783474e0&#x2F;api&#x2F;getFocusMatch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;05830bb9-2277-470d-83ac-34736c865e36.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;05830bb9-2277-470d-83ac-34736c865e36.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_hot_live.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_hot_live.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_arrow_right.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_arrow_right.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;ea6dbe50-3898-4264-baa5-71a6abcb4214.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;ea6dbe50-3898-4264-baa5-71a6abcb4214.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;891b6d43-976c-40eb-988c-62ad68ca33e4.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;891b6d43-976c-40eb-988c-62ad68ca33e4.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;cefb1a2d-e9a5-4697-82ce-e8d8b0114421.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;cefb1a2d-e9a5-4697-82ce-e8d8b0114421.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;channel_h.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;channel_h.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;93d880d0-a9fe-4055-927c-4ad260579ef8.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;93d880d0-a9fe-4055-927c-4ad260579ef8.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;e6887ee3-10ab-44b2-842a-6c84933088f8.jpg" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;svimg&#x2F;e6887ee3-10ab-44b2-842a-6c84933088f8.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://betapi.livesports.mobi&#x2F;FootballQuizMaster" target="_blank" class="external" rel="noreferrer noopener">betapi.livesports.mobi&#x2F;FootballQuizMaster</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_league_arrow.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_league_arrow.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230530103849805_708700.png" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230530103849805_708700.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;b&#x2F;icon_b_c.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;b&#x2F;icon_b_c.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;b&#x2F;icon_b_f.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;b&#x2F;icon_b_f.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230712071842888_806994.png" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230712071842888_806994.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230627212625802_751076.png" target="_blank" class="external" rel="noreferrer noopener">cfcdn.livesports.mobi&#x2F;prod&#x2F;sports&#x2F;useravatar&#x2F;20230627212625802_751076.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;football.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;football.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfapi.livesports.mobi&#x2F;gate3e530b77c4c95f21bf9a629953&#x2F;api&#x2F;merge&#x2F;getMatchChannels" target="_blank" class="external" rel="noreferrer noopener">cfapi.livesports.mobi&#x2F;gate3e530b77c4c95f21bf9a629953&#x2F;api&#x2F;merge&#x2F;getMatchChannels</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_football_active.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_sptab2_football_active.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_select2_sports_active.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_select2_sports_active.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_com_banner2_pc.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;icon_com_banner2_pc.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;47f1d0d.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;47f1d0d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;a93f773se5.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;a93f773se5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;2d13bcfse27.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;2d13bcfse27.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;6f45543se4.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;6f45543se4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;7519d5f.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;7519d5f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;3c4eae0se18.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;3c4eae0se18.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;e569d07.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;e569d07.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;eb3b800se32.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;eb3b800se32.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;d875262.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;d875262.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;2547735se3.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;2547735se3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;220882a.css" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;css&#x2F;220882a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;339827fse2.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;339827fse2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;telegram.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;3rd&#x2F;telegram.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-ad.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-ad.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-football.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-football.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-basketball.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-basketball.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-others.svg" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-others.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;ea4fda3se0.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;ea4fda3se0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;719756bse34.js" target="_blank" class="external" rel="noreferrer noopener">cfstatic2nd.livesports.mobi&#x2F;_nuxt&#x2F;719756bse34.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-backtop.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-backtop.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfapi.livesports.mobi&#x2F;gateb7f851a50eac5f6a_b7f851a50eac5f6a_20ebdb1fe3b9680599914b932b&#x2F;api&#x2F;merge&#x2F;changes" target="_blank" class="external" rel="noreferrer noopener">cfapi.livesports.mobi&#x2F;gateb7f851a50eac5f6a_b7f851a50eac5f6a_20ebdb1fe3b9680599914b932b&#x2F;api&#x2F;merge&#x2F;changes</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-live.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-live.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-live.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-live.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-follow.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-follow.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-time-ongoing.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;2nd&#x2F;icon-time-ongoing.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-football-active.png" target="_blank" class="external" rel="noreferrer noopener">cfstatic1st.livesports.mobi&#x2F;img&#x2F;icon-football-active.png</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://808scoretv.com" target="_blank" class="external">808scoretv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.808scoretv.com" target="_blank" class="external">www.808scoretv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.livesports088.com" target="_blank" class="external">www.livesports088.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://livesports088.com" target="_blank" class="external">livesports088.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - magsrv.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "magsrv.com",
+        history: [{"date":"2023.08","prevalence":0.014,"sites":2069,"fingerprinting":2,"cookies":0.0133}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/magsrv.com.ico' width="32" height="32" class='inline-block' /> magsrv.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;250<small>/27791</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 1.40&#37; (2069 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 1.33&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>XHR</span>,
+                    <span>Document</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                    <span>Preflight</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/magsrv.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>a</span>, 
+                    <span>s</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>NavigatorUAData.prototype.getHighEntropyValues</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 59.01% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./perfecttitspics.com.html">perfecttitspics.com</a> - 4.43% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./showmeyouradsnow.com.html">showmeyouradsnow.com</a> - 2.79% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./clivetadds.com.html">clivetadds.com</a> - 2.34% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./blg-1216lb.com.html">blg-1216lb.com</a> - 1.82% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./pornvideotop.com.html">pornvideotop.com</a> - 1.74% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./pinetq.com.html">pinetq.com</a> - 1.62% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./a11k.com.html">a11k.com</a> - 1.38% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./amntx1.net.html">amntx1.net</a> - 1.12% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./daftporn.cc.html">daftporn.cc</a> - 0.92% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;ad-provider.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;ad-provider.js</a> (seen on 968 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;v1&#x2F;api.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;v1&#x2F;api.php</a> (seen on 924 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;cimp.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;cimp.php</a> (seen on 896 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;splash.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;splash.php</a> (seen on 457 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;nativeads-v2.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;nativeads-v2.js</a> (seen on 245 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;splash.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;splash.php</a> (seen on 227 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;video-slider.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;video-slider.js</a> (seen on 223 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;iframe.php" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;iframe.php</a> (seen on 188 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;build-iframe-js-url.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;build-iframe-js-url.js</a> (seen on 186 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;iframe.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;iframe.js</a> (seen on 186 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;splash.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;splash.php</a> (seen on 95 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;vregister.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;vregister.php</a> (seen on 73 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;splash.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;splash.php</a> (seen on 19 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;video-outstream.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;video-outstream.js</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;ads.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;ads.js</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;ads-iframe-display.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;ads-iframe-display.php</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;nativeads.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;nativeads.js</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;fp-interstitial.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;fp-interstitial.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://s.magsrv.com&#x2F;tag.php" target="_blank" class="external" rel="noreferrer noopener">s.magsrv.com&#x2F;tag.php</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://a.magsrv.com&#x2F;video-slider.js" target="_blank" class="external" rel="noreferrer noopener">a.magsrv.com&#x2F;video-slider.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://motherless.com" target="_blank" class="external">motherless.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nesaporn.com" target="_blank" class="external">nesaporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rule34.paheal.net" target="_blank" class="external">rule34.paheal.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://spankbang.com" target="_blank" class="external">spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.alohatube.com" target="_blank" class="external">www.alohatube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.eporner.com" target="_blank" class="external">www.eporner.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.porn300.com" target="_blank" class="external">www.porn300.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.amateur8.com" target="_blank" class="external">www.amateur8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://saradahentai.com" target="_blank" class="external">saradahentai.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hello.porn" target="_blank" class="external">hello.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://vlxx.rocks" target="_blank" class="external">vlxx.rocks</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://chyoa.com" target="_blank" class="external">chyoa.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornpen.tv" target="_blank" class="external">pornpen.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.desikahani2.net" target="_blank" class="external">www.desikahani2.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bokepindo.best" target="_blank" class="external">bokepindo.best</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rtxporn.com" target="_blank" class="external">rtxporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://koreanporn.top" target="_blank" class="external">koreanporn.top</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bbwpictures.com" target="_blank" class="external">bbwpictures.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bellotube.com" target="_blank" class="external">bellotube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.fsiblog4.com" target="_blank" class="external">www.fsiblog4.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaiyes.com" target="_blank" class="external">hentaiyes.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://baddielatina.com" target="_blank" class="external">baddielatina.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaienvy.com" target="_blank" class="external">hentaienvy.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://phimx69.com" target="_blank" class="external">phimx69.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://aagmaal.vip" target="_blank" class="external">aagmaal.vip</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sex4stories.com" target="_blank" class="external">www.sex4stories.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://archivebate.com" target="_blank" class="external">archivebate.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornmonde.com" target="_blank" class="external">pornmonde.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://javlemon.com" target="_blank" class="external">javlemon.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://allxporno.com" target="_blank" class="external">allxporno.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.niihen.com" target="_blank" class="external">www.niihen.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.freeomovie.to" target="_blank" class="external">www.freeomovie.to</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xmxx.click" target="_blank" class="external">xmxx.click</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://iceporn.tv" target="_blank" class="external">iceporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lovetorrent.net" target="_blank" class="external">lovetorrent.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://leakedplay.com" target="_blank" class="external">leakedplay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornpervert.com" target="_blank" class="external">pornpervert.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.superhq.net" target="_blank" class="external">www.superhq.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://celebhub.net" target="_blank" class="external">celebhub.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://de.pretty.porn" target="_blank" class="external">de.pretty.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fetish-extreme.com" target="_blank" class="external">fetish-extreme.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tubehall.com" target="_blank" class="external">tubehall.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tamilkamaveri.com" target="_blank" class="external">www.tamilkamaveri.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hutgay.com" target="_blank" class="external">hutgay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://max.porn" target="_blank" class="external">max.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://asdcosplay.net" target="_blank" class="external">asdcosplay.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cuckold.me" target="_blank" class="external">cuckold.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bdsm.one" target="_blank" class="external">bdsm.one</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.18girlssex.com" target="_blank" class="external">www.18girlssex.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornomanoir.com" target="_blank" class="external">pornomanoir.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xxxvideoindian2.com" target="_blank" class="external">www.xxxvideoindian2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dogjav.com" target="_blank" class="external">dogjav.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://desiporn.su" target="_blank" class="external">desiporn.su</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nudevista.com" target="_blank" class="external">www.nudevista.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pussyspace.com" target="_blank" class="external">www.pussyspace.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xnxxx.rocks" target="_blank" class="external">xnxxx.rocks</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.flashtranny.com" target="_blank" class="external">www.flashtranny.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.stileproject.com" target="_blank" class="external">www.stileproject.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xorgasmo.com" target="_blank" class="external">xorgasmo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.feetporno.com" target="_blank" class="external">www.feetporno.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mundoporn.net" target="_blank" class="external">mundoporn.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://vidio.fun" target="_blank" class="external">vidio.fun</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nudevista.es" target="_blank" class="external">www.nudevista.es</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://porntrex.best" target="_blank" class="external">porntrex.best</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://leaked.fans" target="_blank" class="external">leaked.fans</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornteener.com" target="_blank" class="external">pornteener.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pictoa.com" target="_blank" class="external">www.pictoa.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xanimu.com" target="_blank" class="external">xanimu.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nudespree.com" target="_blank" class="external">nudespree.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.faponhd.com" target="_blank" class="external">www.faponhd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pusatporn18.com" target="_blank" class="external">pusatporn18.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sheshaft.com" target="_blank" class="external">www.sheshaft.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.lbtube.com" target="_blank" class="external">www.lbtube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.perfecttitspics.com" target="_blank" class="external">www.perfecttitspics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxzex.com" target="_blank" class="external">xxxzex.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nsfw.sex" target="_blank" class="external">nsfw.sex</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://daftsex.org" target="_blank" class="external">daftsex.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sxyprn.com" target="_blank" class="external">sxyprn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sexygirlspics.com" target="_blank" class="external">sexygirlspics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bubbaporn.com" target="_blank" class="external">www.bubbaporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xxxsexxx.pro" target="_blank" class="external">www.xxxsexxx.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://anybunny.org" target="_blank" class="external">anybunny.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaibros.net" target="_blank" class="external">hentaibros.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mangaforfree.net" target="_blank" class="external">mangaforfree.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaixcomic.com" target="_blank" class="external">hentaixcomic.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.twinkboys.me" target="_blank" class="external">www.twinkboys.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fullscatmovies.club" target="_blank" class="external">fullscatmovies.club</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ru.spankbang.com" target="_blank" class="external">ru.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://idealmature.com" target="_blank" class="external">idealmature.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.porn-manga.com" target="_blank" class="external">www.porn-manga.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://jp.spankbang.com" target="_blank" class="external">jp.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hanime1.me" target="_blank" class="external">hanime1.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://porntop.com" target="_blank" class="external">porntop.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://id.manhwa18.org" target="_blank" class="external">id.manhwa18.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lamalinks.com" target="_blank" class="external">lamalinks.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://spankbang1.com" target="_blank" class="external">spankbang1.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.planetsuzy.org" target="_blank" class="external">www.planetsuzy.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://yespornpleasexxx.com" target="_blank" class="external">yespornpleasexxx.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://maturecharm.com" target="_blank" class="external">maturecharm.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaiprn.com" target="_blank" class="external">hentaiprn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://maturepussypics.com" target="_blank" class="external">maturepussypics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hardgif.com" target="_blank" class="external">hardgif.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bigtits.pics" target="_blank" class="external">www.bigtits.pics</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://la.spankbang.com" target="_blank" class="external">la.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shavedpics.com" target="_blank" class="external">shavedpics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hotmovs.com" target="_blank" class="external">hotmovs.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nhentaihaven.com" target="_blank" class="external">nhentaihaven.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://static.spankbang.com" target="_blank" class="external">static.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://indianxnxxtube.com" target="_blank" class="external">indianxnxxtube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://letsjerk.tv" target="_blank" class="external">letsjerk.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xvidios.xxx" target="_blank" class="external">xvidios.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://indiansexmms.co" target="_blank" class="external">indiansexmms.co</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gifhq.com" target="_blank" class="external">gifhq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://inporn.com" target="_blank" class="external">inporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://blackporn.tube" target="_blank" class="external">blackporn.tube</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.topboard.org" target="_blank" class="external">www.topboard.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fakebokep.org" target="_blank" class="external">fakebokep.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tubeorigin.com" target="_blank" class="external">www.tubeorigin.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://latestpornvideo.com" target="_blank" class="external">latestpornvideo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://videos-xxx-gratuit.com" target="_blank" class="external">videos-xxx-gratuit.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mangahentai.me" target="_blank" class="external">mangahentai.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://redwap-xxx.com" target="_blank" class="external">redwap-xxx.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://br.spankbang.com" target="_blank" class="external">br.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://txxx.tube" target="_blank" class="external">txxx.tube</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.teenageporn.pro" target="_blank" class="external">www.teenageporn.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hotpussypics.com" target="_blank" class="external">hotpussypics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nl.spankbang.com" target="_blank" class="external">nl.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hairytouch.com" target="_blank" class="external">hairytouch.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fr.spankbang.com" target="_blank" class="external">fr.spankbang.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hdpornpics.com" target="_blank" class="external">hdpornpics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bokeb.site" target="_blank" class="external">bokeb.site</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://eroasmr.com" target="_blank" class="external">eroasmr.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ftvcuties.com" target="_blank" class="external">ftvcuties.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sexu.com" target="_blank" class="external">sexu.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://de.eporner.com" target="_blank" class="external">de.eporner.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://1bigclub.com" target="_blank" class="external">1bigclub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaiarena.com" target="_blank" class="external">hentaiarena.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentaihaven.com" target="_blank" class="external">hentaihaven.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.uiporn.com" target="_blank" class="external">www.uiporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xvideo.run" target="_blank" class="external">xvideo.run</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://indiansexbazar.com" target="_blank" class="external">indiansexbazar.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://viral.cx" target="_blank" class="external">viral.cx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://comicsvalley.com" target="_blank" class="external">comicsvalley.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornbaker.com" target="_blank" class="external">pornbaker.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pinkporno.xxx" target="_blank" class="external">www.pinkporno.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ru.shemale.movie" target="_blank" class="external">ru.shemale.movie</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.japanporn.tv" target="_blank" class="external">www.japanporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://indianpornzone.com" target="_blank" class="external">indianpornzone.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://1malayalamsexvideos.com" target="_blank" class="external">1malayalamsexvideos.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://teens.ooo" target="_blank" class="external">teens.ooo</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xtapes.to" target="_blank" class="external">xtapes.to</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nastyvideotube.com" target="_blank" class="external">nastyvideotube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lesbiantube.tv" target="_blank" class="external">lesbiantube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tamilxnxx.net" target="_blank" class="external">tamilxnxx.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gotube.me" target="_blank" class="external">www.gotube.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hdsex2.com" target="_blank" class="external">hdsex2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://malluxxx.net" target="_blank" class="external">malluxxx.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornogrim.click" target="_blank" class="external">pornogrim.click</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://malluvideos.org" target="_blank" class="external">malluvideos.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://teenxporn.tv" target="_blank" class="external">teenxporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.videojav.com" target="_blank" class="external">www.videojav.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tgtsporn.com" target="_blank" class="external">tgtsporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xozilla.xxx" target="_blank" class="external">www.xozilla.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://jp.xsz-av.com" target="_blank" class="external">jp.xsz-av.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://videosection.com" target="_blank" class="external">videosection.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pakistanisexvideos.org" target="_blank" class="external">pakistanisexvideos.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.its.porn" target="_blank" class="external">www.its.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shemale.movie" target="_blank" class="external">shemale.movie</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pakistaniporn.me" target="_blank" class="external">pakistaniporn.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xtits.com" target="_blank" class="external">www.xtits.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://de.hdsex.org" target="_blank" class="external">de.hdsex.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.privateporn.tv" target="_blank" class="external">www.privateporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.porngo.com" target="_blank" class="external">www.porngo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://comicsarmy.com" target="_blank" class="external">comicsarmy.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.freeporn8.com" target="_blank" class="external">www.freeporn8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://4kporn.xxx" target="_blank" class="external">4kporn.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://jizzbunker.com" target="_blank" class="external">jizzbunker.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxdan.com" target="_blank" class="external">xxxdan.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ixnxx.tv" target="_blank" class="external">ixnxx.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://8muses.xxx" target="_blank" class="external">8muses.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.unitedfuck-pornos.com" target="_blank" class="external">www.unitedfuck-pornos.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxvideo.world" target="_blank" class="external">xxxvideo.world</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://uporn.plus" target="_blank" class="external">uporn.plus</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://allclassic.porn" target="_blank" class="external">allclassic.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.trixhentai.com" target="_blank" class="external">www.trixhentai.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hotgirl.asia" target="_blank" class="external">hotgirl.asia</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://piggiesgetfed.com" target="_blank" class="external">piggiesgetfed.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornone.com" target="_blank" class="external">pornone.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nuvid.com" target="_blank" class="external">www.nuvid.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kpopdeepfakes.com" target="_blank" class="external">kpopdeepfakes.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://grannydump.com" target="_blank" class="external">grannydump.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nudevista.tv" target="_blank" class="external">www.nudevista.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://footyfull.com" target="_blank" class="external">footyfull.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cosxplay.com" target="_blank" class="external">cosxplay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nacktefoto.com" target="_blank" class="external">nacktefoto.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://punishworld.com" target="_blank" class="external">punishworld.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://doujin.sexy" target="_blank" class="external">doujin.sexy</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://en.hdsex.tv" target="_blank" class="external">en.hdsex.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://en.joporn.me" target="_blank" class="external">en.joporn.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://en.pornohd.porn" target="_blank" class="external">en.pornohd.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://en.rusporn.porn" target="_blank" class="external">en.rusporn.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://krx18.com" target="_blank" class="external">krx18.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mov18plus.com" target="_blank" class="external">mov18plus.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pinayflix2.com" target="_blank" class="external">pinayflix2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornhd.josex.biz" target="_blank" class="external">pornhd.josex.biz</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rusporn.porn" target="_blank" class="external">rusporn.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.onlyhgames.com" target="_blank" class="external">www.onlyhgames.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.simply-hentai.com" target="_blank" class="external">www.simply-hentai.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhdporno.me" target="_blank" class="external">xhdporno.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://eggporncomics.com" target="_blank" class="external">eggporncomics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://jp.xero.porn" target="_blank" class="external">jp.xero.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kino-boom.net" target="_blank" class="external">kino-boom.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pornwhite.com" target="_blank" class="external">www.pornwhite.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pussyspace.net" target="_blank" class="external">www.pussyspace.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.viptube.com" target="_blank" class="external">www.viptube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://javhihi.world" target="_blank" class="external">javhihi.world</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://onlydesivideos.com" target="_blank" class="external">onlydesivideos.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.boysex.pro" target="_blank" class="external">www.boysex.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pervertasian.com" target="_blank" class="external">www.pervertasian.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xxxvideo.monster" target="_blank" class="external">www.xxxvideo.monster</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xnxxcom.asia" target="_blank" class="external">xnxxcom.asia</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxkittytube.pro" target="_blank" class="external">xxxkittytube.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxvideodownload.net" target="_blank" class="external">xxxvideodownload.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://everysextube.com" target="_blank" class="external">everysextube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornstargold.com" target="_blank" class="external">pornstargold.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://thehentaiworld.com" target="_blank" class="external">thehentaiworld.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.everysextube.com" target="_blank" class="external">www.everysextube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xfreehd.com" target="_blank" class="external">www.xfreehd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fuqqt.com" target="_blank" class="external">fuqqt.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://javhd.com" target="_blank" class="external">javhd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sexlikereal.com" target="_blank" class="external">www.sexlikereal.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vivid.com" target="_blank" class="external">www.vivid.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxgames.games" target="_blank" class="external">xxxgames.games</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://antarvasna3.com" target="_blank" class="external">antarvasna3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.antarvasna3.com" target="_blank" class="external">www.antarvasna3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.desiboobs.club" target="_blank" class="external">www.desiboobs.club</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.desisex.site" target="_blank" class="external">www.desisex.site</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.desitales2.com" target="_blank" class="external">www.desitales2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.freesexkahani.com" target="_blank" class="external">www.freesexkahani.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gujaratisex.site" target="_blank" class="external">www.gujaratisex.site</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hindixxx.club" target="_blank" class="external">www.hindixxx.club</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kamakathalu.com" target="_blank" class="external">www.kamakathalu.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kambimalayalamkathakal.com" target="_blank" class="external">www.kambimalayalamkathakal.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.marathisexyvideo.com" target="_blank" class="external">www.marathisexyvideo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nudeindians.net" target="_blank" class="external">www.nudeindians.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tamilscandals2.com" target="_blank" class="external">www.tamilscandals2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tamilsexvids.net" target="_blank" class="external">www.tamilsexvids.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.telugusexvids.com" target="_blank" class="external">www.telugusexvids.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xahani.com" target="_blank" class="external">www.xahani.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xxxvasna.com" target="_blank" class="external">www.xxxvasna.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xfreehd.com" target="_blank" class="external">xfreehd.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

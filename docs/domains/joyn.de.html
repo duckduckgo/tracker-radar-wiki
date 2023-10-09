@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - joyn.de</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "joyn.de",
+        history: [{"date":"ci-2023-10-03-wwwgw","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/joyn.de.ico' width="32" height="32" class='inline-block' /> joyn.de</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;19030<small>/24295</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Preflight</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/joyn.de.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                    <span>img</span>, 
+                    <span>event-collector.prd.data.s</span>, 
+                    <span>auth</span>, 
+                    <span>api</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Screen.prototype.availHeight</li>
+        <li class='truncate'>Screen.prototype.availWidth</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://event-collector.prd.data.s.joyn.de&#x2F;v1&#x2F;screen_viewed" target="_blank" class="external" rel="noreferrer noopener">event-collector.prd.data.s.joyn.de&#x2F;v1&#x2F;screen_viewed</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://event-collector.prd.data.s.joyn.de&#x2F;v1&#x2F;screen_viewed" target="_blank" class="external" rel="noreferrer noopener">event-collector.prd.data.s.joyn.de&#x2F;v1&#x2F;screen_viewed</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.joyn.de&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">api.joyn.de&#x2F;graphql</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.joyn.de&#x2F;graphql" target="_blank" class="external" rel="noreferrer noopener">api.joyn.de&#x2F;graphql</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-hamburger.5f4f2bc7.svg" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-hamburger.5f4f2bc7.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-search.ac34d4c0.svg" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-search.ac34d4c0.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-account.345e57f6.svg" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-account.345e57f6.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fonts&#x2F;Campton-Bold-1242c568df7d45909e8fab5609a61cab.woff" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fonts&#x2F;Campton-Bold-1242c568df7d45909e8fab5609a61cab.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fonts&#x2F;Campton-Book-a5f253987550f2c115aedc285abc4b80.woff" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fonts&#x2F;Campton-Book-a5f253987550f2c115aedc285abc4b80.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;99186cc98c7b2a44.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;99186cc98c7b2a44.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;e65548a3fc08e971.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;e65548a3fc08e971.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;b6944ec5278c7106.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;b6944ec5278c7106.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7892-11f52d2ac6d0cfea.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7892-11f52d2ac6d0cfea.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-80140d726d174108.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-80140d726d174108.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-eb98a02c1421de1e.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-eb98a02c1421de1e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-e567d64d277e9774.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-e567d64d277e9774.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-cf27be5f3132cfd4.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-cf27be5f3132cfd4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1310-dae7bf290174a5e4.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1310-dae7bf290174a5e4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1583-a0c1f7d647c3bbe4.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1583-a0c1f7d647c3bbe4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5804-ac596ee5f676ad33.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5804-ac596ee5f676ad33.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5636-35bb8bc543a2caf6.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5636-35bb8bc543a2caf6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4736-8c6e6212c6a595e6.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4736-8c6e6212c6a595e6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9450-42735977b829c65e.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9450-42735977b829c65e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6402-5f96f27702e69f2a.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6402-5f96f27702e69f2a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5597-b7d8f9b9bfb81e07.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5597-b7d8f9b9bfb81e07.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5372-96c6eee7603661d5.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5372-96c6eee7603661d5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8535-be884ab97fcbb3e0.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8535-be884ab97fcbb3e0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9607-25228901bc40edde.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9607-25228901bc40edde.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5083-ffb4b73fb553d835.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5083-ffb4b73fb553d835.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://img.joyn.de&#x2F;ing&#x2F;originals&#x2F;t-006&#x2F;539930605.jpeg&#x2F;profile:nextgen-web-herolandscape-1920x.webp" target="_blank" class="external" rel="noreferrer noopener">img.joyn.de&#x2F;ing&#x2F;originals&#x2F;t-006&#x2F;539930605.jpeg&#x2F;profile:nextgen-web-herolandscape-1920x.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5039.657f06cb31a4f833.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5039.657f06cb31a4f833.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9278.be3a5ba3bcd87823.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9278.be3a5ba3bcd87823.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7699-e532e60fee28a5ae.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7699-e532e60fee28a5ae.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3287-4fb517dd040e2cf9.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3287-4fb517dd040e2cf9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5199-a543a6e0159b7d6f.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5199-a543a6e0159b7d6f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://auth.joyn.de&#x2F;auth&#x2F;anonymous" target="_blank" class="external" rel="noreferrer noopener">auth.joyn.de&#x2F;auth&#x2F;anonymous</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://auth.joyn.de&#x2F;auth&#x2F;anonymous" target="_blank" class="external" rel="noreferrer noopener">auth.joyn.de&#x2F;auth&#x2F;anonymous</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;e65548a3fc08e971.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;e65548a3fc08e971.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;d66f29c1349fe4b1.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;d66f29c1349fe4b1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;image" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;image</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;3dcd733a7ea5c2b3.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;3dcd733a7ea5c2b3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6751.455ce6423cb2286f.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6751.455ce6423cb2286f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;data&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;verfuegbarkeit-im-ausland.json" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;data&#x2F;cfOgavn1EI2EardDg_C7I&#x2F;verfuegbarkeit-im-ausland.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4696-f33342673626a8b3.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4696-f33342673626a8b3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;verfuegbarkeit-im-ausland-0eea8bb43a749398.js" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;verfuegbarkeit-im-ausland-0eea8bb43a749398.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;9a139bd7724d3d71.css" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;css&#x2F;9a139bd7724d3d71.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-close.2949fc7c.svg" target="_blank" class="external" rel="noreferrer noopener">www.joyn.de&#x2F;_next&#x2F;static&#x2F;media&#x2F;ico-close.2949fc7c.svg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://prosieben.de" target="_blank" class="external">prosieben.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://video.sat1.de" target="_blank" class="external">video.sat1.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://video.prosieben.de" target="_blank" class="external">video.prosieben.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sat1.de" target="_blank" class="external">sat1.de</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

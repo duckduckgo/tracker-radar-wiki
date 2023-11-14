@@ -17,7 +17,7 @@ async function main() {
     const tags = tagsString.split('\n').filter(a => a.length > 0);
 
     if (config.appendTrackerRadarRevisions && config.appendTrackerRadarRevisions.length > 0) {
-        tags.push(...config.appendTrackerRadarRevisions)
+        tags.push(...config.appendTrackerRadarRevisions);
     }
 
     const progressBar = new ProgressBar('[:bar] :percent ETA :etas :tag', {

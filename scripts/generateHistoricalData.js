@@ -117,7 +117,7 @@ async function main() {
     tags = tagsString.split('\n').filter(a => a.length > 0);
 
     if (config.appendTrackerRadarRevisions && config.appendTrackerRadarRevisions.length > 0) {
-        tags.push(...config.appendTrackerRadarRevisions)
+        tags.push(...config.appendTrackerRadarRevisions);
     }
 
     try {

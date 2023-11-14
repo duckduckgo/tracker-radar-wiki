@@ -116,8 +116,9 @@ async function main() {
     const tagsString = await git.tag();
     tags = tagsString.split('\n').filter(a => a.length > 0);
 
-    // FOR DEBUG - if you want to build test wiki from an unmerged branch, push it to the list of tags
-    // tags.push('muodov/aug-2022');
+    if (config.appendTrackerRadarRevisions && config.appendTrackerRadarRevisions.length > 0) {
+        tags.push(...config.appendTrackerRadarRevisions)
+    }
 
     try {
         fs.writeFileSync(path.join(config.staticData, '/history/tags.json'), JSON.stringify(tags));

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - stray228.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "stray228.com",
+        history: [{"date":"2023.12","prevalence":0.000646,"sites":95,"fingerprinting":3,"cookies":0.000646},{"date":"ci-2023-12-20-oneip","prevalence":0.000653,"sites":96,"fingerprinting":3,"cookies":0.000572}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/stray228.com.ico' width="32" height="32" class='inline-block' /> stray228.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;1620<small>/24362</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.07&#37; (96 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.06&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Image</span>,
+                    <span>Script</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/stray228.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cdn</span>, 
+                    <span>cdn02</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.productSub</li>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Notification.permission</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdr&#x2F;renderer.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdr&#x2F;renderer.js</a> (seen on 56 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stray228.com&#x2F;resource" target="_blank" class="external" rel="noreferrer noopener">stray228.com&#x2F;resource</a> (seen on 56 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;73.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;73.2.12.12.js</a> (seen on 48 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;500.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;500.2.12.12.js</a> (seen on 48 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;827.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;827.2.12.12.js</a> (seen on 48 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;385.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;385.2.12.12.js</a> (seen on 46 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;757.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;757.2.12.12.js</a> (seen on 44 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stray228.com&#x2F;th&#x2F;" target="_blank" class="external" rel="noreferrer noopener">stray228.com&#x2F;th&#x2F;</a> (seen on 44 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stray228.com&#x2F;s&#x2F;" target="_blank" class="external" rel="noreferrer noopener">stray228.com&#x2F;s&#x2F;</a> (seen on 44 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stray228.com&#x2F;event" target="_blank" class="external" rel="noreferrer noopener">stray228.com&#x2F;event</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://stray228.com&#x2F;resource" target="_blank" class="external" rel="noreferrer noopener">stray228.com&#x2F;resource</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_gay_leaderboard-1-phone.html" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_gay_leaderboard-1-phone.html</a> (seen on 34 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_gay_leaderboard-1-desktop.html" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_gay_leaderboard-1-desktop.html</a> (seen on 34 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;GAY_MOBILE_SKIN_1.jpeg" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;GAY_MOBILE_SKIN_1.jpeg</a> (seen on 34 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;GAY_DESKTOP_SKIN_1.jpeg" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;GAY_DESKTOP_SKIN_1.jpeg</a> (seen on 34 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;rdrr&#x2F;185.2.12.12.js" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;rdrr&#x2F;185.2.12.12.js</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_straight_leaderboard-1-phone.html" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_straight_leaderboard-1-phone.html</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_straight_leaderboard-1-desktop.html" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;pages&#x2F;gammae_straight_leaderboard-1-desktop.html</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;STR_MOBILE-ALTSHOW.jpeg" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;STR_MOBILE-ALTSHOW.jpeg</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.stray228.com&#x2F;creatives&#x2F;DESKTOP-ALTSHOW_RESIZE_1.jpeg" target="_blank" class="external" rel="noreferrer noopener">cdn.stray228.com&#x2F;creatives&#x2F;DESKTOP-ALTSHOW_RESIZE_1.jpeg</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;77618aad-8099-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;77618aad-8099-11ee-98ba-5298c300b51c.</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;7ed8ed8d-8547-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;7ed8ed8d-8547-11ee-98ba-5298c300b51c.</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;cddc1081-770e-11ee-a4cc-eacd6dbb79ac." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;cddc1081-770e-11ee-a4cc-eacd6dbb79ac.</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;8a6062ab-83b6-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;8a6062ab-83b6-11ee-98ba-5298c300b51c.</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;984caafe-8224-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;984caafe-8224-11ee-98ba-5298c300b51c.</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;ff10d251-83b4-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;ff10d251-83b4-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;dc9b4f9a-8220-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;dc9b4f9a-8220-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;fd741cdb-83b2-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;fd741cdb-83b2-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;c91d3ba6-7f05-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;c91d3ba6-7f05-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;e1833968-83be-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;e1833968-83be-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;88fa5bd6-83b7-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;88fa5bd6-83b7-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d747051a-83b9-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d747051a-83b9-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;a9500af8-83b8-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;a9500af8-83b8-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;2d3c7fba-83b9-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;2d3c7fba-83b9-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;843f0a45-39c3-11ee-96a1-1614c309f340." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;843f0a45-39c3-11ee-96a1-1614c309f340.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;df31c2da-83b6-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;df31c2da-83b6-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;bc29caa0-8545-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;bc29caa0-8545-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;5b5dea8b-83b5-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;5b5dea8b-83b5-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;b9d4f727-8545-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;b9d4f727-8545-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;6d839e99-83ba-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;6d839e99-83ba-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;300cf498-83b6-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;300cf498-83b6-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d40d1e9e-83b8-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d40d1e9e-83b8-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;16bc74cc-83b6-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;16bc74cc-83b6-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;9e18bab7-83b9-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;9e18bab7-83b9-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;ace8cc7b-83bb-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;ace8cc7b-83bb-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;44326da9-83bb-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;44326da9-83bb-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;02cd04fc-83bf-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;02cd04fc-83bf-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;fe0659ec-83b2-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;fe0659ec-83b2-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;b0283261-83bd-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;b0283261-83bd-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d522c284-83bb-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;d522c284-83bb-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;04723dad-8095-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;04723dad-8095-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;a6a1baab-8545-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;a6a1baab-8545-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;536f7803-83ba-11ee-98ba-5298c300b51c." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;536f7803-83ba-11ee-98ba-5298c300b51c.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;eb34c1da-7bbe-11ee-a4cc-eacd6dbb79ac." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;eb34c1da-7bbe-11ee-a4cc-eacd6dbb79ac.</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;86ee0f47-39c3-11ee-96a1-1614c309f340." target="_blank" class="external" rel="noreferrer noopener">cdn02.stray228.com&#x2F;creatives&#x2F;709&#x2F;86ee0f47-39c3-11ee-96a1-1614c309f340.</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://24porn.com" target="_blank" class="external">24porn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://4kpornvideos.tv" target="_blank" class="external">4kpornvideos.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bestpornstars.xxx" target="_blank" class="external">bestpornstars.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bigfuck.tv" target="_blank" class="external">bigfuck.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bustybus.com" target="_blank" class="external">bustybus.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://freeporno.xxx" target="_blank" class="external">freeporno.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hqporn.xxx" target="_blank" class="external">hqporn.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://redporn.porn" target="_blank" class="external">redporn.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xvideo.tube" target="_blank" class="external">xvideo.tube</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xxxomg.com" target="_blank" class="external">xxxomg.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://zzztube.com" target="_blank" class="external">zzztube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xgaytube.tv" target="_blank" class="external">www.xgaytube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.boymoviedome.com" target="_blank" class="external">www.boymoviedome.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gaymaletube.name" target="_blank" class="external">www.gaymaletube.name</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.youtrannytube.com" target="_blank" class="external">www.youtrannytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.brutalgays.net" target="_blank" class="external">www.brutalgays.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.icegay.tv" target="_blank" class="external">www.icegay.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.good-gay.com" target="_blank" class="external">www.good-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.machogaytube.com" target="_blank" class="external">www.machogaytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.goldgay.tv" target="_blank" class="external">www.goldgay.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xgaytube.com" target="_blank" class="external">www.xgaytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayfuckporn.tv" target="_blank" class="external">www.gayfuckporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayfuckporn.com" target="_blank" class="external">www.gayfuckporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gaymenring.com" target="_blank" class="external">www.gaymenring.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.icegaytube.tv" target="_blank" class="external">www.icegaytube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.trannytube.net" target="_blank" class="external">www.trannytube.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hdxxx.tube" target="_blank" class="external">hdxxx.tube</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.shemaleporntube.tv" target="_blank" class="external">www.shemaleporntube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.me-gay.com" target="_blank" class="external">www.me-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dpporn.com" target="_blank" class="external">dpporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.onlydudes.tv" target="_blank" class="external">www.onlydudes.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xl-gaytube.com" target="_blank" class="external">www.xl-gaytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.machotube.tv" target="_blank" class="external">www.machotube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.meatyhunks.com" target="_blank" class="external">www.meatyhunks.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gayporn.de" target="_blank" class="external">gayporn.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gaymentubexxx.com" target="_blank" class="external">www.gaymentubexxx.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.go-gaytube.com" target="_blank" class="external">www.go-gaytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.boysexclip.com" target="_blank" class="external">www.boysexclip.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gold-gay.com" target="_blank" class="external">www.gold-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.shemaletube.tv" target="_blank" class="external">www.shemaletube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.trannytube.tv" target="_blank" class="external">www.trannytube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.lbtube.com" target="_blank" class="external">www.lbtube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gaypornarchive.com" target="_blank" class="external">www.gaypornarchive.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.good-gay.tv" target="_blank" class="external">www.good-gay.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayporno.tv" target="_blank" class="external">www.gayporno.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.poshgay.com" target="_blank" class="external">www.poshgay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.flashtranny.com" target="_blank" class="external">www.flashtranny.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gaypornplanet.com" target="_blank" class="external">www.gaypornplanet.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.blackshemalevideo.com" target="_blank" class="external">www.blackshemalevideo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.veryladyboy.com" target="_blank" class="external">www.veryladyboy.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.boy18tube.com" target="_blank" class="external">www.boy18tube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.shemalecocktube.com" target="_blank" class="external">www.shemalecocktube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.icetranny.com" target="_blank" class="external">www.icetranny.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayporn.fm" target="_blank" class="external">www.gayporn.fm</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.verygayboys.com" target="_blank" class="external">www.verygayboys.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayporno.fm" target="_blank" class="external">www.gayporno.fm</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kingtwinks.com" target="_blank" class="external">www.kingtwinks.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ice-gay.com" target="_blank" class="external">www.ice-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://blackshemalevideo.com" target="_blank" class="external">blackshemalevideo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://boy18tube.com" target="_blank" class="external">boy18tube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://boymoviedome.com" target="_blank" class="external">boymoviedome.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://boysexclip.com" target="_blank" class="external">boysexclip.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://brutalgays.net" target="_blank" class="external">brutalgays.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gayfuckporn.com" target="_blank" class="external">gayfuckporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gayfuckporn.tv" target="_blank" class="external">gayfuckporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gaymaletube.name" target="_blank" class="external">gaymaletube.name</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gaymenring.com" target="_blank" class="external">gaymenring.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gayporn.fm" target="_blank" class="external">gayporn.fm</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gayporno.tv" target="_blank" class="external">gayporno.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gaypornplanet.com" target="_blank" class="external">gaypornplanet.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://go-gaytube.com" target="_blank" class="external">go-gaytube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://good-gay.com" target="_blank" class="external">good-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://good-gay.tv" target="_blank" class="external">good-gay.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://icegay.tv" target="_blank" class="external">icegay.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://icegaytube.tv" target="_blank" class="external">icegaytube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kingtwinks.com" target="_blank" class="external">kingtwinks.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lbtube.com" target="_blank" class="external">lbtube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://me-gay.com" target="_blank" class="external">me-gay.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shemalecocktube.com" target="_blank" class="external">shemalecocktube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shemaletube.tv" target="_blank" class="external">shemaletube.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://verygayboys.com" target="_blank" class="external">verygayboys.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

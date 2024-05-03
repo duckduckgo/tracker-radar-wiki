@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - foxnews.shop</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "foxnews.shop",
+        history: [{"date":"ci-2024-05-03-ptedd","prevalence":0.0000136,"sites":2,"fingerprinting":3,"cookies":0.0000136}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/foxnews.shop.ico' width="32" height="32" class='inline-block' /> foxnews.shop</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;18123<small>/24207</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Ping</span>,
+                    <span>XHR</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/foxnews.shop.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./d1hcrjcdtouu7e.cloudfront.net.html">d1hcrjcdtouu7e.cloudfront.net</a> - 50.00% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./azureedge.net.html">azureedge.net</a> - 50.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom.scss.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom.scss.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;fonts&#x2F;helvetica&#x2F;helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;fonts&#x2F;helvetica&#x2F;helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;fonts&#x2F;helvetica&#x2F;helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;fonts&#x2F;helvetica&#x2F;helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;global.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;global.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;quickview.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;quickview.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;avalanche.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;avalanche.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;navigation.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;navigation.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;checkouts&#x2F;internal&#x2F;preloads.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;checkouts&#x2F;internal&#x2F;preloads.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;storefront&#x2F;load_feature-9f951eb7d8d53973c719de211f807d63af81c644e5b9a6ae72661ac408d472f6.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;storefront&#x2F;load_feature-9f951eb7d8d53973c719de211f807d63af81c644e5b9a6ae72661ac408d472f6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-80e528be853eac23af2454534897ca9536b1d3d04aa043b042f34879a3c111c8.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-80e528be853eac23af2454534897ca9536b1d3d04aa043b042f34879a3c111c8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;storefront&#x2F;features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;storefront&#x2F;features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;compiled_assets&#x2F;scripts.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;compiled_assets&#x2F;scripts.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;base.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;base.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;quickview.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;quickview.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-breadcrumbs.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-breadcrumbs.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-custom-product-card.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-custom-product-card.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;avalanche.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;avalanche.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-subscriber-products.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-subscriber-products.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-snow-slider-rework.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-snow-slider-rework.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;development-custom.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;development-custom.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-drawer.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-drawer.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-announcement-bar.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-announcement-bar.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;details-disclosure.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;details-disclosure.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;details-modal.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;details-modal.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Mothers_Day_3_f117e14a-dea2-49b0-953e-b0771a388996.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Mothers_Day_3_f117e14a-dea2-49b0-953e-b0771a388996.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Fox_Nation_POD_1.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Fox_Nation_POD_1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Spring_sale_6.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Property_1_Spring_sale_6.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-card.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-card.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-price.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-price.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-product-grid.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-product-grid.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-rating.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-rating.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FOXjutetotetagsideA1x1DSC_9504_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FOXjutetotetagsideA1x1DSC_9504_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FOXjutetoteback1x1_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FOXjutetoteback1x1_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0995_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0995_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0880_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0880_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FOX-FN-DCC-ELT_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FOX-FN-DCC-ELT_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FN-WPAJAMAS_4_MF3_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FN-WPAJAMAS_4_MF3_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0958_37b02957-ed5c-4502-adfc-962be096d7ad_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0958_37b02957-ed5c-4502-adfc-962be096d7ad_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Flight-Jacket-Mens_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Flight-Jacket-Mens_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Flight-Jacket-Ladies_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Flight-Jacket-Ladies_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FN-MPAJAMAS_4_MF2_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FN-MPAJAMAS_4_MF2_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0958_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-0958_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-Business-Mens-Vest-Charcoal_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-Business-Mens-Vest-Charcoal_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-Business-Mens-Vest-Navy_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-Business-Mens-Vest-Navy_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FoxNewsChannelOatmealLightweightZipHoodieMerch1x1DSC_0412_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FoxNewsChannelOatmealLightweightZipHoodieMerch1x1DSC_0412_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FoxNewsChannelOatmealHeatherLightweightZipHoodieBackMerch1x1DSC_0413_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;FoxNewsChannelOatmealHeatherLightweightZipHoodieBackMerch1x1DSC_0413_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Umbrella_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Umbrella_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Logo-Fleece-Vest_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Fox-News-Logo-Fleece-Vest_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Gutfeld-Logo-Vest_720x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Gutfeld-Logo-Vest_720x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-snow-grid.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-snow-grid.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-snow-grid-item.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-snow-grid-item.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FXN_SnowGrid_FoxBusiness-desktopv3_5521bd09-cfa8-472f-a504-06f0227bd999.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;FXN_SnowGrid_FoxBusiness-desktopv3_5521bd09-cfa8-472f-a504-06f0227bd999.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Top_Right-min.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Top_Right-min.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;grid_3_fox-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;grid_3_fox-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-main-product.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-main-product.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-featured-product.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-featured-product.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-accordion.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-accordion.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-rte.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-rte.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-loading-overlay.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-loading-overlay.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-info.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-info.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;share.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;share.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;product-form.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;product-form.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_news_home_office-min.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_news_home_office-min.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_news_channel-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_news_channel-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_business-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_business-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_freinds-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fox_freinds-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gutfeld_-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gutfeld_-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;the_five-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;the_five-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Jesse_Watters-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Jesse_Watters-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;One_Nation.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;One_Nation.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-footer.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;section-footer.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom-footer-styles.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;custom-footer-styles.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-back-to-top.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-back-to-top.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;predictive-search.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;predictive-search.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-predictive-search.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-predictive-search.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.88baf04046928b6edf6574afd22dbd026cc7d568.min.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.88baf04046928b6edf6574afd22dbd026cc7d568.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;shop_events_listener-61fa9e0a912c675e178777d2b27f6cbd482f8912a6b0aa31fa3515985a8cd626.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;shopify&#x2F;assets&#x2F;shop_events_listener-61fa9e0a912c675e178777d2b27f6cbd482f8912a6b0aa31fa3515985a8cd626.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;boomerang&#x2F;shopify-boomerang-1.0.0.min.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;boomerang&#x2F;shopify-boomerang-1.0.0.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;liquid-ajax-cart-v1.7.0.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;liquid-ajax-cart-v1.7.0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-menu.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-menu.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-search.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-search.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-menu-drawer.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-menu-drawer.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-notification.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-notification.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-items.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-cart-items.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;navigation.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;navigation.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-navigation-style.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-navigation-style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox_News_logo-min_70x.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox_News_logo-min_70x.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-slider.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-slider.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;template-collection.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;template-collection.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-deferred-media.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-deferred-media.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-1108_1.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-1108_1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-newsletter.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-newsletter.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-payment.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-payment.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-social.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;component-list-social.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;disclosure.css" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;14&#x2F;assets&#x2F;disclosure.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Newsletter_Sign_Up_FOX-min.png" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Newsletter_Sign_Up_FOX-min.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-1108_1_750x.jpg" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Fox-HolidayWear-2023-1108_1_750x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;v1&#x2F;produce" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;v1&#x2F;produce</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;set_tracking_consent.json" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;set_tracking_consent.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://foxnews.shop&#x2F;wpm&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@064.js" target="_blank" class="external" rel="noreferrer noopener">foxnews.shop&#x2F;wpm&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@064.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://foxnews.com" target="_blank" class="external">foxnews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shop.foxnews.com" target="_blank" class="external">shop.foxnews.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

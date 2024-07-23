@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - barrettmedia.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "barrettmedia.com",
+        history: [{"date":"ci-2024-07-18-hurzk","prevalence":0.0000273,"sites":4,"fingerprinting":2,"cookies":0.0000273}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/barrettmedia.com.ico' width="32" height="32" class='inline-block' /> barrettmedia.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10414<small>/24079</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                    <span>Script</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/barrettmedia.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.mimeTypes</li>
+        <li class='truncate'>console.memory</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f34a97df4a64353d45e26b7cccd7cff6.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f34a97df4a64353d45e26b7cccd7cff6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;ucss&#x2F;36ac3f37eb781464b1055b6b7cff8110.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;ucss&#x2F;36ac3f37eb781464b1055b6b7cff8110.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;themes&#x2F;Newspaper&#x2F;images&#x2F;icons&#x2F;newspaper.woff" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;themes&#x2F;Newspaper&#x2F;images&#x2F;icons&#x2F;newspaper.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;plugins&#x2F;litespeed-cache&#x2F;guest.vary.php" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;plugins&#x2F;litespeed-cache&#x2F;guest.vary.php</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;b1adbb2873cff6b818257a116671242c.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;b1adbb2873cff6b818257a116671242c.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BNM-Summit-1900x300-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BNM-Summit-1900x300-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;48839c1f394d7af8c9c3fcd1bdca5fef.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;48839c1f394d7af8c9c3fcd1bdca5fef.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BarrettMedia2024_1000w.png" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BarrettMedia2024_1000w.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;efa2c4d38f4192017ff0f1036f13b780.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;efa2c4d38f4192017ff0f1036f13b780.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;JimCutler_Aug23.gif" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;JimCutler_Aug23.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;98a59b52be7953814343bcd9aea179e1.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;98a59b52be7953814343bcd9aea179e1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BNM-Summit-Sale-MedRec-300x250-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BNM-Summit-Sale-MedRec-300x250-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;bce5a3dda6a089a11b1d2e434c307d7d.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;bce5a3dda6a089a11b1d2e434c307d7d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;RamseySolutions.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;RamseySolutions.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;c73c0063828812192100a362eec44d13.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;c73c0063828812192100a362eec44d13.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;98cca6f5adc7c521e5111f6afaf1ea80.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;98cca6f5adc7c521e5111f6afaf1ea80.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;62b9fca8acf8ef1d89fe7ea773c4f57f.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;62b9fca8acf8ef1d89fe7ea773c4f57f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a90bceb95ad49ce933a39430f623af87.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a90bceb95ad49ce933a39430f623af87.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f477ad0b58e913825313406382565dd5.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f477ad0b58e913825313406382565dd5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;3193585775583ede433d23bbd476191f.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;3193585775583ede433d23bbd476191f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;fb3c06655d2ba2aea6e9d8cf6c0c4f70.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;fb3c06655d2ba2aea6e9d8cf6c0c4f70.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;97fe78bd7d20f091957c45362a73a648.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;97fe78bd7d20f091957c45362a73a648.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;9f9e5110a2cb6cb9edcf8f1d2eb62ccd.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;9f9e5110a2cb6cb9edcf8f1d2eb62ccd.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;3c3b7455a5bc1aad8230dfb11bb1f642.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;3c3b7455a5bc1aad8230dfb11bb1f642.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;00aff59350add0c068dadb429393ab9d.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;00aff59350add0c068dadb429393ab9d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f942e91c4fc435da4e69e6b55574115b.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f942e91c4fc435da4e69e6b55574115b.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;fb90cfc9810ec2d35535d173846b026c.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;fb90cfc9810ec2d35535d173846b026c.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a9b5ddfa0ecb658b29646454e7b0cd4f.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a9b5ddfa0ecb658b29646454e7b0cd4f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;8aa66e81f5eade5dc6a8bdf2718c0551.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;8aa66e81f5eade5dc6a8bdf2718c0551.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;470ba77392d15166f818e19361b057bc.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;470ba77392d15166f818e19361b057bc.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;4bd7dae583713f4b927b21283cdcf414.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;4bd7dae583713f4b927b21283cdcf414.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;2deeb3c82fb133a88e23be74ab7d13a7.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;2deeb3c82fb133a88e23be74ab7d13a7.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;bee004bbc7909ca0702a1e13210f925e.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;bee004bbc7909ca0702a1e13210f925e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;ce9c143ac3b6322ff9392e889861dca2.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;ce9c143ac3b6322ff9392e889861dca2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;505c6cf7143bcd044eb4081427add18d.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;505c6cf7143bcd044eb4081427add18d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;61d0a1766a3d3447126e994e1105608a.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;61d0a1766a3d3447126e994e1105608a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f200d1ff1d5e0474289f24f9b33e3dc3.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f200d1ff1d5e0474289f24f9b33e3dc3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a7a142625407e1cd485b62e7f045072e.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;a7a142625407e1cd485b62e7f045072e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f2045666d2ee8ba1fbfb0a46c7dcecaf.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;f2045666d2ee8ba1fbfb0a46c7dcecaf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;f2bbabe34c820b82c8b499fc55afe810.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;f2bbabe34c820b82c8b499fc55afe810.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;c9ae735904735016878c21e05a1a727e.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;c9ae735904735016878c21e05a1a727e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;225970244ebd3920cb1d0fab7e2b522e.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;225970244ebd3920cb1d0fab7e2b522e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;17fcb14623dd31d866cc19cff7891d16.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;17fcb14623dd31d866cc19cff7891d16.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;f906b5bec3ffe6b10d50f75162efa8b0.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;f906b5bec3ffe6b10d50f75162efa8b0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;5d7fd245370b597ecc279ecbfabe75de.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;5d7fd245370b597ecc279ecbfabe75de.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;e62452dc7a9575aca0d6696541796077.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;e62452dc7a9575aca0d6696541796077.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;6e22308163d794b1628512741ee4804f.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;6e22308163d794b1628512741ee4804f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;638fd180a7ddaaf9c01892f57a127433.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;638fd180a7ddaaf9c01892f57a127433.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BSM-640x330-SOUND-LIKE-A-CHAMP2x.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BSM-640x330-SOUND-LIKE-A-CHAMP2x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BM_Jobs_640x330.png" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BM_Jobs_640x330.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;08&#x2F;CIS-Animated-300x250-1.gif" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;08&#x2F;CIS-Animated-300x250-1.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;04&#x2F;OnDemand_BSMSummit_1900x300.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;04&#x2F;OnDemand_BSMSummit_1900x300.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;07&#x2F;Backbone-300x250-for-Website-Radio-News-Section-7_25.gif" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;07&#x2F;Backbone-300x250-for-Website-Radio-News-Section-7_25.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;88640.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;88640.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Pulse640x330.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Pulse640x330.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;1900x300a.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;1900x300a.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BSM-Email-Sign-Up-Banner-1900x300-News.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BSM-Email-Sign-Up-Banner-1900x300-News.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;ef8c418e438af392d93a61b7cd20447d.css" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;css&#x2F;ef8c418e438af392d93a61b7cd20447d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;02f1ac6ca6d7c21f66a2b2d7463c295d.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;02f1ac6ca6d7c21f66a2b2d7463c295d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;7a382e17639b7f49c7b933e73b01b39c.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;7a382e17639b7f49c7b933e73b01b39c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;744946abfc770c183b46a1f73a9b3549.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;744946abfc770c183b46a1f73a9b3549.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;9b0b044d921cc58c0f4cfad6bb2e1bea.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;9b0b044d921cc58c0f4cfad6bb2e1bea.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;6d1c1b18f4a209faba8ec060c598d732.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;6d1c1b18f4a209faba8ec060c598d732.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;6f6ceebd5966daf87ab3865fe7719953.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;6f6ceebd5966daf87ab3865fe7719953.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;5d83fb1fd15b94b0603abb5db9fef854.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;5d83fb1fd15b94b0603abb5db9fef854.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;cdd219f77cc424c7d3e3fe29f405cc53.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;cdd219f77cc424c7d3e3fe29f405cc53.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;8446221c63ad89b390ba29d548243770.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;8446221c63ad89b390ba29d548243770.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;01535e2d6d75e3e5dc8d364ae4dec33d.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;01535e2d6d75e3e5dc8d364ae4dec33d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;71d7f3f551465a5660405f47d55670b3.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;71d7f3f551465a5660405f47d55670b3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;01446677e116da4651158eaafa9cfb8a.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;01446677e116da4651158eaafa9cfb8a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;56373cb0fa862f5506b3b7699706b2a0.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;56373cb0fa862f5506b3b7699706b2a0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;0702824d9fa53a23637f410bd39e0cc1.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;0702824d9fa53a23637f410bd39e0cc1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b69e1a2118a3d055bbb00863e2f79184.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b69e1a2118a3d055bbb00863e2f79184.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1e20b1300f5540f7b9766b8b09fdd32e.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1e20b1300f5540f7b9766b8b09fdd32e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;a3c5b4251e431a6005c6ad3ab21176e1.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;a3c5b4251e431a6005c6ad3ab21176e1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;99abec0ab992552d00d4b32cc63ac45e.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;99abec0ab992552d00d4b32cc63ac45e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;c6ea00eaffe11f599cbdb64530932453.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;c6ea00eaffe11f599cbdb64530932453.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b38d476e332047fa5a0c6c8c4641b4b5.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b38d476e332047fa5a0c6c8c4641b4b5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;59c075323550e81de41a4a4b6b8e6a96.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;59c075323550e81de41a4a4b6b8e6a96.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;049ade0f0fad638171a2200f54ab73ab.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;049ade0f0fad638171a2200f54ab73ab.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1b5e84ae22f81b5657f0634237a7165e.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1b5e84ae22f81b5657f0634237a7165e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;333085c4b9514fc5f874359e33246930.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;333085c4b9514fc5f874359e33246930.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b08af9c56a56578911bded21fb32cfc4.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;b08af9c56a56578911bded21fb32cfc4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;75cad4fed6e0a2c5e70cab26bdede5fe.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;75cad4fed6e0a2c5e70cab26bdede5fe.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;815baf2a66a2d0f9f31408d4030dbd4d.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;815baf2a66a2d0f9f31408d4030dbd4d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;ada46684b44c91b20ba49e5877bf1dfd.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;ada46684b44c91b20ba49e5877bf1dfd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;fe034c339bde4e61958a1bd60552007b.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;fe034c339bde4e61958a1bd60552007b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;19327653edaa5c2dd86180f4a03cbc5f.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;19327653edaa5c2dd86180f4a03cbc5f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1bee9d0200ba1ef25a53342125b30427.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;1bee9d0200ba1ef25a53342125b30427.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;60a6bf716c35f4ff1e0a77fc0f4a438f.js" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;litespeed&#x2F;js&#x2F;60a6bf716c35f4ff1e0a77fc0f4a438f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;EmailSignUp8@8.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;EmailSignUp8@8.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;optinRundown.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;optinRundown.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;PulseOptin.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;PulseOptin.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-json&#x2F;iawp&#x2F;search" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-json&#x2F;iawp&#x2F;search</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BarrettMedia2024_Stack-300x175.png" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;BarrettMedia2024_Stack-300x175.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Barrett-Media-All-Staff-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Barrett-Media-All-Staff-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;The-Perry-Show-Trump-Shooting-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;The-Perry-Show-Trump-Shooting-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;20-Brands-Brian-Figula-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;20-Brands-Brian-Figula-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TREY-GOWDY-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TREY-GOWDY-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Tom-Kent-Radio-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Tom-Kent-Radio-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;XMas-in-July-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;XMas-in-July-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Darren-Rovell-Cllct-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Darren-Rovell-Cllct-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Howard-Eskin-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Howard-Eskin-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;10&#x2F;Craig-Carton.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;10&#x2F;Craig-Carton.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;RJ-Choppy-e1693323046291.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;RJ-Choppy-e1693323046291.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;95.7-The-Game.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;10&#x2F;95.7-The-Game.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Undisputed-1-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Undisputed-1-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;10&#x2F;FOX-Sports-MLB.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;10&#x2F;FOX-Sports-MLB.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Anthony-Edwards-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Anthony-Edwards-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TUCKER-CARLSON-CHARLIE-KIRK-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TUCKER-CARLSON-CHARLIE-KIRK-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;01&#x2F;KIRO-RADIO.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;01&#x2F;KIRO-RADIO.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;03&#x2F;Erick-Erickson-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;03&#x2F;Erick-Erickson-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;02&#x2F;WABC-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;02&#x2F;WABC-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;08&#x2F;fox-news-logo.png" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;08&#x2F;fox-news-logo.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;03&#x2F;CNN-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;03&#x2F;CNN-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;MORNING-JOE-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;MORNING-JOE-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Untitled-design-2-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Untitled-design-2-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Woody-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Woody-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;kelly-ford-final-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;kelly-ford-final-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Oakes-to-retire-1-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Oakes-to-retire-1-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Throwbacks-final-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Throwbacks-final-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;99-1-Cleveland-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;99-1-Cleveland-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Nielsen-Audio-June-24-2-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Nielsen-Audio-June-24-2-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;OPENAI-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;OPENAI-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Jack-Rose-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Jack-Rose-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;12&#x2F;JACOBS-MEDIA.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;12&#x2F;JACOBS-MEDIA.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;VERITONIC-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;VERITONIC-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;STEFAN-JONES-USRN-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;STEFAN-JONES-USRN-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;01&#x2F;Curtis-LeGeyt.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;01&#x2F;Curtis-LeGeyt.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Florida-State-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Florida-State-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;RTDNAjpg-696x392.webp" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;RTDNAjpg-696x392.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;06&#x2F;PODCAST-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;06&#x2F;PODCAST-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Add-a-subheading-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Add-a-subheading-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Spotify-Unveils-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Spotify-Unveils-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;03&#x2F;BEN-SHAPIRO.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;03&#x2F;BEN-SHAPIRO.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;YOUTUBE-2-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;YOUTUBE-2-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;05&#x2F;BEN-SHAPIRO-DAN-BONGINO.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;05&#x2F;BEN-SHAPIRO-DAN-BONGINO.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Yahoo-TSN-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Yahoo-TSN-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;05&#x2F;Jim-Rome-X-1.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;05&#x2F;Jim-Rome-X-1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;JJ-Redick-scaled.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;08&#x2F;JJ-Redick-scaled.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Mark-Kaye-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;Mark-Kaye-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TUCKER-CARLSON-NETWORK-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;07&#x2F;TUCKER-CARLSON-NETWORK-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;06&#x2F;CNN-JOHN-KING-PODCAST-696x392.jpg" target="_blank" class="external" rel="noreferrer noopener">barrettmedia.com&#x2F;wp-content&#x2F;uploads&#x2F;2024&#x2F;06&#x2F;CNN-JOHN-KING-PODCAST-696x392.jpg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://barrettnewsmedia.com" target="_blank" class="external">barrettnewsmedia.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://barrettsportsmedia.com" target="_blank" class="external">barrettsportsmedia.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

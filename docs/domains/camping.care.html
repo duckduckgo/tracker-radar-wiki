@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - camping.care</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "camping.care",
+        history: [{"date":"ci-2024-08-28-mvihb","prevalence":0.0000304,"sites":3,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/camping.care.ico' width="32" height="32" class='inline-block' /> camping.care</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;6949<small>/14192</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Other</span>,
+                    <span>Fetch</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/camping.care.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>widgets.booking</span>, 
+                    <span>booking</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://widgets.booking.camping.care&#x2F;assets&#x2F;plugin.js" target="_blank" class="external" rel="noreferrer noopener">widgets.booking.camping.care&#x2F;assets&#x2F;plugin.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.c75fcfb2.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.c75fcfb2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.c2b4e435.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.c2b4e435.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;registerSW.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;registerSW.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;webfontloader.b777d690.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;webfontloader.b777d690.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;SearchAndBook.5a3a03eb.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;SearchAndBook.5a3a03eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;SearchAndBookWidget.0cacbb5b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;SearchAndBookWidget.0cacbb5b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VBtn.1fbbc0d7.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VBtn.1fbbc0d7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;forwardRefs.d185e413.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;forwardRefs.d185e413.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCard.c9b40c3f.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCard.c9b40c3f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;loader.e1a5ff45.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;loader.e1a5ff45.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;loader.53e261b4.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;loader.53e261b4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCard.134822e5.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCard.134822e5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VBtn.d469fe5a.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VBtn.d469fe5a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;analytics.83ff2873.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;analytics.83ff2873.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;RangePicker.cf3aecd9.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;RangePicker.cf3aecd9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;_plugin-vue_export-helper.cdc0426e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;_plugin-vue_export-helper.cdc0426e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSpacer.a14cc635.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSpacer.a14cc635.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VGrid.58f30f37.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VGrid.58f30f37.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDivider.17d3a418.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDivider.17d3a418.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDivider.357e019d.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDivider.357e019d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;RangePicker.ee6f1150.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;RangePicker.ee6f1150.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VList.7b78ebb8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VList.7b78ebb8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.b251990c.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.b251990c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VList.b041c245.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VList.b041c245.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMenu.f93eb9a8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMenu.f93eb9a8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VOverlay.39c48081.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VOverlay.39c48081.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VOverlay.ebf9fc74.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VOverlay.ebf9fc74.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMenu.48f9cde6.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMenu.48f9cde6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;widget.d257477b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;widget.d257477b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VAlert.68af76a5.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VAlert.68af76a5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VAlert.25ff0838.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VAlert.25ff0838.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;sw.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;sw.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;workbox-b03bd2db.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;workbox-b03bd2db.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;_plugin-vue_export-helper.cdc0426e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;_plugin-vue_export-helper.cdc0426e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Accommodation.24bf1e74.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Accommodation.24bf1e74.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Accommodation.bb15c9b4.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Accommodation.bb15c9b4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;adyen.ff18b0c4.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;adyen.ff18b0c4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;materialdesignicons-webfont.e52d60f6.woff2" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;materialdesignicons-webfont.e52d60f6.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;analytics.83ff2873.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;analytics.83ff2873.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ar.297b9de6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ar.297b9de6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Cart.65abcc43.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Cart.65abcc43.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Cart.71d9de6a.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Cart.71d9de6a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Cart.a424b4a2.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Cart.a424b4a2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Cart.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Cart.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;CheckIn.2b452389.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;CheckIn.2b452389.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;CheckIn.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;CheckIn.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;CheckOut.921f210c.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;CheckOut.921f210c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;CheckOut.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;CheckOut.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Contact.9f86ef98.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Contact.9f86ef98.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Contact.d9d091ef.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Contact.d9d091ef.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.0ae8177d.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.0ae8177d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.1e7751e1.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.1e7751e1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.22989fbb.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.22989fbb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.4c0617c9.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.4c0617c9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.6f0139a9.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.6f0139a9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.7745a511.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.7745a511.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.9004f51d.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.9004f51d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.cbea6ff3.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.cbea6ff3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.d1b795f8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.d1b795f8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;countries.ede908bb.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;countries.ede908bb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;cs-CZ.b2d1bdaf.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;cs-CZ.b2d1bdaf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;currentKiosk.10affaed.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;currentKiosk.10affaed.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;da-DK.3bc0c2e7.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;da-DK.3bc0c2e7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;DayPicker.41481b61.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;DayPicker.41481b61.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;DayPicker.77704abf.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;DayPicker.77704abf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;de-DE.779881f4.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;de-DE.779881f4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Details.e49b124a.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Details.e49b124a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Details.fc4aa2a7.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Details.fc4aa2a7.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;DiscountCard.a3ca2d81.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;DiscountCard.a3ca2d81.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;el-GR.46f1052d.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;el-GR.46f1052d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;es-ES.daa05887.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;es-ES.daa05887.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;fi-FI.8a88ec56.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;fi-FI.8a88ec56.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;fields.d57c3f7e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;fields.d57c3f7e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Filter.5421f749.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Filter.5421f749.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Filter.57fbd903.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Filter.57fbd903.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Filter.f24a9ae0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Filter.f24a9ae0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Footer.b7b36d27.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Footer.b7b36d27.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Footer.ba2c88b4.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Footer.ba2c88b4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;FormFields.290456c5.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;FormFields.290456c5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;FormFields.346dc9ea.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;FormFields.346dc9ea.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;forwardRefs.d185e413.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;forwardRefs.d185e413.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;fr-FR.58bf3005.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;fr-FR.58bf3005.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Grid.c1f403c8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Grid.c1f403c8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Grid.dbb66b35.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Grid.dbb66b35.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Home.5421f749.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Home.5421f749.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Home.a4088070.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Home.a4088070.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;hr-HR.3f013001.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;hr-HR.3f013001.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;hu-HU.82a16d4d.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;hu-HU.82a16d4d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Index.32735291.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Index.32735291.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.b251990c.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.b251990c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.c2b4e435.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.c2b4e435.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;index.c75fcfb2.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;index.c75fcfb2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Index.dce7dd31.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Index.dce7dd31.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;InteractiveMap.1faa85cd.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;InteractiveMap.1faa85cd.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;InteractiveMap.98d6cba0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;InteractiveMap.98d6cba0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Invoice.88df810f.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Invoice.88df810f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Invoice.d9c2b939.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Invoice.d9c2b939.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;it-IT.02178aef.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;it-IT.02178aef.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ja-JP.988b46ac.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ja-JP.988b46ac.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ko-KR.4fb5b0eb.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ko-KR.4fb5b0eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Labels.63996699.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Labels.63996699.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;LicensePlates.26672cf0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;LicensePlates.26672cf0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;List.4e83489c.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;List.4e83489c.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;List.64261f17.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;List.64261f17.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;loader.53e261b4.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;loader.53e261b4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;loader.e1a5ff45.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;loader.e1a5ff45.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;localStore.197073c8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;localStore.197073c8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;localStore.c111b7bb.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;localStore.c111b7bb.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Map.6f52f3f3.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Map.6f52f3f3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Map.cfea7495.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Map.cfea7495.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;marker-icon-2x.e233d1a6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;marker-icon-2x.e233d1a6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;marker-icon.34d9a2d9.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;marker-icon.34d9a2d9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;marker-shadow.ddd1f13b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;marker-shadow.ddd1f13b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;MyReservation.55926082.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;MyReservation.55926082.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;nl-NL.fb94047f.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;nl-NL.fb94047f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;no-NO.0ee81df8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;no-NO.0ee81df8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;NotFound.5c8c6390.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;NotFound.5c8c6390.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Payment.2dcdf216.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Payment.2dcdf216.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;PaymentRequest.595ef663.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;PaymentRequest.595ef663.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;PaymentRequest.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;PaymentRequest.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;pl-PL.a5294556.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;pl-PL.a5294556.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;PriceGrid.cfca9cdb.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;PriceGrid.cfca9cdb.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;PriceGrid.f0d38ea0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;PriceGrid.f0d38ea0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ProductDemoForm.3dcdc6c7.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ProductDemoForm.3dcdc6c7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ProductDemoForm.e5856cc4.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ProductDemoForm.e5856cc4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;pt-BR.d1a0ae55.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;pt-BR.d1a0ae55.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;pt-PT.aab4c50c.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;pt-PT.aab4c50c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;RangePicker.cf3aecd9.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;RangePicker.cf3aecd9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;RangePicker.ee6f1150.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;RangePicker.ee6f1150.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Request.6c340a03.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Request.6c340a03.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Request.f57cfbf0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Request.f57cfbf0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Reservation.96c37c2b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Reservation.96c37c2b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Reservation.ccce55d6.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Reservation.ccce55d6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ro-RO.57bacb57.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ro-RO.57bacb57.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;ru-RU.3248bffc.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;ru-RU.3248bffc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Scheduler.2cb3fb73.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Scheduler.2cb3fb73.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Scheduler.79d3ffc7.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Scheduler.79d3ffc7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Search.3273ae60.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Search.3273ae60.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Search.eb6874e6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Search.eb6874e6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;SearchAndBook.5a3a03eb.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;SearchAndBook.5a3a03eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;SearchAndBook.9d1626e8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;SearchAndBook.9d1626e8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;SearchAndBookWidget.0cacbb5b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;SearchAndBookWidget.0cacbb5b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;sk-SK.a4530bb6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;sk-SK.a4530bb6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;sl-SI.837a2bb6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;sl-SI.837a2bb6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Start.7fa32d1d.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Start.7fa32d1d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Start.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Start.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;sv-SE.c885ba7b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;sv-SE.c885ba7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;UpdateReservation.4a0c64ff.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;UpdateReservation.4a0c64ff.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;UpdateReservation.ccaed750.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;UpdateReservation.ccaed750.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VAlert.25ff0838.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VAlert.25ff0838.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VAlert.68af76a5.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VAlert.68af76a5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VApp.7417bd96.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VApp.7417bd96.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VApp.d075c5c4.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VApp.d075c5c4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VBtn.1fbbc0d7.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VBtn.1fbbc0d7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VBtn.d469fe5a.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VBtn.d469fe5a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCard.134822e5.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCard.134822e5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCard.c9b40c3f.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCard.c9b40c3f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCheckbox.547dff60.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCheckbox.547dff60.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCheckbox.b0358753.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCheckbox.b0358753.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VCheckboxBtn.30df5b8e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VCheckboxBtn.30df5b8e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VContainer.2de717c8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VContainer.2de717c8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDialog.2a6f757b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDialog.2a6f757b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDialog.b90c87cf.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDialog.b90c87cf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDivider.17d3a418.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDivider.17d3a418.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VDivider.357e019d.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VDivider.357e019d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VField.37551c2b.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VField.37551c2b.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VField.694d957c.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VField.694d957c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VGrid.58f30f37.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VGrid.58f30f37.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VInput.16fe5238.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VInput.16fe5238.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VInput.6feb792e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VInput.6feb792e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VList.7b78ebb8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VList.7b78ebb8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VList.b041c245.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VList.b041c245.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMain.7c87d0b3.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMain.7c87d0b3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMain.d6216866.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMain.d6216866.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMenu.48f9cde6.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMenu.48f9cde6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VMenu.f93eb9a8.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VMenu.f93eb9a8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VOverlay.39c48081.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VOverlay.39c48081.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VOverlay.ebf9fc74.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VOverlay.ebf9fc74.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VRadioGroup.5887bb81.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VRadioGroup.5887bb81.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VRadioGroup.6eface9f.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VRadioGroup.6eface9f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VRating.b1ef513a.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VRating.b1ef513a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VRating.d3703dcc.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VRating.d3703dcc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VRow.d27f7541.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VRow.d27f7541.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSelect.1acd1592.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSelect.1acd1592.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSelect.b097ee51.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSelect.b097ee51.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSelectionControl.5068d88e.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSelectionControl.5068d88e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSelectionControl.a8dda4c6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSelectionControl.a8dda4c6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSheet.302c4bd0.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSheet.302c4bd0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSheet.611d1416.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSheet.611d1416.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSnackbar.ba0e3e2f.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSnackbar.ba0e3e2f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSnackbar.cb846180.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSnackbar.cb846180.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VSpacer.a14cc635.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VSpacer.a14cc635.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VStepper.04ef9cd2.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VStepper.04ef9cd2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VStepper.86b9653a.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VStepper.86b9653a.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VTextField.812f6ce8.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VTextField.812f6ce8.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VTextField.f0f6488e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VTextField.f0f6488e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VTooltip.2cb5fd84.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VTooltip.2cb5fd84.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;VTooltip.7ccab82c.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;VTooltip.7ccab82c.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;vue-qrcode-reader.329a15b6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;vue-qrcode-reader.329a15b6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;webfontloader.b777d690.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;webfontloader.b777d690.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Widget.43ddf394.css" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Widget.43ddf394.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;Widget.822504d6.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;Widget.822504d6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;widget.d257477b.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;widget.d257477b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;zh-CN.33b31238.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;zh-CN.33b31238.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;assets&#x2F;zh-TW.0895cb4e.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;assets&#x2F;zh-TW.0895cb4e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;index.html" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;index.html</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;registerSW.js" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;registerSW.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://booking.camping.care&#x2F;manifest.webmanifest" target="_blank" class="external" rel="noreferrer noopener">booking.camping.care&#x2F;manifest.webmanifest</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://campingdereekens.nl" target="_blank" class="external">campingdereekens.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://demosterdpot.nl" target="_blank" class="external">demosterdpot.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

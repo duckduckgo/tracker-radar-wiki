@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - pb.nl</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "pb.nl",
+        history: [{"date":"2024.07.08","prevalence":0.0001,"sites":1,"fingerprinting":1,"cookies":0.0001},{"date":"2024.07.22","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.08.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.08.21","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"ci-2024-08-28-mvihb","prevalence":0.0000203,"sites":2,"fingerprinting":1,"cookies":0.0000203}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/pb.nl.ico' width="32" height="32" class='inline-block' /> pb.nl</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10560<small>/14192</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Fetch</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/pb.nl.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                    <span>gtm</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./googletagmanager.com.html">googletagmanager.com</a> - 83.33% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./cloudflareinsights.com.html">cloudflareinsights.com</a> - 16.67% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://gtm.pb.nl&#x2F;g&#x2F;collect" target="_blank" class="external" rel="noreferrer noopener">gtm.pb.nl&#x2F;g&#x2F;collect</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;media&#x2F;04f213e743dbc428-s.p.woff" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;media&#x2F;04f213e743dbc428-s.p.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;media&#x2F;3d9ea938b6afa941-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;media&#x2F;3d9ea938b6afa941-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-e1ed49f35373b489.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-e1ed49f35373b489.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;117577ffe7204c03.css" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;117577ffe7204c03.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;cc9e92b74846535e.css" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;cc9e92b74846535e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;8c7c6bea293b4bac.css" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;8c7c6bea293b4bac.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;643724ed-c76d01e0b2f7b087.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;643724ed-c76d01e0b2f7b087.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5862-612c8853f1d8bd37.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5862-612c8853f1d8bd37.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-e87b0be454d5414c.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-e87b0be454d5414c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;global-error-c723ebb2e3fda422.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;global-error-c723ebb2e3fda422.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5391-4f38d39142cf2cca.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5391-4f38d39142cf2cca.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3854-7f824658a11fb4d0.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3854-7f824658a11fb4d0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2368-8d283f66c66a3c84.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2368-8d283f66c66a3c84.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7699-975a78ae1b035f1e.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7699-975a78ae1b035f1e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8210-db858b029e136021.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8210-db858b029e136021.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4929-9d3736e55cb855c0.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4929-9d3736e55cb855c0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5959-d15c2bc190b2dbe6.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5959-d15c2bc190b2dbe6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4052-f12418f1d09267eb.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4052-f12418f1d09267eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5752-ccc3dcf6a51b5e8e.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5752-ccc3dcf6a51b5e8e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1030-23f47884ddfbff12.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1030-23f47884ddfbff12.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2923-9f1d0287492b8499.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2923-9f1d0287492b8499.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8904-48845ace616429ae.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8904-48845ace616429ae.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5621-12eaf45d2b6923cf.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5621-12eaf45d2b6923cf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7283-2298a7ee3bf0e6e2.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7283-2298a7ee3bf0e6e2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8935-5aa0e67806a2d8c6.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8935-5aa0e67806a2d8c6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9976-fefb775cbb7c5d81.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9976-fefb775cbb7c5d81.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9159-3fe58bb1f69f0bc4.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9159-3fe58bb1f69f0bc4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1924-f63231cd22dacb9b.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1924-f63231cd22dacb9b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8061-30ce6318aea15a16.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8061-30ce6318aea15a16.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2284-504b41279741acda.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2284-504b41279741acda.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9265-60d5137aa3b9c191.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9265-60d5137aa3b9c191.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7915-172f04e72fe71b39.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7915-172f04e72fe71b39.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;layout-81ae5abe9ef70a19.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;layout-81ae5abe9ef70a19.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8372-83d1814ce9af7496.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8372-83d1814ce9af7496.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4572-20fd35e3d13454d6.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4572-20fd35e3d13454d6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;page-0277855d69fe3016.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;page-0277855d69fe3016.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;not-found-878c56eb87dd42e7.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;not-found-878c56eb87dd42e7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7380-80806a1d3f1b8f66.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7380-80806a1d3f1b8f66.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5365-71b59fd7f78afb7b.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5365-71b59fd7f78afb7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;layout-38eb1246a44ca932.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;layout-38eb1246a44ca932.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9994-b51dd1d997605249.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9994-b51dd1d997605249.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8425-5dbc3365a65185c2.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8425-5dbc3365a65185c2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;error-dd0491c4ccb88ae6.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;error-dd0491c4ccb88ae6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;error-9a5cc39172a735a5.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;error-9a5cc39172a735a5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;cdn-cgi&#x2F;scripts&#x2F;5c5dd728&#x2F;cloudflare-static&#x2F;email-decode.min.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;cdn-cgi&#x2F;scripts&#x2F;5c5dd728&#x2F;cloudflare-static&#x2F;email-decode.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;en" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;en</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3912-1d35be1c9a04b818.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3912-1d35be1c9a04b818.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7422-606545660d67f7e9.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7422-606545660d67f7e9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;womens&#x2F;%5B...slug%5D&#x2F;page-e8aa5e2e6288bf7b.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;womens&#x2F;%5B...slug%5D&#x2F;page-e8aa5e2e6288bf7b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;%5Bslug%5D&#x2F;page-30e10aa18d030169.js" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;%5Blocale%5D&#x2F;(main)&#x2F;%5Bslug%5D&#x2F;page-30e10aa18d030169.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;cdn-cgi&#x2F;rum" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;cdn-cgi&#x2F;rum</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.pb.nl&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.pb.nl&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://perfectlybasics.com" target="_blank" class="external">perfectlybasics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.perfectlybasics.nl" target="_blank" class="external">www.perfectlybasics.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.perfectlybasics.com" target="_blank" class="external">www.perfectlybasics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://perfectlybasics.nl" target="_blank" class="external">perfectlybasics.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

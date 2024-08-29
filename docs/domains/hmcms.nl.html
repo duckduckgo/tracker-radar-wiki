@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - hmcms.nl</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "hmcms.nl",
+        history: [{"date":"ci-2024-08-28-mvihb","prevalence":0.000649,"sites":64,"fingerprinting":2,"cookies":0.0000609}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/hmcms.nl.ico' width="32" height="32" class='inline-block' /> hmcms.nl</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;971<small>/14192</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.06&#37; (64 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.01&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>XHR</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/hmcms.nl.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>lib</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 96.24% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./jquery.com.html">jquery.com</a> - 2.33% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./bookzoapi.nl.html">bookzoapi.nl</a> - 0.78% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./cookiebot.com.html">cookiebot.com</a> - 0.52% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./ardoer.com.html">ardoer.com</a> - 0.13% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;libloader.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;libloader.js</a> (seen on 63 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;css&#x2F;jquery&#x2F;ui&#x2F;datepicker.min.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;css&#x2F;jquery&#x2F;ui&#x2F;datepicker.min.1.css</a> (seen on 47 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery&#x2F;ui&#x2F;datepicker&#x2F;monthyearpicker.1617010781.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery&#x2F;ui&#x2F;datepicker&#x2F;monthyearpicker.1617010781.js</a> (seen on 44 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;searcher.1722935397.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;searcher.1722935397.js</a> (seen on 39 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;hammer.1550134802.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;hammer.1550134802.js</a> (seen on 38 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;moment.1561482196.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;moment.1561482196.js</a> (seen on 38 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;calentim.1607428430.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;calentim&#x2F;calentim.1607428430.js</a> (seen on 38 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;calentim.1722935397.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;calentim.1722935397.js</a> (seen on 38 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl&#x2F;carousel&#x2F;css&#x2F;owl.carousel.min.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl&#x2F;carousel&#x2F;css&#x2F;owl.carousel.min.css</a> (seen on 32 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;form&#x2F;spinner.1520506908.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;form&#x2F;spinner.1520506908.js</a> (seen on 24 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;guests.1649149384.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;guests.1649149384.js</a> (seen on 24 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;criteria.1722935397.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;criteria.1722935397.js</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.2.4.min.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.2.4.min.js</a> (seen on 16 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.2.0.min.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.2.0.min.js</a> (seen on 15 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-3.6.0.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-3.6.0.js</a> (seen on 14 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;featherlight&#x2F;css&#x2F;featherlight.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;featherlight&#x2F;css&#x2F;featherlight.css</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;api&#x2F;google&#x2F;place&#x2F;rating.json" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;api&#x2F;google&#x2F;place&#x2F;rating.json</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped4&#x2F;css&#x2F;tipped.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped4&#x2F;css&#x2F;tipped.1.css</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;css&#x2F;hm.owl.carousel.4.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;css&#x2F;hm.owl.carousel.4.css</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped4&#x2F;tipped.1620057644.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped4&#x2F;tipped.1620057644.js</a> (seen on 11 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;hmapi.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;hmapi.js</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;ytplayer.1712226210.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;ytplayer.1712226210.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;async.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;async.js</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;swiper&#x2F;css&#x2F;swiper-bundle.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;swiper&#x2F;css&#x2F;swiper-bundle.1.css</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;css&#x2F;highslide.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;css&#x2F;highslide.1.css</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;outlines&#x2F;drop-shadow.png" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;outlines&#x2F;drop-shadow.png</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;zoomout.cur" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;zoomout.cur</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;loader.white.gif" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;highslide&#x2F;images&#x2F;loader.white.gif</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery&#x2F;ui&#x2F;core-datepicker-package.1722935397.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery&#x2F;ui&#x2F;core-datepicker-package.1722935397.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;widget.1613561662.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;widget.1613561662.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ui&#x2F;datepicker-i18n.1366978926.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ui&#x2F;datepicker-i18n.1366978926.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ui&#x2F;datepicker-config.1366978926.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ui&#x2F;datepicker-config.1366978926.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget.1707213739.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget.1707213739.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.1.1.min.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.1.1.min.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl&#x2F;carousel&#x2F;css&#x2F;owl.theme.default.min.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl&#x2F;carousel&#x2F;css&#x2F;owl.theme.default.min.css</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;abandoned.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;abandoned.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cookie.1361285230.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cookie.1361285230.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;abandoned.1722935381.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;abandoned.1722935381.js</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;select2&#x2F;css&#x2F;default.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;select2&#x2F;css&#x2F;default.1.css</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;api&#x2F;zoover&#x2F;grade.json" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;api&#x2F;zoover&#x2F;grade.json</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;responsy&#x2F;inview&#x2F;lazyload.1566295758.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;responsy&#x2F;inview&#x2F;lazyload.1566295758.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;uanalytics.1690533364.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;uanalytics.1690533364.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;flexslider&#x2F;css&#x2F;default.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;flexslider&#x2F;css&#x2F;default.css</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cache.1361876763.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cache.1361876763.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;openinghours&#x2F;debugrules.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;openinghours&#x2F;debugrules.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;survey.1707213724.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;survey.1707213724.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;compat&#x2F;protofix.min.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;compat&#x2F;protofix.min.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-3.5.1.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-3.5.1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;css&#x2F;hm.rotr.slider.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;css&#x2F;hm.rotr.slider.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;storage.1613063645.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;storage.1613063645.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;specialperiods.1707213724.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;specialperiods.1707213724.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;quicksearch.1617010781.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;widget&#x2F;quicksearch.1617010781.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped&#x2F;css&#x2F;tipped.3.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;tipped&#x2F;css&#x2F;tipped.3.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;levels.1684228656.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;ha&#x2F;booking&#x2F;modules&#x2F;levels.1684228656.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;owl&#x2F;carousel.1600257575.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;owl&#x2F;carousel.1600257575.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cms&#x2F;faq.1663590328.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;cms&#x2F;faq.1663590328.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;featherlight&#x2F;css&#x2F;featherlight.gallery.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;featherlight&#x2F;css&#x2F;featherlight.gallery.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;leaflet&#x2F;css&#x2F;leaflet.9.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;leaflet&#x2F;css&#x2F;leaflet.9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;gtag.1690533869.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;hm&#x2F;gtag.1690533869.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.1.3.min.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;jquery-2.1.3.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl2&#x2F;carousel.1612877159.js" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;owl2&#x2F;carousel.1612877159.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;css&#x2F;hm.openinghours.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;css&#x2F;hm.openinghours.1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;css&#x2F;hm.openinghours.6.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;css&#x2F;hm.openinghours.6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;select2410&#x2F;css&#x2F;default.1.css" target="_blank" class="external" rel="noreferrer noopener">lib.hmcms.nl&#x2F;js&#x2F;2&#x2F;select2410&#x2F;css&#x2F;default.1.css</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://bongerd.nl" target="_blank" class="external">bongerd.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bosparkdennenrhode.nl" target="_blank" class="external">bosparkdennenrhode.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bungalowparkitwiid.nl" target="_blank" class="external">www.bungalowparkitwiid.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hetschinkel.nl" target="_blank" class="external">www.hetschinkel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.koornmolen.nl" target="_blank" class="external">www.koornmolen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kuilart.nl" target="_blank" class="external">www.kuilart.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pampel.nl" target="_blank" class="external">www.pampel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.westhove.nl" target="_blank" class="external">www.westhove.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wiid.nl" target="_blank" class="external">www.wiid.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.zuiderduin.nl" target="_blank" class="external">www.zuiderduin.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.zwinhoeve.nl" target="_blank" class="external">www.zwinhoeve.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.duinhofholidays.nl" target="_blank" class="external">www.duinhofholidays.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bergumermeer.nl" target="_blank" class="external">www.bergumermeer.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.demolenhof.nl" target="_blank" class="external">www.demolenhof.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.terspegelt.nl" target="_blank" class="external">www.terspegelt.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campingbakkum.nl" target="_blank" class="external">www.campingbakkum.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.schatberg.nl" target="_blank" class="external">www.schatberg.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.chaletsplus.com" target="_blank" class="external">www.chaletsplus.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.landgoedruwinkel.nl" target="_blank" class="external">www.landgoedruwinkel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.breezandvakanties.nl" target="_blank" class="external">www.breezandvakanties.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.leistert.nl" target="_blank" class="external">www.leistert.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.uitgeversgroep.nl" target="_blank" class="external">www.uitgeversgroep.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.francecomfort.com" target="_blank" class="external">www.francecomfort.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campingdeberken.nl" target="_blank" class="external">www.campingdeberken.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campinggeversduin.nl" target="_blank" class="external">www.campinggeversduin.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campingdelakens.nl" target="_blank" class="external">www.campingdelakens.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kurenpolder.nl" target="_blank" class="external">www.kurenpolder.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kustlicht.nl" target="_blank" class="external">www.kustlicht.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kleinewolf.nl" target="_blank" class="external">www.kleinewolf.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.villamer.nl" target="_blank" class="external">www.villamer.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://meerpaal.ardoer.com" target="_blank" class="external">meerpaal.ardoer.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campingbakkum.com" target="_blank" class="external">www.campingbakkum.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.inhetgroen.nl" target="_blank" class="external">www.inhetgroen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.weergors.nl" target="_blank" class="external">www.weergors.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.julianahoeve.nl" target="_blank" class="external">www.julianahoeve.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ardoer.com" target="_blank" class="external">ardoer.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.duinparkderobbenjager.nl" target="_blank" class="external">www.duinparkderobbenjager.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.coogherveld-texel.nl" target="_blank" class="external">www.coogherveld-texel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.golfzang.nl" target="_blank" class="external">www.golfzang.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hethogeduin.nl" target="_blank" class="external">www.hethogeduin.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hotelinegmond.nl" target="_blank" class="external">www.hotelinegmond.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.netl.nl" target="_blank" class="external">www.netl.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.veluwshof.nl" target="_blank" class="external">www.veluwshof.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.waalstrand.nl" target="_blank" class="external">www.waalstrand.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dennenoord.com" target="_blank" class="external">www.dennenoord.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.simonshoek.nl" target="_blank" class="external">www.simonshoek.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dezevenlinden.nl" target="_blank" class="external">www.dezevenlinden.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.waldsang.nl" target="_blank" class="external">www.waldsang.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hetgroeneeiland.nl" target="_blank" class="external">www.hetgroeneeiland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.campingteind.nl" target="_blank" class="external">www.campingteind.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.stjanskathedraal-orgelconcert.nl" target="_blank" class="external">www.stjanskathedraal-orgelconcert.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ardoer.com" target="_blank" class="external">www.ardoer.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hoevespringendal.nl" target="_blank" class="external">www.hoevespringendal.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.oranjezon.nl" target="_blank" class="external">www.oranjezon.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.heksenboom.nl" target="_blank" class="external">www.heksenboom.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ommerland.nl" target="_blank" class="external">www.ommerland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.derakken.nl" target="_blank" class="external">www.derakken.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.flevonatuur.nl" target="_blank" class="external">www.flevonatuur.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.terschelling-recreatie.nl" target="_blank" class="external">www.terschelling-recreatie.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.demolenhoek.com" target="_blank" class="external">www.demolenhoek.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bergumermeer.nl" target="_blank" class="external">bergumermeer.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.duinenstrand.nl" target="_blank" class="external">www.duinenstrand.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.greenkey.nl" target="_blank" class="external">www.greenkey.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://breezandvakanties.nl" target="_blank" class="external">breezandvakanties.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.digiplein.com" target="_blank" class="external">www.digiplein.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ullingsebergen.nl" target="_blank" class="external">www.ullingsebergen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://campingbakkum.com" target="_blank" class="external">campingbakkum.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://campingteind.nl" target="_blank" class="external">campingteind.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://coogherveld-texel.nl" target="_blank" class="external">coogherveld-texel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://demolenhof.nl" target="_blank" class="external">demolenhof.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dennenoord.com" target="_blank" class="external">dennenoord.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://derakken.nl" target="_blank" class="external">derakken.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://duinhofholidays.nl" target="_blank" class="external">duinhofholidays.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://flevonatuur.nl" target="_blank" class="external">flevonatuur.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://francecomfort.com" target="_blank" class="external">francecomfort.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://heksenboom.nl" target="_blank" class="external">heksenboom.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hetgroeneeiland.nl" target="_blank" class="external">hetgroeneeiland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hoevespringendal.nl" target="_blank" class="external">hoevespringendal.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://inhetgroen.nl" target="_blank" class="external">inhetgroen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://julianahoeve.nl" target="_blank" class="external">julianahoeve.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://schatberg.nl" target="_blank" class="external">schatberg.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://uitgeversgroep.nl" target="_blank" class="external">uitgeversgroep.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

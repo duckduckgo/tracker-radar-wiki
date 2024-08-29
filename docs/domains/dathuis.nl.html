@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - dathuis.nl</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "dathuis.nl",
+        history: [{"date":"ci-2024-08-28-mvihb","prevalence":0.000568,"sites":56,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/dathuis.nl.ico' width="32" height="32" class='inline-block' /> dathuis.nl</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;1059<small>/14192</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.06&#37; (56 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Document</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/dathuis.nl.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>btstrp</span>, 
+                    <span>wdgt</span>, 
+                    <span>waarderapport.partner</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>CNAMEs</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://waarderapport.dekkermakelaars.nl" target="_blank" class="external">waarderapport.dekkermakelaars.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.divamakelaars.nl" target="_blank" class="external">waarderapport.divamakelaars.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.dmcmakelaars.nl" target="_blank" class="external">waarderapport.dmcmakelaars.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.domicilie.nl" target="_blank" class="external">waarderapport.domicilie.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.hemeltjenmakelaardij.nl" target="_blank" class="external">waarderapport.hemeltjenmakelaardij.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.houtmandevogel.nl" target="_blank" class="external">waarderapport.houtmandevogel.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waarderapport.spitmanmakelaars.nl" target="_blank" class="external">waarderapport.spitmanmakelaars.nl</a> &#x2192; <a href="http://waarderapport.partner.dathuis.nl" target="_blank" class="external">waarderapport.partner.dathuis.nl</a>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 71.72% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./googletagmanager.com.html">googletagmanager.com</a> - 26.26% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./jsdelivr.net.html">jsdelivr.net</a> - 1.01% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./cookiebot.com.html">cookiebot.com</a> - 1.01% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://btstrp.dathuis.nl&#x2F;assets&#x2F;widget.js" target="_blank" class="external" rel="noreferrer noopener">btstrp.dathuis.nl&#x2F;assets&#x2F;widget.js</a> (seen on 48 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;cab557380d115f2d.css" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;css&#x2F;cab557380d115f2d.css</a> (seen on 43 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-20c6a2149868ae8f.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-20c6a2149868ae8f.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-46611630e39cfdeb.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-46611630e39cfdeb.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-4676ae45f01e2dd6.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-4676ae45f01e2dd6.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-b4f4eea125273b07.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-b4f4eea125273b07.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-f81d43a8b2c50203.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;index-f81d43a8b2c50203.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;38A99wkbfGGm9JLxefuuF&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;38A99wkbfGGm9JLxefuuF&#x2F;_buildManifest.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;38A99wkbfGGm9JLxefuuF&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;_next&#x2F;static&#x2F;38A99wkbfGGm9JLxefuuF&#x2F;_ssgManifest.js</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;fonts&#x2F;Metropolis&#x2F;WOFF&#x2F;Metropolis-Regular.woff" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;fonts&#x2F;Metropolis&#x2F;WOFF&#x2F;Metropolis-Regular.woff</a> (seen on 42 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;fonts&#x2F;Metropolis&#x2F;WOFF&#x2F;Metropolis-SemiBold.woff" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;fonts&#x2F;Metropolis&#x2F;WOFF&#x2F;Metropolis-SemiBold.woff</a> (seen on 41 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://waarderapport.partner.dathuis.nl&#x2F;widget&#x2F;dathuis.css" target="_blank" class="external" rel="noreferrer noopener">waarderapport.partner.dathuis.nl&#x2F;widget&#x2F;dathuis.css</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://waarderapport.partner.dathuis.nl&#x2F;widget&#x2F;dathuis.js" target="_blank" class="external" rel="noreferrer noopener">waarderapport.partner.dathuis.nl&#x2F;widget&#x2F;dathuis.js</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;assets&#x2F;fonts&#x2F;fonts.css" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;assets&#x2F;fonts&#x2F;fonts.css</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;iframe&#x2F;a---f47c332f-6a24-4e2c-9b31-8fb9b357e6d1" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;iframe&#x2F;a---f47c332f-6a24-4e2c-9b31-8fb9b357e6d1</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://wdgt.dathuis.nl&#x2F;iframe&#x2F;a---0beea6e4-6ac0-4c98-9c3c-5e27a5819537" target="_blank" class="external" rel="noreferrer noopener">wdgt.dathuis.nl&#x2F;iframe&#x2F;a---0beea6e4-6ac0-4c98-9c3c-5e27a5819537</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://www.ovmak.nl" target="_blank" class="external">www.ovmak.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://makelaardijdeparel.nl" target="_blank" class="external">makelaardijdeparel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bertvanvulpen.nl" target="_blank" class="external">www.bertvanvulpen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fastgoed.pro" target="_blank" class="external">fastgoed.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tenhag.nl" target="_blank" class="external">www.tenhag.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nieuwwonennederland.nl" target="_blank" class="external">www.nieuwwonennederland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vansantvoort.nl" target="_blank" class="external">www.vansantvoort.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hlh.nl" target="_blank" class="external">hlh.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://spitmanmakelaars.nl" target="_blank" class="external">spitmanmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.teer.nl" target="_blank" class="external">www.teer.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rcmakelaars.nl" target="_blank" class="external">rcmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.broekmanmakelaars.nl" target="_blank" class="external">www.broekmanmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dop.nl" target="_blank" class="external">dop.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.zelfverkopen.nl" target="_blank" class="external">www.zelfverkopen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.doenmakelaars.com" target="_blank" class="external">www.doenmakelaars.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://coverswonen.nl" target="_blank" class="external">coverswonen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hrmakelaars.nl" target="_blank" class="external">www.hrmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.proper-makelaardij.nl" target="_blank" class="external">www.proper-makelaardij.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.smitenheinen.nl" target="_blank" class="external">www.smitenheinen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.amstellandmakelaars.nl" target="_blank" class="external">www.amstellandmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://de-huizenbeurs.nl" target="_blank" class="external">de-huizenbeurs.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.overspaern.nl" target="_blank" class="external">www.overspaern.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dmcmakelaars.nl" target="_blank" class="external">dmcmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://domicilie.nl" target="_blank" class="external">domicilie.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dekkermakelaars.nl" target="_blank" class="external">www.dekkermakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.divamakelaars.nl" target="_blank" class="external">www.divamakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hemeltjenmakelaardij.nl" target="_blank" class="external">www.hemeltjenmakelaardij.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.houtmandevogel.nl" target="_blank" class="external">www.houtmandevogel.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dedobbelaere.nl" target="_blank" class="external">www.dedobbelaere.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.walton.nl" target="_blank" class="external">www.walton.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hetwaarehuis.nl" target="_blank" class="external">www.hetwaarehuis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://faasse-fermont.nl" target="_blank" class="external">faasse-fermont.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.smeetsvastgoed.nl" target="_blank" class="external">www.smeetsvastgoed.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bestliving.nl" target="_blank" class="external">www.bestliving.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.onsaanbod.nl" target="_blank" class="external">www.onsaanbod.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.randmeermakelaars.nl" target="_blank" class="external">www.randmeermakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mooijekindvleut.nl" target="_blank" class="external">mooijekindvleut.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.fryskmakelaars.nl" target="_blank" class="external">www.fryskmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.alderikvos.nl" target="_blank" class="external">www.alderikvos.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kolmeijernijmegen.nl" target="_blank" class="external">www.kolmeijernijmegen.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pottersenvooijs.nl" target="_blank" class="external">pottersenvooijs.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.qualis.nl" target="_blank" class="external">www.qualis.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vanderhoekmakelaardij.nl" target="_blank" class="external">www.vanderhoekmakelaardij.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kolpavanderhoek.nl" target="_blank" class="external">www.kolpavanderhoek.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.rvlmakelaars.nl" target="_blank" class="external">www.rvlmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dekeizer.nl" target="_blank" class="external">www.dekeizer.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mnm.nl" target="_blank" class="external">mnm.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dupreemakelaars.nl" target="_blank" class="external">www.dupreemakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://frisiamakelaars.nl" target="_blank" class="external">frisiamakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.boertjes.nl" target="_blank" class="external">www.boertjes.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.makelaardijfriesland.nl" target="_blank" class="external">www.makelaardijfriesland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.amb-makelaars.nl" target="_blank" class="external">www.amb-makelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vrielingmakelaars.nl" target="_blank" class="external">www.vrielingmakelaars.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.landerije.nl" target="_blank" class="external">www.landerije.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nieuwwonennederland.nl" target="_blank" class="external">nieuwwonennederland.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tenhag.nl" target="_blank" class="external">tenhag.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

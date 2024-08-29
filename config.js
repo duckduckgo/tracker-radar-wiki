@@ -8,4 +8,5 @@ module.exports = {
     categoryPagesPath: './docs/categories/',
     hostPath: '/tracker-radar-wiki',
     appendTrackerRadarRevisions: [], // in addition to all Git tags, checkout these tracker-radar revisions
+    region: 'US',
 };

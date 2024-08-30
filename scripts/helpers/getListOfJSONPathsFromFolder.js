@@ -12,8 +12,7 @@ module.exports = function getListOfJSONPathsFromFolder(folderPath) {
                 return true;
             }
 
-            console.trace('Skipping path', resolvedPath, stat);
-            process.exit(1);
+            console.log('Skipping path', resolvedPath, stat);
             return false;
         })
         // map file names to full paths

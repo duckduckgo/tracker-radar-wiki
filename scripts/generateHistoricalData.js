@@ -9,7 +9,6 @@ const getListOfJSONPathsFromFolder = require('./helpers/getListOfJSONPathsFromFo
 
 const TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
-const REGION = 'US';
 
 const domainMap = new Map();
 const entityMap = new Map();
@@ -135,8 +134,8 @@ async function main() {
         await git.raw('checkout', tag, '--force');
 
         let domainPath = TRACKER_RADAR_DOMAINS_PATH;
-        if (fs.existsSync(path.join(domainPath, REGION))) {
-            domainPath = path.join(domainPath, REGION);
+        if (fs.existsSync(path.join(domainPath, config.region))) {
+            domainPath = path.join(domainPath, config.region);
         }
 
         const domainFiles = getListOfJSONPathsFromFolder(domainPath);

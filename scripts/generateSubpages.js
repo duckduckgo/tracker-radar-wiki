@@ -10,11 +10,10 @@ const escapeEntityName = require('./helpers/escapeEntityName');
 
 let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
-const REGION = 'US';
 
 // Backwards compatibility for regions updates
-if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, REGION))) {
-    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, REGION);
+if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, config.region))) {
+    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, config.region);
 }
 
 const fingerprintTexts = [
@@ -140,6 +139,8 @@ domainFiles.forEach(({file, resolvedPath}) => {
             sites: res.sites
         };
     }).sort((a, b) => b.sites - a.sites);
+
+    data.region = config.region;
     
     const output = mustache.render(getTemplate('domain'), data, getTemplate);
 
@@ -203,6 +204,7 @@ entityFiles.forEach(({file, resolvedPath}) => {
     }
 
     data.hostPath = config.hostPath;
+    data.region = config.region;
 
     const output = mustache.render(getTemplate('entity'), data, getTemplate);
 
@@ -238,6 +240,7 @@ Array.from(categories.values()).forEach(data => {
     }
 
     data.hostPath = config.hostPath;
+    data.region = config.region;
 
     const output = mustache.render(getTemplate('category'), data, getTemplate);
 

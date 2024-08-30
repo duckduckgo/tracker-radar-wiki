@@ -15,11 +15,10 @@ const lastTagInfo = {
 
 let TRACKER_RADAR_DOMAINS_PATH = path.join(config.trackerRadarRepoPath, '/domains/');
 const TRACKER_RADAR_ENTITIES_PATH = path.join(config.trackerRadarRepoPath, '/entities/');
-const REGION = 'US';
 
 // Backwards compatibility for regions updates
-if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, REGION))) {
-    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, REGION);
+if (fs.existsSync(path.join(TRACKER_RADAR_DOMAINS_PATH, config.region))) {
+    TRACKER_RADAR_DOMAINS_PATH = path.join(TRACKER_RADAR_DOMAINS_PATH, config.region);
 }
 
 const domainFiles = getListOfJSONPathsFromFolder(TRACKER_RADAR_DOMAINS_PATH);
@@ -89,7 +88,8 @@ const renderData = {
     categories: Array.from(categories.values()),
     lastTagInfo,
     historicDataString,
-    hostPath: config.hostPath
+    hostPath: config.hostPath,
+    region: config.region,
 };
 
 try {
@@ -106,7 +106,8 @@ fs.writeFileSync(path.join(config.basePagesPath, 'index.html'), output);
 const top100RenderData = {
     domains: domains.slice(0, 100),
     entities: entities.slice(0, 100),
-    hostPath: config.hostPath
+    hostPath: config.hostPath,
+    region: config.region,
 };
 
 const top100Output = mustache.render(getTemplate('top100'), top100RenderData, getTemplate);
@@ -122,7 +123,8 @@ const apiHistoryRenderData = {
         .map(item => ({api: item.api, entries: item.entries, lastValue: item.entries[item.entries.length - 1].value}))
         .sort((a, b) => b.lastValue - a.lastValue),
     apiHistoryString,
-    hostPath: config.hostPath
+    hostPath: config.hostPath,
+    region: config.region,
 };
 
 const apiHistoryOutput = mustache.render(getTemplate('apiHistory'), apiHistoryRenderData, getTemplate);

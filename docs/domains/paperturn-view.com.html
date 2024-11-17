@@ -44,7 +44,7 @@
     window.wikiData = {
         type: "domain",
         domain: "paperturn-view.com",
-        history: [{"date":"2023.06","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.07","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.08","prevalence":0.0000135,"sites":2,"fingerprinting":2,"cookies":0.0000135},{"date":"2023.09","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.10","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.11","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2023.11.16","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2023.12","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2024.01.04","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2024.01.18","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.01.31","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.02.09","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.02.19","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2024.06.11","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"ci-2024-06-17-hnuqe","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136}]
+        history: [{"date":"2023.06","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.07","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.08","prevalence":0.0000135,"sites":2,"fingerprinting":2,"cookies":0.0000135},{"date":"2023.09","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.10","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2023.11","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2023.11.16","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2023.12","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2024.01.04","prevalence":0.0000272,"sites":4,"fingerprinting":2,"cookies":0.0000272},{"date":"2024.01.18","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.01.31","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.02.09","prevalence":0.0000204,"sites":3,"fingerprinting":2,"cookies":0.0000204},{"date":"2024.02.19","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2024.06.11","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2024.06.17","prevalence":0.0000136,"sites":2,"fingerprinting":2,"cookies":0.0000136},{"date":"2024.07.08","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.07.22","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.08.05","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.08.21","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.09.17","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"2024.10.21","prevalence":0,"sites":0,"fingerprinting":0,"cookies":0},{"date":"ci-2024-11-17-qknin","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
     };
 </script>
 <script src="../assets/js/vendor/Chart.min.js" defer></script>
@@ -65,13 +65,13 @@
                     <strong>Privacy Policy:</strong> <i>Unknown</i>
                 </li>
                 <li class='py-1'>
-                    <strong>Rank:</strong> &#35;19930<small>/24246</small>
+                    <strong>Rank:</strong> &#35;20015<small>/24501</small>
                 </li>
                 <li class='py-1'>
                     <strong>Prevalence:</strong> 0.00&#37; (2 sites)
                 </li>
                 <li class='py-1'>
-                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
                 </li>
                 <li class='py-1'>
                     <strong>Cookies:</strong> 0.00&#37;
@@ -129,11 +129,17 @@
     </div>    
 
     <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
-        <li class='truncate'>Navigator.prototype.platform</li>
-        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Screen.prototype.availTop</li>
+        <li class='truncate'>window.screenY</li>
+        <li class='truncate'>window.screenTop</li>
         <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
         <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
         <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
         <li class='truncate'>Document.cookie setter</li>
         <li class='truncate'>Document.cookie getter</li>
         <li class='truncate'>Navigator.prototype.userAgent</li>
@@ -161,109 +167,121 @@
             <p><a href="http://assets.paperturn-view.com&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;index.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;2567.d7d07ea7.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2567.d7d07ea7.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;1244.88e7bd43.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;1244.88e7bd43.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;3312.4dc33e22.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3312.4dc33e22.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;9919.d96003e4.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9919.d96003e4.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8817.a54040d6.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8817.a54040d6.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;605.8752216e.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;605.8752216e.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;5414.5d2b52dc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5414.5d2b52dc.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;3240.1d4a6fef.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3240.1d4a6fef.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;5554.a58b05b2.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5554.a58b05b2.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;35.fc15b3b5.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;35.fc15b3b5.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://assets.paperturn-view.com&#x2F;flip-sound.mp3" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;flip-sound.mp3</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;3427.3d6ef1cd.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3427.3d6ef1cd.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2362.01e5e9aa.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2362.01e5e9aa.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;257.49a6ae9d.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;257.49a6ae9d.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;5418.b5ec25cf.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5418.b5ec25cf.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;9571.52bf2a3d.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9571.52bf2a3d.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;4420.7c65ad89.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4420.7c65ad89.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;2373.2651fe80.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2373.2651fe80.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;926.57e6b3dc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;926.57e6b3dc.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;7032.83f679fc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;7032.83f679fc.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;5235.fbb8f931.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5235.fbb8f931.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;4268.6645e02a.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4268.6645e02a.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;3204.1f3cf7c9.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3204.1f3cf7c9.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;2656.8ff24092.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2656.8ff24092.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;5274.4b20b1cb.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5274.4b20b1cb.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;6637.9efeb6ad.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6637.9efeb6ad.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;3466.0e1bfdac.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3466.0e1bfdac.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;5990.2e5d2c7a.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5990.2e5d2c7a.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;332.c2ef01bc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;332.c2ef01bc.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;6883.5e97b1d1.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6883.5e97b1d1.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;7399.21104946.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;7399.21104946.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;3363.26b3ae56.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3363.26b3ae56.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;4198.9421215e.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4198.9421215e.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;84.095ec1af.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;84.095ec1af.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2554.275c4c6f.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2554.275c4c6f.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;4659.6a4de5b9.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4659.6a4de5b9.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;3826.44b19d78.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3826.44b19d78.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;9773.f9e60f37.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9773.f9e60f37.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2924.4e341bdf.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2924.4e341bdf.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;6546.9b7e72cb.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6546.9b7e72cb.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;9961.3fc4c32b.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9961.3fc4c32b.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;2030.795a9ca6.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2030.795a9ca6.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;9890.0d741318.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9890.0d741318.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8014.7018bb79.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8014.7018bb79.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;4896.e79fd1d0.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4896.e79fd1d0.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;4792.10d5604a.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;4792.10d5604a.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;5729.6e5f5f66.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5729.6e5f5f66.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8415.7d896059.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8415.7d896059.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;5748.b39cc697.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5748.b39cc697.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8585.0ea154ac.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8585.0ea154ac.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;3289.1025bc67.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;3289.1025bc67.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;6758.70afe80d.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6758.70afe80d.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;7625.37d0efe6.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;7625.37d0efe6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2172.8ed475e2.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2172.8ed475e2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2673.1bcee47a.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2673.1bcee47a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.paperturn-view.com&#x2F;1668.3efccc06.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;1668.3efccc06.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.paperturn-view.com&#x2F;9287.d4819f8a.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9287.d4819f8a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://assets.paperturn-view.com&#x2F;862.bcacb0dc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;862.bcacb0dc.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://www.paperturn-view.com&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.paperturn-view.com&#x2F;</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8795.156997a3.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8795.156997a3.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;2492.8d1320d8.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;2492.8d1320d8.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;1128.2e085ebc.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;1128.2e085ebc.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;1396.8d1f5d1d.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;1396.8d1f5d1d.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;6158.50bbbab2.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6158.50bbbab2.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;6549.61da667e.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;6549.61da667e.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;474.0a0526fe.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;474.0a0526fe.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;8497.76d87b0b.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8497.76d87b0b.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;5181.f3bce1db.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;5181.f3bce1db.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;634.f36a2a30.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;634.f36a2a30.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;9975.091c34cb.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;9975.091c34cb.js</a> (seen on 2 websites)</p>
-        </li>
-        <li class='break-all'>
-            <p><a href="http://assets.paperturn-view.com&#x2F;8818.447f1508.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;8818.447f1508.js</a> (seen on 2 websites)</p>
+            <p><a href="http://assets.paperturn-view.com&#x2F;72.e528ec37.js" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;72.e528ec37.js</a> (seen on 2 websites)</p>
         </li>
         <li class='break-all'>
             <p><a href="http://assets.paperturn-view.com&#x2F;page-shadow-left.png" target="_blank" class="external" rel="noreferrer noopener">assets.paperturn-view.com&#x2F;page-shadow-left.png</a> (seen on 2 websites)</p>
@@ -285,7 +303,7 @@
             <a href="http://leeprecision.com" target="_blank" class="external">leeprecision.com</a>
         </li>
         <li class='truncate'>
-            <a href="http://www.allurelingerie.com" target="_blank" class="external">www.allurelingerie.com</a>
+            <a href="http://www.leeprecision.com" target="_blank" class="external">www.leeprecision.com</a>
         </li>
     </ul>
 </div>

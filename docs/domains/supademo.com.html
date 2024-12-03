@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - supademo.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "supademo.com",
+        history: [{"date":"ci-2024-12-03-xxbiw","prevalence":0.00000683,"sites":1,"fingerprinting":3,"cookies":0.00000683}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/supademo.com.ico' width="32" height="32" class='inline-block' /> supademo.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;23923<small>/24265</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>XHR</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/supademo.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>app</span>, 
+                    <span>media</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-8365ad0748044601.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-8365ad0748044601.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;36840340f3f01bb9.css" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;36840340f3f01bb9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;e7e711e971e57e51.css" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;e7e711e971e57e51.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;e306e5c25c8124a6.css" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;e306e5c25c8124a6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fd9d1056-97747865801ca0eb.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;fd9d1056-97747865801ca0eb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7104-69684b1664a27c92.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7104-69684b1664a27c92.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-a444b248b67ba5d6.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-a444b248b67ba5d6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2972-58b1b36c7ceb6237.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2972-58b1b36c7ceb6237.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3145-7d3dabfab1cf5831.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3145-7d3dabfab1cf5831.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;global-error-cde63525eef23b50.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;global-error-cde63525eef23b50.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;c16f53c3-01051601bf702299.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;c16f53c3-01051601bf702299.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1970-cb8269ff440bebf6.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1970-cb8269ff440bebf6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9153-0327ca6a78d7de4c.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9153-0327ca6a78d7de4c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7915-aa970cc3e5efbf61.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7915-aa970cc3e5efbf61.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;605-0cfbb8b2f2d70ebb.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;605-0cfbb8b2f2d70ebb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7223-9107aef9834b07e9.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7223-9107aef9834b07e9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;layout-32a1d5f42cdac9e7.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;layout-32a1d5f42cdac9e7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;error-83225f4dcb698353.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;error-83225f4dcb698353.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;not-found-3672e030d4aba2d2.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;not-found-3672e030d4aba2d2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8318a8be-64137ece713171c8.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8318a8be-64137ece713171c8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;67a2a426-4a233a520f6c6849.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;67a2a426-4a233a520f6c6849.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;55eb4b32-b7cb6d928701772e.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;55eb4b32-b7cb6d928701772e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3301-c8452052ac4be731.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3301-c8452052ac4be731.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3340-b7694782df5e5b7a.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3340-b7694782df5e5b7a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7061-9198ecf4c7505ef8.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7061-9198ecf4c7505ef8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9067-a8ee2ec19541d778.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9067-a8ee2ec19541d778.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4060-c783b32ac13ca92f.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4060-c783b32ac13ca92f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8530-de9c0b74d035c0b9.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8530-de9c0b74d035c0b9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1164-34d74715fc6e0db3.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1164-34d74715fc6e0db3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;333-c274f9fe43828c2d.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;333-c274f9fe43828c2d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7861-4b86bebde729d68b.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7861-4b86bebde729d68b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;153-4533d95b8bbc8a84.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;153-4533d95b8bbc8a84.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7074-12191ac20cc383df.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7074-12191ac20cc383df.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8154-41f2009e8cda5fa2.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8154-41f2009e8cda5fa2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7048-b74dbdb2e2cd8259.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7048-b74dbdb2e2cd8259.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5812-438c949127a16ebe.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5812-438c949127a16ebe.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8719-ac1b3f013ed7a84e.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8719-ac1b3f013ed7a84e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1229-8d1245212136ec5a.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1229-8d1245212136ec5a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6576-33d41f7f0d5574e9.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6576-33d41f7f0d5574e9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7969-fb3de1f363a6be01.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7969-fb3de1f363a6be01.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5269-fd56ac672d8e5ec2.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5269-fd56ac672d8e5ec2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;embed&#x2F;%5Bid%5D&#x2F;page-4f3af695f42d6845.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;embed&#x2F;%5Bid%5D&#x2F;page-4f3af695f42d6845.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;api&#x2F;getdemo" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;api&#x2F;getdemo</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;api&#x2F;auth&#x2F;session" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;api&#x2F;auth&#x2F;session</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;L-RdbkuoNqatHBpK7xezM.png" target="_blank" class="external" rel="noreferrer noopener">media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;L-RdbkuoNqatHBpK7xezM.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;GahuVlFldFlBYpM8ZsJKW.jpg" target="_blank" class="external" rel="noreferrer noopener">media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;GahuVlFldFlBYpM8ZsJKW.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;tDs8KjN3-d0Ye3bhiOGE5.jpg" target="_blank" class="external" rel="noreferrer noopener">media.supademo.com&#x2F;cm04e572l01dg1053y9398xlm&#x2F;tDs8KjN3-d0Ye3bhiOGE5.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;af8190ac76d2ada1.css" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;af8190ac76d2ada1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;041606bdb3228be5.css" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;041606bdb3228be5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2698.dbb9472bc87fd1e6.js" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2698.dbb9472bc87fd1e6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://app.supademo.com&#x2F;api&#x2F;analytics&#x2F;demo&#x2F;cm2xeisi10ei9krgpxu6ysy91&#x2F;view" target="_blank" class="external" rel="noreferrer noopener">app.supademo.com&#x2F;api&#x2F;analytics&#x2F;demo&#x2F;cm2xeisi10ei9krgpxu6ysy91&#x2F;view</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://azibo.com" target="_blank" class="external">azibo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.azibo.com" target="_blank" class="external">www.azibo.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - dippy.ai</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "dippy.ai",
+        history: [{"date":"ci-2024-12-08-jyrus","prevalence":0.0000144,"sites":2,"fingerprinting":3,"cookies":0.0000144}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/dippy.ai.ico' width="32" height="32" class='inline-block' /> dippy.ai</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;16171<small>/22564</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Script</span>,
+                    <span>Preflight</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/dippy.ai.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>chatapi</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Notification.permission</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>BroadcastChannel.prototype.constructor</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;root-B0Jgr4pk.css" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;root-B0Jgr4pk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;super.svg" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;super.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;zap.png" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;zap.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;playstore.svg" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;playstore.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;apple.svg" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;apple.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;cat-flirt-mobile.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;cat-flirt-mobile.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;solid-dice.svg" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;solid-dice.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;manifest-b5ae02dc.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;manifest-b5ae02dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;entry.client-T-W4Y-0O.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;entry.client-T-W4Y-0O.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;jsx-runtime-BsdLrR3y.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;jsx-runtime-BsdLrR3y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-Dq4RSIk6.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-Dq4RSIk6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-DnGG9ptk.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-DnGG9ptk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;components-g0-5CXB0.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;components-g0-5CXB0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;preload-helper-HM5s-YKH.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;preload-helper-HM5s-YKH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;exports-DV2i56kg.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;exports-DV2i56kg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;env-EKHJ7Xvn.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;env-EKHJ7Xvn.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;browser-C2fif9u9.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;browser-C2fif9u9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;newrelic-DzsRLn18.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;newrelic-DzsRLn18.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-Hzd5ceNa.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-Hzd5ceNa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;CustomButton-5bXc5bN7.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;CustomButton-5bXc5bN7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;chat-DXxqSeo4.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;chat-DXxqSeo4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;useShareProfile-DNBf_rRk.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;useShareProfile-DNBf_rRk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;common-DERDPxA6.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;common-DERDPxA6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;navigation.utils-AZervW1R.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;navigation.utils-AZervW1R.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;routes-ClJAIw4v.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;routes-ClJAIw4v.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;useUserDetails-ubJHpN3D.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;useUserDetails-ubJHpN3D.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;ReportCharacter-D_1LYQsn.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;ReportCharacter-D_1LYQsn.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-MNUfud3k.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-MNUfud3k.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;skeleton-B_9_kiP3.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;skeleton-B_9_kiP3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;Lock-UXYaYh8p.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;Lock-UXYaYh8p.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;ChatContext-BjpDtUr1.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;ChatContext-BjpDtUr1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;CharacterCard-yBvmn7_x.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;CharacterCard-yBvmn7_x.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;premium-BV_lIYqN.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;premium-BV_lIYqN.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;infiniteQueryBehavior-DHkZOXVn.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;infiniteQueryBehavior-DHkZOXVn.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;characterCreationSuccess-D7MfGiN5.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;characterCreationSuccess-D7MfGiN5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;indexedDbUtils-DMKZOhYm.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;indexedDbUtils-DMKZOhYm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;colors-DB4a6w6t.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;colors-DB4a6w6t.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;useSelectedChatModel-DIZ2BaW7.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;useSelectedChatModel-DIZ2BaW7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;errors-dUzXntoy.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;errors-dUzXntoy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;root-FjYIvVvC.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;root-FjYIvVvC.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;useCarousel-D2_lCU83.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;useCarousel-D2_lCU83.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;MessageBox-B5VMvk_T.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;MessageBox-B5VMvk_T.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;carousel-D7v8mPqV.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;carousel-D7v8mPqV.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;backgroundImg-BjLVadpQ.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;backgroundImg-BjLVadpQ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;TagToIcon-CXzlj8z-.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;TagToIcon-CXzlj8z-.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;pendingMessage-CEDF2IDO.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;pendingMessage-CEDF2IDO.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;TrendingTag-DG3_U_N_.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;TrendingTag-DG3_U_N_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;_index-MgpDW_TH.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;_index-MgpDW_TH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;berry-trending-bg.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;berry-trending-bg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;apricot-trending-bg.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;apricot-trending-bg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;grape-trending-bg.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;grape-trending-bg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;GreenXamperBackgroundMobile.png" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;GreenXamperBackgroundMobile.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;apiAsync-CnUDPujX.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;apiAsync-CnUDPujX.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;agent-session-BK-Jg3SF.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;agent-session-BK-Jg3SF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;page-visibility-D4KGFYvR.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;page-visibility-D4KGFYvR.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;event-aggregator-DEjguijL.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;event-aggregator-DEjguijL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;lazy-feature-loader-adpn9CAC.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;lazy-feature-loader-adpn9CAC.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;trending_characters_by_tag" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;trending_characters_by_tag</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;random_characters" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;random_characters</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;trending_characters_by_tag" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;trending_characters_by_tag</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;random_characters" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;random_characters</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;hot_characters_today" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;hot_characters_today</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;GreenXamperBackground.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;GreenXamperBackground.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;hot_characters_today" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;hot_characters_today</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;cat-flirt.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;cat-flirt.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-6BFe8ia3.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-6BFe8ia3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;harvest-scheduler-DQenxdjq.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;harvest-scheduler-DQenxdjq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-LfNMTUAJ.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-LfNMTUAJ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;aggregate-base-BKUG_ciy.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;aggregate-base-BKUG_ciy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;nav-timing-rTwXAEY2.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;nav-timing-rTwXAEY2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;bel-serializer-B5htCoQ5.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;bel-serializer-B5htCoQ5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-H3wQuGsr.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-H3wQuGsr.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;traverse-DwiO0sFS.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;traverse-DwiO0sFS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-Duh4IAcX.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-Duh4IAcX.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;first-paint-Txc3eATO.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;first-paint-Txc3eATO.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;time-to-first-byte-CYQ-veWG.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;time-to-first-byte-CYQ-veWG.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;index-BaO68Ndf.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;index-BaO68Ndf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;iframe-B-dQn0W0.js" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;iframe-B-dQn0W0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;share.svg" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;share.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dippy.ai&#x2F;assets&#x2F;cat-teacher.webp" target="_blank" class="external" rel="noreferrer noopener">dippy.ai&#x2F;assets&#x2F;cat-teacher.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;recent_chats" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;recent_chats</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;chat&#x2F;v2&#x2F;get_starting_messages" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;chat&#x2F;v2&#x2F;get_starting_messages</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;recent_chats" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;feed&#x2F;v2&#x2F;recent_chats</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://chatapi.dippy.ai&#x2F;chat&#x2F;v2&#x2F;get_starting_messages" target="_blank" class="external" rel="noreferrer noopener">chatapi.dippy.ai&#x2F;chat&#x2F;v2&#x2F;get_starting_messages</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://unhinged.ai" target="_blank" class="external">unhinged.ai</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.unhinged.ai" target="_blank" class="external">www.unhinged.ai</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

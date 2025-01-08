@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - one.hu</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "one.hu",
+        history: [{"date":"ci-2025-01-08-nlbii","prevalence":0.00000682,"sites":1,"fingerprinting":2,"cookies":0.00000682}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/one.hu.ico' width="32" height="32" class='inline-block' /> one.hu</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;23135<small>/23910</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Fetch</span>,
+                    <span>Font</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/one.hu.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>BroadcastChannel.prototype.constructor</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;shop&#x2F;tarifak&#x2F;internet" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;shop&#x2F;tarifak&#x2F;internet</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;css&#x2F;clay.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;css&#x2F;clay.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;combo</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-loader-modules-extender&#x2F;loader.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-loader-modules-extender&#x2F;loader.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;nc-framework-static&#x2F;jsp&#x2F;rprovider.jsp" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;nc-framework-static&#x2F;jsp&#x2F;rprovider.jsp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;nc-framework-static&#x2F;jsp&#x2F;rprovider.jsp" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;nc-framework-static&#x2F;jsp&#x2F;rprovider.jsp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;combo" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;combo</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;css&#x2F;main.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;css&#x2F;main.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;commerce-frontend-js&#x2F;styles&#x2F;main.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;commerce-frontend-js&#x2F;styles&#x2F;main.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;offer-badge-percent-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;offer-badge-percent-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;mobile-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;mobile-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;tv-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;tv-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;laptop-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;laptop-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;devices-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;devices-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;home-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;home-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;add-ons-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;add-ons-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;info-circle-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;info-circle-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;summarize-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;summarize-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;document-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;document-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;consultant-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;consultant-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;call-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;call-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;cloud-upload-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;cloud-upload-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;touch-screen-mid-blue" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;touch-screen-mid-blue</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;minutes-sms.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;minutes-sms.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;add-ons.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;add-ons.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;insurance.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;insurance.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;community.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;community.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;acceleration.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;acceleration.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;add-business-user.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;add-business-user.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;iot.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;iot.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;network-tower.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;network-tower.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;networker.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;networker.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;price-tag.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;price-tag.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;bill.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;bill.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;nvp&#x2F;img&#x2F;consultant.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;nvp&#x2F;img&#x2F;consultant.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;chevron-down-mid" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;chevron-down-mid</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;1296077&#x2F;document-pdf-mid.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;1296077&#x2F;document-pdf-mid.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;1296077&#x2F;download-mid.svg" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;1296077&#x2F;download-mid.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;facebook" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;facebook</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;instagram" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;instagram</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;youtube" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;youtube</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;call-mid" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;call-mid</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;chevron-down-mid-white" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;chevron-down-mid-white</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_system.css&#x2F;03d3f9a9-6b20-5668-c5b7-6943440ed72f" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_system.css&#x2F;03d3f9a9-6b20-5668-c5b7-6943440ed72f</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid.css&#x2F;063b82a5-006e-f6e1-67b4-ddf9b9fa608f" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid.css&#x2F;063b82a5-006e-f6e1-67b4-ddf9b9fa608f</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid_expansion_1.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid_expansion_1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_hifi.css&#x2F;e46e4a56-8829-5244-af47-06600bd73a55" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_hifi.css&#x2F;e46e4a56-8829-5244-af47-06600bd73a55</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;ssp_css_icons_colors.css&#x2F;c58d44a7-d681-6fe4-1b91-0555a254a792" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;ssp_css_icons_colors.css&#x2F;c58d44a7-d681-6fe4-1b91-0555a254a792</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;general.css&#x2F;c6e5d9ab-322a-fad6-f883-6c5f17adbdae" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;general.css&#x2F;c6e5d9ab-322a-fad6-f883-6c5f17adbdae</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ssp_redtariff%20%2812%29.css&#x2F;91e403cc-61e8-9d5b-c3f8-c65c532f4eaa" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ssp_redtariff%20%2812%29.css&#x2F;91e403cc-61e8-9d5b-c3f8-c65c532f4eaa</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ssp_internet_tv_tariffs.css&#x2F;5334b6bf-fc5e-a58e-c119-af27f56fe00c" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ssp_internet_tv_tariffs.css&#x2F;5334b6bf-fc5e-a58e-c119-af27f56fe00c</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp-typo.css&#x2F;fc85db90-aa7a-f3bc-ad3a-21c20e75ea7b" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp-typo.css&#x2F;fc85db90-aa7a-f3bc-ad3a-21c20e75ea7b</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp_rewrite.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp_rewrite.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp-accordion.css&#x2F;ce35f781-bb37-e571-23aa-ca8c80fca2cb" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;ssp-accordion.css&#x2F;ce35f781-bb37-e571-23aa-ca8c80fca2cb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_services.css&#x2F;04aa85d0-c4e5-4e10-251e-9cab16fb5029" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_services.css&#x2F;04aa85d0-c4e5-4e10-251e-9cab16fb5029</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;slick.css&#x2F;a07c2e40-ea12-8d07-68d7-39833d2ef1bd" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352149&#x2F;slick.css&#x2F;a07c2e40-ea12-8d07-68d7-39833d2ef1bd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ph3_internet_tariff.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352152&#x2F;ph3_internet_tariff.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid_expansion_1_e2e.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_icons_mid_expansion_1_e2e.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_mid_new_generate.css" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;353043&#x2F;ssp_css_mid_new_generate.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;vf1-banner.css&#x2F;4320954a-5b90-57fd-004c-7b23423907f3" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352032&#x2F;vf1-banner.css&#x2F;4320954a-5b90-57fd-004c-7b23423907f3</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-rewrite" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-rewrite</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-styles" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-styles</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;slick.min.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;slick.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_equipment_carousel.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_equipment_carousel.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_popup_close.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_popup_close.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;jquery.dataTables.min.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;jquery.dataTables.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_vf1_banner_carousel.js&#x2F;d784801f-5813-393f-8b7b-ca5af089169f" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;20127&#x2F;352515&#x2F;ssp_vf1_banner_carousel.js&#x2F;d784801f-5813-393f-8b7b-ca5af089169f</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-script" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;one-script</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;js&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;js&#x2F;main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;js&#x2F;transparent-login.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;vodafone.ssp-theme&#x2F;js&#x2F;transparent-login.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;js_resolve_modules" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;js_resolve_modules</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;nc-angular-static&#x2F;fonts&#x2F;Inter-Regular.woff2" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;nc-angular-static&#x2F;fonts&#x2F;Inter-Regular.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;nc-angular-static&#x2F;fonts&#x2F;Inter-Bold.woff2" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;nc-angular-static&#x2F;fonts&#x2F;Inter-Bold.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;combo&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;combo&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;inter-v13-latin_latin-ext-regular" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;inter-v13-latin_latin-ext-regular</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;mont-regular" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;documents&#x2F;d&#x2F;global&#x2F;mont-regular</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-state-web&#x2F;__liferay__&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-state-web&#x2F;__liferay__&#x2F;index.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;ecare&#x2F;loginInfo" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;ecare&#x2F;loginInfo</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;service&#x2F;getRoutes" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;service&#x2F;getRoutes</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;react.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;react.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;c&#x2F;portal&#x2F;extend_session" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;c&#x2F;portal&#x2F;extend_session</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;ecare&#x2F;extend_token" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;ecare&#x2F;extend_token</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;nc-framework-kernel&#x2F;localization&#x2F;getJson" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;nc-framework-kernel&#x2F;localization&#x2F;getJson</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$tooltip.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$tooltip.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;index.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-dependencies-web&#x2F;__liferay__&#x2F;exports&#x2F;dom-align.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-dependencies-web&#x2F;__liferay__&#x2F;exports&#x2F;dom-align.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-web&#x2F;__liferay__&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-web&#x2F;__liferay__&#x2F;index.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;accessibility-settings-state-web&#x2F;__liferay__&#x2F;index.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;accessibility-settings-state-web&#x2F;__liferay__&#x2F;index.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;classnames.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;classnames.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;react-dom.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;react-dom.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$core.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$icon.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$icon.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;prop-types.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-js-react-web&#x2F;__liferay__&#x2F;exports&#x2F;prop-types.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$alert.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$alert.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$button.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$button.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$form.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$form.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$loading-indicator.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$loading-indicator.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$modal.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$modal.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$shared.js" target="_blank" class="external" rel="noreferrer noopener">www.one.hu&#x2F;o&#x2F;frontend-taglib-clay&#x2F;__liferay__&#x2F;exports&#x2F;@clayui$shared.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://vodafone.hu" target="_blank" class="external">vodafone.hu</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vodafone.hu" target="_blank" class="external">www.vodafone.hu</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - viverse.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "viverse.com",
+        history: [{"date":"ci-2025-02-19-nasfu","prevalence":0.00000684,"sites":1,"fingerprinting":3,"cookies":0.00000684}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/viverse.com.ico' width="32" height="32" class='inline-block' /> viverse.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;23639<small>/23766</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (1 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>XHR</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/viverse.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>create</span>, 
+                    <span>www</span>, 
+                    <span>dts-vrprod</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>WebGL2RenderingContext.prototype.getSupportedExtensions</li>
+        <li class='truncate'>WebGL2RenderingContext.prototype.getContextAttributes</li>
+        <li class='truncate'>Navigator.prototype.mediaDevices</li>
+        <li class='truncate'>WebGL2RenderingContext.prototype.getShaderPrecisionFormat</li>
+        <li class='truncate'>WebGL2RenderingContext.prototype.getExtension</li>
+        <li class='truncate'>WebGL2RenderingContext.prototype.getParameter</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>URL.createObjectURL</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-7nQTaRa8.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-7nQTaRa8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;api-B5qeDiNg.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;api-B5qeDiNg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-avatar-sdk-helper-DBufsQmS.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-avatar-sdk-helper-DBufsQmS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-Csi_Jtva.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-Csi_Jtva.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;LoadingContext-bD5jJdWm.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;LoadingContext-bD5jJdWm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;settings-t6gJoyOQ.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;settings-t6gJoyOQ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;load-assets-CuPyaD46.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;load-assets-CuPyaD46.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-D2zjqW7n.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-D2zjqW7n.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;glb-util-BXmWXt6s.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;glb-util-BXmWXt6s.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-animation-BxoCh_wq.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-animation-BxoCh_wq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;VRMLoaderPlugin-DLhRkk1b.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;VRMLoaderPlugin-DLhRkk1b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-material-BbhPZc_P.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-material-BbhPZc_P.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-map-list-BgKcTVgm.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;vrm-map-list-BgKcTVgm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;camera-spectate-helper-BzkUvr7G.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;camera-spectate-helper-BzkUvr7G.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;model-scrips-mapping-BiZt-rsc.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;model-scrips-mapping-BiZt-rsc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;CommunityToggleButton-BM7DCgg_.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;CommunityToggleButton-BM7DCgg_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;wave-static-C8txrdDU.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;wave-static-C8txrdDU.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;modules-C_C7y7EI.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;modules-C_C7y7EI.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-D-l2jN62.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;index-D-l2jN62.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;WorldContentDetail-9MmKu8ae.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;WorldContentDetail-9MmKu8ae.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;sentry-DvllAlM9.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;sentry-DvllAlM9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;scenes-1YSQ6lxl.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;scenes-1YSQ6lxl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;WorldContentDetail-Bs6UU-pf.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;WorldContentDetail-Bs6UU-pf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;LoadingContext-BiZn7cq0.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;LoadingContext-BiZn7cq0.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;api-Cl9LNMjT.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;api-Cl9LNMjT.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;CommunityToggleButton-ClJoIYjL.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;CommunityToggleButton-ClJoIYjL.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;wave-static-BcWDE7P2.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;wave-static-BcWDE7P2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;scenes-B0F7jYIr.css" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;scenes-B0F7jYIr.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;basis.wasm-C6sJXEeH.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;basis.wasm-C6sJXEeH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;basis.wasm-DYVyHTXM.wasm" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;basis.wasm-DYVyHTXM.wasm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;scenes&#x2F;2147814" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;scenes&#x2F;2147814</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;scenes&#x2F;2152096" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;scenes&#x2F;2152096</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;api&#x2F;v3&#x2F;oauth&#x2F;login-status" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;api&#x2F;v3&#x2F;oauth&#x2F;login-status</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;ammo.wasm-DFGzcn_t.js" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;ammo.wasm-DFGzcn_t.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.viverse.com&#x2F;static-assets&#x2F;share-component-sdk&#x2F;viverse-share-component.js" target="_blank" class="external" rel="noreferrer noopener">www.viverse.com&#x2F;static-assets&#x2F;share-component-sdk&#x2F;viverse-share-component.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://dts-vrprod.viverse.com&#x2F;items&#x2F;publicAvatar" target="_blank" class="external" rel="noreferrer noopener">dts-vrprod.viverse.com&#x2F;items&#x2F;publicAvatar</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;ammo.wasm-BaaGtowK.wasm" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;ammo.wasm-BaaGtowK.wasm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;avatar_default_cubemap-Cia6jy62.dds" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;avatar_default_cubemap-Cia6jy62.dds</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;exclamation-C0aScPii.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;exclamation-C0aScPii.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;locatorspot-D_zg48XB.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;locatorspot-D_zg48XB.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Idle-DB0xCsYC.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Idle-DB0xCsYC.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;LeftWalk-BKw5nzcL.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;LeftWalk-BKw5nzcL.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;RightWalk-DXiwEY4i.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;RightWalk-DXiwEY4i.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FrontWalk-SZ2kQEN8.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FrontWalk-SZ2kQEN8.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Run-B8Max0HG.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Run-B8Max0HG.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;SprintFly-BI1XmjFf.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;SprintFly-BI1XmjFf.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;BackWalk-Bq2U5B1d.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;BackWalk-Bq2U5B1d.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpDown-DIAR_nJz.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpDown-DIAR_nJz.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpLoop-B_vwG9Dw.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpLoop-B_vwG9Dw.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpStart-DkEuQdzq.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpStart-DkEuQdzq.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpUp-DqV8xxoZ.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;JumpUp-DqV8xxoZ.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdle-ClbUVO6i.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdle-ClbUVO6i.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleFrontWalk-DaNHyrKu.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleFrontWalk-DaNHyrKu.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleFrontRun-CxUlnAxV.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleFrontRun-CxUlnAxV.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleBackWalk-LUawB4bu.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleBackWalk-LUawB4bu.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleLeftWalk-P2Hu5ViW.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleLeftWalk-P2Hu5ViW.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleRightWalk-IqKMMAqP.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyIdleRightWalk-IqKMMAqP.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUp-CuHeF6aV.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUp-CuHeF6aV.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUpFrontWalk-p6mo5sK8.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUpFrontWalk-p6mo5sK8.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUpFrontRun-DaKqbIoe.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyUpFrontRun-DaKqbIoe.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDown-C51Fahu1.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDown-C51Fahu1.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDownFrontWalk-DrU6xsZc.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDownFrontWalk-DrU6xsZc.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDownFrontRun-DQYGvie8.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;FlyDownFrontRun-DQYGvie8.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLanding-CtP5dU3d.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLanding-CtP5dU3d.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLandingPre-Cps9kXyQ.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLandingPre-Cps9kXyQ.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLandingPost-B6Lf9TXA.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;HardLandingPost-B6Lf9TXA.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;RunToStopFly-CYmKTkbV.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;RunToStopFly-CYmKTkbV.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;SittingMaleDefault_240617-yjTsMghu.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;SittingMaleDefault_240617-yjTsMghu.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;SittingFemaleDefault_240617-zd0_Pwns.glb" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;SittingFemaleDefault_240617-zd0_Pwns.glb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-7AklHzB4.json" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-7AklHzB4.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;waterNormalPS-DjbvqlXH.glsl" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;waterNormalPS-DjbvqlXH.glsl</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;texture_noise-IiDzfQmb.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;texture_noise-IiDzfQmb.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;media_error-B8t_GjXJ.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;media_error-B8t_GjXJ.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;default_scroll_texture-BOGyQsoj.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;default_scroll_texture-BOGyQsoj.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Imposter_A_v07-BUjtE8p5.vrm" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Imposter_A_v07-BUjtE8p5.vrm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Imposter_B_v04-12y3NFnR.vrm" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Imposter_B_v04-12y3NFnR.vrm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;impostorA_combine_texture-C_5gY_Gz.jpg" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;impostorA_combine_texture-C_5gY_Gz.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;impostorB_combine_texture-C_YQsdHJ.jpg" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;impostorB_combine_texture-C_YQsdHJ.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-CW3Bbtjq.png" target="_blank" class="external" rel="noreferrer noopener">create.viverse.com&#x2F;play&#x2F;assets&#x2F;Roboto-Medium-CW3Bbtjq.png</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://vive.com" target="_blank" class="external">vive.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vive.com" target="_blank" class="external">www.vive.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

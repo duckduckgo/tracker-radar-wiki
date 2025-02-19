@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - autoweb.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "autoweb.com",
+        history: [{"date":"ci-2025-02-19-nasfu","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/autoweb.com.ico' width="32" height="32" class='inline-block' /> autoweb.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;14983<small>/23766</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Font</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/autoweb.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./cookielaw.org.html">cookielaw.org</a> - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;968c529aef8f703d-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;968c529aef8f703d-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;7ebd901f2f4a0b98-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;7ebd901f2f4a0b98-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;f5e5067cd50e2c82-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;f5e5067cd50e2c82-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;3534416bbfdcc9be-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;3534416bbfdcc9be-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;b5c88fe3614a9f88.css" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;b5c88fe3614a9f88.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;927-6f9e7b6da1fca409.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;927-6f9e7b6da1fca409.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4231-62026c48139b580c.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4231-62026c48139b580c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5148-52798ab2416c7b48.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5148-52798ab2416c7b48.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5506.765995fc9ffd1b09.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5506.765995fc9ffd1b09.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;742.26611a7d2338f5cc.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;742.26611a7d2338f5cc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ea88be26.e6762c39a47ef218.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ea88be26.e6762c39a47ef218.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9185.530303c1d4ae1c95.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9185.530303c1d4ae1c95.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-842fb91a48428408.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-842fb91a48428408.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-ec1964d96f7c12dc.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-ec1964d96f7c12dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-879427f4cfef69bc.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-879427f4cfef69bc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-5ef73a894d0569b6.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-5ef73a894d0569b6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7013-28abdbd9bea4d2cb.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7013-28abdbd9bea4d2cb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1242-6e9db4caa9babf89.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1242-6e9db4caa9babf89.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;379-d563a5c62c343f4f.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;379-d563a5c62c343f4f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4765-9c85d149722fa7fd.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4765-9c85d149722fa7fd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5670-a0f78bfc448e4435.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5670-a0f78bfc448e4435.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3827-c4d6169ae25b031c.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3827-c4d6169ae25b031c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7958-161617668c9ce8f9.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7958-161617668c9ce8f9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1216-75f35c662f1059e6.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1216-75f35c662f1059e6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8947-4cf2acb9c6df2c4e.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8947-4cf2acb9c6df2c4e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4770-4cc13457f7c008b6.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4770-4cc13457f7c008b6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;202-f561508a3be8cca7.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;202-f561508a3be8cca7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7018-e53b9c5dfaa99a88.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7018-e53b9c5dfaa99a88.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2494-bafa099711b14482.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2494-bafa099711b14482.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3516-edb57023ad71aaf0.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3516-edb57023ad71aaf0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3238-a0e5e468145359a3.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3238-a0e5e468145359a3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7-73e2620d333156bb.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7-73e2620d333156bb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6809-8a6d2b98991a57d9.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6809-8a6d2b98991a57d9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2690-cac0966d547f5413.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2690-cac0966d547f5413.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;607-8f3d7ba3befd923a.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;607-8f3d7ba3befd923a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1851-b9448cdc8f2e42b4.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1851-b9448cdc8f2e42b4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7427-05a91f74fed3a928.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;7427-05a91f74fed3a928.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;api&#x2F;hygraph&#x2F;read-version" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;api&#x2F;hygraph&#x2F;read-version</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Chevrolet.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Chevrolet.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Ford.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Ford.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2106-4bb74809d8d3f113.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2106-4bb74809d8d3f113.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1836-b1438cdd4b671296.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1836-b1438cdd4b671296.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8276-8283e6fda39770bc.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8276-8283e6fda39770bc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;dummyImages&#x2F;car_no_bg.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;dummyImages&#x2F;car_no_bg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;svg&#x2F;car_of_the_day_hover.svg" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;svg&#x2F;car_of_the_day_hover.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2106-4bb74809d8d3f113.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2106-4bb74809d8d3f113.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1836-b1438cdd4b671296.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1836-b1438cdd4b671296.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Honda.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Honda.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Hyundai.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Hyundai.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Toyota.png" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;assets&#x2F;images&#x2F;car-brands&#x2F;Toyota.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8276-8283e6fda39770bc.js" target="_blank" class="external" rel="noreferrer noopener">www.autoweb.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8276-8283e6fda39770bc.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://autobytel.com" target="_blank" class="external">autobytel.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.autobytel.com" target="_blank" class="external">www.autobytel.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

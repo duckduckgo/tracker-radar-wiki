@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - ohscprts.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ohscprts.com",
+        history: [{"date":"ci-2025-03-16-eombf","prevalence":0.00101,"sites":148,"fingerprinting":2,"cookies":0.000902}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/ohscprts.com.ico' width="32" height="32" class='inline-block' /> ohscprts.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;1225<small>/23965</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.10&#37; (148 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.09&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ohscprts.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>go</span>, 
+                    <span>creative</span>, 
+                    <span>video</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 44.12% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./tsyndicate.com.html">tsyndicate.com</a> - 37.01% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./perfecttitspics.com.html">perfecttitspics.com</a> - 11.61% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./maturexxx.vip.html">maturexxx.vip</a> - 2.32% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./heyaiii111iidsfsdbfjb132222ffco.xyz.html">heyaiii111iidsfsdbfjb132222ffco.xyz</a> - 1.74% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./x2lt.com.html">x2lt.com</a> - 0.58% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./shukriya90.com.html">shukriya90.com</a> - 0.58% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./adzilla.name.html">adzilla.name</a> - 0.58% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./sellbuy.click.html">sellbuy.click</a> - 0.29% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./imasdk.googleapis.com.html">imasdk.googleapis.com</a> - 0.29% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;config" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;config</a> (seen on 112 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;api&#x2F;models" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;api&#x2F;models</a> (seen on 112 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;app&#x2F;domain-checker&#x2F;get-check" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;app&#x2F;domain-checker&#x2F;get-check</a> (seen on 112 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;app&#x2F;domain-checker&#x2F;check-result" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;app&#x2F;domain-checker&#x2F;check-result</a> (seen on 111 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;abc.gif" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;abc.gif</a> (seen on 105 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal</a> (seen on 95 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.373b8015ad4d7f6f07fd.css" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.373b8015ad4d7f6f07fd.css</a> (seen on 91 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.1dc8959eadba0478c980.js" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.1dc8959eadba0478c980.js</a> (seen on 91 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json</a> (seen on 91 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;c6913f01500457c0bdb8597e6d4286a54c12f8dc120ca06a0ab250733289acaa" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;c6913f01500457c0bdb8597e6d4286a54c12f8dc120ca06a0ab250733289acaa</a> (seen on 51 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;87735fd5f3f949fbef712904456156941329f17c700db31ec4e677527243bfeb" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;87735fd5f3f949fbef712904456156941329f17c700db31ec4e677527243bfeb</a> (seen on 35 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;ebdeebdc30a47320c5da76185725a949a334260cbc7d5b2c00952aded809893d" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;ebdeebdc30a47320c5da76185725a949a334260cbc7d5b2c00952aded809893d</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPOmega" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPOmega</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPOmega&#x2F;main.4a0a71ec4b9bde5be350.css" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPOmega&#x2F;main.4a0a71ec4b9bde5be350.css</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPOmega&#x2F;main.ddc9bbfa653c0baafb20.js" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPOmega&#x2F;main.ddc9bbfa653c0baafb20.js</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPExperience&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPExperience&#x2F;lang&#x2F;en.json</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;AgeVerification&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;AgeVerification&#x2F;lang&#x2F;en.json</a> (seen on 22 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;main.9acf56672040af7a04a1.css" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;main.9acf56672040af7a04a1.css</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;main.120a2b10eee275fc8d49.js" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;main.120a2b10eee275fc8d49.js</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;widgets&#x2F;ThumbSpot&#x2F;lang&#x2F;en.json</a> (seen on 13 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;api&#x2F;models&#x2F;ts" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;api&#x2F;models&#x2F;ts</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPOmega&#x2F;images&#x2F;logo.svg" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPOmega&#x2F;images&#x2F;logo.svg</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;7c7077340e3081c2c5e2ce174b187143f57448b57f216b55029ae18ad0eb0c03" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;7c7077340e3081c2c5e2ce174b187143f57448b57f216b55029ae18ad0eb0c03</a> (seen on 6 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;api&#x2F;models&#x2F;vast" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;api&#x2F;models&#x2F;vast</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;b43852b979b383cb3299f12d6f8af06c4bcd3456bf3c03b87cdb1ab18d5c560a" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;b43852b979b383cb3299f12d6f8af06c4bcd3456bf3c03b87cdb1ab18d5c560a</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;api&#x2F;models&#x2F;vast" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;api&#x2F;models&#x2F;vast</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;69b83e18dd066a3f4643a2b8e29140427ea55b60bc79f7635d309b62691d000e" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;69b83e18dd066a3f4643a2b8e29140427ea55b60bc79f7635d309b62691d000e</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;69b83e18dd066a3f4643a2b8e29140427ea55b60bc79f7635d309b62691d000e" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;69b83e18dd066a3f4643a2b8e29140427ea55b60bc79f7635d309b62691d000e</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;7a8d7a7e0fbed00da4dc03689993d511983a5140649045432bf140da760b1177" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;7a8d7a7e0fbed00da4dc03689993d511983a5140649045432bf140da760b1177</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;7b5ace3f6362219c8f0c101bfa947623d0a948c8f0cd48a19002f5b77440abba" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;7b5ace3f6362219c8f0c101bfa947623d0a948c8f0cd48a19002f5b77440abba</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742021415&#x2F;68330290.jpeg" target="_blank" class="external" rel="noreferrer noopener">video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742021415&#x2F;68330290.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742078595&#x2F;75349008.jpeg" target="_blank" class="external" rel="noreferrer noopener">video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742078595&#x2F;75349008.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742078610&#x2F;75349008.jpeg" target="_blank" class="external" rel="noreferrer noopener">video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742078610&#x2F;75349008.jpeg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.ohscprts.com&#x2F;smartpop&#x2F;21d3e1cf8ad6933d9dbf2e0aad993415f417057f101b2a4989f2ec43b4a5ebe0" target="_blank" class="external" rel="noreferrer noopener">go.ohscprts.com&#x2F;smartpop&#x2F;21d3e1cf8ad6933d9dbf2e0aad993415f417057f101b2a4989f2ec43b4a5ebe0</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.ohscprts.com&#x2F;LPOmega&#x2F;images&#x2F;thumbsup.png" target="_blank" class="external" rel="noreferrer noopener">creative.ohscprts.com&#x2F;LPOmega&#x2F;images&#x2F;thumbsup.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742024745&#x2F;68330290.jpeg" target="_blank" class="external" rel="noreferrer noopener">video.ohscprts.com&#x2F;push&#x2F;ts&#x2F;1742024745&#x2F;68330290.jpeg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://pornbuz.com" target="_blank" class="external">pornbuz.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://daftsex.net" target="_blank" class="external">daftsex.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.sortporn.com" target="_blank" class="external">www.sortporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.3movs.xxx" target="_blank" class="external">www.3movs.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xnalgas.com" target="_blank" class="external">www.xnalgas.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fxpornhd.com" target="_blank" class="external">fxpornhd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://realpornclip.com" target="_blank" class="external">realpornclip.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.3movs.com" target="_blank" class="external">www.3movs.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.eroprofile.com" target="_blank" class="external">www.eroprofile.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hdporner.me" target="_blank" class="external">hdporner.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.freeporn8.com" target="_blank" class="external">www.freeporn8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://allporncomic.com" target="_blank" class="external">allporncomic.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xleche.com" target="_blank" class="external">www.xleche.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://freeadultcomix.com" target="_blank" class="external">freeadultcomix.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ebony8.com" target="_blank" class="external">www.ebony8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://comicsvalley.com" target="_blank" class="external">comicsvalley.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://yabaisub.com" target="_blank" class="external">yabaisub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://m.eroprofile.com" target="_blank" class="external">m.eroprofile.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornoamateurlatino.net" target="_blank" class="external">pornoamateurlatino.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xpaja.net" target="_blank" class="external">www.xpaja.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornhits.net" target="_blank" class="external">pornhits.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.lesbian8.com" target="_blank" class="external">www.lesbian8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fr.xhamster.com" target="_blank" class="external">fr.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nhentai.net" target="_blank" class="external">nhentai.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster.com" target="_blank" class="external">xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ua.xhamster.com" target="_blank" class="external">ua.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pt.xhamster.com" target="_blank" class="external">pt.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tr.xhamster3.com" target="_blank" class="external">tr.xhamster3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cuntlick.net" target="_blank" class="external">cuntlick.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rs.xhamster.com" target="_blank" class="external">rs.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://indonesiaporn.pro" target="_blank" class="external">indonesiaporn.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fyptt.to" target="_blank" class="external">fyptt.to</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.analsee.com" target="_blank" class="external">www.analsee.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.trannygem.com" target="_blank" class="external">www.trannygem.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhvid.com" target="_blank" class="external">xhvid.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster3.com" target="_blank" class="external">xhamster3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://desivdo1.com" target="_blank" class="external">desivdo1.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://justthegays.com" target="_blank" class="external">justthegays.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://th.xhamster.com" target="_blank" class="external">th.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://trannyvideosxxx.net" target="_blank" class="external">trannyvideosxxx.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.matureamateurpictures.com" target="_blank" class="external">www.matureamateurpictures.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.keekass.com" target="_blank" class="external">www.keekass.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://es.xhamster.com" target="_blank" class="external">es.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://iqbokep.id" target="_blank" class="external">iqbokep.id</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hiperdex.com" target="_blank" class="external">hiperdex.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ro.xhamster.com" target="_blank" class="external">ro.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://chuporn.net" target="_blank" class="external">chuporn.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pornoktube.com" target="_blank" class="external">www.pornoktube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://m.alphaporno.com" target="_blank" class="external">m.alphaporno.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://tr.xhamster2.com" target="_blank" class="external">tr.xhamster2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sv.xhamster.com" target="_blank" class="external">sv.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sexyforums.com" target="_blank" class="external">sexyforums.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hi.xhamster19.com" target="_blank" class="external">hi.xhamster19.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hi.xhamster.com" target="_blank" class="external">hi.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://id.xhamster3.com" target="_blank" class="external">id.xhamster3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.masturhub.com" target="_blank" class="external">www.masturhub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster1.desi" target="_blank" class="external">xhamster1.desi</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xpanas.id" target="_blank" class="external">xpanas.id</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hu.xhamster.com" target="_blank" class="external">hu.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hiper.cool" target="_blank" class="external">hiper.cool</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://id.xhamster.desi" target="_blank" class="external">id.xhamster.desi</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ge.xhamster3.com" target="_blank" class="external">ge.xhamster3.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://milfnuts.net" target="_blank" class="external">milfnuts.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fra.xhamster.com" target="_blank" class="external">fra.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://secure.xhamster.com" target="_blank" class="external">secure.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://he.xhamster.com" target="_blank" class="external">he.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://vi.xhamster2.com" target="_blank" class="external">vi.xhamster2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ge.xhamster1.desi" target="_blank" class="external">ge.xhamster1.desi</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster19.com" target="_blank" class="external">xhamster19.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ko.xhamster2.com" target="_blank" class="external">ko.xhamster2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.empflix.com" target="_blank" class="external">www.empflix.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xozilla.com" target="_blank" class="external">www.xozilla.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.asianbabepics.com" target="_blank" class="external">www.asianbabepics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.japanesepornpictures.com" target="_blank" class="external">www.japanesepornpictures.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://nudeasianpics.net" target="_blank" class="external">nudeasianpics.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://okdio.com" target="_blank" class="external">okdio.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.huburbate.com" target="_blank" class="external">www.huburbate.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://minet.vip" target="_blank" class="external">minet.vip</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nakedmaturephotos.com" target="_blank" class="external">www.nakedmaturephotos.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bokeff.net" target="_blank" class="external">bokeff.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://manhwa18.net" target="_blank" class="external">manhwa18.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bokepini.net" target="_blank" class="external">bokepini.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://gr.xhamster.com" target="_blank" class="external">gr.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ge.xhamster19.com" target="_blank" class="external">ge.xhamster19.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhofficial.com" target="_blank" class="external">xhofficial.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cz.xhamster.com" target="_blank" class="external">cz.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://toondex.co" target="_blank" class="external">toondex.co</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ge.xhamster.desi" target="_blank" class="external">ge.xhamster.desi</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ita.xhamster.com" target="_blank" class="external">ita.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster.best" target="_blank" class="external">xhamster.best</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pl.xhamster.com" target="_blank" class="external">pl.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ge.xhamster.com" target="_blank" class="external">ge.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhms.pro" target="_blank" class="external">xhms.pro</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://m2.xhamster.com" target="_blank" class="external">m2.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ar.xhamster.com" target="_blank" class="external">ar.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster.desi" target="_blank" class="external">xhamster.desi</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xhamster2.com" target="_blank" class="external">xhamster2.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayhub.com" target="_blank" class="external">www.gayhub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ara.xhamster.com" target="_blank" class="external">ara.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://zh.xhamster.com" target="_blank" class="external">zh.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bdsmmansion.com" target="_blank" class="external">bdsmmansion.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cosplayporntube.com" target="_blank" class="external">cosplayporntube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mir-porno.me" target="_blank" class="external">mir-porno.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornmedium.com" target="_blank" class="external">pornmedium.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.omg.xxx" target="_blank" class="external">www.omg.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornhd8k.me" target="_blank" class="external">pornhd8k.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://en8.pornhd8k.me" target="_blank" class="external">en8.pornhd8k.me</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fig.to" target="_blank" class="external">fig.to</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hdgaytube.xxx" target="_blank" class="external">hdgaytube.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ru.xhamster.com" target="_blank" class="external">ru.xhamster.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gayvids.tv" target="_blank" class="external">www.gayvids.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://inporn.com" target="_blank" class="external">inporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://thotalert.com" target="_blank" class="external">thotalert.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pornhits.com" target="_blank" class="external">www.pornhits.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://3movs.com" target="_blank" class="external">3movs.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://3movs.xxx" target="_blank" class="external">3movs.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xnalgas.com" target="_blank" class="external">xnalgas.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

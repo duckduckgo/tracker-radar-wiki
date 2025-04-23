@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - primagames.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "primagames.com",
+        history: [{"date":"ci-2025-04-16-ercox","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/primagames.com.ico' width="32" height="32" class='inline-block' /> primagames.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/Prima Games, Inc.html">Prima Games, Inc</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;19853<small>/23917</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Fetch</span>,
+                    <span>Font</span>,
+                    <span>Preflight</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/primagames.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>spc</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./googletagmanager.com.html">googletagmanager.com</a> - 66.67% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./primagames.com.html">primagames.com</a> - 16.67% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./htlbid.com.html">htlbid.com</a> - 16.67% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;ad&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;ad&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-group&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-group&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-header&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-header&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-tile&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;article-tile&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;banner&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;banner&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;button&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;button&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;comment-button&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;comment-button&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;container&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;container&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;header-nav&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;header-nav&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;network-account-login-logout&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;network-account-login-logout&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;term-chips&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;term-chips&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;css&#x2F;style.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;css&#x2F;style.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;article-group-load-more.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;article-group-load-more.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-includes&#x2F;js&#x2F;jquery&#x2F;jquery.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;wordpress-popular-posts&#x2F;assets&#x2F;js&#x2F;wpp.min.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;wordpress-popular-posts&#x2F;assets&#x2F;js&#x2F;wpp.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;_static&#x2F;" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;_static&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;images&#x2F;prima-logo.svg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;images&#x2F;prima-logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;article-tile-datetime.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;article-tile-datetime.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;preload-openweb-finite-scroll.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;preload-openweb-finite-scroll.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-group-analytics&#x2F;js&#x2F;openweb-tracking.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-group-analytics&#x2F;js&#x2F;openweb-tracking.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;anchor-link-load-comments.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;anchor-link-load-comments.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;ephemeral-mobile-pushdown.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;ephemeral-mobile-pushdown.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;link-gamurs-account.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;link-gamurs-account.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;get-openweb-comment-count.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;var&#x2F;www&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;js&#x2F;build&#x2F;get-openweb-comment-count.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;network-account-login-logout&#x2F;view.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;network-account-login-logout&#x2F;view.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;header-nav&#x2F;view.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;header-nav&#x2F;view.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;comment-button&#x2F;view.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;comment-button&#x2F;view.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;plow.lite.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;plow.lite.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-json&#x2F;navy&#x2F;v1&#x2F;tag" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-json&#x2F;navy&#x2F;v1&#x2F;tag</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;fonts.gstatic.com&#x2F;s&#x2F;karla&#x2F;v31&#x2F;qkB9XvYC6trAT55ZBi1ueQVIjQTD-JrIH2G7nytkHRyQ8p4wUje6bmMorHA.woff2" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;fonts.gstatic.com&#x2F;s&#x2F;karla&#x2F;v31&#x2F;qkB9XvYC6trAT55ZBi1ueQVIjQTD-JrIH2G7nytkHRyQ8p4wUje6bmMorHA.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-includes&#x2F;css&#x2F;dist&#x2F;block-library&#x2F;style.min.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-includes&#x2F;css&#x2F;dist&#x2F;block-library&#x2F;style.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-group-gutenberg-blocks&#x2F;build&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-group-gutenberg-blocks&#x2F;build&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-includes&#x2F;js&#x2F;mediaelement&#x2F;mediaelementplayer-legacy.min.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-includes&#x2F;js&#x2F;mediaelement&#x2F;mediaelementplayer-legacy.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-includes&#x2F;js&#x2F;mediaelement&#x2F;wp-mediaelement.min.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-includes&#x2F;js&#x2F;mediaelement&#x2F;wp-mediaelement.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;mu-plugins&#x2F;search&#x2F;elasticpress&#x2F;dist&#x2F;css&#x2F;related-posts-block-styles.min.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;mu-plugins&#x2F;search&#x2F;elasticpress&#x2F;dist&#x2F;css&#x2F;related-posts-block-styles.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;filter-tabs&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;filter-tabs&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;footer-nav&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;footer-nav&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;newsletter&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;newsletter&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;other-menu&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;other-menu&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;section-title&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;section-title&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;status-message&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;status-message&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;tile-badge&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;tile-badge&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-forgot&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-forgot&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-manage&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-manage&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-signup&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;auth-signup&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;input&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;input&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;next-article&#x2F;style-index.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;build&#x2F;next-article&#x2F;style-index.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;inc&#x2F;icons&#x2F;gamurs_icon_library.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;gamurs-wordpress-blocks&#x2F;inc&#x2F;icons&#x2F;gamurs_icon_library.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;wordpress-popular-posts&#x2F;assets&#x2F;css&#x2F;wpp.css" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;plugins&#x2F;wordpress-popular-posts&#x2F;assets&#x2F;css&#x2F;wpp.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://spc.primagames.com&#x2F;&#x2F;com.snowplowanalytics.snowplow&#x2F;tp2" target="_blank" class="external" rel="noreferrer noopener">spc.primagames.com&#x2F;&#x2F;com.snowplowanalytics.snowplow&#x2F;tp2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://spc.primagames.com&#x2F;&#x2F;com.snowplowanalytics.snowplow&#x2F;tp2" target="_blank" class="external" rel="noreferrer noopener">spc.primagames.com&#x2F;&#x2F;com.snowplowanalytics.snowplow&#x2F;tp2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-link-click-tracking" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-link-click-tracking</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-privacy-sandbox" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-privacy-sandbox</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-web-vitals" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-web-vitals</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-client-hints" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;plow-plugins&#x2F;browser-plugin-client-hints</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-includes&#x2F;js&#x2F;wp-emoji-release.min.js" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-includes&#x2F;js&#x2F;wp-emoji-release.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-json&#x2F;pubcid&#x2F;v1&#x2F;extend&#x2F;" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-json&#x2F;pubcid&#x2F;v1&#x2F;extend&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;07&#x2F;Super-League-Soccer.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;07&#x2F;Super-League-Soccer.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-King-Legacy-Feature-Image-Codes.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-King-Legacy-Feature-Image-Codes.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-All-Star-Tower-Defense-Feature.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-All-Star-Tower-Defense-Feature.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;06&#x2F;Dead-by-Daylight-feature-2.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;06&#x2F;Dead-by-Daylight-feature-2.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-Shindo-Life-Feature.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-Shindo-Life-Feature.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-Fruit-Battleground-Feature.jpg" target="_blank" class="external" rel="noreferrer noopener">primagames.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;Roblox-Fruit-Battleground-Feature.jpg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://pcinvasion.com" target="_blank" class="external">pcinvasion.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pcinvasion.com" target="_blank" class="external">www.pcinvasion.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

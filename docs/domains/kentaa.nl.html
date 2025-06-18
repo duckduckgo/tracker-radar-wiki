@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - kentaa.nl</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "kentaa.nl",
+        history: [{"date":"ci-2025-06-17-ldkul","prevalence":0.0000205,"sites":3,"fingerprinting":2,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/kentaa.nl.ico' width="32" height="32" class='inline-block' /> kentaa.nl</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;13371<small>/23855</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Preflight</span>,
+                    <span>Fetch</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/kentaa.nl.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cdn</span>, 
+                    <span>frontend-api</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Screen.prototype.orientation</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;80803-5d6fc11f.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;80803-5d6fc11f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;4416-9467e5b9.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;4416-9467e5b9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;19186-060921f1.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;19186-060921f1.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;18536-33d3b595.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;18536-33d3b595.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;19409-b52ae891.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;19409-b52ae891.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;40351-44c0c797.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;40351-44c0c797.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;92228-b08d65ab.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;92228-b08d65ab.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;21134-1014cd93.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;21134-1014cd93.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;27702-be0a4ab4.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;27702-be0a4ab4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;flexplate&#x2F;components-930e6d21.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;flexplate&#x2F;components-930e6d21.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;runtime-f16fbf1297fc167710b1.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;runtime-f16fbf1297fc167710b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;74652-187405afdbc54df97d47.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;74652-187405afdbc54df97d47.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;74699-14bcb89da8d5e62ca925.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;74699-14bcb89da8d5e62ca925.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;94922-99f5f95972240380d85d.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;94922-99f5f95972240380d85d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;6151-85927fa9ccc21dd53047.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;6151-85927fa9ccc21dd53047.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;42589-6cfcc5018c77daeeabde.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;42589-6cfcc5018c77daeeabde.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;25917-714bdd58254d0b0b4f04.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;25917-714bdd58254d0b0b4f04.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;84814-a209b1e20ab0f30984d2.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;84814-a209b1e20ab0f30984d2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;20318-875682bbc1e8b8e9870a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;20318-875682bbc1e8b8e9870a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;16409-81c62f1d27395bfcf76a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;16409-81c62f1d27395bfcf76a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;6029-df1370d486d49483e9a2.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;6029-df1370d486d49483e9a2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;68904-7c298dcebfc09a20dd2e.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;68904-7c298dcebfc09a20dd2e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;1539-6ae2270fca3467c4f3b6.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;1539-6ae2270fca3467c4f3b6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;87023-028bfb30467a85b82ec9.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;87023-028bfb30467a85b82ec9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;72917-bb7c4051c3fc5bc46601.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;72917-bb7c4051c3fc5bc46601.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;77420-beb52653bbc4baacc8f7.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;77420-beb52653bbc4baacc8f7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;44630-490b2972778dfcd44003.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;44630-490b2972778dfcd44003.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;30767-f999ce1174c1365e516f.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;30767-f999ce1174c1365e516f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;54246-e2a0b8070ba202d45293.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;54246-e2a0b8070ba202d45293.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;56841-e1f1a51cf339e0f95bf5.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;56841-e1f1a51cf339e0f95bf5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;77468-9ad0728acc5224ea8f61.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;77468-9ad0728acc5224ea8f61.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;50009-4775905608fdfb00cbb0.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;50009-4775905608fdfb00cbb0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;82571-eaeb9468ddbc7ab0aa2c.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;82571-eaeb9468ddbc7ab0aa2c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;23006-f16019f6310fe06db1e8.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;23006-f16019f6310fe06db1e8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;17953-94a823d7bfd3d93ece04.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;17953-94a823d7bfd3d93ece04.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;19186-5072350024167a5c3c5e.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;19186-5072350024167a5c3c5e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;19409-0fd0e8d58c7f39026056.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;19409-0fd0e8d58c7f39026056.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;76258-f7d4e285f3808d309297.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;76258-f7d4e285f3808d309297.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;40351-ce1132d3c794b5c1e783.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;40351-ce1132d3c794b5c1e783.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;43276-fa7e26b2e2f58e1086b1.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;43276-fa7e26b2e2f58e1086b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;21134-3a327162c71b047cd995.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;21134-3a327162c71b047cd995.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;27702-1281c35dc27dc6f329c0.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;27702-1281c35dc27dc6f329c0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;flexplate&#x2F;components-a87891755f88c5cb5c89.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;flexplate&#x2F;components-a87891755f88c5cb5c89.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;site" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;site</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;sponsors" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;sponsors</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;menu-items&#x2F;footer" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;menu-items&#x2F;footer</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;translations-nl-default-json-4aeef29fbef113e3d938.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;translations-nl-default-json-4aeef29fbef113e3d938.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;site" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;site</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;90138-f131b3d2.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;90138-f131b3d2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;90138-a4093ca01b89d7e0e102.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;90138-a4093ca01b89d7e0e102.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;67517-ff75e25d.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;67517-ff75e25d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;67517-db2a0da3446807f69cd2.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;67517-db2a0da3446807f69cd2.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;sponsors" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;sponsors</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://frontend-api.kentaa.nl&#x2F;menu-items&#x2F;footer" target="_blank" class="external" rel="noreferrer noopener">frontend-api.kentaa.nl&#x2F;menu-items&#x2F;footer</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;17597-2f0a467d.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;17597-2f0a467d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;17597-881f827d27585305bc9d.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;17597-881f827d27585305bc9d.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;99102-dab0be01.css" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;css&#x2F;99102-dab0be01.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;99102-13bad7ea2a41db999459.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;99102-13bad7ea2a41db999459.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;translations-nl-action_1-json-e15e488515363b920c8a.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;translations-nl-action_1-json-e15e488515363b920c8a.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;42085-0693418181135e44fcdf.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;js&#x2F;42085-0693418181135e44fcdf.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.kentaa.nl&#x2F;packs&#x2F;static&#x2F;assets&#x2F;images&#x2F;flexplate&#x2F;powered-by-d76d18a9cb2f8a8849c2.svg" target="_blank" class="external" rel="noreferrer noopener">cdn.kentaa.nl&#x2F;packs&#x2F;static&#x2F;assets&#x2F;images&#x2F;flexplate&#x2F;powered-by-d76d18a9cb2f8a8849c2.svg</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://nachtvandevluchteling.nl" target="_blank" class="external">nachtvandevluchteling.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.roparun.nl" target="_blank" class="external">www.roparun.nl</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - cspi.org</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "cspi.org",
+        history: [{"date":"ci-2025-07-03-lpexf","prevalence":0.0000137,"sites":2,"fingerprinting":1,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/cspi.org.ico' width="32" height="32" class='inline-block' /> cspi.org</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;15864<small>/23927</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/cspi.org.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;css&#x2F;css_HFo1s6IFGZIvFNfdASHXSK9K21z3i3_yslSZ6C1sJk4.css" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;css&#x2F;css_HFo1s6IFGZIvFNfdASHXSK9K21z3i3_yslSZ6C1sJk4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;css&#x2F;css_Dejw3xNljBtSq_egoflvmntE6dvag5zpNEjFmbLnT48.css" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;css&#x2F;css_Dejw3xNljBtSq_egoflvmntE6dvag5zpNEjFmbLnT48.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_9Psy_ZxrU43Gj_FS5UFYim5wBH4WQG412oaBwSLDyQw.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_9Psy_ZxrU43Gj_FS5UFYim5wBH4WQG412oaBwSLDyQw.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;modules&#x2F;contrib&#x2F;google_tag&#x2F;js&#x2F;gtag.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;modules&#x2F;contrib&#x2F;google_tag&#x2F;js&#x2F;gtag.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;modules&#x2F;contrib&#x2F;google_tag&#x2F;js&#x2F;gtm.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;modules&#x2F;contrib&#x2F;google_tag&#x2F;js&#x2F;gtm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo.svg" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo_mini.png" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo_mini.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;164x215&#x2F;public&#x2F;2025-05&#x2F;mayjune25_cover_1440pxwide.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;164x215&#x2F;public&#x2F;2025-05&#x2F;mayjune25_cover_1440pxwide.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;1440x770&#x2F;public&#x2F;2025-05&#x2F;vaccineIndex_weyo_AdobeStock_220120304_homeHero_2880x1440_1.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;1440x770&#x2F;public&#x2F;2025-05&#x2F;vaccineIndex_weyo_AdobeStock_220120304_homeHero_2880x1440_1.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;julyaug25_bn_tenkende_iceCreamScoop_AdobeStock_364718495_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;julyaug25_bn_tenkende_iceCreamScoop_AdobeStock_364718495_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;NIH%20campus%20James%20H%20Shannon%20Building%20-%20Bethesda%2C%20MD.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;NIH%20campus%20James%20H%20Shannon%20Building%20-%20Bethesda%2C%20MD.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;Aramyan_Adobe_Stock_stack_of_papers_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;Aramyan_Adobe_Stock_stack_of_papers_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;Tada_Images_AdobeStock_HHS_Building_Editorial_Use_Only_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;Tada_Images_AdobeStock_HHS_Building_Editorial_Use_Only_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;AdobeStock_565574923_MAHA-report-misinformation-bad-science-scientist-skeptical_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;AdobeStock_565574923_MAHA-report-misinformation-bad-science-scientist-skeptical_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;julaug25_creamers_David%20Crockett_coffeeCreamer_Adobe_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;julaug25_creamers_David%20Crockett_coffeeCreamer_Adobe_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;julaug25_foodFail_chilis_3ForMe_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;julaug25_foodFail_chilis_3ForMe_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_854049563_Julian_plant-based-recipes-weeknight-vegetarian-dinners_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_854049563_Julian_plant-based-recipes-weeknight-vegetarian-dinners_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_386379439_Halfpoint_convening-partner-organizations-IFJA-powerbuilding_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_386379439_Halfpoint_convening-partner-organizations-IFJA-powerbuilding_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;Daxiao_Productions_AdobeStock_cucumbers_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;Daxiao_Productions_AdobeStock_cucumbers_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_1376758077_Pixel-Shot_DietaryGuidelines-DGA-RFK_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_1376758077_Pixel-Shot_DietaryGuidelines-DGA-RFK_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;mayjune25_memo_ChubbyCat_schoolLunch_AdobeStock_851209941_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;mayjune25_memo_ChubbyCat_schoolLunch_AdobeStock_851209941_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;mayjune25_seafood_sketched-graphics_Adobe_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;mayjune25_seafood_sketched-graphics_Adobe_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;684x466&#x2F;public&#x2F;2025-04&#x2F;Kwangmoozaa_Adobe_Stock_online_shopping_1440x465px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;684x466&#x2F;public&#x2F;2025-04&#x2F;Kwangmoozaa_Adobe_Stock_online_shopping_1440x465px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;time100health_peter_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;time100health_peter_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;Savandreas_Adobe_Stock_cereal_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;Savandreas_Adobe_Stock_cereal_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;mayjune25_caffeine_Alonso%20Reyes_caffeineWomanCoffeeShop_AdobeStock_323307176_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;mayjune25_caffeine_Alonso%20Reyes_caffeineWomanCoffeeShop_AdobeStock_323307176_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;Taya_adobe_syntheticDyes_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;Taya_adobe_syntheticDyes_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;SFC%20Farmers%20Market%20at%20Sunset%20Valley_Sustainable%20Food%20Center_community-wellbeing-advocacy-SFC_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;SFC%20Farmers%20Market%20at%20Sunset%20Valley_Sustainable%20Food%20Center_community-wellbeing-advocacy-SFC_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;mayjune25_vaccines_StudioRomantic_vaccines_Adobe_410117482_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;mayjune25_vaccines_StudioRomantic_vaccines_Adobe_410117482_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_400667129_Editorial_Use_Only_JHVEPhoto_detroit-food-policy-center-DFPC-partner_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_400667129_Editorial_Use_Only_JHVEPhoto_detroit-food-policy-center-DFPC-partner_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_438686467_AntonioDiaz_oklahoma-childhood-hunger-free-ok-child-woman-grocery-store_HomeHero_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_438686467_AntonioDiaz_oklahoma-childhood-hunger-free-ok-child-woman-grocery-store_HomeHero_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;WavebreakMediaMicro_Adobe_Stock_school_cafeteria_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;WavebreakMediaMicro_Adobe_Stock_school_cafeteria_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;DSC08033_MakeFoodNotWaste_org-meals-food-waste-reduction-detroit-michigan_Hero_700x530px.png.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;DSC08033_MakeFoodNotWaste_org-meals-food-waste-reduction-detroit-michigan_Hero_700x530px.png.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_744306537_ChayTee_food-prices-tariffs-threaten-security-americans_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_744306537_ChayTee_food-prices-tariffs-threaten-security-americans_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;Aerial%20view%20of%20the%20Mark%20O%20Hatfield%20Clinical%20Research%20Center%20on%20NIH%20Campus.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;Aerial%20view%20of%20the%20Mark%20O%20Hatfield%20Clinical%20Research%20Center%20on%20NIH%20Campus.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_435201099_Editorial_Use_Only_monticellllo_fda-food-drug-administration_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_435201099_Editorial_Use_Only_monticellllo_fda-food-drug-administration_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;marapr25_glp1_Kassandra_ozempicGLP-1_AdobeStock_1016664957_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;marapr25_glp1_Kassandra_ozempicGLP-1_AdobeStock_1016664957_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;AdobeStock_340551662_Prostock-studio_404-error-missing-pages-concept_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;AdobeStock_340551662_Prostock-studio_404-error-missing-pages-concept_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;AdobeStock_280186170_Daniel%20CHETRONI_LDT-lab-laboratory-developed-test-health-regulation_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;AdobeStock_280186170_Daniel%20CHETRONI_LDT-lab-laboratory-developed-test-health-regulation_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;marapr25_buzzwords_pongmoji_groceryAisle_AdobeStock_361773363_Editorial_Use_Only_hero_700x530%20copy.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;marapr25_buzzwords_pongmoji_groceryAisle_AdobeStock_361773363_Editorial_Use_Only_hero_700x530%20copy.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;calypso77_milkCartonExpiration_AdobeStock_539958500_hero_700x530.jpeg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;calypso77_milkCartonExpiration_AdobeStock_539958500_hero_700x530.jpeg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;bit24_Adobe_Stock_vegetables_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;bit24_Adobe_Stock_vegetables_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2024-12&#x2F;AdobeStock_512020290_Chanakon_grocery-prices-woman-shopping-food-expensive_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2024-12&#x2F;AdobeStock_512020290_Chanakon_grocery-prices-woman-shopping-food-expensive_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;Farknot%20Architect_handsGrowingPlant_AdobeStock_312851490_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-02&#x2F;Farknot%20Architect_handsGrowingPlant_AdobeStock_312851490_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-06&#x2F;Aramyan_Adobe_Stock_stack_of_papers_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-06&#x2F;Aramyan_Adobe_Stock_stack_of_papers_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-06&#x2F;AdobeStock_565574923_MAHA-report-misinformation-bad-science-scientist-skeptical_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-06&#x2F;AdobeStock_565574923_MAHA-report-misinformation-bad-science-scientist-skeptical_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_1376758077_Pixel-Shot_DietaryGuidelines-DGA-RFK_Hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-05&#x2F;AdobeStock_1376758077_Pixel-Shot_DietaryGuidelines-DGA-RFK_Hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-05&#x2F;mayjune25_memo_ChubbyCat_schoolLunch_AdobeStock_851209941_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;280x210&#x2F;public&#x2F;2025-05&#x2F;mayjune25_memo_ChubbyCat_schoolLunch_AdobeStock_851209941_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_744306537_ChayTee_food-prices-tariffs-threaten-security-americans_HomeHero_2880x1400px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-04&#x2F;AdobeStock_744306537_ChayTee_food-prices-tariffs-threaten-security-americans_HomeHero_2880x1400px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2024-05&#x2F;AdobeStock_stone36-seasonal-produce-raspberries-berries_1440x960px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2024-05&#x2F;AdobeStock_stone36-seasonal-produce-raspberries-berries_1440x960px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2024-05&#x2F;mayjun24_hc_ratatouille_hero_700x530px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2024-05&#x2F;mayjun24_hc_ratatouille_hero_700x530px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2023-03&#x2F;april23_hc_asparagusTahiniSauce_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;229x300&#x2F;public&#x2F;2023-03&#x2F;april23_hc_asparagusTahiniSauce_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2022-01&#x2F;chemicalCuisine1_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2022-01&#x2F;chemicalCuisine1_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;rssImages&#x2F;coffeeAndCreamers_feature1.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;rssImages&#x2F;coffeeAndCreamers_feature1.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-06&#x2F;samuel-schroth-L8lbuhnSPD8-unsplash.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-06&#x2F;samuel-schroth-L8lbuhnSPD8-unsplash.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;ninthgrid-Rrap82iN3HM-unsplash.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-06&#x2F;ninthgrid-Rrap82iN3HM-unsplash.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;trump-kennedy-eo-1.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;trump-kennedy-eo-1.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;atoms-VHMvdS720Hc-unsplash.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;atoms-VHMvdS720Hc-unsplash.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;tim-mossholder-luOHcHUkirA-unsplash.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-05&#x2F;tim-mossholder-luOHcHUkirA-unsplash.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;700x530&#x2F;public&#x2F;2022-05&#x2F;june22_qs_MonkeyBusiness_coupleWalkingDog_AdobeStock_188343720_hero_700x530.jpeg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;700x530&#x2F;public&#x2F;2022-05&#x2F;june22_qs_MonkeyBusiness_coupleWalkingDog_AdobeStock_188343720_hero_700x530.jpeg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-05&#x2F;mayjune25_cs_Michal_wildfire_adobe_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;600x528&#x2F;public&#x2F;2025-05&#x2F;mayjune25_cs_Michal_wildfire_adobe_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;mayjune25_sunscreen_dream%40do_AdobeStock_220156631_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;mayjune25_sunscreen_dream%40do_AdobeStock_220156631_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;mayjune25_foodConfusion_improvee%20design_groceryCartStore_AdobeStock_1017641273_hero_700x530.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;media_450x450&#x2F;public&#x2F;2025-03&#x2F;mayjune25_foodConfusion_improvee%20design_groceryCartStore_AdobeStock_1017641273_hero_700x530.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;766x510&#x2F;public&#x2F;2023-03&#x2F;peterTestifying1_homeHero_1400x700px.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;766x510&#x2F;public&#x2F;2023-03&#x2F;peterTestifying1_homeHero_1400x700px.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;700x530&#x2F;public&#x2F;2025-03&#x2F;HCK_simplyTofuBook_cta.jpg.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;700x530&#x2F;public&#x2F;2025-03&#x2F;HCK_simplyTofuBook_cta.jpg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo_white.svg" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;cspi-logo_white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_LJWsoXR1LeAKj0KJsICvBqnUBFkwBj-zSfsj-nutQq4.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_LJWsoXR1LeAKj0KJsICvBqnUBFkwBj-zSfsj-nutQq4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;js&#x2F;bundle.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;js&#x2F;bundle.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;js&#x2F;bundle-react.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;js&#x2F;bundle-react.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_O9NZlbhJnxGqNwHmRNROX9Y7-bYqlVQmwF9Nn54nujc.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;js&#x2F;js_O9NZlbhJnxGqNwHmRNROX9Y7-bYqlVQmwF9Nn54nujc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-bluegreen.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-bluegreen.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-darkgreen.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-darkgreen.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-darkblue.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-darkblue.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-yellow.webp" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;images&#x2F;paper-textures-webp&#x2F;paper-texture-yellow.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6149645&#x2F;b56355b0-7729-42a7-9f65-62c7211d078c.woff2" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6149645&#x2F;b56355b0-7729-42a7-9f65-62c7211d078c.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6149670&#x2F;f5d4f93b-454a-43e0-9ae8-7f1271b5c0fd.woff2" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6149670&#x2F;f5d4f93b-454a-43e0-9ae8-7f1271b5c0fd.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;icomoon.woff2" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;icomoon.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;TiemposHeadline-Semibold.woff2" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;TiemposHeadline-Semibold.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6383960&#x2F;4c12ed83-b51a-4aa2-933e-91b51a349858.woff2" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;themes&#x2F;custom&#x2F;cspi&#x2F;assets&#x2F;fonts&#x2F;AvenirNext&#x2F;6383960&#x2F;4c12ed83-b51a-4aa2-933e-91b51a349858.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;service-worker.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;service-worker.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.cspi.org&#x2F;workbox-4651c119.js" target="_blank" class="external" rel="noreferrer noopener">www.cspi.org&#x2F;workbox-4651c119.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://cspinet.org" target="_blank" class="external">cspinet.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cspinet.org" target="_blank" class="external">www.cspinet.org</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

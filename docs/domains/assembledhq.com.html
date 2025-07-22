@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - assembledhq.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "assembledhq.com",
+        history: [{"date":"ci-2025-07-17-epimi","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/assembledhq.com.ico' width="32" height="32" class='inline-block' /> assembledhq.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;15076<small>/23984</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/assembledhq.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>cal</span>, 
+                    <span>content.product-usage</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>CanvasRenderingContext2D.prototype.measureText</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-color-scheme&quot;)</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>BroadcastChannel.prototype.constructor</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 33.33% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./transcend.io.html">transcend.io</a> - 33.33% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./assembledhq.com.html">assembledhq.com</a> - 33.33% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;public-chat.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;public-chat.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;public_chat" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;public_chat</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2117.7b63778a.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2117.7b63778a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3115.631ebba8.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3115.631ebba8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6732.0396a46a.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6732.0396a46a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;runtime~app.5dab7815.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;runtime~app.5dab7815.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3654.9a549144.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3654.9a549144.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9389.cf69af67.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9389.cf69af67.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1391.6f37de07.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1391.6f37de07.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;app-e96e9bea.618d5b44.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;app-e96e9bea.618d5b44.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;app-97951ade.6458b141.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;app-97951ade.6458b141.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://content.product-usage.assembledhq.com&#x2F;agent&#x2F;static&#x2F;0d6be7c5-96eb-4185-58b1-e04086bf712d&#x2F;pendo.js" target="_blank" class="external" rel="noreferrer noopener">content.product-usage.assembledhq.com&#x2F;agent&#x2F;static&#x2F;0d6be7c5-96eb-4185-58b1-e04086bf712d&#x2F;pendo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;app-e96e9bea.86554bf9.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;app-e96e9bea.86554bf9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;theme-light.ad274d0a.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;theme-light.ad274d0a.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;theme-light.3f07628e.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;theme-light.3f07628e.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;api&#x2F;csrf" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;api&#x2F;csrf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7317.db42a38c.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7317.db42a38c.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2778.09c1db0d.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2778.09c1db0d.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;5761.954a2106.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;5761.954a2106.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;581.e1b92769.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;581.e1b92769.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7796.8d6c9ea5.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7796.8d6c9ea5.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3413.f3cb20f1.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3413.f3cb20f1.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;904.1d34fd46.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;904.1d34fd46.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6453.d06aa38f.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6453.d06aa38f.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6142.876d1b79.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6142.876d1b79.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8122.8a054e18.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8122.8a054e18.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8685.f674b4ee.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8685.f674b4ee.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3333.f368981f.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;3333.f368981f.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;5965.bae43618.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;5965.bae43618.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1800.ec7b849c.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1800.ec7b849c.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1033.d33fbd4b.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1033.d33fbd4b.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6385.e3c59862.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6385.e3c59862.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;7880.db268330.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;7880.db268330.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7880.3541997a.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7880.3541997a.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6122.a50e93f9.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6122.a50e93f9.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2470.ec91742e.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2470.ec91742e.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;456.ea6cd4a3.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;456.ea6cd4a3.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;231.cd967a10.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;231.cd967a10.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;4362.859d2b3c.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;4362.859d2b3c.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;Cal.ff1b1cac.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;Cal.ff1b1cac.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;api&#x2F;sessions" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;api&#x2F;sessions</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;api&#x2F;sessions&#x2F;end" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;api&#x2F;sessions&#x2F;end</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;api&#x2F;cal&#x2F;public_chat&#x2F;settings_and_activation" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;api&#x2F;cal&#x2F;public_chat&#x2F;settings_and_activation</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;9112.dfd57051.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;9112.dfd57051.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9112.825f7714.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9112.825f7714.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8870.16408c2e.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;8870.16408c2e.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;6799.42ffb99f.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;6799.42ffb99f.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6799.ef18ae98.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6799.ef18ae98.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;7398.a5bb291d.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;7398.a5bb291d.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7398.f98fde83.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;7398.f98fde83.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;9373.b83df4e1.chunk.css" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;css&#x2F;9373.b83df4e1.chunk.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9373.47c8ea8a.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;9373.47c8ea8a.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2330.50899a9a.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;2330.50899a9a.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1024.505cf4bb.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;1024.505cf4bb.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;4204.b735543d.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;4204.b735543d.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6358.59d4455a.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;6358.59d4455a.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;Cal.38a104af.chunk.js" target="_blank" class="external" rel="noreferrer noopener">cal.assembledhq.com&#x2F;static&#x2F;js&#x2F;Cal.38a104af.chunk.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://patreon.com" target="_blank" class="external">patreon.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://support.patreon.com" target="_blank" class="external">support.patreon.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

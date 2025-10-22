@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - zttbuilds.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "zttbuilds.com",
+        history: [{"date":"ci-2025-10-17-apwks","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/zttbuilds.com.ico' width="32" height="32" class='inline-block' /> zttbuilds.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;21205<small>/23667</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Ping</span>,
+                    <span>Other</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/zttbuilds.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.screenX</li>
+        <li class='truncate'>window.screenY</li>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>CookieStore.prototype.get</li>
+        <li class='truncate'>CookieStore.prototype.set</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.css" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ZTT_Red-Black_45b47b18-f6f8-434a-91f3-9e91168a6219.png" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ZTT_Red-Black_45b47b18-f6f8-434a-91f3-9e91168a6219.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ZTT_White_2.png" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ZTT_White_2.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-81c60534.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-81c60534.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-65b4c6d7.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-65b4c6d7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;portable-wallets&#x2F;latest&#x2F;accelerated-checkout-backwards-compat.css" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;portable-wallets&#x2F;latest&#x2F;accelerated-checkout-backwards-compat.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;vendor.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;vendor.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;apps.css" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;apps.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-2.0.17.min.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-2.0.17.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cart.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cart.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;search.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;search.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cookie-banner.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cookie-banner.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;mobile-dock.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;mobile-dock.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;instant-page.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;instant-page.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;wpm&#x2F;b98688ed7w4720d202p17656315m70f274dfl.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;wpm&#x2F;b98688ed7w4720d202p17656315m70f274dfl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.b81d65ce2f8f872f81be881c15886f2b53772471.min.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.b81d65ce2f8f872f81be881c15886f2b53772471.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-abeef7a0.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-abeef7a0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n5.250d51708d76acbac296b0e21ede8f81de4e37aa.woff2" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n5.250d51708d76acbac296b0e21ede8f81de4e37aa.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cookie-banner.css" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;cookie-banner.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;mobile-dock.css" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;mobile-dock.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;api&#x2F;collect" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;api&#x2F;collect</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;app&#x2F;web-pixel-1470169314@b2a88bafab3e21179ed38636efcd8a93&#x2F;pixel.legacy.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;app&#x2F;web-pixel-1470169314@b2a88bafab3e21179ed38636efcd8a93&#x2F;pixel.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;app&#x2F;web-pixel-1469415650@ca16bc87fe92b6042fbaa3acc2fbdaa6&#x2F;pixel.legacy.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;app&#x2F;web-pixel-1469415650@ca16bc87fe92b6042fbaa3acc2fbdaa6&#x2F;pixel.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;web-pixel-1465188578@b101f4ff95f2a57122d443b31d4836e8&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;web-pixel-1465188578@b101f4ff95f2a57122d443b31d4836e8&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels@98688ed7w4720d202p17656315m70f274df&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.CO4mfZCN.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.CO4mfZCN.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1465188578@b101f4ff95f2a57122d443b31d4836e8.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1465188578@b101f4ff95f2a57122d443b31d4836e8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.B21m_jHo.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.B21m_jHo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;en-legacy.DPPJdnlS.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;en-legacy.DPPJdnlS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.bNhMiJDP.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.bNhMiJDP.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalizationExtensionField-legacy.psvJ2vnt.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalizationExtensionField-legacy.psvJ2vnt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.CLPxoF5Y.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.CLPxoF5Y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;DeliveryMethodSelectorSection-legacy.BfJXC394.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;DeliveryMethodSelectorSection-legacy.BfJXC394.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useEditorShopPayNavigation-legacy.8PBWn4B8.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useEditorShopPayNavigation-legacy.8PBWn4B8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.DgIYO8ud.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.DgIYO8ud.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;Section-legacy.TGnb3XPf.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;Section-legacy.TGnb3XPf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.CyW4ecH8.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.CyW4ecH8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.C2OCWclb.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.C2OCWclb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.CauHMNFJ.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.CauHMNFJ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StackedMerchandisePreview-legacy.BfqMMJ_E.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StackedMerchandisePreview-legacy.BfqMMJ_E.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.BZLUBwFp.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.BZLUBwFp.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.BSeM_3y1.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.BSeM_3y1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;index-legacy.MwY_ZeF0.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;index-legacy.MwY_ZeF0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PayButtonSection-legacy.BWmtXNjf.js" target="_blank" class="external" rel="noreferrer noopener">zttbuilds.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PayButtonSection-legacy.BWmtXNjf.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://zachstechturf.com" target="_blank" class="external">zachstechturf.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.zachstechturf.com" target="_blank" class="external">www.zachstechturf.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

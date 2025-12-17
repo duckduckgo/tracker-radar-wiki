@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - mccormick.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "mccormick.com",
+        history: [{"date":"ci-2025-12-17-shlze","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/mccormick.com.ico' width="32" height="32" class='inline-block' /> mccormick.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <a href="../entities/McCormick &amp; Company, Inc..html">McCormick &amp; Company, Inc.</a>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;18803<small>/23553</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                    <span>Ping</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/mccormick.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>CookieStore.prototype.get</li>
+        <li class='truncate'>CookieStore.prototype.set</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./cookielaw.org.html">cookielaw.org</a> - 54.55% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./minmaxify.com.html">minmaxify.com</a> - 45.45% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;pages&#x2F;brands&#x2F;franks-redhot" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;pages&#x2F;brands&#x2F;franks-redhot</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;variables-franks-ejV6UDV2.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;variables-franks-ejV6UDV2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;BarlowSemiCondensed-Black.woff2" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;BarlowSemiCondensed-Black.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-C_Z62Jws.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-C_Z62Jws.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-CxCBTcwP.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-CxCBTcwP.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;index-DS8uTh6M.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;index-DS8uTh6M.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;franks-theme-CwEUPuDd.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;franks-theme-CwEUPuDd.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_dlpDe4U9.en.esm.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_dlpDe4U9.en.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_FunKbpTJ.esm.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_FunKbpTJ.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-81c60534.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-81c60534.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-65b4c6d7.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shopify_pay&#x2F;storefront-65b4c6d7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;portable-wallets&#x2F;latest&#x2F;accelerated-checkout-backwards-compat.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;portable-wallets&#x2F;latest&#x2F;accelerated-checkout-backwards-compat.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-2.1.2.min.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-2.1.2.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks-RedHot-Logo_ee15b79a-03db-484f-9e3b-146a09a222b2.webp" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks-RedHot-Logo_ee15b79a-03db-484f-9e3b-146a09a222b2.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0000.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0000.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0003.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0003.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0006.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0006.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0009.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0009.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0012.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0012.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0015.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0015.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0018.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0018.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0021.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0021.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0024.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0024.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0027.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0027.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0030.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0030.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0033.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ETG_GOAT-Chain_LRG0033.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GOAT-Mobile-Hero_1.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GOAT-Mobile-Hero_1.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GOAT-Desktop-Hero_a1c83a9f-7de6-4520-b426-017251c71e62.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GOAT-Desktop-Hero_a1c83a9f-7de6-4520-b426-017251c71e62.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;template-article-DXXPo8k7.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;template-article-DXXPo8k7.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;preview_images&#x2F;2fa05214e0f64fd9b990b6967cc18d3f.thumbnail.0000000000_1400x.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;preview_images&#x2F;2fa05214e0f64fd9b990b6967cc18d3f.thumbnail.0000000000_1400x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;preview_images&#x2F;7afb582903e44ad7b4aaa3f6ccdb4299.thumbnail.0000000000_1400x.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;preview_images&#x2F;7afb582903e44ad7b4aaa3f6ccdb4299.thumbnail.0000000000_1400x.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Privacy_Icon_Marker.io.svg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Privacy_Icon_Marker.io.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;icon-park-solid_bottle-two.svg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;icon-park-solid_bottle-two.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Group_8275.svg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Group_8275.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-deferred-C1qqWRDg.css" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;theme-deferred-C1qqWRDg.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cart.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cart.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_Site_Background.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_Site_Background.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_header_texture.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_header_texture.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;fonts&#x2F;playfair_display&#x2F;playfairdisplay_n7.592b3435e0fff3f50b26d410c73ae7ec893f6910.woff2" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;fonts&#x2F;playfair_display&#x2F;playfairdisplay_n7.592b3435e0fff3f50b26d410c73ae7ec893f6910.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;nav-frh-buffalo-chicken-dip.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;nav-frh-buffalo-chicken-dip.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ornaments-nav.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ornaments-nav.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-MKC.ppng.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-MKC.ppng.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-CHOLULA.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-CHOLULA.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-FRENCHS.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-FRENCHS.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-logos-gg.webp" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-logos-gg.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-LAWRYS.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-LAWRYS.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-ZATS.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-ZATS.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-OB.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-OB.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-STUBBS.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-STUBBS.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-SA.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-SA.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-TK.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-TK.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-ELGUAPO.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;brand-nav-ELGUAPO.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;McShop-Nav-Logo.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;McShop-Nav-Logo.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_module_texture.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_module_texture.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500805023_A1N1-2025-12-15.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500805023_A1N1-2025-12-15.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;icon-hover.svg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;icon-hover.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500745107_A1N1-2025-12-15.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500745107_A1N1-2025-12-15.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500827728_A1N1-2025-12-02.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500827728_A1N1-2025-12-02.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500013381_A1N1-2025-12-15.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;00041500013381_A1N1-2025-12-15.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;frh-red-background.webp" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;frh-red-background.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;25_DTC_LI_SW_01_Lifestyle1.webp" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;25_DTC_LI_SW_01_Lifestyle1.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ornaments-desktop_v3.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ornaments-desktop_v3.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_Shake_On_Buffalo_Chicken_Dip_2024_1_a12344c2-391d-4fe4-9f04-13babdb5b420.jpg" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Franks_Shake_On_Buffalo_Chicken_Dip_2024_1_a12344c2-391d-4fe4-9f04-13babdb5b420.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ingredients-bufflo-chicken-dip.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;ingredients-bufflo-chicken-dip.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Frank_footer_texture.png" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Frank_footer_texture.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;featured-blog-slider-DY0L-aeK.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;featured-blog-slider-DY0L-aeK.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;carousel-BBYnAxQO.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;carousel-BBYnAxQO.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;list-slider-BW5Fz7Qu.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;list-slider-BW5Fz7Qu.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;intersection-watcher-DADyd6E-.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;intersection-watcher-DADyd6E-.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;media-queries-CokWIw5y.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;media-queries-CokWIw5y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;delay-offset-CTJE-YpR.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;delay-offset-CTJE-YpR.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;shouldAnimate-CeW36j6E.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;shouldAnimate-CeW36j6E.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;a11y-D0XWSLos.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;a11y-D0XWSLos.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;when-available-ZGlNfOhq.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;when-available-ZGlNfOhq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;save-recipe-handler-ByssARMs.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;save-recipe-handler-ByssARMs.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;evx.es-COiEd2Ka.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;evx.es-COiEd2Ka.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;recipe-item-GcAGedMo.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;recipe-item-GcAGedMo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;update-save-recipe-state-BLp9Mesi.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;update-save-recipe-state-BLp9Mesi.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;xhr-DPgtqhaK.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;xhr-DPgtqhaK.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;polyfill-inert-CNfYYGmZ.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;polyfill-inert-CNfYYGmZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;header-uy73kQeE.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;header-uy73kQeE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;scroll-container-DnMNfPlH.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;scroll-container-DnMNfPlH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;bodyScrollLock.esm-05dI-wtM.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;bodyScrollLock.esm-05dI-wtM.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;focus-trap.esm-DYjLEhSG.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;focus-trap.esm-DYjLEhSG.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;provide-resize-observer-DrS0RyJr.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;provide-resize-observer-DrS0RyJr.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;cart-PqYnqPU0.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;cart-PqYnqPU0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;storage-CVUx8WVm.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;storage-CVUx8WVm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;tua-bsl-BCKqco5k.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;tua-bsl-BCKqco5k.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;main-BCFY9a9_.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;main-BCFY9a9_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;free-shipping-bar-Cm1q3XJ8.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;free-shipping-bar-Cm1q3XJ8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;formatMoney-B2ZV-IOA.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;formatMoney-B2ZV-IOA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;disclosure-DK0For84.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;disclosure-DK0For84.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;image-hero-D9cDen0Y.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;image-hero-D9cDen0Y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;play-button-block-koEQSnJB.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;play-button-block-koEQSnJB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;load-youtube-api-BfCd4dUf.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;load-youtube-api-BfCd4dUf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;load-vimeo-api-C58FTEOc.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;load-vimeo-api-C58FTEOc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;announcement-bar-AV3EjZEA.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;announcement-bar-AV3EjZEA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;at-breakpoint-change-DVsQWIFj.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;at-breakpoint-change-DVsQWIFj.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;swiper-D7Xzm6bc.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;2&#x2F;assets&#x2F;swiper-D7Xzm6bc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;apps&#x2F;recipes" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;apps&#x2F;recipes</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;wpm&#x2F;bae1676cfwd2530674p4253c800m34e853cbl.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;wpm&#x2F;bae1676cfwd2530674p4253c800m34e853cbl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;api&#x2F;collect" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;api&#x2F;collect</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;shopify_pay&#x2F;accelerated_checkout" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;shopify_pay&#x2F;accelerated_checkout</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cart.json" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cart.json</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.mccormick.com&#x2F;cart&#x2F;update.js" target="_blank" class="external" rel="noreferrer noopener">www.mccormick.com&#x2F;cart&#x2F;update.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://franksredhot.com" target="_blank" class="external">franksredhot.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.franksredhot.com" target="_blank" class="external">www.franksredhot.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

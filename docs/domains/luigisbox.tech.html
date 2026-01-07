@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - luigisbox.tech</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "luigisbox.tech",
+        history: [{"date":"ci-2026-01-03-jokgh","prevalence":0.000199,"sites":29,"fingerprinting":2,"cookies":0.000151}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/luigisbox.tech.ico' width="32" height="32" class='inline-block' /> luigisbox.tech</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;3240<small>/23666</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.02&#37; (29 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.02&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>XHR</span>,
+                    <span>Preflight</span>,
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/luigisbox.tech.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>api</span>, 
+                    <span>cdn</span>, 
+                    <span>live</span>, 
+                    <span>scripts</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>NavigatorUAData.prototype.getHighEntropyValues</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 52.11% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./yottaa.com.html">yottaa.com</a> - 19.72% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./bigcommerce.com.html">bigcommerce.com</a> - 11.27% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./googletagmanager.com.html">googletagmanager.com</a> - 5.63% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./ans-media.com.html">ans-media.com</a> - 4.23% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./persoo.cz.html">persoo.cz</a> - 4.23% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./unpkg.com.html">unpkg.com</a> - 2.82% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://api.luigisbox.tech&#x2F;" target="_blank" class="external" rel="noreferrer noopener">api.luigisbox.tech&#x2F;</a> (seen on 21 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api.luigisbox.tech&#x2F;" target="_blank" class="external" rel="noreferrer noopener">api.luigisbox.tech&#x2F;</a> (seen on 21 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;autocomplete.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;autocomplete.js</a> (seen on 14 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;autocomplete.css" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;autocomplete.css</a> (seen on 12 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://live.luigisbox.tech&#x2F;v2&#x2F;trending_queries" target="_blank" class="external" rel="noreferrer noopener">live.luigisbox.tech&#x2F;v2&#x2F;trending_queries</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://live.luigisbox.tech&#x2F;v2&#x2F;trending_queries" target="_blank" class="external" rel="noreferrer noopener">live.luigisbox.tech&#x2F;v2&#x2F;trending_queries</a> (seen on 8 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;search.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;search.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;recco.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;recco.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;theme&#x2F;boo&#x2F;app.css" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;theme&#x2F;boo&#x2F;app.css</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;theme&#x2F;boo&#x2F;app.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;theme&#x2F;boo&#x2F;app.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://live.luigisbox.tech&#x2F;v1&#x2F;recommend" target="_blank" class="external" rel="noreferrer noopener">live.luigisbox.tech&#x2F;v1&#x2F;recommend</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://live.luigisbox.tech&#x2F;v1&#x2F;recommend" target="_blank" class="external" rel="noreferrer noopener">live.luigisbox.tech&#x2F;v1&#x2F;recommend</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-loader.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-loader.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;console-32bd6609.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;console-32bd6609.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;index-5c29b83e.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;index-5c29b83e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;loaders-10da8f5b.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;loaders-10da8f5b.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;load-event-helper-7fd8ee5c.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;load-event-helper-7fd8ee5c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;storage-a101e88a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;storage-a101e88a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;dynamic-import-helper-35007094.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;dynamic-import-helper-35007094.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;_commonjsHelpers-3184e0f1.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;_commonjsHelpers-3184e0f1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;start-luma-b8bb7988.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;start-luma-b8bb7988.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;listeners-448c6eb8.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;listeners-448c6eb8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;api-fd4006aa.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;api-fd4006aa.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;base64-ae67ffac.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;base64-ae67ffac.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;assistant-21a5aae6.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;assistant-21a5aae6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;legacy-98acf24e.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;legacy-98acf24e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;components-8da16a05.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;components-8da16a05.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;vue.esm-bundler-381f8a2a.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;vue.esm-bundler-381f8a2a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;throttle-64a620ee.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;throttle-64a620ee.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;runtime-core.esm-bundler-4740d8d4.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;runtime-core.esm-bundler-4740d8d4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;uuid-bf6e8103.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;uuid-bf6e8103.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;_commonjs-dynamic-modules-302442b1.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;_commonjs-dynamic-modules-302442b1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;___vite-browser-external_commonjs-proxy-789bfb8c.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;___vite-browser-external_commonjs-proxy-789bfb8c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;debounce-20db16b4.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;luma&#x2F;luma-chunks&#x2F;debounce-20db16b4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;knivesandtools.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;knivesandtools.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://scripts.luigisbox.tech&#x2F;LBX-694495.js" target="_blank" class="external" rel="noreferrer noopener">scripts.luigisbox.tech&#x2F;LBX-694495.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;concordia-supply.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;concordia-supply.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://scripts.luigisbox.tech&#x2F;LBX-733576.js" target="_blank" class="external" rel="noreferrer noopener">scripts.luigisbox.tech&#x2F;LBX-733576.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;lsengineers-co-uk.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;lsengineers-co-uk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://scripts.luigisbox.tech&#x2F;LBX-832849.js" target="_blank" class="external" rel="noreferrer noopener">scripts.luigisbox.tech&#x2F;LBX-832849.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://cdn.luigisbox.tech&#x2F;motionrc.js" target="_blank" class="external" rel="noreferrer noopener">cdn.luigisbox.tech&#x2F;motionrc.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://bioaufvorrat.de" target="_blank" class="external">bioaufvorrat.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.knivesandtools.com" target="_blank" class="external">www.knivesandtools.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.benulekaren.sk" target="_blank" class="external">www.benulekaren.sk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.lsengineers.co.uk" target="_blank" class="external">www.lsengineers.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wkruk.pl" target="_blank" class="external">wkruk.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.planeo.sk" target="_blank" class="external">www.planeo.sk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.eurovaistine.lt" target="_blank" class="external">www.eurovaistine.lt</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.motionrc.com" target="_blank" class="external">www.motionrc.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.concordiasupply.com" target="_blank" class="external">www.concordiasupply.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.99bikes.com.au" target="_blank" class="external">www.99bikes.com.au</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.e-zikoapteka.pl" target="_blank" class="external">www.e-zikoapteka.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://8a.pl" target="_blank" class="external">8a.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://zegarownia.pl" target="_blank" class="external">zegarownia.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://concordiasupply.com" target="_blank" class="external">concordiasupply.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.benu.cz" target="_blank" class="external">www.benu.cz</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.knivesandtools.de" target="_blank" class="external">www.knivesandtools.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.knivesandtools.nl" target="_blank" class="external">www.knivesandtools.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.whiskyshop.com" target="_blank" class="external">www.whiskyshop.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wearmedicine.com" target="_blank" class="external">wearmedicine.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.armed.cz" target="_blank" class="external">www.armed.cz</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ruzovyslon.cz" target="_blank" class="external">www.ruzovyslon.cz</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.martinus.cz" target="_blank" class="external">www.martinus.cz</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.martinus.sk" target="_blank" class="external">www.martinus.sk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vbs-hobby.com" target="_blank" class="external">www.vbs-hobby.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.agatameble.pl" target="_blank" class="external">www.agatameble.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://knivesandtools.nl" target="_blank" class="external">knivesandtools.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lsengineers.co.uk" target="_blank" class="external">lsengineers.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://motionrc.com" target="_blank" class="external">motionrc.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

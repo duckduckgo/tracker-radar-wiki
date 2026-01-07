@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - oktraffic.org</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "oktraffic.org",
+        history: [{"date":"ci-2026-01-03-jokgh","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/oktraffic.org.ico' width="32" height="32" class='inline-block' /> oktraffic.org</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;19303<small>/23666</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>XHR</span>,
+                    <span>Font</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/oktraffic.org.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./google.com.html">google.com</a> - 86.67% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p>loaded directly - 13.33% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;themify-icons&#x2F;themify-icons.css" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;themify-icons&#x2F;themify-icons.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;icofont&#x2F;css&#x2F;icofont.css" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;icofont&#x2F;css&#x2F;icofont.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;styles.10d519931f3132438fba.css" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;styles.10d519931f3132438fba.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;runtime.844dd68a38be83728a32.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;runtime.844dd68a38be83728a32.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;polyfills.8190b4a3e71f2aebd3ca.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;polyfills.8190b4a3e71f2aebd3ca.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;main.16ebcc736429f56e3dac.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;main.16ebcc736429f56e3dac.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;OkTrafficMessages" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;OkTrafficMessages</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;1.d30d6b7da11babb81a51.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;1.d30d6b7da11babb81a51.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;2.b72410265d8c85ad860c.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;2.b72410265d8c85ad860c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;4.f6cb309da69a0ea44471.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;4.f6cb309da69a0ea44471.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;5.336bd4d02d37f68beebd.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;5.336bd4d02d37f68beebd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;6.f44e591df4eebfeb2cdf.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;6.f44e591df4eebfeb2cdf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;10.1f249d8aae3fcfe0de39.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;10.1f249d8aae3fcfe0de39.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;11.c3d6c03326780f5745cc.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;11.c3d6c03326780f5745cc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;12.e2d070ac56a862d1b23f.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;12.e2d070ac56a862d1b23f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;common.636ec5b51919fa0da421.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;common.636ec5b51919fa0da421.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;22.286a9c487ec3c787322c.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;22.286a9c487ec3c787322c.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;scripts&#x2F;jsd&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;scripts&#x2F;jsd&#x2F;main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;g&#x2F;scripts&#x2F;jsd&#x2F;d39f91d70ce1&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;g&#x2F;scripts&#x2F;jsd&#x2F;d39f91d70ce1&#x2F;main.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;Fonts" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;Fonts</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;CameraPoles" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;CameraPoles</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;WazeAlerts" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;WazeAlerts</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;AltFuelStations&#x2F;getAll" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;AltFuelStations&#x2F;getAll</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;Contracts&#x2F;getMapContracts" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;Contracts&#x2F;getMapContracts</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;TurnpikeContracts&#x2F;getMapContracts" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;TurnpikeContracts&#x2F;getMapContracts</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;Turnpikes&#x2F;list" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;Turnpikes&#x2F;list</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;RestrictionOptions" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;RestrictionOptions</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;themify.a1ecc3b826d01251eddd.woff" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;themify.a1ecc3b826d01251eddd.woff</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;images&#x2F;TransportationLogoHDark.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;images&#x2F;TransportationLogoHDark.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;images&#x2F;TransportationLogoHDark_cropped.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;images&#x2F;TransportationLogoHDark_cropped.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;legend_white.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;legend_white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera_white.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera_white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;message_sign_white.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;message_sign_white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;weather_white.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;weather_white.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;images&#x2F;special-box&#x2F;snowplow-contest-winner-all-districts.gif" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;images&#x2F;special-box&#x2F;snowplow-contest-winner-all-districts.gif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;normal_traffic.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;normal_traffic.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;slow_traffic.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;slow_traffic.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;very_slow_traffic.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;very_slow_traffic.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;stopped_traffic.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;stopped_traffic.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;sensor_camera.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;sensor_camera.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;sign.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;sign.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;portable_clear.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;portable_clear.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;bluepin_logo_accident.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;bluepin_logo_accident.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;closure_icon.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;closure_icon.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;waze_jam.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;waze_jam.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;ev_icon_color.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;ev_icon_color.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;barricade_outline.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;barricade_outline.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;legend_blue.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;legend_blue.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;speed_limit_filled_blue.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;speed_limit_filled_blue.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;detour.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;detour.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;piLit&#x2F;piLit_menu.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;piLit&#x2F;piLit_menu.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;barricade_blue.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;barricade_blue.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;waze_closure.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;waze_closure.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;odot_closure.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;odot_closure.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;weather.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;weather.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;temperature.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;temperature.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;wind.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;wind.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;road_blue.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;road_blue.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;rwis_station.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;rwis_station.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;camera.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;dollar-sign_blue.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;dollar-sign_blue.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;mouseover_popup.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;mouseover_popup.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;refresh.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;refresh.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;area_clear.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;area_clear.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;icon&#x2F;cogs-solid.svg" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;icon&#x2F;cogs-solid.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;images&#x2F;stream-not-available.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;images&#x2F;stream-not-available.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;assets&#x2F;images&#x2F;google-play-badge.png" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;assets&#x2F;images&#x2F;google-play-badge.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;Signs" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;Signs</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://oktraffic.org&#x2F;api&#x2F;SpeedRadars&#x2F;getLatesRadarData" target="_blank" class="external" rel="noreferrer noopener">oktraffic.org&#x2F;api&#x2F;SpeedRadars&#x2F;getLatesRadarData</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://oklahoma.gov" target="_blank" class="external">oklahoma.gov</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.oklahoman.com" target="_blank" class="external">www.oklahoman.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

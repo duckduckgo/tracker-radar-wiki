@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - nomadesim.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "nomadesim.com",
+        history: [{"date":"ci-2026-01-17-qcezz","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/nomadesim.com.ico' width="32" height="32" class='inline-block' /> nomadesim.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;19221<small>/23652</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Other</span>,
+                    <span>Stylesheet</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/nomadesim.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-color-scheme&quot;)</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>NavigatorUAData.prototype.getHighEntropyValues</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;urbanist-latin-wght-normal.D69JTELx.woff2" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;urbanist-latin-wght-normal.D69JTELx.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;entries&#x2F;pages.Cdi_Eh25.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;entries&#x2F;pages.Cdi_Eh25.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DbiPygMU.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DbiPygMU.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BXl3LOEh.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BXl3LOEh.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B1hRi5l5.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B1hRi5l5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DObFheE1.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DObFheE1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;adjust_smart_script.CYPd5LBm.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;adjust_smart_script.CYPd5LBm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dm5BO-tY.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dm5BO-tY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BPcCS-QE.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BPcCS-QE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Cs4ShckF.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Cs4ShckF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B4Pc1tqy.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B4Pc1tqy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B_YNhruC.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B_YNhruC.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BzPixVu2.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BzPixVu2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BsVcr4az.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BsVcr4az.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-wGBzeNJa.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-wGBzeNJa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BRh0wizA.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BRh0wizA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CymoCXKZ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CymoCXKZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;logo-full-dark.BUaTn_2f.png" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;logo-full-dark.BUaTn_2f.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;logo-full-light.DiuaXs0F.png" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;logo-full-light.DiuaXs0F.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;onRenderClient.C_MU2L-z.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;onRenderClient.C_MU2L-z.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-3b580efb.NeGypYOB.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-3b580efb.NeGypYOB.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;default.BlBj5ODW.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;default.BlBj5ODW.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-7394c449.Cv_zwiWL.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-7394c449.Cv_zwiWL.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadHeaderNav.CqrhTEhS.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadHeaderNav.CqrhTEhS.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadCmsImage.91sLCMs5.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadCmsImage.91sLCMs5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;onRenderClient.C_MU2L-z.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;onRenderClient.C_MU2L-z.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-3b580efb.NeGypYOB.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-3b580efb.NeGypYOB.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;entries&#x2F;entry-server-routing.CR_hy_UY.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;entries&#x2F;entry-server-routing.CR_hy_UY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DzJqTGZk.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DzJqTGZk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B1erne0B.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B1erne0B.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DkhBt2FY.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DkhBt2FY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CRYOuORD.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CRYOuORD.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BUUtz9d-.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BUUtz9d-.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BfFuuX3R.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BfFuuX3R.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-ASNHjgDL.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-ASNHjgDL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DiZMVgmN.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DiZMVgmN.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DlAUqK2U.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DlAUqK2U.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BYXCBTb3.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BYXCBTb3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-TddjlKEG.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-TddjlKEG.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-0h24bcAl.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-0h24bcAl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CfO5T7p1.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CfO5T7p1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxumANr1.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxumANr1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Be5iagZg.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Be5iagZg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ep4kl9BK.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ep4kl9BK.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;index.BFA10Wlf.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;index.BFA10Wlf.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;setting.ijQ2X_Kw.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;setting.ijQ2X_Kw.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxBhGkLZ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxBhGkLZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DenFks7M.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DenFks7M.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BZBFty63.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BZBFty63.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BPtBwnnu.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BPtBwnnu.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CGj_fmoi.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CGj_fmoi.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DneeUTpu.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DneeUTpu.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CWxwh74f.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CWxwh74f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BbfP_1CU.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BbfP_1CU.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D9xbx94t.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D9xbx94t.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-RvjYzIoH.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-RvjYzIoH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DwlIuq_q.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DwlIuq_q.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxfOm7S9.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BxfOm7S9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DX6ppxLp.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DX6ppxLp.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ch1WBRTM.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ch1WBRTM.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dpl5X-48.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dpl5X-48.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-y1pQdkbA.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-y1pQdkbA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-vkLVEdPg.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-vkLVEdPg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DlplXXRB.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DlplXXRB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CRpdOdB6.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CRpdOdB6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CSHDgKSi.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CSHDgKSi.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-dwEAwnFq.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-dwEAwnFq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadHeaderNav.CqrhTEhS.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadHeaderNav.CqrhTEhS.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B3cTLIdo.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B3cTLIdo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-ByuzPldB.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-ByuzPldB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CHSUhaU9.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CHSUhaU9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-_q0xVsvE.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-_q0xVsvE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadDownloadQRCode.BfAi-hXs.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadDownloadQRCode.BfAi-hXs.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BMJGSwOJ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BMJGSwOJ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dcc96adM.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Dcc96adM.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BSxOs-3y.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BSxOs-3y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;default.BlBj5ODW.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;default.BlBj5ODW.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-7394c449.Cv_zwiWL.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;style-7394c449.Cv_zwiWL.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ln0bkaZa.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Ln0bkaZa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadCmsImage.91sLCMs5.css" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;static&#x2F;NomadCmsImage.91sLCMs5.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B_A1xBdJ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-B_A1xBdJ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BbHq03RP.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BbHq03RP.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DqFL2YwE.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DqFL2YwE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DFDuL_Jn.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DFDuL_Jn.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DvJML3lT.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DvJML3lT.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D1rGv586.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D1rGv586.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DPqlX1rQ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-DPqlX1rQ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CjMF5GBf.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CjMF5GBf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-rw4HTNOW.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-rw4HTNOW.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Jgw0ymdF.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Jgw0ymdF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BRrGqUqo.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BRrGqUqo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Byv-XzQ1.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-Byv-XzQ1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BrS78hSe.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-BrS78hSe.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-2D9--9gQ.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-2D9--9gQ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CV0P6oUT.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CV0P6oUT.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CjUcxHs1.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-CjUcxHs1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D2xpGz2x.js" target="_blank" class="external" rel="noreferrer noopener">www.nomadesim.com&#x2F;assets&#x2F;chunks&#x2F;chunk-D2xpGz2x.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://getnomad.app" target="_blank" class="external">getnomad.app</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.getnomad.app" target="_blank" class="external">www.getnomad.app</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - gauthstatic-us.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "gauthstatic-us.com",
+        history: [{"date":"ci-2026-01-17-qcezz","prevalence":0.0000206,"sites":3,"fingerprinting":2,"cookies":0.0000206}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/gauthstatic-us.com.ico' width="32" height="32" class='inline-block' /> gauthstatic-us.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;13118<small>/23652</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/gauthstatic-us.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>sf16-ehi-tos</span>, 
+                    <span>sf16-goofy-sg</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.indexedDB</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>window.name</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;builder-runtime.1b7b39b6.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;builder-runtime.1b7b39b6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;route-manifest-main.ab664941.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;route-manifest-main.ab664941.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-tools.d19bed94.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-tools.d19bed94.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-axios.94d7a4eb.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-axios.94d7a4eb.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-edenx.f0265d06.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-edenx.f0265d06.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-polyfill.4b95407d.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-polyfill.4b95407d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-react.a479c6aa.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-react.a479c6aa.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-router.373c8f2c.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;lib-router.373c8f2c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;7044.509b207a.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;7044.509b207a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;main.5b472982.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;main.5b472982.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;5246.5bba085a.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;5246.5bba085a.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;3176.ae410954.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;3176.ae410954.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;4322.bd833e72.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;4322.bd833e72.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;6044.334e09d5.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;6044.334e09d5.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9009.d3caa0e4.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9009.d3caa0e4.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9987.5a306644.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9987.5a306644.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;solution&#x2F;(questionID)&#x2F;(questionKey$)&#x2F;page.cfd4e9c6.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;solution&#x2F;(questionID)&#x2F;(questionKey$)&#x2F;page.cfd4e9c6.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9310.f302d05a.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;9310.f302d05a.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;833.5c7b4582.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;833.5c7b4582.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;1904.ed10a74c.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;1904.ed10a74c.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;lib-antd.5e68bb37.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;lib-antd.5e68bb37.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5694.e4fb9233.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5694.e4fb9233.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1466.ae9846ec.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1466.ae9846ec.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7865.7ca49577.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7865.7ca49577.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7239.2b8be466.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7239.2b8be466.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4901.f3580380.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4901.f3580380.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8867.23975c27.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8867.23975c27.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5246.4ad610f4.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5246.4ad610f4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1235.6f6277e8.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1235.6f6277e8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8471.0702686f.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8471.0702686f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2491.c5314470.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2491.c5314470.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9447.b581fa22.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9447.b581fa22.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7800.c9436980.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7800.c9436980.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3176.04cbede0.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3176.04cbede0.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3204.c46f2f00.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3204.c46f2f00.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4322.8a5bc927.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4322.8a5bc927.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9790.0ea8381d.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9790.0ea8381d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9340.2b5a0cd7.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9340.2b5a0cd7.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1519.8bff1a5d.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1519.8bff1a5d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7836.6e065219.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7836.6e065219.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5660.c3eccaa4.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5660.c3eccaa4.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5399.8263d368.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5399.8263d368.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9009.cec2d8ad.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9009.cec2d8ad.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3274.a27b5e0e.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3274.a27b5e0e.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7719.030f3ce6.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7719.030f3ce6.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7630.3704eee8.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7630.3704eee8.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9987.3901a1a2.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9987.3901a1a2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;588.c14ae921.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;588.c14ae921.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;solution&#x2F;(questionID)&#x2F;(questionKey$)&#x2F;page.162c6480.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;solution&#x2F;(questionID)&#x2F;(questionKey$)&#x2F;page.162c6480.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1874.e6b0b97a.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1874.e6b0b97a.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5282.670d9610.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;5282.670d9610.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;454.6c3ecce1.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;454.6c3ecce1.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;6308.b1901d75.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;6308.b1901d75.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;6256.4b058798.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;6256.4b058798.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2558.fe000a87.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2558.fe000a87.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7901.298e0f6c.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7901.298e0f6c.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;833.84636c6d.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;833.84636c6d.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1904.988cf963.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1904.988cf963.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2228.9e7f2f71.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2228.9e7f2f71.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8170.6a47531f.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;8170.6a47531f.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;UploadImage.fc5dab03.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;UploadImage.fc5dab03.css</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-goofy-sg.gauthstatic-us.com&#x2F;obj&#x2F;static-tx&#x2F;slardar&#x2F;fe&#x2F;sdk-web&#x2F;plugins&#x2F;common-monitors.1.13.3.js" target="_blank" class="external" rel="noreferrer noopener">sf16-goofy-sg.gauthstatic-us.com&#x2F;obj&#x2F;static-tx&#x2F;slardar&#x2F;fe&#x2F;sdk-web&#x2F;plugins&#x2F;common-monitors.1.13.3.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-goofy-sg.gauthstatic-us.com&#x2F;obj&#x2F;static-tx&#x2F;slardar&#x2F;fe&#x2F;sdk-web&#x2F;plugins&#x2F;common-monitors.1.12.2.js" target="_blank" class="external" rel="noreferrer noopener">sf16-goofy-sg.gauthstatic-us.com&#x2F;obj&#x2F;static-tx&#x2F;slardar&#x2F;fe&#x2F;sdk-web&#x2F;plugins&#x2F;common-monitors.1.12.2.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-Layout.58efd31d.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-Layout.58efd31d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2231.d244cf38.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2231.d244cf38.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2056.e4ed6b52.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2056.e4ed6b52.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-Layout.3da9f9b3.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-Layout.3da9f9b3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7151.118c74a5.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;7151.118c74a5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-SubscriptionModal.35265010.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-SubscriptionModal.35265010.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-SubscriptionModal.bf93ef2b.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-SubscriptionModal.bf93ef2b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4439.cf6e4cb7.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;4439.cf6e4cb7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9050.2820cb59.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9050.2820cb59.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-CopilotModal.5a60a899.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-pc-CopilotModal.5a60a899.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-CopilotModal.850296e5.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-pc-CopilotModal.850296e5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;lib-arco.83a1b5f4.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;lib-arco.83a1b5f4.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;lib-arco.fd8f170a.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;lib-arco.fd8f170a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3618.194d3a6d.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;3618.194d3a6d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1046.dd87a34e.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;1046.dd87a34e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2954.4812f1a8.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;2954.4812f1a8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9737.1e3fd8dc.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;9737.1e3fd8dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-shared-PipoIframe-noLoginIframe.56151999.css" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;css&#x2F;async&#x2F;components-shared-PipoIframe-noLoginIframe.56151999.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-shared-PipoIframe-noLoginIframe.077d2b5b.js" target="_blank" class="external" rel="noreferrer noopener">sf16-ehi-tos.gauthstatic-us.com&#x2F;obj&#x2F;ehi-fe-tx&#x2F;gauth-web-mono&#x2F;static&#x2F;js&#x2F;async&#x2F;components-shared-PipoIframe-noLoginIframe.077d2b5b.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://gauthmath.com" target="_blank" class="external">gauthmath.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://it.gauthmath.com" target="_blank" class="external">it.gauthmath.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gauthmath.com" target="_blank" class="external">www.gauthmath.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

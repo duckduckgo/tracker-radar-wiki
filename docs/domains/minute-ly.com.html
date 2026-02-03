@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - minute-ly.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "minute-ly.com",
+        history: [{"date":"ci-2026-02-03-ulfir","prevalence":0.000645,"sites":94,"fingerprinting":2,"cookies":0.000645}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/minute-ly.com.ico' width="32" height="32" class='inline-block' /> minute-ly.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;1573<small>/23591</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.06&#37; (94 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.06&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>XHR</span>,
+                    <span>Media</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/minute-ly.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>snippet</span>, 
+                    <span>counter-growthbook</span>, 
+                    <span>apv-launcher</span>, 
+                    <span>apv-static</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>PerformanceTiming.prototype.navigationStart</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 86.06% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./d3plfjw9uod7ab.cloudfront.net.html">d3plfjw9uod7ab.cloudfront.net</a> - 6.25% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./googletagmanager.com.html">googletagmanager.com</a> - 3.85% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./adlightning.com.html">adlightning.com</a> - 1.92% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./paramount.com.html">paramount.com</a> - 0.96% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./confiant-integrations.net.html">confiant-integrations.net</a> - 0.48% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./osano.com.html">osano.com</a> - 0.48% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://counter-growthbook.minute-ly.com&#x2F;_gb.gif" target="_blank" class="external" rel="noreferrer noopener">counter-growthbook.minute-ly.com&#x2F;_gb.gif</a> (seen on 41 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;amg_group&#x2F;mi-1.17.1.303.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;amg_group&#x2F;mi-1.17.1.303.js</a> (seen on 19 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;npg_group&#x2F;mi-1.17.1.289.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;npg_group&#x2F;mi-1.17.1.289.js</a> (seen on 7 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;khq_group&#x2F;mi-1.17.1.392.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;khq_group&#x2F;mi-1.17.1.392.js</a> (seen on 5 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30530.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30530.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30520.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30520.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;30520&#x2F;mi-1.17.1.4363.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;30520&#x2F;mi-1.17.1.4363.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;30530&#x2F;mi-1.17.1.4363.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;30530&#x2F;mi-1.17.1.4363.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-933d8d97-8abe-4110-6122450-8a95-174a6dd6d8b8-s56.557-65.332m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-933d8d97-8abe-4110-6122450-8a95-174a6dd6d8b8-s56.557-65.332m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-c1441f77-5cbc-404e-6120640-9d09-750ddf0fe23c-s62.462-68.835m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-c1441f77-5cbc-404e-6120640-9d09-750ddf0fe23c-s62.462-68.835m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-4d3645e1-5270-40cc-6122392-b69c-4ea3878485c3-s14.147-20.153m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-4d3645e1-5270-40cc-6122392-b69c-4ea3878485c3-s14.147-20.153m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30540.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30540.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30500.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30500.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;30500&#x2F;mi-1.17.1.4363.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;30500&#x2F;mi-1.17.1.4363.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30510.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30510.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30560.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30560.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-7c499268-9e1f-47cb-6121171-b3d5-0518c2628377-s58.225-64.531m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-7c499268-9e1f-47cb-6121171-b3d5-0518c2628377-s58.225-64.531m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30550.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-30550.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-106510.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-106510.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;106510&#x2F;mi-1.17.1.134.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;106510&#x2F;mi-1.17.1.134.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-a0fa6066-93ff-492f-6118806-ac0f-d2e95694dcaf-s123.624-129.63s.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-a0fa6066-93ff-492f-6118806-ac0f-d2e95694dcaf-s123.624-129.63s.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-7bb51868-94a3-4446-6115686-b84f-e8ce779a935c-s49.049-57.024l.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-7bb51868-94a3-4446-6115686-b84f-e8ce779a935c-s49.049-57.024l.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-a0fa6066-93ff-492f-6118806-ac0f-d2e95694dcaf-s123.624-129.63m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-a0fa6066-93ff-492f-6118806-ac0f-d2e95694dcaf-s123.624-129.63m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-9120ebb6-538b-4f83-6112785-85bc-8dddf91907fc-s112.112-117.818m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-9120ebb6-538b-4f83-6112785-85bc-8dddf91907fc-s112.112-117.818m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-465a1714-366b-4b41-6112630-a3a5-91b49efa5083-s29.73-35.736m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-465a1714-366b-4b41-6112630-a3a5-91b49efa5083-s29.73-35.736m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-91319ab9-418b-48c7-6119786-863c-e8f540c6db24-s150.651-156.49l.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-91319ab9-418b-48c7-6119786-863c-e8f540c6db24-s150.651-156.49l.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-03f8e22a-bea7-4eec-6121765-aa0f-b07185ade376-s0.2-6.2m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-03f8e22a-bea7-4eec-6121765-aa0f-b07185ade376-s0.2-6.2m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-cdcae4d8-20cc-46e8-6119329-9cae-3cd594d62aaa-s462.9-471.433m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-cdcae4d8-20cc-46e8-6119329-9cae-3cd594d62aaa-s462.9-471.433m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-049b22d2-7cec-4ec9-6121859-9630-353251670cb9-s268.8-277.68l.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-049b22d2-7cec-4ec9-6121859-9630-353251670cb9-s268.8-277.68l.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903100.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903100.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;903100&#x2F;mi-1.17.1.4363.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;903100&#x2F;mi-1.17.1.4363.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-80200.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-80200.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;80200&#x2F;mi-1.17.1.285.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;80200&#x2F;mi-1.17.1.285.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-10720.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-10720.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;10720&#x2F;mi-1.17.1.302.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;10720&#x2F;mi-1.17.1.302.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-204500.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-204500.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;204500&#x2F;mi-1.17.1.134.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;204500&#x2F;mi-1.17.1.134.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902850.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902850.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-79fdb64d-9d8b-497c-6120826-bc72-6a8dd49104e0-s25.526-35.002s.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-79fdb64d-9d8b-497c-6120826-bc72-6a8dd49104e0-s25.526-35.002s.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-2234830f-acd6-49b6-6119769-8506-1c44c8819dbc-s62.5-69.967m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-2234830f-acd6-49b6-6119769-8506-1c44c8819dbc-s62.5-69.967m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-79e347d9-8771-4831-6110653-8c99-35975825a429-s13.067-18.6m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-79e347d9-8771-4831-6110653-8c99-35975825a429-s13.067-18.6m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-a8f7f000-447b-4297-6119563-8f7d-0eec828dc50d-s454.0-463.467m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-a8f7f000-447b-4297-6119563-8f7d-0eec828dc50d-s454.0-463.467m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902870.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902870.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902770.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902770.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-5785e4ca-e9c1-4b7e-6116904-9163-77c409874042-s112.112-118.719l.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-5785e4ca-e9c1-4b7e-6116904-9163-77c409874042-s112.112-118.719l.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902890.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902890.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902790.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902790.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-6118babf-76e5-4ac2-6112286-82e2-f3a00334d783-s74.107-80.113l.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-6118babf-76e5-4ac2-6112286-82e2-f3a00334d783-s74.107-80.113l.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-130400.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-130400.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;130400&#x2F;mi-1.17.1.288.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;130400&#x2F;mi-1.17.1.288.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902930.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902930.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-6041f2ab-8815-4ec4-6069524-ad78-8fab576ff66e-s2.967-8.7m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-6041f2ab-8815-4ec4-6069524-ad78-8fab576ff66e-s2.967-8.7m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-106500.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-106500.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;106500&#x2F;mi-1.17.1.267.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;106500&#x2F;mi-1.17.1.267.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-c587599d-23ee-480b-6121165-a7c9-8c95e350534f-s19.033-24.967m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-c587599d-23ee-480b-6121165-a7c9-8c95e350534f-s19.033-24.967m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903060.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903060.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;903060&#x2F;mi-1.17.1.346.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;903060&#x2F;mi-1.17.1.346.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-dbc24b0c-aea8-473d-6113678-bd4d-721ac9b56a8e-s71.0-80.033m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-dbc24b0c-aea8-473d-6113678-bd4d-721ac9b56a8e-s71.0-80.033m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-614b9824-be5b-4339-6111147-a444-52031bad27e3-s16.767-23.0m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-614b9824-be5b-4339-6111147-a444-52031bad27e3-s16.767-23.0m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-e5e297e0-7dfd-4071-6119307-9a9e-585622d7d0c4-s195.696-201.702m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-e5e297e0-7dfd-4071-6119307-9a9e-585622d7d0c4-s195.696-201.702m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-e3242e43-5ad1-4192-6117355-8fa7-5e948b76c328-s48.0-54.0m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-e3242e43-5ad1-4192-6117355-8fa7-5e948b76c328-s48.0-54.0m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902980.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902980.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-f6d5166a-eeae-4dfb-6119028-8203-7dce186b9b2b-s70.8-76.8m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-f6d5166a-eeae-4dfb-6119028-8203-7dce186b9b2b-s70.8-76.8m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902990.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-902990.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-d803cf23-b366-4dc2-5856473-b69e-814663f9e0a3-s24.8-31.967m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-d803cf23-b366-4dc2-5856473-b69e-814663f9e0a3-s24.8-31.967m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903070.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903070.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://snippet.minute-ly.com&#x2F;publishers&#x2F;903070&#x2F;mi-1.17.1.357.js" target="_blank" class="external" rel="noreferrer noopener">snippet.minute-ly.com&#x2F;publishers&#x2F;903070&#x2F;mi-1.17.1.357.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-ffb54422-f782-44e3-6111666-8833-c36a3c406622-s122.5-131.267m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-ffb54422-f782-44e3-6111666-8833-c36a3c406622-s122.5-131.267m.mp4</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903030.js" target="_blank" class="external" rel="noreferrer noopener">apv-launcher.minute-ly.com&#x2F;api&#x2F;launcher&#x2F;MIN-903030.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://apv-static.minute-ly.com&#x2F;videos&#x2F;v-5d38c60b-c331-4ef4-6118028-8549-9fe96450ceb1-s110.433-116.433m.mp4" target="_blank" class="external" rel="noreferrer noopener">apv-static.minute-ly.com&#x2F;videos&#x2F;v-5d38c60b-c331-4ef4-6118028-8549-9fe96450ceb1-s110.433-116.433m.mp4</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://abc17news.com" target="_blank" class="external">abc17news.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kesq.com" target="_blank" class="external">kesq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://krdo.com" target="_blank" class="external">krdo.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ktvz.com" target="_blank" class="external">ktvz.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kvia.com" target="_blank" class="external">kvia.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kyma.com" target="_blank" class="external">kyma.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://localnews8.com" target="_blank" class="external">localnews8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wfmz.com" target="_blank" class="external">www.wfmz.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.9and10news.com" target="_blank" class="external">www.9and10news.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wishtv.com" target="_blank" class="external">www.wishtv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wthitv.com" target="_blank" class="external">www.wthitv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wlfi.com" target="_blank" class="external">www.wlfi.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kxly.com" target="_blank" class="external">www.kxly.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.myupnow.com" target="_blank" class="external">www.myupnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.waaytv.com" target="_blank" class="external">www.waaytv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wxow.com" target="_blank" class="external">www.wxow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kwwl.com" target="_blank" class="external">www.kwwl.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.news8000.com" target="_blank" class="external">www.news8000.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://keyt.com" target="_blank" class="external">keyt.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kimt.com" target="_blank" class="external">www.kimt.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.nbcrightnow.com" target="_blank" class="external">www.nbcrightnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wqow.com" target="_blank" class="external">www.wqow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kdrv.com" target="_blank" class="external">www.kdrv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.waow.com" target="_blank" class="external">www.waow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://news12.com" target="_blank" class="external">news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bronx.news12.com" target="_blank" class="external">bronx.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://brooklyn.news12.com" target="_blank" class="external">brooklyn.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://connecticut.news12.com" target="_blank" class="external">connecticut.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hudsonvalley.news12.com" target="_blank" class="external">hudsonvalley.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://longisland.news12.com" target="_blank" class="external">longisland.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://newjersey.news12.com" target="_blank" class="external">newjersey.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://westchester.news12.com" target="_blank" class="external">westchester.news12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://9and10news.com" target="_blank" class="external">9and10news.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://abc12.com" target="_blank" class="external">abc12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.abc12.com" target="_blank" class="external">www.abc12.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://actionnewsnow.com" target="_blank" class="external">actionnewsnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kadn.com" target="_blank" class="external">www.kadn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kezi.com" target="_blank" class="external">www.kezi.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kitv.com" target="_blank" class="external">www.kitv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kvoa.com" target="_blank" class="external">www.kvoa.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wevv.com" target="_blank" class="external">www.wevv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wfft.com" target="_blank" class="external">www.wfft.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wrex.com" target="_blank" class="external">www.wrex.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wsiltv.com" target="_blank" class="external">www.wsiltv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wtva.com" target="_blank" class="external">www.wtva.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://atptour.com" target="_blank" class="external">atptour.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.atptour.com" target="_blank" class="external">www.atptour.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cbsnews.com" target="_blank" class="external">cbsnews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.suffolk.edu" target="_blank" class="external">www.suffolk.edu</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cbssports.com" target="_blank" class="external">cbssports.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.cbssports.com" target="_blank" class="external">www.cbssports.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://channel3000.com" target="_blank" class="external">channel3000.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.channel3000.com" target="_blank" class="external">www.channel3000.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://foxsports.com.au" target="_blank" class="external">foxsports.com.au</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.foxsports.com.au" target="_blank" class="external">www.foxsports.com.au</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kadn.com" target="_blank" class="external">kadn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kdrv.com" target="_blank" class="external">kdrv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kezi.com" target="_blank" class="external">kezi.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://khq.com" target="_blank" class="external">khq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.khq.com" target="_blank" class="external">www.khq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kulr8.com" target="_blank" class="external">www.kulr8.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.montanarightnow.com" target="_blank" class="external">www.montanarightnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kimt.com" target="_blank" class="external">kimt.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://montanarightnow.com" target="_blank" class="external">montanarightnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://newspressnow.com" target="_blank" class="external">newspressnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.newspressnow.com" target="_blank" class="external">www.newspressnow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://waaytv.com" target="_blank" class="external">waaytv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wfft.com" target="_blank" class="external">wfft.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wfmz.com" target="_blank" class="external">wfmz.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wishtv.com" target="_blank" class="external">wishtv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wkow.com" target="_blank" class="external">wkow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wkow.com" target="_blank" class="external">www.wkow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wlfi.com" target="_blank" class="external">wlfi.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wqow.com" target="_blank" class="external">wqow.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wrex.com" target="_blank" class="external">wrex.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wtatennis.com" target="_blank" class="external">wtatennis.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wtatennis.com" target="_blank" class="external">www.wtatennis.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wthitv.com" target="_blank" class="external">wthitv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wtva.com" target="_blank" class="external">wtva.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://wxow.com" target="_blank" class="external">wxow.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

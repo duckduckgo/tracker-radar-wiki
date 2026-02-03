@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - ewtnnews.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ewtnnews.com",
+        history: [{"date":"ci-2026-02-03-ulfir","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/ewtnnews.com.ico' width="32" height="32" class='inline-block' /> ewtnnews.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;17433<small>/23591</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Font</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ewtnnews.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;06e39bbb549e415a-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;06e39bbb549e415a-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;0a9869bdcda49a37-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;0a9869bdcda49a37-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;163a4c5ebba1358d-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;163a4c5ebba1358d-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;188581e4b03ed2de-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;188581e4b03ed2de-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;1c1eed9c4541697e-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;1c1eed9c4541697e-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;240c38d4b6ad7e1f-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;240c38d4b6ad7e1f-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;46e14ec57d46952e-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;46e14ec57d46952e-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;47cbc4e2adbc5db9-s.p.woff2" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;47cbc4e2adbc5db9-s.p.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;4e0a3aa9c1a99a3d-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;4e0a3aa9c1a99a3d-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;8d934b7caac73839-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;8d934b7caac73839-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;938c6c22c0191232-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;938c6c22c0191232-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;af9f238208b7a0c4-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;af9f238208b7a0c4-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;d70d2029be9e0aad-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;d70d2029be9e0aad-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;e9ef4c630c95a116-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;e9ef4c630c95a116-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;f8f4e22c6f13cc27-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;f8f4e22c6f13cc27-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;ffaea63519f46984-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;ffaea63519f46984-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;ffced4eb57679385-s.p.otf" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;ffced4eb57679385-s.p.otf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;8b9db6ea42680b81.css" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;8b9db6ea42680b81.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;897682868083c15d.css" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;897682868083c15d.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;image" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;image</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;ewtn-logo.svg" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;ewtn-logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-c9f4b4ab5d772e33.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-c9f4b4ab5d772e33.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;3cd83cfe34ca397f.css" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;3cd83cfe34ca397f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;b8b884bdee0ae129.css" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;b8b884bdee0ae129.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;269aad81360bab19.css" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;css&#x2F;269aad81360bab19.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6df2c841-068afb9154c77f45.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6df2c841-068afb9154c77f45.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;541-f8740d210dbe0787.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;541-f8740d210dbe0787.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-cabbb9b0d2383927.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-app-cabbb9b0d2383927.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;cf9a1609-f0683b3f54e25def.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;cf9a1609-f0683b3f54e25def.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;a2430784-5c5081e773c53e12.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;a2430784-5c5081e773c53e12.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;a57d9bf0-3867fd4905a89ad7.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;a57d9bf0-3867fd4905a89ad7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ca9a4ea3-607591340cc7f3e7.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ca9a4ea3-607591340cc7f3e7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;628-551d9786d00568e4.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;628-551d9786d00568e4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;429-de652028f3afe4c4.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;429-de652028f3afe4c4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8051-841c9b84fbf477dd.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8051-841c9b84fbf477dd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4243-ec651fec4d80bd9b.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4243-ec651fec4d80bd9b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1423-1ce50bfdd8159487.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1423-1ce50bfdd8159487.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4462-8b0509bf3d166503.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4462-8b0509bf3d166503.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8219-1c47235a949d0658.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8219-1c47235a949d0658.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2913-95192a96e6cc780a.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2913-95192a96e6cc780a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1469-5be3115c4b4da87b.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1469-5be3115c4b4da87b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1884-72ccd8dfcdb3ed71.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;1884-72ccd8dfcdb3ed71.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;layout-c6befe7027ff840a.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;layout-c6befe7027ff840a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;error-13794cd4ac6e06fa.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;error-13794cd4ac6e06fa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ad414af2-abab769e79af52ae.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;ad414af2-abab769e79af52ae.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5432-65c4765095d7f7c3.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;5432-65c4765095d7f7c3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9314-28f8968a655d7788.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;9314-28f8968a655d7788.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4910-9e637520d0e8e91a.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4910-9e637520d0e8e91a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8361-8af1b4e1a2288b8e.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8361-8af1b4e1a2288b8e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6723-12e6b6cbceeea3dc.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6723-12e6b6cbceeea3dc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;not-found-cbfa302542e2cfea.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;not-found-cbfa302542e2cfea.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2865-e9d1976e1dfa0c7d.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;2865-e9d1976e1dfa0c7d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3812-a977471316488f83.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;3812-a977471316488f83.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6378-0035339b868b8c3a.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;6378-0035339b868b8c3a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4645-a4dbcfb26680ace1.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;4645-a4dbcfb26680ace1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;material-symbols-rounded.d61f5307.woff2" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;media&#x2F;material-symbols-rounded.d61f5307.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;510.ea60f49cfc0ee145.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;510.ea60f49cfc0ee145.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;887.53efb5d3748376a8.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;887.53efb5d3748376a8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;auth&#x2F;profile" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;auth&#x2F;profile</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;exception-autocapture.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;exception-autocapture.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;array&#x2F;phc_3b4tsLrHHzsSavxDBpOPpePiNKlWmVVxiZbc1uqqSaB&#x2F;config.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;array&#x2F;phc_3b4tsLrHHzsSavxDBpOPpePiNKlWmVVxiZbc1uqqSaB&#x2F;config.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;flags&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;flags&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;watch" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;watch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;our-faith&#x2F;daily-readings" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;our-faith&#x2F;daily-readings</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;faq" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;faq</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;trending" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;trending</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8478-54ef26a2db39ebe1.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;8478-54ef26a2db39ebe1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;trending&#x2F;page-f4a5bda92593dd72.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;trending&#x2F;page-f4a5bda92593dd72.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;latest" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;latest</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;world&#x2F;us" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;world&#x2F;us</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;vatican" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;vatican</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;faq&#x2F;page-c479265c876dfd25.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;app&#x2F;faq&#x2F;page-c479265c876dfd25.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;tags&#x2F;pope-leo-xiv" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;tags&#x2F;pope-leo-xiv</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;prolife" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;prolife</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;dead-clicks-autocapture.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;dead-clicks-autocapture.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;surveys.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;surveys.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;web-vitals.js" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;static&#x2F;web-vitals.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;e&#x2F;" target="_blank" class="external" rel="noreferrer noopener">www.ewtnnews.com&#x2F;api-bridge&#x2F;p&#x2F;e&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://catholicnewsagency.com" target="_blank" class="external">catholicnewsagency.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.catholicnewsagency.com" target="_blank" class="external">www.catholicnewsagency.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

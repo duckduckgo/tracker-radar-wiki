@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - brightcore.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "brightcore.com",
+        history: [{"date":"ci-2026-02-03-ulfir","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/brightcore.com.ico' width="32" height="32" class='inline-block' /> brightcore.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;15163<small>/23591</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Font</span>,
+                    <span>Ping</span>,
+                    <span>Document</span>,
+                    <span>Other</span>,
+                    <span>Fetch</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/brightcore.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.screenX</li>
+        <li class='truncate'>window.screenY</li>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>window.name</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p><a href="./shopify.com.html">shopify.com</a> - 44.44% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./gemcommerce.com.html">gemcommerce.com</a> - 38.89% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./anglerfox.com.html">anglerfox.com</a> - 5.56% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./klaviyo.com.html">klaviyo.com</a> - 5.56% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./jst.ai.html">jst.ai</a> - 5.56% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;vendors.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;vendors.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;mmenu-styles.scss" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;mmenu-styles.scss</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;fancybox.css" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;fancybox.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;styles.css" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;styles.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;jsSlideshow.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;jsSlideshow.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;app.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;app.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_BN7fPSNr.en.esm.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_BN7fPSNr.en.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_Cbph3Kss.esm.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_Cbph3Kss.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.modal_DKumMAJ1.esm.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.modal_DKumMAJ1.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-a0a9edcb.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-a0a9edcb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-3.1.0.min.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-3.1.0.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;bcn-registered-icon-logo-version-450x125_400x.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;bcn-registered-icon-logo-version-450x125_400x.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;revive-new-2025-uf-unit-front-no-shadow-1500x1500-tp-bg_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;revive-new-2025-uf-unit-front-no-shadow-1500x1500-tp-bg_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;KimchiOne_Center_1500x1500_d4cb448b-2e4e-4034-b5f2-a615aa3b33e1_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;KimchiOne_Center_1500x1500_d4cb448b-2e4e-4034-b5f2-a615aa3b33e1_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fortify-center-tp-bg-no-shadow-1500x1500_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;fortify-center-tp-bg-no-shadow-1500x1500_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Clarity_Center_82230909-9a20-48ea-90c8-859ed9aac388_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Clarity_Center_82230909-9a20-48ea-90c8-859ed9aac388_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Sweet_Wheat_180ct_Front_1600x1600_400x400_b2a9d552-4805-4f3e-99b5-c0f2e18fb374_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Sweet_Wheat_180ct_Front_1600x1600_400x400_b2a9d552-4805-4f3e-99b5-c0f2e18fb374_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Vitality_Center_2ec7e268-cabf-471b-871b-8bb6d2bfcb1c_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Vitality_Center_2ec7e268-cabf-471b-871b-8bb6d2bfcb1c_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Thrive_Center_1600x1600_70981c4b-c50c-409b-a1ce-6e677396aac3_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;products&#x2F;Thrive_Center_1600x1600_70981c4b-c50c-409b-a1ce-6e677396aac3_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;mega-menu-brightbeets-v4_20fd10ad-f8e6-4c91-ac3d-2f4a555aef7a_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;mega-menu-brightbeets-v4_20fd10ad-f8e6-4c91-ac3d-2f4a555aef7a_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Radiance_400x400.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Radiance_400x400.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Our_Story-min_350x350.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Our_Story-min_350x350.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Help-min_350x350.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Help-min_350x350.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Articles-min_350x350.png" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;Articles-min_350x350.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;b1d2a099fw23dfb22ep557258f5m7a2edbael.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;b1d2a099fw23dfb22ep557258f5m7a2edbael.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.c59ea00e0474b293ae6629561379568a2d7c4bba.min.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.c59ea00e0474b293ae6629561379568a2d7c4bba.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;cabin&#x2F;cabin_n4.cefc6494a78f87584a6f312fea532919154f66fe.woff2" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;cabin&#x2F;cabin_n4.cefc6494a78f87584a6f312fea532919154f66fe.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;ootsb.ttf" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;73&#x2F;assets&#x2F;ootsb.ttf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GT-Sectra-Fine-Regular.ttf" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;GT-Sectra-Fine-Regular.ttf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gt-haptik-regular-webfont.ttf" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gt-haptik-regular-webfont.ttf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;roboto&#x2F;roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;app&#x2F;web-pixel-808812840@b2a88bafab3e21179ed38636efcd8a93&#x2F;pixel.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;app&#x2F;web-pixel-808812840@b2a88bafab3e21179ed38636efcd8a93&#x2F;pixel.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;app&#x2F;web-pixel-269549864@ca16bc87fe92b6042fbaa3acc2fbdaa6&#x2F;pixel.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;app&#x2F;web-pixel-269549864@ca16bc87fe92b6042fbaa3acc2fbdaa6&#x2F;pixel.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;custom&#x2F;web-pixel-shopify-custom-pixel@0450&#x2F;sandbox&#x2F;legacy&#x2F;" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;custom&#x2F;web-pixel-shopify-custom-pixel@0450&#x2F;sandbox&#x2F;legacy&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1900118312@524f6c1ee37bacdca7657a665bdca589&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1900118312@524f6c1ee37bacdca7657a665bdca589&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1455915304@0a58c8d253da8be53313ae431f3a4301&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1455915304@0a58c8d253da8be53313ae431f3a4301&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1447854376@34ad157958823915625854214640f0bf&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-1447854376@34ad157958823915625854214640f0bf&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-622068008@a3ce375f25adae759937eab8e1348fdc&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-622068008@a3ce375f25adae759937eab8e1348fdc&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-329285928@c5d4d7bbb4a4a4292a8a7b5334af7e3d&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-329285928@c5d4d7bbb4a4a4292a8a7b5334af7e3d&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gt-haptik-medium-webfont.ttf" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;gt-haptik-medium-webfont.ttf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;cabin&#x2F;cabin_n7.255204a342bfdbc9ae2017bd4e6a90f8dbb2f561.woff2" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;fonts&#x2F;cabin&#x2F;cabin_n7.255204a342bfdbc9ae2017bd4e6a90f8dbb2f561.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;s1d2a099fw23dfb22ep557258f5m7a2edbael.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;s1d2a099fw23dfb22ep557258f5m7a2edbael.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;api&#x2F;collect" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;api&#x2F;collect</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cart&#x2F;update.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cart&#x2F;update.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cart.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cart.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;s1d2a099fw23dfb22ep557258f5m7a2edbael.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;wpm&#x2F;s1d2a099fw23dfb22ep557258f5m7a2edbael.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1900118312@524f6c1ee37bacdca7657a665bdca589.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1900118312@524f6c1ee37bacdca7657a665bdca589.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1447854376@34ad157958823915625854214640f0bf.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1447854376@34ad157958823915625854214640f0bf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1455915304@0a58c8d253da8be53313ae431f3a4301.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-1455915304@0a58c8d253da8be53313ae431f3a4301.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-329285928@c5d4d7bbb4a4a4292a8a7b5334af7e3d.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-329285928@c5d4d7bbb4a4a4292a8a7b5334af7e3d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-622068008@a3ce375f25adae759937eab8e1348fdc.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-622068008@a3ce375f25adae759937eab8e1348fdc.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.B4Juc3Bz.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.B4Juc3Bz.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.DeTuiADy.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.DeTuiADy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;vendor-legacy.CMLvc6lV.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;vendor-legacy.CMLvc6lV.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;locale-en-legacy.DOzlQmzw.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;locale-en-legacy.DOzlQmzw.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.CM1dbJWN.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.CM1dbJWN.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AddDiscountButton-legacy.CUwYb3gj.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AddDiscountButton-legacy.CUwYb3gj.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;NumberField-legacy.BLrHV9sY.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;NumberField-legacy.BLrHV9sY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShowShopPayOptin-legacy.uuD5mK3f.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShowShopPayOptin-legacy.uuD5mK3f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.7MbJJC01.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.7MbJJC01.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;RememberMeDescriptionText-legacy.DBufNS6a.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;RememberMeDescriptionText-legacy.DBufNS6a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PaymentButtons-legacy.0vReianS.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PaymentButtons-legacy.0vReianS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StockProblemsLineItemList-legacy.DpCIN4rl.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StockProblemsLineItemList-legacy.DpCIN4rl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalPickup-legacy.DgGlHfYJ.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalPickup-legacy.DgGlHfYJ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayButtonClassName-legacy.7ot7cfg4.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayButtonClassName-legacy.7ot7cfg4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.D_ndKAUb.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.D_ndKAUb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MarketsProDisclaimer-legacy.2sIw90dz.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MarketsProDisclaimer-legacy.2sIw90dz.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.DGqg_ecg.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.DGqg_ecg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useAddressManager-legacy.EUj_Rslh.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useAddressManager-legacy.EUj_Rslh.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayPaymentRequiredMethod-legacy.Dhgp2TjH.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayPaymentRequiredMethod-legacy.Dhgp2TjH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.D4sJkutf.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.D4sJkutf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.BK0f4AVS.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.BK0f4AVS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;shop-js-index-legacy.CrxCgAFg.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;shop-js-index-legacy.CrxCgAFg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;v4-legacy.On_frbc2.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;v4-legacy.On_frbc2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PayButtonSection-legacy.0T8GMbL3.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PayButtonSection-legacy.0T8GMbL3.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.BUiVIG3s.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.BUiVIG3s.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.D9a19KOA.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.D9a19KOA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StackedMerchandisePreview-legacy.Ca7290Hx.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StackedMerchandisePreview-legacy.Ca7290Hx.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;cart.js" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;cart.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;custom&#x2F;web-pixel-shopify-custom-pixel@0450&#x2F;sandbox&#x2F;legacy&#x2F;products&#x2F;multi-collagen-protein" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;web-pixels@1d2a099fw23dfb22ep557258f5m7a2edbae&#x2F;custom&#x2F;web-pixel-shopify-custom-pixel@0450&#x2F;sandbox&#x2F;legacy&#x2F;products&#x2F;multi-collagen-protein</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://brightcore.com&#x2F;search" target="_blank" class="external" rel="noreferrer noopener">brightcore.com&#x2F;search</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://mybrightcore.com" target="_blank" class="external">mybrightcore.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mybrightcore.com" target="_blank" class="external">www.mybrightcore.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

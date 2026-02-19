@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - bookdna-cdn.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "bookdna-cdn.com",
+        history: [{"date":"ci-2026-02-17-zdntx","prevalence":0.0000274,"sites":4,"fingerprinting":1,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/bookdna-cdn.com.ico' width="32" height="32" class='inline-block' /> bookdna-cdn.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;10003<small>/22948</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (4 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 1<small>/3</small> - <span class="fp-1">Some use of browser API&#39;s, but not obviously for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Image</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Font</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/bookdna-cdn.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>static</span>, 
+                    <span>media</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 50.00% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./bookdna.com.html">bookdna.com</a> - 50.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;home&#x2F;background-mountain-stars@1600.e0eb2c9c5383.webp" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;home&#x2F;background-mountain-stars@1600.e0eb2c9c5383.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;shepherd&#x2F;bundle.60d82d9db561.css" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;shepherd&#x2F;bundle.60d82d9db561.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71RSOS6qiUL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71RSOS6qiUL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61qV0ieP64L._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61qV0ieP64L._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;say-nothing-7_vklwtd" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;say-nothing-7_vklwtd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;home&#x2F;girl-with-book.ceccee19aa82.webp" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;home&#x2F;girl-with-book.ceccee19aa82.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;home&#x2F;background-mountain-stars@2880.36973fe55a1f.webp" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;home&#x2F;background-mountain-stars@2880.36973fe55a1f.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71iak2MIJS_ansb9x" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71iak2MIJS_ansb9x</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81t0JhnJhuL._SL1500__mw3otw" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81t0JhnJhuL._SL1500__mw3otw</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;216017751_m52cct" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;216017751_m52cct</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61o5Q8IIq4L._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61o5Q8IIq4L._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9781250754738_doiwef" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9781250754738_doiwef</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-silver-serpent-agatha-oddly-book-3_dmy9vp" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-silver-serpent-agatha-oddly-book-3_dmy9vp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71g-7Qc2fRL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71g-7Qc2fRL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;a_lmwrbu" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;a_lmwrbu</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;all-systems-red_qmnqjj" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;all-systems-red_qmnqjj</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;s-l1200_xcn0vd" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;s-l1200_xcn0vd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;173754979_s0rgex" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;173754979_s0rgex</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91mP0HKLEwL_jdwugt" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91mP0HKLEwL_jdwugt</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-frozen-river_hcthif" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-frozen-river_hcthif</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91NyAPHEhVS_g2tfvd" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91NyAPHEhVS_g2tfvd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71QlNHRcL9L_zcr4if" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71QlNHRcL9L_zcr4if</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;project-hail-mary-1_nzhm4d" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;project-hail-mary-1_nzhm4d</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71KL38rsxL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71KL38rsxL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780593321201_custom-329d20529955fe0f6c19eb82baf676fc2d86c1a1-s1100-c50_s2qh1p" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780593321201_custom-329d20529955fe0f6c19eb82baf676fc2d86c1a1-s1100-c50_s2qh1p</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-song-of-achilles_wi0rvw" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-song-of-achilles_wi0rvw</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81KLBtM1jpL._SL1500__opdkty" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81KLBtM1jpL._SL1500__opdkty</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Bertron_Hamill.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Bertron_Hamill.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;pro_pbid_290873_ywwqc0" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;pro_pbid_290873_ywwqc0</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;7197t4EgDBL._SL1167__p83doy" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;7197t4EgDBL._SL1167__p83doy</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71GP94-qdJL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71GP94-qdJL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-children-of-hurin-1_ai7brb" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-children-of-hurin-1_ai7brb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71jLBXtWJWL_oucavk" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71jLBXtWJWL_oucavk</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Mara_Casey_Tieken.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Mara_Casey_Tieken.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81m514Afj5L._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81m514Afj5L._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81WBIOP8yL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81WBIOP8yL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91xdVsH2EuL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91xdVsH2EuL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;7192bFMR6KL_bguwyl" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;7192bFMR6KL_bguwyl</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61VrhD3osL._SL1024_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61VrhD3osL._SL1024_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Howard_Steinberg.png" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Howard_Steinberg.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81rXtkBC1YL_pv219y" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81rXtkBC1YL_pv219y</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61M8k4a4LAL_qgkvsd" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61M8k4a4LAL_qgkvsd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71IN029dwuL_veovws" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71IN029dwuL_veovws</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;818jbvBMx8L._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;818jbvBMx8L._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;a_new_earth.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;a_new_earth.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Caitlin_Biddolph.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Caitlin_Biddolph.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Z83K3d0lL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Z83K3d0lL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81s21QxY5TL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81s21QxY5TL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81QPZJWiuOL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81QPZJWiuOL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61roUTuh2SL._SL1360_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61roUTuh2SL._SL1360_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91YCPA0opQL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91YCPA0opQL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Anthony_Lee_j4cp2o" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Anthony_Lee_j4cp2o</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81PCXF0TDzL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81PCXF0TDzL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61NiPrFcuUL_igbpso" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61NiPrFcuUL_igbpso</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9781804291450__46362_xk4nf9" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9781804291450__46362_xk4nf9</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;718eTI23bSL._AC_UF10001000_QL80__bzvpgc" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;718eTI23bSL._AC_UF10001000_QL80__bzvpgc</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71ax-sI24KL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71ax-sI24KL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Tessa_Buckley.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Tessa_Buckley.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780141369761.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780141369761.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91r-45nYCkL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91r-45nYCkL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71m7olEiAyL._SL1337_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71m7olEiAyL._SL1337_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Kz4AlOW5L._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Kz4AlOW5L._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;715EEPheKIL._SL1215_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;715EEPheKIL._SL1215_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;David_Baird_o94oh3" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;David_Baird_o94oh3</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81sj5PAw-hL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81sj5PAw-hL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91YUsUgrF8L_v700bw" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91YUsUgrF8L_v700bw</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91luhb9WtlL._SL1500__ds6mwi" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91luhb9WtlL._SL1500__ds6mwi</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;56764127_c2gayh" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;56764127_c2gayh</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81DiseymDL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81DiseymDL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Emily_Raij.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Emily_Raij.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;A1dMlZKgy4L_pcbpni" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;A1dMlZKgy4L_pcbpni</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Xn6Aqz1GL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81Xn6Aqz1GL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91p0pkcGZfL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91p0pkcGZfL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91er2KaD5hL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91er2KaD5hL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91xg0uVQnbL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91xg0uVQnbL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;David_Barrow.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;David_Barrow.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91mUWu6OlL_cdunk2" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91mUWu6OlL_cdunk2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;to-kill-a-mockingbird-3_msju9j" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;to-kill-a-mockingbird-3_msju9j</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780547614328__51392.1607473480_n5ndbm" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;9780547614328__51392.1607473480_n5ndbm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61a52VDujL_p4lemf" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61a52VDujL_p4lemf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91uznO3PApL._SL1500_.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;91uznO3PApL._SL1500_.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Laura_Carney.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;Laura_Carney.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;18144590_by6wkd" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;18144590_by6wkd</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;Huckleberry_Finn_xno9ma" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;Huckleberry_Finn_xno9ma</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;default_3.jpg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;default_3.jpg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;wild-21_hvmi4h" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;wild-21_hvmi4h</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81JNQrlHUVL_scrztg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81JNQrlHUVL_scrztg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;autumn_birt_x3b7xm" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;autumn_birt_x3b7xm</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71Ia3wb2DML_lkhgv0" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;71Ia3wb2DML_lkhgv0</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61kyg9dAEWL._AC_UF10001000_QL80__o8sd3y" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;61kyg9dAEWL._AC_UF10001000_QL80__o8sd3y</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;60667042_prhsvf" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;60667042_prhsvf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;182731417_jnqd1o" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;182731417_jnqd1o</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;58310267_mti3wq" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;58310267_mti3wq</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;MJ_Mumford_yii1qz" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;MJ_Mumford_yii1qz</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-time-travelers-wife-9781476764832_hr_c9r5gg" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;the-time-travelers-wife-9781476764832_hr_c9r5gg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81R-ADdDatL_iyawzf" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81R-ADdDatL_iyawzf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81YzHKeWq7L_yk3qwh" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;81YzHKeWq7L_yk3qwh</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;an-ocean-of-minutes-9781501192562_hr_zvlycb" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;an-ocean-of-minutes-9781501192562_hr_zvlycb</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;59947696_ftimdr" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;59947696_ftimdr</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;roxana_arama_vxoi8t" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;40,height&#x3D;40,fit&#x3D;crop,gravity&#x3D;face,zoom&#x3D;0.55,quality&#x3D;75&#x2F;media&#x2F;profiles&#x2F;roxana_arama_vxoi8t</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;59808037_ande2h" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;59808037_ande2h</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;51kr89JwKGL_bcacnc" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;51kr89JwKGL_bcacnc</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;58082197_d0ivdz" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;58082197_d0ivdz</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;41DF4HUfWvL_iqh3mr" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;41DF4HUfWvL_iqh3mr</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;ZQDG6NS7YQI6TFAS3LZ5FZT4NU_s7djag" target="_blank" class="external" rel="noreferrer noopener">media.bookdna-cdn.com&#x2F;cdn-cgi&#x2F;image&#x2F;format&#x3D;avif,width&#x3D;110,quality&#x3D;75&#x2F;media&#x2F;covers&#x2F;ZQDG6NS7YQI6TFAS3LZ5FZT4NU_s7djag</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;shepherd&#x2F;bundle.63265b922a47.js" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;shepherd&#x2F;bundle.63265b922a47.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://static.bookdna-cdn.com&#x2F;fonts&#x2F;Oxygen-Regular.701e9d0dbae4.woff2" target="_blank" class="external" rel="noreferrer noopener">static.bookdna-cdn.com&#x2F;fonts&#x2F;Oxygen-Regular.701e9d0dbae4.woff2</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://bookdna.com" target="_blank" class="external">bookdna.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://shepherd.com" target="_blank" class="external">shepherd.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

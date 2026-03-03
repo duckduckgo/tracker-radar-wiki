@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - primos.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "primos.com",
+        history: [{"date":"ci-2026-03-03-upvmo","prevalence":0.0000137,"sites":2,"fingerprinting":3,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/primos.com.ico' width="32" height="32" class='inline-block' /> primos.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;18797<small>/22751</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Script</span>,
+                    <span>Image</span>,
+                    <span>Ping</span>,
+                    <span>Other</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/primos.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.screenX</li>
+        <li class='truncate'>window.screenY</li>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>HTMLCanvasElement.prototype.toDataURL</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.plugins</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.cookieEnabled</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>window.name</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;.well-known&#x2F;shopify&#x2F;monorail&#x2F;unstable&#x2F;produce_batch</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;s3c1f2529w4065d210p03530cb8m151179d6l.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;s3c1f2529w4065d210p03530cb8m151179d6l.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;s3c1f2529w4065d210p03530cb8m151179d6l.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;s3c1f2529w4065d210p03530cb8m151179d6l.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;core.css" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;core.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;fonts&#x2F;instrument_sans&#x2F;instrumentsans_n7.e4ad9032e203f9a0977786c356573ced65a7419a.woff2" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;fonts&#x2F;instrument_sans&#x2F;instrumentsans_n7.e4ad9032e203f9a0977786c356573ced65a7419a.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;flickity.min.css" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;flickity.min.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.css" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;theme.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;checkouts&#x2F;internal&#x2F;preloads.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_D6mOgvqp.en.esm.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;client.init-shop-cart-sync_D6mOgvqp.en.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_D09lIwZG.en.esm.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.common_D09lIwZG.en.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.modal_CMCqeMIe.en.esm.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;shop-js&#x2F;modules&#x2F;v2&#x2F;chunk.modal_CMCqeMIe.en.esm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-a0a9edcb.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;storefront&#x2F;load_feature-a0a9edcb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-3.2.0.min.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;perf-kit&#x2F;shopify-perf-kit-3.2.0.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;collection-page.css" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;collection-page.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;component-rating.css" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;component-rating.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;collection-page.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;collection-page.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;dynamic-icon.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;dynamic-icon.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;delegate.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;delegate.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;vendor.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;vendor.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;b3c1f2529w4065d210p03530cb8m151179d6l.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;wpm&#x2F;b3c1f2529w4065d210p03530cb8m151179d6l.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.eaf01eafdeaab02c121702cfbc61d1098a26bab9.min.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;s&#x2F;trekkie.storefront.eaf01eafdeaab02c121702cfbc61d1098a26bab9.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;storefront&#x2F;assets&#x2F;shop_events_listener-3da45d37.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;PRIMOS_PRIMARY_LOGO_POSITIVE_300x300.svg" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;files&#x2F;PRIMOS_PRIMARY_LOGO_POSITIVE_300x300.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2160460141@f125f620dfaaabbd1cefde6901cad1c4&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2160460141@f125f620dfaaabbd1cefde6901cad1c4&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2159608173@5ebbadc84d0e802ad143f8104882286d&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2159608173@5ebbadc84d0e802ad143f8104882286d&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2091843949@524f6c1ee37bacdca7657a665bdca589&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-2091843949@524f6c1ee37bacdca7657a665bdca589&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels@3c1f2529w4065d210p03530cb8m151179d6&#x2F;web-pixel-shopify-app-pixel@0450&#x2F;sandbox&#x2F;worker.legacy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;consent-tracking-api&#x2F;v0.1&#x2F;consent-tracking-api.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;api&#x2F;collect" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;api&#x2F;collect</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;core.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shop&#x2F;t&#x2F;4&#x2F;assets&#x2F;core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cart" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cart</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-shopify-app-pixel@0450.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2159608173@5ebbadc84d0e802ad143f8104882286d.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2159608173@5ebbadc84d0e802ad143f8104882286d.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2160460141@f125f620dfaaabbd1cefde6901cad1c4.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2160460141@f125f620dfaaabbd1cefde6901cad1c4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2091843949@524f6c1ee37bacdca7657a665bdca589.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;web-pixels&#x2F;strict&#x2F;app&#x2F;web-pixel-2091843949@524f6c1ee37bacdca7657a665bdca589.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.J9fQ5p_p.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;polyfills-legacy.J9fQ5p_p.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.BswSpifZ.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;app-legacy.BswSpifZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;vendor-legacy.uh8YMXWE.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;vendor-legacy.uh8YMXWE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;locale-en-legacy.DRtxhkWq.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;locale-en-legacy.DRtxhkWq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.CFvdQnBq.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;page-OnePage-legacy.CFvdQnBq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PaymentButtons-legacy.CxstPQQL.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PaymentButtons-legacy.CxstPQQL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalPickup-legacy.CJdcP84S.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;LocalPickup-legacy.CJdcP84S.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayButtonClassName-legacy.J9fYMFZL.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPayButtonClassName-legacy.J9fYMFZL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.CUOJ19RE.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;VaultedPayment-legacy.CUOJ19RE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MarketsProDisclaimer-legacy.BUHi_pcg.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MarketsProDisclaimer-legacy.BUHi_pcg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PickupPointCarrierLogo-legacy.DuJT6Lb9.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;PickupPointCarrierLogo-legacy.DuJT6Lb9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;hooks-legacy.DfRQ3YSZ.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;hooks-legacy.DfRQ3YSZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AddDiscountButton-legacy.Ce_LPRDa.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AddDiscountButton-legacy.Ce_LPRDa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;RememberMeDescriptionText-legacy.Cq-w82_e.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;RememberMeDescriptionText-legacy.Cq-w82_e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.Ddv-71vC.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayOptInDisclaimer-legacy.Ddv-71vC.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MobileOrderSummary-legacy.CSL4KS-C.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MobileOrderSummary-legacy.CSL4KS-C.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;OrderEditVaultedDelivery-legacy.D481ROUb.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;OrderEditVaultedDelivery-legacy.D481ROUb.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.Bsdmu7Va.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;SeparatePaymentsNotice-legacy.Bsdmu7Va.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StockProblemsLineItemList-legacy.CEz2_-6X.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;StockProblemsLineItemList-legacy.CEz2_-6X.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayErrorBanner-legacy.Cfh2xaNT.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShopPayErrorBanner-legacy.Cfh2xaNT.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPaySessionTokenStorage-legacy.BumrvMZ_.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useShopPaySessionTokenStorage-legacy.BumrvMZ_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.DF7NhMB4.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-ShopPayVerificationSwitch-legacy.DF7NhMB4.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.C0F-82sg.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;useSubscribeMessenger-legacy.C0F-82sg.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;shop-js-index-legacy.x_-qscs_.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;shop-js-index-legacy.x_-qscs_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;v4-legacy.On_frbc2.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;v4-legacy.On_frbc2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;monorail-legacy.DEnvHcdl.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;monorail-legacy.DEnvHcdl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;DutyOptions-legacy.DgwQzhpE.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;DutyOptions-legacy.DgwQzhpE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.CoheM6z0.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ShipmentBreakdown-legacy.CoheM6z0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.Dg9TiGrH.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;MerchandiseModal-legacy.Dg9TiGrH.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-RuntimeExtension-legacy.DzwJrSvm.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;component-RuntimeExtension-legacy.DzwJrSvm.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AnnouncementRuntimeExtensions-legacy.DMTjbSnu.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;AnnouncementRuntimeExtensions-legacy.DMTjbSnu.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;rendering-extension-targets-legacy.Utdw5C7R.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;rendering-extension-targets-legacy.Utdw5C7R.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ExtensionsInner-legacy.CtXh2vxA.js" target="_blank" class="external" rel="noreferrer noopener">www.primos.com&#x2F;cdn&#x2F;shopifycloud&#x2F;checkout-web&#x2F;assets&#x2F;c1&#x2F;ExtensionsInner-legacy.CtXh2vxA.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://butlercreek.com" target="_blank" class="external">butlercreek.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.hoppes.com" target="_blank" class="external">www.hoppes.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.butlercreek.com" target="_blank" class="external">www.butlercreek.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

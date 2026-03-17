@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - kuaizao.org</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "kuaizao.org",
+        history: [{"date":"ci-2026-03-17-aawvy","prevalence":0.0000205,"sites":3,"fingerprinting":2,"cookies":0.0000205}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/kuaizao.org.ico' width="32" height="32" class='inline-block' /> kuaizao.org</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;13126<small>/23200</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (3 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/kuaizao.org.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>admin.ai</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>speechSynthesis.__proto__.getVoices</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>window.matchMedia(&quot;prefers-color-scheme&quot;)</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;js&#x2F;iframe.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;js&#x2F;iframe.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;chat&#x2F;share" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;chat&#x2F;share</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;235bf4fa295313c6.css" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;235bf4fa295313c6.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;5b0b3af323bab63b.css" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;5b0b3af323bab63b.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;323cce80f03048d9.css" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;323cce80f03048d9.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96286.9220622921095acd.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96286.9220622921095acd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-dcb592d7afe02652.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;webpack-dcb592d7afe02652.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-7c9efff350891b91.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;framework-7c9efff350891b91.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-2d2a5b657e1e494b.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;main-2d2a5b657e1e494b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-7f332b445ef7ffa7.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;_app-7f332b445ef7ffa7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;63aca734-749068a9700ee0c7.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;63aca734-749068a9700ee0c7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;293b8563-92851157699a29ec.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;293b8563-92851157699a29ec.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62516-3af914a206c3b92b.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;62516-3af914a206c3b92b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;41426-1b631767478abcf9.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;41426-1b631767478abcf9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;15040-2d45315a0f48a9b1.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;15040-2d45315a0f48a9b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81706-c4c01f70e245b412.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;81706-c4c01f70e245b412.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;20067-d6954cfcfd2b4e83.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;20067-d6954cfcfd2b4e83.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;13593-559aa3b43b21cc2a.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;13593-559aa3b43b21cc2a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58443-9f6ae30a243663e8.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;58443-9f6ae30a243663e8.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;50-de0de34ad75092ab.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;50-de0de34ad75092ab.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78846-3bf39381f4584b12.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78846-3bf39381f4584b12.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78304-354bfda40e0222b1.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78304-354bfda40e0222b1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75036-ed31aa0e73bdd1c9.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75036-ed31aa0e73bdd1c9.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85466-812bf54c7a4490ea.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;85466-812bf54c7a4490ea.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78820-3ad953089929a44a.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;78820-3ad953089929a44a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95427-07818a547e550fa2.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;95427-07818a547e550fa2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35373-5a65f00e2bb11521.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;35373-5a65f00e2bb11521.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10791-a20139d6d467e578.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;10791-a20139d6d467e578.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;57774-ef9e89e0ff78131e.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;57774-ef9e89e0ff78131e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75901-e2ec416c365665c5.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;75901-e2ec416c365665c5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61749-624ec2aef00c2728.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;61749-624ec2aef00c2728.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91794-410944bdf3b6f588.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;91794-410944bdf3b6f588.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;76497-aef659747166527e.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;76497-aef659747166527e.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;40009-16a7efe3f2f1bed7.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;40009-16a7efe3f2f1bed7.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86568-44d06eb75f02b1aa.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;86568-44d06eb75f02b1aa.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66517-a4c6f6b46cabb19f.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;66517-a4c6f6b46cabb19f.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;chat&#x2F;share-020c16574ab71831.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;pages&#x2F;chat&#x2F;share-020c16574ab71831.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;5tC08IpvuxCwK9xI8zPmH&#x2F;_buildManifest.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;5tC08IpvuxCwK9xI8zPmH&#x2F;_buildManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;5tC08IpvuxCwK9xI8zPmH&#x2F;_ssgManifest.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;5tC08IpvuxCwK9xI8zPmH&#x2F;_ssgManifest.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47967.64180daf258ee479.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;47967.64180daf258ee479.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83723.b9ecd9dabe28c414.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;83723.b9ecd9dabe28c414.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;icon&#x2F;logo.svg" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;icon&#x2F;logo.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;api&#x2F;common&#x2F;system&#x2F;getInitData" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;api&#x2F;common&#x2F;system&#x2F;getInitData</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;getPaginationRecords" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;getPaginationRecords</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;getHistories" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;getHistories</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;outLink&#x2F;init" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;api&#x2F;core&#x2F;chat&#x2F;outLink&#x2F;init</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96344.b00ed45b8a916f57.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;96344.b00ed45b8a916f57.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;29294.0f1169d524ef012a.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;29294.0f1169d524ef012a.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;api&#x2F;system&#x2F;img&#x2F;68f0b81ed419751c9103cd2c.png" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;api&#x2F;system&#x2F;img&#x2F;68f0b81ed419751c9103cd2c.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;js&#x2F;html2pdf.bundle.min.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;js&#x2F;html2pdf.bundle.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;31ab7e2afce6581f.css" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;css&#x2F;31ab7e2afce6581f.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;52877.f0df1b181be6ef7c.js" target="_blank" class="external" rel="noreferrer noopener">admin.ai.kuaizao.org&#x2F;_next&#x2F;static&#x2F;chunks&#x2F;52877.f0df1b181be6ef7c.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://snapmaker.com" target="_blank" class="external">snapmaker.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.snapmaker.com" target="_blank" class="external">www.snapmaker.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

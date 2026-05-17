@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - hotzcam.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "hotzcam.com",
+        history: [{"date":"ci-2026-05-17-jkwio","prevalence":0.000329,"sites":48,"fingerprinting":2,"cookies":0.000329}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/hotzcam.com.ico' width="32" height="32" class='inline-block' /> hotzcam.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;2260<small>/22718</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.03&#37; (48 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.03&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Image</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/hotzcam.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>creative</span>, 
+                    <span>go</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.languages</li>
+        <li class='truncate'>MediaSource.isTypeSupported</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>HTMLMediaElement.prototype.canPlayType</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;widgets&#x2F;v4&#x2F;Universal" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;widgets&#x2F;v4&#x2F;Universal</a> (seen on 41 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.hotzcam.com&#x2F;config" target="_blank" class="external" rel="noreferrer noopener">go.hotzcam.com&#x2F;config</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;scripts&#x2F;jsd&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;scripts&#x2F;jsd&#x2F;main.js</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;scripts&#x2F;jsd&#x2F;883a1f27d85f&#x2F;main.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;scripts&#x2F;jsd&#x2F;883a1f27d85f&#x2F;main.js</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.hotzcam.com&#x2F;app&#x2F;domain-checker&#x2F;get-check" target="_blank" class="external" rel="noreferrer noopener">go.hotzcam.com&#x2F;app&#x2F;domain-checker&#x2F;get-check</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.hotzcam.com&#x2F;api&#x2F;models" target="_blank" class="external" rel="noreferrer noopener">go.hotzcam.com&#x2F;api&#x2F;models</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.hotzcam.com&#x2F;abc.gif" target="_blank" class="external" rel="noreferrer noopener">go.hotzcam.com&#x2F;abc.gif</a> (seen on 40 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://go.hotzcam.com&#x2F;app&#x2F;domain-checker&#x2F;check-result" target="_blank" class="external" rel="noreferrer noopener">go.hotzcam.com&#x2F;app&#x2F;domain-checker&#x2F;check-result</a> (seen on 35 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.10a3d69e67605e831172.css" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.10a3d69e67605e831172.css</a> (seen on 30 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;saretarget.b7ed2b6487a5dbf6376e.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;saretarget.b7ed2b6487a5dbf6376e.js</a> (seen on 30 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.9645da8fa83611730f3f.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.9645da8fa83611730f3f.js</a> (seen on 30 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;f20b0043&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json</a> (seen on 30 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.84bf83f22e4f4b069552.css" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.84bf83f22e4f4b069552.css</a> (seen on 17 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;saretarget.b7ed2b6487a5dbf6376e.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;saretarget.b7ed2b6487a5dbf6376e.js</a> (seen on 17 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.0dd205ee786539830f44.js" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;main.0dd205ee786539830f44.js</a> (seen on 17 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;static&#x2F;5f653724&#x2F;s&#x2F;widgets&#x2F;v4&#x2F;Universal&#x2F;lang&#x2F;en.json</a> (seen on 16 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;jsd&#x2F;oneshot&#x2F;883a1f27d85f&#x2F;0.9302182937856109:1778912605:JrxUnRIzRWOhcv2eS1e3_z0Nhk8V0HdQ1FIcIGUjEaE&#x2F;9fc867796e466c2b" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;jsd&#x2F;oneshot&#x2F;883a1f27d85f&#x2F;0.9302182937856109:1778912605:JrxUnRIzRWOhcv2eS1e3_z0Nhk8V0HdQ1FIcIGUjEaE&#x2F;9fc867796e466c2b</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;jsd&#x2F;oneshot&#x2F;883a1f27d85f&#x2F;0.9890625318248227:1778916181:3XFf_58-_AQHS-cwTqkL5M8aPTdPH1aGMt-X_QvfTu0&#x2F;9fc8b4fb6e6e69fb" target="_blank" class="external" rel="noreferrer noopener">creative.hotzcam.com&#x2F;cdn-cgi&#x2F;challenge-platform&#x2F;h&#x2F;b&#x2F;jsd&#x2F;oneshot&#x2F;883a1f27d85f&#x2F;0.9890625318248227:1778916181:3XFf_58-_AQHS-cwTqkL5M8aPTdPH1aGMt-X_QvfTu0&#x2F;9fc8b4fb6e6e69fb</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://m.tnaflix.com" target="_blank" class="external">m.tnaflix.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.alohatube.com" target="_blank" class="external">www.alohatube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.imagefap.com" target="_blank" class="external">www.imagefap.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xtubebdsm.com" target="_blank" class="external">www.xtubebdsm.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vintagepornq.com" target="_blank" class="external">www.vintagepornq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://missav.live" target="_blank" class="external">missav.live</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.averagenudes.com" target="_blank" class="external">www.averagenudes.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.grannypornpictures.com" target="_blank" class="external">www.grannypornpictures.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xnxxtv.cam" target="_blank" class="external">xnxxtv.cam</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornmaven.com" target="_blank" class="external">pornmaven.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://lesbify.com" target="_blank" class="external">lesbify.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://chinaporn.tv" target="_blank" class="external">chinaporn.tv</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentai4porn.com" target="_blank" class="external">hentai4porn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.aznude.com" target="_blank" class="external">www.aznude.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://rock.porn" target="_blank" class="external">rock.porn</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://zeusporn.com" target="_blank" class="external">zeusporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.tabootube.xxx" target="_blank" class="external">www.tabootube.xxx</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://njavtv.com" target="_blank" class="external">njavtv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://annatube.com" target="_blank" class="external">annatube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xmovies.com" target="_blank" class="external">xmovies.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://adultgamescollector.com" target="_blank" class="external">adultgamescollector.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://camvault.to" target="_blank" class="external">camvault.to</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://cosplaytele.com" target="_blank" class="external">cosplaytele.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://crocotube.com" target="_blank" class="external">crocotube.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://favoyeurtube.net" target="_blank" class="external">favoyeurtube.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ggjav.com" target="_blank" class="external">ggjav.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://hentai-for.net" target="_blank" class="external">hentai-for.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://missav.ws" target="_blank" class="external">missav.ws</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://myhentaicomics.com" target="_blank" class="external">myhentaicomics.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sexbjcam.com" target="_blank" class="external">sexbjcam.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.xerotica.com" target="_blank" class="external">www.xerotica.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://ahentaitv.com" target="_blank" class="external">ahentaitv.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://pornavhd.com" target="_blank" class="external">pornavhd.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://madnessporn.com" target="_blank" class="external">madnessporn.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www4.javhdporn.net" target="_blank" class="external">www4.javhdporn.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fap-nation.com" target="_blank" class="external">fap-nation.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.javhdporn.net" target="_blank" class="external">www.javhdporn.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://javsubbed.net" target="_blank" class="external">javsubbed.net</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.pervertium.com" target="_blank" class="external">www.pervertium.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.loverslab.com" target="_blank" class="external">www.loverslab.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.85po.com" target="_blank" class="external">www.85po.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://vintagepornq.com" target="_blank" class="external">vintagepornq.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://xtubebdsm.com" target="_blank" class="external">xtubebdsm.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

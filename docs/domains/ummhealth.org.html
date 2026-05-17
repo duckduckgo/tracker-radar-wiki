@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - ummhealth.org</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ummhealth.org",
+        history: [{"date":"ci-2026-05-17-jkwio","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/ummhealth.org.ico' width="32" height="32" class='inline-block' /> ummhealth.org</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;19865<small>/22718</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Document</span>,
+                    <span>Stylesheet</span>,
+                    <span>Image</span>,
+                    <span>Script</span>,
+                    <span>Font</span>,
+                    <span>Other</span>,
+                    <span>Fetch</span>,
+                    <span>Ping</span>,
+                    <span>XHR</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ummhealth.org.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>providers</span>, 
+                    <span>www</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.permissions</li>
+        <li class='truncate'>Screen.prototype.orientation</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Navigator.prototype.appVersion</li>
+        <li class='truncate'>Element.prototype.getClientRects</li>
+        <li class='truncate'>Navigator.prototype.appName</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;common.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;common.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;themes.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;themes.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;component.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;component.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;prelogin_custom.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;prelogin_custom.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;mobile_responsivesite.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;mobile_responsivesite.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;mobile_gridadapter.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;mobile_gridadapter.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;override.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;override.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;styles&#x2F;bundles&#x2F;sdk" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;styles&#x2F;bundles&#x2F;sdk</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;styles&#x2F;bundles&#x2F;packages" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;styles&#x2F;bundles&#x2F;packages</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;openscheduling.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;openscheduling.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;uploadcomponent.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;uploadcomponent.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;viewdocument.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;viewdocument.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;tables.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;tables.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;questions.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;questions.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;cards.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;cards.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;calendars.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;calendars.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;questionnaire.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;questionnaire.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;decisiontrees.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;decisiontrees.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;coverages.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;coverages.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;scheduling_v2.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;scheduling_v2.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;calendarview.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;calendarview.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;baseaddress.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;baseaddress.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;packages&#x2F;personal-information.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;packages&#x2F;personal-information.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;personalinformation.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;personalinformation.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;community.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;community.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;authentication.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;authentication.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;chipcarousel.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;chipcarousel.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;ondemandtelehealth.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;ondemandtelehealth.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;MyChart_city.png" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;MyChart_city.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;MyChartIsEpic_inline_dark.svg" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;MyChartIsEpic_inline_dark.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;jquery.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;jquery.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;utilities&#x2F;jqwrappers.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;utilities&#x2F;jqwrappers.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;utilities&#x2F;jqueryextensions.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;utilities&#x2F;jqueryextensions.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;handlebars.runtime.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;handlebars.runtime.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-1-pre" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-1-pre</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;ui_framework&#x2F;core&#x2F;uiframeworkbindings.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;ui_framework&#x2F;core&#x2F;uiframeworkbindings.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-2-en-US" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-2-en-US</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-3-en-US" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-3-en-US</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-4-header" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-4-header</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-5-en-US" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;bundles&#x2F;core-5-en-US</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;models&#x2F;captcha&#x2F;googlerecaptchav2.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;models&#x2F;captcha&#x2F;googlerecaptchav2.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;templates&#x2F;ui&#x2F;captcha.tmpl.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;templates&#x2F;ui&#x2F;captcha.tmpl.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;common&#x2F;dismissablehoverviewbinder.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;common&#x2F;dismissablehoverviewbinder.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;models&#x2F;ui&#x2F;infobubble.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;models&#x2F;ui&#x2F;infobubble.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;templates&#x2F;ui&#x2F;infobubble.tmpl.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;templates&#x2F;ui&#x2F;infobubble.tmpl.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;polyfill.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;polyfill.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;js-joda.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;js-joda.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;js-joda-timezone.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;js-joda-timezone.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;react-libs.min.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;external&#x2F;react-libs.min.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-store.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-store.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-react-async-hook.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-react-async-hook.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-router.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-router.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit-workflow.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit-workflow.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state-hook.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state-hook.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-sockets.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-sockets.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-lumberjack.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-lumberjack.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-lumberjack.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-lumberjack.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-sockets.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-sockets.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit-workflow.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit-workflow.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.lootkit.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state-hook.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.form-state-hook.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.mychart-web-server.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.mychart-web-server.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.mychart-web-server.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.mychart-web-server.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;fonts&#x2F;sourcesanspro-regular-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;fonts&#x2F;sourcesanspro-regular-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.client-sdk-camera.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.client-sdk-camera.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;preloginheaderfooter.css" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-us&#x2F;styles&#x2F;preloginheaderfooter.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-barcode.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-barcode.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ummhealth.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;ummh_logo_color.png" target="_blank" class="external" rel="noreferrer noopener">www.ummhealth.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;ummh_logo_color.png</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://www.ummhealth.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;large&#x2F;public&#x2F;2024-04&#x2F;woosox_logo.png.webp" target="_blank" class="external" rel="noreferrer noopener">www.ummhealth.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;styles&#x2F;large&#x2F;public&#x2F;2024-04&#x2F;woosox_logo.png.webp</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-zxing.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;shared&#x2F;ext-zxing.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.client-sdk-camera.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.client-sdk-camera.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-barcode.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.lib.react-barcode.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-analytics.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-analytics.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-analytics.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-analytics.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-slots.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-slots.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-slots.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-slots.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-telehealth.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-telehealth.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-telehealth.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-telehealth.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-filters.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-filters.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-filters.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-filters.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.clinician-info.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.clinician-info.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.clinician-info.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.clinician-info.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-library.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-library.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-library.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-library.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.external-jump.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.external-jump.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.external-jump.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.external-jump.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.happy-together.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.happy-together.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.happy-together.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.happy-together.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.health-summary-core.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.health-summary-core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.health-summary-core.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.health-summary-core.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.branding.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.branding.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.branding.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.branding.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk-extensions.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk-extensions.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk-extensions.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.sdk-extensions.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations-core.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations-core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations-core.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations-core.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.locations.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.providers.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.providers.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.providers.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.providers.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-core.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-core.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.scheduling-core.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-core.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-core.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-core.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder-core.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.action-previews.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.action-previews.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.action-previews.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.action-previews.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder.init.js" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;scripts&#x2F;lib&#x2F;pxbuild&#x2F;epic.px.client.provider-finder.init.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;loadingIndicators&#x2F;heartAnimation_heartOnly.svg" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;loadingIndicators&#x2F;heartAnimation_heartOnly.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;loadingIndicators&#x2F;heartAnimation_lineOnly.svg" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;loadingIndicators&#x2F;heartAnimation_lineOnly.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;library.svg" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;library.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;provider-finder&#x2F;location_pin.svg" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;en-US&#x2F;images&#x2F;provider-finder&#x2F;location_pin.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;fonts&#x2F;sourcesanspro-semibold-webfont.woff2" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;fonts&#x2F;sourcesanspro-semibold-webfont.woff2</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;api&#x2F;scheduling&#x2F;LogViewEventForUsageTracking" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;api&#x2F;scheduling&#x2F;LogViewEventForUsageTracking</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;AnalyticsSession&#x2F;LogWorkflowStartEvent" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;AnalyticsSession&#x2F;LogWorkflowStartEvent</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;AnalyticsSession&#x2F;InitializeAnalyticsSession" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;AnalyticsSession&#x2F;InitializeAnalyticsSession</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;Analytics&#x2F;LogSessionEvent" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;Analytics&#x2F;LogSessionEvent</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://providers.ummhealth.org&#x2F;MyChart&#x2F;Localization&#x2F;LogClientTimeZone" target="_blank" class="external" rel="noreferrer noopener">providers.ummhealth.org&#x2F;MyChart&#x2F;Localization&#x2F;LogClientTimeZone</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://umassmemorial.org" target="_blank" class="external">umassmemorial.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://physicians.umassmemorial.org" target="_blank" class="external">physicians.umassmemorial.org</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - insait.io</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "insait.io",
+        history: [{"date":"ci-2026-10-02-shfvj","prevalence":0.0000137,"sites":2,"fingerprinting":2,"cookies":0.0000137}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/insait.io.ico' width="32" height="32" class='inline-block' /> insait.io</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;16656<small>/21406</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.00&#37; (2 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 2<small>/3</small> - <span class="fp-2">Use of many browser API&#39;s, possibly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                    <span>Document</span>,
+                    <span>Preflight</span>,
+                    <span>Stylesheet</span>,
+                    <span>Font</span>,
+                    <span>Image</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/insait.io.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>platform</span>, 
+                    <span>api-platform</span>, 
+                    <span>analytics</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>Intl.DateTimeFormat.prototype.resolvedOptions</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Date.prototype.getTimezoneOffset</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.doNotTrack</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>Navigator.prototype.vendor</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>NavigatorUAData.prototype.platform</li>
+        <li class='truncate'>Navigator.prototype.language</li>
+        <li class='truncate'>Navigator.prototype.product</li>
+        <li class='truncate'>NavigatorUAData.prototype.brands</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>Document.cookie setter</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Date.prototype.getTime</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+        <li class='truncate'>Event.prototype.timeStamp</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 100.00% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;embed&#x2F;insait-chat.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;embed&#x2F;insait-chat.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;agents&#x2F;a3d731c8-1c2f-4d7f-8d54-b330bc7a90b6&#x2F;info" target="_blank" class="external" rel="noreferrer noopener">api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;agents&#x2F;a3d731c8-1c2f-4d7f-8d54-b330bc7a90b6&#x2F;info</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;chat&#x2F;a3d731c8-1c2f-4d7f-8d54-b330bc7a90b6" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;chat&#x2F;a3d731c8-1c2f-4d7f-8d54-b330bc7a90b6</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;tracking&#x2F;widget&#x2F;impressions" target="_blank" class="external" rel="noreferrer noopener">api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;tracking&#x2F;widget&#x2F;impressions</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;tracking&#x2F;widget&#x2F;impressions" target="_blank" class="external" rel="noreferrer noopener">api-platform.insait.io&#x2F;api&#x2F;v1&#x2F;tracking&#x2F;widget&#x2F;impressions</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;__env.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;__env.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BA8H6x_5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BA8H6x_5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-zZK6itHx.css" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-zZK6itHx.css</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;en-DxaSwgs5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;en-DxaSwgs5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;ChatPage-zH1PXbRT.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;ChatPage-zH1PXbRT.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;utils-DgVgsR4g.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;utils-DgVgsR4g.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;CopyableMessageBubble-DgQl5egh.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;CopyableMessageBubble-DgQl5egh.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;check-BPgXHKmv.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;check-BPgXHKmv.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;MessageFeedback-BBn4VI0k.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;MessageFeedback-BBn4VI0k.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;tooltip-EUAkpQfB.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;tooltip-EUAkpQfB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-CN_81iCv.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-CN_81iCv.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-Eiw4_gPr.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-Eiw4_gPr.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-Dpix565x.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-Dpix565x.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BPrZDL6j.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BPrZDL6j.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-D5O2Nwn5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-D5O2Nwn5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-CIeAUlNL.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-CIeAUlNL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-C7vW800P.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-C7vW800P.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;thumbs-up-C7f3l6Qv.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;thumbs-up-C7f3l6Qv.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;thumbs-down-D15Lkt9W.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;thumbs-down-D15Lkt9W.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;message-square-CIsn2Ap5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;message-square-CIsn2Ap5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;ToolActivityList-CrvBQQOt.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;ToolActivityList-CrvBQQOt.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;circle-alert-DFiz8a4j.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;circle-alert-DFiz8a4j.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;MarkdownMessage-DZ4rucFq.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;MarkdownMessage-DZ4rucFq.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;eye-off-B3jM66QZ.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;eye-off-B3jM66QZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;loader-circle-CpI8SIrO.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;loader-circle-CpI8SIrO.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;eye-BhG_auXB.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;eye-BhG_auXB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-y6FO26uF.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-y6FO26uF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;presigned-upload-C7kKi5AR.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;presigned-upload-C7kKi5AR.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;file-image-n7hc5PvK.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;file-image-n7hc5PvK.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;file-text-H1bOW3_q.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;file-text-H1bOW3_q.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;upload-Gn6Mtbdy.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;upload-Gn6Mtbdy.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;chevron-up-CfxS_h6u.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;chevron-up-CfxS_h6u.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;chevron-down-l9d1pwLn.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;chevron-down-l9d1pwLn.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;dialog-Dgn9aZv1.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;dialog-Dgn9aZv1.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BgYxG4QL.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BgYxG4QL.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;Combination-DZkkglbM.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;Combination-DZkkglbM.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;shopping-cart-Cas4QwXX.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;shopping-cart-Cas4QwXX.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;phone-D1jIzyay.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;phone-D1jIzyay.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;useAudioPreview-BgmLRyMd.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;useAudioPreview-BgmLRyMd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;search-Bk1GGZ0b.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;search-Bk1GGZ0b.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;calendar-cWSKIrQl.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;calendar-cWSKIrQl.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;map-pin-CdXAtZ-W.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;map-pin-CdXAtZ-W.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;sun-K93D_tcN.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;sun-K93D_tcN.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;key-round-CDDlWT_T.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;key-round-CDDlWT_T.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;house-BMrZMR-F.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;house-BMrZMR-F.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;building-2-DxA3q_Rf.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;building-2-DxA3q_Rf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;sparkles-CcgvqzL5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;sparkles-CcgvqzL5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-Dlaiunpv.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-Dlaiunpv.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;collapsible-AR7x3IfQ.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;collapsible-AR7x3IfQ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BycYabck.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BycYabck.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;chevron-left-Cv1-QeVY.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;chevron-left-Cv1-QeVY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;chevron-right-fKVxng5j.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;chevron-right-fKVxng5j.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;utils-wJFb7nXo.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;utils-wJFb7nXo.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;monitor-cog-C0DOokIC.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;monitor-cog-C0DOokIC.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;maximize-2-CrWwlKK2.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;maximize-2-CrWwlKK2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;dropdown-menu-CmPFsLAX.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;dropdown-menu-CmPFsLAX.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BGpFvA3w.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BGpFvA3w.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;circle-BK_ZlxGF.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;circle-BK_ZlxGF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;useLocalizedToast-D-tzoS0N.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;useLocalizedToast-D-tzoS0N.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;browser-Te-e4blZ.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;browser-Te-e4blZ.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;download-JVVvYgIj.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;download-JVVvYgIj.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;arrow-up-right-JcwKocrX.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;arrow-up-right-JcwKocrX.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;minus-hywlYH4M.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;minus-hywlYH4M.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;CategoricalChart-CBw1wIWP.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;CategoricalChart-CBw1wIWP.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;value-CTtqVdCT.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;value-CTtqVdCT.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;PieChart-zhl4-Q1_.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;PieChart-zhl4-Q1_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;PolarChart-CBby03Ac.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;PolarChart-CBby03Ac.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;CartesianChart-BceD440k.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;CartesianChart-BceD440k.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;CartesianGrid-ahSOSbOB.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;CartesianGrid-ahSOSbOB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;LineChart-BAlrRZvi.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;LineChart-BAlrRZvi.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;ActivePoints-CR14puIs.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;ActivePoints-CR14puIs.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;getRadiusAndStrokeWidthFromDot-Cz9S0Yz2.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;getRadiusAndStrokeWidthFromDot-Cz9S0Yz2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;CartesianScaleHelper-B5QcuZLv.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;CartesianScaleHelper-B5QcuZLv.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;AreaChart-CIbFnbXr.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;AreaChart-CIbFnbXr.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;audio-Dq_rOkuO.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;audio-Dq_rOkuO.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;variables-DO6O7AJP.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;variables-DO6O7AJP.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;wrench-BE_JAs1j.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;wrench-BE_JAs1j.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;progress-DMoe6_vY.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;progress-DMoe6_vY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;StreamingIndicator-DzECNwWA.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;StreamingIndicator-DzECNwWA.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;send-B67YVqBB.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;send-B67YVqBB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;scroll-area-BWaunSo5.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;scroll-area-BWaunSo5.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;index-BdQq_4o_.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;index-BdQq_4o_.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;constants-BTIpIudB.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;constants-BTIpIudB.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;square-BP10L4TE.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;square-BP10L4TE.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;volume-2-CR2BmJ93.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;volume-2-CR2BmJ93.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;mic-BG1trivj.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;mic-BG1trivj.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;bot-C-DymTm6.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;bot-C-DymTm6.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;user-BjmTm2Cf.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;user-BjmTm2Cf.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;assets&#x2F;arrow-up-BAQhTRZ2.js" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;assets&#x2F;arrow-up-BAQhTRZ2.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;static&#x2F;web-vitals.js" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;static&#x2F;web-vitals.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;array&#x2F;phc_W5zBQGVQ0RX3dFgld9qFhYEZlRuxSj2OC1HvTEsQ4AZ&#x2F;config.js" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;array&#x2F;phc_W5zBQGVQ0RX3dFgld9qFhYEZlRuxSj2OC1HvTEsQ4AZ&#x2F;config.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;e&#x2F;" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;e&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;static&#x2F;surveys.js" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;static&#x2F;surveys.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;static&#x2F;dead-clicks-autocapture.js" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;static&#x2F;dead-clicks-autocapture.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;static&#x2F;exception-autocapture.js" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;static&#x2F;exception-autocapture.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://analytics.insait.io&#x2F;flags&#x2F;" target="_blank" class="external" rel="noreferrer noopener">analytics.insait.io&#x2F;flags&#x2F;</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;fonts&#x2F;inter-tight-400.ttf" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;fonts&#x2F;inter-tight-400.ttf</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;encore-wordmark.svg" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;encore-wordmark.svg</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://platform.insait.io&#x2F;fonts&#x2F;inter-tight-500.ttf" target="_blank" class="external" rel="noreferrer noopener">platform.insait.io&#x2F;fonts&#x2F;inter-tight-500.ttf</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://metroairport.com" target="_blank" class="external">metroairport.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.metroairport.com" target="_blank" class="external">www.metroairport.com</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>

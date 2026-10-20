@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Tracker Radar Wiki - ughlongedge.com</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <script src='../assets/js/vendor/lunr.js' defer></script>
+    <script src='../assets/js/search.js' defer></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-5 bg-gray-300">
+            <div class="flex items-center flex-shrink-0 mr-5">
+                <a href="/tracker-radar-wiki" class="font-semibold text-xl">Tracker Radar Wiki</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/tracker-radar-wiki" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Home
+                    </a>
+                    <a href="/tracker-radar-wiki/top100.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        Top 100
+                    </a>
+                    <a href="/tracker-radar-wiki/apiHistory.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+                        API abuse score history
+                    </a>
+                </div>
+            </div>
+            <div class='relative'>
+                <input type='search' disabled="disabled" placeholder="Loading…" class='search-box__input px-2' />
+                <ul class='search-box__results absolute top-100 w-full bg-gray-100'></ul>
+            </div>
+        </nav>
+
+<script>
+    window.wikiData = {
+        type: "domain",
+        domain: "ughlongedge.com",
+        history: [{"date":"ci-2026-10-16-tzhhu","prevalence":0.000267,"sites":39,"fingerprinting":3,"cookies":0}]
+    };
+</script>
+<script src="../assets/js/vendor/Chart.min.js" defer></script>
+<script src='../assets/js/graph.js' defer></script>
+
+<div class='p-5 border-b'>
+    <h1 class='text-2xl mb-5'><img src='https://external-content.duckduckgo.com/ip3/ughlongedge.com.ico' width="32" height="32" class='inline-block' /> ughlongedge.com</h1>
+    <div class='grid grid-cols-1 col-gap-5 row-gap-5 md:grid-cols-2 md:row-gap-10'>
+        <div class="domain-stats">
+            <h3 class="section-header">Domain Stats</h3>
+            <ul>
+                <h3 class='section-header'></h3>
+            
+                <li class='py-1'>
+                    <strong>Owner:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Privacy Policy:</strong> <i>Unknown</i>
+                </li>
+                <li class='py-1'>
+                    <strong>Rank:</strong> &#35;2414<small>/21027</small>
+                </li>
+                <li class='py-1'>
+                    <strong>Prevalence:</strong> 0.03&#37; (39 sites)
+                </li>
+                <li class='py-1'>
+                    <strong>Fingerprinting:</strong> 3<small>/3</small> - <span class="fp-3">Excessive use of browser API&#39;s, almost certainly for tracking purposes</span>
+                </li>
+                <li class='py-1'>
+                    <strong>Cookies:</strong> 0.00&#37;
+                </li>
+                <li class='py-1'>
+                    <strong>Performance:</strong> <small><a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/DATA_MODEL.md#performance" target="_blank">?</a></small>
+                    <ul>
+                        <li>time: <small>/3</small></li>
+                        <li>size: <small>/3</small></li>
+                        <li>CPU: <small>/3</small></li>
+                        <li>cache: <small>/3</small></li>
+                    </ul>
+                </li>
+                <li class='py-1'>
+                    <strong>Categories:</strong> 
+                </li>
+                <li class='py-1'>
+                    <strong>Resource Types:</strong> 
+                    <span>Script</span>,
+                    <span>Fetch</span>,
+                </li>
+                <li class='py-1'><a href="https://github.com/duckduckgo/tracker-radar/blob/master/domains/US/ughlongedge.com.json" class="external" rel="noreferrer noopener">Raw data file</a>.</li>
+                <li class='py-1'>
+                    <strong>Subdomains:</strong>
+                    <span>unit</span>, 
+                    <span>0.stg.unit</span>, 
+                    <span>0.unit</span>, 
+                    <span>stg.unit</span>, 
+                </li>
+            </ul>
+        </div>
+        <div class='graph-container graph-container--right'>
+            <div class='flex'>
+                <h3 class="section-header flex-grow">Historic Data</h3>
+                <select class='graph-container__controller p-2 text-sm self-start py-1'>
+                    <option selected value='prevalence'>prevalence</option>
+                    <option value='sites'># of sites</option>
+                    <option value='fingerprinting'>fingerprinting score</option>
+                    <option value='cookies'>cookies</option>
+                </select>
+            </div>
+            <canvas class='graph-container__graph w-full mt-5'></canvas>
+        </div>
+    </div>
+</div>
+
+<div class='p-5 border-b'>
+    <div class='flex'>
+        <h3 class='section-header pr-5'>Fingerprinting APIs Used
+            <span class='text-sm'>
+                (Sorted by <a href="https://github.com/duckduckgo/tracker-radar/blob/master/docs/FAQ.md#are-you-weighting-the-use-of-various-apis-in-determining-possible-fingerprinting" target="_blank" class="external" rel="noreferrer noopener">weight</a>)
+            </span>
+        </h3> 
+    </div>    
+
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-2'>
+        <li class='truncate'>window.outerHeight</li>
+        <li class='truncate'>window.outerWidth</li>
+        <li class='truncate'>Navigator.prototype.hardwareConcurrency</li>
+        <li class='truncate'>Navigator.prototype.deviceMemory</li>
+        <li class='truncate'>Screen.prototype.colorDepth</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getParameter</li>
+        <li class='truncate'>WebGLRenderingContext.prototype.getExtension</li>
+        <li class='truncate'>Navigator.prototype.onLine</li>
+        <li class='truncate'>Navigator.prototype.webdriver</li>
+        <li class='truncate'>window.devicePixelRatio</li>
+        <li class='truncate'>Navigator.prototype.connection</li>
+        <li class='truncate'>Navigator.prototype.maxTouchPoints</li>
+        <li class='truncate'>Navigator.prototype.platform</li>
+        <li class='truncate'>window.innerHeight</li>
+        <li class='truncate'>window.innerWidth</li>
+        <li class='truncate'>Screen.prototype.height</li>
+        <li class='truncate'>Screen.prototype.width</li>
+        <li class='truncate'>Performance.prototype.memory</li>
+        <li class='truncate'>window.sessionStorage</li>
+        <li class='truncate'>window.localStorage</li>
+        <li class='truncate'>Document.cookie getter</li>
+        <li class='truncate'>Navigator.prototype.userAgent</li>
+    </ul>
+</div>
+
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Top Initiators</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <p>loaded directly - 89.29% of loads</p>
+        </li>
+        <li class='truncate'>
+            <p><a href="./publisherdesk.com.html">publisherdesk.com</a> - 10.71% of loads</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5'>
+    <h3 class='section-header'>Resources Found</h3>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='break-all'>
+            <p><a href="http://0.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqYxdaTxgZgreJAxc5Ync5Xxb5AwO5kobZ03dF4mdJYmdz" target="_blank" class="external" rel="noreferrer noopener">0.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqYxdaTxgZgreJAxc5Ync5Xxb5AwO5kobZ03dF4mdJYmdz</a> (seen on 16 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://0.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqYxdaTxgZgreJAxc5Ync5Xxb5AwO5M0O5Y5cZ83" target="_blank" class="external" rel="noreferrer noopener">0.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqYxdaTxgZgreJAxc5Ync5Xxb5AwO5M0O5Y5cZ83</a> (seen on 14 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://0.stg.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqQ3c184epo3OqYqdJ0yepgocJgoOpQyeVArcZIvgJjwb5kob5v" target="_blank" class="external" rel="noreferrer noopener">0.stg.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqQ3c184epo3OqYqdJ0yepgocJgoOpQyeVArcZIvgJjwb5kob5v</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://0.stg.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqQ3c184epo3OqYqdJ0yepgocJgoOpQyeVAlfVAogpYxgD" target="_blank" class="external" rel="noreferrer noopener">0.stg.unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1_zOqQ3c184epo3OqYqdJ0yepgocJgoOpQyeVAlfVAogpYxgD</a> (seen on 9 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;runtime-main&#x2F;7YeCi-mig4.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;runtime-main&#x2F;7YeCi-mig4.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;page-modules&#x2F;2_Zf7O.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;page-modules&#x2F;2_Zf7O.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;vendor-core&#x2F;lWs-td.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;vendor-core&#x2F;lWs-td.js</a> (seen on 4 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;store-module&#x2F;gHUv_mmQ.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;store-module&#x2F;gHUv_mmQ.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;ui-components&#x2F;DBeT-Giv.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;ui-components&#x2F;DBeT-Giv.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;styles-main&#x2F;Nd-Q4Z.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;styles-main&#x2F;Nd-Q4Z.js</a> (seen on 3 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;shared-modules&#x2F;6o_If.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;shared-modules&#x2F;6o_If.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;app-main&#x2F;ubmOG_-uS.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;app-main&#x2F;ubmOG_-uS.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;routes-lazy&#x2F;km-wY.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;routes-lazy&#x2F;km-wY.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;framework-core&#x2F;m-aGMi.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;framework-core&#x2F;m-aGMi.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;assets-js&#x2F;a3fhP_tcF.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;assets-js&#x2F;a3fhP_tcF.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1A4epo3OqYqdJ0yepgocJgoOpQyeVAlfVAogpYxgD" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;l&#x2F;dKU3fKP9O1A4epo3OqYqdJ0yepgocJgoOpQyeVAlfVAogpYxgD</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;build-output&#x2F;5olyz1_9H0.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;build-output&#x2F;5olyz1_9H0.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;setup-core&#x2F;37FRFusj-Y.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;setup-core&#x2F;37FRFusj-Y.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;layout-shell&#x2F;H_i8MmuKNd.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;layout-shell&#x2F;H_i8MmuKNd.js</a> (seen on 2 websites)</p>
+        </li>
+        <li class='break-all'>
+            <p><a href="http://unit.ughlongedge.com&#x2F;static-chunks&#x2F;6l-K9sfm_C.js" target="_blank" class="external" rel="noreferrer noopener">unit.ughlongedge.com&#x2F;static-chunks&#x2F;6l-K9sfm_C.js</a> (seen on 2 websites)</p>
+        </li>
+    </ul>
+</div>
+
+<div class='p-5 border-b'>
+    <h3 class='section-header'>Sites</h3>
+    <h4 class='section-note'>Sample of sites where this domain was encountered as a third party.</h4>
+    <ul class='grid grid-cols-1 row-gap-2 col-gap-5 lg:grid-cols-3 md:grid-cols-1'>
+        <li class='truncate'>
+            <a href="http://euronews.com" target="_blank" class="external">euronews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fr.euronews.com" target="_blank" class="external">fr.euronews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.euronews.com" target="_blank" class="external">www.euronews.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.ovb-online.de" target="_blank" class="external">www.ovb-online.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://sportsnaut.com" target="_blank" class="external">sportsnaut.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.het-menu.nl" target="_blank" class="external">www.het-menu.nl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.maxim.com" target="_blank" class="external">www.maxim.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.privateschoolreview.com" target="_blank" class="external">www.privateschoolreview.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.radio-en-ligne.fr" target="_blank" class="external">www.radio-en-ligne.fr</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.radio-espana.es" target="_blank" class="external">www.radio-espana.es</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.radio-italiane.it" target="_blank" class="external">www.radio-italiane.it</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.radio-uk.co.uk" target="_blank" class="external">www.radio-uk.co.uk</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.unilad.com" target="_blank" class="external">www.unilad.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://24vita.de" target="_blank" class="external">24vita.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.chiemgau24.de" target="_blank" class="external">www.chiemgau24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.come-on.de" target="_blank" class="external">www.come-on.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.echo24.de" target="_blank" class="external">www.echo24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.fnp.de" target="_blank" class="external">www.fnp.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.fuldaerzeitung.de" target="_blank" class="external">www.fuldaerzeitung.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.giessener-allgemeine.de" target="_blank" class="external">www.giessener-allgemeine.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.heidelberg24.de" target="_blank" class="external">www.heidelberg24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.kreiszeitung.de" target="_blank" class="external">www.kreiszeitung.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mannheim24.de" target="_blank" class="external">www.mannheim24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.op-online.de" target="_blank" class="external">www.op-online.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.rosenheim24.de" target="_blank" class="external">www.rosenheim24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.schwaebische-post.de" target="_blank" class="external">www.schwaebische-post.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.soester-anzeiger.de" target="_blank" class="external">www.soester-anzeiger.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.wa.de" target="_blank" class="external">www.wa.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://base64decode.org" target="_blank" class="external">base64decode.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.base64decode.org" target="_blank" class="external">www.base64decode.org</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.gry-online.pl" target="_blank" class="external">www.gry-online.pl</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://bronco6g.com" target="_blank" class="external">bronco6g.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.bronco6g.com" target="_blank" class="external">www.bronco6g.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://come-on.de" target="_blank" class="external">come-on.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://dreadcentral.com" target="_blank" class="external">dreadcentral.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.dreadcentral.com" target="_blank" class="external">www.dreadcentral.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://echo24.de" target="_blank" class="external">echo24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://f150gen14.com" target="_blank" class="external">f150gen14.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.f150gen14.com" target="_blank" class="external">www.f150gen14.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://fuldaerzeitung.de" target="_blank" class="external">fuldaerzeitung.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://giessener-allgemeine.de" target="_blank" class="external">giessener-allgemeine.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://jlwranglerforums.com" target="_blank" class="external">jlwranglerforums.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.jlwranglerforums.com" target="_blank" class="external">www.jlwranglerforums.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://kreiszeitung.de" target="_blank" class="external">kreiszeitung.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.publicschoolreview.com" target="_blank" class="external">www.publicschoolreview.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mannheim24.de" target="_blank" class="external">mannheim24.de</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://mavericktruckclub.com" target="_blank" class="external">mavericktruckclub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.mavericktruckclub.com" target="_blank" class="external">www.mavericktruckclub.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://www.vibe.com" target="_blank" class="external">www.vibe.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://maxim.com" target="_blank" class="external">maxim.com</a>
+        </li>
+        <li class='truncate'>
+            <a href="http://radio-espana.es" target="_blank" class="external">radio-espana.es</a>
+        </li>
+    </ul>
+</div>
+
+            <footer class='p-5 bg-gray-300'>
+                DuckDuckGo, <a href="https://github.com/SlayterDev/tracker-radar-wiki">wiki repo</a>, <a href="https://github.com/duckduckgo/tracker-radar">tracker radar repo</a>
+            </footer>
+        </div>
+    </body>
+</html>
